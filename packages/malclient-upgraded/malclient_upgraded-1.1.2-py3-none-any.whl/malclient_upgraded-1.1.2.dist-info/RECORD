@@ -1,0 +1,14 @@
+malclient/__init__.py,sha256=Daqbfu5rK8k6Rem2gLtV_zlIiwxKfzge-hfXJuOaUHM,92
+malclient/anime.py,sha256=y15lRnUSzR71rsluW9VlSePjE2m_wVvAs5g0FkbwffU,5739
+malclient/boards.py,sha256=AsNMiukUwZFaqqKgraeZsviQXRutaAGBWn2ZQpFu6i0,409
+malclient/client.py,sha256=FFeKJmzdY3Ep9-079PdZ0DYGYCAmbz6KmJsWUOpzd2w,4719
+malclient/exceptions.py,sha256=f5olZ8-ksypue8y0IQK1kYAGbX1V1ycLmYKudKHeeq4,1167
+malclient/manga.py,sha256=fyLsUS5aRYIdECSmukrDtWyfVeju8DrDtDXFxkJRNCM,2630
+malclient/models.py,sha256=xrE6hJwztAb9iG0JlQ0cq38vg251nMmd1AAlGBzM8F0,11274
+malclient/my_list.py,sha256=bdN8M9IcOFZbx5STbWax4h_dWh7nhdZCKpOwYy0ved4,3271
+malclient/request_handler.py,sha256=-CHM_Dpu_CFixelAxtTt9f8Rl_A3EguHtKzGbgE7v_U,2753
+malclient_upgraded-1.1.2.dist-info/LICENSE,sha256=ViiLxeIMEQv9MvkLB4gU9r6iikG3Ewyxt9uCuw64gk8,1087
+malclient_upgraded-1.1.2.dist-info/METADATA,sha256=RXNwfwRogQ0E5MLgYNCZ3A05cji7ULRBvr3-AXvykr0,4414
+malclient_upgraded-1.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+malclient_upgraded-1.1.2.dist-info/top_level.txt,sha256=TTThAWLBzAf9pJS28tCjeW2S9wTzZhBrircRwz3_7pI,10
+malclient_upgraded-1.1.2.dist-info/RECORD,,
