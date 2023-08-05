@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: amitkh-wordle
+Version: 0.1.0
+Summary: Entropy based Wordle Solver (CLI). Inspired by 3 Blue 1 Brown
+Home-page: https://github.com/amit-kumarh/wordle-solver
+Author: Amit Kumar
+Author-email: amitkh@gmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: scipy (>=1.8.0,<2.0.0)
+Requires-Dist: tqdm (>=4.63.0,<5.0.0)
+Requires-Dist: typer (>=0.4.0,<0.5.0)
+Requires-Dist: wordfreq (>=3.0.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+## Entropy based wordle solver
+
+CLI built with Typer
+
+## Installation
+#### Install dependencies
+Run
+```
+pip install -r requirements.txt
+```
+
