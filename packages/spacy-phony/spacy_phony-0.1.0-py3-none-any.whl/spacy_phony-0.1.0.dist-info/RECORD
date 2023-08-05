@@ -1,0 +1,11 @@
+phony/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+phony/pipeline.py,sha256=m-NMCeP5abC8appCCZTpLSqgaGKOXx7H_ftlqWSoJtw,6348
+phony/scorer.py,sha256=p8rO_JThOaYNI-OLDNM6wFQn7758oPWbMIjQgq-B9aA,492
+phony/tokens.py,sha256=UuvS5rIZtdIcYMo6hVEKpUXb7jsRrQ7QOCqJwzStGw4,1214
+phony/training.py,sha256=zjPp1tgKJ3w6yiijZDFD2wInO3OOmcitd7CGVqaXCbI,1528
+spacy_phony-0.1.0.dist-info/LICENSE,sha256=J64YLyNv4uhb1gKBvWFLDRPJ9ooo48ALzcvxgZ5GZao,1063
+spacy_phony-0.1.0.dist-info/METADATA,sha256=jVFhbLJ0x1cS6S_p79O_1m6Zig-qtdyEerpIamqJjXE,3066
+spacy_phony-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+spacy_phony-0.1.0.dist-info/entry_points.txt,sha256=7RTv9whYcr1bDERCEIJ8-fLjeZhdjglWTSmvAdHewxs,132
+spacy_phony-0.1.0.dist-info/top_level.txt,sha256=21zyfzdS9lvkWmbKiYZfVxlpyYW4a45ZnyZhYpA2RCE,6
+spacy_phony-0.1.0.dist-info/RECORD,,
