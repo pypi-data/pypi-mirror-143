@@ -1,0 +1,12 @@
+yaoauth2/__init__.py,sha256=m2-twiiD1jLR_JfCtjMsV23PX_iDoC5c2tL8AAWtkls,221
+yaoauth2/config.py,sha256=6QFzHdzGEJQKD5yzlft9Tgew0ZPwnMxakq0fCKdhvcE,1150
+yaoauth2/endpoints.py,sha256=9Jc_HHnQ6OkrX5WghMVOSXdJsCjPaIx9r5Z8vELQVZA,4457
+yaoauth2/models.py,sha256=DNVVBjqPTkDM6ELdCMjxBACdcLI3dmKMz-KweUWjlOw,2600
+yaoauth2/providers/__init__.py,sha256=dM91W_iAP8gFFkVUw131idsd2Iajh5x5cQfJTyNCQdY,190
+yaoauth2/providers/discord.py,sha256=lq5HZmk0cfuNn2-LxsTDVJQWd_GqOKhlNIEx9TG6Qp4,983
+yaoauth2/providers/google.py,sha256=0NaeWO-E-Oic7NwVrmnOzdomZpAncQ5XMLI4PZm7R_s,940
+yaoauth2/router.py,sha256=FnEqnD71Hbv_AiQeVVulF9QbtR7rMSlAakUZ5JJU3CI,3183
+yaoauth2/utils.py,sha256=aHRS1W-scUGTLr4PhYqLOOADwuCs4kcBZEt8Vh1MHlA,960
+yaoauth2-0.0.3.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+yaoauth2-0.0.3.dist-info/METADATA,sha256=zHlw1Ly-gAX1_F9ky9MsQ9WqXsvBhdOnmCqDBKjXGuQ,439
+yaoauth2-0.0.3.dist-info/RECORD,,
