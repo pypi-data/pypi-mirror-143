@@ -1,0 +1,15 @@
+exercises/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exercises/ThirdChapter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exercises/ThirdChapter/commands.py,sha256=HozNUmBly5TuXgBLU-5HnrhWFEKcAKleeIcS3SUS7L0,6720
+exercises/ThirdChapter/csix.py,sha256=tVWkA7KmMr5y-NYXjdNdw-7iVfctnpZwxvE7SGCOXRM,8483
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/cli.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+utils/configuration.py,sha256=eOGkB9bspb6sxrOtLLbd6lqg7J6fLNN2KcmrTZL7xL8,520
+utils/log.py,sha256=uCXUexHHq4ckWtav_1zklBqR-rOrMtwR3j9a0z_lSDE,817
+utils/math.py,sha256=_iXN8N_PkEwggXjTnibvAxinAx42S5eeVoMguq3PRho,583
+beersolver-0.1.1.dist-info/LICENSE,sha256=6ZmiLm7niFJdBGCpuSzY0iX5nLuO-8_L5hF3eTOVEBY,35823
+beersolver-0.1.1.dist-info/METADATA,sha256=Urs5fCLJILbYab8llA4bVDMYGyD6TzCFK9CpgkK6K84,3445
+beersolver-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+beersolver-0.1.1.dist-info/entry_points.txt,sha256=Uk-25KOTaHJGiN9OkLleedHu6v9KWfSUCvZWTOvbAnk,67
+beersolver-0.1.1.dist-info/top_level.txt,sha256=zrRxPsiP3YuMxtajOtFPGZROVCbTk9JZaJxVPZdCbN0,48
+beersolver-0.1.1.dist-info/RECORD,,
