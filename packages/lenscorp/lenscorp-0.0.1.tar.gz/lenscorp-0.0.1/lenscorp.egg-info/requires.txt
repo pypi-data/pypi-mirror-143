@@ -1,0 +1,6 @@
+requests
+tqdm
+numpy
+matplotlib
+seaborn
+scipy
