@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+scripts/run_scutout.py
+scutout/__init__.py
+scutout/config.py
+scutout/cutout_extractor.py
+scutout/utils.py
+scutout.egg-info/PKG-INFO
+scutout.egg-info/SOURCES.txt
+scutout.egg-info/dependency_links.txt
+scutout.egg-info/requires.txt
+scutout.egg-info/top_level.txt
