@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+work_stream/__init__.py
+work_stream/block.py
+work_stream/branch.py
+work_stream/container.py
+work_stream/line.py
+work_stream.egg-info/PKG-INFO
+work_stream.egg-info/SOURCES.txt
+work_stream.egg-info/dependency_links.txt
+work_stream.egg-info/top_level.txt
+work_stream.egg-info/zip-safe
