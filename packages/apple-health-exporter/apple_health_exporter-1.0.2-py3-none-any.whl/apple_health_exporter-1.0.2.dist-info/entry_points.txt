@@ -1,0 +1,3 @@
+[console_scripts]
+apple-health-exporter=apple_health_exporter:main
+
