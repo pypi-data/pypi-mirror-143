@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: dbcooper
+Version: 0.0.1
+Summary: Short description of the package.
+Home-page: https://github.com/machow/template-python-pkg
+Author: Michael Chow
+Author-email: mc_al_github@fastmail.com
+License: MIT
+Keywords: template,packaging
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: siuba (==0.2.0dev1)
+Requires-Dist: sqlalchemy
+Requires-Dist: tabulate
+Provides-Extra: binder
+Requires-Dist: jupytext ; extra == 'binder'
+Requires-Dist: lahman ; extra == 'binder'
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: importlib-resources ; extra == 'dev'
+Requires-Dist: pydata-sphinx-theme ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-dotenv ; extra == 'dev'
+Requires-Dist: sqlalchemy-bigquery ; extra == 'dev'
+Requires-Dist: snowflake-sqlalchemy ; extra == 'dev'
+Requires-Dist: psycopg2-binary ; extra == 'dev'
+Requires-Dist: pymysql ; extra == 'dev'
+Requires-Dist: jupytext ; extra == 'dev'
+
+# template-python-pkg
+
+## Developing
+
+```shell
+# install with development dependencies
+pip install -e .[dev]
+
+# or install from requirements file
+pip install -r requirements/dev.txt
+```
+
+## Testing
+
+```shell
+# run all tests, see pytest section of pyproject.toml
+pytest
+
+# run specific marks
+pytest -m ex2
+
+# stop on first failure, drop into debugger
+pytest -x --pdb
+```
+
+
+## Setting version number
+
+```shell
+# set version number
+git tag v0.0.1
+
+# (optional) push to github
+git push origin --tags
+
+# check version
+python -m setuptools_scm
+```
+
+
