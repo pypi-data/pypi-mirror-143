@@ -1,0 +1,8 @@
+setup.py
+yyq/iBeami.egg-info/PKG-INFO
+yyq/iBeami.egg-info/SOURCES.txt
+yyq/iBeami.egg-info/dependency_links.txt
+yyq/iBeami.egg-info/top_level.txt
+yyq/nice/__init__.py
+yyq/nice/girl/__init__.py
+yyq/nice/girl/message.py
