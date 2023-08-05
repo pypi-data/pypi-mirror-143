@@ -1,0 +1,9 @@
+init_attrs_with_kwargs/__init__.py,sha256=5DFYNAqiwu-_R_lAz_gbW3taEuad4Bt2yH8T1ocKaNQ,2926
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_init_attrs_with_kwargs.py,sha256=PPpj6XJA3nGjqjqihLGjefWBKZhlaw46ObZx4NHtSvk,4185
+tests/test_run_with_docopt.py,sha256=ohqFXjoOsBmRdrIoNxotww9D6ultkVrw-nMHaK1Ifb4,1484
+init_attrs_with_kwargs-0.1.9.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+init_attrs_with_kwargs-0.1.9.dist-info/METADATA,sha256=R7e_fXEX8SbO4SZJ4CGHAP9RuPwfTYY6PzS08enKO0E,2854
+init_attrs_with_kwargs-0.1.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+init_attrs_with_kwargs-0.1.9.dist-info/top_level.txt,sha256=L8XrbQ2lHvPaTkW0c-66MMf-0WPJ-B6GbYnNJDjwGjU,29
+init_attrs_with_kwargs-0.1.9.dist-info/RECORD,,
