@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: RPCLayout
+Version: 1.1.2
+Summary: Simple template API for Discord rich presence!
+Home-page: https://github.com/neopkr/RPCLayout
+Author: neokeee
+Author-email: neopkr90@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/neopkr/RPCLayout/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# RPCLayout
+
+A simple way to make a Discord rich presence with API using JSON parser to make it.
+Includes a multiple functions to help in the development with apis json.
+
+# Repositories Used
+[pypresence](https://github.com/qwertyquerty/pypresence)
+[RotMGRPC](https://github.com/neopkr/RotMGRPC)
+
+## Requires:
+requests
+
