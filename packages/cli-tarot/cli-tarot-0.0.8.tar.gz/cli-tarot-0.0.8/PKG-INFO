@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cli-tarot
+Version: 0.0.8
+Summary: A command line tarot reader.
+Home-page: https://github.com/beeankha/command_line_tarot
+Author: Bianca Henderson
+Author-email: beeankha@gmail.com
+License: MIT
+Keywords: tarot cli beeankha
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# 🚧 Under Construction 🚧
+
+This is a beta/test version `0.0.8` of the Command Line Tarot CLI tool!
+
+
