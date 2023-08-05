@@ -1,0 +1,15 @@
+ebranch/__init__.py,sha256=oUdVIDBvanPnsIcmuebG3tUbemZgxM9ldN9fjLQDOjA,432
+ebranch/__main__.py,sha256=7TT0-lnXCGJNEMmns_0XCDn2s0YPAYCFoo18ro3JXUM,464
+ebranch/cli.py,sha256=MGSf6TDwI5CgL1-fBmMWjK5jZPKrU0THs1Ugu2CKytY,5275
+ebranch/dnf.py,sha256=cLcGen0VYzvAbDw7o4tQmvaNmftJAZrA9ZPH0JJhiwg,6422
+ebranch/pagure.py,sha256=dGaBPoC9m-K_RmLHtXBXbMQBI07pVEG_MNfHOAOHgbA,729
+ebranch/tests/__init__.py,sha256=utdA9aPZyAJT55JQo-qZIpQTwMvLTMwdqjB5IkVXcvM,404
+ebranch/tests/test_dnf.py,sha256=RRWjWKtrK8Hlmn_w64ruUOi7Pm26vV5NWz_1yOjXYRQ,15871
+ebranch/tests/test_pagure.py,sha256=KJXtA9yfJ2Re5ljTyqurmaXi0G4ed2e0I9faV8hRcPM,1639
+ebranch-0.0.2.dev1.dist-info/AUTHORS,sha256=SMrY4ei4uzokLYfzA-XKo5Im1N-HohanQb6LB5ad7Yk,51
+ebranch-0.0.2.dev1.dist-info/COPYING.md,sha256=rvi0Iit50Nv2vxfP_3HJCmpruJF6QWKr5Be0ae0i2i4,17895
+ebranch-0.0.2.dev1.dist-info/METADATA,sha256=JI9fmV0sZcU6dyDou5pqt2YJIArbja3rDsYjvP_vlR8,2360
+ebranch-0.0.2.dev1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ebranch-0.0.2.dev1.dist-info/entry_points.txt,sha256=gnGHgQumC0Cbzy8t1xHOHPvsJK7YnD-pWIdgoTjElYU,44
+ebranch-0.0.2.dev1.dist-info/top_level.txt,sha256=4BW_I1RyuIGFKMbCHR-Q-RFt0s4IcuhAhEvnTXgCpHY,8
+ebranch-0.0.2.dev1.dist-info/RECORD,,
