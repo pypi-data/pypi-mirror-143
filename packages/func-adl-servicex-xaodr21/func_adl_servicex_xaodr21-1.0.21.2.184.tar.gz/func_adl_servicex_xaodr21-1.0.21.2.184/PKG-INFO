@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: func-adl-servicex-xaodr21
+Version: 1.0.21.2.184
+Summary: func-adl typed datasets for Servicex for xAOD R21 21.2.184
+Author: Gordon Watts
+Author-email: gwatts@uw.edu
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: func_adl_servicex (>=2.0-beta.1,<3.0)
