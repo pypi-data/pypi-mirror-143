@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dbgpy
+Version: 0.1.0
+Summary: Python implementation of Rust's dbg! macro using CSTs
+License: MIT
+Author: Marcel Rød
+Author-email: marcelroed@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: astunparse (>=1,<2); python_version < "3.9"
+Requires-Dist: torch (>=1,<2)
