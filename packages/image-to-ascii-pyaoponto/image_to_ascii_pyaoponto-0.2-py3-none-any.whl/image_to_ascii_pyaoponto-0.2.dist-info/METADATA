@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: image-to-ascii-pyaoponto
+Version: 0.2
+Summary: A Python module to transform image to ascii art
+Home-page: https://github.com/estevaofon/image-to-ascii-pyaoponto
+Author: Python Direto ao Ponto
+Author-email: pyaoponto@gmail.com
+License: MIT
+Keywords: ascii,image,art
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: Pillow
+
+Image to ASCII
+==============
+A python module to easily transform image in ascii art.
+
+.. image:: https://raw.githubusercontent.com/estevaofon/image-to-ascii-pyaoponto/main/zelda_ascii.png
+
+Setup
+-----
+
+.. code-block:: bash
+
+    $ pip install image-to-ascii-pyaoponto
+
+Code sample
+-----------
+
+.. code-block:: python
+
+    from image_to_ascii import ImageToAscii
+    obj = ImageToAscii()
+    # Image path
+    obj.img_path("link.png")
+    # print on screen
+    obj.plot()
+    # save in a txt file
+    obj.save_to_file()
+
