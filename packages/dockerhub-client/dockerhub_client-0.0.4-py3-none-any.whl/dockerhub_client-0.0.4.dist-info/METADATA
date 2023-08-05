@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: dockerhub-client
+Version: 0.0.4
+Summary: Client library for dockerhub API, provides a CLI interface.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click (==8.0.4)
+Requires-Dist: pydantic (==1.9.0)
+Requires-Dist: requests (==2.27.1)
+
+# Dockerhub Client
+
+Client library to interact with dockerhub API. Shipped with a CLI that enables high level access to main features.
+
+## Installation
+
+```bash
+pip install dockerhub-client
+```
+
+## Usage from CLI
+
+Using CLI, dockerhub credentials must be provided as environment variables.
+
+```
+export DOCKERHUB_USERNAME=<username>
+export DOCKERHUB_PASSWORD=<password or token>
+```
+
+## Library reference
+
+Instanciate client with dockerhub credentials...
+
+```python
+from dockerhub.client import DockerhubClient
+
+dockerhub = DockerhubClient("<username>", "<password or token>")
+```
+
+Get repository information
+
+```python
+dockerhub.get_repository("<namespace>/<repo>")
+```
+
+
