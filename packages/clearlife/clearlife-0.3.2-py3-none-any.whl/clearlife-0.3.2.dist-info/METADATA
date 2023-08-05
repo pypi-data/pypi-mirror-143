@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: clearlife
+Version: 0.3.2
+Summary: ClearLIFE Server SDK
+Home-page: https://gitlab.com/clearos/clearfoundation/clearlife-sdk
+Author: 
+Author-email: 
+License: AGPL3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8.6
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: cython (==0.29.23)
+Requires-Dist: aries-cloudagent (==0.6.0)
+Requires-Dist: pysodium (==0.7.9)
+Requires-Dist: didauth
+Requires-Dist: attrdict
+
+Key management using derived keys for server applications.
+
+

@@ -1,0 +1,13 @@
+clearlife/__init__.py,sha256=dQC9Zm_R5DaQPUspDcwp6cJY0yzea4FvX4VJsahX6-8,3837
+clearlife/__main__.py,sha256=lasG2O2bqA56U4HadJfkGlnHt_P6GuI0LH2AUHZ5ciY,306
+clearlife/auth.py,sha256=Gbb26zILvbERZO-7F3spAMmvm9bCBh6vkdwxwu-00Xw,10603
+clearlife/base.py,sha256=JWnSSIcxy5UxppmYZlQJTrXqmfdTLR_tA8ZphfFVEh8,1968
+clearlife/cli.py,sha256=dAKuHtGAedzOPkqTPzDnsZGMvJQyB_YPmonIJLK5qdA,10842
+clearlife/crypto.py,sha256=c7Q9lVngf6UMZvNKCmacuH1XFdYEuX8zBvruXQcR29g,5627
+clearlife/msg.py,sha256=nMfpXOccp_poKyILjWE4mQd4I-f7-q34GlZoqQHCsqU,5735
+clearlife/utility.py,sha256=LmrwdvvnEJD53BfDRX1fiDe7QkUTvoehzJP8I_Fw57U,7568
+clearlife-0.3.2.dist-info/METADATA,sha256=YC9hQugxnNANZHlfit7_HjKAeL_PYu9fjWugw0s7llg,919
+clearlife-0.3.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+clearlife-0.3.2.dist-info/entry_points.txt,sha256=GYRuMvoO7GT3ZBy5anP00sAI0WdFvZ-qiqVdD7w4Vl8,50
+clearlife-0.3.2.dist-info/top_level.txt,sha256=899RohiV4RNp-0YE8lsSnBrdxmWvaYBiudL9jJQyHl0,61
+clearlife-0.3.2.dist-info/RECORD,,
