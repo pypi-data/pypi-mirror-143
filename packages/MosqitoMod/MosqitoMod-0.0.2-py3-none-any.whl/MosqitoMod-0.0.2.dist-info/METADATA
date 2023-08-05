@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: MosqitoMod
+Version: 0.0.2
+Summary: Simplifies Python
+Home-page: UNKNOWN
+Author: MosqitoTorpedo
+Author-email: <mosqitotorpedo@gmail.com>
+License: UNKNOWN
+Keywords: python,simple,code
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+Thanks for installing MosqitoMod by MosqitoTorpedo! If you would like to support me check out my YouTube channel!
+
+
+
+My channel: https://www.youtube.com/channel/UCaN9Rfh51YPak8gDqmJGJUw
+
+
+
+For help in the package, do mos.help() and for help with a speccifc funtion do mos.helpFunc(func)
+
