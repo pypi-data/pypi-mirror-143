@@ -1,0 +1,3 @@
+[annodize.plugins]
+annoframe = annodize.frame._load:load_plugin
+

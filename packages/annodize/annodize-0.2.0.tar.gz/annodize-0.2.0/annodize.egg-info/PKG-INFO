@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: annodize
+Version: 0.2.0
+Summary: "Python Annotations that are shockingly useful!"
+Home-page: https://github.com/NowanIlfideme/annodize
+Author: Anatoly Makarevich
+Author-email: git@nowan.dev
+License: MIT
+Keywords: Python,Dataframe,Pandas,PySpark,Annotated
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: pandas
+Provides-Extra: pyspark
+License-File: LICENSE
+
+# Annodize: Python Annotations that are shockingly useful
+
+Using PEP 593 (Python 3.9+) Annotated Types for good... or for evil.
+
+## Example uses
+
+- Data type conversion.
+- Dataframe validation.
+- (Your use case here!)
+
+## See Also
+
+Check out [future-typing](https://github.com/PrettyWood/future-typing), which
+lets you use Python 3.10 UnionType types in any Python version:
+
+```python
+# -*- coding: future_typing -*-
+
+foo: int | str
+```
+
+
