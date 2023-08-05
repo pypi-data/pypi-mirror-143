@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: setupCLI
+Version: 0.0.1
+Summary: A command line application for setting up basic environments for projects
+Home-page: https://github.com/AabhasKrJha/setupCLI
+Download-URL: https://github.com/AabhasKrJha/setupCLI/archive/0.0.1.tar.gz
+Author: Aabhas Kr Jha
+Author-email: aabhaskrjha@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# setupCLI
+
+A command line application for setting up basic environments for projects
+
+# Installation
+
+## Using Pip
+```bash
+  $ pip install setupCLI
+```
+
+## Manual
+
+```bash
+  $ git clone https://github.com/AabhasKrJha/setupCLI
+  $ cd setupCLI
+  $ python setup.py install
+```
+
+# Usage
+
+```bash
+$ setupCLI
+```
+
+`setupCLI <project name>`
+
+```bash
+$ setupCLI 'project X'
+```
+
+
+
