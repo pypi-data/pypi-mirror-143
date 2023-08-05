@@ -1,0 +1,9 @@
+tensorflow
+pandas
+os
+sys
+pickles
+jupyter
+tarfile
+urllib
+sys

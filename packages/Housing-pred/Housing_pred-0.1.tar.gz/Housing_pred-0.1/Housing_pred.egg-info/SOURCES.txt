@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+Housing_pred.egg-info/PKG-INFO
+Housing_pred.egg-info/SOURCES.txt
+Housing_pred.egg-info/dependency_links.txt
+Housing_pred.egg-info/requires.txt
+Housing_pred.egg-info/top_level.txt
+src/__init__.py
+src/ingest_data.py
+src/score.py
+src/train.py
