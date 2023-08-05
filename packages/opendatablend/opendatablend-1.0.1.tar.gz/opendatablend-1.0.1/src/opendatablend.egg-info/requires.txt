@@ -1,0 +1,5 @@
+frictionless
+requests
+azure-storage-blob
+boto3
+botocore
