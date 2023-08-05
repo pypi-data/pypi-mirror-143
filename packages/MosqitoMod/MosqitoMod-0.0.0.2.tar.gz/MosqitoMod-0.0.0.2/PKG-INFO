@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: MosqitoMod
+Version: 0.0.0.2
+Summary: Simplifies Python
+Home-page: UNKNOWN
+Author: MosqitoTorpedo
+Author-email: <mosqitotorpedo@gmail.com>
+License: UNKNOWN
+Keywords: python,simple,code
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+Mos Module for Python 3
+
+This module is ready for use as roon as you install it, no setup nesscicary.
+
+To see a list of funtions, do "mos.help()" and for help with a specific funtion do "mos.helpFunc(funtion)"
+
+Happy Coding!
+
