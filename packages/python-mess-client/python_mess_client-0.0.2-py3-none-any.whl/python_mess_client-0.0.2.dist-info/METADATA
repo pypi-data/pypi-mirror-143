@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-mess-client
+Version: 0.0.2
+Summary: Client for Messenger 
+Home-page: UNKNOWN
+Author: Viktor Sinaiskij
+Author-email: ekspertasds@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
+
