@@ -1,0 +1,6 @@
+attrs
+petlib
+zksk
+
+[test]
+pytest
