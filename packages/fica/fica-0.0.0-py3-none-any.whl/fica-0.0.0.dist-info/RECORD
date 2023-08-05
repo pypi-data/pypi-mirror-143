@@ -1,0 +1,15 @@
+confit/__init__.py,sha256=Jzb_RfgvXCrm_SQ4AfeGVi1N36YybxnM5mpyxrnihgI,33
+confit/version.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+fica/__init__.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+figurator/__init__.py,sha256=mieQt9LADIdHTjSaNVMa8rn1qNhjHsBc-8yNZ79SadU,221
+figurator/config.py,sha256=s1T92dmmiFHB-b7fr_j_jzE_Sd569sEHYBdFcM1gx4U,2590
+figurator/key.py,sha256=8aDvtQvw-qjTbkIkCq0E-F46mQY8jbrXVXmts4c8IO4,5310
+figurator/version.py,sha256=z4p1oStuwd8MjLB3H5qSER-Zu8UqJmyPij5cXWqnUxw,60
+figurator/sphinx/__init__.py,sha256=hpyN4Xb9rlI5I6ekwoPrxtfAdSX3AfZ52R2p2HH-Spw,2966
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_key.py,sha256=5cIMOURoqM8koRvFr7N6DyvyDD1fjtEwY--_LA5pHzM,559
+tests/utils.py,sha256=agUC1_mLuypNqVkfUaPHcQcvHteJ5GFAGwSk8NEY2nA,784
+fica-0.0.0.dist-info/METADATA,sha256=7YLyY0OfXWZl3u-QJijvINl_5fmAtSFdbdPX8QgvfhA,400
+fica-0.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fica-0.0.0.dist-info/top_level.txt,sha256=CKtJISNqC31JFJyWhnFMrHLsklvvtsuh9vRXQEiaSw8,21
+fica-0.0.0.dist-info/RECORD,,
