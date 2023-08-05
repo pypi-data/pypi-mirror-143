@@ -1,0 +1,9 @@
+despace/__init__.py,sha256=jRe0Dtarlr4Wd4B2GeW6DSWgFJdN9q4YPbyKORUNQls,187
+despace/spatial_sort.py,sha256=TcHeH2KAxydLAy_POf5ShWd2pOAD8151dp5h0c_mT40,8321
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_spatial_sort.py,sha256=VxWzeBXmqajq-643Rsd3wqFuRJ7ian8OpVXhG0X_rEY,281
+despace-0.1.2.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+despace-0.1.2.dist-info/METADATA,sha256=0Is2R49kiU592Zn0s9WVe31WVZ5b8ZwUy23z6e8AO4A,3931
+despace-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+despace-0.1.2.dist-info/top_level.txt,sha256=hCeLYaSkXiRQgQj5m-3X3kUCplNnC7cxvUOgCEMnvtw,14
+despace-0.1.2.dist-info/RECORD,,
