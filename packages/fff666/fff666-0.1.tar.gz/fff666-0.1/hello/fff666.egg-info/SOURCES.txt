@@ -1,0 +1,9 @@
+setup.py
+hello/fff666.egg-info/PKG-INFO
+hello/fff666.egg-info/SOURCES.txt
+hello/fff666.egg-info/dependency_links.txt
+hello/fff666.egg-info/top_level.txt
+hello/fww/__init__.py
+hello/fww/test.py
+hello/fww/ooo/__init__.py
+hello/fww/ooo/message.py
