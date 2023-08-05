@@ -1,0 +1,11 @@
+git_doc_history/__init__.py,sha256=EvmHlwWwrcI16BpFW0OrozzuvwuRffrO5VuASbd3SLw,5407
+git_doc_history/__main__.py,sha256=aL8zCG53p7Gn9rIFdLtBRyEvsVgtJ_dIiWG4QWzhklo,1627
+git_doc_history/config.py,sha256=RzFBHOmHMTRBNpgSd1T8QHZ_Bs3GHTu9RZ51YeGMJaE,1280
+git_doc_history/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_doc_history-0.1.0.data/scripts/file_backups_to_doc_history,sha256=ttqtKyWu0RSgsjfcpuPp1d_cigoZ1P4VPmWAipAM4X8,3232
+git_doc_history-0.1.0.data/scripts/git_doc_history,sha256=XhMEIXEkkUAIfFN7WiGZjsfOb1LlmrBj-LYIMNErJXg,2514
+git_doc_history-0.1.0.dist-info/LICENSE,sha256=AskPdTNTSr_bocUxJX1ftBBoptaUaRLLmpsQaU9wnvk,1074
+git_doc_history-0.1.0.dist-info/METADATA,sha256=UXdqQWqRyluxaFyPNgyKonwkX2QOcRcpswmOd353rzE,6182
+git_doc_history-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+git_doc_history-0.1.0.dist-info/top_level.txt,sha256=Bi-3WQJ8bmdklGZ3-SK9Z7EyBzQzeZBup0v8TQ8eCQk,16
+git_doc_history-0.1.0.dist-info/RECORD,,
