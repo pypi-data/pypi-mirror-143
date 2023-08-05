@@ -1,0 +1,15 @@
+FROM {{ python_version }}
+
+COPY . ./app
+
+{% if requirement_txt_file %}
+COPY {{ requirement_txt_file }} ./requirements.txt
+
+RUN pip install -r ./requirements.txt
+{% endif %}
+
+EXPOSE {{ port }}
+
+WORKDIR app
+
+ENTRYPOINT streamlit run {{service}} --server.address 0.0.0.0 --server.port {{ port }}
