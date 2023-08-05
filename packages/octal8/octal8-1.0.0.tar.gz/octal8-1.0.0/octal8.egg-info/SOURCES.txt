@@ -1,0 +1,11 @@
+LICENSE
+README.md
+octal8.py
+setup.cfg
+setup.py
+octal8.egg-info/PKG-INFO
+octal8.egg-info/SOURCES.txt
+octal8.egg-info/dependency_links.txt
+octal8.egg-info/entry_points.txt
+octal8.egg-info/requires.txt
+octal8.egg-info/top_level.txt
