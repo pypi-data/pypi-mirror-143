@@ -1,0 +1,8 @@
+appdirs
+cryptography
+PyNaCl
+requests
+rich
+tomli
+tomli_w
+x21
