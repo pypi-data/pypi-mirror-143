@@ -1,0 +1,52 @@
+#! /usr/bin/env python3
+import os
+import sys
+
+import gnupg
+
+# Check if within pipenv, otherwise bail
+if os.getenv('PIPENV_ACTIVE') != '1' and os.getenv('CI') is None:
+    print('Script must be run within pipenv. Use `make create-ca`')
+    sys.exit(1)
+
+sys.path.extend([
+    os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
+])
+
+from mtls_server.cert_processor import CertProcessor
+from mtls_server.config import Config
+from mtls_server.utils import create_dir_if_missing
+from mtls_server.utils import get_abs_path
+
+CONFIG_PATH = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        '..',
+        'config.ini'
+    )
+)
+Config.init_config(CONFIG_PATH)
+
+user_gpg_path = get_abs_path(
+    Config.get(
+        "gnupg", "user", os.path.join(os.getcwd(), "secrets/gnupg")
+    )
+)
+create_dir_if_missing(user_gpg_path)
+user_gpg = gnupg.GPG(gnupghome=user_gpg_path)
+user_gpg.encoding = 'UTF-8'
+admin_gpg_path = get_abs_path(
+    Config.get(
+        "gnupg",
+        "admin",
+        os.path.join(os.getcwd(), "secrets/gnupg_admin"),
+    )
+)
+create_dir_if_missing(admin_gpg_path)
+admin_gpg = gnupg.GPG(gnupghome=admin_gpg_path)
+admin_gpg.encoding = 'UTF-8'
+
+cert_processor = CertProcessor(Config, user_gpg, admin_gpg)
+
+key = cert_processor.get_ca_key()
+cert_processor.get_ca_cert(key)
