@@ -1,0 +1,8 @@
+setup.py
+lss/lovely/__init__.py
+lss/lovely/dog/__init__.py
+lss/lovely/dog/message.py
+lss/lucky_lovely.egg-info/PKG-INFO
+lss/lucky_lovely.egg-info/SOURCES.txt
+lss/lucky_lovely.egg-info/dependency_links.txt
+lss/lucky_lovely.egg-info/top_level.txt
