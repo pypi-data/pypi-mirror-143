@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: PyLiveLinkFace
+Version: 0.1
+Summary: Python Library for sending and receiving LiveLinkFace data from Unreal Engine
+Home-page: https://github.com/JimWest/PyLiveLinkFace
+Author: Marco Pattke
+Author-email: j1m_w3st@web.de
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
