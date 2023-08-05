@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyconvox
+Version: 0.0.4
+Summary: Universal Command Line Environment for Pyconvox, a wrapper for convox application.
+Home-page: UNKNOWN
+Author: ABHINAVKISHOREGV
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+# pycx
+
