@@ -1,0 +1,3 @@
+include aesthetic_art/*.png
+include aesthetic_art/*.jpg
+include aesthetic_art/*.ttf
