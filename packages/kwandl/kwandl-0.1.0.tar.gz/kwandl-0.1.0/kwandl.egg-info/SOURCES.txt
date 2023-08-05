@@ -1,0 +1,14 @@
+CITATION.cff
+LICENSE
+MANIFEST.in
+README.md
+kwandl.py
+pyproject.toml
+setup.cfg
+setup.py
+kwandl.egg-info/PKG-INFO
+kwandl.egg-info/SOURCES.txt
+kwandl.egg-info/dependency_links.txt
+kwandl.egg-info/not-zip-safe
+kwandl.egg-info/requires.txt
+kwandl.egg-info/top_level.txt
