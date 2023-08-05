@@ -1,0 +1,9 @@
+lins_unous/__init__.py,sha256=g1fSCX8-54m1A8stsHbKxEDW37USXmzNK4RVHMG8E2Q,75
+lins_unous/api_unous_tests.py,sha256=5R46j-wKawmlQ_kih8RtBZXSS9L5eKhA7FF6e9bFCRc,1125
+lins_unous/lins_unous.py,sha256=iVcrwFESW2fTDeLHDWihlA0JsV80hXOBSbl3QgKbl6Q,3374
+lins_unous/unous_requests.py,sha256=4Wgt0yp7-r57ATFQ4o0ey5N82qJvh9qS-0EjEca4__E,1681
+lins_unous/unous_requests_tests.py,sha256=BkusukfC2qlXzUu89pAuVGt8wlZeVXpXJE6jqzF43zI,1304
+lins_unous-2.0.0.64.dist-info/METADATA,sha256=7cPosxyCK27pLYhmO6Euwy0qXGe7fs4m1d1ZuoKPVgM,322
+lins_unous-2.0.0.64.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+lins_unous-2.0.0.64.dist-info/top_level.txt,sha256=04wEA-7vjcgnuzuspFRO6AfQyhlwGJuoqJtVu8DUY5I,11
+lins_unous-2.0.0.64.dist-info/RECORD,,
