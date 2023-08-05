@@ -1,0 +1,18 @@
+subtrs (video subtitles translator)
+==========================================
+Version 1.3 - (19/03/2022)
+### Added
+- Menu that show supported languages
+
+Version 1.2 - (18/03/2022)
+### Added
+- Support export miltiple subtitles files
+
+Version 1.1 - (18/03/2022)
+### Updated
+- Improve stability
+
+Version 1.0 - (17/03/2022)
+### Release
+- first release!
+
