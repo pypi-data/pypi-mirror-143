@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/coinmarketcap_scrapi/__init__.py
+src/coinmarketcap_scrapi/cmc_uteis.py
+src/coinmarketcap_scrapi/coinmarketcap_scrapi.py
+src/coinmarketcap_scrapi/excepcions.py
+src/coinmarketcap_scrapi.egg-info/PKG-INFO
+src/coinmarketcap_scrapi.egg-info/SOURCES.txt
+src/coinmarketcap_scrapi.egg-info/dependency_links.txt
+src/coinmarketcap_scrapi.egg-info/not-zip-safe
+src/coinmarketcap_scrapi.egg-info/requires.txt
+src/coinmarketcap_scrapi.egg-info/top_level.txt
