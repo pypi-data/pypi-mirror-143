@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+rdbms/__init__.py
+rdbms/rdbms.py
+rdbms/row_factories.py
+rdbms/text_factories.py
+rdbms.egg-info/PKG-INFO
+rdbms.egg-info/SOURCES.txt
+rdbms.egg-info/dependency_links.txt
+rdbms.egg-info/requires.txt
+rdbms.egg-info/top_level.txt
