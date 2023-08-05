@@ -1,0 +1,15 @@
+eisenradio_apk/LICENSE,sha256=33BbezQP39C_TsyGOXv_xRaP_UoztMclsloroYPCK8o,1093
+eisenradio_apk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eisenradio_apk/eisenradio-1.2-arm64-v8a-debug.apk,sha256=wjbwiMQqKm7pjriDGYiPX0QZlSxsSywO-gPO2cbZ63M,21682203
+eisenradio_apk/eisenradio-1.2-x86-debug.apk,sha256=O6g_Q4bu0Yopk9JH5smpy2HnMnh1SrfczvQcpGJZKi4,21882972
+eisenradio_apk/eisenradio_android.txt,sha256=-fc2KURR8ZLbpGaCoV-CPSR0nOkK0gyMbXRRTThX0i4,160
+eisenradio_apk/src/EisenRadio_launcher_round.png,sha256=33k9dbRprChoL-45No-LO0Px-b-mJe1nqhh9B-OvT4Y,28971
+eisenradio_apk/src/eisenradio_android.db,sha256=GO1B59LlJ_vBtLU3Cy3fUYXFCTJuWg0kB5t1FT3AhMU,483328
+eisenradio_apk/src/in_it.py,sha256=eQin1dnW5tzY43myRN-axvWtJKyZjwYMicJ8E2tQ4zg,1468
+eisenradio_apk/src/main.py,sha256=49G-jPd4y_ft-K3X8iNQ_bfoMwcQudHPvne0EXs7o-Q,4319
+eisenradio_apk/src/splash1440.png,sha256=dJQ4hqjmNb7IrU-4_pWHe8uXdMlLsAvr222Xo4FIk7Q,1783897
+eisenradio_apk-1.2.dist-info/LICENSE,sha256=33BbezQP39C_TsyGOXv_xRaP_UoztMclsloroYPCK8o,1093
+eisenradio_apk-1.2.dist-info/METADATA,sha256=JjmpuNlmy-hkUQLia3HweFOLNnUfewWwWVkJJt5UsCM,1282
+eisenradio_apk-1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+eisenradio_apk-1.2.dist-info/top_level.txt,sha256=QtGFPanuSGKPAoywb2HiJ27i8D7Y6GHUsLYGiTG1-38,15
+eisenradio_apk-1.2.dist-info/RECORD,,

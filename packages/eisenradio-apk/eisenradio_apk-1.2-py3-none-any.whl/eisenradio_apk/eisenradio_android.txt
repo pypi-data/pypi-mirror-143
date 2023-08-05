@@ -1,0 +1,7 @@
+
+ARM Processor Android devices
+
+  - arm64-v8a   phones and tablets
+  - x86         Android Studio Device Emulator
+
+License used from the python package.
