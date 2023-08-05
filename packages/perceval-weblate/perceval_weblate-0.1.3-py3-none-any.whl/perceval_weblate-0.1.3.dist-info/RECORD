@@ -1,0 +1,10 @@
+perceval_weblate-0.1.3-py3.6-nspkg.pth,sha256=RgJJWGhWjBZgt4XoGh2NKje_Xj0QBl5S1E7sV3yqMqY,1748
+perceval/backends/weblate/__init__.py,sha256=FOEgxFCMD4KIjvM86IWGcwadZk1ZeesuCEX03I3z1B8,803
+perceval/backends/weblate/weblate.py,sha256=XIerSb482T3UDoit3Gygxwgzq4MtTK9FDqCeggbqk50,14043
+perceval_weblate-0.1.3.dist-info/AUTHORS,sha256=bB0SvG-MIvWnXI_JKomj9_c-CX0HJefdMSNqOWE1XgE,70
+perceval_weblate-0.1.3.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+perceval_weblate-0.1.3.dist-info/METADATA,sha256=CaBt5oqrbrO2JGv1sa1y6eh6hrOkf9qXt08N-zIeHgk,2135
+perceval_weblate-0.1.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+perceval_weblate-0.1.3.dist-info/namespace_packages.txt,sha256=shroxg7iw5lZwyHTT3v6XEVlaUq_8ykOK3wQmzacZGg,27
+perceval_weblate-0.1.3.dist-info/top_level.txt,sha256=NpQ-l8ZE65zY_3lNupbvvJAmxl_sdWgyVEYLmfZY-us,9
+perceval_weblate-0.1.3.dist-info/RECORD,,
