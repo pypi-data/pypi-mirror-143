@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: prometheus-query-builder
+Version: 0.1.4
+Summary: Package for generation Prometheus Query Language queries.
+Home-page: https://github.com/m-chrome/prometheus-query-builder
+License: MIT
+Keywords: prometheus,promql,query-builder
+Author: Michail Tsyganov
+Author-email: tsyganov.michail@yandex.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Bug Tracker, https://github.com/m-chrome/prometheus-query-builder/issues
+Project-URL: Repository, https://github.com/m-chrome/prometheus-query-builder
+Description-Content-Type: text/markdown
+
+prometheus-query-builder
+========================
+
+[![PyPI version](https://badge.fury.io/py/prometheus-query-builder.svg)](https://badge.fury.io/py/prometheus-query-builder)
+[![PyPI version](https://img.shields.io/pypi/pyversions/prometheus-query-builder.svg)](https://pypi.org/project/prometheus-query-builder/)
+[![MIT licensed](https://img.shields.io/pypi/l/prometheus-query-builder)](./LICENSE)
+
+Package for generation Prometheus Query Language queries.
+
+## Installation
+
+Use pip for to install from Pypi:
+
+```commandline
+pip install prometheus-query-builder
+```
+
+The package is still in alpha development, so better pin version in your requirements:
+
+```
+prometheus-query-builder==0.1
+```
+
+## Usage
+
+See usage examples in [tests](./tests) directory.
+
+## TODO
+
+- Subqueries - https://prometheus.io/docs/prometheus/latest/querying/basics/#subquery
+- Functions - https://prometheus.io/docs/prometheus/latest/querying/basics/#functions
+
