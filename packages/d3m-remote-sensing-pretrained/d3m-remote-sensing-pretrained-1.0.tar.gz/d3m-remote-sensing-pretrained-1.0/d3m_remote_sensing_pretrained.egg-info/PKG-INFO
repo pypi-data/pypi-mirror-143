@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: d3m-remote-sensing-pretrained
+Version: 1.0
+Summary: Pretrained remote sensing models
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/remote_sensing_pretrained
+Author: Ben Johnson
+Author-email: ben@canfield.io
+License: MIT
+Description: UNKNOWN
+Keywords: remote sensing,pretrained,rs
+Platform: UNKNOWN
