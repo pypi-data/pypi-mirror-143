@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: objective-weights-mcda
+Version: 0.0.1
+Summary: Package for Multi-Criteria Decision Analysis with Objective Criteria Weighting
+Home-page: https://github.com/energyinpython/objective-weights-for-mcda
+Author: Aleksandra Bączkiewicz
+Author-email: aleksandra.baczkiewicz@phd.usz.edu.pl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# objective-weights-for-mcda
+
