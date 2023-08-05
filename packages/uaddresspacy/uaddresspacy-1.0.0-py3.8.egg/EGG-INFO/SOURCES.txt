@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+uaddresspacy/__init__.py
+uaddresspacy.egg-info/PKG-INFO
+uaddresspacy.egg-info/SOURCES.txt
+uaddresspacy.egg-info/dependency_links.txt
+uaddresspacy.egg-info/top_level.txt
