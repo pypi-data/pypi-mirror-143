@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: nflbdb
+Version: 0.1
+Summary: My utilities for work with Big Data Bowl Datasets
+Author-email: Brock Tibert <btibert3@gmail.com>
+Requires-Python: >=3.7.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: imageio
+Requires-Dist: seaborn
+Project-URL: Home, https://github.com/Btibert3/nflbdb
+
+# About
+
+My personal repository of tools to help work with the Big Data Bowl Datasets (2021 and later)
+
+## Competition Homepages:
+
+- [2021](https://www.kaggle.com/c/nfl-big-data-bowl-2021)
+- [2022](https://www.kaggle.com/c/nfl-big-data-bowl-2022)
+
+## Goals 
+
+- Extract (read and parse data)
+- Transform (build datasets)
+- Explore (Visualization)
+- Modeling (Play Outcome, Player Location, Impact, Contribution to play outcome, etc.)
+
+## Initial Assumptions
+
+- The data are locally available _OR_ can be referenced via a __valid file path__
+
+
+
