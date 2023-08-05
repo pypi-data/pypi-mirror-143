@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+entity_resolution.egg-info/PKG-INFO
+entity_resolution.egg-info/SOURCES.txt
+entity_resolution.egg-info/dependency_links.txt
+entity_resolution.egg-info/requires.txt
+entity_resolution.egg-info/top_level.txt
+resolver/__init__.py
+resolver/_base.py
+resolver/_functions.py
+resolver/_version.py
+resolver/entlet.py
+resolver/entletmap.py
+resolver/filter.py
+resolver/pipeline.py
+resolver/strategy.py
