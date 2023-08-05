@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: utils-mkmenta
+Version: 0.0.1
+Summary: Utils for debugging and fast implementation of scripts.
+Home-page: https://github.com/mkmenta/mkutils
+Author: Mikel Menta Garde
+Author-email: thisisnotmyemail@gmail.com
+License: UNKNOWN
+Description: # mkmenta utils
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

@@ -1,0 +1,6 @@
+recursive-include mkutils *.py
+recursive-include tests *.py
+
+include *.txt
+include tox.ini
+recursive-exclude .idea *
