@@ -1,0 +1,3 @@
+[console_scripts]
+wordle=amitkh_wordle.wordle:app
+
