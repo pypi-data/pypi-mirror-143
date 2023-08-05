@@ -1,0 +1,3 @@
+[console_scripts]
+my-script=src.juridecomposer.juridecomposer:xml_to_dataframe
+
