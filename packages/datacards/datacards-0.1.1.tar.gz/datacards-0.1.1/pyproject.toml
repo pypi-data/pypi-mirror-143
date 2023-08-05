@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "datacards"
+version = "0.1.1"
+description = "Append missing model cards to Huggingface datasets"
+authors = ["MarkusSagen <markus.john.sagen@gmail.com>"]
+license = "Apache License 2.0"
+repository = 'https://github.com/Hugging-Face-Supporter/datacards'
+readme = 'README.md'
+keywords = ['huggingface', 'transformers', 'datasets', 'dataset', 'text', 'modelcard', 'card']
+
+[tool.poetry.dependencies]
+python = "^3.8"
+rich = { extras = ["jupyter"], version = "^10.14.0" }
+pydantic = "^1.8.0"
+datasets = "^1.14.0"
+PyYAML = "^6.0"
+# requests = "^2.26.0"
+# requests-toolbelt = "^0.9.1"
+# pydantic = "^1.8.2"
+# types-requests = "^2.26.3"
+# pandas = "^1.2.0"
+# requests = "^2.27.1"
+# hydra-core = "^1.1.1"
+# hydra-colorlog = "^1.1.0"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "6.2.5"
+pytest-cov = "3.0.0"
+isort = "5.10.1"
+flake8 = "4.0.1"
+black = "22.1.0"
+mypy = "0.910"
+tox = "3.24.4"
+tomlkit = "0.7.2"
+pylint = "2.9.0"
+autopep8 = "^1.6.0"
+python-lsp-server = "^1.4.0"
+pyright = "^1.1.229"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+# setup = "datacards.poetry.utils:setup"

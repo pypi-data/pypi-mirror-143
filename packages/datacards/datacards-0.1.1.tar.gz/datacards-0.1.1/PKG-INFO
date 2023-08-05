@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: datacards
+Version: 0.1.1
+Summary: Append missing model cards to Huggingface datasets
+Home-page: https://github.com/Hugging-Face-Supporter/datacards
+License: Apache-2.0
+Keywords: huggingface,transformers,datasets,dataset,text,modelcard,card
+Author: MarkusSagen
+Author-email: markus.john.sagen@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: datasets (>=1.14.0,<2.0.0)
+Requires-Dist: pydantic (>=1.8.0,<2.0.0)
+Requires-Dist: rich[jupyter] (>=10.14.0,<11.0.0)
+Project-URL: Repository, https://github.com/Hugging-Face-Supporter/datacards
+Description-Content-Type: text/markdown
+
+# Datacard
+
+This repo aims to find and update the missing model cards for Hugging face datasets.
+
+If you find this a worth while pursute, feel free to reach out and let's try to make the Hugging face datasets complete :wink:
+
+## Setup
+
+```shell
+# install poetry
+git clone --recurse-submodules --remote-submodules git@github.com:Hugging-Face-Supporter/datacards.git
+cd datacards
+git submodule update
+
+poetry install
+```
+
+## Run
+
+```shell
+poetry shell
+python datacards/main.py
+```
+
+## WIP
+
+- [x] Look into how to provide multiple answers in model card (ex. Glue dataset)
+- [x] Find the datasets that are missing information by parsing the README
+- [x] Find ways to know what categories are valid answers
+- [ ] Create method to filter for missing datasets
+- [ ] Create [tool to annotate the datasets](https://huggingface.co/spaces/huggingface/datasets-tagging/blob/main/tagging_app.py)
+- [ ] Toggle between datasets to annotate.
+- [ ] Save modified files to the README again
+- [ ] Once done, find ways to create automatic PR to Hugging face datasets
+
