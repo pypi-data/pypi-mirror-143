@@ -1,0 +1,13 @@
+verdin/__init__.py,sha256=kBWFTj5JudcTgtE4U0Dh2waQEOw3JKiOrpbHMsZtadE,39
+verdin/client.py,sha256=xIeJDMXsouQnon96v4YJg9N3DMxv69UpkRYWujzYRXE,1095
+verdin/config.py,sha256=o-OE8cQQyLKJSfBpBvziTTkGE2xsa0z7QnqsIBbQ3Sk,41
+verdin/datasource.py,sha256=KiNJjjiZfxy77jnr7alM2hExPF1Ct_vkHVhvaIR6iYg,3578
+verdin/pipe.py,sha256=kxLqcscSVU4lKUItDM9Tp3-QKXP1lYId5oJ8IFstCJI,3581
+verdin/query.py,sha256=pMQwYBvnyFkoX57VIcWn3UrXSMD4627W_irOcT4A1Wk,3087
+verdin/tinybird.py,sha256=d1XzedzEsZRWYoQO6L9z6u6AuO7CrsW02hpEBc0C7tE,494
+verdin/worker.py,sha256=9od32TmI3OA6cf-2Umf-Fw3zFjOkfrcqDS6riFz15S4,7234
+verdin-0.3.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+verdin-0.3.0.dist-info/METADATA,sha256=z418ppS6mHYvweR2ND00aSGWF0_wxncjkE8gB0YIonI,4175
+verdin-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+verdin-0.3.0.dist-info/top_level.txt,sha256=PtmwQzW0JpmnQcEXg7-E7ZeObK9lPPlfnaRD3Bx88Lk,7
+verdin-0.3.0.dist-info/RECORD,,
