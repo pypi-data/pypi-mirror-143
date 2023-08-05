@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: leanapi
+Version: 0.0.4
+Summary: Lean Api is a class layer for FastApi
+Home-page: http://github.com/developerkitchentr/leanapi
+Author: developerkitchen python team
+Author-email: topluluk@developerkitchen.dev
+License: MIT
+Keywords: api,leanapi,fastapi
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+
+# Lean Api for FastApi 
+
+
