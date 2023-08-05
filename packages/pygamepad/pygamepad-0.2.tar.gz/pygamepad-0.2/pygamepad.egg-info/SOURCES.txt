@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pygamepad/__init__.py
+pygamepad/buttons.py
+pygamepad/utils.py
+pygamepad.egg-info/PKG-INFO
+pygamepad.egg-info/SOURCES.txt
+pygamepad.egg-info/dependency_links.txt
+pygamepad.egg-info/not-zip-safe
+pygamepad.egg-info/requires.txt
+pygamepad.egg-info/top_level.txt
+pygamepad/gamepads/__init__.py
+pygamepad/gamepads/default.py
+pygamepad/gamepads/defenderx7.py
