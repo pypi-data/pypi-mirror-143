@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: flaked
+Version: 0.2.1
+Summary: flaked add mako file's py checker and more base on flake8
+Home-page: https://github.com/ischaojie/flaked
+Author: ischaojie
+Author-email: zhuzhezhe95@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=2.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# flaked
+`flaked` 构建于 `flake8` 之上，增加了对 `mako` 文件中 python 代码的检查，以及某些实用的功能。
+
+## 快速开始
+```shell
+> pip install flaked
+
+> flaked <some_mako_file>
+```
+由于 `flaked` 是在 `flake8` 之上的封装，所以使用方式与 `flake8` 如出一辙。
+
+
+## Change Log
+
+- v0.1.0: 增加对 `mako` 文件的基础检查。
+- v0.2.0: 增加 `flaked-shire` 插件（for douban), 检查 shire 老代码。
+
+
