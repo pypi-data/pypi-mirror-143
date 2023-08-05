@@ -1,0 +1,9 @@
+gitpython
+dateparser
+click>=8.0
+python-dotenv
+
+[testing]
+pytest
+mypy
+flake8

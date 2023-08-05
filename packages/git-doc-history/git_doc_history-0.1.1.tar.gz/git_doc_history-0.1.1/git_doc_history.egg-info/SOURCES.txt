@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+bin/file_backups_to_doc_history
+bin/git_doc_history
+git_doc_history/__init__.py
+git_doc_history/__main__.py
+git_doc_history/config.py
+git_doc_history/py.typed
+git_doc_history.egg-info/PKG-INFO
+git_doc_history.egg-info/SOURCES.txt
+git_doc_history.egg-info/dependency_links.txt
+git_doc_history.egg-info/not-zip-safe
+git_doc_history.egg-info/requires.txt
+git_doc_history.egg-info/top_level.txt
