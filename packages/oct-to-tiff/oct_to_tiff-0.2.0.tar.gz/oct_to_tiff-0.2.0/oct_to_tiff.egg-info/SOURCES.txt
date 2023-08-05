@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+oct_to_tiff/__init__.py
+oct_to_tiff/cli.py
+oct_to_tiff.egg-info/PKG-INFO
+oct_to_tiff.egg-info/SOURCES.txt
+oct_to_tiff.egg-info/dependency_links.txt
+oct_to_tiff.egg-info/entry_points.txt
+oct_to_tiff.egg-info/requires.txt
+oct_to_tiff.egg-info/top_level.txt
