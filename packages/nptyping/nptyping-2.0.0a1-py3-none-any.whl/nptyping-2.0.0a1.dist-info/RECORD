@@ -1,0 +1,16 @@
+nptyping/__init__.py,sha256=bmfeo_3VA-5vOes5t1a20Drg_-0iSRyEQrO2c5V6A4o,3724
+nptyping/error.py,sha256=ek6HvMek-o4HMioh-Be4crnAe0pp1K80XeTZyFu49xU,1510
+nptyping/ndarray.py,sha256=qX7beQXQd8Msy_UwC-f3K-Ygrtoj9Z2sx_2kBT6uuq8,5956
+nptyping/ndarray.pyi,sha256=B-fjJH6Q3VaqkwmNISXMcbceSOIXTGPr50sO97i3nM8,1701
+nptyping/nptyping_type.py,sha256=PqRBBUexSKGoV4aR8BJeKwed0xyZv3jsmy9B7MuNP4I,1211
+nptyping/package_info.py,sha256=PyT0WPvoWxXY6EkMjVRHZLbcWrskDSKEinMsfzOaBv8,1429
+nptyping/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nptyping/shape_expression.py,sha256=CUcDpg5CoIpxdvnC00W34WXuWyLwfKYPqNDsY6dYllA,6969
+nptyping/shape_expression.pyi,sha256=H6IKt2DDTgZfSrV0g7nJnDoX0JhZq3nxHCJgF-3f9VU,1342
+nptyping/typing_.py,sha256=yqPWvRi7l_FZl4tpE4aoU5x6AVcIKX09sv-lktDrlAw,5834
+nptyping/typing_.pyi,sha256=Ip6opFq5DrRtEhnfGd47lEE9DRiH7Wd8DR9hrYaCoZg,3809
+nptyping-2.0.0a1.dist-info/LICENSE,sha256=1WhYu6EmVB0B-Lx5Sanwbxezwj3T2jN-dm45rE6QGDo,1063
+nptyping-2.0.0a1.dist-info/METADATA,sha256=WBlC4iwPKNs5SAn_W7IBeC-jQrbeRg9qIdCZFKcvcgE,4414
+nptyping-2.0.0a1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nptyping-2.0.0a1.dist-info/top_level.txt,sha256=nTX33NFqHZjWDU2m2huWvU7ZOIvNBrhBR4D52p3NZfA,9
+nptyping-2.0.0a1.dist-info/RECORD,,
