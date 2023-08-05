@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+FlavorTexts/FlavorTexts.py
+FlavorTexts/__init__.py
+FlavorTexts.egg-info/PKG-INFO
+FlavorTexts.egg-info/SOURCES.txt
+FlavorTexts.egg-info/dependency_links.txt
+FlavorTexts.egg-info/requires.txt
+FlavorTexts.egg-info/top_level.txt
