@@ -1,0 +1,11 @@
+projectslib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+projectslib/binary.py,sha256=7cuGl7L3rFDCNyJC1-y0-u_A50EPG7LhsRTFHGh-Et0,70
+projectslib/digits.py,sha256=lmR-IAirQl8hK46OBi7oT5bDCLHyKpfZDqPm8IyfH6s,215
+projectslib/factors.py,sha256=jorCQ3tICjZ0XvEemWawHOxVjyZGRodcgE9S1EgN0og,232
+projectslib/np_random_grid.py,sha256=YpMF1JV7oAeSi1gRpKzMsn1441KI99JOjjH2zhGFP2o,643
+projectslib/np_utils.py,sha256=rfG7sh2Haj7MEx6X-i9MiEH6slSJw3uOtKtvHMWFuZ8,117
+projectslib/primes.py,sha256=871_kYlZSrXSgJH6rGI9vOmuTUwIM-w54Mhn8MokbXs,1765
+projectslib/py_utils.py,sha256=plo0KFD5s29j5I-IpTOWSR418xqePyAWfVy2jrQKlg0,540
+projectslib-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+projectslib-0.1.0.dist-info/METADATA,sha256=xc8RkY-p2SC7EInox5ph4CCouY9k3UL2_HVX-NMAt_0,515
+projectslib-0.1.0.dist-info/RECORD,,
