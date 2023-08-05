@@ -1,0 +1,2 @@
+[console_scripts]
+beersolver = exercises.ThirdChapter.commands:cli
