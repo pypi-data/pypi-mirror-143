@@ -1,0 +1,5 @@
+py_spear-0.1.0.dist-info/METADATA,sha256=1lkSXVYhfo0P5cv18ep-v4TawLADs-T1bwS3b_-7nmw,632
+py_spear-0.1.0.dist-info/WHEEL,sha256=q6LpZi-yIC--8xIfXyVpcJd2cBMyN6UyeAj4AL2PJjM,96
+spear/__init__.py,sha256=ac8Ltu3widKKkSV7g1ncZRVhdM8-i70uBN8taKRus1Y,46
+spear/spear.cp39-win_amd64.pyd,sha256=8bmxbR1IJViuWTSUm2DmKzutjp76A17jXXlRvgC93wI,216064
+py_spear-0.1.0.dist-info/RECORD,,
