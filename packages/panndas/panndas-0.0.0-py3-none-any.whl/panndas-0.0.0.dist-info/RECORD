@@ -1,0 +1,10 @@
+panndas/__init__.py,sha256=0KD_r6KB1iOVw1dK_DxTv7LjMslKymR5jdgO-PCrWpk,72
+panndas/data/__init__.py,sha256=sXIlnktl2_9rOt7JAfSoqVM8D4D-JH-V-thZffG4IgI,39
+panndas/data/text.py,sha256=mOwXUclrw-D4MzPLIgpOTFTwxKeUjws-ygUv8lhCMIs,2872
+panndas/nn/__init__.py,sha256=zCXkK0SXglUa9272hyF4w3NGyH4sQjSjvUiDHWoWsck,320
+panndas/nn/functional.py,sha256=j6VK4k4bJebiATUfg3H9cnoCVQA6_s_LBd3scciODyo,361
+panndas/nn/math.py,sha256=k19N_COHGNYSgMLDDmVmafVpZzbvoyiL8ESJ0TYZ0Jc,337
+panndas/nn/modules.py,sha256=qStV6arkfRtHd4ArjGtjmd8kEogMTgba6JCXHDjIJlo,2843
+panndas-0.0.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+panndas-0.0.0.dist-info/METADATA,sha256=Oxo_nDfREohyt-5gKBgBBFnBIyzMowQhEwu9G7GrBJ0,2253
+panndas-0.0.0.dist-info/RECORD,,
