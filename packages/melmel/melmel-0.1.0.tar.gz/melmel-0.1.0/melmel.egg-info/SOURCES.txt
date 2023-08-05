@@ -1,0 +1,9 @@
+README.md
+setup.py
+libname/__init__.py
+libname/mel.py
+melmel.egg-info/PKG-INFO
+melmel.egg-info/SOURCES.txt
+melmel.egg-info/dependency_links.txt
+melmel.egg-info/requires.txt
+melmel.egg-info/top_level.txt
