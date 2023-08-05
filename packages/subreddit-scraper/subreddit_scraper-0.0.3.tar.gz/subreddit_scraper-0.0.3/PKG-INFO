@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: subreddit_scraper
+Version: 0.0.3
+Summary: Scrapes subreddit, meant for internal use in https://github.com/TheOnlyWayUp/writingSite
+Home-page: UNKNOWN
+Author: TheOnlyWayUp
+Author-email: thedarkdraconian@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+# Reddit Scraper
+
