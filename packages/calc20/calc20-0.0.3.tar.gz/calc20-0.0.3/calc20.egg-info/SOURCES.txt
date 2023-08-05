@@ -1,0 +1,14 @@
+HISTORY.md
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+calc20/__init__.py
+calc20/main.py
+calc20.egg-info/PKG-INFO
+calc20.egg-info/SOURCES.txt
+calc20.egg-info/dependency_links.txt
+calc20.egg-info/entry_points.txt
+calc20.egg-info/not-zip-safe
+calc20.egg-info/requires.txt
+calc20.egg-info/top_level.txt
