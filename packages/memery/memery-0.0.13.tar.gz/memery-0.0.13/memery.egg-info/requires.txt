@@ -1,0 +1,9 @@
+annoy
+torchvision
+tqdm
+ipywidgets
+torch==1.7.1
+ipython
+Pillow
+typer
+streamlit==1.3.1
