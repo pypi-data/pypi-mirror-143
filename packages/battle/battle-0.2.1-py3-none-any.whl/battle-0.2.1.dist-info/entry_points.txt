@@ -1,0 +1,5 @@
+[console_scripts]
+battle-chillbot = battle.chillbot:main
+battle-pongbot = battle.pongbot:main
+battle-radarbot = battle.radarbot:main
+battle-runner = battle.runner:main
