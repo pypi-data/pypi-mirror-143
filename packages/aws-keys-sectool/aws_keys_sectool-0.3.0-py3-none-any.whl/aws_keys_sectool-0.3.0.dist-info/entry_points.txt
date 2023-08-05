@@ -1,0 +1,3 @@
+[console_scripts]
+aws-keys-sectool = aws_keys_sectool.__main__:main
+

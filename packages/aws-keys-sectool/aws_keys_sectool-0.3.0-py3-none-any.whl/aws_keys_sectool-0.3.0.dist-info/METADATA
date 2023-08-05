@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aws-keys-sectool
+Version: 0.3.0
+Summary: List active aws profiles and protect their conusmption via IP condition IAM policies
+Home-page: https://github.com/toshke/aws-keys-security
+Author: Nikola Tosic
+Author-email: nikola@toshke.me
+License: UNKNOWN
+Keywords: aws security credentials
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: boto3
+
+UNKNOWN
+
+
