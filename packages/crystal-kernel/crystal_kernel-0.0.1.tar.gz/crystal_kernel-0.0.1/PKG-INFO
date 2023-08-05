@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: crystal_kernel
+Version: 0.0.1
+Summary: A Crystal kernel for Jupyter
+Home-page: https://github.com/kojix2/crystal_kernel
+Author: kojix2
+Author-email: 2xijok@gmail.com
+Description-Content-Type: text/markdown
+Classifier: Framework :: IPython
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Shells
+Requires-Dist: pexpect
+Requires-Dist: ipykernel
+
+# crystal_kernel
+
+Python wrapper kernel for Crystal
+
+Forked from [bash_kernel](https://github.com/takluyver/bash_kernel)
+
