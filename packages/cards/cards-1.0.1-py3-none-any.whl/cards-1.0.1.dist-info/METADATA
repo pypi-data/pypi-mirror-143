@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cards
+Version: 1.0.1
+Summary: Top-level package for cards.
+Author-email: Brian Okken <brian+pypi@pythontest.com>
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: tinydb==4.5.1
+Requires-Dist: typer==0.3.2
+Requires-Dist: rich==10.7.0
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: faker ; extra == "test"
+Requires-Dist: tox ; extra == "test"
+Requires-Dist: coverage ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Project-URL: Home, https://github.com/okken/cards
+Provides-Extra: test
