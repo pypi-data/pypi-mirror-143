@@ -1,0 +1,7 @@
+setuptools
+attr
+
+[test]
+pytest
+pycodestyle
+mypy
