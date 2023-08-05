@@ -1,0 +1,8 @@
+README.md
+setup.py
+MosqitoMod.egg-info/PKG-INFO
+MosqitoMod.egg-info/SOURCES.txt
+MosqitoMod.egg-info/dependency_links.txt
+MosqitoMod.egg-info/top_level.txt
+libname/__init__.py
+libname/mos.py
