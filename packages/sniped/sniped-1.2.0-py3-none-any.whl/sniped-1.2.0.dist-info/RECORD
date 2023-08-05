@@ -1,0 +1,11 @@
+sniped/__init__.py,sha256=El1sbpINO-cJ2mX6y_07W6DCl7IpRhkDNz3fpZpHII0,23
+sniped/__main__.py,sha256=Zi8S_w0sxKyDc9gXLI4rmuX1F9Um0drCtjeJE5XqkEU,4231
+sniped/compile_languages.py,sha256=UeczUNUlcvw7IcGh3zW6h7bQGRPIqXh-CHQiJcvkB7Q,12471
+sniped/configs.py,sha256=Th8BrofJxb48HzVBkFGlCvyXMwXWsRhCoDP398q_cS8,1265
+sniped/languages.py,sha256=_7kNcvUbLW7r8tohbjLBkEnnlU0UFMCGHG7cHiQf8HI,9944
+sniped/services.py,sha256=V62VSZ8dEn5V4RKlYdacCIoJlY-wJOKKQZL3zLi145I,304
+sniped/themes.py,sha256=Qx1pCgEnZlGhzvqA63dJBgJhN1M2KapmmiUpaHZhccw,3320
+sniped-1.2.0.dist-info/entry_points.txt,sha256=HQjd4XFSkr9aEQEWe8PYz5Mj1qjlzWP7qxrnf1vqzcg,46
+sniped-1.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+sniped-1.2.0.dist-info/METADATA,sha256=gtFa1iq4mMzQUFM1z99Pmd7DlG7B7BRffLaGqwa7AK4,2394
+sniped-1.2.0.dist-info/RECORD,,
