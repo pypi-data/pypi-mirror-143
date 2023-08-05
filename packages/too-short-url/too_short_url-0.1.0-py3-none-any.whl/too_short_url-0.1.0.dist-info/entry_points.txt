@@ -1,0 +1,3 @@
+[console_scripts]
+too-st=too_short_url.__main__:app
+
