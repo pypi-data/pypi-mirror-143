@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/postify/__init__.py
+src/postify/test.py
+src/postify.egg-info/PKG-INFO
+src/postify.egg-info/SOURCES.txt
+src/postify.egg-info/dependency_links.txt
+src/postify.egg-info/top_level.txt
