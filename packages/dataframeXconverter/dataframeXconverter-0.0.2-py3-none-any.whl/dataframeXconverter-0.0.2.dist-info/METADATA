@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: dataframeXconverter
+Version: 0.0.2
+Summary: This package converts dataframe to csv,Html,Xml
+Home-page: UNKNOWN
+Author: Haridas
+Author-email: vrharidas141@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+# Dataframe to CSV,HTML and XML converter
+
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
+
+
+## Description
+
+This is a package that converts your dataframe to csv,xml and html.This package has three funtions to
+
+- Convert dataframe to csv
+- Convert dataframe to xml
+- Convert dataframe to html
+
+## Usage
+
+- Run Following command to install.
+ ```
+  pip install dataframeXconverter
+  ```
+## Example of How to use.
+
+Make sure the dataframe you are passing is not an empty one.
+ ```
+import dataframeXconverter
+
+# to convert dataframe to csv
+df_to_csv(dataframe, "filename.csv")
+
+# to convert dataframe to xml
+df_to_csv(dataframe, "filename.xml")
+
+# to convert dataframe to html
+df_to_csv(dataframe, "filename.html")
+
+  ```
+
+## Error and Exception Handling
+
+I have included some error and exception handling in the code,if you want then you can log them. Im just throwing(raise) it ,you have to catch it in your script.
+ ```
+ # in csv function
+
+     if not isinstance(dataframe, pd.DataFrame):
+        raise AttributeError('dataframe arg in df_to_csv() is not a dataframe')
+    if not isinstance(filename, str) or not filename.endswith('.csv'):
+        raise NameError('Please Provide Valid CSV File Name')
+
+ # in xml funtion
+
+    if not isinstance(dataframe, pd.DataFrame):
+        raise AttributeError('dataframe arg in df_to_xml() is not a dataframe')
+    if not isinstance(filename, str) or not filename.endswith('.xml'):
+        raise NameError('Please Provide Valid XML File Name')
+
+ # in html function
+
+    if not isinstance(dataframe, pd.DataFrame):
+        raise AttributeError('dataframe arg in df_to_html() is not a dataframe')
+    if not isinstance(filename, str) or not filename.endswith('.html'):
+        raise NameError('Please Provide Valid HTML File Name')
+
+ ```
+
+
+
+
+
