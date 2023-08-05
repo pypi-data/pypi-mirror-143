@@ -1,0 +1,9 @@
+setup.py
+phonologic/__init__.py
+phonologic/_exceptions.py
+phonologic/_load.py
+phonologic/_systems.py
+phonologic.egg-info/PKG-INFO
+phonologic.egg-info/SOURCES.txt
+phonologic.egg-info/dependency_links.txt
+phonologic.egg-info/top_level.txt
