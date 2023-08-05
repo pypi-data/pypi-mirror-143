@@ -1,0 +1,21 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "nflbdb"
+authors = [{name = "Brock Tibert", email = "btibert3@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.7.12"
+dynamic = ["version", "description"]
+dependencies = [
+    "pandas",
+    "imageio",
+    "seaborn"
+]
+
+
+[project.urls]
+Home = "https://github.com/Btibert3/nflbdb"
+
+
