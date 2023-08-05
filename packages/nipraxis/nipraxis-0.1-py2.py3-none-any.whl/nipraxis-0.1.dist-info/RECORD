@@ -1,0 +1,8 @@
+nipraxis/__init__.py,sha256=5DrbZnK4G_zhJh4T0wTtcJ1YacC_I8HqIIyEhYCAvUc,82
+nipraxis/_fetcher.py,sha256=BucrXD9HCIv3_sZi82YRo7pioH67J0ETY-VRcnLNlnI,2543
+nipraxis/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nipraxis/tests/test_local_cache.py,sha256=2u2mmMgQGgiKmmRPNt93P7MEQLX0jA_RS7FwodZUpuo,1049
+nipraxis-0.1.dist-info/LICENSE,sha256=o6mTc42Ma8IT6d1MNf3rubPYvSO1xgsObcM0PGXvI18,1607
+nipraxis-0.1.dist-info/WHEEL,sha256=2adPsdwavOXlr3i4h108dwQdqKgJbVa5zTEEuD11F08,99
+nipraxis-0.1.dist-info/METADATA,sha256=2GAYL_u44JQH9EjmPUVz1FQjJ45BQ-5L8MI6UzrWkSk,677
+nipraxis-0.1.dist-info/RECORD,,
