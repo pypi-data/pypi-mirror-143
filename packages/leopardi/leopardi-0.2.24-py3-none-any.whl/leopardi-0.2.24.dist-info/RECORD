@@ -1,0 +1,13 @@
+leopardi/__init__.py,sha256=LXzSxGuT616M6Qv8QNA7Q7RcKgdP_C8srkIsEd7VcSk,555
+leopardi/_blender.py,sha256=Cq4pwbqldJaSskgM9k3oIcLKw7d5XtwVR7KMiXijaQY,15092
+leopardi/backgrounds.py,sha256=PLatRgvs_IA8_2PhNIlAHipna1UjehXACOjsKKi04XY,3461
+leopardi/camera.py,sha256=N2G3ObwAWN1W_TeV34wsSFyhCAuj2MlUHF_tc22K16Y,17364
+leopardi/leopardi.py,sha256=i2RlJb100ZL849JHyG3WyHbFXum1ECjtk--Arig2a6s,9808
+leopardi/lighting.py,sha256=pe3-xaxfdWr9g_oFOiOM4Vwe7Gj-dLObLE3UG83Zo_I,2339
+leopardi/models.py,sha256=BoKMnbChVY6ZS9xXMF4SypMoTD9XPmyRrXXBtaW8Dzo,3163
+leopardi/renderer.py,sha256=Q0SHydswVqJnYhJmZQjUYMLJDvbFXv_hNN9FUXoeyTU,3321
+leopardi-0.2.24.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+leopardi-0.2.24.dist-info/METADATA,sha256=1qmRbP6RXeTIze9RJgcZjyeJ47RkNvSGcyFM2jLENBU,2936
+leopardi-0.2.24.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+leopardi-0.2.24.dist-info/top_level.txt,sha256=sfkt-UdJIhxYljLCO9CEWqpi4v2u_oGB3lZBaSQxY6Y,9
+leopardi-0.2.24.dist-info/RECORD,,
