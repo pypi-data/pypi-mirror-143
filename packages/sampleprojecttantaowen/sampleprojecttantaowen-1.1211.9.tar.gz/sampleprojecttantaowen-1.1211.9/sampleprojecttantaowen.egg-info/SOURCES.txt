@@ -1,0 +1,8 @@
+README.rst
+pyproject.toml
+setup.py
+package_tantaowen_talk/__init__.py
+sampleprojecttantaowen.egg-info/PKG-INFO
+sampleprojecttantaowen.egg-info/SOURCES.txt
+sampleprojecttantaowen.egg-info/dependency_links.txt
+sampleprojecttantaowen.egg-info/top_level.txt
