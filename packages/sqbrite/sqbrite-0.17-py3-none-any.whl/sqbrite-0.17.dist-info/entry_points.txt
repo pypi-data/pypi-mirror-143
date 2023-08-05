@@ -1,0 +1,2 @@
+[console_scripts]
+sqbrite = sqbrite.sqlite_recover:main
