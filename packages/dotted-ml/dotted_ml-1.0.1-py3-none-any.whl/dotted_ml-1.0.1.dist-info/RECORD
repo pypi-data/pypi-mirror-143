@@ -1,0 +1,11 @@
+dml/__init__.py,sha256=j7SNvRVjL2XgYjxpt1aK8CfNGvUshiAck4avd7P-PmM,301
+dml/encoder.py,sha256=a00qH4H6vmHZEVd2fstN4bddgnPixviFRdho8j9D5o0,2148
+dml/errors.py,sha256=aOdLv5G5wHwThB4g4lnm9H3Xx6b264gMWtbvtf1aorw,294
+dml/fileutils.py,sha256=0w7jC4EfEk9o9EubpbA9FA_molc2dRySkHXzsmw0FsY,2185
+dml/run.py,sha256=nJLTNvpd6qZ0mh-KRprzpz3_ybkJ7kaKO0EgVhJEz6k,222
+dml/symbols.py,sha256=AC8itHOdufiJs_byhThcUr2Bt4PZmgoPnBlUP24Mjc0,169
+dotted_ml-1.0.1.dist-info/LICENSE,sha256=yqjB_fRxQ4osLV3jdQcve8r8iwYhDaW5unPD69_MPYY,1054
+dotted_ml-1.0.1.dist-info/METADATA,sha256=SYkk53OPfxr4ZVMDykLT3jQFg6aJ6KYrFgFM4o3JxFk,1345
+dotted_ml-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dotted_ml-1.0.1.dist-info/top_level.txt,sha256=mNDOH2wR5pl2PQx5TWJTKyC9RVhwdreDHQPpEQHf-Do,4
+dotted_ml-1.0.1.dist-info/RECORD,,
