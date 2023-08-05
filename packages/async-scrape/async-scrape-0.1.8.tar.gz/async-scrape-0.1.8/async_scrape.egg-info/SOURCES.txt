@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+async_scrape/__init__.py
+async_scrape.egg-info/PKG-INFO
+async_scrape.egg-info/SOURCES.txt
+async_scrape.egg-info/dependency_links.txt
+async_scrape.egg-info/requires.txt
+async_scrape.egg-info/top_level.txt
+tests/__init__.py
+tests/test_no_proxy.py
+tests/test_proxy.py
