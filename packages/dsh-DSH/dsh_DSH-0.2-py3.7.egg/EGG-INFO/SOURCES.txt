@@ -1,0 +1,5 @@
+setup.py
+dsh/dsh_DSH.egg-info/PKG-INFO
+dsh/dsh_DSH.egg-info/SOURCES.txt
+dsh/dsh_DSH.egg-info/dependency_links.txt
+dsh/dsh_DSH.egg-info/top_level.txt
