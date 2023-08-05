@@ -1,0 +1,3 @@
+[console_scripts]
+cellml = src.cli:cli
+
