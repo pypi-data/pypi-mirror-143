@@ -1,0 +1,8 @@
+README.md
+setup.py
+interestinghumanfacts1/HumanFacts.py
+interestinghumanfacts1/__init__.py
+interestinghumanfacts1.egg-info/PKG-INFO
+interestinghumanfacts1.egg-info/SOURCES.txt
+interestinghumanfacts1.egg-info/dependency_links.txt
+interestinghumanfacts1.egg-info/top_level.txt
