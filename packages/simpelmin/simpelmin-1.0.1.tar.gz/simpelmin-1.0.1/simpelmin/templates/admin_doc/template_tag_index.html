@@ -1,0 +1,70 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% translate 'Home' %}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'django-admindocs-docroot' %}">{% translate 'Documentation' %}</a></li>
+  <li class="breadcrumb-item">{% translate 'Tags' %}</li>
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  pre, dd, dt {
+    font-family: var(--bs-font-monospace);
+  }
+  dd, pre, code {
+    color: #e30000;
+  }
+  dt, dd {
+    font-size: 12px;
+  }
+  .card-body p {
+    margin-bottom: .25rem;
+  }
+</style>
+{% endblock extrastyle %}
+
+{% block title %}{% translate 'Template tags' %}{% endblock %}
+{% block content_title %}{% translate 'Template tags' %}{% endblock %}
+
+{% block content %}
+  {% regroup models by app_config as grouped_models %}
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card position-sticky" style="top: 100px">
+        <div class="card-body">
+          <div class="scrollbars" style="max-height: 460px;">
+            {% regroup tags|dictsort:"library" by library as tag_libraries %}
+            {% for library in tag_libraries %}
+              <h3 class="fs-5 mb-3 fw-bold">{% firstof library.grouper _("Built-in tags") %}</h3>
+              <div class="list-group mb-3">
+                {% for tag in library.list|dictsort:"name" %}
+                <a class="list-group-item" href="#{{ library.grouper|default:"built_in" }}-{{ tag.name }}">{{ tag.name }}</a>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      {% regroup tags|dictsort:"library" by library as tag_libraries %}
+      {% for library in tag_libraries %}
+      <div class="card mb-3">
+        <div class="card-body">
+            <h2 class="h4 fw-bolder">{% firstof library.grouper _("Built-in tags") %}</h2>
+            {% if library.grouper %}<p class="quiet">{% blocktranslate with code="{"|add:"% load "|add:library.grouper|add:" %"|add:"}" %}To use these tags, put <code>{{ code }}</code> in your template before using the tag.{% endblocktranslate %}</p><hr>{% endif %}
+            {% for tag in library.list|dictsort:"name" %}
+              <div class="{% cycle 'bg-opacity-10' 'bg-opacity-50' %} bg-light rounded p-3 mb-2">
+                <h2 id="{{ library.grouper|default:"built_in" }}-{{ tag.name }}" class="h5">{{ tag.name }}</h2>
+                {% if tag.title %}<div class="mb-3">{{ tag.title|striptags }}</div>{% endif %}
+                {% if tag.body %}{{ tag.body }}{% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% load static i18n simpelcore_tags %}
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="list-group list-group-flush">
+      <div class="list-group-item px-0">
+        <h3 class="h6 fw-bold">{% trans "Grand Total" %}</h3>
+        <div class="h4">{{ object.grand_total|currency }}</div>
+      </div>
+      <div class="list-group-item px-0">
+        <table class="table table-borderless small">
+          <tbody>
+            <tr>
+              <th class="ps-0 py-1">{% trans "Total" %}</th>
+              <td class="text-end py-1">{{ object.total|currency }}</td>
+            </tr>
+            <tr>
+              <th class="ps-0 py-1">{% trans "Discount" %}</th>
+              <td class="text-end py-1">{{ object.discount|currency }}</td>
+            </tr>
+            <tr>
+              <th class="ps-0 py-1">{% trans "Down Payment" %}</th>
+              <td class="text-end py-1">{{ object.downpayment|currency }}</td>
+            </tr>
+            <tr>
+              <th class="ps-0 py-1">{% trans "Grand Total" %}</th>
+              <td class="text-end py-1">{{ object.grand_total|currency }}</td>
+            </tr>
+            <tr>
+              <th class="ps-0 py-1">{% trans "Payable" %}</th>
+              <td class="text-end py-1">{{ object.payable|currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

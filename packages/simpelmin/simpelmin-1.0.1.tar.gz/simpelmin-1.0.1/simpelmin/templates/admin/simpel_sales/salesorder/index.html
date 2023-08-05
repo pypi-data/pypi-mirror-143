@@ -1,0 +1,46 @@
+{% extends 'base_site.html' %}
+{% load static i18n widget_tweaks simpelcore_tags simpellab_tags routes_tags %}
+
+{% block breadcrumbs %}
+<li class="breadcrumb-item"><a href="{% url 'index' %}">{% translate 'Home' %}</a></li>
+<li class="breadcrumb-item active">{{ opts.verbose_name_plural }}</li>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-8">
+      {% for object in object_list %}
+       {% object_url 'dashboard' "simpel_sales.SalesOrder" action="inspect" pk=object.id as inspect_url %}
+       <div class="card mb-2">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="me-3">
+              <a class="link-dark" href="{{ inspect_url }}">
+                <h2 class="h5 fw-bold">{{ object.inner_id }} <span class="text-muted small">[{{ object.get_status_display }}]</span></h2>
+              </a>
+              <div class="small">
+                {{ object.created_at }}
+                {% if object.group %}
+                {% trans "In" %} <a class="border-bottom" href="#">{{ object.group }}</a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="flex-shrink-0 text-end">
+              <div class="fs-5 mb-2">{{ object.grand_total|currency }}</div>
+              <a class="btn btn-sm btn-primary" href="{{ inspect_url }}">{% trans "Inspect" %}</a>
+            </div>
+          </div>
+        </div>
+       </div>
+      {% empty %}
+        {% include 'includes/noresults.html' %}
+      {% endfor %}
+      {% if is_paginated %}
+        {% include 'includes/pagination.html' %}
+      {% endif %}
+    </div>
+    <div class="col-lg-4">
+      {% include 'dashboard/salesorder/filter.html' %}
+    </div>
+  </div>
+{% endblock %}

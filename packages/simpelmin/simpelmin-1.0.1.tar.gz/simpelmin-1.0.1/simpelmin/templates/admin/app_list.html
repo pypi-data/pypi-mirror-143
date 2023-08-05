@@ -1,0 +1,27 @@
+{% load i18n %}
+{% if app_list %}
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    {% for app in app_list %}
+    <div class="col-lg-6">
+      <div class="card app-list mb-35 app-{{ app.app_label }} module{% if app.app_url in request.path %} current-app{% endif %}">
+        <div class="card-body">
+          <a href="{{ app.app_url }}" class="section" title="{% blocktranslate with name=app.name %}Models in the {{ name }} application{% endblocktranslate %}">
+            <h3 class="align-items-center d-flex h5 m-0 mb-2 p-0">
+              <i class="mdi mdi-24px mdi-{{ app.icon }} me-2"></i>{{ app.name }}
+            </h3>
+          </a>
+          {% for model in app.models %}
+            {% if model.admin_url %}
+              <a class="btn btn-sm btn-secondary mb-15 me-1 model-{{ model.object_name|lower }}{% if model.admin_url in request.path %} current-model{% endif %}" href="{{ model.admin_url }}"{% if model.admin_url in request.path %} aria-current="page"{% endif %}>{{ model.name }}</a>
+            {% else %}
+              <span class="btn btn-sm btn-secondary me-1 mb-15 disable">{{ model.name }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  {% comment %} <p style="margin:5px">{% translate 'You don’t have permission to view or edit anything.' %}</p> {% endcomment %}
+{% endif %}

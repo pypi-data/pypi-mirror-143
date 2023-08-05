@@ -1,0 +1,15 @@
+<div class="accordion-item sidenav-menu-item">
+  <h2 class="accordion-header" id="button-menu-{{ name }}">
+    <button class="accordion-button single-menu collapsed"
+            type="button"
+            {% if url %}
+            onclick="window.location='{{ url }}'"
+            {% endif %}
+    >
+      <div class="d-flex align-items-center">
+        <i class="mdi mdi-24px mdi-{{ icon }} me-2"></i>
+        <span>{{ label|truncatechars:22 }}</span>
+      </div>
+    </button>
+  </h2>
+</div>

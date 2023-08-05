@@ -1,0 +1,69 @@
+{% extends 'admin/layout.html' %}
+{% load i18n static %}
+
+{% block main_css %}
+  <link rel="stylesheet" href="{% static 'simpelmin/css/main.bundle.css' %}">
+{% endblock main_css %}
+
+{% block extra_css %}
+  <style>
+    .field-tree_actions {
+      width:64px;
+    }
+  </style>
+  {% if is_popup %}
+    <style>
+      #sidenav-wrapper,
+      #sidenav-inner {
+        height: 100vh;
+        top: 0;
+      }
+      #content-wrapper {
+        margin-top: 0!important;
+      }
+    </style>
+  {% endif %}
+{% endblock extra_css %}
+
+{% block extrahead %}
+  {% include 'admin/meta_tags.html' %}
+  {{ block.super }}
+  <script defer src="{% static 'simpelmin/js/plugins/alpine.min.js' %}"></script>
+  <script src="{% static 'simpelmin/js/plugins/htmx.min.js' %}"></script>
+  <script  src="{% static 'simpelmin/js/plugins/jquery.min.js' %}"></script>
+  <script src="{% url 'admin:jsi18n' %}"></script>
+{% endblock %}
+
+{% block main_js %}
+  <script src="{% static 'simpelmin/js/runtime.js' %}"></script>
+  <script src="{% static 'simpelmin/js/shared.js' %}"></script>
+  <script src="{% static 'simpelmin/js/main.js' %}"></script>
+{% endblock main_js %}
+
+
+{% block bodyclass %}bg-soft bg-opacity-50{% endblock %}
+
+{% block content_wrapper %}
+  <div id="content-wrapper"
+       class="{% block content_classes %}{% endblock %}"
+       x-data="{% block content_data %}{% endblock %}"
+  >
+    {% block page_header %}{% endblock %}
+    {% block breadcrumbs_wrapper %}{% endblock %}
+    {% block main_wrapper %}
+      <main id="main-wrapper">
+        {% block top_content %}{% endblock %}
+        {% block main_content %}
+          <div class="container py-4">
+            {% block messages_wrapper %}{% endblock %}
+            {% block content %}{% endblock %}
+          </div>
+        {% endblock %}
+        {% block bottom_content %}{% endblock %}
+      </main>
+    {% endblock %}
+    {% block footer %}{% endblock footer %}
+  </div>
+{% endblock %}
+
+{% block tawk_to %}{% endblock tawk_to %}

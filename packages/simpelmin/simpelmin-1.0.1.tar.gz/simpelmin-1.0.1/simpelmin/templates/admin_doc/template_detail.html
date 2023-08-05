@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% translate 'Home' %}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'django-admindocs-docroot' %}">{% translate 'Documentation' %}</a></li>
+  <li class="breadcrumb-item">{% translate 'Templates' %}</li>
+  <li class="breadcrumb-item">{{ name }}</li>
+{% endblock %}
+
+{% block title %}{% blocktranslate %}Template: {{ name }}{% endblocktranslate %}{% endblock %}
+{% block content_title %}{% blocktranslate %}Template: {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-body">
+      {# Translators: Search is not a verb here, it qualifies path (a search path) #}
+      <h2>{% blocktranslate %}Search path for template <q>{{ name }}</q>:{% endblocktranslate %}</h2>
+      <ol>
+      {% for template in templates|dictsort:"order" %}
+          <li><code>{{ template.file }}</code>{% if not template.exists %} <em>{% translate '(does not exist)' %}</em>{% endif %}</li>
+      {% endfor %}
+      </ol>
+      <p class="small"><a href="{% url 'django-admindocs-docroot' %}">&lsaquo; {% translate 'Back to Documentation' %}</a></p>
+    </div>
+  </div>
+{% endblock %}
