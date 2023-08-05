@@ -1,0 +1,10 @@
+LICENSE.txt
+setup.cfg
+setup.py
+BridgeCo/__init__.py
+BridgeCo/main.py
+BridgeCo.egg-info/PKG-INFO
+BridgeCo.egg-info/SOURCES.txt
+BridgeCo.egg-info/dependency_links.txt
+BridgeCo.egg-info/requires.txt
+BridgeCo.egg-info/top_level.txt

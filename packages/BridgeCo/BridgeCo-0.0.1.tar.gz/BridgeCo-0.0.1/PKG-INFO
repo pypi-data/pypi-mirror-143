@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: BridgeCo
+Version: 0.0.1
+Summary: Permite criar work itens no projeto Bridge Technology.
+Home-page: UNKNOWN
+Author: Guilherme Silva dos Santos
+Author-email: guilherme.santos@bridgeconsulting.com.br
+License: MIT
+Keywords: Bridge BridgeCO Azure AzureDevops WorkItens
+Platform: UNKNOWN
+License-File: LICENSE.txt
+
+Desenvolvido para automatizar a criação de work itens em planejamentos de sprints.
+
