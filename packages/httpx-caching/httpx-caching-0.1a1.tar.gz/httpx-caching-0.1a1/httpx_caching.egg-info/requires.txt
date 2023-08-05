@@ -1,0 +1,4 @@
+httpx==0.22.*
+msgpack
+anyio
+multimethod
