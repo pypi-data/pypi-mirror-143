@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: irl-maxent
+Version: 0.1.0
+Summary: A small package for Maximum Entropy Inverse Reinforcement Learning on simple MDPs
+Home-page: https://github.com/qzed/irl-maxent
+Author: Maximilian Luz
+Author-email: luzmaximilian@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/qzed/irl-maxent/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+
+# Maximum Entropy Inverse Reinforcement Learning
+
+This is a python implementation of the Maximum Entropy Inverse Reinforcement Learning (MaxEnt IRL) algorithm based on the similarly named paper by Ziebart et al. and the Maximum Causal Entropy Inverse Reinforcement Learning (MaxCausalEnt IRL) algorithm based on his PhD thesis.
+
+You may also want to have a look at the accompanying [presentation][presentation].
+
+For an example demonstrating how the Maximum (non-causal) Entropy IRL algorithm works, see the corresponding Jupyter notebook ([`notebooks/maxent.ipynb`][nb-viewer]).
+Note that this python package contains a slightly more optimized implementation of the algorithms.
+
+For an example on how to use this framework, have a look at the [`example.py`][example] file.
+The framework contains:
+- Two GridWorld implementations for demonstration (`irl_maxent.gridworld`)
+- The algorithm implementations (`irl_maxent.maxent`)
+- A gradient based optimizer framework (`irl_maxent.optimizer`)
+- Plotting helper functions (`irl_maxent.plot`)
+- A MDP solver framework, i.e. value iteration and corresponding utilities (`irl_maxent.solver`)
+- A trajectory/trajectory generation framework (`irl_maxent.trajectory`)
+
+[nb-viewer]: https://nbviewer.jupyter.org/github/qzed/irl-maxent/blob/master/notebooks/maxent.ipynb
+[presentation]: https://nbviewer.jupyter.org/github/qzed/irl-maxent/blob/master/Presentation.pdf
+[example]: https://github.com/qzed/irl-maxent/blob/master/src/example.py
+
+
+
