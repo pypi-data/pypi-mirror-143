@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+symopt/__init__.py
+symopt/diffNotation.py
+symopt.egg-info/PKG-INFO
+symopt.egg-info/SOURCES.txt
+symopt.egg-info/dependency_links.txt
+symopt.egg-info/requires.txt
+symopt.egg-info/top_level.txt
