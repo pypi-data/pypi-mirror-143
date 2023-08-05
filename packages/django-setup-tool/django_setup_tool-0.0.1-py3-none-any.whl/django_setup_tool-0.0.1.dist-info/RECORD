@@ -1,0 +1,11 @@
+setup_tool/__init__.py,sha256=LUAOAYHOUix0gXTPubrIhINNm9FitwJEjRyOYqS7MFw,227
+setup_tool/conf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+setup_tool/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+setup_tool/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+setup_tool/management/commands/prettystartproject.py,sha256=jtox2eVi1M7lS60biwC5xbOLucLK4f7ih1WDrDAbq1o,969
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_setup_tool-0.0.1.dist-info/LICENSE,sha256=lDuKnHtqVlOYI4lI2Gnogc1QlbfF8eyI8dynjyrI1bg,1068
+django_setup_tool-0.0.1.dist-info/METADATA,sha256=VQ1qmvkXIm_nwi7ivBijmz-MqCfl-9Fa3EORvoeDbsk,1931
+django_setup_tool-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_setup_tool-0.0.1.dist-info/top_level.txt,sha256=0YvF4y54t44DFifFb2yoCNmxJw5jdmjLdGttP6RaXdc,17
+django_setup_tool-0.0.1.dist-info/RECORD,,
