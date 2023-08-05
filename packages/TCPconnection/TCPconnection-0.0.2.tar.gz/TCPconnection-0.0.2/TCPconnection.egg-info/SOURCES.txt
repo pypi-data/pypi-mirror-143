@@ -1,0 +1,8 @@
+README.md
+setup.py
+TCPconnection.egg-info/PKG-INFO
+TCPconnection.egg-info/SOURCES.txt
+TCPconnection.egg-info/dependency_links.txt
+TCPconnection.egg-info/top_level.txt
+conTCP/__init__.py
+conTCP/connect_TCP.py
