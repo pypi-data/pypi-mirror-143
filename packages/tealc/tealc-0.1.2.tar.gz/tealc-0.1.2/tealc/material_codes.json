@@ -1,0 +1,13 @@
+{
+    "ps": "plain steel",
+    "nps": "nickel plated steel wound",
+    "pb": "phosphor bronze wound",
+    "8020": "80/20 bronze wound",
+    "8515": "85/15 bronze wound",
+    "ss": "stainless steel roundwound",
+    "fw": "stainless steel flatwound",
+    "pn": "pure nickel wound",
+    "bnps": "bass: nickel plated steel roundwound",
+    "bss": "bass: stainless steel roundwound",
+    "bfw": "bass: stainless steel flatwound"
+}
