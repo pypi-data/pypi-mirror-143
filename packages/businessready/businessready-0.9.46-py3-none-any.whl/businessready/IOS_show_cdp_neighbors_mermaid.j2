@@ -1,0 +1,8 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+{%-     for neighbor in to_parse_cdp_neighbors.index %}
+{{ hostname }} -- {{ to_parse_cdp_neighbors.index[neighbor].local_interface }} -- {{ to_parse_cdp_neighbors.index[neighbor].port_id }} --> {{ to_parse_cdp_neighbors.index[neighbor].device_id }}
+{%-     endfor %}
+```
+{%- endif %}
