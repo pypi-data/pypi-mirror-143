@@ -1,0 +1,10 @@
+tele-pyro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tele-pyro/convertor.py,sha256=1J0YzU1v3V8u7hmdTSI7XYHoZd98LqVJwegK-4cfsBc,5280
+tele-pyro/utils/args.py,sha256=mKEZLMOr8S90bego2-ExrMwVbFrtbL7iaWTnxtnXnNU,1502
+tele-pyro/utils/test_pyro_client.py,sha256=tFpSKygTlk6rJxsYwM8E03TBI-3oeK4-Ry4XZlaF24E,615
+tele-pyro/utils/test_tele_client.py,sha256=IegBbnWpOuvFpkNKBJZT46aEkOXjiigZ16Hi-QVxolg,659
+tele_pyro-0.1.1.7.dist-info/entry_points.txt,sha256=FTJT6XG4tGPenqaXq6BlGeWEgyETgImODviJoFeAkEo,49
+tele_pyro-0.1.1.7.dist-info/LICENSE.md,sha256=votxIKx3jI7_7XNilO0tWKYQdTJw15MXweLsq7hh2Cg,1074
+tele_pyro-0.1.1.7.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+tele_pyro-0.1.1.7.dist-info/METADATA,sha256=B6gzdyEDiyMAAehPoHHRPF9x3gzUjk5gcNd44KEz23w,1200
+tele_pyro-0.1.1.7.dist-info/RECORD,,
