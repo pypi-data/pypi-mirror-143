@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: desige
+Version: 0.0.18
+Summary: Declassed site generator
+Home-page: https://declassed.art/repository/desige
+Author: AXY
+Author-email: axy@declassed.art
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: axyutils
+Requires-Dist: clabate
+Requires-Dist: idna
+Requires-Dist: python-dateutil
+Requires-Dist: pyyaml
+
+
+Desige: declassed site generator
+================================
+
+Concepts
+--------
+
+Page source
+-----------
+
+Source file is always metadata file in YAML format.
+
+In the very basic form this metadata is the only source for the page.
+Example: desige.pages.status_page.
+
+More complex pages may contain additional files so a separate directory for each page
+is preferred. Anyway, this directory always contains metadata file.
+
+Metadata file consists of two documents. The first one defines page class, the second one
+defines page data.
+
+
+Classes
+-------
+
+Desige provides a set of mixins which can be combined by the user to get required functionality.
+Because this is fully configurable, any mixin can be replaced, including very basic classes.
+Such a flexibility is impossible with direct inheritance.
+See sample configuration.
+
+
+Layouts
+-------
+
+Layout classes establish relation between source files/directories, output files and URLs.
+
+
+Processing
+----------
+
+Static pages are generated for each server and language.
+Sitemaps include all alternative pages.
+
+
+:copyright: Copyright 2022 AXY axy@declassed.art
+:license: BSD, see LICENSE for details.
+
+
