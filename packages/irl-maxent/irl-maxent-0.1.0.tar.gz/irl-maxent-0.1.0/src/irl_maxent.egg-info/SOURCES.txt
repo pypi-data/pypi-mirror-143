@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/irl_maxent/__init__.py
+src/irl_maxent/gridworld.py
+src/irl_maxent/maxent.py
+src/irl_maxent/optimizer.py
+src/irl_maxent/plot.py
+src/irl_maxent/solver.py
+src/irl_maxent/test_gridworld.py
+src/irl_maxent/trajectory.py
+src/irl_maxent.egg-info/PKG-INFO
+src/irl_maxent.egg-info/SOURCES.txt
+src/irl_maxent.egg-info/dependency_links.txt
+src/irl_maxent.egg-info/requires.txt
+src/irl_maxent.egg-info/top_level.txt
