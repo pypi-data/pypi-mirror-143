@@ -1,0 +1,6 @@
+global-include *.py 
+include images/*
+include README.md
+include LICENSE
+include command2img/txt2img/fonts/*
+

@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bin/command2img
+command2img/__init__.py
+command2img.egg-info/PKG-INFO
+command2img.egg-info/SOURCES.txt
+command2img.egg-info/dependency_links.txt
+command2img.egg-info/not-zip-safe
+command2img.egg-info/top_level.txt
+command2img/txt2img/__init__.py
+command2img/txt2img/fonts/FiraCode-Regular.ttf
+command2img/txt2img/fonts/meslo.ttf
+images/cat.png
+images/echo.png
+images/tree.png
