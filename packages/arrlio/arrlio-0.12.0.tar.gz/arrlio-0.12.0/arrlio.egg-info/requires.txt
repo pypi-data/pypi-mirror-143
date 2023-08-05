@@ -1,0 +1,5 @@
+aiormq>=5.2.0
+pydantic>=1.9.0
+yarl
+roview
+siderpy[hiredis]
