@@ -1,0 +1,8 @@
+simple_gobang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_gobang/gobang.py,sha256=J0nOH53NR27fxXML23TkMxDTnEew3OMJoGf5xm137jM,3806
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/gobang.py,sha256=J0nOH53NR27fxXML23TkMxDTnEew3OMJoGf5xm137jM,3806
+LCK_Gobang-0.1.dist-info/METADATA,sha256=7C1KaJWjZJu8AKHuRhuuq6vRvyNkY4vFLT312SD-7zY,297
+LCK_Gobang-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+LCK_Gobang-0.1.dist-info/top_level.txt,sha256=qMdbugBk2BbIG-2pM8bfQocXzglMNrywXVsWUUk8hog,14
+LCK_Gobang-0.1.dist-info/RECORD,,
