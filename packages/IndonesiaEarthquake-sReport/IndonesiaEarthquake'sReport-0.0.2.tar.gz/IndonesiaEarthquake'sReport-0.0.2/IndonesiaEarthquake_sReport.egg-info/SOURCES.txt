@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+IndonesiaEarthquake_sReport.egg-info/PKG-INFO
+IndonesiaEarthquake_sReport.egg-info/SOURCES.txt
+IndonesiaEarthquake_sReport.egg-info/dependency_links.txt
+IndonesiaEarthquake_sReport.egg-info/top_level.txt
+gempa_terkini/__init__.py
