@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: d3m-duke
+Version: 1.2.0
+Summary: Tabular Dataset Summarization System
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/duke
+License: Apache-2.0
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: pandas (>=0.19.2)
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: gensim (<4.0.0,>=3.2.0)
+Requires-Dist: inflection (>=0.3.1)
+Requires-Dist: ontospy (>=1.8.6)
+
+UNKNOWN
+
