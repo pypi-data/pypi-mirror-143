@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+trypdf/__init__.py
+trypdf/pdf2image.py
+trypdf/pdf2text.py
+trypdf.egg-info/PKG-INFO
+trypdf.egg-info/SOURCES.txt
+trypdf.egg-info/dependency_links.txt
+trypdf.egg-info/top_level.txt
