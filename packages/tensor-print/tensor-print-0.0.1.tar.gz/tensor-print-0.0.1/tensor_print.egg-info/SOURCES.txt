@@ -1,0 +1,8 @@
+setup.py
+tensor-print/__init__.py
+tensor-print/core.py
+tensor-print/utils.py
+tensor_print.egg-info/PKG-INFO
+tensor_print.egg-info/SOURCES.txt
+tensor_print.egg-info/dependency_links.txt
+tensor_print.egg-info/top_level.txt
