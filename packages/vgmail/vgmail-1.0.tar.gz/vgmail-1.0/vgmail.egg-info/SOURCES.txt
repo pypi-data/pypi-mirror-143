@@ -1,0 +1,12 @@
+setup.py
+vgmail/__init__.py
+vgmail/attachment.py
+vgmail/gmail.py
+vgmail/label.py
+vgmail/message.py
+vgmail/query.py
+vgmail.egg-info/PKG-INFO
+vgmail.egg-info/SOURCES.txt
+vgmail.egg-info/dependency_links.txt
+vgmail.egg-info/requires.txt
+vgmail.egg-info/top_level.txt
