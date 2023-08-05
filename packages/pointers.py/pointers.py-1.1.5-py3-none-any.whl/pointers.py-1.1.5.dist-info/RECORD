@@ -1,0 +1,10 @@
+pointers.py,sha256=QVCsZI_1ND2BO4m6pttnpH3v43oqxj15lgW_VsMn63I,3891
+pointers/__init__.py,sha256=7rxkMTJa_7wo50Mno3_CUmgy-ID81EeeVJwoktyLbhU,137
+pointers/malloc.py,sha256=WNlfUj-5zkeU_5AuOUanV-czHs61rsOSjxF6KfnO0Bo,3364
+pointers/pointer.py,sha256=pA5j-8F8Uxn-hxxF48ZTBoU-aSKi3Eb5MbDn99dzBjk,4094
+pointers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pointers.py-1.1.5.dist-info/LICENSE,sha256=NyTEdL_Fkrp3mWQ5GM6dSxCpeRyQbpdbxtKnGn7SmeE,1091
+pointers.py-1.1.5.dist-info/METADATA,sha256=5aLan6edzMp0e_OgxgVGYqBafwDNI5v3avd7c5SXOao,2097
+pointers.py-1.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pointers.py-1.1.5.dist-info/top_level.txt,sha256=_5RS1HgpnuCUXdUN74XZWrrB33rYvbdcz2SkZyX9xgs,9
+pointers.py-1.1.5.dist-info/RECORD,,
