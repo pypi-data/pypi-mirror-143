@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "matrixbrain"
+version = "0.1.17"
+description = "Use machine learning to transform documents ( pdf, txt, doc ) in anki decks."
+authors = ["Huggyturd <cloura.dev@gmail.com>"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+farm-haystack = "^1.2.0"
+genanki = "^0.13.0"
+tqdm = "^4.63.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+matrixbrain = "matrixbrain.matrixbrain:main"
