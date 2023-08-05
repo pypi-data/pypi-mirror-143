@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: haxballgym_tools
+Version: 1.0.1
+Summary: Extra tools for HaxballGym, like SB3 compatibility
+Home-page: UNKNOWN
+Author: Wazarr
+License: Apache 2.0
+Keywords: haxball,gym,reinforcement-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# rlgym-tools
+Extra tools for HaxballGym.
+
+Contains environments for [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/)
+
+## Installation
+`pip install haxballgym-tools`
+
