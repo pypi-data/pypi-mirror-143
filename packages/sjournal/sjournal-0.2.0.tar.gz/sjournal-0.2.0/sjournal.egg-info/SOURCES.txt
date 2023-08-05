@@ -1,0 +1,13 @@
+setup.py
+../src/sjournal/__init__.py
+../src/sjournal/sjournal.py
+../src/sjournal/utilities/__init__.py
+../src/sjournal/utilities/arguments.py
+../src/sjournal/utilities/utilities.py
+../src/sjournal/utilities/version.py
+sjournal.egg-info/PKG-INFO
+sjournal.egg-info/SOURCES.txt
+sjournal.egg-info/dependency_links.txt
+sjournal.egg-info/entry_points.txt
+sjournal.egg-info/requires.txt
+sjournal.egg-info/top_level.txt
