@@ -1,0 +1,58 @@
+{% extends 'admin/simpel_shop/cart_checkout_form.html' %}
+{% load i18n simpelcore_tags widget_tweaks %}
+
+{% block extra_fields %}
+<div id="customer_address">
+  <div class="row mb-3">
+    <div class="col-lg-3">
+      <label class="d-block fw-bold mb-2" for="{{ form.billing_address.name }}">{% trans "Billing Address" %}</label>
+    </div>
+    <div class="col-lg-9">
+      {% render_field form.billing_address class="form-control"  disabled=True %}
+      {% if form.billing_address.help_text %}<div class="help">{{ form.billing_address.help_text }}</div>{% endif %}
+      {% if form.billing_address.errors %}<div class="errors">{{ form.billing_address.errors }}</div>{% endif %}
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-lg-3">
+      <label class="d-block fw-bold mb-2" for="{{ form.shipping_address.name }}">{% trans "Shipping Address" %}</label>
+    </div>
+    <div class="col-lg-9">
+      {% render_field form.shipping_address class="form-control" disabled=True %}
+      {% if form.shipping_address.help_text %}<div class="help">{{ form.shipping_address.help_text }}</div>{% endif %}
+      {% if form.shipping_address.errors %}<div class="errors">{{ form.shipping_address.errors }}</div>{% endif %}
+    </div>
+  </div>
+</div>
+<div class="my-5 border-bottom"></div>
+<div class="row mb-3">
+  <div class="col-lg-3">
+    <label class="d-block fw-bold mb-2" for="{{ form.sampling_options.name }}">{% trans "Confirm Sampling" %}</label>
+  </div>
+  <div class="col-lg-9">
+    {% render_field form.sampling_options class="form-check" %}
+    {% if form.sampling_options.help_text %}<div class="help">{{ form.sampling_options.help_text }}</div>{% endif %}
+    {% if form.sampling_options.errors %}<div class="errors">{{ form.sampling_options.errors }}</div>{% endif %}
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-lg-3">
+    <label class="d-block fw-bold mb-2" for="{{ form.sampling_schedule.name }}">{{ form.sampling_schedule.label }}</label>
+  </div>
+  <div class="col-lg-9">
+    {% render_field form.sampling_schedule class="vDateField form-control w-auto d-inline-block" %}
+    {% if form.sampling_schedule.help_text %}<div class="help">{{ form.sampling_schedule.help_text }}</div>{% endif %}
+    {% if form.sampling_schedule.errors %}<div class="errors">{{ form.sampling_schedule.errors }}</div>{% endif %}
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-lg-3">
+    <label class="d-block fw-bold mb-2" for="{{ form.sampling_estimation.name }}">{{ form.sampling_estimation.label }}</label>
+  </div>
+  <div class="col-lg-9">
+    {% render_field form.sampling_estimation class="form-control" %}
+    {% if form.sampling_estimation.help_text %}<div class="help">{{ form.sampling_estimation.help_text }}</div>{% endif %}
+    {% if form.sampling_estimation.errors %}<div class="errors">{{ form.sampling_estimation.errors }}</div>{% endif %}
+  </div>
+</div>
+{% endblock extra_fields %}

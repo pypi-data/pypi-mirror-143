@@ -1,0 +1,10 @@
+
+
+{% extends 'admin/cart.html' %}
+{% load i18n static admin_urls simpelcore_tags %}
+
+{% block cart_extra_buttons %}
+  <a href="{% url 'admin:simpel_blueprints_blueprint_changelist' %}" class="btn btn-secondary rounded-pill me-2">
+    <i class="mdi mdi-text-box-outline me-1"></i>{% trans "Add From Blueprint" %}
+  </a>
+{% endblock %}

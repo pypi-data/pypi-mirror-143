@@ -1,0 +1,5 @@
+{% extends 'admin/simpel_shop/checkout.html' %}
+
+{% block block_form %}
+{% include 'admin/simpel_shop/custom_checkout_form.html' with include_cart_items=True %}
+{% endblock block_form %}
