@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: extract-video-ppt
+Version: 0.2.2
+Summary: support export ppt from a video
+Author: wudu
+Author-email: 296525335@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## extract ppt from a video
+
+### useage
+``` shell
+# help info
+evp --help
+# example
+evp --degree 0.6 --pdfname yeah.pdf ./ ./test.mp4
+# degree: if frame is same with last frame over degree , this frame will be dropped
+# pdfname: the name for export pdf 
+```
+
