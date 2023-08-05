@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+obscure_password/__init__.py
+obscure_password/obscure.py
+obscure_password.egg-info/PKG-INFO
+obscure_password.egg-info/SOURCES.txt
+obscure_password.egg-info/dependency_links.txt
+obscure_password.egg-info/requires.txt
+obscure_password.egg-info/top_level.txt
