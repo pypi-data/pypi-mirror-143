@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+beancount_payeeverif.py
+default.nix
+setup.py
+tox.ini
+beancount_payeeverif.egg-info/PKG-INFO
+beancount_payeeverif.egg-info/SOURCES.txt
+beancount_payeeverif.egg-info/dependency_links.txt
+beancount_payeeverif.egg-info/not-zip-safe
+beancount_payeeverif.egg-info/requires.txt
+beancount_payeeverif.egg-info/top_level.txt
+test/fail_missing.beancount
+test/import.beancount
+test/ok_explicit.beancount
+test/test_payeeverif.py
