@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: sai-logger
+Version: 0.0.6
+Summary: packege for pypi test
+Home-page: UNKNOWN
+Author: saito-ya
+Author-email: yasuosaito13@gmail.com
+License: UNKNOWN
+Description: # pypi-sai-logger
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
