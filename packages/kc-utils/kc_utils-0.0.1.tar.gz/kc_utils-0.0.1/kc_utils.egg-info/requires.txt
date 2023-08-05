@@ -1,0 +1,3 @@
+
+[cache_redis]
+redis>=4.1.0
