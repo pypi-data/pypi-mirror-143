@@ -1,0 +1,2 @@
+[console_scripts]
+libido = libido:main
