@@ -1,0 +1,3 @@
+[console_scripts]
+retlogger = retriever_research.log_viewer:main
+
