@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/plugin_engine/__init__.py
+src/plugin_engine/class_registration.py
+src/plugin_engine/dynamic_import.py
+src/plugin_engine/plugin_importer.py
+src/plugin_engine.egg-info/PKG-INFO
+src/plugin_engine.egg-info/SOURCES.txt
+src/plugin_engine.egg-info/dependency_links.txt
+src/plugin_engine.egg-info/top_level.txt

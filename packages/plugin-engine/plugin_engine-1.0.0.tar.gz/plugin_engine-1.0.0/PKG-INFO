@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: plugin_engine
+Version: 1.0.0
+Summary: A package for loading module-based plug-ins into memory.
+Home-page: https://github.com/FluxIX/PyPluginEngine
+Author: Chris Herrick
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/FluxIX/PyPluginEngine/issues
+Project-URL: Source, https://github.com/FluxIX/PyPluginEngine
+Keywords: development plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+
+# PyPluginEngine
+A simple Python plugin engine to dynamically load modules.
+
+## Basic Features
+- Discoverability for specific modules can be disabled.
+- Filterable module discoverability.
+- Optional recursive module discoverability.
+- Loaded modules are debuggable in the application context.
+
+## Examples
+Examples of integration can found in the source repository at: https://github.com/FluxIX/PyPluginEngine/Examples; they were written using PyDev (https://www.pydev.org/).
+
+
