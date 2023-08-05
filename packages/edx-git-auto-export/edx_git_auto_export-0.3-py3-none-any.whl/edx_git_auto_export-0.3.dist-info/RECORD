@@ -1,0 +1,12 @@
+git_auto_export/__init__.py,sha256=9vsXX0LMCN-O3k83umJBzStflhigeL7JX8v375jDtcM,82
+git_auto_export/apps.py,sha256=z6if5CRzp3m2pZLoxn9nnRZCGXebuCjRU6NTwXbKlt4,824
+git_auto_export/signals.py,sha256=El00GiONcK3lRqciPIDGaGbGG9FENeLPvA247PhqkEA,804
+git_auto_export/tasks.py,sha256=HNyqAIITg1kZ9g8NxoNX2usRxcyWAcuANeCM-fJoiHY,1107
+git_auto_export/test_settings.py,sha256=332G3DTCmBzDqyKnxxMIt7lt2FZgfKqCR-YBpD0iKEA,3124
+git_auto_export/urls.py,sha256=Szt-0Uejyy5cgiK0STw3aDX6sWQiKSbDzUQ207SuI9g,772
+git_auto_export/wsgi.py,sha256=wfr9Di9HTr8ngoIypb9ug8UXbwBbDM0bvsL8Ada9EjA,413
+edx_git_auto_export-0.3.dist-info/LICENSE,sha256=EGobS4txMkp4nvtKWfbPrHgaw0-Nl0_gZ5QYYWL0eRc,35135
+edx_git_auto_export-0.3.dist-info/METADATA,sha256=fAJhZQ-ciy2rjVX-M2NkU3pOKbZYPMh8xKzjGIngvVI,340
+edx_git_auto_export-0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+edx_git_auto_export-0.3.dist-info/top_level.txt,sha256=a2cAB7ZZYRuiEHc7KtOKJFSUcmycq_uC7UE_dWFXSM4,16
+edx_git_auto_export-0.3.dist-info/RECORD,,

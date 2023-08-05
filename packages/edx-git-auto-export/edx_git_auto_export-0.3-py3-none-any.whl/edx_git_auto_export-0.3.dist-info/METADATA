@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: edx-git-auto-export
+Version: 0.3
+Summary: A task that auto save course OLX to git when author publish it
+Home-page: https://github.com/mitodl/edx-git-auto-export.git
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: edx-opaque-keys
+Requires-Dist: celery
+
+UNKNOWN
+
