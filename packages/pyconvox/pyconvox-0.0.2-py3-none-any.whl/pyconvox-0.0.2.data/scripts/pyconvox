@@ -1,0 +1,13 @@
+import sys
+import os
+
+
+import pyconvoxcli.clidriver
+
+
+def main():
+    return pyconvoxcli.clidriver.main()
+
+
+if __name__ == '__main__':
+    sys.exit(main())
