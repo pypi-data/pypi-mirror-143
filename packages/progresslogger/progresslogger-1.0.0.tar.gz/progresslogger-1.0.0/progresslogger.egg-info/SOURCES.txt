@@ -1,0 +1,8 @@
+README.md
+setup.py
+progresslogger/progresslogger.py
+progresslogger.egg-info/PKG-INFO
+progresslogger.egg-info/SOURCES.txt
+progresslogger.egg-info/dependency_links.txt
+progresslogger.egg-info/not-zip-safe
+progresslogger.egg-info/top_level.txt
