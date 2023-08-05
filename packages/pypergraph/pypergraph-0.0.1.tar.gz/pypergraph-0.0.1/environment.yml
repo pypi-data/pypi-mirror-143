@@ -1,0 +1,21 @@
+name: pypergraph
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.7
+  - pip:
+    - black
+    - flake8
+    - flake8-docstrings
+    - flit
+    - furo
+    - isort
+    - mypy
+    - myst-parser
+    - nox
+    - pytest
+    - pytest-cov
+    - sphinx
+    - typing_extensions; python_version<'3.8'

@@ -1,0 +1,20 @@
+pipeline:
+  build:
+    image: python:${PYTHON_VERSION}
+    commands:
+      - pip install flit
+      - flit build
+
+  test:
+    image: python:${PYTHON_VERSION}
+    commands:
+      - pip install --find-links ./dist pypergraph[test,doc]
+      - pytest  # Unit tests
+      - sphinx-build -M doctest ./docs/source ./docs/build  # Doc tests
+
+matrix:
+  PYTHON_VERSION:
+    - 3.7
+    - 3.8
+    - 3.9
+    - 3.10

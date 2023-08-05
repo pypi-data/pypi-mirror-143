@@ -1,0 +1,17 @@
+pipeline:
+  build:
+    image: python:${PYTHON_VERSION}
+    commands:
+      - pip install flit
+      - flit build
+
+  qa:
+    image: python:${PYTHON_VERSION}
+    commands:
+      - pip install --find-links ./dist pypergraph[qa]
+      - flake8 src tests
+      - mypy src
+
+matrix:
+  PYTHON_VERSION:
+    - 3.10
