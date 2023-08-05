@@ -1,0 +1,12 @@
+DLex/GrParser.py,sha256=nOO9CLXLJQQfkzSsiJMx1z9nFd9kwh2xqzLv7iNN4Tg,4409
+DLex/LexIO.py,sha256=_4Ms231Hf6QdsBqqSagpHF8uCXQqNeuq5iRDnLqdous,287
+DLex/ReParser.py,sha256=iHTAUPT1XLw9-RRk2LdngfK_HhTqTEAjtwwOexl26TY,7905
+DLex/__init__.py,sha256=cwhPZ_omvAkYMj7GunxqvdOnkx8nU3i9CHZV4SH6PV8,200
+DLex/cli.py,sha256=0Fpkjpuo6YTzV-ddz9ZBp6eoz1RPMAiQqs54bGeV0ho,2406
+DLex/genfa.py,sha256=rLXrdFBnAyzCUeSmMTSfHZG3_oWjGN9uZ-h51uCrsEY,2692
+DLex/lexer.py,sha256=_zhKtrMFqGXMAVzM9O4aVBfQGf-0tcni0ayvr5s87vc,6650
+DLex_DeaL-0.0.2.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+DLex_DeaL-0.0.2.dist-info/METADATA,sha256=WAsV94FKkSOFXRx_qGx3Mmx2BH7ML8QQ-nX2vMhNego,3607
+DLex_DeaL-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+DLex_DeaL-0.0.2.dist-info/top_level.txt,sha256=fmUBKCYcWwKEdNCE8kVMM1H43wvqnntYQGXIT8gNZO4,5
+DLex_DeaL-0.0.2.dist-info/RECORD,,
