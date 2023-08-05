@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: promisedio-buildtools
+Version: 1.0.30
+Summary: Promisedio build tools
+Home-page: https://github.com/promisedio/buildtools
+License: MIT
+Author: aachurin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Project-URL: Repository, https://github.com/promisedio/buildtools

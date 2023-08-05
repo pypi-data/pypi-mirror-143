@@ -1,0 +1,6 @@
+[console_scripts]
+capsule=promisedio_buildtools.capsule:main
+clinic=promisedio_buildtools.clinic:main
+download_sources=promisedio_buildtools.download_sources:main
+memcheck=promisedio_buildtools.memcheck:main
+
