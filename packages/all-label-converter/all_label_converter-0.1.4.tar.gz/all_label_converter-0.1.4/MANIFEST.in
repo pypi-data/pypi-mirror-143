@@ -1,0 +1,2 @@
+exclude all_label_converter/for_test.py
+include all_label_converter/config.yaml
