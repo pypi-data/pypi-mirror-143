@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: Sqlcarve
+Version: 0.4
+Summary: Sql Parser and Validator
+Home-page: https://github.com/danielctremblay/sqlcarve
+Author: Jean Souro Camara, Dordor Minetdi
+Author-email: cjsouro2@gmail.com, minetdidordor@hotmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/danielctremblay/sqlcarve/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+License-File: LICENSE
+
+# sqlcarve
+[![PyPI](https://img.shields.io/pypi/v/sqlcarve)](https://pypi.python.org/pypi/sqlvalidator/)
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+
+SQL Parser for Teachers
+
+
+# SQL Validation and execution
+
+__fichier.sql__ est le fichier à valider.
+__ref_stmnt__ est la requête de référence pour la validation sémantique.
+__referencefile.json__ est le modèle de commentaire pour la validation des commentaires.
+    
+
+__Exemple de referencefile.json__
+```json
+{
+  "profcomments": {
+    "auteur": "",
+    "objectif": "",
+    "documentation": ""
+  },
+  "studentcomments": {
+    "author": "",
+    "cip": "",
+    "objectif": ""
+  }
+}
+```
+
+
+__Exemple d'utilisation__
+```python
+from src.sqlcarve.validator.validator import *
+
+valid = Validator()
+report = {}
+with open("fichier.sql", "r") as f_content:
+    statement_list = Preprocessor.extract_stmnts(f_content)
+
+    for stmnt in statement_list:
+        report = valid.validate(statement=stmnt, ref_statement=ref_stmnt, ref_comments="referencefile.json", type="all")
+
+print(report)
+```
+
+__Résultat__
+
+```
+    {'commentaires': [], 'syntax': 'Validation syntaxique réussie', 'semantique': 'Validation sémantique réussie'}
+```
+
