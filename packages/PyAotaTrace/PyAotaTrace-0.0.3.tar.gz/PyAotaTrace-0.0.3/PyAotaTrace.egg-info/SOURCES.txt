@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+rrlib.so
+setup.py
+PyAotaTrace.egg-info/PKG-INFO
+PyAotaTrace.egg-info/SOURCES.txt
+PyAotaTrace.egg-info/dependency_links.txt
+PyAotaTrace.egg-info/top_level.txt
+pyaotatrace/__init__.py
+pyaotatrace/cfunc.py
+pyaotatrace/types.py
+pyaotatrace/wrapper.py
+pyaotatrace/bin/rrlib.so
