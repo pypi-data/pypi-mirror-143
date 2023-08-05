@@ -1,0 +1,53 @@
+/***********************************************
+         Invenio App RDM Container Overrides
+***********************************************/
+
+
+.ui.container {
+  &#dashboard-user-header-container {
+    padding-bottom: @defaultPadding;
+    padding-top: @defaultPadding;
+    background-color: @highlightBackgroundColor;
+  }
+  &#dashboard-tab-menu-container {
+    background-color: @highlightBackgroundColor;
+  }
+}
+
+.ui.container.community-header-outer {
+  background-color: @communityHeaderColor;
+  padding-top: @celledPadding;
+  padding-bottom: @celledPadding;
+  margin-bottom: @defaultMargin;
+
+  &:not(.compact):not(.with-submenu){
+    box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset;
+  }
+
+  &.compact {
+    height: 5em;
+    .ui.container.community-header {
+      height: 3em;
+    }
+  }
+}
+
+.ui.container.community-header{
+  &.compact {
+    height: 3em;
+  }
+  align-items: center;
+  display: flex;
+
+
+  .community-header-element{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
