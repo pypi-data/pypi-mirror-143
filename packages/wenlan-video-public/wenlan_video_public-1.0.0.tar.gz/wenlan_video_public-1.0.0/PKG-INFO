@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wenlan_video_public
+Version: 1.0.0
+Summary: Wenlan - Large scale cross-modal pre-training model
+Home-page: https://github.com/rucmlcv/Wenlan-Video-Public
+Author: Haoyu Lu
+Author-email: lhy1998@ruc.edu.cn
+License: MIT Licence
+Keywords: pip,wenlan
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+A large-scale video-language pre-training model.
+
