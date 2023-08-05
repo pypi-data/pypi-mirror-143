@@ -1,0 +1,2 @@
+[console_scripts]
+mxs = mxs.cli:main

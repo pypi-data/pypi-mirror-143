@@ -1,0 +1,14 @@
+mxs/__init__.py,sha256=Yn43Rj42tt-RPvOO7vQH8GUasemfrQufWUiLtSOzL8k,744
+mxs/__version__.py,sha256=GoZk1HBcvQi-d6le-kdulPMdx4jWxif-tdH5sAlyL-8,767
+mxs/api/__init__.py,sha256=umb174gqumAVVppcpSW-diQD12bhfKZEUeafvgHW9tQ,811
+mxs/api/pattern.py,sha256=-k3vkCSatO6t309TI6bmtKV6IQUA_Gm9IZ1IMoF9WFA,1526
+mxs/cli/__init__.py,sha256=TdW8xdDeKSi6N-rLihmutV9iRG4cqAdaLu0Y7Tse_vQ,2551
+mxs/cli/error.py,sha256=-Es3Natgb6jCy7LaFY2g2CyXij5pn5iSQ8EHtfATdBg,2764
+mxs/cli/solvers.py,sha256=C0atmpNBFg83dKmiF8rV09Q2gaNvv6gw2_KyLpMjmlc,1221
+mxs/web/__init__.py,sha256=66lXQqmjf2evSrcTJJRrgeWSiFOd48hQ1oIUTJfdyd4,2042
+mxs/web/pattern.py,sha256=sId-jy6tpSSgKXeYKWyvG-IehRol3S2VP8Lx6G3ZqAg,1728
+mxs-0.0.1.dist-info/METADATA,sha256=79aUWxGSKoiodLCZBsh2-z725X0TfxyWDtv0gce7pno,130
+mxs-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mxs-0.0.1.dist-info/entry_points.txt,sha256=0Uj8hppezWFEEUjfqNWw-lsyPQLUCf3bKfEiZGU2bVw,37
+mxs-0.0.1.dist-info/top_level.txt,sha256=7UYjcvPVWgvAIR_5xm6GCOECyGKX5BxTvTQh38VjrQc,4
+mxs-0.0.1.dist-info/RECORD,,
