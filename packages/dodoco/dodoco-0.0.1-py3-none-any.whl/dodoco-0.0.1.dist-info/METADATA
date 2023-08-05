@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dodoco
+Version: 0.0.1
+Summary: PSDR_CUDA
+Home-page: https://psdr-cuda.readthedocs.io
+Author: Kai Yan
+Author-email: kyan8@uci.edu
+License: Massachusetts Institute of Technology Research License
+Keywords: differentiable rendering,SVBRDF,gradient descent,optimization
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: matplotlib (>=3.3.2)
+
+# psdr-cuda
+Path-space differentiable renderer
+
+Official documentation: https://psdr-cuda.readthedocs.io/en/latest/
+
+To install project, you simply need to
+```bash
+pip install dodoco
+```
+
+## Getting Started
+```bash
+import dodoco
+import dodoco.psdr_cuda as psdr_cuda
+```
+
