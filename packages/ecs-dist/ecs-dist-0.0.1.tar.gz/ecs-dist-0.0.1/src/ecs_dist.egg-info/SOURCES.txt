@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/ecs-mod/__init__.py
+src/ecs-mod/py.typed
+src/ecs-mod/_jsii/__init__.py
+src/ecs-mod/_jsii/ecs-package@0.0.1.jsii.tgz
+src/ecs_dist.egg-info/PKG-INFO
+src/ecs_dist.egg-info/SOURCES.txt
+src/ecs_dist.egg-info/dependency_links.txt
+src/ecs_dist.egg-info/requires.txt
+src/ecs_dist.egg-info/top_level.txt
