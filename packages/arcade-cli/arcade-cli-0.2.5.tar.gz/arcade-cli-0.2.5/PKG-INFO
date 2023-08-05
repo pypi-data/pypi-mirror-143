@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: arcade-cli
+Version: 0.2.5
+Summary: A tool for interacting with the matise arcade
+License: MIT
+Author-email: vivax <vivax3794@protonmail.com>
+Requires-Python: >=3.8,<3.11
