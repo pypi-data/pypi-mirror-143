@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+src/agent_sgd777/__init__.py
+src/agent_sgd777/client.py
+src/agent_sgd777/exceptions.py
+src/agent_sgd777/settings.py
+src/cc_sgd777.egg-info/PKG-INFO
+src/cc_sgd777.egg-info/SOURCES.txt
+src/cc_sgd777.egg-info/dependency_links.txt
+src/cc_sgd777.egg-info/requires.txt
+src/cc_sgd777.egg-info/top_level.txt
