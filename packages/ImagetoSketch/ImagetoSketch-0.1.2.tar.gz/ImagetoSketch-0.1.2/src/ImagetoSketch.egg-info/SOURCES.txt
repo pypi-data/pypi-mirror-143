@@ -1,0 +1,8 @@
+LICENSE
+LICENSE.txt
+README.md
+setup.py
+src/ImagetoSketch.egg-info/PKG-INFO
+src/ImagetoSketch.egg-info/SOURCES.txt
+src/ImagetoSketch.egg-info/dependency_links.txt
+src/ImagetoSketch.egg-info/top_level.txt
