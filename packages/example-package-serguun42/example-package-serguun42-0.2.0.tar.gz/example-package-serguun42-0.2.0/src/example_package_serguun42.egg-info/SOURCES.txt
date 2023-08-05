@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/example-package-serguun42/__init__.py
+src/example-package-serguun42/another_module.py
+src/example-package-serguun42/first.py
+src/example_package_serguun42.egg-info/PKG-INFO
+src/example_package_serguun42.egg-info/SOURCES.txt
+src/example_package_serguun42.egg-info/dependency_links.txt
+src/example_package_serguun42.egg-info/top_level.txt
