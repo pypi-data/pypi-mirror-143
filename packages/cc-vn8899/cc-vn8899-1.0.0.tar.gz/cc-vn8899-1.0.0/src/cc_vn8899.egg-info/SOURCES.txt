@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+src/agent_vn8899/__init__.py
+src/agent_vn8899/client.py
+src/agent_vn8899/exceptions.py
+src/agent_vn8899/settings.py
+src/cc_vn8899.egg-info/PKG-INFO
+src/cc_vn8899.egg-info/SOURCES.txt
+src/cc_vn8899.egg-info/dependency_links.txt
+src/cc_vn8899.egg-info/requires.txt
+src/cc_vn8899.egg-info/top_level.txt
