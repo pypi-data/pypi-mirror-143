@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mpsf"
+version = "0.3.1"
+description = "Multiprocessing Single Function (mpsf)"
+authors = ["morten"]
+license = "MIT"
+repository = "https://gitlab.com/Yggdrasil27/mpsf"
+documentation = "https://mpsf.readthedocs.io/en/latest/"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+pytest = "^7.1.0"
+Sphinx = "^4.4.0"
+sphinx-rtd-theme = "^1.0.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+skip-string-normalization = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
