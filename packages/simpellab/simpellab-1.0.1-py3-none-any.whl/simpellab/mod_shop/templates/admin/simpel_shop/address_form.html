@@ -1,0 +1,21 @@
+{% load i18n widget_tweaks %}
+<div class="row mb-3">
+  <div class="col-lg-3">
+    <label class="d-block fw-bold mb-2" for="{{ form.billing_address.name }}">{% trans "Billing Address" %}</label>
+  </div>
+  <div class="col-lg-9">
+    {% render_field form.billing_address class="form-control" placeholder="eg: PO.123123" %}
+    {% if form.billing_address.help_text %}<div class="help">{{ form.billing_address.help_text }}</div>{% endif %}
+    {% if form.billing_address.errors %}<div class="errors">{{ form.billing_address.errors }}</div>{% endif %}
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-lg-3">
+    <label class="d-block fw-bold mb-2" for="{{ form.shipping_address.name }}">{% trans "Shipping Address" %}</label>
+  </div>
+  <div class="col-lg-9">
+    {% render_field form.shipping_address class="form-control" placeholder="eg: PO.123123" %}
+    {% if form.shipping_address.help_text %}<div class="help">{{ form.shipping_address.help_text }}</div>{% endif %}
+    {% if form.shipping_address.errors %}<div class="errors">{{ form.shipping_address.errors }}</div>{% endif %}
+  </div>
+</div>
