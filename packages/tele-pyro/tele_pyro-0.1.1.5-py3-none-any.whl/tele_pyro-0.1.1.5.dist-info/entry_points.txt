@@ -1,0 +1,3 @@
+[console_scripts]
+tele-pyro=__main__:main
+
