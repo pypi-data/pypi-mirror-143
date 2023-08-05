@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+main.py
+setup.py
+currecyconverterapi.egg-info/PKG-INFO
+currecyconverterapi.egg-info/SOURCES.txt
+currecyconverterapi.egg-info/dependency_links.txt
+currecyconverterapi.egg-info/entry_points.txt
+currecyconverterapi.egg-info/not-zip-safe
+currecyconverterapi.egg-info/requires.txt
+currecyconverterapi.egg-info/top_level.txt
+currencyconverterapi/__init__.py
+currencyconverterapi/client.py
+currencyconverterapi/models.py
