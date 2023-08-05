@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+wenlan_video_public.egg-info/PKG-INFO
+wenlan_video_public.egg-info/SOURCES.txt
+wenlan_video_public.egg-info/dependency_links.txt
+wenlan_video_public.egg-info/requires.txt
+wenlan_video_public.egg-info/top_level.txt
