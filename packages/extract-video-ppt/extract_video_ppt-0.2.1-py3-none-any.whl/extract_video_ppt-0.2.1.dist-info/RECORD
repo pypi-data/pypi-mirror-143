@@ -1,0 +1,10 @@
+pkg_main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pkg_main/compare.py,sha256=pNJans40M2gH42Of8C01wWYMrjNqHMOlUioD4ZFqRZ0,4020
+pkg_main/images2pdf.py,sha256=rp2iQhGrxbg-JNI2uxbpafmaQf39FbbQvYzwvfC1Fks,642
+pkg_main/video2ppt.py,sha256=esn_v7_CkQ38Sqlvcl_Sq2ma617OiLl9TB8ayezHCEI,4794
+extract_video_ppt-0.2.1.dist-info/LICENSE,sha256=WI5JtXXhjcqnIcPllDA1ZtuxNnZ515xjElcILo7z28o,1073
+extract_video_ppt-0.2.1.dist-info/METADATA,sha256=mJ4ofTTMsvIzJ30ncP3oYRF2RXCUTeLHn-2IsDiFhng,765
+extract_video_ppt-0.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+extract_video_ppt-0.2.1.dist-info/entry_points.txt,sha256=Xtt8iRNGm_cU96SdYhwuxZSxonymfSEgyZM2bC5YTJI,39
+extract_video_ppt-0.2.1.dist-info/top_level.txt,sha256=ZTADldrFNjl115HIQbyEPrW0Fyt9EnuQl1QomcMBCi0,13
+extract_video_ppt-0.2.1.dist-info/RECORD,,
