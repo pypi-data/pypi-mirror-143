@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Housing-pred
+Version: 0.1
+Summary: housing module
+Home-page: https://github.com/aryamonmishra/mle-training
+Author: Aryamon Mishra
+Author-email: aryamon.mishra@tigeranalytics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: tensorflow
+Requires-Dist: pandas
+Requires-Dist: os
+Requires-Dist: sys
+Requires-Dist: pickles
+Requires-Dist: jupyter
+Requires-Dist: tarfile
+Requires-Dist: urllib
+
+UNKNOWN
+
