@@ -1,0 +1,3 @@
+[console_scripts]
+gibbs_sampler=gibbs_sampler.gibbs_sampler:main
+
