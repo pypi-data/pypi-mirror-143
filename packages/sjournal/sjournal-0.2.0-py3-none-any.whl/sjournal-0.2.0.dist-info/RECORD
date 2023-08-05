@@ -1,0 +1,11 @@
+sjournal/__init__.py,sha256=YLY6PWrvNhLdni0GFDyqQqZqnKMMQ5qp57ZjSKqOxfs,192
+sjournal/sjournal.py,sha256=9f7NNG4hmQ7_eHBnBkUxgVbPJo-evbBdMqzHjAL8aTg,16610
+sjournal/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sjournal/utilities/arguments.py,sha256=kfPvMV6rWrbaMdHKE6hQm2e9lx7yJJ4-qWek-nitP88,4599
+sjournal/utilities/utilities.py,sha256=S5_EODA45bKksYGxgHzRPseuvR9y8OXFA2KfWHcshBY,863
+sjournal/utilities/version.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+sjournal-0.2.0.dist-info/METADATA,sha256=pYcNdn2ZcDdG-GPwZdT1AZowzaZrOR5dF39vp89l-lY,2966
+sjournal-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sjournal-0.2.0.dist-info/entry_points.txt,sha256=PlfhDagDQYk_XWPFtPAFyiLsQE-kpJZV20nHTOhi180,62
+sjournal-0.2.0.dist-info/top_level.txt,sha256=1iEmdMd95xDBbvvGfOqIZfRrS-qhtFAQtgPMQXslDp0,9
+sjournal-0.2.0.dist-info/RECORD,,
