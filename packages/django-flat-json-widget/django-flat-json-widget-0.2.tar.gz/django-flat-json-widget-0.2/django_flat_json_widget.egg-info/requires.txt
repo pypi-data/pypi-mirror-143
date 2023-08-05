@@ -1,0 +1,4 @@
+
+[test]
+openwisp-utils[qa]~=1.0.0
+django-extensions~=3.1.0
