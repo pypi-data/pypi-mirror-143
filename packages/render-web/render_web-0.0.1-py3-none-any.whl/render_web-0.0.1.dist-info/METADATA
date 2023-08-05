@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: render-web
+Version: 0.0.1
+Summary: A small package for rendering HTML pages in jupyter notebooks
+Home-page: https://github.com/abidghias/html_rendering
+Author: abidghias
+Author-email: abidghias89@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/abidghias/html_rendering/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipython
+
+# DisplayWebPage-abidghias
+A small package for rendering HTML pages in jupyter notebooks
+
+# How to use -
+
+* install the latest package 
+
+> * in jupyter notebook -
+```
+    !pip install render_web
+```
+
+> * in command prompt -
+```bash    
+    pip install render_web
+```
+
+* Now run below snippets of code in your jupyter-notebooks cell to render your website as an IFrame-
+
+## default use case -
+```python
+from displayWebPage.render import render_site
+
+URL="use your https URL here"
+render_site(URL)
+```
+
+## custom use case -
+```python
+from displayWebPage.render import render_site
+
+URL="use your https URL here"
+render_site(URL, width="100%", height=600)
+```
+
+
