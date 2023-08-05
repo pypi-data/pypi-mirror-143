@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+UUED.egg-info/PKG-INFO
+UUED.egg-info/SOURCES.txt
+UUED.egg-info/dependency_links.txt
+UUED.egg-info/top_level.txt
+uued/__init__.py
