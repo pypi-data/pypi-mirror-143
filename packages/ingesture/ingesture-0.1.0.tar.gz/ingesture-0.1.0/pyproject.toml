@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "ingesture"
+version = "0.1.0"
+description = "Ingest gesturally-structured data into models with multiple export"
+authors = ["sneakers-the-rat <JLSaunders987@gmail.com>"]
+license = "MPL-2.0"
+packages = [
+    { include = "ingesture" }
+]
+readme = "README.md"
+repository = "https://github.com/auto-pi-lot/ingest"
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+Sphinx = {version = "^4.4.0", optional = true}
+furo = {version = "^2022.3.4", optional = true}
+pydantic = "^1.9.0"
+parse = "^1.19.0"
+pynwb = {version = "^2.5.1", optional = true}
+scipy = "^1.8.0"
+PyYAML = "^6.0"
+pandas = "^1.1"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.extras]
+docs = ["Sphinx", "furo"]
+nwb = ['pynwb']
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
