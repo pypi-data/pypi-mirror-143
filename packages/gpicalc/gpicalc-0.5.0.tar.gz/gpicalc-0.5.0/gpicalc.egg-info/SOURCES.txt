@@ -1,0 +1,8 @@
+README.md
+setup.py
+gpicalc/__classes.py
+gpicalc/__init__.py
+gpicalc.egg-info/PKG-INFO
+gpicalc.egg-info/SOURCES.txt
+gpicalc.egg-info/dependency_links.txt
+gpicalc.egg-info/top_level.txt
