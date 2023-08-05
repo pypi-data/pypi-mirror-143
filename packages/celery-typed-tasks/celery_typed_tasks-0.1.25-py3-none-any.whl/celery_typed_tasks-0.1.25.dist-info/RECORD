@@ -1,0 +1,7 @@
+celery_typed_tasks/__init__.py,sha256=IQEqPFQfvYS0JBl1A1iU6JHEmmyOpd7PykNnf4ZqULg,62
+celery_typed_tasks/_version.py,sha256=-vEnpYesMKUw30clShtJIdFMjIfpxd_sw-H-VT2pobU,63
+celery_typed_tasks/core.py,sha256=J0JrA3fgrcO-0I9HDHjoZ-YvNZIfBDORqRNn_1yxuCk,8177
+celery_typed_tasks-0.1.25.dist-info/LICENSE,sha256=dJMdLHq7nWRxMZ8tBBkL729yH7WF26K1aJD1cAv2v9E,1072
+celery_typed_tasks-0.1.25.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+celery_typed_tasks-0.1.25.dist-info/METADATA,sha256=WhQE8m1xLJQfbT2Gw4ig1dSYFgEGdrmqtPp2NyEKcCM,575
+celery_typed_tasks-0.1.25.dist-info/RECORD,,
