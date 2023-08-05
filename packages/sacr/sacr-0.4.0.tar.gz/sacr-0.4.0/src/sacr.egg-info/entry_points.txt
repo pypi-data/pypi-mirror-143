@@ -1,0 +1,3 @@
+[console_scripts]
+cr = shapeandshare.command.runner.command_line:main
+sacr = shapeandshare.command.runner.command_line:main
