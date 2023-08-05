@@ -1,0 +1,8 @@
+PyQt5
+click
+colour-science
+imageio
+matplotlib
+numpy
+openexr
+tqdm
