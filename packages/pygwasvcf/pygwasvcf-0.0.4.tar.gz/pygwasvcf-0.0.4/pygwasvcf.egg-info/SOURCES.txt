@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pygwasvcf/__init__.py
+pygwasvcf/gwas_vcf.py
+pygwasvcf/variant_record_gwas_funs.py
+pygwasvcf.egg-info/PKG-INFO
+pygwasvcf.egg-info/SOURCES.txt
+pygwasvcf.egg-info/dependency_links.txt
+pygwasvcf.egg-info/requires.txt
+pygwasvcf.egg-info/top_level.txt
+tests/__init__.py
+tests/test_gwas_file.py
+tests/test_variant_record_gwas_funs.py
