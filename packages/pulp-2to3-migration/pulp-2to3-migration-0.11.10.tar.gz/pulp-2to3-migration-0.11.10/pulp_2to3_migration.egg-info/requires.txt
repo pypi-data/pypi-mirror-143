@@ -1,0 +1,5 @@
+pulpcore<3.13,>=3.6
+pymongo<4.0
+mongoengine
+semantic_version
+jsonschema>=3.0
