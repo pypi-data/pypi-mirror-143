@@ -1,0 +1,13 @@
+spy4cast/__init__.py,sha256=H8jQi5JRHBOze8Xg55FvuksdgrNzxKB2BEpALC8pWJY,595
+spy4cast/_functions.py,sha256=Suc4EaXXRH9xqHPrrvSe_U-h0UDA2phC9GITUZIU0Ug,5001
+spy4cast/errors.py,sha256=YCgaCk-VUNfq64QgqYCJZMVkT_BnGc_6qJ7yRTZIx68,4698
+spy4cast/meteo.py,sha256=a5HDiqPn3MMYLODdVg3y8RmP5jNJpS2H1pYL2L-jV2Q,19329
+spy4cast/plotters.py,sha256=zyvpACXnYlAMImcEYS2ze3YsBqIs6JXjLs37tFgd01A,9083
+spy4cast/read_data.py,sha256=9Xi7bTidqkYcr-l-UESihcdkWSLvSQzKoGUeKTts58A,24788
+spy4cast/spy4caster.py,sha256=ZZKyHS4DkAG8YwJukeQapAbjWk8bCyc3NVQz2SgWmOI,31884
+spy4cast/stypes.py,sha256=-UqhMNJp3jZTnu86S47e3UFN_Io43-lTLyW15A2iXsU,6241
+spy4cast-0.0.5.dist-info/LICENSE,sha256=f_4ZVFh8d9-6HPjrmy6nQ2cfpuY_nnovJYEZ1C4U7v4,27030
+spy4cast-0.0.5.dist-info/METADATA,sha256=JZ_iymEyEfHiB7nEU1jOlmhOMOeO8CY_FWAosuQ6oDE,5412
+spy4cast-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+spy4cast-0.0.5.dist-info/top_level.txt,sha256=8RNdoWnoChBOIpMHi4e_unNGXnIeMQ_qi06ZQRAiPDs,9
+spy4cast-0.0.5.dist-info/RECORD,,
