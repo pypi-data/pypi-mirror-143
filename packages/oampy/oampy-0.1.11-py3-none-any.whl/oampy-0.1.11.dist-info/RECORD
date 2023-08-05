@@ -1,0 +1,12 @@
+oampy/__init__.py,sha256=iLP5Yyt1l-UXuBFC1_kpaAZQpfTdcjbUy4LDUSBgryQ,5282
+oampy/__main__.py,sha256=RkyAx_xkxCcBwX3QSwbl7Hlu5sx8WnlpSK9Czldvqos,1375
+oampy/client.py,sha256=imovXD9vVVsE3K2j9LFhaBl7Orw1xqebNZFl7kOwor0,2595
+oampy/docs.py,sha256=bC3dkaR1-B51bDOmM3b_5SSIC7ws-ivMywWrAPC1z0w,8372
+oampy/query.py,sha256=cfS2JqxC3pIIA5Ey5x_x0nUNBhCQQSmHvK9Min5i4J4,1852
+oampy/utils.py,sha256=330Q6OfjFT0DOnNmjNE9YuqXVFPyV9ETSaerfrZNDwQ,2596
+oampy-0.1.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+oampy-0.1.11.dist-info/METADATA,sha256=RHLH9xNDj9H97m6k1WIrTlBeneYCOR1UtrZAxFlyF_8,2105
+oampy-0.1.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+oampy-0.1.11.dist-info/entry_points.txt,sha256=84NRwWW33_uO8nawyCJ---3tH4y0UdhvXaN_4zZOPhM,47
+oampy-0.1.11.dist-info/top_level.txt,sha256=61VEFWM2X4civXZWb9IXLdfsncVrMc2fPWk_zKIBa0E,6
+oampy-0.1.11.dist-info/RECORD,,
