@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+maximaxson/__init__.py
+maximaxson/testfuncpack.py
+maximaxson/testfuncpack2.py
+maximaxson/testfuncpack3.py
+maximaxson.egg-info/PKG-INFO
+maximaxson.egg-info/SOURCES.txt
+maximaxson.egg-info/dependency_links.txt
+maximaxson.egg-info/top_level.txt
