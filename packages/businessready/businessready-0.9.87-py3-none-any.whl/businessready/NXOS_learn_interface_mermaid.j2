@@ -1,0 +1,22 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+
+```
+{%- else %}{%- if filetype_loop == 1 %}
+```mermaid
+classDiagram
+
+```
+{%- else %}{%- if filetype_loop == 2 %}
+```mermaid
+stateDiagram
+
+```
+
+{%- else %}{%- if filetype_loop == 3 %}
+```mermaid
+erDiagram
+
+```
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}
