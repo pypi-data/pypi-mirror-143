@@ -1,0 +1,6 @@
+PyYaml
+markdown<3.3
+ovid
+pyaml
+unidecode
+yamlwrap
