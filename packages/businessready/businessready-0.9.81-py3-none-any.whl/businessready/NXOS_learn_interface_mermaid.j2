@@ -1,0 +1,26 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+
+```
+{%- else %}{%- if filetype_loop == 1 %}
+{%-     for neighbor in to_parse_cdp_neighbors.index %}
+```mermaid
+classDiagram
+
+```
+{%-     endfor %}
+{%- else %}{%- if filetype_loop == 2 %}
+{%- for neighbor in to_parse_cdp_neighbors.index %}
+```mermaid
+stateDiagram
+
+```
+{%- endfor  %}
+{%- else %}{%- if filetype_loop == 3 %}
+{%- for neighbor in to_parse_cdp_neighbors.index %}
+```mermaid
+
+```
+{% endfor %}
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}
