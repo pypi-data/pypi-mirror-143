@@ -1,0 +1,9 @@
+coinmarketcap_scrapi/__init__.py,sha256=cBEGRjHACBEQlCT5EAA3tRVbAeKiWfhMvxnQp5rcQhQ,979
+coinmarketcap_scrapi/cmc_uteis.py,sha256=-O7bijDfxa4C_vG7TkNALahx6g2d2QPoeA5kovffd10,1904
+coinmarketcap_scrapi/coinmarketcap_scrapi.py,sha256=odM2kPNNEgQeZsXDgarHC4bwZ_uGfhUERsJyeE7x0XY,5494
+coinmarketcap_scrapi/excepcions.py,sha256=EhekMdY60z5Fmu8BZBQ2okOnZxSJZEliFviKXj0dGXU,424
+coinmarketcap_scrapi-1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+coinmarketcap_scrapi-1.0.dist-info/METADATA,sha256=AWgmTu2P4OQsSdKq5nWFjACTYiyJM2UharlgsnSU0Io,2212
+coinmarketcap_scrapi-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+coinmarketcap_scrapi-1.0.dist-info/top_level.txt,sha256=Mft3h07HrTJhy11aDPrkIK1rDmlaoV8O8mc42R94xWY,21
+coinmarketcap_scrapi-1.0.dist-info/RECORD,,
