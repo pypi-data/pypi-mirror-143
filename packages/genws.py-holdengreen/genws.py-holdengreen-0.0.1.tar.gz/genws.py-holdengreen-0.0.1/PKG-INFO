@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: genws.py-holdengreen
+Version: 0.0.1
+Summary: website generator for GEM projects
+Home-page: http://greenempower.org/projects/genws.py
+Author: Holden Green
+Author-email: holdenmgreen@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# genws.py
+
+site generator for GEM projects
+
+

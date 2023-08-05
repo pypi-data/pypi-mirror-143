@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bin/genws.py
+src/genws.py_holdengreen.egg-info/PKG-INFO
+src/genws.py_holdengreen.egg-info/SOURCES.txt
+src/genws.py_holdengreen.egg-info/dependency_links.txt
+src/genws.py_holdengreen.egg-info/top_level.txt
