@@ -1,0 +1,5 @@
+ftfy
+tqdm
+torch
+torchvision
+jina
