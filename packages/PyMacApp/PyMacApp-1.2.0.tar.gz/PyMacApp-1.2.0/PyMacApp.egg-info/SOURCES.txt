@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+PyMacApp.egg-info/PKG-INFO
+PyMacApp.egg-info/SOURCES.txt
+PyMacApp.egg-info/dependency_links.txt
+PyMacApp.egg-info/requires.txt
+PyMacApp.egg-info/top_level.txt
+pymacapp/__init__.py
+pymacapp/app_factory.py
+pymacapp/entitlements.py
+pymacapp/helpers.py
+pymacapp/logger.py
+pymacapp/package_factory.py
+pymacapp/resource_management.py
