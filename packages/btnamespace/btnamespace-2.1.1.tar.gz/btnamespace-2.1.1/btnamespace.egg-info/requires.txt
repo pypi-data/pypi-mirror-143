@@ -1,0 +1,10 @@
+future>=0.18.2
+mock
+
+[:python_version <= "2.7"]
+bidict<0.19,>=0.18.4
+braintree<4,>=3.46.0
+
+[:python_version > "2.7"]
+bidict>=0.18.4
+braintree>=3.46.0
