@@ -1,0 +1,13 @@
+btnamespace/__init__.py,sha256=g_aV3iy6coxMjXQrVVFfJpjOXQXlOx_LNs8iw7JyI_M,630
+btnamespace/_version.py,sha256=zPJIgPGcoSNiD0qme18OnYJYE3A9VVytlhO-V5DaAW0,22
+btnamespace/actions.py,sha256=s5Zyz6uCsC0aqHUowFDAS_1_Q2tycZfxi0rQuqtdnXs,4417
+btnamespace/compat.py,sha256=GICO-UMjU5anESaLy4-iFgrXZ6HmedvryyW5BfjFofQ,3690
+btnamespace/namespace.py,sha256=gu2VMG5Dvyz-J3LLooRndF-Sp5XJGY1kJCpYvqn-YJE,2510
+btnamespace/patch.py,sha256=dxpUONjIFCRmYvY9LVIhVLwbEZlbcwTzN55yAS9E_Zw,3566
+btnamespace/schemas.py,sha256=2gdigmCKHsr32-LDP2bkUuzdNGhkJw05pKy40Bfvv-g,4746
+btnamespace/shared.py,sha256=q564tYtqc4SknJoH3VInp26c13MDftA9g2Dm5g_38C4,666
+btnamespace-2.1.1.dist-info/LICENSE,sha256=p4s917Y780e4twyvsAbk5PKShIQSN0XrFOyMh2OQEz8,1071
+btnamespace-2.1.1.dist-info/METADATA,sha256=lSptm2nId4fky5r6AQH3UHwTLHiJTYG6orrJdckjy1w,4321
+btnamespace-2.1.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+btnamespace-2.1.1.dist-info/top_level.txt,sha256=axC9VgMUtGd9_r1xxeU5kvCbsq19r5tJh7ySTBdPVx8,12
+btnamespace-2.1.1.dist-info/RECORD,,
