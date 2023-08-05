@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pacopy/__about__.py
+src/pacopy/__init__.py
+src/pacopy/branch_switching.py
+src/pacopy/errors.py
+src/pacopy/euler_newton.py
+src/pacopy/natural.py
+src/pacopy/newton.py
+src/pacopy.egg-info/PKG-INFO
+src/pacopy.egg-info/SOURCES.txt
+src/pacopy.egg-info/dependency_links.txt
+src/pacopy.egg-info/requires.txt
+src/pacopy.egg-info/top_level.txt
