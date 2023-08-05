@@ -1,0 +1,12 @@
+nonebot_plugin_setu_now/__init__.py,sha256=UBnqJ0VkAOzR-I3ejK1KakAhqx5TiEYHgHEx50c31SE,3379
+nonebot_plugin_setu_now/config.py,sha256=G2sJj18UpXtEUSPwyZn23UCrgojNUPmclfcqyMzFlSM,636
+nonebot_plugin_setu_now/get_data.py,sha256=ZoCnv0z_x7d4LCij03W9TbR7ZM7ycS1wErEF4w7U4Ks,3785
+nonebot_plugin_setu_now/json_manager.py,sha256=QTRpK-Z0fXLKXZg5OUfyiny8xDKzhReJXFjIBT2Nm3c,1218
+nonebot_plugin_setu_now/save_to_local.py,sha256=83ypb7VL-K1cCagu78MjuNyCjHB1FWJCL2tpWKTIG78,729
+nonebot_plugin_setu_now/save_to_webdav.py,sha256=zc6D1ibksXGTxqOmU_HaIYGPdlZAtmEcASxVQmMQsww,1245
+nonebot_plugin_setu_now/setu_message.py,sha256=JtrCCfqmfdnONiVe5l2YQLMkzoxFsM9WQlstw8dlLck,3088
+nonebot_plugin_setu_now/withdraw.py,sha256=ShiBHtn1fCTSl0TbNIeRUmYt6yybQioUeKWBc3Ix0KU,823
+nonebot_plugin_setu_now-0.1.0.dist-info/LICENSE,sha256=-46AGdz694UNRXQKXzfCnB_9VNqFcXfql8YA6lGLyJM,1083
+nonebot_plugin_setu_now-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+nonebot_plugin_setu_now-0.1.0.dist-info/METADATA,sha256=Lt-_fuQyNOdLLcGVUq6g3IQVWiWZW0WtTgw7LP-i3zk,2997
+nonebot_plugin_setu_now-0.1.0.dist-info/RECORD,,
