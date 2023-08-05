@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+Keys/__init__.py
+Keys/main.py
+Keys/statics/key.png
+Keys/statics/keys.json
+keys_manager.egg-info/PKG-INFO
+keys_manager.egg-info/SOURCES.txt
+keys_manager.egg-info/dependency_links.txt
+keys_manager.egg-info/entry_points.txt
+keys_manager.egg-info/not-zip-safe
+keys_manager.egg-info/requires.txt
+keys_manager.egg-info/top_level.txt

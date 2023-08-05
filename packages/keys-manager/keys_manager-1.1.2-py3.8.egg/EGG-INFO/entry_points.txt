@@ -1,0 +1,4 @@
+[gui_scripts]
+keys = Keys.main:main
+keys-config = Keys.main:edit_config
+
