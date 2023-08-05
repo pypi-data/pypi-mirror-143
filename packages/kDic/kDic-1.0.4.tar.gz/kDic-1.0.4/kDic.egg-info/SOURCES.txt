@@ -1,0 +1,7 @@
+README.md
+setup.py
+kDic.egg-info/PKG-INFO
+kDic.egg-info/SOURCES.txt
+kDic.egg-info/dependency_links.txt
+kDic.egg-info/top_level.txt
+kDict/__init__.py
