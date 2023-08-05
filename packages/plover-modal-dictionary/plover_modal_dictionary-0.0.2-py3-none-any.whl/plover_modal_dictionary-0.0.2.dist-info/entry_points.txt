@@ -1,0 +1,6 @@
+[plover.dictionary]
+modal = plover_modal_dictionary:ModalDictionary
+
+[plover.extension]
+modal_update = plover_modal_dictionary:ModalExtension
+
