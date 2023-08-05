@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: havsfunc
+Version: 33
+Summary: Holy's ported AviSynth functions for VapourSynth
+Home-page: https://github.com/HomeOfVapourSynthEvolution/havsfunc
+Author: HolyWu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Multimedia :: Video
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: VapourSynth (>=57)
+Requires-Dist: vsutil
+
+# HAvsFunc
+
+## Dependent scripts
+- [adjust](https://github.com/dubhater/vapoursynth-adjust)
+- [mvsfunc](https://github.com/HomeOfVapourSynthEvolution/mvsfunc)
+- [nnedi3_resample](https://github.com/HomeOfVapourSynthEvolution/nnedi3_resample)
+
+## Dependent plugins
+- [AddGrain](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain)
+- [CAS](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CAS)
+- [CTMF](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF)
+- [DCTFilter](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter)
+- [Deblock](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock)
+- [DFTTest](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest)
+- [EEDI2](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2)
+- [EEDI3](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3)
+- [FFT3DFilter](https://github.com/myrsloik/VapourSynth-FFT3DFilter)
+- [FluxSmooth](https://github.com/dubhater/vapoursynth-fluxsmooth)
+- [fmtconv](https://github.com/EleonoreMizo/fmtconv)
+- [Hqdn3d](https://github.com/Hinterwaeldlers/vapoursynth-hqdn3d)
+- [KNLMeansCL](https://github.com/Khanattila/KNLMeansCL)
+- [MiscFilters](https://github.com/vapoursynth/vs-miscfilters-obsolete)
+- [MVTools](https://github.com/dubhater/vapoursynth-mvtools)
+- [NNEDI3CL](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL)
+- [RGVS](https://github.com/vapoursynth/vs-removegrain)
+- [SangNom](https://bitbucket.org/James1201/vapoursynth-sangnom)
+- [SVP](https://www.svp-team.com/wiki/Main_Page)
+- [TemporalSoften2](https://github.com/dubhater/vapoursynth-temporalsoften2)
+- [TTempSmooth](https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth)
+- [ZNEDI3](https://github.com/sekrit-twc/znedi3)
+
+
