@@ -1,0 +1,4 @@
+googletrans==3.1.0a0
+colored>=1.4.3
+progress>=1.6
+wheel>=0.37.1
