@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pemudapersis-bot
+Version: 1.2.5b0
+Summary: The official chatbot of Pemuda Persatuan Islam (PERSIS)
+Home-page: UNKNOWN
+Author: zamzambadruzaman
+Author-email: azzambz@pm.me
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Pemuda Persis Bot
+
+A dedicated chatbot for Pemuda Persis Digital Media.
+
+### Telegram Account : 
+
+- Production : [@pemudapersis_bot](t.me/pemudapersis_bot)
+- Development : [@pemudapersisdev_bot](t.me/pemudapersisdev_bot)
+
+### Installation :
+
+To install the bot, we can simply use pip command :
+
+```shell
+pip install pemudapersis-bot
+```
+The package is available in [Pypi](https://pypi.org/project/pemudapersis-bot).
+
+### Start the bot :
+#### Polling method
+
+```shell
+export BOT_TOKEN=<bot token>
+pemudapersis-bot --poll
+```
+
+#### Webhook method
+
+```shell
+export BOT_TOKEN=<bot token>
+pemudapersis-bot --start
+```
+
+Please contact @zamzambadruzaman for the bot token.
+
+For contributing please check [CONTRIBUTING](CONTRIBUTING.md)
+
