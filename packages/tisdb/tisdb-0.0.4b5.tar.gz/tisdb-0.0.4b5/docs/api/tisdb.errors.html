@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tisdb.errors module &mdash; tisdb 0.0.1.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tisdb.types module" href="tisdb.types.html" />
+    <link rel="prev" title="tisdb.config module" href="tisdb.config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> tisdb
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tisdb.html">tisdb package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tisdb.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tisdb.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tisdb.api.html">tisdb.api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tisdb.client.html">tisdb.client module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tisdb.config.html">tisdb.config module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tisdb.errors module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tisdb.types.html">tisdb.types module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tisdb.html#module-tisdb">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">tisdb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">src</a> &raquo;</li>
+        
+          <li><a href="tisdb.html">tisdb package</a> &raquo;</li>
+        
+      <li>tisdb.errors module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/tisdb.errors.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-tisdb.errors">
+<span id="tisdb-errors-module"></span><h1>tisdb.errors module<a class="headerlink" href="#module-tisdb.errors" title="Permalink to this headline">¶</a></h1>
+<dl class="py exception">
+<dt class="sig sig-object py" id="tisdb.errors.BaseError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">tisdb.errors.</span></span><span class="sig-name descname"><span class="pre">BaseError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10501</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TISDB</span> <span class="pre">Error'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tisdb.errors.BaseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised when a error occur.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>Exception ([type]): [description]</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.BaseError.STATUS">
+<span class="sig-name descname"><span class="pre">STATUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'TISDB</span> <span class="pre">Error'</span></em><a class="headerlink" href="#tisdb.errors.BaseError.STATUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.BaseError.SUBCODE">
+<span class="sig-name descname"><span class="pre">SUBCODE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10501</span></em><a class="headerlink" href="#tisdb.errors.BaseError.SUBCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tisdb.errors.BaseInfo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">tisdb.errors.</span></span><span class="sig-name descname"><span class="pre">BaseInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ok'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tisdb.errors.BaseInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Returning result info</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>object ([type]): [description]</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.BaseInfo.STATUS">
+<span class="sig-name descname"><span class="pre">STATUS</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'ok'</span></em><a class="headerlink" href="#tisdb.errors.BaseInfo.STATUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.BaseInfo.SUBCODE">
+<span class="sig-name descname"><span class="pre">SUBCODE</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><em class="property"> <span class="pre">=</span> <span class="pre">10200</span></em><a class="headerlink" href="#tisdb.errors.BaseInfo.SUBCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="tisdb.errors.FakeError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">tisdb.errors.</span></span><span class="sig-name descname"><span class="pre">FakeError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10501</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TISDB</span> <span class="pre">Error'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tisdb.errors.FakeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tisdb.errors.BaseError" title="tisdb.errors.BaseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">tisdb.errors.BaseError</span></code></a></p>
+<p>Fake error for some situation to step in error handler</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.FakeError.STATUS">
+<span class="sig-name descname"><span class="pre">STATUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'TISDB</span> <span class="pre">Fake</span> <span class="pre">Error'</span></em><a class="headerlink" href="#tisdb.errors.FakeError.STATUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.FakeError.SUBCODE">
+<span class="sig-name descname"><span class="pre">SUBCODE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10209</span></em><a class="headerlink" href="#tisdb.errors.FakeError.SUBCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="tisdb.errors.ParamError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">tisdb.errors.</span></span><span class="sig-name descname"><span class="pre">ParamError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subcode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10501</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TISDB</span> <span class="pre">Error'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tisdb.errors.ParamError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tisdb.errors.BaseError" title="tisdb.errors.BaseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">tisdb.errors.BaseError</span></code></a></p>
+<p>Params error</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.ParamError.STATUS">
+<span class="sig-name descname"><span class="pre">STATUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'TISDB</span> <span class="pre">Invalid</span> <span class="pre">Parameter</span> <span class="pre">Error'</span></em><a class="headerlink" href="#tisdb.errors.ParamError.STATUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tisdb.errors.ParamError.SUBCODE">
+<span class="sig-name descname"><span class="pre">SUBCODE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10422</span></em><a class="headerlink" href="#tisdb.errors.ParamError.SUBCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tisdb.types.html" class="btn btn-neutral float-right" title="tisdb.types module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tisdb.config.html" class="btn btn-neutral float-left" title="tisdb.config module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, zzf.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
