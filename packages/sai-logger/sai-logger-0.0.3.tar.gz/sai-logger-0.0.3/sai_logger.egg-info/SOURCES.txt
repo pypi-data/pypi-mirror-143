@@ -1,0 +1,6 @@
+README.md
+setup.py
+sai_logger.egg-info/PKG-INFO
+sai_logger.egg-info/SOURCES.txt
+sai_logger.egg-info/dependency_links.txt
+sai_logger.egg-info/top_level.txt
