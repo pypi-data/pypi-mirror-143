@@ -1,0 +1,12 @@
+taskio/__init__.py,sha256=4g2NoqlClrNzYB3bnJZYImKiMHO5fwED5_r-wSGQBAM,1171
+taskio/argparse_ext.py,sha256=c_MS6-dJH14q5gXQQGhnDpgMoKhQNBHkSNa8QCXGc64,2122
+taskio/cli.py,sha256=F3CUAPFgXevMIr9MyxRfOhhJz6qVXtKTJsn7UeQNfOI,921
+taskio/config.py,sha256=CbNxLWemaAB9dNW6nYdClRhoo2kvOwaCAyG9bQxE4D0,1119
+taskio/core.py,sha256=ypqvfH2Rr-6xiwvCOK9-RqHUogqmO3YuC32jb5uVFQw,6637
+taskio/decorators.py,sha256=VvdE_kYubnXsnI2FnS_889LKl_YdFdPmV0Pj4_uYF8w,3789
+taskio/process.py,sha256=bVLl8FE5q8AVPlGEr1Q6xEiJdTZQvARTYAnNr3fJQB4,2922
+taskio-0.0.3.dist-info/LICENSE,sha256=m98uYwDxuSQ4LBywMiYoKMnDXH4Fznv19bq33bPRBNo,11360
+taskio-0.0.3.dist-info/METADATA,sha256=GjoQUukQLgf8Yt_6tJhIDWvR9nKMUoZjn0OJysqC3KM,1256
+taskio-0.0.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+taskio-0.0.3.dist-info/top_level.txt,sha256=lVcmeJGR_Ogk1vahKZuElipgj1lh6yMEMPeoIwfhD08,7
+taskio-0.0.3.dist-info/RECORD,,
