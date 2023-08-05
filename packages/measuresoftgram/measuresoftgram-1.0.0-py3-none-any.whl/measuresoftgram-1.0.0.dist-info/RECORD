@@ -1,0 +1,11 @@
+measuresoftgram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+measuresoftgram/cli.py,sha256=ijKFZl6h5F9sses-QXdxTmct9NxDXI31kk9uQZWXXmc,1825
+measuresoftgram/create.py,sha256=_soF-qAxDWu6CBsdLwO24xJfg8P4Aq7myOCe7Ut46ew,7999
+measuresoftgram/jsonReader.py,sha256=Lai8ktqsTOi4utn8V8DM2c7Y35qK0FkiUC4skK8GIqY,2813
+measuresoftgram/parser.py,sha256=PCGnDD41dQgqi0zWTBR87g5P-7xGM6hqfiM2XOFDUuA,880
+measuresoftgram-1.0.0.dist-info/LICENSE,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+measuresoftgram-1.0.0.dist-info/METADATA,sha256=pxaK2m0iEwI5rbK07DnoqgoykuzHOLsaYwz88J7L7CY,374
+measuresoftgram-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+measuresoftgram-1.0.0.dist-info/entry_points.txt,sha256=dCbv3VVcZe9rlZlPEuGA-U3bj5R5WVDpTnoPg04qtiw,61
+measuresoftgram-1.0.0.dist-info/top_level.txt,sha256=q9nfxyF0oW3gu153PSWXMRVyrWfESxT9On3wcZGgPYI,16
+measuresoftgram-1.0.0.dist-info/RECORD,,
