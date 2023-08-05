@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: netgate-xml-to-xlsx
+Version: 0.9.2a2
+Summary: Translate Netgate firewall rules to spreadsheet for review.
+Home-page: https://gitlab.com/appropriate-solutions-inc/open/netgate-xml-to-xlsx
+License: BSD-3-Clause
+Keywords: firewall,netgate
+Author: Raymond GA Côté
+Author-email: ray@AppropriateSolutions.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: System :: Networking :: Firewalls
+Classifier: Topic :: Utilities
+Requires-Dist: openpyxl (>=3.0.9,<4.0.0)
+Requires-Dist: xmltodict (>=0.12.0,<0.13.0)
+Project-URL: Repository, https://gitlab.com/appropriate-solutions-inc/open/netgate-xml-to-xlsx.git
+Description-Content-Type: text/markdown
+
+# Netgate Firewall Converter
+
+The `netgate-xml-to-xlsx` converts a standard Netgate firewall .xml configuration file to an .xlsx spreadsheet with multiple tabs.
+
+* Supports Python 3.10+.
+* This is an alpha version tested on a limited number of firewall files.
+* The specific spreadsheet tabs implemented address our (ASI's) immediate firewall review needs.
+* Tested only on Netgate firewall version 21.x files.
+
+
+## Installation
+Recommend installing this in a virtual environment.
+
+```
+python -m pip install netgate-xml-to-xlsx
+```
+
+Once installed, the `netgate-xml-to-xlsx` command is available on your path.
+
+## Usage
+
+* By default, output is sent to the current directory.
+* Use the `--output-dir` parameter to set a specific output directory.
+* The output filename is based on the `hostname` and `domain` elements of the XML `system` element.
+
+```
+# Display help
+netgate-xml-to-xlsx --help
+```
+
+```
+# Convert a Netgate firewall configuration file.
+netgate-xml-to-xlsx firewall-config.xml
+```
+
+## Notes
+
+### Using flakeheaven
+The large collection of flakeheaven plugins is a bit overboard while I continue to find the best mixture of plugins that work best for my projects.
+
