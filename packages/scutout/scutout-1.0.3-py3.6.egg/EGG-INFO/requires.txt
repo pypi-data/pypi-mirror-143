@@ -1,0 +1,7 @@
+numpy>=1.10
+astropy
+montage-wrapper
+radio-beam
+regions
+scipy
+pyparsing
