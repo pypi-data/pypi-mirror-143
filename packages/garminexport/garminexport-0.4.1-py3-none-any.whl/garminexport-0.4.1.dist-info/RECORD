@@ -1,0 +1,16 @@
+garminexport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garminexport/backup.py,sha256=NT3FYv06IUReQ7RgcwRAiPy_iM9pCmbSLPh-4PEyt1E,7140
+garminexport/garminclient.py,sha256=LOBcrZcts9FscUdYS-t-6WUEJIwFgGfVY7dh-LFL31g,22806
+garminexport/incremental_backup.py,sha256=Ywt1sTsXcshGgTKqPV19QweUuUM7wvCT4F0HPtGlSN8,3916
+garminexport/logging_config.py,sha256=5Q_ndi0dmVuVqAcpX7Zeyzpf07wNfzYlLKvCdMAbFKo,224
+garminexport/retryer.py,sha256=3f9TmoMFDGohwxQtjFqzMT_H6RGbpDkFAI55ZLcK2yI,8151
+garminexport/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garminexport/cli/backup.py,sha256=Om42E1Ra9vSpWdKD-B32pFISnvdckSCgSx0o8Uwb6mw,3822
+garminexport/cli/get_activity.py,sha256=DpjIzc9G3HCDZhmxhIrPF2sHaYWfm-BF28RVauy0Aps,3123
+garminexport/cli/upload_activity.py,sha256=r6GKGroyKUF2ODiEB2iWDqA8cKyK4l5T799DMPaclJE,2765
+garminexport-0.4.1.dist-info/LICENSE,sha256=y16Ofl9KOYjhBjwULGDcLfdWBfTEZRXnduOspt-XbhQ,11325
+garminexport-0.4.1.dist-info/METADATA,sha256=3r1Eu2Tqg4KVswu5SQfdVpRbixAB7cR4jjz-H_F4rsE,7366
+garminexport-0.4.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+garminexport-0.4.1.dist-info/entry_points.txt,sha256=PwmnxOIzYKKJVJRGI4vZywOfyCB3vYIdM3HdstHzT4Q,183
+garminexport-0.4.1.dist-info/top_level.txt,sha256=UDxvBs1TOFnhtcpn4K98ND770g7w8RJJ_CfQ-NQFAek,13
+garminexport-0.4.1.dist-info/RECORD,,
