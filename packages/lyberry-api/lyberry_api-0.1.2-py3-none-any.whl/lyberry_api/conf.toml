@@ -1,0 +1,6 @@
+player_cmd = "mpv {} --chapters-file=/tmp/lyberry_chapters"
+viewer_cmd = "xdg-open {}"
+lbrynet_api = "http://localhost:5279"
+comment_api = "https://comments.odysee.com/api/v2"
+lighthouse_api = "https://lighthouse.odysee.tv"
+
