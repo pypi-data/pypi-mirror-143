@@ -1,0 +1,2 @@
+[ofxstatement]
+equabankcz = ofxstatement.plugins.equabankcz:EquaBankCZPlugin
