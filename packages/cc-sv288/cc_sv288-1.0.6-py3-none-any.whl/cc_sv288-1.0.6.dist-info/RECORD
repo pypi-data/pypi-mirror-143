@@ -1,0 +1,8 @@
+agent_sv288/__init__.py,sha256=PYiVcSbnIz6g61MDihxTvOkMh88yb-DlqBH7RZhHaNc,112
+agent_sv288/client.py,sha256=9BXnfD7WOweqNZPAQiyWChqE__cFqrMwWswUE_vzaVY,5365
+agent_sv288/exceptions.py,sha256=-XT_7-aX7EMMdfDW0mpB4-vizg6pJQbki3AhJiwvw2w,104
+agent_sv288/settings.py,sha256=sY3bDQEh-kIyIp88YJ5AsIc9LmDof0uT7DRZIbS0up4,219
+cc_sv288-1.0.6.dist-info/METADATA,sha256=P3Q0O2nkcHPxuTJzDPLqTHHVI8QKz8A6f4kGngMM-K4,575
+cc_sv288-1.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cc_sv288-1.0.6.dist-info/top_level.txt,sha256=ZA0KrQgYVMEY0oh7piAS4vQ5rKsGNIwgx2Z7r1UTZcc,12
+cc_sv288-1.0.6.dist-info/RECORD,,
