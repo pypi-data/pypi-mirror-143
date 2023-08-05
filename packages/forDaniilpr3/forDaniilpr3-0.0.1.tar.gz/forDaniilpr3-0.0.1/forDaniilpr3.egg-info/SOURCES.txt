@@ -1,0 +1,9 @@
+setup.py
+forDaniilpr3.egg-info/PKG-INFO
+forDaniilpr3.egg-info/SOURCES.txt
+forDaniilpr3.egg-info/dependency_links.txt
+forDaniilpr3.egg-info/requires.txt
+forDaniilpr3.egg-info/top_level.txt
+package1/__init__.py
+package1/main.py
+package1/modd1.py
