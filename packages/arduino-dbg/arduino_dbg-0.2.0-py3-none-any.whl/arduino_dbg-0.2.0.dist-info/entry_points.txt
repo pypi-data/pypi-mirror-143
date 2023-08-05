@@ -1,0 +1,2 @@
+[console_scripts]
+arduino-dbg = arduino_dbg:main
