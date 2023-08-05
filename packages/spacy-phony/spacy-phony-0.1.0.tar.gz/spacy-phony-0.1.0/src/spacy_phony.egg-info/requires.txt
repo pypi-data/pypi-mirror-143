@@ -1,0 +1,9 @@
+spacy>=3
+
+[dev]
+black
+coverage
+isort
+mypy
+pre-commit
+build

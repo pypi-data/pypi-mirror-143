@@ -1,0 +1,5 @@
+[spacy_factories]
+phonemizer = phony.pipeline:make_phonemizer
+
+[spacy_scorers]
+phoneme_scorer.v1 = phony.scorer:make_phoneme_scorer
