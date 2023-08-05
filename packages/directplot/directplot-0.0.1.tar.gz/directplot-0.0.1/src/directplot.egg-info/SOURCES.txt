@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/directplot.egg-info/PKG-INFO
+src/directplot.egg-info/SOURCES.txt
+src/directplot.egg-info/dependency_links.txt
+src/directplot.egg-info/top_level.txt
