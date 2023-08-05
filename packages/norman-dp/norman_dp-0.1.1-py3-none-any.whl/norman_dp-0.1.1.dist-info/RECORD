@@ -1,0 +1,11 @@
+norman/__init__.py,sha256=wJiDIDQZp-7vkj87e5cfTTnp235EiKVwkTUSmERLdLA,119
+norman/__main__.py,sha256=w-nashZ3Q6KfbljxslhNdAolykQaQcvWodd4VOF9_8w,2579
+norman/consts.py,sha256=lx6kSgbkvPl2HdCYDlKjPmc6NK_6lIRZGOuBr82Znsw,462
+norman/norman_dataplane.py,sha256=1LyjBwOSqDUo79qdzt0VLKVGm1jOalh3wMyJP-u-i6s,5410
+norman/norman_pktgen.py,sha256=7P5_TG9QYrq4-W-XNZ_LRBFTcgWcDZT_bZa2xxuh1qw,8669
+norman_dp-0.1.1.dist-info/LICENSE,sha256=vha0EqFkTD8AAQW0pcsw8HobEqGSXUo3epBS2yXAevE,1518
+norman_dp-0.1.1.dist-info/METADATA,sha256=Svsm9NUf-bdAYMZ5vgr7hF2g-NkMUWKtPGcIiqtSAYk,2237
+norman_dp-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+norman_dp-0.1.1.dist-info/entry_points.txt,sha256=_fqrj-E8JJ9UZexze_AAiLOZBvhzEyY9GQv0ScGPL50,49
+norman_dp-0.1.1.dist-info/top_level.txt,sha256=K0HcJGGMHFtEB5mQoRUytCTTUmQ68qkTGJVN8Kq31EA,7
+norman_dp-0.1.1.dist-info/RECORD,,
