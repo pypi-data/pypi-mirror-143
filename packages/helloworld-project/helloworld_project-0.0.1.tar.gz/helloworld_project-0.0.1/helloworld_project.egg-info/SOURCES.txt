@@ -1,0 +1,7 @@
+setup.py
+helloworld_project/__init__.py
+helloworld_project/core.py
+helloworld_project.egg-info/PKG-INFO
+helloworld_project.egg-info/SOURCES.txt
+helloworld_project.egg-info/dependency_links.txt
+helloworld_project.egg-info/top_level.txt
