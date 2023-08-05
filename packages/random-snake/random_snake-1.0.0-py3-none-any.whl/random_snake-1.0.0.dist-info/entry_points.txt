@@ -1,0 +1,3 @@
+[console_scripts]
+random-snake=random_snake:main
+
