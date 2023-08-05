@@ -1,0 +1,10 @@
+command2img/__init__.py,sha256=uOtgpJjzxjKAPnitstpbSbQw19-pOM7dJ0S5YVjWEwg,2934
+command2img/txt2img/__init__.py,sha256=rCG4vxYRG_qM695OHBOYPxp0yVF1P5y9ZMFWcxWAx8o,731
+command2img/txt2img/fonts/FiraCode-Regular.ttf,sha256=WZKrlkDi30kbL2CUZ7HeYOi8ObLCjbGENCoFktmPYRc,289624
+command2img/txt2img/fonts/meslo.ttf,sha256=kZLge8Loqpc5MbhvKsaUbXJzGbB_H98akHVrDamszcs,1292408
+command2img-0.2.0.data/scripts/command2img,sha256=zPh2ub_qARu9S-O2Iv6njl5ROcpanO2BogSC4sCqHck,48
+command2img-0.2.0.dist-info/LICENSE,sha256=gxEMXycVCqd8Ys_9zur0cAt4EKSjE0eVChA93xZ_tV8,1087
+command2img-0.2.0.dist-info/METADATA,sha256=VPRadws626y5O8vRm6v8LZz9qwEXjoNyablbWYI3PfE,1861
+command2img-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+command2img-0.2.0.dist-info/top_level.txt,sha256=47iYjNNla_I_xIDAyZmRsl_viSxExwUI9ppUL8zrjj8,32
+command2img-0.2.0.dist-info/RECORD,,
