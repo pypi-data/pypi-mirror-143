@@ -1,0 +1,10 @@
+gateau_desktop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gateau_desktop/__main__.py,sha256=pkgFQm0Q_pnHmlGs2sCNcUkHTRLDUZ4DLMsxp4ldrQw,1170
+gateau_desktop/constants.py,sha256=IbtqgPMUxKVN3WnIKOnC7-PK1Q0AKCjAId8WqfSU3o4,130
+gateau_desktop/emulator_listener.py,sha256=dQO3Gt53l6-HdGaDVYP-pNlkSycDJ6lmPTnBDPAtvLY,4798
+gateau_desktop/environment.py,sha256=eME9XuS801K88uGStA-ZZTeBi3jMkw6lZX7oiI_2X8w,142
+gateau_desktop/gateau_client.py,sha256=yzBKzUAeWJ-sOm4uU7gjVzuC_pN3SlVQ8XF1VOH9Pq4,4024
+gateau_desktop/ram_monitor.py,sha256=beyGg0hUN6g9Ee3G6We4KFBG6cSxA9cMkgl-_m0vYOw,3104
+gateau_desktop-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+gateau_desktop-0.1.1.dist-info/METADATA,sha256=6AeeTRASLkdNwRNkRRdnWwaQLELmG0PgU0KZoi-LrVI,554
+gateau_desktop-0.1.1.dist-info/RECORD,,
