@@ -1,0 +1,2 @@
+[console_scripts]
+snap4n6 = snap4n6.cli:main
