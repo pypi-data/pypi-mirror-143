@@ -1,0 +1,10 @@
+setup.py
+src/dwy.egg-info/PKG-INFO
+src/dwy.egg-info/SOURCES.txt
+src/dwy.egg-info/dependency_links.txt
+src/dwy.egg-info/top_level.txt
+src/xxb/__init__.py
+src/xxb/elegant/__init__.py
+src/xxb/elegant/girl/__init__.py
+src/xxb/elegant/girl/information.py
+src/xxb/elegant/girl/message.py
