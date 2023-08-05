@@ -1,0 +1,12 @@
+[path]
+cache         = "~/.cache/pepdocs/pep-{pep_number:04d}.txt"
+save.rst      = "pep-{pep_number:04d}.rst"
+save.markdown = "pep-{pep_number:04d}.md"
+
+[url]
+pep_repo = "https://raw.githubusercontent.com/python/peps/master"
+pep_web  = "https://peps.python.org/pep-{pep_number:04d}/"
+
+    [url.pep]
+    txt = "{pep_repo}/pep-{pep_number:04d}.txt"
+    rst = "{pep_repo}/pep-{pep_number:04d}.rst"

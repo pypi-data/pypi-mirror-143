@@ -1,0 +1,10 @@
+pepdocs/__init__.py,sha256=2gXsMDyoojKVvRMPk8JiSJYYXpBeggf5nHwVbAgRLN0,1335
+pepdocs/__main__.py,sha256=wczoDFPwx2kl7ISh4_ylFZkNvZFIrWp_Fzl953TUN-w,2149
+pepdocs/_pepdocs.py,sha256=VnBc0dN6DQOv2XrPFfGIbMaP0ibKntAVfUw9X08nnhE,2090
+pepdocs/config/__init__.py,sha256=CgZ-0BcfTSn_YW6m1bCWHqc01d7UbadgGLtgUQrUDaM,504
+pepdocs/config/pepdocs.toml,sha256=cawtfMub15BOxjvJRp_ZwxI92YWh--d2oVqdZLv5HFw,395
+pepdocs-0.3.0.dist-info/entry_points.txt,sha256=LCTicnKAEvUUHKZStgSAoYA9Pi36nDFvOE5Wi96pHIs,75
+pepdocs-0.3.0.dist-info/LICENSE,sha256=Txk_ZdLdWktfHneCUqDd_tp0d7xBjE-Z869U-3VERcA,1073
+pepdocs-0.3.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+pepdocs-0.3.0.dist-info/METADATA,sha256=y6aXML_W_0GE6qt-QHZHCXHvl6MssUBUkO3tgPWH3NQ,3291
+pepdocs-0.3.0.dist-info/RECORD,,
