@@ -1,0 +1,5 @@
+setup.py
+dyl/dyl_elegand.egg-info/PKG-INFO
+dyl/dyl_elegand.egg-info/SOURCES.txt
+dyl/dyl_elegand.egg-info/dependency_links.txt
+dyl/dyl_elegand.egg-info/top_level.txt
