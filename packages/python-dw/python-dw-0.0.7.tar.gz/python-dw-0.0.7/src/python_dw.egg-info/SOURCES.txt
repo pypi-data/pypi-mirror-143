@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/dw/__init__.py
+src/dw/__main__.py
+src/python_dw.egg-info/PKG-INFO
+src/python_dw.egg-info/SOURCES.txt
+src/python_dw.egg-info/dependency_links.txt
+src/python_dw.egg-info/entry_points.txt
+src/python_dw.egg-info/requires.txt
+src/python_dw.egg-info/top_level.txt
