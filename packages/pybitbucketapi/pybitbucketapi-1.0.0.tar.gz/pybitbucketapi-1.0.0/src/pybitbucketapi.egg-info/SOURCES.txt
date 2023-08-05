@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+data/mars.json
+data/project.json
+data/repository.json
+src/pybitbucketapi.egg-info/PKG-INFO
+src/pybitbucketapi.egg-info/SOURCES.txt
+src/pybitbucketapi.egg-info/dependency_links.txt
+src/pybitbucketapi.egg-info/requires.txt
+src/pybitbucketapi.egg-info/top_level.txt
