@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "celery-typed-tasks"
+version = "0.1.25"
+description = ""
+authors = ["massover <joshm@simplebet.io>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4"
+celery = ">5"
+
+mkdocs = { version = "*", optional = true}
+mkdocs-material = { version = "*", optional = true}
+mkautodoc = { version = "*", optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
+celery-types = "*"
+black = "*"
+coverage = "*"
+pytest-mock = "*"
+isort = "*"
+
+[tool.poetry.extras]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkautodoc",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--durations=25 -vv -p celery.contrib.pytest"
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+show_error_codes = true
+exclude = ["tests", "scratch/*"]
+
+[tool.isort]
+force_single_line = true
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 89
+skip = []
+
+[tool.coverage.run]
+branch = true
+data_file = ".coverage"
+omit = [
+    "tests/*"
+]
+
