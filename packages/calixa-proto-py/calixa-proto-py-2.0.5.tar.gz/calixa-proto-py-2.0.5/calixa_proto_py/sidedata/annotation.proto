@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package calixa.sidedata;
+
+import "google/protobuf/descriptor.proto";
+
+
+extend google.protobuf.FieldOptions {
+  optional SideDataDef def = 7001;
+}
+
+message SideDataDef {
+  DataType data_type = 1;
+  string qualifier = 2;
+}
+
+enum DataType {
+  UNSPECIFIED = 0;
+  HIGH_VELOCITY = 1;
+  // This type of data will be retained only for 1 day max.
+  HIGH_CARDINALITY = 2;
+}
