@@ -1,0 +1,11 @@
+attrs>=21.4.0
+
+[:python_version < "3.8"]
+typing_extensions
+
+[dev]
+black
+mypy
+pytest
+pytest-cov
+tox
