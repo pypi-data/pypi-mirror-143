@@ -1,0 +1,9 @@
+mastodonamnesia/__init__.py,sha256=LWH9h3PdS7DoaoXt2N9Td3vOWb3dbhksriR33uaeC5g,315
+mastodonamnesia/command_line.py,sha256=JgCHqyfEebq9XIvbrcorMmnjgtbeuiTsGWMjOfS8mZE,152
+mastodonamnesia/control.py,sha256=DwBVH0GmAB1og4graUw80vgC9LIevMd0y1xDh6FIrxQ,9534
+mastodonamnesia/mastodon_amnesia.py,sha256=x7fRComuU6VL_NPQ0hysYk203Dy0ICu8tASAI3xWgDY,6122
+mastodonamnesia-0.3.2.dist-info/entry_points.txt,sha256=esHkdI6FIotcmN3tPnkwR4Togv7DQHWH4dV-Yv2q0ms,70
+mastodonamnesia-0.3.2.dist-info/LICENSE.md,sha256=PQ0YeyTNKuWz9fwaRJVmGVIlvDVwygG6ZJydQv7HhO0,32118
+mastodonamnesia-0.3.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+mastodonamnesia-0.3.2.dist-info/METADATA,sha256=qiPctv8NQzQbvmZBDEA1XwM6FWrFp8TEOQaMROXJrns,2278
+mastodonamnesia-0.3.2.dist-info/RECORD,,
