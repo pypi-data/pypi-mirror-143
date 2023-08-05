@@ -1,0 +1,9 @@
+mclogger/__init__.py,sha256=BNnZl6BMUe2u5kXFtZ-3W2107iu88N2uC1L2O3iS9gk,31
+mclogger/__main__.py,sha256=6cy_bUcynlK59z_-YlAn3q99fp077g-ytryTSXdOd8k,446
+mclogger/mclogger.py,sha256=6h99etT_FZyeK4DXZogUHe_G-l7Pi_v_Z-LVNfodtj4,2774
+mclogger/requirements.txt,sha256=btvr6FxJSr_vsO9HX514C8vfQUOqvIgUM68Bz3BMNrU,48
+mclogger-1.0.3.dist-info/entry_points.txt,sha256=HwcEIlplsJ_4yx5crc-2QXfylj--HO41kXmmVJa1N-U,51
+mclogger-1.0.3.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+mclogger-1.0.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+mclogger-1.0.3.dist-info/METADATA,sha256=tJmMkQ5Fw74InI7Dfn8Z9v53r9gMqH0aoeZlyaUuemE,3289
+mclogger-1.0.3.dist-info/RECORD,,
