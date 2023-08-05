@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Prix-Carburant-FR-rmickael62-Client
+Version: 0.0.1
+Summary: StationEssence client by Rmickael62
+Home-page: https://github.com/rmickael62/essence
+Author: Maxime Wantiez, Yann RITTER
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Client d'appel a l'API public https://www.prix-carburants.gouv.fr/ 
+
+
