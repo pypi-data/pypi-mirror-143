@@ -1,0 +1,7 @@
+real/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+real/hello/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+real/hello/message.py,sha256=2JAs1iZceP7jonPEzt24yxyTckIkuT6ZxkMKYo0QhfY,47
+cfr_real-0.1.dist-info/METADATA,sha256=KfBzP9FIwit4qPn4ooHmWBLhPxo1K1E3WwGB26eR__8,140
+cfr_real-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cfr_real-0.1.dist-info/top_level.txt,sha256=nh_pfBZ-0s6XMTRmccryPtQoumRRArPQwc3eCZgFKOU,5
+cfr_real-0.1.dist-info/RECORD,,
