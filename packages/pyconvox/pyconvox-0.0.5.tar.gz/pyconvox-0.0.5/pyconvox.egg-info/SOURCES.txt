@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pyconvox/__init__.py
+pyconvox.egg-info/PKG-INFO
+pyconvox.egg-info/SOURCES.txt
+pyconvox.egg-info/dependency_links.txt
+pyconvox.egg-info/top_level.txt
