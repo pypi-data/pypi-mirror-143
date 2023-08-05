@@ -1,0 +1,8 @@
+quickdump/__init__.py,sha256=ogGbP7Jg76B3mx38UricKM12hUNsNqFAHyR6oR5Acps,95
+quickdump/const.py,sha256=b7R_PAalkUnC-G60MIPr973ZgNI97Qf0uLdoSflog4A,369
+quickdump/dumper.py,sha256=YpN-yJajzEMOk3GRvD0Oud7QznksI_WZowBjUh48jOo,4823
+quickdump/server.py,sha256=PVgG6e79lW9mHhYdjuhXx0D-8enlPxF-4Gax2FIWSJA,1196
+quickdump-0.3.0.dist-info/entry_points.txt,sha256=3uudZ2YH7qhrONCY4xBSvvahx-ON62bWbObxK0LIXco,48
+quickdump-0.3.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+quickdump-0.3.0.dist-info/METADATA,sha256=G_APB1h-ITtEACRhjT7sA4X6AoIzHg7o9Tij5VZK-qQ,2103
+quickdump-0.3.0.dist-info/RECORD,,
