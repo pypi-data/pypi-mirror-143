@@ -1,0 +1,11 @@
+c_syntax_validator/__init__.py,sha256=72L4TXTn0DjxIrZHzGjQhs2IxB97HAWVMQZCBPep_wo,1759
+c_syntax_validator/__main__.py,sha256=kWZOVGPt0_ph7WT9wgVKgcYcftleqS7xoo3EXcnxiK0,712
+c_syntax_validator/parser/CLexer.py,sha256=pxY8UHWmKy4UjaN1DyeDoJpBkv1C77nrxt1yiNaewx8,58123
+c_syntax_validator/parser/CListener.py,sha256=93hP7Z1i69v0I7k7R_9ACq-IYfv9OaTqHrDn0y3_u_Y,26676
+c_syntax_validator/parser/CParser.py,sha256=39jw-vh5AF_NwCZ0blqCQkz_99dblBC-AEsa8wrWck8,331400
+c_syntax_validator/parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+c_syntax_validator-0.2.0.dist-info/LICENSE.md,sha256=bb6n7tBYhqQQWx6sIFPmuflv9OqDZyLnvgHdFgcKWIc,1193
+c_syntax_validator-0.2.0.dist-info/METADATA,sha256=aaGyEnVTz_PxcTofk2_fIZ4s3hekc_EhAMPz1oVOpko,459
+c_syntax_validator-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+c_syntax_validator-0.2.0.dist-info/top_level.txt,sha256=JE2Qxx6QQgMmVPbSy_u5VmqwHMDt_U7tStPbwXsHylQ,19
+c_syntax_validator-0.2.0.dist-info/RECORD,,
