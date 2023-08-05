@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bibchk.egg-info/PKG-INFO
+bibchk.egg-info/SOURCES.txt
+bibchk.egg-info/dependency_links.txt
+bibchk.egg-info/entry_points.txt
+bibchk.egg-info/top_level.txt
