@@ -1,0 +1,3 @@
+[console_scripts]
+cli_tarot = cli_tarot.__main__:main
+
