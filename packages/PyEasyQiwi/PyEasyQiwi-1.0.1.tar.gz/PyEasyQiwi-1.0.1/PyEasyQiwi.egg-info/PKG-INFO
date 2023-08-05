@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PyEasyQiwi
+Version: 1.0.1
+Summary: Library for easy interaction with the P2P API of the Qiwi service!
+Home-page: https://github.com/Kur-up/EasyQiwiAPI
+Author: Lev Kurapov
+Author-email: kurup.performance@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+License-File: LICENSE
+
+# PyEasyQiwi
+
+
