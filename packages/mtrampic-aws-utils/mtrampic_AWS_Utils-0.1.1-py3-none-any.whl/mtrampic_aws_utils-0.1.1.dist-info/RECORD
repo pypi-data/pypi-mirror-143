@@ -1,0 +1,8 @@
+mtrampic_aws_utils/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+mtrampic_aws_utils/login_helper.py,sha256=bn98ypXTkNfQ_hTGoBWrqAQc5tTvqONbuh238VmRIE0,4549
+mtrampic_aws_utils/main.py,sha256=7URbjpkFiXROai70_9WETEi3xcn2XJvWOYnDA6T1eT4,161
+mtrampic_aws_utils-0.1.1.dist-info/entry_points.txt,sha256=-JOuv66YJVWCl-B17Fl0eOFYyHAh5hp-1mgn3zKPTIs,61
+mtrampic_aws_utils-0.1.1.dist-info/LICENSE,sha256=W4-mYw6QKWS-fZDU8pxobb5lRoiHfLD2QKkxM1tW2U0,1071
+mtrampic_aws_utils-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+mtrampic_aws_utils-0.1.1.dist-info/METADATA,sha256=5vYyO2XBGna8l7ImctcG4mflYPp6u9nlQJbd_sq3iXM,4270
+mtrampic_aws_utils-0.1.1.dist-info/RECORD,,

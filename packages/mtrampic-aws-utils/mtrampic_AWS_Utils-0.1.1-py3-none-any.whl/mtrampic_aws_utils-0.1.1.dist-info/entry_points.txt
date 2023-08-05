@@ -1,0 +1,3 @@
+[console_scripts]
+aws-utils-cli=mtrampic_aws_utils.main:app
+
