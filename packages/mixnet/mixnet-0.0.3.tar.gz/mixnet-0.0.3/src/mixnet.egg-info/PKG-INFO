@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: mixnet
+Version: 0.0.3
+Summary: A model to predict compressive strength of concrete based on it's composition
+Home-page: https://github.com/DaHamster/mixnet
+Author: Has
+Author-email: author@example.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/DaHamster/mixnet/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+#  MixNet
+
+
+## Installation
+```bash
+pip install mixnet
+```
+
+## Usage
+```python
+from mixnet import compressive_strength
+
+
+compressive_strength(
+    CEMENT,
+    SLAG,
+    FLY_ASH,
+    WATER,
+    SUPERPLASTICIZER,
+    COARSE_AGGREGATE,
+    FINE_AGGREGATE,
+    AGE,
+)
+```
+
+
+
