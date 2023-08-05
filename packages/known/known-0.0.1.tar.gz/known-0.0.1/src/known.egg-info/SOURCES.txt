@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/known/__init__.py
+src/known/dummy.py
+src/known/numsys.py
+src/known/printer.py
+src/known.egg-info/PKG-INFO
+src/known.egg-info/SOURCES.txt
+src/known.egg-info/dependency_links.txt
+src/known.egg-info/top_level.txt
