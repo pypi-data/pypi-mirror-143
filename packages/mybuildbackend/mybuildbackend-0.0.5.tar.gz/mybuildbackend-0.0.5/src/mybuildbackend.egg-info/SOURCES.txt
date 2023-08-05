@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/mybuildbackend/__init__.py
+src/mybuildbackend/build_meta.py
+src/mybuildbackend.egg-info/PKG-INFO
+src/mybuildbackend.egg-info/SOURCES.txt
+src/mybuildbackend.egg-info/dependency_links.txt
+src/mybuildbackend.egg-info/requires.txt
+src/mybuildbackend.egg-info/top_level.txt
