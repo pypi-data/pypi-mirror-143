@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: dbjsonpy
+Version: 1.0.0
+Summary: crud operation with database using json.
+Home-page: https://github.com/jakbin/dbjson
+Author: Jak Bin
+Author-email: jakbin4747@gmail.com
+License: MIT License
+Keywords: dbjson,database,json
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy
+
+# DBjson
+
+crud operation with database using json.
+
+## Features 
+
+ * create data.
+ * read data.
+ * delete data
+
+## Install 
+```python
+pip install dbjson
+```
+### Example
+
+see example [here](examples/test.py)
+
+## Todo
+
+ - [ ] update data (soon)
+ - [ ] add many data 
+
+
