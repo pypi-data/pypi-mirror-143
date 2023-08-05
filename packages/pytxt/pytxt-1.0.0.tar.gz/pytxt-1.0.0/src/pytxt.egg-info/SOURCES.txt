@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pytxt/__init__.py
+src/pytxt/const.py
+src/pytxt/text.py
+src/pytxt.egg-info/PKG-INFO
+src/pytxt.egg-info/SOURCES.txt
+src/pytxt.egg-info/dependency_links.txt
+src/pytxt.egg-info/top_level.txt
