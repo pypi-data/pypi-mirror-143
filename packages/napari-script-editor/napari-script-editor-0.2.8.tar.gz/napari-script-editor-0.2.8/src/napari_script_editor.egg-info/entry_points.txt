@@ -1,0 +1,2 @@
+[napari.plugin]
+napari-script-editor = napari_script_editor
