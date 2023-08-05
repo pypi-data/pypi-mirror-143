@@ -1,0 +1,8 @@
+setup.py
+package_dan_pr3/__init__.py
+package_dan_pr3/dop.py
+package_dan_pr3/main.py
+package_dan_pr3.egg-info/PKG-INFO
+package_dan_pr3.egg-info/SOURCES.txt
+package_dan_pr3.egg-info/dependency_links.txt
+package_dan_pr3.egg-info/top_level.txt
