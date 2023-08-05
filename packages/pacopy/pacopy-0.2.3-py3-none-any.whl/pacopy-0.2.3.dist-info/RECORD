@@ -1,0 +1,11 @@
+pacopy/__about__.py,sha256=kfkrpq5olJp_x2B5EdxgKaaLRBrhAegQZn5OqE0CInI,286
+pacopy/__init__.py,sha256=nWXHCALj80q8h6FmdojUMNKfF9N03oabZacgjzlEp1c,310
+pacopy/branch_switching.py,sha256=jXzHTTv-qCQl0gdyswlMy92vJLUBKQzATqKKgA_nqV8,1429
+pacopy/errors.py,sha256=4RKanm8BgZECnpIIsQXuGOtahEytrlOWVxUIrXOgKbo,47
+pacopy/euler_newton.py,sha256=l0KEzJA3j5M-rTeZ--DBWidBAAJvr2GNh-usUhi6EXo,17848
+pacopy/natural.py,sha256=bD8TtFluh9DjkT3H7S9WRpQ49rTE9AlC1LhtRmmQMp0,4191
+pacopy/newton.py,sha256=cIq_d5aXiSwC1XHuC6ehlS-kytxjX2_Mtel9j5Z_bfo,814
+pacopy-0.2.3.dist-info/METADATA,sha256=fQf85h0J19Pz4f17NCDPF3ENj7JUxxZ_MiVzTpzT5G4,9443
+pacopy-0.2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pacopy-0.2.3.dist-info/top_level.txt,sha256=bF2HHMv9xOP-4exUEhHbkhltWHXvIgLTRNW2IuUMvNM,7
+pacopy-0.2.3.dist-info/RECORD,,
