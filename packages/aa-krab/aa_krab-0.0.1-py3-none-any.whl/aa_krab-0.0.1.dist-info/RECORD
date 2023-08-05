@@ -1,0 +1,17 @@
+aakrab/__init__.py,sha256=j0z9BmL3idy51RPBqBiIh1fjg9gpE-ySeevuBcyqB3M,97
+aakrab/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+aakrab/apps.py,sha256=ibcVyQZVkHZL3zOoR_ej4c_exA7Yc7bCpOx_-o3xqBo,144
+aakrab/auth_hooks.py,sha256=DiYlEwK59qQYtXEK7unx9f1hAr8TS1Trnwn99IpdqLo,1173
+aakrab/models.py,sha256=YM5oIOaoxvKvXcJowQEIFWReZtUduPrLx883xWmg0Kg,195
+aakrab/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+aakrab/urls.py,sha256=mvCbvLaKgJqhr0ONZw-rbl_PGi0qbNN5vLfdSgjBdq4,153
+aakrab/utils.py,sha256=K65lJyauViB0_XgrSFZmO9avWLWqznRGVr7hUdAQAM8,521
+aakrab/views.py,sha256=d1BLKh6GMcixp5qYJZ4sjUXyGnt6Cjb1_qTABz-CZpc,703
+aakrab/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aakrab/templates/aakrab/base.html,sha256=bjTjKW_lpPTXpTfffvFKupoDciwDWVpYKItLtyiPA7Q,2141
+aakrab/templates/aakrab/index.html,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aa_krab-0.0.1.dist-info/LICENSE,sha256=RQi0b88YC_6dhSlojSpKyLOXjW4d-vOTpyog7Ky_xuc,35065
+aa_krab-0.0.1.dist-info/METADATA,sha256=mdl7_ub5DYWoLqhHEzO7gj_rSXxIV04sDvMUHH0mqeM,3819
+aa_krab-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aa_krab-0.0.1.dist-info/top_level.txt,sha256=yfhHCCcl3H6DqFu_cxmOKzqIOsfFO-YkDOkEdpnx058,7
+aa_krab-0.0.1.dist-info/RECORD,,
