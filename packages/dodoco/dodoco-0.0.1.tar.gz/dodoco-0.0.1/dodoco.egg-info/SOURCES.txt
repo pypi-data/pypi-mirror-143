@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dodoco/__init__.py
+dodoco/psdr_cuda.cp38-win_amd64.pyd
+dodoco.egg-info/PKG-INFO
+dodoco.egg-info/SOURCES.txt
+dodoco.egg-info/dependency_links.txt
+dodoco.egg-info/requires.txt
+dodoco.egg-info/top_level.txt
