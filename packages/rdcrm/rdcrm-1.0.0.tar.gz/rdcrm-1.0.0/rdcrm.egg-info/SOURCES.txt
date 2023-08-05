@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+rdcrm/__init__.py
+rdcrm/customer.py
+rdcrm/login.py
+rdcrm/product.py
+rdcrm/salesOrder.py
+rdcrm.egg-info/PKG-INFO
+rdcrm.egg-info/SOURCES.txt
+rdcrm.egg-info/dependency_links.txt
+rdcrm.egg-info/requires.txt
+rdcrm.egg-info/top_level.txt
