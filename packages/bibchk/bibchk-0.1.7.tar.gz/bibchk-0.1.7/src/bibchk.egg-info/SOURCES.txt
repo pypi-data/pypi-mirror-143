@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/bibchk/__init__.py
+src/bibchk/bibchk.py
+src/bibchk.egg-info/PKG-INFO
+src/bibchk.egg-info/SOURCES.txt
+src/bibchk.egg-info/dependency_links.txt
+src/bibchk.egg-info/entry_points.txt
+src/bibchk.egg-info/top_level.txt
