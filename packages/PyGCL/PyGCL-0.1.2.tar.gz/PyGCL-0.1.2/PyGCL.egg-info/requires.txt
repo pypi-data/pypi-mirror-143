@@ -1,0 +1,7 @@
+torch>=1.9
+torch-geometric>=1.7
+numpy
+tqdm
+scipy
+networkx
+scikit-learn
