@@ -1,0 +1,25 @@
+[project]
+name = "datazimmer"
+description = "sscu-budapest utilities for scientific data engineering"
+authors = [
+    "Social Science Computing Unit Budapest"
+]
+license = "MIT"
+readme = "README.md"
+python = ">=3.8"
+url = "https://github.com/sscu-budapest/datazimmer"
+[build-system]
+requires = [
+    "toml >= 0.10.0",
+    "setuptools >= 38.6.0",
+    "wheel >= 0.31.0",
+    "setuptools_scm >= 2.0.0, <3"
+]
+[tool.bran]
+line-length = 88
+[tool.pytest.ini_options]
+addopts = "-s"
+[tool.coverage.run]
+omit = [
+    "*/tests/core_of_test_artifact.py",
+]
