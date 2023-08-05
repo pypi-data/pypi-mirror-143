@@ -1,0 +1,11 @@
+pacup/__init__.py,sha256=wygwzq4aXuLkxKVM4rtB2q-K3RcOOI-rF7hDE6bsCAg,870
+pacup/__main__.py,sha256=xBKOf3jZZX7cYVuIKBYJdJ-451xS1mjFlw0W3TavyvI,21665
+pacup/parser.py,sha256=OiwFd2rUjCaEuw5HvpJ3363J11J-32uWcpM8fuvymUA,12293
+pacup/test.pacscript,sha256=yMA9axaXhpmNdKzJ13IFzOkli1ykOvfQ0flwX74qlAs,1231
+pacup/version.py,sha256=OC22uyy16-VLZTeOYzLBkviPyxJkTT6OPYdKlE2tEw8,7088
+pacup/wiki.md,sha256=0qQ98R4U7RrRldYZXEENDXgK51gxAo1YLPZZoAYEbkY,2873
+pacup-0.1.0.dist-info/entry_points.txt,sha256=EbIImg60MAHxPHegsPWe4LO94WPyLSPXume0HYIKFc8,45
+pacup-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pacup-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pacup-0.1.0.dist-info/METADATA,sha256=ukaQVOolWm2mZ_hojXaVcuI3l57jMY2M_f7spmX5wQ8,650
+pacup-0.1.0.dist-info/RECORD,,
