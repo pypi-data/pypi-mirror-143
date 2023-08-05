@@ -1,0 +1,11 @@
+main.py,sha256=qL4t0Q0s-f-n6n5z4VEAsmlRJIDuysJH77BDp__EoLk,77
+setup.py,sha256=iV_IfpWC2RWHGoh2ocgBEEfO4lnXNfuaazDYd9101R0,2340
+currencyconverterapi/__init__.py,sha256=kziL4y0Fiu5r4oxbysHT81vCm7eHpAHlYq2HNqTvKFw,850
+currencyconverterapi/client.py,sha256=HK131wQU7ErsQVrb_rPL7UALgHy-JU4HTVqs76CaAko,2018
+currencyconverterapi/models.py,sha256=KayoN3RBdYKg5cR8dgVOLIcvZI09hXyDpNTFv1XGqEU,1153
+currecyconverterapi-1.0.1.dist-info/LICENSE,sha256=cawYG5eJAl5YyUk-96Owrc538gxrDhQ6r1qa6VNgYYI,9137
+currecyconverterapi-1.0.1.dist-info/METADATA,sha256=V9UYn_CCXC4AB42UFsY2DCh3HEDIDr1XmM0wPGQYO5Q,2581
+currecyconverterapi-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+currecyconverterapi-1.0.1.dist-info/entry_points.txt,sha256=9ZS0BBUtEr1oFI5oDVrghbBZ8Hlt0dDGyiBkv9sAyR0,63
+currecyconverterapi-1.0.1.dist-info/top_level.txt,sha256=yQuKX26bibZoUJmwUvsX7guvO95yqaZeS_8rwwoW8dA,32
+currecyconverterapi-1.0.1.dist-info/RECORD,,
