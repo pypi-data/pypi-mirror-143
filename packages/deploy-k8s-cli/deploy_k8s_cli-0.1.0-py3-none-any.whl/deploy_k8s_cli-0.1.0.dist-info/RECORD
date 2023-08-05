@@ -1,0 +1,9 @@
+deploy_k8s_cli/__ini__.py,sha256=u7wNeAHlbDhzBcVVhcTH6EUmqfaTHDA2o6gVtNnA-b0,72
+deploy_k8s_cli/deploy_k8s.py,sha256=jcyGGHz9ooNubr6PsijMkEPT2zV9H6ZXcVXUJYELc20,2904
+deploy_k8s_cli/infrastructure/vagrant/Vagrantfile,sha256=f7rQy24AHLZents5C8RTmGuIqCeGp2-IxcGzBZDpgvo,1401
+deploy_k8s_cli/infrastructure/vagrant/scripts/common.sh,sha256=tj1o_b1sAF4ldIcovV5JTkW1-cJvVyEbRXThnxvWVPs,2654
+deploy_k8s_cli/infrastructure/vagrant/scripts/master.sh,sha256=YUEFw5ac-hVS1KKiS_jN6MGmAxj7hAylhTOO2XDfJL0,2549
+deploy_k8s_cli/infrastructure/vagrant/scripts/node.sh,sha256=Kou-tpF_bWHHmL4khltr1RLTG_a8EdrH42UJ4LhUl2Y,443
+deploy_k8s_cli-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+deploy_k8s_cli-0.1.0.dist-info/METADATA,sha256=eTrmkEJAoSK9HVFt9Xqk2S29FC2avg9pd4Dcqpc4CuY,535
+deploy_k8s_cli-0.1.0.dist-info/RECORD,,
