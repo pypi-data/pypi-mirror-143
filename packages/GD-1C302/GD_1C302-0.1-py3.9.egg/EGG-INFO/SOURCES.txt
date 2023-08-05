@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+GD/CGX/__init__.py
+GD/CGX/XJY/__init__.py
+GD/CGX/XJY/message.py
+GD/GD_1C302.egg-info/PKG-INFO
+GD/GD_1C302.egg-info/SOURCES.txt
+GD/GD_1C302.egg-info/dependency_links.txt
+GD/GD_1C302.egg-info/top_level.txt
