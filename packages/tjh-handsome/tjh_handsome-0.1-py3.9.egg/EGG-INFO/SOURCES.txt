@@ -1,0 +1,8 @@
+setup.py
+tjh/handsome/__init__.py
+tjh/handsome/boy/__init__.py
+tjh/handsome/boy/message.py
+tjh/tjh_handsome.egg-info/PKG-INFO
+tjh/tjh_handsome.egg-info/SOURCES.txt
+tjh/tjh_handsome.egg-info/dependency_links.txt
+tjh/tjh_handsome.egg-info/top_level.txt
