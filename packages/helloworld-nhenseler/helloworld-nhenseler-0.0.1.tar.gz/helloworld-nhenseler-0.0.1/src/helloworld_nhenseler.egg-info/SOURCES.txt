@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/helloworld-nhenseler.py
+src/helloworld_nhenseler.egg-info/PKG-INFO
+src/helloworld_nhenseler.egg-info/SOURCES.txt
+src/helloworld_nhenseler.egg-info/dependency_links.txt
+src/helloworld_nhenseler.egg-info/top_level.txt
