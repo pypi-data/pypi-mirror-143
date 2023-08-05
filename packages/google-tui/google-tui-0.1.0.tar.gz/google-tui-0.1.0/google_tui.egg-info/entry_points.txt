@@ -1,0 +1,6 @@
+[console_scripts]
+google-tui = google_tui.__main__:main
+
+[pipx.run]
+google-tui = google_tui.__main__:main
+
