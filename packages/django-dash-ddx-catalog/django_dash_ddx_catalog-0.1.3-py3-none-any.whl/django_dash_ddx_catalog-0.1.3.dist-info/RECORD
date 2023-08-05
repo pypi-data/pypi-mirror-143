@@ -1,0 +1,13 @@
+dash_ddx_catalog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_ddx_catalog/apps.py,sha256=PXNj0J9g21q7dcQzNnyWR0v32tucXILTzAEAlznvwYQ,105
+dash_ddx_catalog/fields.py,sha256=FwLhW-j21OqiFwtRUGarKxXouj8YZeGts9-0AKpq-gM,10106
+dash_ddx_catalog/forms.py,sha256=hLVvOKwqQZwNd_NlRgj7xOYNqydyfeQx11GeumG8nUU,9187
+dash_ddx_catalog/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_ddx_catalog/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_ddx_catalog/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_ddx_catalog/tests/test_simple.py,sha256=Kf3hH-UkJYilM4c4ru2rctLN2QF_yMX3pzLIFZe5OxY,1462
+django_dash_ddx_catalog-0.1.3.dist-info/LICENSE,sha256=hPmKau4Uh2vAcENTNZQtQWAdV7BvmXx-p_V1POR_oe4,1073
+django_dash_ddx_catalog-0.1.3.dist-info/METADATA,sha256=9fKOwkLF5GeZkRBb_7xLOt8zfjWHNVB4UT2tIO3EjRw,2484
+django_dash_ddx_catalog-0.1.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_dash_ddx_catalog-0.1.3.dist-info/top_level.txt,sha256=CzxxN9Fgw5uf11Jpb1uNSmozyhOcqfZxV_e4JVmCE4o,17
+django_dash_ddx_catalog-0.1.3.dist-info/RECORD,,
