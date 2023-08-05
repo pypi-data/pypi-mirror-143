@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aiokit
+Version: 1.0.0
+Author: Pasha Podolsky
+Author-email: ppodolsky@me.com
+Home-page: https://github.com/izihawa/aiokit
+License: MIT License
+Requires-Python: >=3.9
+Requires-Dist: uvloop >= 0.16.0
+
+# AioKIT
+
+Routines for asynchronous programming 
+
