@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: learned-optimization
+Version: 0.0.1
+Summary: Train learned optimizers in Jax.
+Home-page: https://github.com/google/learned_optimization
+Author: learned_optimization team
+Author-email: lmetz@google.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: absl-py (==0.12.0)
+Requires-Dist: numpy (>=1.18)
+Requires-Dist: jax (>=0.2.6)
+Requires-Dist: jaxlib (>=0.1.68)
+Requires-Dist: nose
+Requires-Dist: dm-launchpad-nightly (==0.3.0.dev20211105)
+Requires-Dist: tqdm (>=4.62.3)
+Requires-Dist: flax (==0.3.3)
+Requires-Dist: dm-haiku (==0.0.5)
+Requires-Dist: optax (>=0.0.9)
+Requires-Dist: tensorflow (>=2.7.0)
+Requires-Dist: tensorflow-datasets (>=4.4.0)
+Requires-Dist: tensorflow-metadata (==1.5.0)
+Requires-Dist: tensorboard (>=2.7.0)
+Requires-Dist: gin-config (>=0.5.0)
+
+UNKNOWN
+
