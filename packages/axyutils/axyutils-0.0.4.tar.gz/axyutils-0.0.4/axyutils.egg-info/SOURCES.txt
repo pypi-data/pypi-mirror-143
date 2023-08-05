@@ -1,0 +1,8 @@
+setup.py
+axyutils/__init__.py
+axyutils/file_io.py
+axyutils/to_string.py
+axyutils.egg-info/PKG-INFO
+axyutils.egg-info/SOURCES.txt
+axyutils.egg-info/dependency_links.txt
+axyutils.egg-info/top_level.txt
