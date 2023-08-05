@@ -1,0 +1,4 @@
+fastapi
+uvicornpython-dotenv
+pydanticpytest
+coverage
