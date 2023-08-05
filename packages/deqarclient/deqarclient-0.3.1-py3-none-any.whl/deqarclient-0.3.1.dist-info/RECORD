@@ -1,0 +1,9 @@
+deqarclient/__init__.py,sha256=g1wyQFeo8LzP091QfnsY80eBGi8Fc6lmYjpmlx_WhVM,155
+deqarclient/api.py,sha256=TrrufTz23aM43LwgHhxzLcNfkUY4NCX0Hwiz7uDTX1M,9394
+deqarclient/auth.py,sha256=H_DR3O5CaptDK7bVCKXv9T6JlbnhotbU_s2Y4l2QrGE,2576
+deqarclient/errors.py,sha256=tvlLS8MLsDB8WSghTd1T4vLNCU8fgvmuEQc08LzV76Q,304
+deqarclient/institution.py,sha256=uK6e3BRr6uxtCBLHbeX27x8cpMzUj1r5yYhNkJ-Hhgk,13199
+deqarclient-0.3.1.dist-info/METADATA,sha256=nA6_UGxGZQK0-sOfJ9An30L2wIOpT1g3exZN01i7KJs,989
+deqarclient-0.3.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+deqarclient-0.3.1.dist-info/top_level.txt,sha256=b-Lt-LiAC3RJae9eX65Yfwu7uOGtcMA6viHHbLujVoU,12
+deqarclient-0.3.1.dist-info/RECORD,,
