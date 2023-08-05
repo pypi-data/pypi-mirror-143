@@ -1,0 +1,3 @@
+[console_scripts]
+richwx = richwx.cli.cli:cli
+
