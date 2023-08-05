@@ -1,0 +1,8 @@
+inquirer
+requests
+
+[dev]
+pytest
+pytest-cov
+setuptools
+wheel
