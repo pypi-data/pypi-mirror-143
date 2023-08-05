@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+sbrfuzzy/__init__.py
+sbrfuzzy.egg-info/PKG-INFO
+sbrfuzzy.egg-info/SOURCES.txt
+sbrfuzzy.egg-info/dependency_links.txt
+sbrfuzzy.egg-info/requires.txt
+sbrfuzzy.egg-info/top_level.txt

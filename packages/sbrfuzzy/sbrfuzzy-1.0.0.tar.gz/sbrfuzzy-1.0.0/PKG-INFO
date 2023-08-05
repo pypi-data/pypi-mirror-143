@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sbrfuzzy
+Version: 1.0.0
+Summary: UNKNOWN
+Author: Henrique de Lemos Braga
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+sbrfuzzy é um módulo python para aplicações com base em sistemas baseados em regras fuzzy
+
