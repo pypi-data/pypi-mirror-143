@@ -1,0 +1,13 @@
+MANIFEST.in
+README.mkd
+libido.py
+setup.cfg
+setup.py
+examples/ex1.py
+libido.egg-info/PKG-INFO
+libido.egg-info/SOURCES.txt
+libido.egg-info/dependency_links.txt
+libido.egg-info/entry_points.txt
+libido.egg-info/not-zip-safe
+libido.egg-info/requires.txt
+libido.egg-info/top_level.txt
