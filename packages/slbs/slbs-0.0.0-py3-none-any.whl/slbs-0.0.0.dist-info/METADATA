@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: slbs
+Version: 0.0.0
+Summary: Create cross-platform desktop applications with Python and Qt
+Home-page: https://github.com/JakubPolanowski/slbs
+Author: Jakub Polanowski
+Author-email: jakubpol27@gmail.com
+License: GPLv3 or later
+Keywords: PyQt
+Platform: MacOS
+Platform: Windows
+Platform: Debian
+Platform: Fedora
+Platform: CentOS
+Platform: Arch
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: PyInstaller (>=3.4)
+Provides-Extra: licensing
+Requires-Dist: rsa (>=3.4.2) ; extra == 'licensing'
+Provides-Extra: sentry
+Requires-Dist: sentry-sdk (>=0.6.6) ; extra == 'sentry'
+Provides-Extra: upload
+Requires-Dist: boto3 ; extra == 'upload'
+
+Create cross-platform desktop applications with Python and Qt
+
+Home page: https://github.com/JakubPolanowski/slbs
+
