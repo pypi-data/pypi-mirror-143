@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mybuildbackend
+Version: 0.0.2
+Summary: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+# mybuildbackend
+
+
