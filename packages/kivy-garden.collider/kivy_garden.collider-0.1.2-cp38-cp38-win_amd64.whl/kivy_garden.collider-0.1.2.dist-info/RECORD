@@ -1,0 +1,10 @@
+kivy_garden/collider/__init__.py,sha256=8GI4JyBDlL4SXywgRwxohok4xAQj50pMZmx74AxRT6U,3573
+kivy_garden/collider/_collider.cp38-win_amd64.pyd,sha256=HRHzN_TSy9VIQq73KI8jWKlxFjrd9CwZRz-pXmOmYLg,83968
+kivy_garden/collider/_version.py,sha256=aFwrkzeTp533Va-7IUrmJX0xnECGShlQJljuIlUmds8,389
+kivy_garden/collider/tests/test_import.py,sha256=S_Ivk5BHc9f5BB2a4dUFKUEEikFiD4Z1MVzm8hJLLyI,182
+kivy_garden.collider-0.1.2.dist-info/AUTHORS.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kivy_garden.collider-0.1.2.dist-info/LICENSE,sha256=aqZx7WfBR4dRui6zIqI-4yGKtCx-_HP6kOFfS8pEkPQ,1100
+kivy_garden.collider-0.1.2.dist-info/METADATA,sha256=v5iatJttsRm6hTvWOU1AVJHh7e0sDjw8QN1J2PosGfM,3868
+kivy_garden.collider-0.1.2.dist-info/WHEEL,sha256=M2GQ3lde8oJhlQPj2wbRvnqE3cuovPJasri5X5aCmck,100
+kivy_garden.collider-0.1.2.dist-info/top_level.txt,sha256=xkuO-b6JfhaW77yWDB3uzuzsAscEKSLzAg0W7BmeqiI,12
+kivy_garden.collider-0.1.2.dist-info/RECORD,,
