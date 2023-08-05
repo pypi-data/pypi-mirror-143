@@ -1,0 +1,3 @@
+[console_scripts]
+properties-diff=properties_diff.cli:run
+
