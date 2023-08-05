@@ -1,0 +1,10 @@
+README.md
+setup.py
+fastapi_simple_crud.egg-info/PKG-INFO
+fastapi_simple_crud.egg-info/SOURCES.txt
+fastapi_simple_crud.egg-info/dependency_links.txt
+fastapi_simple_crud.egg-info/requires.txt
+fastapi_simple_crud.egg-info/top_level.txt
+flask_http_middleware/__init__.py
+flask_http_middleware/base.py
+flask_http_middleware/manager.py
