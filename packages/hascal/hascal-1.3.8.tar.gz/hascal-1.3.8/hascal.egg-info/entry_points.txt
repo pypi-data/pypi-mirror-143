@@ -1,0 +1,2 @@
+[console_scripts]
+hascal = hascal.hascal:main
