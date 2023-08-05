@@ -1,0 +1,11 @@
+README.md
+setup.py
+hangman_marking_aicore.egg-info/PKG-INFO
+hangman_marking_aicore.egg-info/SOURCES.txt
+hangman_marking_aicore.egg-info/dependency_links.txt
+hangman_marking_aicore.egg-info/top_level.txt
+hangman_test/__init__.py
+hangman_test/test_milestone1.py
+hangman_test/test_milestone2.py
+hangman_test/test_milestone3.py
+hangman_test/test_milestone4.py
