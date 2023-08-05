@@ -1,0 +1,7 @@
+README.md
+setup.py
+EvalSafe.egg-info/PKG-INFO
+EvalSafe.egg-info/SOURCES.txt
+EvalSafe.egg-info/dependency_links.txt
+EvalSafe.egg-info/top_level.txt
+evalsafe/__init__.py
