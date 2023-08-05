@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+massdhcpclient.py
+setup.cfg
+setup.py
+massdhclient/__init__.py
+massdhclient/client_herd.py
+massdhclient/dhcpv4_client.py
+massdhclient.egg-info/PKG-INFO
+massdhclient.egg-info/SOURCES.txt
+massdhclient.egg-info/dependency_links.txt
+massdhclient.egg-info/requires.txt
+massdhclient.egg-info/top_level.txt
+test/__init__.py
+test/test_client_herd.py
+test/test_dhcpv4_client.py

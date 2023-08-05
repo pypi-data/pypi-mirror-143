@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: massdhclient
+Version: 0.0.1
+Summary: Mass DHCP Client Emulator
+Home-page: https://github.com/steffenschumacher/massdhclient/
+Author: Steffen Schumacher
+Author-email: ssch@wheel.dk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Mass DHCP Client Emulator
+
