@@ -1,0 +1,43 @@
+  tests/twentysix_session_blocks.md fenced blocks
+----------------------------------------------------
+block    line  test          TEXT or directive
+type   number  role          quoted and one per line
+----------------------------------------------------
+py          3  skip-session  ">>>"
+py          8  skip-session  ">>>"
+py         13  skip-session  ">>>"
+py         18  skip-session  ">>>"
+py         23  skip-session  ">>>"
+py         28  skip-session  ">>>"
+py         33  skip-session  ">>>"
+py         38  skip-session  ">>>"
+py         43  skip-session  ">>>"
+py         48  skip-session  ">>>"
+py         53  skip-session  ">>>"
+py         58  skip-session  ">>>"
+py         63  skip-session  ">>>"
+py         68  skip-session  ">>>"
+py         73  skip-session  ">>>"
+py         78  skip-session  ">>>"
+py         83  skip-session  ">>>"
+py         88  skip-session  ">>>"
+py         93  skip-session  ">>>"
+py         98  skip-session  ">>>"
+py        103  skip-session  ">>>"
+py        108  skip-session  ">>>"
+py        113  skip-session  ">>>"
+py        118  skip-session  ">>>"
+py        123  skip-session  ">>>"
+py        128  skip-session  ">>>"
+----------------------------------------------------
+0 test cases.
+26 skipped interactive session blocks.
+
+   skip pattern matches (blank means no match)
+--------------------------------------------------
+skip pattern  matching code block line number(s)
+--------------------------------------------------
+>>>           3, 8, 13, 18, 23, 28, 33, 38, 43,
+              48, 53, 58, 63, 68, 73, 78, 83, 88,
+              93, 98, 103, 108, 113, 118, 123, 128
+--------------------------------------------------

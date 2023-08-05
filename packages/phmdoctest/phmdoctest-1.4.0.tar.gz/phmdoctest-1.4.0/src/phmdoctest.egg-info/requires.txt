@@ -1,0 +1,26 @@
+pytest
+Click>=7.1.1
+commonmark>=0.9.1
+monotable>=2.1.1
+
+[:python_version < "3.11"]
+tomli>=1.0.0
+
+[docs]
+myst_parser
+sphinx
+sphinx-rtd-theme
+
+[inspect]
+black
+flake8
+pep8-naming
+mypy
+typing
+check-manifest
+twine
+
+[test]
+coverage
+pytest>=6.2
+PyYAML>=5.4.1

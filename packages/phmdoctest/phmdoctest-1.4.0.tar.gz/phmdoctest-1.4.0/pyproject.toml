@@ -1,0 +1,43 @@
+[build-system]
+# These are the assumed default build requirements from pip:
+# https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.2.4"
+testpaths = [
+    "tests",
+]
+addopts = "--ignore tests/check_classifiers.py"
+
+
+[tool.phmdoctest]
+# https://pypi.org/project/phmdoctest
+# Writes pytest files generated from Markdown to output_directory.
+# Invoke pytest separately to run the generated pytest files.
+
+markdown_globs = [
+    # Refer to Python standard library Path.glob(pattern)
+    "project.md",
+    "doc/*.md",
+    "tests/managenamespace.md",
+    "tests/one_code_block.md",
+    "tests/output_has_blank_lines.md",
+    "tests/setup_only.md",
+    "tests/twentysix_session_blocks.md",
+]
+exclude_globs = [
+    # Don't test files matching globs below:
+    # Reason- needs command line args.
+    "doc/setup.md",
+    "doc/setup_doctest.md",
+    # Reason- contains an already generated test file.
+    "doc/*_raw.md",
+    "doc/*_py.md",
+    # Reason- need to register markers to avoid PytestUnknownMarkWarning.
+    "doc/mark_example.md",
+]
+
+output_directory = ".gendir-toml"
+print = ["filename", "summary"]
