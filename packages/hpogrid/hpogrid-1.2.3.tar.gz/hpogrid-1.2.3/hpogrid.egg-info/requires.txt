@@ -1,0 +1,7 @@
+pandas
+tqdm
+click
+tabulate
+numpy
+psutil
+yarl
