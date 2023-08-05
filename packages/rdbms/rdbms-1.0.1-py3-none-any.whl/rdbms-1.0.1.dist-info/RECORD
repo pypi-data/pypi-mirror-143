@@ -1,0 +1,9 @@
+rdbms/__init__.py,sha256=gRVeOFGjVL5l5ZudVeQ2_dffgj_ds-1Ef3QYXgJ5yWg,82
+rdbms/rdbms.py,sha256=xfNvcxAiAbPC3JP-5pRfvQLbVRpUKcEA4BHuY48-rMc,2323
+rdbms/row_factories.py,sha256=ghpzNIFfKKF_APY-paU1wfkGh2u2-lDPfDuKTWFZzhI,466
+rdbms/text_factories.py,sha256=vpU4J4cWHNU2ucP1sb3b4AWDKVFKlF2LBi9v0uKmUVE,254
+rdbms-1.0.1.dist-info/LICENSE,sha256=GaPLG4y_OdLMYalYD3OMiiLBEhcfrA5xgpVFzbVu4mI,1055
+rdbms-1.0.1.dist-info/METADATA,sha256=jURKeQd_7mbXGDlmzY5cVKCzu_bAVKaLdGeZGVUzQiE,5376
+rdbms-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rdbms-1.0.1.dist-info/top_level.txt,sha256=zCsdeEwfKl29vHZy0Vy8hfLOumVjnWX0nKXMDIASnxY,6
+rdbms-1.0.1.dist-info/RECORD,,
