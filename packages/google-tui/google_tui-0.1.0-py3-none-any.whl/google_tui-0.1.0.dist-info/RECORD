@@ -1,0 +1,10 @@
+google_tui/__init__.py,sha256=DF0Z006qnkTAd6ShwZKJQBYnT9neM2A5Uf0Hz13eLAE,205
+google_tui/__main__.py,sha256=gsTYm5tYUf8PXKSWHeQ0VhXYnLSITvkVMgqWLstXdZA,63
+google_tui/cli.py,sha256=kqUT_sxIGHi-evolv68JcYeZs3ej5dEgNv-IGKm8l7o,350
+google_tui/core.py,sha256=SLWQhdtljAJqH7NLFIsccmfSwlUXCviEKQZ7WG2Rp4E,2377
+google_tui-0.1.0.dist-info/LICENSE,sha256=lo9h0G21dCl2ALHCy8weS69lphkol4TyBB8PA_2Akt0,1088
+google_tui-0.1.0.dist-info/METADATA,sha256=BoAUlqcECL_6qbm3mTqbZjzgqSgMni18-hHmWn-QAg0,2935
+google_tui-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+google_tui-0.1.0.dist-info/entry_points.txt,sha256=OAte1TMk0B4Wi2lJdS1-uRlm_4PBkO8AyysmvV1aJzU,107
+google_tui-0.1.0.dist-info/top_level.txt,sha256=nHuBbVvyzEGwD9ZT6qr6Sc-9TATWIKZ-j27ZmyCokIQ,11
+google_tui-0.1.0.dist-info/RECORD,,
