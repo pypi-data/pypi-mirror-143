@@ -1,0 +1,15 @@
+.gitignore
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+plover_modal_dictionary/__init__.py
+plover_modal_dictionary/dictionary.py
+plover_modal_dictionary/extension.py
+plover_modal_dictionary.egg-info/PKG-INFO
+plover_modal_dictionary.egg-info/SOURCES.txt
+plover_modal_dictionary.egg-info/dependency_links.txt
+plover_modal_dictionary.egg-info/entry_points.txt
+plover_modal_dictionary.egg-info/requires.txt
+plover_modal_dictionary.egg-info/top_level.txt
+plover_modal_dictionary.egg-info/zip-safe
