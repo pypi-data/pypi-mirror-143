@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tokamak
+Version: 0.2.1
+Summary: HTTP Router based on radix trees
+License: MPL-2.0
+Author: Erik Aker
+Author-email: eraker@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: examples
+Provides-Extra: full
+Provides-Extra: web
+Requires-Dist: hypercorn (>=0.13.2,<0.14.0); extra == "examples" or extra == "full"
+Requires-Dist: trio (>=0.20.0,<0.21.0); extra == "web" or extra == "full"
