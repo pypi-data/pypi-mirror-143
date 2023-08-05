@@ -1,0 +1,56 @@
+# Built figures.
+*.pypgf
+*.png
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Vim swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs swap.
+*~
+\#*\#
+.\#*
+
+# TeX generated files.
+*.aux
+*.log
+*.dvi
+*.pdf
+
+# Latexmk databases.
+*.fdb_latexmk
+*.fls
+
+# Pytest coverage files.
+.coverage
+htmlcov/
+
+# Environment and secrets files for local GitHub action testing.
+.env
+.secrets
