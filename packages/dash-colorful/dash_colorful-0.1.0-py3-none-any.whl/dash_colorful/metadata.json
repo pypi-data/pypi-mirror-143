@@ -1,0 +1,215 @@
+{
+  "DashColorful": {
+    "displayName": "DashColorful",
+    "description": "A color picker powered by react-colorful\nA toggle button is included or can be disabled with ``toggleable=False``.\nCommon style aspects goes on the container of the picker, hidden by default.",
+    "props": {
+      "value": {
+        "description": "Current color value",
+        "required": false,
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string",
+              "raw": "string"
+            }
+          ],
+          "raw": "AnyColor"
+        }
+      },
+      "type": {
+        "description": "Type of color",
+        "required": false,
+        "defaultValue": {
+          "value": "'hex'",
+          "computed": false
+        },
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'hex'",
+              "computed": false
+            },
+            {
+              "value": "'rgb'",
+              "computed": false
+            },
+            {
+              "value": "'rgba'",
+              "computed": false
+            },
+            {
+              "value": "'hsl'",
+              "computed": false
+            },
+            {
+              "value": "'hsla'",
+              "computed": false
+            },
+            {
+              "value": "'hsv'",
+              "computed": false
+            },
+            {
+              "value": "'hsva'",
+              "computed": false
+            }
+          ],
+          "raw": "\"hex\" | \"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hsv\" | \"hsva\""
+        }
+      },
+      "toggleable": {
+        "description": "Add a toggle button to activate the color picker.",
+        "required": false,
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        },
+        "type": {
+          "name": "bool",
+          "raw": "boolean"
+        }
+      },
+      "toggle_button": {
+        "description": "Content of the toggle button.",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "Element"
+        }
+      },
+      "toggle_on_choose": {
+        "description": "Close the color picker when a value is selected.",
+        "required": false,
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        },
+        "type": {
+          "name": "bool",
+          "raw": "boolean"
+        }
+      },
+      "toggle_on_choose_delay": {
+        "description": "Delay before closing the modal when the",
+        "required": false,
+        "defaultValue": {
+          "value": "2500",
+          "computed": false
+        },
+        "type": {
+          "name": "number",
+          "raw": "number"
+        }
+      },
+      "toggle_direction": {
+        "description": "Direction to open the color picker on toggle.",
+        "required": false,
+        "defaultValue": {
+          "value": "'top-left'",
+          "computed": false
+        },
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'top'",
+              "computed": false
+            },
+            {
+              "value": "'top-left'",
+              "computed": false
+            },
+            {
+              "value": "'top-right'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            },
+            {
+              "value": "'bottom'",
+              "computed": false
+            },
+            {
+              "value": "'bottom-left'",
+              "computed": false
+            },
+            {
+              "value": "'bottom-right'",
+              "computed": false
+            }
+          ],
+          "raw": "\"top\" | \"top-left\" | \"top-right\" | \"left\" | \"right\" | \"bottom\" | \"bottom-left\" | \"bottom-right\""
+        }
+      },
+      "active": {
+        "description": "Show the color picker.",
+        "required": false,
+        "type": {
+          "name": "bool",
+          "raw": "boolean"
+        }
+      },
+      "toggle_button_color": {
+        "description": "Use a square with background color from the value as the toggle button.",
+        "required": false,
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        },
+        "type": {
+          "name": "bool",
+          "raw": "boolean"
+        }
+      },
+      "as_string": {
+        "description": "The value will always be a string, usable directly in styles.\n\n``toggle_button_color`` requires a string value or hex type.",
+        "required": false,
+        "type": {
+          "name": "bool",
+          "raw": "boolean"
+        }
+      },
+      "class_name": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  }
+}
