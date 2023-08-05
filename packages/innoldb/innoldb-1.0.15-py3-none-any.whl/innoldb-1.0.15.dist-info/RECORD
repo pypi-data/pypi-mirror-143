@@ -1,0 +1,16 @@
+innoldb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+innoldb/main.py,sha256=-Rf0K5zG2e9NKmsMvK6Q0wlzpg9g431Eic08cjG2vsQ,7428
+innoldb/qldb.py,sha256=l-RLIOtWJOMHxx7jtqDt5HB94lauOAcpk8m1bf9lyUk,13049
+innoldb/settings.py,sha256=jUmS2eR2AX0JsBngIh7YITF7ZMP8zSdrkmE9RXQsh2o,783
+innoldb/derivers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+innoldb/static/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+innoldb/static/clauses.py,sha256=qkK4CJVnG9Uxa0X40Re3SywGPSbeSVb5oW1QEzWqlbQ,1660
+innoldb/static/driver.py,sha256=AQB9GZ7FaSKnQZwfwpXRS0HNbpdVYUEgsoey48AEnac,11239
+innoldb/static/logger.py,sha256=dj-kUT75cfeBYqaeEMlO1k6lIqGfPWiW9zYtcpcDuew,870
+innoldb/static/objects.py,sha256=i60jD3bIARapphfnNewVdCUFgIkjrj-GTtOC-1g31pE,1167
+innoldb-1.0.15.dist-info/LICENSE,sha256=L8vFn9ZHT3RRpTtzuzhkgDTutx_NNhMzCw_9YpbZR4Q,35129
+innoldb-1.0.15.dist-info/METADATA,sha256=cb2vWP7xDnpwkR203g5xj6_6zP-81_e92wqAUWVeV0g,2844
+innoldb-1.0.15.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+innoldb-1.0.15.dist-info/entry_points.txt,sha256=ddkk-2zU34kkVehiwF35gJCYuH13vLkzMPA7sw9cfm8,52
+innoldb-1.0.15.dist-info/top_level.txt,sha256=G1aofHP2S3YcMPWL7GwcTPRCIy2YW-b_jnZfrl9VnA0,8
+innoldb-1.0.15.dist-info/RECORD,,
