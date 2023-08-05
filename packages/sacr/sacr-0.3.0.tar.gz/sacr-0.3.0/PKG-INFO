@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sacr
+Version: 0.3.0
+Summary: Aliased command runner
+Author: Joshua C. Burt
+Author-email: joshburt@shapeandshare.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# command.runner
+
+
