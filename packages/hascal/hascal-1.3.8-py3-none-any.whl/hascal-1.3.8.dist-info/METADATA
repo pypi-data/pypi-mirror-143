@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hascal
+Version: 1.3.8
+Summary: Hascal is a general purpose and open source programming language designed to build optimal, maintainable, reliable and efficient software.
+Author: Hascal Foundation
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: colorama
+Requires-Dist: requests
+
+UNKNOWN
+
