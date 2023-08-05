@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+torch_conv_gradfix/__init__.py
+torch_conv_gradfix/conv_gradfix.py
+torch_conv_gradfix/utils.py
+torch_conv_gradfix.egg-info/PKG-INFO
+torch_conv_gradfix.egg-info/SOURCES.txt
+torch_conv_gradfix.egg-info/dependency_links.txt
+torch_conv_gradfix.egg-info/not-zip-safe
+torch_conv_gradfix.egg-info/requires.txt
+torch_conv_gradfix.egg-info/top_level.txt
