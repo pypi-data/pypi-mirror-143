@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/neurlink/__init__.py
+src/neurlink.egg-info/PKG-INFO
+src/neurlink.egg-info/SOURCES.txt
+src/neurlink.egg-info/dependency_links.txt
+src/neurlink.egg-info/top_level.txt
