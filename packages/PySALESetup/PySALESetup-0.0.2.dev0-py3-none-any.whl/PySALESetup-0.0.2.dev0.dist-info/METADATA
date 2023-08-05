@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: PySALESetup
+Version: 0.0.2.dev0
+Summary: iSALE setup package
+Home-page: https://github.com/jgd10/PySALESetup
+Author: James Derrick
+Author-email: jgd10.github@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.6, <3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib (~=3.4.3)
+Requires-Dist: numpy (~=1.21.2)
+Requires-Dist: Shapely (~=1.7.0)
+Requires-Dist: scipy (~=1.2.1)
+
+# PySALESetup
+
+PySALESetup is a preprocessing tool designed for use with [iSALE2D](https://www.iSALE-code.de).
+It is a python module that allows for the setup of complex geometries in 2D simulations.
+This is of particular use in granular mesoscale numerical simulations and example 
+scripts are also included. read the documentation [here](https://jgd10.github.io/PySALESetup/).
+
+This package is a work-in-progress and is developed when I have time to work on it.
+It will be released as soon as I can to pypi, but for now there is a lot to do.
+
+
