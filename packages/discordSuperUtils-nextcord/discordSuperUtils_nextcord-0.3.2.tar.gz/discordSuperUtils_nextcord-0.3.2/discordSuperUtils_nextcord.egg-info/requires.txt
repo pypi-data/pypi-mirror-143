@@ -1,0 +1,11 @@
+nextcord
+Pillow
+requests
+spotipy
+aiosqlite
+motor
+aiopg
+aiomysql
+pytz
+wavelink
+youtube_dl
