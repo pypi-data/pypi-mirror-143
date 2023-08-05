@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-dv = napari_dv:napari.yaml

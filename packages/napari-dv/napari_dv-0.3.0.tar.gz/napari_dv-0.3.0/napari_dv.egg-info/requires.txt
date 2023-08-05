@@ -1,0 +1,7 @@
+mrc>=0.2.0
+napari-plugin-engine>=0.1.4
+
+[testing]
+numpy
+pytest
+pytest-cov
