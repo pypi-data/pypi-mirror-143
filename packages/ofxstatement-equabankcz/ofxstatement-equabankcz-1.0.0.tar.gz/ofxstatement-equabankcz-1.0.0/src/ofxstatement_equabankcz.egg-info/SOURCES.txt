@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ofxstatement/__init__.py
+src/ofxstatement/plugins/__init__.py
+src/ofxstatement/plugins/equabankcz.py
+src/ofxstatement_equabankcz.egg-info/PKG-INFO
+src/ofxstatement_equabankcz.egg-info/SOURCES.txt
+src/ofxstatement_equabankcz.egg-info/dependency_links.txt
+src/ofxstatement_equabankcz.egg-info/entry_points.txt
+src/ofxstatement_equabankcz.egg-info/namespace_packages.txt
+src/ofxstatement_equabankcz.egg-info/requires.txt
+src/ofxstatement_equabankcz.egg-info/top_level.txt
+src/ofxstatement_equabankcz.egg-info/zip-safe
