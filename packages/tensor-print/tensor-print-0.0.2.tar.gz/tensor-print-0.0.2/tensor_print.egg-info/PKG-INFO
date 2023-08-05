@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tensor-print
+Version: 0.0.2
+Summary: print shape, max, min, std of tensor or ndarray
+Home-page: https://github.com/zhoujun-7/tensor-print
+Author: zhou jun
+Author-email: jchow@cug.edu.cn
+License: MIT License
+Keywords: tensor-print
+Platform: any
+
+UNKNOWN
+
