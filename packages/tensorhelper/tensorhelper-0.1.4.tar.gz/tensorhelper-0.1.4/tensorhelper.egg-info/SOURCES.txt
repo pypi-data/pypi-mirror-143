@@ -1,0 +1,8 @@
+setup.py
+tensorhelper/setup.py
+tensorhelper.egg-info/PKG-INFO
+tensorhelper.egg-info/SOURCES.txt
+tensorhelper.egg-info/dependency_links.txt
+tensorhelper.egg-info/top_level.txt
+tensorhelper/tensorhelper/__init__.py
+tensorhelper/tensorhelper/custom_tensor.py
