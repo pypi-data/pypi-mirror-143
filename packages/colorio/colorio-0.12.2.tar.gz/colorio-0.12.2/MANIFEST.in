@@ -1,0 +1,14 @@
+include src/colorio/data/bfd_p/*.json
+include src/colorio/data/ebner_fairchild/*.json
+include src/colorio/data/fairchild_chen/*.json
+include src/colorio/data/hung_berns/*.json
+include src/colorio/data/illuminants/*
+include src/colorio/data/leeds/*.json
+include src/colorio/data/luo_rigg/*.json
+include src/colorio/data/macadam_1942/*.json
+include src/colorio/data/macadam_1974/*.json
+include src/colorio/data/munsell/*.json
+include src/colorio/data/observers/*
+include src/colorio/data/rit_dupont/*.json
+include src/colorio/data/witt/*.json
+include src/colorio/data/xiao/*.json
