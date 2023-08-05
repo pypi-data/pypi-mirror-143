@@ -1,0 +1,7 @@
+numpy>=1.16.1
+pandas>=1.0.0
+sklearn>=0.22.0
+statsmodels>=0.12.0
+
+[dev]
+pytest>=3.7
