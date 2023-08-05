@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: lahman
+Version: 0.0.1
+Summary: Data package for the Lahman database
+Home-page: https://github.com/machow/lahman-py
+Author: Michael Chow
+Author-email: mc_al_github@fastmail.com
+License: MIT
+Keywords: data,baseball
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# template-python-pkg
+
+## Developing
+
+```shell
+# install with development dependencies
+pip install -e .[dev]
+
+# or install from requirements file
+pip install -r requirements/dev.txt
+```
+
+## Testing
+
+```shell
+# run all tests, see pytest section of pyproject.toml
+pytest
+
+# run specific marks
+pytest -m ex2
+
+# stop on first failure, drop into debugger
+pytest -x --pdb
+```
+
+
+## Setting version number
+
+```shell
+# set version number
+git tag v0.0.1
+
+# (optional) push to github
+git push origin --tags
+
+# check version
+python -m setuptools_scm
+```
+
+

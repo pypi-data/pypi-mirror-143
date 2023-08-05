@@ -1,0 +1,13 @@
+pandas
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[:python_version < "3.9"]
+importlib-resources
+
+[dev]
+requests
+pydata-sphinx-theme
+pytest
+pytest-dotenv
