@@ -1,0 +1,3 @@
+[console_scripts]
+felt-node-worker = feltoken.node.background_worker:main
+
