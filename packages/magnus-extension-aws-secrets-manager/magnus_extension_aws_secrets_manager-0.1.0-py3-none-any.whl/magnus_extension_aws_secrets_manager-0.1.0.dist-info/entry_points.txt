@@ -1,0 +1,6 @@
+[magnus.integration.BaseIntegration]
+local-container-secrets-aws-secrets-manager=magnus_extension_aws_secrets_manager.integration:LocalContainerComputeAWSSecrets
+
+[magnus.secrets.BaseSecrets]
+aws-secrets-manager=magnus_extension_aws_secrets_manager.aws_secrets_manager:AWSSecretsManager
+

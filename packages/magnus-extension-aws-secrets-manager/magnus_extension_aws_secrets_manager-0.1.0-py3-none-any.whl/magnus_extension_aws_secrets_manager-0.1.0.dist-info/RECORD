@@ -1,0 +1,6 @@
+magnus_extension_aws_secrets_manager/aws_secrets_manager.py,sha256=NRQqZyAaCFmrlVfBV0X9JO16wuFImYM80-FSZNKfad8,2901
+magnus_extension_aws_secrets_manager/integration.py,sha256=R1ITKDQA5KYROUtzs0-xBVci7hKqsngYJYi3Pu5eXrU,647
+magnus_extension_aws_secrets_manager-0.1.0.dist-info/entry_points.txt,sha256=AF8ZbGcUr3Y8JYwhVaLXQ6GU9ZGCyD4o3ghzkImTnaA,288
+magnus_extension_aws_secrets_manager-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+magnus_extension_aws_secrets_manager-0.1.0.dist-info/METADATA,sha256=ueoUCn_eAXLtnMJVxQTzVeQrfVElogGWABU6ZW4i7CM,2795
+magnus_extension_aws_secrets_manager-0.1.0.dist-info/RECORD,,
