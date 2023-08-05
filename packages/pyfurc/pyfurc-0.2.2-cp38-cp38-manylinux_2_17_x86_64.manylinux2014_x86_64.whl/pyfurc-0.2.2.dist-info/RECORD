@@ -1,0 +1,13 @@
+pyfurc.libs/libgfortran-040039e1.so.5.0.0,sha256=R6s7aClbCjzomQpEjef6sRq928Fg-IlZcsqapxLPhtA,2686064
+pyfurc.libs/libquadmath-96973f99.so.0.0.0,sha256=l82oXdtRY-Labh7bTh1rVXgzqZpA7aB5rjflA5Rltl0,247608
+pyfurc-0.2.2.dist-info/WHEEL,sha256=-ijGDuALlPxm3HbhKntps0QzHsi-DPlXqgerYTTJkFE,148
+pyfurc-0.2.2.dist-info/METADATA,sha256=WcRbVaXHVJG19jYqtvKI6661QENZJrXZZ5cuFQsR3QI,12456
+pyfurc-0.2.2.dist-info/LICENSE,sha256=fmrKvWlhQzCP2lVAePak0eb3GEv2KBEImKIOcJoQeV0,1458
+pyfurc-0.2.2.dist-info/RECORD,,
+pyfurc-0.2.2.dist-info/top_level.txt,sha256=UWtUM45U5rj-qbKzkeGDsmFNRmtb-CTszydt-vcZ8g0,16
+pyfurc/util.py,sha256=sNu3YGQRFjwU-eu-OODtKZ1uP57-_bQzEA5jtWn_cKM,9056
+pyfurc/__init__.py,sha256=JZqWc9431sFYzZ_lAJLvOkPw2DoLZk9exhpGI-BpqI0,444
+pyfurc/tools.py,sha256=hIdF_dPrMiFL4IE6nwVwlzDyrA4BnUL5AYQab0qE3Zs,663
+pyfurc/core.py,sha256=3Af1Wb4pi8ZGQzNEVWrTmVB7_BilIrA3Soen4G07h-I,19105
+pyfurc.ext/auto-07p/LICENSE,sha256=atw-RlOpAs3EOd32k4htQe64ZoyGWHt_rob-qOjsasI,1617
+pyfurc.ext/auto-07p/lib/libauto.so,sha256=MYRJFF7Dq3-i-LkLbNr10hwjAN04hD0jg65qYovd4tQ,855896
