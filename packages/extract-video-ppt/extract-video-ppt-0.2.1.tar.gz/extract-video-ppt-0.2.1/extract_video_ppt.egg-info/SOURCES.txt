@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+extract_video_ppt.egg-info/PKG-INFO
+extract_video_ppt.egg-info/SOURCES.txt
+extract_video_ppt.egg-info/dependency_links.txt
+extract_video_ppt.egg-info/entry_points.txt
+extract_video_ppt.egg-info/requires.txt
+extract_video_ppt.egg-info/top_level.txt
+pkg_main/__init__.py
+pkg_main/compare.py
+pkg_main/images2pdf.py
+pkg_main/video2ppt.py
