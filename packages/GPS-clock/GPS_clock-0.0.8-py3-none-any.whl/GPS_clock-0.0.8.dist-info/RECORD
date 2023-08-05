@@ -1,0 +1,8 @@
+GPS_clock/__init__.py,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+GPS_clock/clock_v2.py,sha256=liqxVpp4eOfWPoWKPqegxHy_sNq9DRqwe4A2-sbU2xs,14643
+GPS_clock/tftwrite.py,sha256=ibvrikUWxxaGJZpcXImwztJZwu_KvmvEXQYUcAtVw-Y,5646
+GPS_clock-0.0.8.dist-info/LICENSE,sha256=caKqaF_6WL4cI7FhKWZVG7E42O_n5RTk8bxEGxOntcA,1056
+GPS_clock-0.0.8.dist-info/METADATA,sha256=vNF-ib7xP6zk-Zez3ZfASyGgZoJefVP3zX6cCu3oDWk,4205
+GPS_clock-0.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+GPS_clock-0.0.8.dist-info/top_level.txt,sha256=PTwA2_zN3J3ne-K0L6WDlCCDa-J1TLgnoWwMPkUsM_M,10
+GPS_clock-0.0.8.dist-info/RECORD,,
