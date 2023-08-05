@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xatch
+Version: 0.1.1
+Summary: Basic Python libraries and tools used for various frameworks.
+License: GPL-3.0-or-later
+Author: Medardo Antonio Rodriguez
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/x-rst
+
+Welcome to the Xatch Project!
+
+The project is currently under development and is not ready for use in
+production.
+
+The Xatch Projects are a collection of Python libraries and tools used as the
+most basic level for various frameworks.
+
