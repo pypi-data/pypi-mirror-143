@@ -1,0 +1,8 @@
+setup.py
+SKA/Skyline_Amedazi.egg-info/PKG-INFO
+SKA/Skyline_Amedazi.egg-info/SOURCES.txt
+SKA/Skyline_Amedazi.egg-info/dependency_links.txt
+SKA/Skyline_Amedazi.egg-info/top_level.txt
+SKA/department/__init__.py
+SKA/department/memberlist.py
+SKA/department/offices.py
