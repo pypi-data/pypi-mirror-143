@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: mclogger
+Version: 0.1.1
+Summary: MCLogger that shows log records on screen in color and in a log file
+Home-page: https://github.com/pubs12/mlogger
+License: MIT
+Author: Pubs Abayasiri
+Author-email: pubudu.abayasiri@gmail.com
+Requires-Python: >=3,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: colorama (>=0.4.4,<0.5.0)
+Requires-Dist: coloredlogs (>=15.0,<16.0)
+Requires-Dist: tailer (>=0.4.1,<0.5.0)
+Description-Content-Type: text/markdown
+
+# MCLogger: Multi color logger to log to screen and file
+
+
+
+## MCLogger to log to file AND screen
+
+### What problem does this solve?
+A challenge for web-server applications (e.g. such as Flask) is to decipher what's going on from a long logging window.  The standard loggers are all single color console test which you have to trawl through manually one by one.
+
+MCLogger helps to solve this by colorising the debug, info, warning, into different colors so that it is much easier to read.  The logger will output to both on screen and also a file
+
+### How does it do this?
+MCLogger builds on the logging library and adds console color libraries to add colors to debug, info, error, warning entries
+
+DEBUG - blue
+WARNING - yellow
+ERROR - red
+INFO - cyan
+
+### How to use the logger?
+The logger is super easy to use.  You need to simply create an instance and add a file/filepath for the logfile
+
+```
+import multi
+
