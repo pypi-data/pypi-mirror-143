@@ -1,0 +1,13 @@
+pyproject.toml
+setup.cfg
+setup.py
+simplepassword.egg-info/PKG-INFO
+simplepassword.egg-info/SOURCES.txt
+simplepassword.egg-info/dependency_links.txt
+simplepassword.egg-info/requires.txt
+simplepassword.egg-info/top_level.txt
+src/__init__.py
+src/manager.py
+src/password_generator.py
+src/password_manager_error.py
+src/utils.py

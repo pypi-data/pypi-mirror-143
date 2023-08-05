@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: simplepassword
+Version: 0.0.0
+Summary: Simple tool to generate password
+Home-page: UNKNOWN
+Author: Johny Utah
+Author-email: jones.hovercraft2020@gmail.com
+License: UNKNOWN
+Keywords: python,password,password manager
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+
+    Simple tool to generate password.
+    Solution for shad home work.
+
+
