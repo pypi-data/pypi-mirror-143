@@ -1,0 +1,11 @@
+LICENSE
+README.md
+beancount_payeeverif.py
+setup.py
+beancount_payeeverif.egg-info/PKG-INFO
+beancount_payeeverif.egg-info/SOURCES.txt
+beancount_payeeverif.egg-info/dependency_links.txt
+beancount_payeeverif.egg-info/not-zip-safe
+beancount_payeeverif.egg-info/requires.txt
+beancount_payeeverif.egg-info/top_level.txt
+test/test_payeeverif.py
