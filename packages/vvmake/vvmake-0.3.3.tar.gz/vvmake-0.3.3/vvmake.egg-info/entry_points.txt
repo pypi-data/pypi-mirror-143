@@ -1,0 +1,3 @@
+[console_scripts]
+vvmake = vvmake.vvmake:main
+
