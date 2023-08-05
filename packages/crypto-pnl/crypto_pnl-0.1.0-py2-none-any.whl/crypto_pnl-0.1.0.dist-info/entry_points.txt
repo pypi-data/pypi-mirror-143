@@ -1,0 +1,3 @@
+[console_scripts]
+crypto_pnl = crypto_pnl.__main__:main
+

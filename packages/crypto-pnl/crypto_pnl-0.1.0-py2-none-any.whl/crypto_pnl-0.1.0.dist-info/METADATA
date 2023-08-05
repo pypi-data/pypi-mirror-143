@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: crypto-pnl
+Version: 0.1.0
+Summary: Crypto Trading Realized PnL Calculation (in EUR)
+Home-page: https://github.com/sadhbh-c0d3/crypto-pnl
+Author: Sonia Kolasinska
+Author-email: sonia.kolasinska.pro@gmail.com
+Maintainer: Sonia Kolasinska
+Maintainer-email: sonia.kolasinska.pro@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+
+Crypto Trading Realized PnL Calculation (in EUR)
+
+Jurisdictions require calculation of the PnL and CGT based off that as per transation basis.
+
+This program performs gains calculations for Binance using Trade History and Transaction History.
+
+Works with Spot, Cross Margin, and Isolated Margin accounts. Handles all trades,
+including short-selling, interests, small assets conversion, and large OTC
+trades.
+
