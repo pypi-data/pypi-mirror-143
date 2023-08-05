@@ -1,0 +1,12 @@
+README.md
+setup.py
+rucaptcha/__init__.py
+rucaptcha/api.py
+rucaptcha/errors.py
+rucaptcha.egg-info/PKG-INFO
+rucaptcha.egg-info/SOURCES.txt
+rucaptcha.egg-info/dependency_links.txt
+rucaptcha.egg-info/requires.txt
+rucaptcha.egg-info/top_level.txt
+script/__init__.py
+script/test.py
