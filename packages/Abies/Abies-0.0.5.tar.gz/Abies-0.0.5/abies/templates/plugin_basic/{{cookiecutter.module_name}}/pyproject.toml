@@ -1,0 +1,11 @@
+[build-system]
+requires = [
+    "abies",
+    "setuptools",
+    "wheel",
+    "scikit-build",
+    "pybind11",
+    "cmake",
+    "ninja"
+]
+build-backend = "setuptools.build_meta"

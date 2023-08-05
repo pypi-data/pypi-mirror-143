@@ -1,0 +1,3 @@
+add_compile_definitions(SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
+add_subdirectory(framework)
+add_subdirectory(library)
