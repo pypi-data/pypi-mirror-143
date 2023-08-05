@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "sniped"
+version = "1.0.0"
+description = "Turn snippets of code into beautiful images."
+authors = ["Rodrigo Girão Serrão <5621605+RodrigoGiraoSerrao@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+sniped = "sniped.__main__:app"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.4.0"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.1.0"
+scriv = { git = "https://github.com/nedbat/scriv.git", branch = "main", rev = "4901a26a" }
+
+[tool.scriv]
+format = "md"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
