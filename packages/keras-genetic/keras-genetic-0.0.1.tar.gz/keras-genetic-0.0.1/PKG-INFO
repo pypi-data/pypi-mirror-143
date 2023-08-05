@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: keras-genetic
+Version: 0.0.1
+Summary: Train keras models with genetic algorithms.
+Home-page: https://github.com/lukewood/keras-genetic
+Author: Luke Wood
+Author-email: lukewoodcs@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+
+# Keras Genetic
+
+Train Keras models with genetic algorithms.
+
+
