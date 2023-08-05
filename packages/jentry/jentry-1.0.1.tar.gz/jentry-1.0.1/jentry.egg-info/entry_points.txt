@@ -1,0 +1,2 @@
+[console_scripts]
+jentry = jentry.entry.cli:cli
