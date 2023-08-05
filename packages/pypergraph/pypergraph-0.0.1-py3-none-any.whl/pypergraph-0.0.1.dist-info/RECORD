@@ -1,0 +1,9 @@
+pypergraph/__init__.py,sha256=lfWulUxnT21GYjkJN2pRkRRarEsUGfyKg03MxoxyMgo,811
+pypergraph/_constants.py,sha256=jUGvjDgwe-CJ_JekPoE-jT2tN-7gR4geTAmtBpqdNX8,1263
+pypergraph/_core.py,sha256=UMzGX5jxjxp9-hEyLSDDyE8TlnvU1YdJEsCkEkC7Zqo,53943
+pypergraph/_tools.py,sha256=lm7JVpqDVelLpDabwS2aviUzkgoRQbyvpwEy-AbZYO0,2617
+pypergraph/_typing.py,sha256=yuMhQ_vMbvqanh1xzclUT67WUGfuuDddkmm-I2aoWJU,387
+pypergraph-0.0.1.dist-info/LICENSE,sha256=8UaM2UdVYSlx_0lOM0b050x7R3YXVnqrUNSW0wamx-8,1098
+pypergraph-0.0.1.dist-info/WHEEL,sha256=jPMR_Dzkc4X4icQtmz81lnNY_kAsfog7ry7qoRvYLXw,81
+pypergraph-0.0.1.dist-info/METADATA,sha256=bW0K03oLPW7ug4TldKIwb6VtJhS7RavioDxn-wWdL4Y,3253
+pypergraph-0.0.1.dist-info/RECORD,,

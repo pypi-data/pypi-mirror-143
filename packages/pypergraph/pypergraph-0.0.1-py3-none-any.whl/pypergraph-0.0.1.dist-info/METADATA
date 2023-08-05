@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: pypergraph
+Version: 0.0.1
+Summary: Hypergraph data structure in Python.
+Keywords: hypergraph,datastructure
+Author: Xavier Lin
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: typing_extensions; python_version<'3.8'
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: flake8-docstrings ; extra == "dev"
+Requires-Dist: flit ; extra == "dev"
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: nox ; extra == "dev"
+Requires-Dist: furo ; extra == "doc"
+Requires-Dist: myst-parser ; extra == "doc"
+Requires-Dist: sphinx ; extra == "doc"
+Requires-Dist: flake8 ; extra == "qa"
+Requires-Dist: flake8-docstrings ; extra == "qa"
+Requires-Dist: mypy ; extra == "qa"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Project-URL: documentation, https://pypergraph.readthedocs.io/
+Project-URL: source, https://codeberg.org/meadow/pypergraph
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: qa
+Provides-Extra: test
+
+# pypergraph
+
+[![CI status](https://ci.codeberg.org/api/badges/meadow/pypergraph/status.svg)](https://ci.codeberg.org/meadow/pypergraph)
+[![Documentation Status](https://readthedocs.org/projects/pypergraph/badge/?version=latest)](https://pypergraph.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://img.shields.io/pypi/v/pypergraph)](https://pypi.org/project/pypergraph/)
+![Python version](https://img.shields.io/pypi/pyversions/pypergraph)
+
+*pypergraph* is a pure Python package for representing hypergraphs of both the
+directed and undirected varieties.
+
+## Installation
+
+pypergraph requires Python 3.7 or later.
+
+```sh
+pip install pypergraph
+```
+
+## Usage
+
+Currently, only basic in-memory mutation of hypergraphs is possible.
+
+```python
+>>> import pypergraph as ppg
+>>> V = ppg.V
+>>> h = ppg.Hypergraph()
+>>> h.add_node("A")
+>>> h.add_edge(V(0, "A") >> V(1, 2, 3))
+```
+
+## Documentation
+
+Documentation may be found at https://pypergraph.readthedocs.io/.
+
+## Licence
+
+pypergraph is released under the [MIT licence][MIT].
+
+[MIT]: LICENSE
+
+## Roadmap
+
+pypergraph is still in early stages of development. The steering goal is to
+reach a point where pypergraph may be used to reason about functional
+dependencies and support data orchestration.
+
+These Python packages are considered to be role models:
+
+-   [schedula](https://github.com/vinci1it2000/schedula)
+-   [NetworkX](https://github.com/networkx/networkx)
+
+## See also
+
+There are a handful of Python packages which can be used to represent
+hypergraphs.
+
+-   [graffunc](https://github.com/Aluriak/graffunc)
+-   [`hypergraphs`](https://github.com/timvieira/hypergraphs)
+-   [XGI](https://github.com/ComplexGroupInteractions/xgi)
+-   [halp](http://murali-group.github.io/halp/)
+-   [HyTra](https://github.com/balqui/HyTra)
+
+At a high level, these gaps exist:
+
+-   Support for directed hypergraphs
+-   A flexible data model suitable for domain applications
