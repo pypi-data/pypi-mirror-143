@@ -1,0 +1,10 @@
+CHANGELOG.md,sha256=K3V4HwQABr75KJnkzdX4D5AQUm_le7VcjAO1RP08_M4,151
+LICENSE,sha256=N3GxEprBrvHngJqB9z1uZGUOnkx99HjeurxfAFMnYXo,1597
+netgate_xml_to_xlsx/__init__.py,sha256=9ZD19GrqAxrGJXQJJIPbTyBioBJHepCdXn2jYD8R29o,73
+netgate_xml_to_xlsx/_version.py,sha256=ILN5QIQizm4Y8L9VvuZAs4HQ1si_ullduLQhhmgcE10,60
+netgate_xml_to_xlsx/main.py,sha256=MfJABGxJSHHVXB5EvmoCetKrDORS3CvURrBjz0O2WQg,23782
+netgate_xml_to_xlsx-0.9.2a1.dist-info/entry_points.txt,sha256=CfozTa8isgN68UfT1BPfyW_P8z8j9nJatv65jQp77XM,69
+netgate_xml_to_xlsx-0.9.2a1.dist-info/LICENSE,sha256=N3GxEprBrvHngJqB9z1uZGUOnkx99HjeurxfAFMnYXo,1597
+netgate_xml_to_xlsx-0.9.2a1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+netgate_xml_to_xlsx-0.9.2a1.dist-info/METADATA,sha256=hGm95tUsqamusWEAobqKUVTokhfasGcVW2I_kRG72Zo,2386
+netgate_xml_to_xlsx-0.9.2a1.dist-info/RECORD,,
