@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: x21
+Version: 0.1.1
+Summary: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: PyNaCl
+
+# x21
+
+
