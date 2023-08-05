@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mpsf
+Version: 0.2.0
+Summary: Multiprocessing Single Function (mpsf)
+License: MIT
+Author: morten
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: sphinx-rtd-theme (>=1.0.0,<2.0.0)
