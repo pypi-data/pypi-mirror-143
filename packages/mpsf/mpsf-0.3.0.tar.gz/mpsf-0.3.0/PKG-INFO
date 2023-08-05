@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mpsf
+Version: 0.3.0
+Summary: Multiprocessing Single Function (mpsf)
+Home-page: https://gitlab.com/Yggdrasil27/mpsf
+License: MIT
+Author: morten
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://gitlab.com/Yggdrasil27/mpsf
