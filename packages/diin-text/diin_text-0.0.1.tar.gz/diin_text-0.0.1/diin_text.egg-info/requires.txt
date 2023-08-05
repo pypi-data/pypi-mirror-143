@@ -1,0 +1,14 @@
+pip
+packaging
+numpy
+argostranslate
+nbdev
+bs4
+matplotlib
+pandas
+prettytable
+seaborn
+tqdm
+fastcore
+
+[dev]

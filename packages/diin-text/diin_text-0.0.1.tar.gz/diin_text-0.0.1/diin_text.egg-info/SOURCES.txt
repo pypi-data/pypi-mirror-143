@@ -1,0 +1,17 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+diin_text/__init__.py
+diin_text/_nbdev.py
+diin_text/data.py
+diin_text/model.py
+diin_text.egg-info/PKG-INFO
+diin_text.egg-info/SOURCES.txt
+diin_text.egg-info/dependency_links.txt
+diin_text.egg-info/entry_points.txt
+diin_text.egg-info/not-zip-safe
+diin_text.egg-info/requires.txt
+diin_text.egg-info/top_level.txt
