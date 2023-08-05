@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: json2txttree
+Version: 1.0.0
+Summary: Library for pretty printing json data to txt files
+Home-page: http://pypi.python.org/pypi/json2txttree
+Author: Cibin Joseph
+Author-email: cibinjoseph92@gmail.com
+License: MIT
+Description: .. image:: https://img-shields.io/pypi/v/json2txttree.svg
+           :target: https://pypi.org/project/json2txttree/
+           :alt: json2txttree on PyPI
+        
+        .. image:: https://travis-ci.com/cibinjoseph/json2txttree.svg?branch=master
+           :target: https://travis-ci.com/cibinjoseph/json2txttree
+        
+        json2txttree
+        ==============
+        Python code that converts JSON data to tree-like output for documentation or pretty printing
+        
+        Usage
+        ------
+        
+        .. code-block:: python
+        
+            import json
+            from json2txttree import json2txttree
+        
+            # Load json data
+            with open('sample.json', 'r') as f:
+              jsonData = json.load(f)
+        
+            # Pretty print json hierarchy as a tree
+            print(json2txttree(jsonData))
+        
+            └─  (object)
+               ├─ "name" (string)
+               ├─ "age" (number)
+               ├─ "languages" (array)
+               │  └─  (string)
+               ├─ "subjects" (object)
+               │  ├─ "Math" (number)
+               │  └─ "Science" (number)
+               └─ "ids" (array)
+                  └─  (object)
+                     ├─ "name" (string)
+                     └─ "number" (string)
+        
+        
+        1.0.0 (2022-03-18)
+        --------------------
+        * Updates for pip release.
+        
+        0.1.0 (2022-03-18)
+        --------------------
+        * Initial release.
+        
+Keywords: json
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Requires-Python: >=3
+Description-Content-Type: text/x-rst

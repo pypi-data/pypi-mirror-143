@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+json2txttree.py
+setup.py
+json2txttree.egg-info/PKG-INFO
+json2txttree.egg-info/SOURCES.txt
+json2txttree.egg-info/dependency_links.txt
+json2txttree.egg-info/top_level.txt
+json2txttree.egg-info/zip-safe
