@@ -1,0 +1,9 @@
+agent_sbobet/__init__.py,sha256=hjzVNgyYpCxun4aIq9OGrVb6A2tz8vEyVhwNPm3gAtU,60
+agent_sbobet/auth.py,sha256=2mGG6a3k_GoZEqEEMohlrunFBQbR7iFZnotyhWhXGHs,1720
+agent_sbobet/client.py,sha256=Hz9LPpB4OW4Ua3beddRoWQobh0huHetYCPQTfmacspg,15220
+agent_sbobet/exceptions.py,sha256=Kh7yw0BLCHdxqYEhsyTFS-q87lWRKzSmZEJ0W_rotgw,156
+agent_sbobet/settings.py,sha256=WDFhnY7dWQ_InWXgXCjSbWzCTGjw14HzYfT1R7lZ1hw,619
+cc_sbobet-1.0.1.dist-info/METADATA,sha256=YTQbQPQiUKJrqkXjWocXF4n35p6-prNeMU7QkWcg--Y,579
+cc_sbobet-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cc_sbobet-1.0.1.dist-info/top_level.txt,sha256=fhQ2KOfgpECc42Promc2EFBm3NgWzFwckSPRvrFR0OE,13
+cc_sbobet-1.0.1.dist-info/RECORD,,
