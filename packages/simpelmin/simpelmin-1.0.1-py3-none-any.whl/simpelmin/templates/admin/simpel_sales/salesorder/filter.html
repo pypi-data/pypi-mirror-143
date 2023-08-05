@@ -1,0 +1,33 @@
+{% load i18n simpelcore_tags widget_tweaks %}
+<div class="card mb-3 position-sticky" style="top: 100px;">
+  <div class="card-body">
+    <form action="{{ view.index_url }}" method="get">
+      <div class="mb-3">
+        <div>
+          <h5>{% trans "Service Groups" %}</h5>
+          {% for value, text in filter.form.group.field.choices %}
+            <div class="form-check form-control-sm form-switch">
+              <input class="form-check-input me-2" name="group" {% if value|lower in filter.form.group.value %}checked{% endif %} type="checkbox" id="id_group_{{ value }}" value="{{ value }}">
+              <label class="form-check-label fw-normal mb-0" style="padding-top: .1rem;" for="id_group_{{ value }}">{{ text|title }}</label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="mb-3">
+        <h5>{% trans "Status" %}</h5>
+        <div class="row">
+        {% for value, text in filter.form.status.field.choices %}
+          <div class="col-lg-6">
+            <div class="form-check form-control-sm form-switch">
+              <input class="form-check-input me-2" name="status" {% if value|lower in filter.form.status.value %}checked{% endif %} type="checkbox" id="id_status_{{ value }}" value="{{ value }}">
+              <label class="form-check-label fw-normal mb-0" style="padding-top: .1rem;" for="id_status_{{ value }}">{{ text|title }}</label>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+      <button class="btn btn-primary mb-2 w-100" type="submit">{% trans "Filter Service" %}</button>
+      <a class="btn btn-primary w-100" href="{{ view.index_url }}">{% trans "Reset" %}</a>
+    </form>
+  </div>
+</div>

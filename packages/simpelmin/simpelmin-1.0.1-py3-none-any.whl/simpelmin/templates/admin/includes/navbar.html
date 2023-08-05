@@ -1,0 +1,111 @@
+{% load i18n static %}
+{% if not is_popup  %}
+  <div id="navbar-wrapper" class="shadow-sm border-bottom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body p-2 p-lg-3">
+      <div class="container-fluid align-items-center px-0">
+        
+        {% block navbar_brand %}
+          <a href="{% url 'admin:index' %}" class="align-items-center ff-exo fs-4 fw-bold me-3 text-dark text-decoration-none">
+            <img src="{% static 'simpelmin/img/logo/logo_light.svg' %}" style="height: 36px;">
+          </a>
+        {% endblock %}
+        
+        {% block navbar_buttons %}
+        <div class="d-flex d-lg-none py-1 my-1">
+          {% url 'admin:simpel_shop_cartitem_changelist' as cart_url %}
+          {% if perms.simpel_sales.add_salesorder or perms.simpel_sales.add_salesorder%}
+            {% if cart_url %}
+              <a class="btn-icon btn-icon-46px hover-light rounded-circle link-secondary" href="">
+                <i class="mdi mdi-24px mdi-shopping-outline"></i>
+              </a>
+            {% endif %}
+          {% endif %}
+
+          {% if site_url %}
+            <a class="btn-icon btn-icon-46px hover-light rounded-circle link-secondary" href="{{ site_url }}">
+              <i class="mdi mdi-24px mdi-web me-1"></i>
+            </a>
+          {% endif %}
+
+          {% if user.is_active and user.is_staff %}
+            {% url 'django-admindocs-docroot' as docsroot %}
+            {% if docsroot %}
+              <a class="btn-icon btn-icon-46px hover-light rounded-circle link-secondary" href="{{ docsroot }}">
+                <i class="mdi mdi-24px mdi-book-open-outline me-1"></i>
+              </a>
+            {% endif %}
+          {% endif %}
+
+          <a class="btn-icon btn-icon-46px hover-light rounded-circle link-secondary"
+              type="button"
+              data-bs-toggle="collapse"
+              aria-controls="topNavigation"
+              aria-expanded="false"
+              aria-label="Toggle Navigation"
+              href="#topNavigation">
+            <i class="mdi mdi-24px mdi-menu"></i>
+          </a>
+        </div>
+        {% endblock navbar_buttons %}
+  
+        <div class="collapse navbar-collapse mt-2 mt-lg-0" id="topNavigation">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#">{% trans "Home" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#">{% trans "Our Services" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#">{% trans "Customer Guides" %}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-bold px-3 dropdown-toggle" href="#" id="dropdownPolicies" data-bs-toggle="dropdown" aria-expanded="false">
+                {% trans "Policies" %}
+              </a>
+              <ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownPolicies">
+                <li><a class="dropdown-item" href="#">{% trans "Term of Service" %}</a></li>
+                <li><a class="dropdown-item" href="#">{% trans "Privacy Policies" %}</a></li>
+                <li><a class="dropdown-item" href="#">{% trans "Cookies Policies" %}</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#">{% trans "About Us" %}</a>
+            </li>
+          </ul>
+          
+          <div class="d-none d-lg-block">
+            {% url 'admin:simpel_shop_cartitem_changelist' as cart_url %}
+            {% if perms.simpel_sales.add_salesorder or perms.simpel_sales.add_salesorder %}
+              {% if cart_url %}
+                <a class="btn btn-special me-2" href="{{ cart_url }}">
+                  <i class="mdi mdi-shopping-outline me-1"></i>
+                  {% trans "Shopping" %}
+                </a>
+              {% endif %}
+            {% endif %}
+            {% if site_url %}
+              <a class="btn btn-primary me-2" href="{{ site_url }}">
+                <i class="mdi mdi-web me-1"></i>
+                {% trans "View Site" %}
+              </a>
+            {% endif %}
+            {% if user.is_active and user.is_staff %}
+              {% url 'django-admindocs-docroot' as docsroot %}
+              {% if docsroot %}
+                <a class="btn btn-primary" href="{{ docsroot }}">
+                  <i class="mdi mdi-book-open-outline me-1"></i>
+                  {% translate 'Documentation' %}
+                </a>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </div>
+
+{% endif %}
+
+

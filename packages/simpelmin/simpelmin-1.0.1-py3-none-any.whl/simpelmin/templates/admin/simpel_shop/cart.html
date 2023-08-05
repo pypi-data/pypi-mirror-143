@@ -1,0 +1,53 @@
+
+
+{% extends 'admin/change_list.html' %}
+{% load i18n static admin_urls simpelcore_tags %}
+
+
+{% block extrahead %}
+  {{ block.super }}
+  <script src="{% url 'admin:jsi18n' %}"></script>
+  <script src="{% static 'admin/js/core.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+  {{ checkout_form.media }}
+{% endblock %}
+
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col-lg-9">
+      {% for object in cl.queryset.all %}
+        {% include 'admin/simpel_shop/cart_item.html' with object=object %}
+      {% empty %}
+        <div class="card px-4 py-8 mb-4 text-center">
+          <div class="card-body">
+            {% include 'admin/includes/noresults.html' %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col-lg-3">
+      <div class="card position-sticky" style="top: 100px">
+        <div class="card-body">
+          <span>{% trans "Cart Total" %}: {{ items_count }} {% trans "Items" %}</span>
+          <div class="display-8">{{ items_total|currency }}</div>
+        </div>
+        <div class="card-footer">
+          <div class="">
+            {% if perms.simpel_products.view_product %}
+              <a href="{% url 'admin:simpel_products_product_changelist' %}" class="btn btn-secondary mb-2 w-100">
+                <i class="mdi mdi-plus me-1"></i>{% trans "Add Product" %}
+              </a>
+            {% endif %}
+            {% block cart_extra_buttons %}{% endblock cart_extra_buttons %}
+          </div>
+          <a href="{% url 'admin:simpel_shop_cartitem_checkout' %}" class="btn btn-primary w-100">
+            <i class="mdi mdi-sale me-1"></i>{% trans "Checkout Now" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock content %}

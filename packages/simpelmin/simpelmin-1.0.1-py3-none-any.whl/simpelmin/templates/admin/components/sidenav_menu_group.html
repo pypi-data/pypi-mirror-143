@@ -1,0 +1,23 @@
+<div class="accordion-item sidenav-menu-item">
+  <h2 class="accordion-header" id="button-menu-{{ name }}">
+    <button class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu-{{ name }}"
+            aria-expanded="false"
+            aria-controls="menu-{{ name }}"
+    >
+      <div class="d-flex align-items-center">
+        <i class="mdi mdi-24px mdi-{{ icon }} me-2"></i>
+        <span class="fw-normal">{{ label|truncatechars:22 }}</span>
+      </div>
+    </button>
+  </h2>
+  <div id="menu-{{ name }}" class="accordion-collapse collapse" aria-labelledby="menu-{{ name }}" data-bs-parent="#accordionAppMenu">
+    <div class="accordion-body p-0">
+      <div class="list-group list-group-flush">
+        {{ childs }}      
+      </div>
+    </div>
+  </div>
+</div>
