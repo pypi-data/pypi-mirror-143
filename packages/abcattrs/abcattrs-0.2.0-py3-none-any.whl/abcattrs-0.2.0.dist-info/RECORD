@@ -1,0 +1,11 @@
+abcattrs/__init__.py,sha256=KuQk2N3JRtPqHAlX_DNN3B07ScMFX9j26JslnQZqiQc,317
+abcattrs/abcattrs.py,sha256=5RcBENLcUpzJt75dUu2iqADPJ-vLvB8T_PHY2fupgNI,3086
+abcattrs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abcattrs/type_hints.py,sha256=Us26cSnMb5JTkMaPrrl6gRD86G1VX6DbZSd7tY6zmo4,1049
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_decorator.py,sha256=wQXRTqIIIBU9au_HBPN0G9qxE0PuRyw3jhuZ_aOM7IA,2997
+abcattrs-0.2.0.dist-info/LICENSE,sha256=u1N-Zkeu7rGC9_L1_XxcP65mCOtRsIdEZcqGlLH8DPM,1526
+abcattrs-0.2.0.dist-info/METADATA,sha256=mduN1jdP-faCzy7kHkfkVzszpo9Beerq1QG2bWU47GY,1879
+abcattrs-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+abcattrs-0.2.0.dist-info/top_level.txt,sha256=0-0hbGFxHKDbdeLZrwg314GN0xvoCl5Cc49CKFNtRzE,15
+abcattrs-0.2.0.dist-info/RECORD,,
