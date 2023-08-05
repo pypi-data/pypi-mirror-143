@@ -1,0 +1,10 @@
+[build-system]
+requires = [
+  "x21>=0.1.6",
+  "wheel",
+]
+# build-backend = "setuptools.build_meta"
+build-backend = "x21.build_meta"
+
+[tool.isort]
+profile = "black"
