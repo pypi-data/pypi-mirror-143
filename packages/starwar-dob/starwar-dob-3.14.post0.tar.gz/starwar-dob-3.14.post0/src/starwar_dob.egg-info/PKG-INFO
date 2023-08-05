@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: starwar-dob
+Version: 3.14.post0
+Summary: for Starwar lover, Converter Starwar Calendar to Human readable Year
+Home-page: https://github.com/blueband/starwar-calender-converter
+Author: Qamarudeen Muhammad
+Author-email: qamarudeen.m@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/blueband/starwar-calender-converter/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# starwar-calender-converter
+This library was inspired by the needs to parse and convert date_birth in Star war datasets made available at https://swapi.dev/api/ into human readable format
+
+See following Url:
+1. https://swapi.dev/api/people/
+2. https://starwars.fandom.com/wiki/Battle_of_Yavin
+3. https://starwars.fandom.com/wiki/0_BBY
+
+# USAGE
+from starwardob import starwardob
+
+actor = starwardob.StarwarDOB('3Aby')
+print(actor.unix_year)          # Actor DOB in UNIX format (1970) is display
+print(actor.age)                # Actor age is dispay in human readable format
+
