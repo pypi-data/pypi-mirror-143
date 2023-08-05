@@ -1,0 +1,6 @@
+allianceauth>=2.11.0
+
+[:python_version=="3.8"]
+typing
+
+[testing]

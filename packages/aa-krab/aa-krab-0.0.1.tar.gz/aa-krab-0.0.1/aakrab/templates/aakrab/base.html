@@ -1,0 +1,55 @@
+{% extends 'allianceauth/base.html' %}
+{% load i18n %}
+{% block extra_css %}
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-wrap {
+            display: -webkit-flex; /* Safari */
+            -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex-item {
+
+        }
+        a.nostyle {
+            color: inherit;
+            text-decoration: none !important;
+        }
+    </style>
+    {% include 'bundles/datatables-css.html' %}
+    {% block more_css %}{%endblock%}
+{% endblock extra_css %}
+{% block content %}
+    <div class="col-lg-12">
+        <br />
+        <div class="col-lg-12 container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">{% translate "Toggle navigation" %}</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'aakrab:index' %}">{% translate "Krab Fleets" %}</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-left">
+                            <li><a href="{% url 'fittings:view_all_fits' %}">{% translate "Scheduled Fleets" %}</a></li>
+                    </ul>
+                    <a class="btn btn-success btn-sm dropdown-toggle" id="manageDrop" href="{% url 'aakrab:create_fleet' %}">
+                        <span class="fa fa-plus"></span>
+                    </a>
+                </div>
+            </nav>
+            {% block fittings_block %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
