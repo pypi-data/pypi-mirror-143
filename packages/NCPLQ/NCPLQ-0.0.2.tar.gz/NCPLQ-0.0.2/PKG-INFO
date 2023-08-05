@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: NCPLQ
+Version: 0.0.2
+Summary: A nice and simple library for everything you may need
+Home-page: UNKNOWN
+Author: Nishaanth Reddy Jaishobha
+Author-email: nishaanthreddyjaishobha@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+A simple Library for easy access to some of the most common python files
+
+CHANGELOG
+=========
+
+Version 0.0.1 (3/18/2022)
+-------------------------
+
+- First Release with a test function
+

@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+NCPLQ/__init__.py
+NCPLQ.egg-info/PKG-INFO
+NCPLQ.egg-info/SOURCES.txt
+NCPLQ.egg-info/dependency_links.txt
+NCPLQ.egg-info/top_level.txt
