@@ -1,0 +1,2 @@
+[jupyter_client.kernel_provisioners]
+existing-provisioner = jupyter_existing_provisioner:ExistingProvisioner
