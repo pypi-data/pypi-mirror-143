@@ -1,0 +1,2 @@
+[console_scripts]
+access-undenied-aws = access_undenied_aws.cli:access_undenied_aws
