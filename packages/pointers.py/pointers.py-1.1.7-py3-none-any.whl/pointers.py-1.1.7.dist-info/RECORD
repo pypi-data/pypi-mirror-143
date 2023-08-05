@@ -1,0 +1,11 @@
+pointers.py,sha256=QVCsZI_1ND2BO4m6pttnpH3v43oqxj15lgW_VsMn63I,3891
+pointers/__init__.py,sha256=H_X6W_rw5BdDWToGusfjeODR6vIDOaOwrV2ucXMY7aE,161
+pointers/_cstd.py,sha256=wYw62DDMyi9ruIbHScHyTjmIz3MYcxRAzRBCh27xcVQ,627
+pointers/malloc.py,sha256=g2DonXLXi_7KfAxn8H66YTylbfoDV8oyiJRyuSX-5Eo,3849
+pointers/pointer.py,sha256=8F-AUmmvRYqyO2v_02JkqhwqYrdSOuKllUYLOC-rPlM,4109
+pointers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pointers.py-1.1.7.dist-info/LICENSE,sha256=NyTEdL_Fkrp3mWQ5GM6dSxCpeRyQbpdbxtKnGn7SmeE,1091
+pointers.py-1.1.7.dist-info/METADATA,sha256=mB38H64pvS0bp6vIXDWFMqFLtyiiq8YECjqIV5qVp4w,2097
+pointers.py-1.1.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pointers.py-1.1.7.dist-info/top_level.txt,sha256=_5RS1HgpnuCUXdUN74XZWrrB33rYvbdcz2SkZyX9xgs,9
+pointers.py-1.1.7.dist-info/RECORD,,
