@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+rec/__init__.py
+rec/__main__.py
+rec/lib/__init__.py
+rec/lib/launcher.py
+runtime_environment_capture.egg-info/PKG-INFO
+runtime_environment_capture.egg-info/SOURCES.txt
+runtime_environment_capture.egg-info/dependency_links.txt
+runtime_environment_capture.egg-info/entry_points.txt
+runtime_environment_capture.egg-info/top_level.txt
