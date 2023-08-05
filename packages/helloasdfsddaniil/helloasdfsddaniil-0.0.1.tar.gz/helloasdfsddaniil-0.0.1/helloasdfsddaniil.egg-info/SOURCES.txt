@@ -1,0 +1,9 @@
+setup.py
+club_package1/__init__.py
+club_package1/main.py
+club_package1/modd1.py
+helloasdfsddaniil.egg-info/PKG-INFO
+helloasdfsddaniil.egg-info/SOURCES.txt
+helloasdfsddaniil.egg-info/dependency_links.txt
+helloasdfsddaniil.egg-info/requires.txt
+helloasdfsddaniil.egg-info/top_level.txt
