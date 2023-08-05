@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: data-processing-package
+Version: 0.0.1
+Summary: Machine Learning package
+Home-page: https://github.com/ThomasFurtado/data-processing-package
+Author: Thomas
+Author-email: thomasfurtado21@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# data-processing-package
+
+Description.
+The package package_name is used to:
+	 preprocessing:
+			- loadDataset
+			- fillMissingData
+			- computeNormalization
+			- splitTrainTestSets
+	models:
+			- computeLinearRegression
+			- RandomForestRegressor
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install data-processing
+```
+
+## Usage
+
+Used to Load datasets Split in X and y values, later split in Train and test sets and bring the data trainned and predicted.
+
+## Author
+Thomas
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
