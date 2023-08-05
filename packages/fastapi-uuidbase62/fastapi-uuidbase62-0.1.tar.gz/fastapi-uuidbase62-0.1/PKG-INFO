@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: fastapi-uuidbase62
+Version: 0.1
+Summary: Leverage Stripe-formatted IDs for internal UUID values in your Pydantic models and FastAPI views; automatically validates prefixes, and converts to/from UUID values.
+Home-page: UNKNOWN
+Author: James Addison
+Author-email: addi00@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
