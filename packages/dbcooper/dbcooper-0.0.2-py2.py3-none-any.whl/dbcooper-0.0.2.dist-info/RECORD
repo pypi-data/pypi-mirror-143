@@ -1,0 +1,15 @@
+dbcooper/__init__.py,sha256=qeO2-kSUKtSYtbDBzdAYQT44b0T11jJJ1-Y-dRGtb6c,391
+dbcooper/base.py,sha256=vTiFD8j0pesaMiUPo6jf6Zwx28dAbxT5T_5GXdRb7vE,849
+dbcooper/dbcooper.py,sha256=-lFSrltKX4FPypjOvCVzZvZtJkI1cF8vOKvD3i7BNyA,2360
+dbcooper/finder.py,sha256=9CiDa2Ow0jrWaYRPPYs1CDFB3-5FjsQN4Yl1gx2KFVA,5182
+dbcooper/inspect.py,sha256=SUTxJ2w2hmZcKieC1PUNSgiRRpUSKp_66Pwv2ZRHLh8,8540
+dbcooper/tables.py,sha256=Um5NtrbZE3ZuPHJ0hbIOcD2knbA6K9e2BbquMGzlq7w,3125
+dbcooper/utils.py,sha256=x2vIypwxkCOzc_H4s39r1bLmXMzSzMBZSpSCJrTpNZA,1038
+dbcooper/tests/conftest.py,sha256=tiCLm-o8_EiRXWyP4M1wP3GYYNAIdpiBcOXAY_bnGp0,1027
+dbcooper/tests/helpers.py,sha256=93UX2HSVvh0JhT1FnkAKfdTQTPJEA0gfpeGvxyufSIg,3146
+dbcooper/tests/test_example_schemas.py,sha256=DImDGB3Ej3K1zwAHhxdwV8auA1r-WKA8NxF9YH4go_A,1264
+dbcooper-0.0.2.dist-info/LICENSE,sha256=EPPvuMMHxUtciG_G8F4bEQrMmSPYB4yTh1Ib8UeUQL8,1069
+dbcooper-0.0.2.dist-info/METADATA,sha256=hUTwhh4UZaHqz2VKieecPDlcQZaFgInZkbQiWnWPbPs,1732
+dbcooper-0.0.2.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+dbcooper-0.0.2.dist-info/top_level.txt,sha256=4S0ZGEaAZD_UU_g640f0G3-RosfnGjmkbyoZqcEl_sg,9
+dbcooper-0.0.2.dist-info/RECORD,,
