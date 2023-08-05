@@ -1,0 +1,8 @@
+README.md
+setup.py
+addonalok1210.egg-info/PKG-INFO
+addonalok1210.egg-info/SOURCES.txt
+addonalok1210.egg-info/dependency_links.txt
+addonalok1210.egg-info/top_level.txt
+libname/__init__.py
+libname/add.py
