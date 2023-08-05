@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "bibchk"
+version = "0.1.0"
+description = "Simple command line program to return the BibTeX string of a given DOI or ISBN."
+authors = ["Doug Keller <dg.kllr.jr@gmail.com>"]
+license = "LGPL-2.1-only"
+readme = "README.md"
+repository = "https://github.com/BibTheque/bibchk.git"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+habanero = "^1.0.0"
+argparse = "^1.4.0"
+isbnlib = "^3.10.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
