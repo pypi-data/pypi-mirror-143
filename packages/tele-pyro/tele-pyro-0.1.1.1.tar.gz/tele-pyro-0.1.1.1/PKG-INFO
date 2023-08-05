@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tele-pyro
+Version: 0.1.1.1
+Summary: Script for convert telethon sesession file to pyrogram session file
+Home-page: https://github.com/semenovsd/Telethon-To-Pyrogram
+License: MIT
+Keywords: telethon,pyrogram,session,convert
+Author: Stanislav Semenov
+Author-email: semenov_sd@bk.ru
+Requires-Python: ==3.9.4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Pyrogram (>=1.4.8,<2.0.0)
+Requires-Dist: Telethon (>=1.24.0,<2.0.0)
+Requires-Dist: TgCrypto (>=1.2.3,<2.0.0)
+Project-URL: Repository, https://github.com/semenovsd/Telethon-To-Pyrogram
+Description-Content-Type: text/markdown
+
+<h1>Telethon to Pyrogram</h1>
+PyPi
+Isort
+Test
+Lint
+license
+Gitter
+Downloads
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+<h4>Simple script for convert telethon session file to pyrogram session file</h4>
+
+<h3>For use:</h3>
+
+1. Clone repo `git clone git@github.com:semenovsd/Telethon-To-Pyrogram.git`
+2. Install Telethon and Pyrogram `poetry install` or user pip `pip install Telethon Pyrogram`
+3. Run convertor.py `python convertor.py` and follow instructions
+
