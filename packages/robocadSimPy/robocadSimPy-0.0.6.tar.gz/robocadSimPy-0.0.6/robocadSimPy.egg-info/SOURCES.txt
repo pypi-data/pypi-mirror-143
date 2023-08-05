@@ -1,0 +1,17 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+funcad.py
+setup.py
+robocadSimPy.egg-info/PKG-INFO
+robocadSimPy.egg-info/SOURCES.txt
+robocadSimPy.egg-info/dependency_links.txt
+robocadSimPy.egg-info/requires.txt
+robocadSimPy.egg-info/top_level.txt
+robots/RT1.py
+robots/RT2.py
+robots/__init__.py
+robots/connection.py
+robots/line_sensor_cls.py
