@@ -1,0 +1,12 @@
+openrpc/__init__.py,sha256=awiiOVPdThcLYIPLG-9jxLYe02W1HJetJ9WHmDHTm1o,56
+openrpc/_discover.py,sha256=wkMCxQpgMcWnCqnq9jOMpXjQoxbbW1xQgDcZF9NXreA,10597
+openrpc/_method_processor.py,sha256=zKAkjkG-AMN4u2naksOTT3zqbvkGEfM1zl_rO-htT4w,6735
+openrpc/_request_processor.py,sha256=BvQcRCeqMMrlJhHUNep4cdVMiMo3agXb4lImvCnQ6wU,6168
+openrpc/_util.py,sha256=NbODVX5SlM2EatXJVhFMkkEq_OPdme4G-FLvKNXp-5o,254
+openrpc/objects.py,sha256=6pMMSdDpgawgTana9qDofScBJaXIe_szGwlst0FPeQU,9032
+openrpc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openrpc/server.py,sha256=n-x-dTv2JSeWH6SMq_yZyu-P5uUItJq87r7081uGevU,8820
+openrpc-5.0.3.dist-info/LICENSE,sha256=l8XFoYvnL0U0I8rteJBpOSkJ0vshQbhITR1Fqln4voQ,34456
+openrpc-5.0.3.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+openrpc-5.0.3.dist-info/METADATA,sha256=NdMonarjG5yzxCJKjVlb2r965kSLOYUVT6K_9Ehw6NE,4256
+openrpc-5.0.3.dist-info/RECORD,,
