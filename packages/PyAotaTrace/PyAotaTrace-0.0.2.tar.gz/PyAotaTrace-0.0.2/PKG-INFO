@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: PyAotaTrace
+Version: 0.0.2
+Summary: 使用Python读取Aota的Trace
+Home-page: https://www.baidu.com
+Author: Lizhenghao
+Author-email: zhenghao2021@iscas.ac.cn
+Maintainer: Lizhenghao
+Maintainer-email: zhenghao2021@iscas.ac.cn
+License: MIT
+Platform: Linux
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+
+# PyAotaTrace
+---
+
+TODO
+
+## 打包上传到 Pypi
+```shell
+python3 -m build
+python3 -m twine upload --repository pypi dist/*
+```
+
+https://cdn.jsdelivr.net/gh/tylzh97/smallfiles/rrlib.so
+
+
