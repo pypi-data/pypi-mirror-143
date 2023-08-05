@@ -1,0 +1,11 @@
+mrc/__init__.py,sha256=kBLt498UH9BOmiY9_xcpxK5cK8q306qMEeqo3Ra0tOU,570
+mrc/_new.py,sha256=natm9BZnwGMSol7z6we9vRUGlpfq73TZBxkd2E7lEz4,10230
+mrc/_version.py,sha256=sBvZKLSprkiPLvvjL0DM8Teceq9S0EKEizm5SoZt43I,142
+mrc/dtypes.py,sha256=ZZebeG9lEviOLTH4pY_uvgXSD-CKhj0lHykxSb56-bk,1826
+mrc/lenses.py,sha256=GTxgQ29im1O0GxgHHbsmczh29kXsUc6dQlAVlQqwv-o,42850
+mrc/mrc.py,sha256=_79P7oF6jineOTgIxGG7dUsyOWuxIlJAjtMjE1SPicA,40177
+mrc-0.2.1.dist-info/LICENSE,sha256=7jv8ki0H6pcPwe4eGCeoaqm3ZBlDHT4N8cv_5WiboT4,1531
+mrc-0.2.1.dist-info/METADATA,sha256=6AF342yd67vWk3CrWvDgPzMrt7OFKo2Iluk5SEZ-IsY,23237
+mrc-0.2.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+mrc-0.2.1.dist-info/top_level.txt,sha256=2m-hkvPfiA-1QYMmx0VstjiIoH10tfqNT8EBwPLbR3w,4
+mrc-0.2.1.dist-info/RECORD,,
