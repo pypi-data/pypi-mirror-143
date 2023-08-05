@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: colour-converter
+Version: 0.0.4
+Summary: converts different colour formats. 
+Home-page: https://github.com/micfun123/colourconverpackage
+Author: Michael Parker
+Author-email: michaelrbparker@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Colour Converter
+
+Turns hex values to RGB 
+Turns RGB values to HEX
+
+Download:
+```
+pip install colour-converter
+```
+
+
+
+
