@@ -1,0 +1,4 @@
+boto3>=1.16.63
+python-dotenv>=0.19.2
+loguru>=0.5.3
+tqdm>=4.62.3
