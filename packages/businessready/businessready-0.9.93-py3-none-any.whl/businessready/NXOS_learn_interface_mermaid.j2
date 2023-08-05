@@ -1,0 +1,28 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+{%-     for interface in to_parse_interface %}
+{%-         if to_parse_interface[interface].description %}
+{{ hostname }} <--> {{ to_parse_interface[interface].description | replace(" ","_") }} <--> {{ interface }}
+{%-         else %}
+{{ hostname }} <--> {{ interface }}
+{%-         endif %}
+{%-     endfor %}
+```
+{%- else %}{%- if filetype_loop == 1 %}
+```mermaid
+classDiagram
+
+```
+{%- else %}{%- if filetype_loop == 2 %}
+```mermaid
+stateDiagram
+
+```
+
+{%- else %}{%- if filetype_loop == 3 %}
+```mermaid
+erDiagram
+
+```
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}
