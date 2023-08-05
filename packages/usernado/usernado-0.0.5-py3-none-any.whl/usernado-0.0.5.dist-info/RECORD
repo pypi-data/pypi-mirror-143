@@ -1,0 +1,14 @@
+handlers/__init__.py,sha256=Vlv2k5tKrYHzORya0mET2_U3g2HP72AlKcOSQGW_GFM,22
+handlers/home.py,sha256=qPQHHMH5xKYoqLZ3G-yTzTbH-GMqUPB39E-Wh9ikkAE,117
+handlers/usernado/__init__.py,sha256=q10htbWR0SmTCyHqgkcdY6bXCixzfwdnPoEeC8r74xw,27
+handlers/usernado/__main__.py,sha256=zkI0SOO58F0BZPNrvTf7hiKySuhcvEBW1Bxa76PTfFQ,41
+handlers/usernado/base.py,sha256=4yuovc-cmc1OM5nVpDmQyF7Y8L1z4eQzjOXVgkrNXas,217
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/base.py,sha256=o0nDZnW8zvcxzkZ2qxP2iofR27EBl6OzXz2Bu-rGxxA,798
+tests/test_web.py,sha256=zumaGwjxrF2DXgoCzgkz_fxfHIDHRR0JsEK4M2RpmI8,182
+usernado-0.0.5.dist-info/LICENSE,sha256=jG2zQEdRNt88EgHUWPpXVWmOrOduUQRx7MnYV9YIPaw,11359
+usernado-0.0.5.dist-info/METADATA,sha256=Bxi_LwXpZh-DF1vfKrl-kywO-eVWKZo-9fhxeKTMcTA,2893
+usernado-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+usernado-0.0.5.dist-info/entry_points.txt,sha256=8DVChmcIK3FS7DguSTVVZx4hPJmvAON6gKktO4l8myU,62
+usernado-0.0.5.dist-info/top_level.txt,sha256=xQJ9YZfFDjq-_ZvSg6r_Vu5eYUJjr46pzL9orAoHr5A,15
+usernado-0.0.5.dist-info/RECORD,,

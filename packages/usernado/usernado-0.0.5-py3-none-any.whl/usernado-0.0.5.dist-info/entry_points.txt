@@ -1,0 +1,3 @@
+[console_scripts]
+usernado = handlers.usernado.__main__:main
+
