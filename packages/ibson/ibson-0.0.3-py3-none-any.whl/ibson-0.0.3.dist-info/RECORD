@@ -1,0 +1,12 @@
+ibson/__init__.py,sha256=u9RFY2VWOiM2ZqEv6Bg_ycTeDisrVKZ6QACpaQwPq7c,1725
+ibson/codec_util.py,sha256=H38yLaPeG2Tyjns_MaHi_QyEfvEWfXYA4KiWqydtgFU,1790
+ibson/decoder.py,sha256=ZImTwjQyIdJWMxzC7cZxTzag8fTAuxfIQUJHRPxwhWY,17771
+ibson/encoder.py,sha256=m2WDHfdHWK1JS25j4Pni9OKrrnNrlv3zJq6dgBNR4cE,19115
+ibson/errors.py,sha256=_kyT6F4v4C5PmyMdoT-CHiJtXmmiL6BrQ3dTeVnKnrE,3497
+ibson/tool/__init__.py,sha256=U63NANJ7a8xzJJ8Cd_3HCpfMneRhXX86H3qJGiEU9xk,613
+ibson/tool/bsonq.py,sha256=1s7jtcDK-yMKBgWJEo2FW6PWfqUrJW7HqPE5xagXUS4,1000
+ibson/types.py,sha256=d7i5GyZ3eBcbIeGZbwuBsc0quWq6yq5Yu-pSXuGo5P4,2689
+ibson-0.0.3.dist-info/LICENSE,sha256=xXB9ONsVwhPL49iNYPQSzcuYsUSgArXkoDWPH4YzXko,11369
+ibson-0.0.3.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+ibson-0.0.3.dist-info/METADATA,sha256=MSU7h-lfI-wAieKMFpRhzdP0poocm5ObyYMgJqtAu1M,3557
+ibson-0.0.3.dist-info/RECORD,,
