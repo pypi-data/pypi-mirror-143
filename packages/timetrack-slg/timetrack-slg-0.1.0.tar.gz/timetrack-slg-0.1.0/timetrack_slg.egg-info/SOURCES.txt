@@ -1,0 +1,10 @@
+README.md
+setup.py
+scripts/install-timetrack-slg
+scripts/timetrack-consolidate-slg
+scripts/timetrack-slg
+timetrack_slg/__init__.py
+timetrack_slg.egg-info/PKG-INFO
+timetrack_slg.egg-info/SOURCES.txt
+timetrack_slg.egg-info/dependency_links.txt
+timetrack_slg.egg-info/top_level.txt
