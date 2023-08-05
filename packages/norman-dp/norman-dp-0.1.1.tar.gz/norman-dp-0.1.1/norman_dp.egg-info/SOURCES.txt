@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+setup.cfg
+setup.py
+norman/__init__.py
+norman/__main__.py
+norman/consts.py
+norman/norman_dataplane.py
+norman/norman_pktgen.py
+norman_dp.egg-info/PKG-INFO
+norman_dp.egg-info/SOURCES.txt
+norman_dp.egg-info/dependency_links.txt
+norman_dp.egg-info/entry_points.txt
+norman_dp.egg-info/requires.txt
+norman_dp.egg-info/top_level.txt
+pcaps/.gitignore
