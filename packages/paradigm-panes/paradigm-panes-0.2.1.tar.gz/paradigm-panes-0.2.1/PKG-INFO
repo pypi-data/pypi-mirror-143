@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: paradigm-panes
+Version: 0.2.1
+Summary: Paradigm panes meant to provide layout specification to be reused elsewhere.
+Home-page: https://github.com/UAlbertaALTLab/paradigm-panes
+License: Apache License v2.0
+Keywords: paradigm,panes
+Author: Uladzimir Bondarau
+Author-email: bondarau@ualberta.ca
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: hfst-optimized-lookup (>=0.0.13,<0.1.0)
+Requires-Dist: more-itertools (>=8.7.0,<8.8.0)
+Requires-Dist: pathlib
+Requires-Dist: requests
+Requires-Dist: typing-extensions (>=3.7,<4.0)
+Project-URL: Repository, https://github.com/UAlbertaALTLab/paradigm-panes
+Description-Content-Type: text/markdown
+
+# paradigm-panes
+
+Installable package that produces a paradigm for a given word, given a pointer to paradigm layouts and FST file. Originally
+built for [itwêwina](https://itwewina.altlab.app/).
+
+# Example Usage:
+
+```
+    import paradigm_panes
+    pg = paradigm_panes.PaneGenerator()
+
+    lemma = "amisk"
+    p_type = "NA"
+
+    pg.set_layouts_dir("/home/ubuntu/cmput401/paradigm-panes/paradigm_panes/resources/layouts")
+    pg.set_fst_filepath("/home/ubuntu/cmput401/paradigm-panes/paradigm_panes/resources/fst/generator-gt-norm.hfstol")
+
+    pg.generate_pane(lemma, p_type)
+```
+
+- `set_layouts_dir(path)` specifies a location of a directory with paradigm layouts that are relevant for current paradigm generation.
+
+- `set_fst_filepath(path)` specifies FST file location with layout translation that are relevant for current paradigm generation.
+
+- `set_tag_style(path)` specifies template rendering type.
+
+> Available tag styles:
+>
+> 1.  "Plus"
+> 2.  "Bracket"
+
+The generator must specify both location before generating a paradigm.
+
+Size is optional to paradigm generation; by default a base size (or first available) will be used.
+
