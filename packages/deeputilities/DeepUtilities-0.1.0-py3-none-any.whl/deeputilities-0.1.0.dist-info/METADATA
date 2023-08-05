@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: deeputilities
+Version: 0.1.0
+Summary: A source-native, automated machine learning workflow
+Home-page: https://github.com/AeRabelais/DeepUtilities
+License: Apache 2.0
+Author: Ashia Lewis
+Author-email: pantagruelspendulum@protonmail.com
+Maintainer: Ashia Lewis
+Maintainer-email: pantagruelspendulum@protonmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pytest-cov (>=3.0.0,<4.0.0)
+Project-URL: Documentation, https://github.com/AeRabelais/DeepUtilities/tree/main/docs
+Project-URL: Repository, https://github.com/AeRabelais/DeepUtilities
+Description-Content-Type: text/markdown
+
+# DeepUtilities
+
