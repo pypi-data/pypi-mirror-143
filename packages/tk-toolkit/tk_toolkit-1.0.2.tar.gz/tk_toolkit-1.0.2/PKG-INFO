@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: tk_toolkit
+Version: 1.0.2
+Summary: Toolkit for tkinter
+Home-page: https://github.com/Jonathan-0101/tk-toolkit
+Author: Jonathan Woolf & Matthew Kayne
+Author-email: jonathan.woolf.01@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# tk-toolkit
+
+[![PyPI version](https://badge.fury.io/py/tk-toolkit.svg)](https://badge.fury.io/py/tk-toolkit)
+
+[![CodeFactor](https://www.codefactor.io/repository/github/jonathan-0101/tk-toolkit/badge?s=7a501acce2bc1d0dafcbc904949f82bde00ff82e)](https://www.codefactor.io/repository/github/jonathan-0101/tk-toolkit)
+
+Tool kit with various functionalities for tkinter
+
+Install with
+```python
+pip install tk-toolkit
+```
+
+Import with
+```python
+from tk_toolkit import tk_toolkit
+```
+
+Current features:
+- Webcam display
+- Quick menu maker
+
+Checkout [example.py](https://github.com/Jonathan-0101/tk-toolkit/blob/main/example.py) to see examples of the features being used
+
+
