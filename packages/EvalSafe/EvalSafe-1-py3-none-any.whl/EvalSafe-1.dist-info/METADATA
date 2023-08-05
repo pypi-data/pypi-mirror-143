@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: EvalSafe
+Version: 1
+Summary: Calculate expressions in a string using eval without security threats!
+Home-page: https://github.com/Zedikon/EvalSafe
+Author: Zedikon
+Author-email: mrzedikon@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+
+# EvalSafe
+EvalSafe is my small library for python. It's library help you with Calculate expressions in a string using eval without security threats.
+
+(I do not know who needs it, I did it out of boredom)
+
+# Example of using
+
+## If digital data is entered
+```import evalsafe```
+
+```print(evalsafe.evals("5 + 5 + 5"))```
+
+**Result: 15**
+
+## If a command from python is entered
+
+```import evalsafe```
+
+```print(evalsafe.evals("print('text')"))```
+
+**Result: Error, incorrect value entered!**
+
