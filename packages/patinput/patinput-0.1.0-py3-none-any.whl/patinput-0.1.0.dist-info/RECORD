@@ -1,0 +1,9 @@
+patinput/__init__.py,sha256=JyuVD2UuU0hiOIwcaFwB0TyoUPgW2_YA73sYGA-RChk,91
+patinput/getch.py,sha256=ARY46M65l9_gpBhuJxHSE27GNM4SKRhVmt2y4GuhXCQ,554
+patinput/input_pattern.py,sha256=8ehJE1_-c1SmshZURmwDC5F9ukZ_ZQqVaJlhkMwvU9o,1085
+patinput/patinput.py,sha256=3Bu1knLDbZRJe3FMyfTZGOq4I-pGU5AMmcaHacqUyOk,5006
+patinput-0.1.0.dist-info/LICENSE,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+patinput-0.1.0.dist-info/METADATA,sha256=066cv88SCF6Qb0os5_I1XzyjIao_bCoR3_ExieI7VDk,4974
+patinput-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+patinput-0.1.0.dist-info/top_level.txt,sha256=n1PUYNwETtNLzaY5mb9j2decb7LKzCaIxWv-WmsGBnA,9
+patinput-0.1.0.dist-info/RECORD,,
