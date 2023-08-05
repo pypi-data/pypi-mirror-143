@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: aiscpy
+Version: 0.1.2
+Summary: Gestor de consultas para perfiles de acero AISC
+Author: Rodrigo Jimenez
+Author-email: jimenezhuancarodrigo@gmail.com
+Maintainer: Rodrigo Jimenez
+Maintainer-email: jimenezhuancarodrigo@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Keywords: steel,AISC,engineering,shapes_AISC
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Gestor de consultas para selección de perfiles AISC
+
+AISC: American Institute Steel of Construction
+Autor: Rodrigo Jimenez
+Email: jimenezhuancarodrigo en gmail punto com
+
