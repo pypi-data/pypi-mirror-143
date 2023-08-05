@@ -1,0 +1,17 @@
+brosoul-2.0.0.data/data/brosoul_data/PythonMustKnow.md,sha256=DHXY3C-xxV9vUoGRIli98jKOxxDzrECltrYub_P7Cx0,3448
+brosoul-2.0.0.data/data/brosoul_data/asset/Projectlinks.png,sha256=6_Zwodj_-Ji3NKpP0IJ1D80OBMPUkvrRbiEHF_Vel0I,35703
+brosoul-2.0.0.data/data/brosoul_data/asset/find_packages.png,sha256=ph13FHzznQAmJUG_YLmyRTE7wCkFLRcXesWNEFwondM,217010
+brosoul-2.0.0.data/data/brosoul_data/asset/test.png,sha256=qEQrn2ptDwTY0EFZEvOPJxfe4ZYQMVQguo2zmw8BSMk,127346
+brosoul-2.0.0.data/data/my_data/data_file,sha256=EweZDmulyhRes16ZGCqb7EZTG8VN32VqYCx4D6AkDe4,9
+sample/__init__.py,sha256=eJUhUcyOxh8swfmDZgrUugpBVnbIWSkbZxcmwT5GmDw,111
+sample/package_data.dat,sha256=EweZDmulyhRes16ZGCqb7EZTG8VN32VqYCx4D6AkDe4,9
+sample/simple.py,sha256=jQxgMu2wujV5-EV7SIHDYnIfEhmJAzxyn2XKqYliCB0,43
+sample/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+second/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+second/try_setup.py,sha256=U9LkQCRbonM97WA6vSkNy54-ZFQSnI0gN1U-ZNa4G8o,77
+brosoul-2.0.0.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+brosoul-2.0.0.dist-info/METADATA,sha256=kHlSN36Q32_nemgkU2mdJALXhNUNCjpOpqXrHekM9Cg,3083
+brosoul-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+brosoul-2.0.0.dist-info/entry_points.txt,sha256=scrvAePrirnM9DlEC106eJBCu8J7HRcRK-hlHsWcQcg,58
+brosoul-2.0.0.dist-info/top_level.txt,sha256=H7_87g5OvfoWV96CqKpCsMoJeruaufzNS1hF9HON_Z4,14
+brosoul-2.0.0.dist-info/RECORD,,
