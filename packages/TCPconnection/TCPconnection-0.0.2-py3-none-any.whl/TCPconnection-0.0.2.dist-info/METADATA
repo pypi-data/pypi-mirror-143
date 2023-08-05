@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: TCPconnection
+Version: 0.0.2
+Summary: Simple TCP connection
+Home-page: https://github.com/viniciusgcto/DIO/tree/main/Desafio_Pacotes_IMG_Python
+Author: Vinicius Costa
+Author-email: viniciusgcto@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package TCPconnection is used to:
+	ConTCP: 
+		- ConnectTCP
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install TCPconnection
+
+```bash
+pip install TCPconnection
+```
+
+## Usage
+
+```python
+from TCPconnection.conTCP import connect_TCP
+connect_TCP.connectTCP()
+```
+
+## Author
+Vinicius Costa
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
