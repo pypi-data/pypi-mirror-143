@@ -1,0 +1,10 @@
+spotifetch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotifetch/cli.py,sha256=aub4hXIuS2bvgmBHqtEUF8TsuZf6JyLE--V6RZE0cp0,2680
+spotifetch/colors.py,sha256=1vXzEIhhooYrv_mgtdONWuLIlMm_Yca9eKVjRLC7Ftw,2101
+spotifetch/fetch.py,sha256=jzHYHBIL1h1ni_RqAbdYbAr5Qee7G6XwOY7CL56r--0,4963
+spotifetch/helpers.py,sha256=zdseemDXNZYHVtfJp2b0xcUuJwMC4DEX1uXHew0-qSg,5940
+spotifetch-0.2.5.dist-info/entry_points.txt,sha256=prVJA9fsssYihcxIBjBiB0GX8k31pTSI2lyfY4cm300,50
+spotifetch-0.2.5.dist-info/LICENSE,sha256=p729qfRDwltAN2FTGhTYgLasZawALtdcapfB-p-PMaE,1065
+spotifetch-0.2.5.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+spotifetch-0.2.5.dist-info/METADATA,sha256=-Ms8Vh0P1ikglP-DsBTaTrp6Ow47FMfzhRHyVAxVyvc,5889
+spotifetch-0.2.5.dist-info/RECORD,,
