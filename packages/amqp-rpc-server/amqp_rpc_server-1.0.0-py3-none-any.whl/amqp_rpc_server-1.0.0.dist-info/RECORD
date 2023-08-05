@@ -1,0 +1,7 @@
+amqp_rpc_server/__init__.py,sha256=0nEBGqBHXqR8hgfWSuM-llzvCJfzNkEv9g7JSn7lX44,7629
+amqp_rpc_server/basic_consumer.py,sha256=Z8pyE3Uh76LH9Lh46PStwxSlVViNBVE5xklGeavykvY,20775
+amqp_rpc_server-1.0.0.dist-info/LICENSE,sha256=lKUeusZy7kLQvqRkFp6eS6a9cyEn7rzwU2ds-IKU534,1524
+amqp_rpc_server-1.0.0.dist-info/METADATA,sha256=IMiDTH63tgVD_L1Mw_eFggu9QQqOpuop6u-hm068WQs,1606
+amqp_rpc_server-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+amqp_rpc_server-1.0.0.dist-info/top_level.txt,sha256=oS6OuQSAPvKqaHBtFn3e5wh1wQhoNL3mfbbCJy5c50E,16
+amqp_rpc_server-1.0.0.dist-info/RECORD,,
