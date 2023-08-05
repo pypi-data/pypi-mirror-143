@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+progressspinner/__init__.py
+progressspinner/demoimage.jpg
+progressspinner/progspin.gif
+progressspinner/screenshot.png
+progressspinner_ebs.egg-info/PKG-INFO
+progressspinner_ebs.egg-info/SOURCES.txt
+progressspinner_ebs.egg-info/dependency_links.txt
+progressspinner_ebs.egg-info/requires.txt
+progressspinner_ebs.egg-info/top_level.txt
