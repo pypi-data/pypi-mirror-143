@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: uaddress
+Version: 1.0.2
+Summary: Ukrainian address parser
+Home-page: https://github.com/martinjack/uaddress
+Author: Evgen Kytonin
+License: MIT
+Keywords: nlp,ukraine,address,research,parsing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+License-File: LICENSE
+
+UNKNOWN
+
