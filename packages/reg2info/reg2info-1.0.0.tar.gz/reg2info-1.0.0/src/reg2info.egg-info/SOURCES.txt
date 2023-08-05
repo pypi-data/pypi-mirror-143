@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/reg2info/__init__.py
+src/reg2info/get_equation.py
+src/reg2info/get_plot.py
+src/reg2info.egg-info/PKG-INFO
+src/reg2info.egg-info/SOURCES.txt
+src/reg2info.egg-info/dependency_links.txt
+src/reg2info.egg-info/top_level.txt
