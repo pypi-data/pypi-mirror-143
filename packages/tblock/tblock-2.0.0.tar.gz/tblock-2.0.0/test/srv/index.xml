@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository version="211023">
+        <filter id="tblock-base">
+                <title>TBlock Base filter</title>
+                <desc>Filter composed of EasyList, EasyPrivacy, Adaway &amp; Twann's List</desc>
+                <homepage>https://tblock.codeberg.page/</homepage>
+                <license>https://codeberg.org/tblock/filters/raw/branch/main/LICENSE</license>
+                <syntax>tblock</syntax>
+                <source>https://codeberg.org/tblock/filters/raw/branch/main/filters/tblock-base.tbf</source>
+                <mirror compression="xz">https://codeberg.org/tblock/repo/media/branch/main/filters/tblock-base/filter.txt.xz</mirror>
+                <mirror compression="xz">https://git.disroot.org/tblock/repo/media/branch/main/filters/tblock-base/filter.txt.xz</mirror>
+                <mirror compression="xz">https://0xacab.org/twann/repo/-/raw/main/filters/tblock-base/filter.txt.xz</mirror>
+                <mirror compression="xz">https://framagit.org/twann/repo/-/raw/main/filters/tblock-base/filter.txt.xz</mirror>
+        </filter>
+        <filter id="test-list">
+                <title>Test list</title>
+                <desc>Local test list for TBlock</desc>
+                <homepage>https://tblock.codeberg.page/</homepage>
+                <license>https://codeberg.org/tblock/tblock/raw/branch/main/LICENSE</license>
+                <syntax>tblock</syntax>
+                <source>http://0.0.0.0:17213/test-list.txt</source>
+                <mirror compression="xz">http://0.0.0.0:17214/test-list.txt.xz</mirror>
+                <mirror compression="gzip">http://0.0.0.0:17215/test-list.txt.gz</mirror>
+                <mirror>http://0.0.0.0:17216/test-list.txt</mirror>
+        </filter>
+</repository>

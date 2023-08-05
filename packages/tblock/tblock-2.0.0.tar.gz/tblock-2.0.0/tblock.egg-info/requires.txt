@@ -1,0 +1,5 @@
+urllib3>=1.21.1
+requests>=2.26.0
+colorama>=0.4.4
+defusedxml>=0.7.1
+ipaddress>=1.0.23

@@ -1,0 +1,5 @@
+tblock (2.0.0~ubuntu21.10.1) impish; urgency=medium
+
+  * Release v2.0.0. Consult the changelog here: https://codeberg.org/tblock/tblock/src/branch/main/CHANGELOG
+
+ -- Twann <tw4nn@riseup.net>  Sun, 13 Mar 2022 10:57:00 +0100
