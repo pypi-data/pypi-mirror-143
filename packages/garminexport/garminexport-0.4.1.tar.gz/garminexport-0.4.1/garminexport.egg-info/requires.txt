@@ -1,0 +1,5 @@
+requests<3,>=2.0
+python-dateutil~=2.4
+
+[cloudflare]
+cloudscraper~=1.2
