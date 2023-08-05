@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+edx_git_auto_export.egg-info/PKG-INFO
+edx_git_auto_export.egg-info/SOURCES.txt
+edx_git_auto_export.egg-info/dependency_links.txt
+edx_git_auto_export.egg-info/requires.txt
+edx_git_auto_export.egg-info/top_level.txt
+git_auto_export/__init__.py
+git_auto_export/apps.py
+git_auto_export/signals.py
+git_auto_export/tasks.py
+git_auto_export/test_settings.py
+git_auto_export/urls.py
+git_auto_export/wsgi.py
