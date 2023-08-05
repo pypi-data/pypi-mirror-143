@@ -1,0 +1,8 @@
+setup.py
+cfr/cfr_real.egg-info/PKG-INFO
+cfr/cfr_real.egg-info/SOURCES.txt
+cfr/cfr_real.egg-info/dependency_links.txt
+cfr/cfr_real.egg-info/top_level.txt
+cfr/real/__init__.py
+cfr/real/hello/__init__.py
+cfr/real/hello/message.py
