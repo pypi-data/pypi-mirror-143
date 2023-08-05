@@ -1,0 +1,11 @@
+pyfrench/__init__.py,sha256=Iz5IHWFM8mIQJskZ7238Qaf1A9tlRSq75QXW_TU9NAk,1427
+pyfrench/aléatoire.py,sha256=_B2YWrA9w9EKMHuWvEueykxJiO17JT5kpAeH1drhzK0,275
+pyfrench/couleur.py,sha256=01oXpq1V_S_JBSHW17RjkKv-K_FtNlCwggU0uXIlIE8,1303
+pyfrench/logique.py,sha256=SNhR6J3XEvjBz64Uu8Rqf08mmLqqbTTLWRTR1rRizP8,1885
+pyfrench/maths.py,sha256=m8vE5bzR8yvGQaqJ8mSqE4d2Z8yD4AwLFLIW6V3NjBw,609
+pyfrench/retour.py,sha256=0Xe-5lL8rVEJYQYWk2gTvtOhpjPHXiD5V8wXIGEEKIw,698
+pyfrench/terminal.py,sha256=9WYIDS0v7gkx_ooKAh4W82MxLkoh4119unJGxIy-YCs,282
+pyfrench-0.3.0a0.dist-info/METADATA,sha256=gNw_4oJFFWXt18GCrcflLFkSy4yvQaliLXbjbdXFvfk,3348
+pyfrench-0.3.0a0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyfrench-0.3.0a0.dist-info/top_level.txt,sha256=YIslsdTVBPLJUMRdoT1B5PLVEiw4mUNFEvHSeEjkxac,9
+pyfrench-0.3.0a0.dist-info/RECORD,,
