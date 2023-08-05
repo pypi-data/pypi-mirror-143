@@ -1,0 +1,7 @@
+requests>=2.20.0
+
+[dev]
+pytest>=6.2.4
+black>=22.1
+isort>=5.10.1
+pytest_httpserver>=1.0.1
