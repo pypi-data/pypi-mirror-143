@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: chm_hnsw
+Version: 0.0.11
+Summary: Custom implementation of HNSW index.
+Home-page: https://github.com/Matej-Chmel/approximate-knn
+Author: Matěj Chmel
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+Custom implementation of HNSW index.
+
