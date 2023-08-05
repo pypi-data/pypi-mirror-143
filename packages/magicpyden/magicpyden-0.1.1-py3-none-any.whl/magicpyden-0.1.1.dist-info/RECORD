@@ -1,0 +1,9 @@
+magicpyden/__init__.py,sha256=ZX5lUIp6BujKgxeCx_WvgW-0HUiEzpysmhrfjLVMt0U,40
+magicpyden/api.py,sha256=tcGHK2yiJHGDmSSaJg3bYM7TF4Mwee6ghNSDVpFkHvI,10767
+magicpyden/endpoint.py,sha256=_RYcpIdKtXoHTC3JpfMOYFjqnFG1qta1Z1PTPFzRopE,903
+magicpyden/schema.py,sha256=NwBre5L_JPHQVeTMqgQhSUHbwp8iGceDYpTTGnxmQ6I,5136
+magicpyden/tests/test_api.py,sha256=ANiIILZgihTgVfiIUmLpXZKe1ayqS0tqF_tiVSWX-x8,4998
+magicpyden/types.py,sha256=d1dQ0MnYV-fKS6_LQSPwUg8Q0W6zV-8nmVhSmo929QQ,57
+magicpyden-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+magicpyden-0.1.1.dist-info/METADATA,sha256=avbCbwXoTO1HVEGm1TsJjUYRcNkb7UbB5Wda_jsf4ZI,552
+magicpyden-0.1.1.dist-info/RECORD,,
