@@ -1,0 +1,8 @@
+pytz
+bottle<0.13,>=0.12.19
+requests<3.0,>=2.27.1
+cheroot<9.0,>=8.6.0
+beaker<2.0,>=1.11.0
+psutil<6.0,>=5.9.0
+pip-services3-commons<4.0,>=3.3.13
+pip-services3-components<4.0,>=3.5.9
