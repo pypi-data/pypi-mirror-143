@@ -1,0 +1,11 @@
+numpy
+importlib_resources
+dpkt
+
+[tests]
+pytest
+requests
+rosbag
+
+[tests:python_version < "3"]
+pathlib
