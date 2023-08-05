@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/nntpserver/__init__.py
+src/nntpserver/nntpserver.py
+src/nntpserver.egg-info/PKG-INFO
+src/nntpserver.egg-info/SOURCES.txt
+src/nntpserver.egg-info/dependency_links.txt
+src/nntpserver.egg-info/top_level.txt
