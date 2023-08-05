@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+fuzzy_classifier.egg-info/PKG-INFO
+fuzzy_classifier.egg-info/SOURCES.txt
+fuzzy_classifier.egg-info/dependency_links.txt
+fuzzy_classifier.egg-info/requires.txt
+fuzzy_classifier.egg-info/top_level.txt
