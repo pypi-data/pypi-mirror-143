@@ -1,0 +1,14 @@
+stx/__init__.py,sha256=DoThYiPy9-KraYFnHRTZufg57-xIvCUb2FgTRvAH2f4,237
+stx/climate_controller.py,sha256=lhTDqI8At76jKdqZWtlu0NKzipNIPhSw8jX2u46X1tE,2830
+stx/errors.py,sha256=eI3VQiS3Rp52jFf37f75WJqAkzEv3AZUbMZfz43tFqE,3246
+stx/memory_map.py,sha256=44nWuQwmmcjFRnIgTYLqok_2cfuAFTK0lwfK0hIRAcM,1588
+stx/plate_handler.py,sha256=ol7gzE91F-zdNcfdtTnsDWiIMTHJT_C8HBY_fkWcLlw,3464
+stx/serial_port.py,sha256=q8HuzpiphlPHLu6ZYQHKUEp2o54rfELFP9PTZgt2RQs,3958
+stx/shaker_controller.py,sha256=rCxn1BFNr1puy61UWm3jffMYQBuqU9wpd1pJS4JX-h4,845
+stx/stx.py,sha256=cNuXX6Yy_F59Xfls5Ua7T9Afwo_rgkpq1xZa84PwDyA,2981
+stx/utils.py,sha256=lyL_0vHRbOY_jeB-ajMx7rkEeudXW7QQuOXYsnxf63E,606
+open_liconic_stx-0.1.0.dist-info/LICENSE,sha256=PToRHpSu-m-pKp9LqfCaBf8ok_WdV5BO_3by16PocbU,1071
+open_liconic_stx-0.1.0.dist-info/METADATA,sha256=ObbDB916ibXPYi0H5cghS4mUsmxTbJeKDZI0jiUfIXk,1078
+open_liconic_stx-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+open_liconic_stx-0.1.0.dist-info/top_level.txt,sha256=AAtWAp9b91wbzJ9LNEybit6Wu3j634-xaYGeE5C18Ow,4
+open_liconic_stx-0.1.0.dist-info/RECORD,,
