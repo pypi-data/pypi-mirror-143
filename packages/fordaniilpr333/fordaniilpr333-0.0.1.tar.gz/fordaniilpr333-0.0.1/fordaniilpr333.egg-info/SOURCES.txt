@@ -1,0 +1,8 @@
+setup.py
+fordaniilpr333.egg-info/PKG-INFO
+fordaniilpr333.egg-info/SOURCES.txt
+fordaniilpr333.egg-info/dependency_links.txt
+fordaniilpr333.egg-info/top_level.txt
+package1/__init__.py
+package1/main.py
+package1/modd1.py
