@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+deltaman/__init__.py
+deltaman/delta.lark
+deltaman/delta_parser.py
+deltaman.egg-info/PKG-INFO
+deltaman.egg-info/SOURCES.txt
+deltaman.egg-info/dependency_links.txt
+deltaman.egg-info/requires.txt
+deltaman.egg-info/top_level.txt
+deltaman.egg-info/zip-safe
