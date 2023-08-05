@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/slack/__init__.py
+src/slack/slack.py
+src/slack_jamesstorm.egg-info/PKG-INFO
+src/slack_jamesstorm.egg-info/SOURCES.txt
+src/slack_jamesstorm.egg-info/dependency_links.txt
+src/slack_jamesstorm.egg-info/requires.txt
+src/slack_jamesstorm.egg-info/top_level.txt
