@@ -1,0 +1,11 @@
+pygwasvcf/__init__.py,sha256=cGt9uBSdVrzUCiaETmnviSKd46Ed_m_vMOud05hIXRQ,177
+pygwasvcf/gwas_vcf.py,sha256=pnVRggjZKmcrVkYMNgq1UYQJOngxV7TA6pBrz1ksN_Y,5710
+pygwasvcf/variant_record_gwas_funs.py,sha256=AmkDmkHMOdqOsy_puPsUzMVnThc_Mkt58FATIESdVEc,4670
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_gwas_file.py,sha256=-hxzlhDUluRImr9GGtNmK1YWJnSFw3hBU7zUM2TFA_0,3142
+tests/test_variant_record_gwas_funs.py,sha256=LBBXQD-0WfjzzGO-jmTwBJtienGAH7dtbZezrqA1mCs,3471
+pygwasvcf-0.0.4.dist-info/LICENSE,sha256=TBiXxHZf_fgN5tBd8SMqMyTV-nVw4o8CaqqpxFZ6eE8,1066
+pygwasvcf-0.0.4.dist-info/METADATA,sha256=lRd5KRSuQtwSQvF1dsA7dqNodw4EiR2AFXaHRjnsIu4,4348
+pygwasvcf-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pygwasvcf-0.0.4.dist-info/top_level.txt,sha256=JY7RYXmAKm4SbBi4bQMfEvG-9UY8TmnB8zmqROAzuEk,16
+pygwasvcf-0.0.4.dist-info/RECORD,,
