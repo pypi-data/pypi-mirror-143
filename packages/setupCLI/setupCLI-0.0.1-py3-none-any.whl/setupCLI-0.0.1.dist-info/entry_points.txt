@@ -1,0 +1,2 @@
+[console_scripts]
+setupCLI = setupCLI.__main__:setupCLI
