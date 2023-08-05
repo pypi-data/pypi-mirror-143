@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: rucaptcha
+Version: 0.0.2
+Summary: Python library to access rucaptcha/twocaptcha API
+Home-page: https://github.com/lorien/rucaptcha
+Author: Gregory Petukhov
+Author-email: lorien@lorien.name
+Maintainer: Gregory Petukhov
+Maintainer-email: lorien@lorien.name
+License: MIT
+Download-URL: https://github.com/lorien/rucaptcha/releases
+Description: # Rucaptcha documentation
+        
+        TODO
+        
+        ## Installation
+        
+        `pip install rucaptcha`
+        
+Keywords: captcha
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
