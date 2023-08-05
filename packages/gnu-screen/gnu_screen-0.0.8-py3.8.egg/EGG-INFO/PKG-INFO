@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: gnu-screen
+Version: 0.0.8
+Summary: GNU-Screen session module handler for NodeJs
+Home-page: https://github.com/LoucasMaillet/Lib-GNU-Screen/tree/main/Modules/gnuScreen/Python
+Author: Lucas Maillet
+Author-email: loucas.maillet.pro@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/LoucasMaillet/Modules/gnuScreen/Python/issues
+Description: # What is this ?
+        
+        This was build to handle and manage gnu-screen session. Actually work well.
+        
+        # Table of Contents
+        
+        * [Required](#required)
+        * [Installation](#installation)
+        * [Functions](#functions)
+        * [Screen](#screen)
+        * [Exemple](#exemple)
+        
+        # Required
+        
+         * Python: 3.8
+         * GNU-Screen: 4.08.00
+        
+        # Installation
+        
+        First make sure you have gnu-screen installed:
+        ```
+        $ apt-get install screen
+        ```
+        
+        To run this project, use pip:
+        ```
+        $ pip install gnu-screen
+        ```
+        
+        # Functions
+          
+        - `getAll()` Return all available Screens.
+        
+        # Screen
+        
+        Create a representation of gnu-screen session : `Screen(id, mode="")`
+        If you want to save logs change mode to `'s'`.
+        
+        Events:
+        - `close` When screen is closed.
+        - `stdout` `str` When something new is append in logFile.
+        
+        Methods:
+        - `Screen.exist()` Check if screen's session is running.
+        - `Screen.setup()` Fetch self variable with running session.
+        - `Screen.setRule(*rules)` Rules to apply in screen session.
+        - `Screen.write(*stdins)` Write something in screen session.
+        - `Screen.setStdout(state)` Watch over logFile to call `stdout` Event.
+        - `Screen.logFile()` Return logFile.
+        - `Screen.on(call)` Set an event (`disconnect()`,`close()`,`stdout(log)`).
+        - `Screen.run(stdin=None)` Connect/create to screen session.
+        - `Screen.close()` Close screen session.
+        - `Screen.kill(signal=15)` Kill screen session.
+        
+        Attributes:
+        - `Screen.id` `str or None` Screen session's id.
+        - `Screen.logFilePath` `str or None` Path of logFile is there one.
+        - `Screen.events` `dict` Screen session events.
+        - `Screen.pid` `int or None` Pid of screen session if is running.
+        - `Screen.date` `str or None` Date of screen session if is running.
+        - `Screen.state` `str or None` State of screen session if is running.
+        
+        # Exemple
+        
+        ```py
+        import os
+        import gnu_screen as sc
+        
+        # Generate 10 screens session
+        for n in range(10):
+            scr = sc.Screen(id=f"test n°{n}")
+            print(scr)
+            scr.run()
+        
+        # Find and close the 10 screens session
+        for scr in sc.getAll():
+            print(scr)
+            scr.close()
+        
+        # Create a new screen session
+        test = sc.Screen(id="final test", mode="r")
+        test.run()
+        print(test)
+        
+        # Allow "stdout" event
+        test.setStdout()
+        
+        
+        # Remove screen session
+        def close():
+            test.close()
+            if not test.pid:
+                print("Closed final test's screen session")
+            else:
+                test.kill()
+                print("Killed test's screen session")
+            #self kill
+            os.kill(os.getpid(), 15)
+        
+        
+        # Get stdout from screen session
+        @test.on
+        def stdout(log):
+            print("stdout:", log)
+            if "!close" in log:
+                close()
+        
+        
+        # Pipe input to the screen session
+        while test.pid:
+            try:
+                test.write(input())
+            except KeyboardInterrupt:
+                # Capture Ctrl + C to close screen session
+                close()
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3
+Description-Content-Type: text/markdown

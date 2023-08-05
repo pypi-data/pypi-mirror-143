@@ -1,0 +1,7 @@
+README.md
+setup.py
+gnu_screen.egg-info/PKG-INFO
+gnu_screen.egg-info/SOURCES.txt
+gnu_screen.egg-info/dependency_links.txt
+gnu_screen.egg-info/top_level.txt
+src/__init__.py
