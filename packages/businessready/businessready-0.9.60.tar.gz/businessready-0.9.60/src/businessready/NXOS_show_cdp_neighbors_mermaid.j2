@@ -1,0 +1,21 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+{%-     for neighbor in to_parse_cdp_neighbors.index %}
+{{ hostname }} <--> {{ to_parse_cdp_neighbors.index[neighbor].local_interface }} -- {{ to_parse_cdp_neighbors.index[neighbor].port_id }} <--> {{ to_parse_cdp_neighbors.index[neighbor].device_id }}
+{%-     endfor %}
+```
+{%- else %}{%- if filetype_loop == 1 %}
+{%-     for neighbor in to_parse_cdp_neighbors.index %}
+```mermaid
+classDiagram
+class {{ to_parse_cdp_neighbors.index[neighbor].device_id | replace("-","_") | replace(".","_") | replace("(","_") | replace(")","") }}{
+Platform: {{ to_parse_cdp_neighbors.index[neighbor].platform }}
+Local Interface: {{ to_parse_cdp_neighbors.index[neighbor].local_interface }}
+Port ID: {{ to_parse_cdp_neighbors.index[neighbor].port_id }}
+Capability: {{ to_parse_cdp_neighbors.index[neighbor].capability }}
+Hold Time: {{ to_parse_cdp_neighbors.index[neighbor].hold_time }}
+}
+```
+{%-     endfor %}
+{%- endif %}{%- endif %}
