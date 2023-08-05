@@ -1,0 +1,5 @@
+setuptools>=42
+wheel
+colorama
+docstring_parser
+typing
