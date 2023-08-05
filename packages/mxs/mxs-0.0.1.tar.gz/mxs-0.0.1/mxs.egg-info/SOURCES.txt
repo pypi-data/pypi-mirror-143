@@ -1,0 +1,17 @@
+setup.py
+mxs/__init__.py
+mxs/__version__.py
+mxs.egg-info/PKG-INFO
+mxs.egg-info/SOURCES.txt
+mxs.egg-info/dependency_links.txt
+mxs.egg-info/entry_points.txt
+mxs.egg-info/not-zip-safe
+mxs.egg-info/requires.txt
+mxs.egg-info/top_level.txt
+mxs/api/__init__.py
+mxs/api/pattern.py
+mxs/cli/__init__.py
+mxs/cli/error.py
+mxs/cli/solvers.py
+mxs/web/__init__.py
+mxs/web/pattern.py
