@@ -1,0 +1,5 @@
+pyproject.toml
+xcc.egg-info/PKG-INFO
+xcc.egg-info/SOURCES.txt
+xcc.egg-info/dependency_links.txt
+xcc.egg-info/top_level.txt
