@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+vseed/__init__.py
+vseed/virdow.py
+vseed/vseed.py
+vseed.egg-info/PKG-INFO
+vseed.egg-info/SOURCES.txt
+vseed.egg-info/dependency_links.txt
+vseed.egg-info/top_level.txt
