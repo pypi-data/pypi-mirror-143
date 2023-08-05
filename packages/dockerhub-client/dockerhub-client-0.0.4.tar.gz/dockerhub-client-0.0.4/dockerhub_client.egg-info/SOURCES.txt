@@ -1,0 +1,8 @@
+README.md
+setup.py
+dockerhub_client.egg-info/PKG-INFO
+dockerhub_client.egg-info/SOURCES.txt
+dockerhub_client.egg-info/dependency_links.txt
+dockerhub_client.egg-info/entry_points.txt
+dockerhub_client.egg-info/requires.txt
+dockerhub_client.egg-info/top_level.txt
