@@ -1,0 +1,3 @@
+[console_scripts]
+clearlife = clearlife.cli:main
+

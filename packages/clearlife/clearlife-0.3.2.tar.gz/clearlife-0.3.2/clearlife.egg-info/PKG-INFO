@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: clearlife
+Version: 0.3.2
+Summary: ClearLIFE Server SDK
+Home-page: https://gitlab.com/clearos/clearfoundation/clearlife-sdk
+Author: 
+Author-email: 
+License: AGPL3
+Description: Key management using derived keys for server applications.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8.6

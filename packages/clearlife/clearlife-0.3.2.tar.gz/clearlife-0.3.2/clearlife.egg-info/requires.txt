@@ -1,0 +1,6 @@
+termcolor==1.1.0
+cython==0.29.23
+aries_cloudagent==0.6.0
+pysodium==0.7.9
+didauth
+attrdict
