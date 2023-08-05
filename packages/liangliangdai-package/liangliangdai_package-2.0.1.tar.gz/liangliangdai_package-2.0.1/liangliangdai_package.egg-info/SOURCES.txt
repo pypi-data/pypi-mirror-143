@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+liangliangdai_package/__init__.py
+liangliangdai_package/main.py
+liangliangdai_package.egg-info/PKG-INFO
+liangliangdai_package.egg-info/SOURCES.txt
+liangliangdai_package.egg-info/dependency_links.txt
+liangliangdai_package.egg-info/top_level.txt
