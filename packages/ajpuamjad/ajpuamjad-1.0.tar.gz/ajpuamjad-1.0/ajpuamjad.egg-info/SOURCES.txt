@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ajpuamjad.egg-info/PKG-INFO
+ajpuamjad.egg-info/SOURCES.txt
+ajpuamjad.egg-info/dependency_links.txt
+ajpuamjad.egg-info/top_level.txt
+ajpuja/__init__.py
+ajpuja/pdf2image.py
+ajpuja/pdf2text.py
