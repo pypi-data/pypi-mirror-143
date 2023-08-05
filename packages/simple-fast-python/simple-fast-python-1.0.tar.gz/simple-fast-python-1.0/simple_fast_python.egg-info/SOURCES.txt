@@ -1,0 +1,9 @@
+README.md
+setup.py
+simple/__init__.py
+simple/simple.py
+simple_fast_python.egg-info/PKG-INFO
+simple_fast_python.egg-info/SOURCES.txt
+simple_fast_python.egg-info/dependency_links.txt
+simple_fast_python.egg-info/requires.txt
+simple_fast_python.egg-info/top_level.txt
