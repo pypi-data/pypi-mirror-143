@@ -1,0 +1,74 @@
+# config.yml file
+
+aws_access_key: 'AKIASEOXW7NEFSICQG7B'
+aws_secret_key: '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'
+aws_region: 'us-east-1'
+sql_database: 'datupaiopsdb'
+forecast_role: 'arn:aws:iam::147018152776:role/service-role/AmazonForecast-ExecutionRole-1615605150114'
+
+prepare:
+ - dataset_orig_cols: ['Fecha Factura', 'Material', 'Cantidad', 'Venta Neta Moneda Local Cop','Canal']
+ - items_metadata: ['location']
+
+paths:
+ - tenant_id: 'comfandigeneraltft12w'
+ - datalake: 'comfandi-datalake-datup'
+ - config_path: 'dev/ivan/general/tft12w/config'
+ - response_path: 'dev/ivan/general/tft12w/output/responses'
+ - dataset_import_path: ['dev/ivan/general/tft12w/output/Qprep/Qprep.csv']
+ - backtest_export_path: 'dev/ivan/general/tft12w/output/backtests'
+ - forecast_export_path: 'dev/ivan/general/tft12w/output/forecast'
+ - results_path: 'dev/ivan/general/tft12w/output'
+ - multiforecast_path: 'dev/ivan/general'
+ - sftp_export: 'datup-sftp-comfandi'
+
+training:
+- dataset_frequency: 'W'
+- forecast_types: ['0.05', '0.2','0.4', '0.5','0.6','0.8', '0.95']
+- forecast_horizon: &horizon 12
+- input_window: 36
+- backtests: 3
+- backtest_ids: ['alpha', 'bravo', 'charlie', 'delta', 'echo']
+- use_location: False
+- normalization: True
+- dropout_train: 0.2
+
+deepar:
+ - epochs: 500
+ - neurons: 100
+ - hidden_layers: 3
+ - backtest_horizon: *horizon
+ - use_automl: False
+
+attup:
+ - epochs_attup: 100
+ - save_last_epoch: True
+ - lr: 0.01
+ - units: 128
+ - batch_size: 16
+ - n_iter: 20
+ - momentum: 0.66
+ - lrS: True
+
+tft:
+ - epochs_tft: 15 #Between 15 and 30
+ - gradient_clip_val: 0.1
+ - lr_tft: 0.01
+ - lstm_layers: 2
+ - hidden_size: 64
+ - attention_head_size: 3
+ - hidden_continuous_size: 32
+ - n_iter_tft: 3   #Number of training loops. Used to reduce random weight initialization errors.
+ - batch_size_tft: 16
+
+importance:
+ - sku_impct: []
+ - items_simulation: []
+
+transform:
+ - abc_threshold: [0.8, 0.95]
+ - fsn_threshold: [0.8, 0.5]
+ - xyz_threshold: [0.25, 0.75]
+ - export_item_ranking: True
+ - error_ids: ['WMAPE', 'MASE','sMAPE']
+ - upsample_frequency: 'MS'
