@@ -1,0 +1,7 @@
+svgwrite
+
+[data_generator]
+names
+
+[photo_tests]
+pillow
