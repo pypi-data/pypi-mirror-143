@@ -1,0 +1,14 @@
+_skbuild
+build
+.vscode
+venv
+.venv
+*.egg-info
+logs
+dist
+MANIFEST
+*__pycache__*
+*.so
+_tmp
+
+*.a
