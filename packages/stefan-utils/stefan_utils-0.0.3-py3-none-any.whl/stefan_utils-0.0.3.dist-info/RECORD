@@ -1,0 +1,7 @@
+stefan_utils/__init__.py,sha256=CrTFe8iM4Lw7VAngRYcMuE_F_9H1Zi9Y2ybegsA83BY,99
+stefan_utils/df_cache.py,sha256=9NeefPqmdGBM9EYglY0AKDREC6WyyPuXdeh1_5YzO1g,1139
+stefan_utils/df_optimize.py,sha256=o-DZsAgt89awfvIC6w9cC_th-AZmB7AEuvAj6mRpwhw,2579
+stefan_utils/logger.py,sha256=dCV11HAxbUYhhKkLOM3EPy8XtqKU3GJIeCQlLP7VcCs,2138
+stefan_utils-0.0.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+stefan_utils-0.0.3.dist-info/METADATA,sha256=odLcyh4l9UpGfsgW6b89ANoMZxOKsBqoTCcQW5HgA_c,417
+stefan_utils-0.0.3.dist-info/RECORD,,
