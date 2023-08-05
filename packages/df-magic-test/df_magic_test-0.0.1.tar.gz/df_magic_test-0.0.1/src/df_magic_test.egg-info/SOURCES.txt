@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/df_magic_openSARlab/__init__.py
+src/df_magic_openSARlab/df_magic_openSARlab.py
+src/df_magic_test.egg-info/PKG-INFO
+src/df_magic_test.egg-info/SOURCES.txt
+src/df_magic_test.egg-info/dependency_links.txt
+src/df_magic_test.egg-info/requires.txt
+src/df_magic_test.egg-info/top_level.txt
