@@ -1,0 +1,7 @@
+Jinja2
+PyGitHub==1.54.0.1
+joern2sarif
+markdown
+pyjwt
+requests
+rich
