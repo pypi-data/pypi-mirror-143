@@ -1,0 +1,8 @@
+torch_conv_gradfix/__init__.py,sha256=6g31PSoZh-3ogKxSTSh0EdzF7IYQ3rmCIqKdMqvfhUw,444
+torch_conv_gradfix/conv_gradfix.py,sha256=uM9XTTaDZYTZ1wK0Bw9PFNUkJKz0TyJWUejmGmz7RN4,11430
+torch_conv_gradfix/utils.py,sha256=grLV3O_8BZrIt0xDnV2e5YO_rWAe09kMSSxTpyM7Y-U,2917
+torch_conv_gradfix-0.0.1.dist-info/LICENSE,sha256=7JF8izbXRn8QZcPPAM7fHA0IPaOhREWRhl_nl_v_nak,1069
+torch_conv_gradfix-0.0.1.dist-info/METADATA,sha256=j4bgMrCXLcym-uh4dJ3IP_7vMh9krEnXMtmSVDzysgQ,3865
+torch_conv_gradfix-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+torch_conv_gradfix-0.0.1.dist-info/top_level.txt,sha256=HiOJwMrWgZa-9xkIy_15uUq8AfbVvmjAcfc28X1jtoQ,19
+torch_conv_gradfix-0.0.1.dist-info/RECORD,,
