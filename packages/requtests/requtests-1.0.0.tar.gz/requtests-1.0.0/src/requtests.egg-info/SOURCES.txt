@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/requtests/__init__.py
+src/requtests/fake_adapter.py
+src/requtests/fake_request.py
+src/requtests/fake_response.py
+src/requtests.egg-info/PKG-INFO
+src/requtests.egg-info/SOURCES.txt
+src/requtests.egg-info/dependency_links.txt
+src/requtests.egg-info/top_level.txt
