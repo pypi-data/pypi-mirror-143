@@ -1,0 +1,10 @@
+unicorn_binance_rest_api/__init__.py,sha256=3OpOgzrVespeOwcOhmCFDObOnmoyJQj9Hky4pYN1anE,67
+unicorn_binance_rest_api/enums.py,sha256=2m1v_Yg1xlE3eooL1B77C3e9HeCSn2bLMnOEzWD4I8E,3338
+unicorn_binance_rest_api/exceptions.py,sha256=jHGLV07DwcfaepI7ULB0fydenuD0UJwjq61VxuRXaAQ,4362
+unicorn_binance_rest_api/helpers.py,sha256=bIMStVUvY1x6lzPhtfe-BBS186LBxb93CRCj9uADqio,3239
+unicorn_binance_rest_api/manager.py,sha256=A072lH_c6JwfoH3VRiOI3JtwXAlhIMsXD1poLIpq-ss,225813
+unicorn_binance_rest_api-1.4.3.dist-info/LICENSE,sha256=66rHLwkkuVHLiohRsFHh11Q_bsvJynlBTgkcm4suIS4,1262
+unicorn_binance_rest_api-1.4.3.dist-info/METADATA,sha256=NVgieWiMp3-XqANBzUZIPLGe9llepo6P62QP27Rz6Bs,17960
+unicorn_binance_rest_api-1.4.3.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+unicorn_binance_rest_api-1.4.3.dist-info/top_level.txt,sha256=_JsXtpPC96W8Mez6pBZXOO_oDJhXmptqFI71vD6d3Xg,25
+unicorn_binance_rest_api-1.4.3.dist-info/RECORD,,
