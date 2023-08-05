@@ -1,0 +1,71 @@
+{
+    "dockers": {
+        "nvidia/tao/tao-toolkit-tf": {
+            "v3.21.11-tf1.15.5-py3": {
+                "docker_registry": "nvcr.io",
+                "tasks": [
+                    "augment",
+                    "bpnet",
+                    "classification",
+                    "dssd",
+                    "emotionnet",
+                    "efficientdet",
+                    "fpenet",
+                    "gazenet",
+                    "gesturenet",
+                    "heartratenet",
+                    "lprnet",
+                    "mask_rcnn",
+                    "multitask_classification",
+                    "retinanet",
+                    "ssd",
+                    "unet",
+                    "yolo_v3",
+                    "yolo_v4",
+                    "yolo_v4_tiny",
+                    "converter"
+                ]
+            },
+            "v3.21.11-tf1.15.4-py3": {
+                "docker_registry": "nvcr.io",
+                "tasks": [
+                    "detectnet_v2",
+                    "faster_rcnn"
+                ]
+            }
+        },
+        "nvidia/tao/tao-toolkit-pyt": {
+            "v3.21.11-py3": {
+                "docker_registry": "nvcr.io",
+                "tasks": [
+                    "speech_to_text",
+                    "speech_to_text_citrinet",
+                    "text_classification",
+                    "question_answering",
+                    "token_classification",
+                    "intent_slot_classification",
+                    "punctuation_and_capitalization",
+                    "action_recognition"
+                ]
+            },
+            "v3.22.02-py3": {
+                "docker_registry": "nvcr.io",
+                "tasks": [
+                    "spectro_gen",
+                    "vocoder"
+                ]
+            }
+        },
+        "nvidia/tao/tao-toolkit-lm": {
+            "v3.21.08-py3": {
+                "docker_registry": "nvcr.io",
+                "tasks": [
+                    "n_gram"
+                ]
+            }
+        }
+    },
+    "format_version": 2.0,
+    "toolkit_version": "3.22.02",
+    "published_date": "02/28/2022"
+}

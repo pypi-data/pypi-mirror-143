@@ -1,0 +1,3 @@
+[console_scripts]
+tlt = tlt.entrypoint.entrypoint:main
+
