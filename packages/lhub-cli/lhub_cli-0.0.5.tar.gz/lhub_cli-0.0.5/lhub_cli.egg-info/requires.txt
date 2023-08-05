@@ -1,0 +1,6 @@
+requests
+lhub
+configobj
+dataclasses_json
+rsa
+tabulate
