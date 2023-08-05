@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+Fileprank/__init__.py
+Fileprank.egg-info/PKG-INFO
+Fileprank.egg-info/SOURCES.txt
+Fileprank.egg-info/dependency_links.txt
+Fileprank.egg-info/top_level.txt
