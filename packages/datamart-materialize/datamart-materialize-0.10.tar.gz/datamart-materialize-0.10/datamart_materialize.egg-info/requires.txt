@@ -1,0 +1,6 @@
+fastparquet<0.8,>=0.7
+lxml
+openpyxl
+pyreadstat<2.0,>=1.0
+requests
+xlrd
