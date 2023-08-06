@@ -1,0 +1,4 @@
+[console_scripts]
+icolos = icolos.scripts.executor:main
+sdf2smi = icolos.scripts.sdf2smi:main
+validator = icolos.scripts.validator:main
