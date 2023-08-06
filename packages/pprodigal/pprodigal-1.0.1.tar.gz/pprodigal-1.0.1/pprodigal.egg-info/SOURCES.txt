@@ -1,0 +1,11 @@
+LICENSE
+README.txt
+setup.py
+pprodigal/__init__.py
+pprodigal/pprodigal.py
+pprodigal.egg-info/PKG-INFO
+pprodigal.egg-info/SOURCES.txt
+pprodigal.egg-info/dependency_links.txt
+pprodigal.egg-info/entry_points.txt
+pprodigal.egg-info/not-zip-safe
+pprodigal.egg-info/top_level.txt
