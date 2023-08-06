@@ -1,0 +1,16 @@
+[package]
+name = "atomic-clock"
+version = "0.1.0"
+edition = "2021"
+description = "⚛️ Better, Faster dates & times for Python"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "atomic_clock"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.16.1", features = ["extension-module"] }
+chrono = "0.4"
+chrono-tz = "0.6"
+lazy_static = "1"

@@ -1,0 +1,44 @@
+[project]
+name = "atomic-clock"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Rust",
+]
+
+[tool.poetry]
+name = "atomic-clock"
+version = "0.1.0"
+description = "⚛️ Better, Faster dates & times for Python"
+authors = ["ZhengYu, Xu <zen-xu@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7,<4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+pytest-cov = "^3.0.0"
+pytest-sugar = "^0.9.4"
+pre-commit = "^2.17.0"
+arrow = "^1.2.2"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+filter_files = true
+
+[build-system]
+requires = ["maturin>=0.12,<0.13"]
+build-backend = "maturin"
