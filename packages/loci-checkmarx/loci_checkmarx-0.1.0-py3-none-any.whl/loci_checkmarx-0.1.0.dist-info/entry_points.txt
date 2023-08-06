@@ -1,0 +1,3 @@
+[console_scripts]
+loci-checkmarx = loci_checkmarx.main:loci_checkmarx
+
