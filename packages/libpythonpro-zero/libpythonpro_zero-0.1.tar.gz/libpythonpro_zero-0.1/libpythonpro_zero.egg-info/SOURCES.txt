@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+libpythonpro_zero/__init__.py
+libpythonpro_zero/github_api.py
+libpythonpro_zero.egg-info/PKG-INFO
+libpythonpro_zero.egg-info/SOURCES.txt
+libpythonpro_zero.egg-info/dependency_links.txt
+libpythonpro_zero.egg-info/not-zip-safe
+libpythonpro_zero.egg-info/requires.txt
+libpythonpro_zero.egg-info/top_level.txt
