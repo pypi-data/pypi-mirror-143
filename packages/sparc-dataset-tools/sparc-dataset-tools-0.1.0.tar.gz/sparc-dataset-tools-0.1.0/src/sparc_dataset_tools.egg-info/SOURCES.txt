@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+setup.py
+src/sparc/__init__.py
+src/sparc/dataset/__init__.py
+src/sparc/dataset/scaffold.py
+src/sparc_dataset_tools.egg-info/PKG-INFO
+src/sparc_dataset_tools.egg-info/SOURCES.txt
+src/sparc_dataset_tools.egg-info/dependency_links.txt
+src/sparc_dataset_tools.egg-info/entry_points.txt
+src/sparc_dataset_tools.egg-info/not-zip-safe
+src/sparc_dataset_tools.egg-info/requires.txt
+src/sparc_dataset_tools.egg-info/top_level.txt
