@@ -1,0 +1,8 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dynamodb_session_web/__init__.py,sha256=O23FfqnZRbE-pgHs92T7lUGKiT6F5qaEY_ELDlL4NRw,218
+dynamodb_session_web/_session.py,sha256=AdF-wtD6gL0dGKRh6eWdFTnPjH6h4snDNLhtwjqL274,12473
+dynamodb_session_web/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamodb_session_web-0.2.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dynamodb_session_web-0.2.4.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+dynamodb_session_web-0.2.4.dist-info/METADATA,sha256=VRoHNTgaXcvqju9gYzd3G7Qeg_f5iMOsD7-r2M3xVwk,5947
+dynamodb_session_web-0.2.4.dist-info/RECORD,,
