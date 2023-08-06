@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: my-messenger-server
+Version: 0.1
+Summary: Server app with GUI to runa private messanger
+Home-page: UNKNOWN
+Author: Alexander Naumov
+Author-email: myMessenger@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
