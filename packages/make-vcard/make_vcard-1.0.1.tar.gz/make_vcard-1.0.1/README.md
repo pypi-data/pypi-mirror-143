@@ -1,0 +1,64 @@
+# make_vcard
+
+这是一个将xlsx文件转化为通讯录导入(.vcf)文件的py程序。
+
+## 安装
+```
+pip install make_vcard
+```
+
+
+
+## 基本使用方法
+
+```
+python -m make_vcard inputFileName.xlsx
+```
+
+
+
+## HTELP
+
+```
+usage: make_vcard [-h] [--example] [--sheet SHEET] [--filetype FILETYPE] [-o O] inputFileName
+
+基本用法 python -m make_vcard inputFileName.xlsx [-o outputFileName]
+
+positional arguments:
+  inputFileName        指定读取的文件
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --example            生成示例excel文件；
+  --sheet SHEET        指定读取哪张表；默认为第一张表
+  --filetype FILETYPE  指定文件类型（默认为excel）只可以指定为 csv
+  -o O                 输出保存的文件名；不需要加后缀！
+
+注意：不同设备对 字段 的支持不一样，可能您按照这个规则并不会得到您想要的结果！
+```
+
+
+
+说明
+
+只有 姓名和电话 是必要的，其它是可以任意组合
+
+有 电话, 邮箱, 网址, 地址 是可以重复出现的；其规则是 名称+数字；例: 电话A
+
+可重复出现的数据可定义其类型
+
+电话的类型有：优先，住宅，工作，单元，传真，其它 
+
+邮箱的类型有：住宅，工作，其它
+
+网址的类型有：住宅，工作，其它 
+
+地址的类型有：住宅，工作，其它，邮寄 
+
+例如： 邮箱(住宅)
+
+例如： 网址（工作）
+
+注意：不同设备对 字段 的支持不一样，可能您按照这个规则并不会得到您想要的结果！
+
+
