@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dp_tms
+Version: 0.1.0
+Summary: reusable utilities shared across tms
+Home-page: UNKNOWN
+Author: Ringier South Africa
+Author-email: tools@ringier.co.za
+License: UNKNOWN
+Description: # DP TMS
+        
+        reusable utilities
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: develop
