@@ -1,0 +1,14 @@
+geomcompare/__init__.py,sha256=J5s4vTDCkvh7jINkWgdOnReQoD-B9Crr91XmJjXCCvo,1761
+geomcompare/_geomrefdb_abc.py,sha256=_mDGiKKQ4BJWG9Y5iZNLc3XrURSNvMnAkDfZnhQQkrU,6704
+geomcompare/_misc.py,sha256=4dFW6xVu2RyonDr6VpZZNP8SmugH9RSd-Gs5krrB9oc,1640
+geomcompare/comparefunc.py,sha256=tHGBwiIoqtrnG90PmyZqurn4EvIB2hjQzXAJZ1gTGi0,2111
+geomcompare/geomrefdb.py,sha256=uH_vslXnVKVN2sX91fwEsEwfHcW382rQJw5TXy7sJ80,66413
+geomcompare/geomutils.py,sha256=tCH0P4sVtUPpJ_VnIZLVIsosS7JbL8jaiqe8GdZlLMU,2805
+geomcompare/io.py,sha256=Tyd4fzrE8llWQrBTI7e8OudYp7UfhimpnjMsnj4dWME,22423
+geomcompare/stats.py,sha256=-9ZixfmH5fE2JFmSPYGPin_hzJyQkovb2EwDP_NCmgA,305
+geomcompare-0.3.0.dist-info/AUTHORS.rst,sha256=JRqkfy4pViY9lK4ooVD7UksGYy2qv7zHcq2G5Qc___c,108
+geomcompare-0.3.0.dist-info/LICENSE.rst,sha256=rrnxIhfDlWABe-xpWGGR3c4l6OHuAknp0g9ovGOtgRU,32672
+geomcompare-0.3.0.dist-info/METADATA,sha256=6ZeTILxMHRyGDxDpMt2xIV54mqOSyPoMMSOE8EitqqA,3834
+geomcompare-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+geomcompare-0.3.0.dist-info/top_level.txt,sha256=NCQl85-ZqFWQ3U9xzPQv-K-OJm6UO7FniN6RMAl6nQM,12
+geomcompare-0.3.0.dist-info/RECORD,,
