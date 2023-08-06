@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+__init__.py
+ocotillo.py
+setup.cfg
+setup.py
+stt_server.py
+ocotillo.egg-info/PKG-INFO
+ocotillo.egg-info/SOURCES.txt
+ocotillo.egg-info/dependency_links.txt
+ocotillo.egg-info/requires.txt
+ocotillo.egg-info/top_level.txt
