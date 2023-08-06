@@ -1,0 +1,3 @@
+[console_scripts]
+bjcli = bjcli.main:main
+
