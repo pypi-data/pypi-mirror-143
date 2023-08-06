@@ -1,0 +1,9 @@
+setup.py
+Farsa.egg-info/PKG-INFO
+Farsa.egg-info/SOURCES.txt
+Farsa.egg-info/dependency_links.txt
+Farsa.egg-info/requires.txt
+Farsa.egg-info/top_level.txt
+farsa/__init__.py
+farsa/exception.py
+farsa/pattern.py
