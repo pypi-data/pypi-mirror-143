@@ -1,0 +1,16 @@
+aceofbases/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aceofbases/base_editor.py,sha256=cSjLV8t-6BEr_aENklS5rZS7bZwMaOUss0b-pDggvQ0,5713
+aceofbases/bed_interval.py,sha256=-gB3b5jMpsLfEnqVz5ZUlScuX2440bsJbU36EgoztGs,3199
+aceofbases/editing_sites.py,sha256=6-JmSrW5msJf7stpTEsJWAeGlPCn8O8pqxAXQp0MBKw,4562
+aceofbases/generate_target_site_svg.py,sha256=l2ky8pXfsgiCON-WzE44ZsP2tiR66DmJ5E7PXf1V6JQ,14238
+aceofbases/gff2bedFiles.py,sha256=M2CKiE93PMZL4f12k6YAk4gQYalZxvhKdhbnNMc6cgU,5835
+aceofbases/main.py,sha256=9ECPILpK5iRJk-azhUU8Gc7T-kNuuFW1naUwZWibPLs,36661
+aceofbases/off_target.py,sha256=VwDQQqJ7F169S3_6fUMZuTvIFA-LCbazARws_E5fv1s,4849
+aceofbases/pam.py,sha256=2e2-JHlzxZDPYOgXhDn3xFvdJYffMzr7nf5WktJLv4s,19350
+aceofbases/sequence_methods.py,sha256=8WPuHk0Kmv2FGX_iY0BGrBe-H_WRS7n1jFratwi4MuA,8055
+aceofbases-1.0.0.dist-info/LICENSE,sha256=k3ViF9RFrNjxXDN-xuMN8FfbkEQvkuWnWqt5ZvFP2sQ,1089
+aceofbases-1.0.0.dist-info/METADATA,sha256=T7BCJBBNne617M2G4GBpcXvj0PPFPvEFcxPi8AXAbos,7369
+aceofbases-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aceofbases-1.0.0.dist-info/entry_points.txt,sha256=hkbF3SuDQidniOFGLsnXgfAUkQSDOhxwWWWhDdjcJE4,96
+aceofbases-1.0.0.dist-info/top_level.txt,sha256=U97xoTp6Npr9ZHjbL7WEsZUe3QR0KyQB5jAk8mmg6Eg,11
+aceofbases-1.0.0.dist-info/RECORD,,

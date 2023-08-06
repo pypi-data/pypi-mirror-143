@@ -1,0 +1,3 @@
+[console_scripts]
+aceofbases = aceofbases.main:main
+gff2bedFiles = aceofbases.gff2bedFiles:main
