@@ -1,0 +1,10 @@
+id: c6f7d210-4df0-11ec-81d3-0242ac130003
+label: 'json'
+category: FORMATTING
+factory:
+  name: json
+  classpath: 'drb_impl_json.json_node_factory:JsonNodeFactory'
+signatures:
+  - name: (?i).*\.json
+  - python: |
+      return 'application/json' in node.get_attribute('Content-Type')
