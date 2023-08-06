@@ -1,0 +1,17 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+trinity4bci/__init__.py
+trinity4bci/_boardInfo.py
+trinity4bci/client.py
+trinity4bci/linux_run.py
+trinity4bci/master.py
+trinity4bci/out.py
+trinity4bci/sfpr.py
+trinity4bci/win_run.py
+trinity4bci.egg-info/PKG-INFO
+trinity4bci.egg-info/SOURCES.txt
+trinity4bci.egg-info/dependency_links.txt
+trinity4bci.egg-info/requires.txt
+trinity4bci.egg-info/top_level.txt
