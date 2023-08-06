@@ -1,0 +1,178 @@
+Metadata-Version: 2.1
+Name: autodidaqt
+Version: 1.1.0
+Summary: AutodiDAQt is a simple data acquisition framework. For science.
+Home-page: https://github.com/chstan/autodidaqt-common
+License: GNU GPL v3.0
+Keywords: data acquisition,physics,instrumentation,DAQ
+Author: chstan
+Author-email: chstansbury@gmail.com
+Requires-Python: >=3.8,<3.10
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: PyQt5 (>=5.13.0,<5.14.0)
+Requires-Dist: Quamash (>=0.6.1,<0.7.0)
+Requires-Dist: appdirs (>=1.4.4,<1.5.0)
+Requires-Dist: asyncqt (>=0.8.0,<0.9.0)
+Requires-Dist: autodidaqt-common (>=0.1.0,<0.2.0)
+Requires-Dist: dask (>=2021,<2022)
+Requires-Dist: dataclasses_json (>=0.5.0,<0.6.0)
+Requires-Dist: fsspec (>=2021,<2022)
+Requires-Dist: instrumentkit (>=0.5,<0.6)
+Requires-Dist: loguru (>=0.3.2,<0.4.0)
+Requires-Dist: matplotlib (>=3.1.1,<4.0.0)
+Requires-Dist: numpy (>=1.20,<2.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: partd (>=1.2.0,<2.0.0)
+Requires-Dist: pymeasure (>=0.9.0,<0.10.0)
+Requires-Dist: pynng (>=0.7.1,<0.8.0)
+Requires-Dist: pyqt-led (>=0.0.6,<0.1.0)
+Requires-Dist: pyqtgraph (>=0.12.1,<0.13.0)
+Requires-Dist: pyrsistent (>=0.17.3,<0.18.0)
+Requires-Dist: python-dotenv (>=0.10.3,<0.11.0)
+Requires-Dist: python-ivi (>=0.14.9,<0.15.0)
+Requires-Dist: pyvisa (>=1.11.0,<2.0.0)
+Requires-Dist: pyvisa-sim (>=0.4.0,<0.5.0)
+Requires-Dist: qtsass (>=0.3.0,<0.4.0)
+Requires-Dist: rx (>=3.0.1,<4.0.0)
+Requires-Dist: scipy (>=1.7.0,<2.0.0)
+Requires-Dist: slackclient (>=2.1.0,<3.0.0)
+Requires-Dist: toolz (>=0.11.1,<0.12.0)
+Requires-Dist: xarray (>=0.18.2,<0.19.0)
+Requires-Dist: zarr (>=2.8.3,<3.0.0)
+Project-URL: Repository, https://github.com/chstan/autodidaqt
+Description-Content-Type: text/x-rst
+
+==========
+autodidaqt
+==========
+
+|test_status| |coverage| |docs_status| 
+
+|example|
+
+.. |docs_status| image:: https://readthedocs.org/projects/autodidaqt/badge/?version=latest&style=flat
+   :target: https://autodidaqt.readthedocs.io/en/latest/
+.. |coverage| image:: https://codecov.io/gh/chstan/autodidaqt/branch/master/graph/badge.svg?token=8M5ON9HZL2
+   :target: https://codecov.io/gh/chstan/autodidaqt
+.. |example| image:: docs/source/_static/autodidaqt-example.gif
+.. |test_status| image:: https://github.com/chstan/autodidaqt/workflows/CI%20with%20pytest/badge.svg?branch=master
+   :target: https://github.com/chstan/autodidaqt/actions
+
+
+autodidaqt := DAQ + UI generation + Reactivity + Instruments
+
+You should be spending your time designing and running experiments,
+not your DAQ software.
+
+autodidaqt is a nuts and bolts included framework for scientific data acquisition (DAQ),
+designed for rapid prototyping and the challenging DAQ environment of angle resolved
+photoemission spectroscopy. If you specify how to sequence motions and data collection,
+autodidaqt can manage the user interface, talking to and managing instruments,
+plotting interim data, data collation, and IO for you.
+
+autodidaqt also has logging and notification support built in and can let you know
+over email or Slack when your experiment finishes (successfully or not!).
+
+If autodidaqt doesn't do exactly what you need, get in contact with us or
+check out the examples. There's a good chance that if it isn't built in,
+autodidaqt is flexible enough to support your use case.
+
+
+Requirements
+============
+
+* Python 3.7 over
+* NoArch
+
+Features
+========
+
+Automated DAQ
+-------------
+
+autodidaqt wraps instruments and data sources in a uniform interface, if you specify how
+to sequence motion and acquisition, autodidaqt handles async collection, IO, and visualizing
+your data as it is acquired.
+
+UI Generation
+-------------
+
+autodidaqt using PyQt and Qt5 to generate UIs for your experiments. It also
+provides simple bindings (autodidaqt.ui) that make making managing the day to day
+of working on PyQt simpler, if you need to do UI scripting of your own.
+
+It also ships with a window manager that you can register your windows against,
+making it seamless to add extra functionality to your experiments.
+
+The autodidaqt UI bindings are wrapped to publish as RxPY observables, making it easier
+to integrate your PyQT UI into a coherent asynchronous application.
+
+Installation
+============
+
+::
+
+  $ pip install autodidaqt
+
+Installation from Source
+========================
+
+1. Clone this repository
+2. Install `make` if you are on a Windows system
+3. Install `poetry` (the alternative Python package manager)
+4. Run `make install` from the directory containing this README
+
+Usage
+=====
+
+For usage examples, explore the scripts in the examples folder. You can run them with
+
+::
+
+  $ python -m autodidaqt.examples.[example_name]
+
+
+replacing [example_name] with one of:
+
+1. minimal_app
+2. plot_data
+3. simple_actors
+4. ui_panels
+5. wrapping_instruments
+6. scanning_experiment
+7. scanning_experiment_revisited
+8. scanning_interlocks
+9. scanning_custom_plots
+10. scanning_setup_and_teardown
+11. scanning_properties_and_profiles
+12. manuscript_fig4
+
+You can also get a list of all the available examples by running
+
+::
+
+  $ python -m autodidaqt.examples
+
+
+Examples for "remote control", including a "virtual nanoXPS lab" 
+are available in integration_tests folder of AutodiDAQt receiver in 
+its companion repository.
+
