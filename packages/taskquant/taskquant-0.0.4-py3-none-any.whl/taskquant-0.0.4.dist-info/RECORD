@@ -1,0 +1,15 @@
+taskquant/__init__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+taskquant/__main__.py,sha256=7bcbikfBeE3rv--bhuhGqw29RgkzFAnooU6DlrC9Iz4,823
+taskquant/app.py,sha256=7bcbikfBeE3rv--bhuhGqw29RgkzFAnooU6DlrC9Iz4,823
+taskquant/score/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskquant/score/accum.py,sha256=3anQt8ySy39yACrgrm5aauMf3jHmr3_vJsisCP8yXBc,3706
+taskquant/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskquant/utils/colors.py,sha256=MWUmMpGyWa_yFFaS0WctLP7QPLYD_I7qHhEc6kF5Ewk,840
+taskquant/utils/create_table.py,sha256=_SK8ixzLmpRWPjd8UczpHbhxVsPyeTjQVxYxhBRSAAU,251
+taskquant/utils/helpful.py,sha256=jniJDrbpirBRzwg4-dyoMhVHXhRSdk66V6rWpzuryRA,363
+taskquant-0.0.4.dist-info/LICENSE,sha256=DffPb9t6yDENGw3oTl3i9aOmIBi5MX3ICaQ2fz_nLBE,1083
+taskquant-0.0.4.dist-info/METADATA,sha256=nKBLXGbUbvgFR4LGU9RFuVGMFZxwwAjtwl_M9mEZ1L4,4077
+taskquant-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+taskquant-0.0.4.dist-info/entry_points.txt,sha256=Gr1SUOkKI84wobx_vB68BxUtUlWtBOLPRYh5_86xxvM,47
+taskquant-0.0.4.dist-info/top_level.txt,sha256=WOv-ohYXOixBm-DSZgHYBwzY7KrcIzJ4Jk2x78gtsqc,10
+taskquant-0.0.4.dist-info/RECORD,,
