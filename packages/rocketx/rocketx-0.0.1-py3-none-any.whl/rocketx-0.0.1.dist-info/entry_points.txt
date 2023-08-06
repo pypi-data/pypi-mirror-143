@@ -1,0 +1,3 @@
+[console_scripts]
+rocket = rocketx.__main__:main
+
