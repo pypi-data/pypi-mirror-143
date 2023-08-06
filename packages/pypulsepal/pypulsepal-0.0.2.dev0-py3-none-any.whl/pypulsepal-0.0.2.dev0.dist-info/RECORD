@@ -1,0 +1,10 @@
+pypulsepal/__init__.py,sha256=R8yCmmzBeKFOGq4tmcpwpIKX_Tr1eTCuPWZ1tSkawRk,99
+pypulsepal/definitions.py,sha256=hhWuRqFrxLK3o23FOn6WeR_P-iIdwvSomhNv50yhQ4I,6262
+pypulsepal/pulsepal.py,sha256=OiSK8D_zExtr_71v_aMKL-lpM6uwe6c1MtNV2TKrURQ,12892
+pypulsepal/utils.py,sha256=dwcqifOyVITgIzTK4kc-56Z1O7Pwvu1-wa5tCB5ObyE,307
+pypulsepal/write_tests.py,sha256=FgXd45vaM0TAyEfstI54LDD2gIGYXDVgbLvrbpBIgiI,800
+pypulsepal-0.0.2.dev0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pypulsepal-0.0.2.dev0.dist-info/METADATA,sha256=3weIyHYrMtSMUbLQOPzTQWY89PoRBvV3G3eTn1q88qE,46749
+pypulsepal-0.0.2.dev0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pypulsepal-0.0.2.dev0.dist-info/top_level.txt,sha256=2I0-gNF-tnwQbcOzIJtRZWIhPwTJwiZfoPzVNxMUBLU,11
+pypulsepal-0.0.2.dev0.dist-info/RECORD,,
