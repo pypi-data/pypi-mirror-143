@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: siiau-consultas-api
+Version: 0.0.1
+Summary: Consulta información del SIIAU de la UDG
+Home-page: https://github.com/Kyostenas/siiau_consultas_api
+Download-URL: 
+Author: Benjamin Ramirez
+Author-email: chilerito12@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Keywords: console,cli,siiau,udg
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: LICENSE.txt
+Requires-Dist: bs4 (==0.0.1)
+Requires-Dist: click (==8.0.4)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: Unidecode (==1.3.4)
+Requires-Dist: xlwt (==1.3.0)
+Requires-Dist: beautifulsoup4 (==4.10.0)
+Requires-Dist: tabulate (==0.8.9)
+Requires-Dist: alive-progress (==2.3.1)
+
+SIIAU CONSULTAS API
+===================
+
+Instalación
+--------------
+
+Linux: ```usuario:$ pip3 install siiau-consultas-api```
+
+Windows: ```usuario> pip install siiau-consultas-api```
+
+Uso
+--------------
+
+- CLI
+
+  ```usuario:$ siiaucli```
+
+
