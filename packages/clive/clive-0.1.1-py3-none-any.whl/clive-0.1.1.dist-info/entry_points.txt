@@ -1,0 +1,3 @@
+[console_scripts]
+clive=clive.cli:run
+
