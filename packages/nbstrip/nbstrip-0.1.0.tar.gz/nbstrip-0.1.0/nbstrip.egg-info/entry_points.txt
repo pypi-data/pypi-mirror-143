@@ -1,0 +1,2 @@
+[console_scripts]
+nbstrip = nbstrip:main
