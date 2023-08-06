@@ -1,0 +1,5 @@
+rich
+pyreadr
+prettytable
+pandas
+pytabix
