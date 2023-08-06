@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+sid_first_pack/__init__.py
+sid_first_pack/__main__.py
+sid_first_pack/ola_mundo.py
+sid_first_pack.egg-info/PKG-INFO
+sid_first_pack.egg-info/SOURCES.txt
+sid_first_pack.egg-info/dependency_links.txt
+sid_first_pack.egg-info/requires.txt
+sid_first_pack.egg-info/top_level.txt
