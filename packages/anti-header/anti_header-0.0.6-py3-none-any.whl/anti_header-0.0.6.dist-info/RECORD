@@ -1,0 +1,13 @@
+anti_header/__init__.py,sha256=Y49ww6nm7XPoyWwMm3v02cnisqkNTaKu0QE-I2gT1Fo,5861
+anti_header/exceptions.py,sha256=JC2GBXLC_iHILCDMRYzGgH0B9qzpa-0kkJ0HUod050w,313
+anti_header/headers.py,sha256=ZxdUWJp7BiNDJV_d4fJvj2tKdFK3erVeqiyvraGDBJw,2627
+anti_header/utils/__init__.py,sha256=mbxly2lG0Y2f5YhKmx4xpOY3b9tYA7524SXRdSvu814,226
+anti_header/utils/datatypes.py,sha256=WEnci2znjUmpSWxMKVKTeNGKEvWYLn3Fzx8x2juECeg,2872
+anti_header/utils/http.py,sha256=teaLRCaAmHc09cHaBbby-lzf1erERrnfdCcGBaawnSA,874
+anti_header/utils/log.py,sha256=965sEgmdIwFM5lQHaI2aWhXYKwYyS_hWF_8yWKQJEmc,3541
+anti_header/utils/python.py,sha256=bsqL0Wggtql1PFcthzZeyPfLcLC4y3XxP9wsw8i-b9w,10761
+anti_header-0.0.6.dist-info/LICENSE,sha256=KfZlr5wUFUJ-JbiYjqTL1CP8cwNxGHf-c9JTWZ8w9r8,1087
+anti_header-0.0.6.dist-info/METADATA,sha256=2h8KF4IPyD22FmQS2nr6cHIH7l1fgRKmNcXAKFLL-wg,3241
+anti_header-0.0.6.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+anti_header-0.0.6.dist-info/top_level.txt,sha256=j8xduB5Xxv4PfiL4DN8CoGJ_sk_K6ELridh-3CBTkz8,84
+anti_header-0.0.6.dist-info/RECORD,,
