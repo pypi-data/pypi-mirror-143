@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: arcdico
+Version: 1.0.0
+Summary: Python module to interact with the ArC Instruments Digital Control Module
+Home-page: http://www.arc-instruments.co.uk/products/arc-one/
+License: MPL-2.0
+Author: Spyros Stathopoulos
+Author-email: spyros@arc-instruments.co.uk
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Hardware
+Requires-Dist: pyserial (>=3.0,<4.0)
+Project-URL: Bug Tracker, https://github.com/arc-instruments/arc-dico/issues
+Project-URL: Repository, https://github.com/arc-instruments/arc-dico
+Description-Content-Type: text/markdown
+
+# ArC Digital Control Module
+
+This is a Python wrapper for the ArC Digital Control (ArC DiCo) serial protocol.
+
+## Usage
+
+Usage of the library is fairly straightforward. You only to know the serial
+port where the DiCo is connected to.
+
+```python
+from arcdico import DiCo
+
+dico = DiCo('/dev/ttyUSB0')
+
+# The DiCo will disable all outputs when initially
+# powered on but you can do that programmatically by
+# using the `reset` function.
+dico.reset()
+
+# connect specified pins to the DAC output
+dico.set_state(pins=[1, 8, 22])
+
+# set output voltage at 3.50 V
+dico.set_state(voltage=3.50)
+
+# or do both
+dico.set_state(pins=[1, 8], voltage=2.25)
+```
+
