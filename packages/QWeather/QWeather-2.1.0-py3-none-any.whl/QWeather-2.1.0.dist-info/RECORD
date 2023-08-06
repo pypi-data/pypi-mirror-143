@@ -1,0 +1,11 @@
+qweather/MW_client.py,sha256=Z3h2-ea3CN3niqsdoVD2CHpCuJlN8767E28yGKLHh80,310
+qweather/__init__.py,sha256=5XHYtvXVWJLp-S0KKU-1eyCs-wY6bP5idxHOL7yKfb8,134
+qweather/broker.py,sha256=TOOfLO8woK9AUDAVEoZOwOuiGHDLo99s1em86_inaiM,13699
+qweather/client.py,sha256=rNfLNjJY5J_J48m8CTujjr3Tgi-Tlc0JZUkJL-x53pw,11812
+qweather/constants.py,sha256=0j4qIrQTaec-zbO7s5ivb4wK67z6Mt_Vraj1aiH6SYI,633
+qweather/server.py,sha256=5AJF7ltPzTowVLm1erBWMXBRR_c-1nGXtPrWsgss6_s,6111
+QWeather-2.1.0.dist-info/LICENSE.txt,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+QWeather-2.1.0.dist-info/METADATA,sha256=miNTcx2VUhDBt9S81T0wwGbhe79v1fUYjHW2zW4CY3E,539
+QWeather-2.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+QWeather-2.1.0.dist-info/top_level.txt,sha256=4XWhdyNLJujngdKnxlFS9NJaQhlV8EGYt-AMXYFhIf8,9
+QWeather-2.1.0.dist-info/RECORD,,
