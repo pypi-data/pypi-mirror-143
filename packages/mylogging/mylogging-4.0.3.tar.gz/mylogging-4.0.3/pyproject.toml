@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+addopts = "--doctest-modules -x --nbmake"
+usefixtures = "setup_tests_fixture"
+doctest_optionflags = "NORMALIZE_WHITESPACE NUMBER ELLIPSIS IGNORE_EXCEPTION_DETAIL"
+norecursedirs = [
+    "dist",
+    "build",
+    "venv"
+]
+
+[tool.black]
+line-length = 110
