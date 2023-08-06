@@ -1,0 +1,7 @@
+pytest
+numpy
+scikit-image
+pandas
+imagecodecs
+sphinx
+holoviews
