@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: icndb-sdk
+Version: 0.0.2
+Summary: A simple Python SDK for some Chuck Norris jokes
+Home-page: https://github.com/JulioPDX/icndb-sdk
+Author: Julio Perez
+Author-email: julio@juliopdx.com
+License: MIT
+Description: # icndb-sdk
+        
+        Unofficial SDK for some Chuck Norris jokes. Please see `main.py` for a few examples in the docs!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
