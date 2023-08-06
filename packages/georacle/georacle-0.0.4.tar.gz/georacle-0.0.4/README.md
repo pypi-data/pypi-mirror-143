@@ -1,0 +1,84 @@
+<h1 align="center">PyGeoracle - Georacle Python SDK</h1>
+
+<p align="center">
+  <img width="25%" height="25%" src="https://developer.georacle.io/img/logo.png" />
+</p>
+
+<h4 align="center">
+  <a href="https://developer.georacle.io/docs/overview/intro">Getting Started</a> |
+  <a href="https://developer.georacle.io/docs/tutorials/hello-world">Tutorials</a> |
+  <a href="https://developer.georacle.io/docs/api/area/">API Reference</a>
+</h4>
+
+[![PyPI version](https://badge.fury.io/py/georacle.svg)](https://badge.fury.io/py/georacle)
+[![Python versions](https://img.shields.io/pypi/pyversions/georacle.svg)](https://pypi.python.org/pypi/georacle)
+[![Documentation Status](https://readthedocs.org/projects/pygeoracle/badge/?version=latest)](https://pygeoracle.readthedocs.io/en/latest/?badge=latest)
+[![CircleCI](https://circleci.com/gh/georacleapi/pygeoracle/tree/main.svg?style=shield)](https://circleci.com/gh/georacleapi/pygeoracle/tree/main)
+[![Discord](https://img.shields.io/badge/Georacle-%237289DA.svg?style=flat&logo=discord&logoColor=white)](https://dsc.gg/georacle)
+
+<hr/>
+
+### Quickstart
+
+```
+$ pip install --user georacle
+```
+
+### Usage
+
+```python
+
+from georacle import Georacle
+
+# Obtain an api key at https://georacle.io
+g = Georacle("API_KEY")
+
+geometry = g.geometry(id, decode=True)
+print(geometry)
+
+geometry_count = g.geometry_count(id, decode=True)
+print(geometry_count)
+
+assert len(geometry) == geometry_count
+```
+
+### Local Development
+
+```
+# Clone this repository
+$ git clone https://github.com/georacleapi/pygeoracle.git && cd pygeoracle
+
+# Set up a local dev environment
+$ pip install --user virtualenv
+$ virtualenv -p python3 venv
+$ . venv/bin/activate
+
+# Install dependencies
+$ pip install -r requirements.txt
+
+# Run tests
+$ python -m pytest tests/
+```
+
+## Contributing
+Georacle welcomes community contributions. When contributing, please follow the [community code of conduct](CODE_OF_CONDUCT.md).
+
+Read our [contributing guide](CONTRIBUTING.md) to learn more about our development process.
+
+In general, we follow the **fork-and-pull** Git workflow:
+
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull request** so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+
+## Contact
+
+- [Discord](https://dsc.gg/georacle):
+  - `#general` for those using Georacle.
+  - `#contributors` for those wanting to contribute to Georacle.
+- [@georacleapi](https://twitter.com/georacleapi) on Twitter
+- [GitHub Issues](https://github.com/georacleapi/pygeoracle/issues)
