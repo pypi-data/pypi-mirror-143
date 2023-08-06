@@ -1,0 +1,9 @@
+baikalnlpy/__init__.py,sha256=HJP4IuatDarxjLwu8xnf_T7wgWfReN5FBqBvftG3beA,1441
+baikalnlpy/_custom_dict.py,sha256=9sFiOACXBOiK-IA_z5GDHgoATdAdP58LsSkx7SC8_x0,3405
+baikalnlpy/_custom_dict_client.py,sha256=LrrJDQpDZxh0Nlv-jzh3RlV4PzBke6zt9-vUsVdT5fc,3740
+baikalnlpy/_lang_service_client.py,sha256=X5D8ITCDO3KMWVhK6cmkAsHk76Kl_YacmXSklVJRJ4k,1163
+baikalnlpy/_tagger.py,sha256=zdkBCGEl5kV1r5De9M8ttGj9Kc7QHEcPTZsaGvBIlcY,7524
+baikalnlpy-1.0.0.dist-info/LICENSE,sha256=Ob67TW2Jhj8KXDH001iZZ9MvhwYcngyx4R910L3KAWY,1518
+baikalnlpy-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+baikalnlpy-1.0.0.dist-info/METADATA,sha256=P0l0kneMRLtcO1HCrA6nlqOlzQoRkdiKreH9Hwc6dgI,3721
+baikalnlpy-1.0.0.dist-info/RECORD,,
