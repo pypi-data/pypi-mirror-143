@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cosipy
+Version: 0.0.1
+Summary: High-level analysis for the COSI telescope data
+Home-page: https://gitlab.com/COSI-telescope/COSIpy
+Author: COSI Team
+Author-email: imc@umd.edu
+License: UNKNOWN
+Description: # COSIpy
+        
+        Analysing COSI data by fitting background + sky components.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

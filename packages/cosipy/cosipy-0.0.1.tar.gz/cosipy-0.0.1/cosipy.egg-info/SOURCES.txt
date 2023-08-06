@@ -1,0 +1,11 @@
+README.md
+setup.py
+cosipy/__init__.py
+cosipy/_version.py
+cosipy.egg-info/PKG-INFO
+cosipy.egg-info/SOURCES.txt
+cosipy.egg-info/dependency_links.txt
+cosipy.egg-info/requires.txt
+cosipy.egg-info/top_level.txt
+cosipy/response/__init__.py
+cosipy/response/spec_response.py
