@@ -1,0 +1,10 @@
+plisio/__init__.py,sha256=B-pQCBRhNJzHb2cuxc8UU_63nEG939wwevOm3ItWuTA,1161
+plisio/plisio_client.py,sha256=4TWmK6-4e-a5F368wIt4Mvck7Tg_gxbPahypnJLVi7g,22068
+plisio/plisio_enums.py,sha256=TaHlGNrEVKY2K3wftatKYznDlK2Dj4isGUPEiVg8k7g,6016
+plisio/plisio_exceptions.py,sha256=km25BzJ8S5SSLKR0qKNYPqtvDaHg-g4abRPEXkvY8z8,3475
+plisio/plisio_models.py,sha256=SgI5eDZX74VVMbKLulZy9XPZ4xXibIgu3dejiCZK2a0,21214
+plisio-1.0.1.dist-info/LICENSE.txt,sha256=JGxL61TFt8SN8ovPFVEwyT9_nm7sJXz2AT2WgjplwA0,1076
+plisio-1.0.1.dist-info/METADATA,sha256=Ul2FsxkcuRNVNs1YTMi4fhzNl5zQzuJI9O6c_H18_v0,15365
+plisio-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+plisio-1.0.1.dist-info/top_level.txt,sha256=LhPNepPPD-_lNiCsmR-H9ttRYeIKZ-NZopMFFlJNUfM,7
+plisio-1.0.1.dist-info/RECORD,,
