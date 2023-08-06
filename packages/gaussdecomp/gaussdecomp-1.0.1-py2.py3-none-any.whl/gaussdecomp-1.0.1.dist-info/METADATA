@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gaussdecomp
+Version: 1.0.1
+Summary: Gaussian Decomposition
+Home-page: https://github.com/dnidever/gaussdecomp
+Author: David Nidever
+Author-email: dnidever@montana.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: astropy (>=4.0)
+Requires-Dist: scipy
+Requires-Dist: dlnpyutils (>=1.0.3)
+
+UNKNOWN
+
+
