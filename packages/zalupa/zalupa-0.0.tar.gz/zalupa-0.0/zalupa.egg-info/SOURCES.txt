@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+zalupa/__init__.py
+zalupa/zalupa.py
+zalupa.egg-info/PKG-INFO
+zalupa.egg-info/SOURCES.txt
+zalupa.egg-info/dependency_links.txt
+zalupa.egg-info/not-zip-safe
+zalupa.egg-info/top_level.txt
