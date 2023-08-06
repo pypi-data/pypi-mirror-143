@@ -1,0 +1,4 @@
+numpy>=1.16
+pandas>=0.22
+pvlib>=0.9
+iapws>=1.5
