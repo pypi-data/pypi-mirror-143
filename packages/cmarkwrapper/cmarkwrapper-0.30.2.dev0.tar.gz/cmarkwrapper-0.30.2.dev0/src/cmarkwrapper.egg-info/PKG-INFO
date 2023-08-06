@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cmarkwrapper
+Version: 0.30.2.dev0
+Summary: cmarkwrapper是一个基于paka.cmark的cmark封装，更加符合使用习惯。
+Home-page: UNKNOWN
+License: BSD License
+Project-URL: Source Code, https://github.com/yangfan9702/cmarkwrapper
+Platform: any
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
