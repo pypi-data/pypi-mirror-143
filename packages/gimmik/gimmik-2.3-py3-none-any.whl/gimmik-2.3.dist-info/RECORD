@@ -1,0 +1,14 @@
+gimmik/__init__.py,sha256=6RuUohBhkr1lhywi_8r9vIbb6Mob66Nr1-EQ-Yrqco0,1380
+gimmik/_version.py,sha256=oP2clA-4mEU-LpgGYN_syOC9WOGYHXP6eGsHX26gLbk,45
+gimmik/kernels/c-omp.mako,sha256=bcHkDpP-KosNQ96HmogBlyLsmNpXlwSy_pisiqzGNzc,783
+gimmik/kernels/c.mako,sha256=3U6VDV2hWRDgd9JWjEqCwQ4IhwwssD5JXyEITp4RftQ,756
+gimmik/kernels/cuda.mako,sha256=Xo6Oby_KOwLtrzBowwziXC6m9C7LQ2KUIeygDRGe0vg,794
+gimmik/kernels/hip.mako,sha256=6MJdDuL61-f4RNsJWyOWmC9aB3T4euka3iMBaVCacHU,817
+gimmik/kernels/ispc.mako,sha256=sTv7uxEB4IrbXEuA_ZrrnSSlqvyW5BeEPzJbnzBPdrI,784
+gimmik/kernels/opencl.mako,sha256=x-mRpBMcKUdNhAzOQhyYi6Z_TslySNCFvyfsF9aNxHE,908
+gimmik-2.3.dist-info/AUTHORS,sha256=oon-RI8WByfu9AXolGsxedT5chiPtGohzevuTxFHtfA,93
+gimmik-2.3.dist-info/LICENSE,sha256=FvYDWTQ6uzrPnfEQxkFeeOBHxzY56wWhBHJX_tSg0_g,1511
+gimmik-2.3.dist-info/METADATA,sha256=OrZ02bh-cB1-qLJ86BdKj6OEweQF156vnLt21u3b8dM,1009
+gimmik-2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gimmik-2.3.dist-info/top_level.txt,sha256=-Z3BAy33EQay5LE_QG4GYGWYODTVoZrGI3dnhUdHg9k,7
+gimmik-2.3.dist-info/RECORD,,
