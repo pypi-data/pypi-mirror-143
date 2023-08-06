@@ -1,0 +1,3 @@
+[console_scripts]
+twc_square = twc_square:get_owl_dl_list
+
