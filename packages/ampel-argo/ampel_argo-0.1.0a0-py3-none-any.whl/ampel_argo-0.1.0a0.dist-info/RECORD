@@ -1,0 +1,9 @@
+ampel/argo/api.py,sha256=GSpOypWQXOORZLacrlrfOcv6j_K_GgPtrQMfpbPPa_E,1220
+ampel/argo/app.py,sha256=nFfdQcTRdx9C3-nyDu0J7XxoHtEgwG-HtOuuVZVHRMg,2230
+ampel/argo/auth.py,sha256=Pd0Ij00DcXeYPo-kTNHd_xd2QuNH5kjImPBlmYPjauc,1317
+ampel/argo/job.py,sha256=FYe-E-cQ0UbOeIMs-CWmUXWJ1dbq07HbGDd2ueNWRS0,7882
+ampel/argo/models.py,sha256=G4-iyADXlSrbHoTSsapdtFHcobCXEkQ0kZOfXK4NWW0,324
+ampel/argo/settings.py,sha256=sOM2nPLpD3hQFFfZJyfHuTkLvdl0j5HxMG4_Kv4Oz6U,930
+ampel_argo-0.1.0a0.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+ampel_argo-0.1.0a0.dist-info/METADATA,sha256=DDENOQch2m5X_eygUEmflWlGNnFI9oRYDPCVuBrIb9E,376
+ampel_argo-0.1.0a0.dist-info/RECORD,,
