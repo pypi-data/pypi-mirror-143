@@ -1,0 +1,10 @@
+pypedrive_api/__init__.py,sha256=UjngrFL_sl3TkS14HxUV4I9YgBnRbtY0TSWpxFLXAdc,73
+pypedrive_api/api.py,sha256=v8SaE8SC6GOcOHqGvWqtvc_9MWCUXlRmRGRvOfyqgBo,11319
+pypedrive_api/objects.py,sha256=nSALQcko9dXKqIofeSBuAsXYq9lMVW9cPSIP2PQNrQM,2232
+pypedrive_async/__init__.py,sha256=UjngrFL_sl3TkS14HxUV4I9YgBnRbtY0TSWpxFLXAdc,73
+pypedrive_async/api.py,sha256=SsynLsGXZxH_AXEve_EW7Q4SvODHZ-h3WoLZYXIBA1o,11321
+pypedrive_async/objects.py,sha256=nSALQcko9dXKqIofeSBuAsXYq9lMVW9cPSIP2PQNrQM,2232
+pypedrive_async-0.2.3.dist-info/METADATA,sha256=DguszdXs_SdzjkHhBctSv9tXbRz9kP-pRzccs6dwuA8,552
+pypedrive_async-0.2.3.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+pypedrive_async-0.2.3.dist-info/top_level.txt,sha256=qM1U8rvGihYQg4dYfV-11jNn3cPnjiPvOy9w1VQ2bf0,16
+pypedrive_async-0.2.3.dist-info/RECORD,,
