@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pygifmaker/__init__.py
+pygifmaker/gifmaker.py
+pygifmaker.egg-info/PKG-INFO
+pygifmaker.egg-info/SOURCES.txt
+pygifmaker.egg-info/dependency_links.txt
+pygifmaker.egg-info/not-zip-safe
+pygifmaker.egg-info/requires.txt
+pygifmaker.egg-info/top_level.txt
