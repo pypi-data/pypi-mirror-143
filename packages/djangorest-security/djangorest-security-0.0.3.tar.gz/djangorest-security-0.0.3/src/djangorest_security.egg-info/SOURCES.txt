@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/djangorest_security/__init__.py
+src/djangorest_security.egg-info/PKG-INFO
+src/djangorest_security.egg-info/SOURCES.txt
+src/djangorest_security.egg-info/dependency_links.txt
+src/djangorest_security.egg-info/top_level.txt
+src/djangorest_security/authenticators/__init__.py
+src/djangorest_security/authenticators/shared_key.py
+src/djangorest_security/decorators/__init__.py
+src/djangorest_security/decorators/authorize.py
