@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: django-fakejira-final-app
+Version: 0.1
+Summary: Fakejira installable django app
+Home-page: https://github.com/AlimardanAhmadov/fakejira/tree/fakebranch
+Author: Fakejira
+Author-email: yourname@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+License-File: LICENSE
+
+fakejira-testing-app
+====================
+
+This is sample code used in the Real Python article [Writing an Installable Django App](???). The article describes how to take an app from an existing Django project and make it a stand-alone installable package avilable on PyPI.
+
+Installable App
+---------------
+
+This app models a list of items on a receipt. Each item has a description and a cost. A receipt may reference multiple items.
+
+This app can be installed and used in your django project by:
+
+.. code-block:: bash
+
+    $ pip install fakejira-testing-app
+
+
+Edit your `settings.py` file to include `'fakejira1'` in the `INSTALLED_APPS`
+listing.
+
+.. code-block:: python
+
+    INSTALLED_APPS = [
+        ...
+
+        'fakejira1',
+    ]
+
+
+Edit your project `urls.py` file to import the URLs:
+
+
+.. code-block:: python
+
+    url_patterns = [
+        ...
+
+        path('/', include('fakejira1.urls')),
+    ]
+
+
+Finally, add the models to your database:
+
+
+.. code-block:: bash
+
+    $ ./manage.py migrate fakejira1
+
+
+

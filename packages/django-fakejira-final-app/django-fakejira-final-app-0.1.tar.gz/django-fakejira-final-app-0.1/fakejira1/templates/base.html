@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fakejira Admin</title>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+  <link rel="stylesheet" href="/static/main.css">
+  
+</head>
+
+<header role="banner">
+  <h1>Admin Panel</h1>
+  <ul class="utilities">
+    <br>
+    <li class="logout warn"><a href="{% url 'logout_view' %}">Log Out</a></li>
+  </ul>
+</header>
+
+<body>
+  <nav role='navigation'>
+    <ul class="main">
+      <li class="dashboard"><a href="/">Dashboard</a></li>
+      <li class="users"><a href="{% url 'manage_users' %}">Manage Users</a></li>
+      <li class="edit"><a href="{% url 'shippings' %}">Shippings</a></li>
+    </ul>
+  </nav>
+  
+  <main role="main">
+    {% block content %}
+    <section class="panel important">
+      <table>
+          <tbody>
+            <tr>
+              <td><a href="{% url 'manage_users' %}">Users</a></td>
+            </tr>
+            <tr>
+              <td><a href="{% url 'shippings' %}">Shippings</a></td>
+            </tr>
+          </tbody>
+      </table> 
+    </section>
+    {% endblock %}
+  </main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

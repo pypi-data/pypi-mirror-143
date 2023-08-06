@@ -1,0 +1,7 @@
+{% for ship in results %}
+<tr>
+    <td> <a href="{% url 'view_shipping' ship.id %}">{{ ship.product }}</a></td>
+    <td>{{ ship.customer }}</td>
+    <td>{{ ship.shipping_status }}</td>
+</tr>
+{% endfor %}
