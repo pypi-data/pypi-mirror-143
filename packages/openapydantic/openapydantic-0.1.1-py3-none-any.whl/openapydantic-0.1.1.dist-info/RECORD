@@ -1,0 +1,8 @@
+openapydantic/__init__.py,sha256=37kGn77sewmwWdBoTggPwoANaGxc5ry2rVWI2JedBhE,896
+openapydantic/common.py,sha256=ZAvDLoproZq1Qy2ydU5HQj1AHwIokoYuKMIKPwNsPbA,1446
+openapydantic/openapi_302.py,sha256=xJpfZi4o5cuZOUR2GztOstXFQzDS8q3-4N3tKh4bCjc,13695
+openapydantic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openapydantic-0.1.1.dist-info/LICENSE,sha256=pRjO2MnU_sjMBuzb0MMSA33Q_2a6rGhoR1ScmkwAFTc,1126
+openapydantic-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+openapydantic-0.1.1.dist-info/METADATA,sha256=SNrQIHHGIfJwvCpsvLJLWfAzDFXf5YL8mThVK9p9baE,2494
+openapydantic-0.1.1.dist-info/RECORD,,
