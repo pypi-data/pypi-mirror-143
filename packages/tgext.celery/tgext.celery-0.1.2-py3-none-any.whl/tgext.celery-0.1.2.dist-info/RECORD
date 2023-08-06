@@ -1,0 +1,11 @@
+tgext.celery-0.1.2-py3.10-nspkg.pth,sha256=-b3QMPrv3MDpQrbx-2WbVK1G0nDM8awrMd8nB3ZD8iE,534
+tgext/celery/__init__.py,sha256=_EpWW4nPY_EC_7qidiSYouv2KPfs1as8_AsIX9tmQt8,2098
+tgext/celery/celery.py,sha256=8T-3OshFlueXwLNuJeu6oSYUeV4DJxw1qTNk04r-4I4,587
+tgext/celery/commands.py,sha256=KVuahTHD-lm1ZpOwcUXudWsoEQ00XfMf0Bw1uBLrKnc,2876
+tgext.celery-0.1.2.dist-info/LICENSE,sha256=R87qbqrx_ZXo0Oy4ixripBHVsWtPZMlYJNgIfTjbsR8,1086
+tgext.celery-0.1.2.dist-info/METADATA,sha256=8KKDZhqRNPXkA82pSz4-HNdTHK8WIy_g75hRUHqnUMo,3781
+tgext.celery-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tgext.celery-0.1.2.dist-info/entry_points.txt,sha256=Jr-E5ta8DFN1Q6YCPYqSC6t7MWTfsD54gjmZyy9NPjU,129
+tgext.celery-0.1.2.dist-info/namespace_packages.txt,sha256=9GOdqCqmKLB46HuPrbPBKzHTdFxg1i1NN_HaZm9w_6Q,6
+tgext.celery-0.1.2.dist-info/top_level.txt,sha256=9GOdqCqmKLB46HuPrbPBKzHTdFxg1i1NN_HaZm9w_6Q,6
+tgext.celery-0.1.2.dist-info/RECORD,,
