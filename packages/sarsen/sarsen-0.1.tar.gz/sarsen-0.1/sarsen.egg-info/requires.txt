@@ -1,0 +1,7 @@
+attrs
+click
+numpy
+rioxarray
+scipy
+xarray>=0.20.2
+xarray-sentinel>=0.4
