@@ -1,0 +1,10 @@
+flask~=2.0
+Flask-SQLAlchemy~=2.5
+Flask-WTF~=1.0
+Flask-Login~=0.5
+Flask-Migrate~=3.1
+mysqlclient~=2.1
+python-dotenv~=0.19
+
+[dev]
+markdown~=3.3
