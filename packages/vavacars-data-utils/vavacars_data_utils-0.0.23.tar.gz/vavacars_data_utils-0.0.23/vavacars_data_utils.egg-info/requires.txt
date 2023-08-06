@@ -1,0 +1,4 @@
+pandas
+PyYAML>=6.0
+requests
+sqlalchemy
