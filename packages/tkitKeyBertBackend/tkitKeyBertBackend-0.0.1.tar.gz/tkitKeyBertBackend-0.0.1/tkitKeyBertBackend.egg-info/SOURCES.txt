@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tkitKeyBertBackend/TransformersBackend.py
+tkitKeyBertBackend/__init__.py
+tkitKeyBertBackend.egg-info/PKG-INFO
+tkitKeyBertBackend.egg-info/SOURCES.txt
+tkitKeyBertBackend.egg-info/dependency_links.txt
+tkitKeyBertBackend.egg-info/requires.txt
+tkitKeyBertBackend.egg-info/top_level.txt
