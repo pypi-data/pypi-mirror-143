@@ -1,0 +1,20 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+nbdev example/__init__.py
+nbdev example/_nbdev.py
+nbdev example/card.py
+nbdev_example/__init__.py
+nbdev_example/_nbdev.py
+nbdev_example/card.py
+nbdev_example/deck.py
+nbdev_example.egg-info/PKG-INFO
+nbdev_example.egg-info/SOURCES.txt
+nbdev_example.egg-info/dependency_links.txt
+nbdev_example.egg-info/entry_points.txt
+nbdev_example.egg-info/not-zip-safe
+nbdev_example.egg-info/requires.txt
+nbdev_example.egg-info/top_level.txt
