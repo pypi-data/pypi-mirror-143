@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+pipfile_upgrade/__init__.py
+pipfile_upgrade/__main__.py
+pipfile_upgrade/argument_parser.py
+pipfile_upgrade/dataclasses.py
+pipfile_upgrade/errors.py
+pipfile_upgrade/pipfile.py
+pipfile_upgrade/tomlfile.py
+pipfile_upgrade.egg-info/PKG-INFO
+pipfile_upgrade.egg-info/SOURCES.txt
+pipfile_upgrade.egg-info/dependency_links.txt
+pipfile_upgrade.egg-info/entry_points.txt
+pipfile_upgrade.egg-info/requires.txt
+pipfile_upgrade.egg-info/top_level.txt

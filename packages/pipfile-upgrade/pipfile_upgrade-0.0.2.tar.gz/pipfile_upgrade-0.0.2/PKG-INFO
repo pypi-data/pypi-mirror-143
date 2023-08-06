@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pipfile_upgrade
+Version: 0.0.2
+Summary: Software for upgrading pipfile to latest pypi version
+Home-page: https://github.com/MindNumbing/pipfile-upgrade
+Author: MindNumbing
+Author-email: its.all@mindnumbing.work
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/MindNumbing/pipfile-upgrade/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# pipfile-upgrade
+
+A small package to upgrade your pipfile dependencies to the latest shown in pypi
+
+
