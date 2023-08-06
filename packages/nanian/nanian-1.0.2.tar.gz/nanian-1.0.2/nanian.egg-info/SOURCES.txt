@@ -1,0 +1,5 @@
+setup.py
+nanian.egg-info/PKG-INFO
+nanian.egg-info/SOURCES.txt
+nanian.egg-info/dependency_links.txt
+nanian.egg-info/top_level.txt
