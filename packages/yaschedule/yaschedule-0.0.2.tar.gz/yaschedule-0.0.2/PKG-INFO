@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: yaschedule
+Version: 0.0.2
+Summary: Lib for getting schedule data from Yandex Schedule API
+Home-page: https://github.com/StannisGr/yaschedule
+Author: StannisGr
+Author-email: bvc344@gmail.com
+License: Apache License 2.0
+Keywords: yandex,schedule,api
+Platform: any
+License-File: LICENSE
+
+UNKNOWN
+
