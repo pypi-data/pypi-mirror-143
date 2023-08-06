@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: cemids
+Version: 0.0.1
+Summary: This package provides a Python Toolbox with a set of functions to assist in the management of the CEMI Data Science project
+Home-page: https://github.com/goyoambrosio/cemids
+Author: G. Ambrosio-Cestero
+Author-email: gambrosio@malaga.eu
+License: MIT
+Keywords: data science public administration
+Platform: Windows
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru
+Requires-Dist: pandas
+Provides-Extra: full
+Requires-Dist: matplotlib (>=3) ; extra == 'full'
+Requires-Dist: jupyter ; extra == 'full'
+Provides-Extra: interactive
+Requires-Dist: matplotlib (>=3) ; extra == 'interactive'
+Requires-Dist: jupyter ; extra == 'interactive'
+
+# CEMI Data Science Toolbox #
+
+[![PyPI](https://img.shields.io/pypi/v/cemids)](https://pypi.org/project/cemids/)
+
+Coming soon ...
+
+
