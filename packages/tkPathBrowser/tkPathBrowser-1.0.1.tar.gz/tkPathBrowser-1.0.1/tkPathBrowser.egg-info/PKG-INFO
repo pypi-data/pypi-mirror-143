@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tkPathBrowser
+Version: 1.0.1
+Summary: tkinter路径选择小插件/Tkinter path selection widget
+Home-page: https://yangguang-gongzuoshi.top/wry/wp
+Author: RuoyuWang
+Author-email: wry_beiyong07@outlook.com
+License: MIT License
+Platform: UNKNOWN
+Requires: tkPlus
+
+tkinter路径选择小插按行布可以浏览文件/Tkinter path selection small insert can browse files by row
+
