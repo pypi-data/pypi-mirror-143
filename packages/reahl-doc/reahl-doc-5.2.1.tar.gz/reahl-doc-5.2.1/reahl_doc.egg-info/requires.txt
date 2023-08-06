@@ -1,0 +1,15 @@
+plotly<5.6.99999,>=5.1.0
+pytest>=3.0
+reahl-commands<5.3,>=5.2
+reahl-component<5.3,>=5.2
+reahl-dev<5.3,>=5.2
+reahl-domain<5.3,>=5.2
+reahl-domainui<5.3,>=5.2
+reahl-paypalsupport<5.3,>=5.2
+reahl-sqlalchemysupport<5.3,>=5.2
+reahl-web-declarative<5.3,>=5.2
+reahl-web<5.3,>=5.2
+setuptools>=32.3.1
+
+[pillow]
+Pillow<7.1.999,>=2.5
