@@ -1,0 +1,15 @@
+fichub_cli_metadata/__init__.py,sha256=FiMbyFcidkBA-e4sp403475cW_ARZGjXYXnm5hPIxv4,718
+fichub_cli_metadata/cli.py,sha256=IUZ3tgstfFc4pmmw29gexOsycPZzzYVrR94OH0O_XPQ,5583
+fichub_cli_metadata/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fichub_cli_metadata/utils/crud.py,sha256=E2vinWHnmcow166WF1Rwdy0gp8uRvB5FEHgMPuz6UXw,7992
+fichub_cli_metadata/utils/fetch_data.py,sha256=HorROPbyQjD3OQbzckRhkahBDRmWeEPFv8b2kmD2imM,17311
+fichub_cli_metadata/utils/fichub.py,sha256=YAXa6_5FRluxCf-5mULic1PlYlmnCaSivwu8wTVGwMA,4926
+fichub_cli_metadata/utils/logging.py,sha256=TS5l3oviqb3KIYno820D9vS-V7gVl_ZojeuAW22ken4,1107
+fichub_cli_metadata/utils/models.py,sha256=ujkAL9LLXhVy7XkrluohnLSal7ito1JCgfp3Qk8zXac,1362
+fichub_cli_metadata/utils/processing.py,sha256=oh0OUYkPzpTv-g71cOD7ikKPL6cbCrDIykGjsyJDu8A,5142
+fichub_cli_metadata-0.3.1.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fichub_cli_metadata-0.3.1.dist-info/METADATA,sha256=NMpgPwrm39hV6p2scJNFURCJyMlIS8EGz2im7ywcJPc,4376
+fichub_cli_metadata-0.3.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fichub_cli_metadata-0.3.1.dist-info/entry_points.txt,sha256=-93r2dYb_oN-Zn1uOzG6XbGog9GIGcPiVhjzmCU-quE,68
+fichub_cli_metadata-0.3.1.dist-info/top_level.txt,sha256=a79IBX9z9gBggq3CWd017u3WbP7pEQ1n3e5lK0VzC44,20
+fichub_cli_metadata-0.3.1.dist-info/RECORD,,
