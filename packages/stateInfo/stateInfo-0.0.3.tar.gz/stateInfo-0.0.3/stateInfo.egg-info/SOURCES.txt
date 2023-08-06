@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+stateInfo/__init__.py
+stateInfo/stateInfo.py
+stateInfo.egg-info/PKG-INFO
+stateInfo.egg-info/SOURCES.txt
+stateInfo.egg-info/dependency_links.txt
+stateInfo.egg-info/top_level.txt
