@@ -1,0 +1,10 @@
+ttscorpus/__init__.py,sha256=kRjR9yhUO6DisRVKN4fAyC_s1uifiYX8D74t7aBULbE,21
+ttscorpus/source/__init__.py,sha256=czczdPtRCDn1HQgfZ-Ypvldu7x9rlt3m-UjiKSR-2ks,129
+ttscorpus/source/android_tts.py,sha256=KdCFOL9M-y8qX0TpgoWterXgfv1nv5rM7mETVv0oc94,442
+ttscorpus/source/google_cloud.py,sha256=iqapMvpniKduH2Hqprc9S9YnfXKJLywmbimswwezhoE,1638
+ttscorpus/source/google_tts.py,sha256=F8_60_bbQ3ya3MRQO9xS_8mGo5VCAL4faix48tjAt9k,224
+ttscorpus/source/mac.py,sha256=JrL3muJCyUQEBYIYh_DRAeW8BdLIF8DbB5mY94kIDX0,1338
+ttscorpus-0.0.2.dist-info/METADATA,sha256=Y6DrNxID5FWYRfcadVsY0-Qic-WBheVfVP1FMJHieaE,1892
+ttscorpus-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ttscorpus-0.0.2.dist-info/top_level.txt,sha256=Hhl65UHrq6lBlItKhq49aeMeU6WzLu7cp6-ai0QqZuY,10
+ttscorpus-0.0.2.dist-info/RECORD,,
