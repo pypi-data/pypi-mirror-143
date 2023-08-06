@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+src/aiotaskq/__init__.py
+src/aiotaskq/__main__.py
+src/aiotaskq/constants.py
+src/aiotaskq/exceptions.py
+src/aiotaskq/main.py
+src/aiotaskq/worker.py
+src/aiotaskq.egg-info/PKG-INFO
+src/aiotaskq.egg-info/SOURCES.txt
+src/aiotaskq.egg-info/dependency_links.txt
+src/aiotaskq.egg-info/entry_points.txt
+src/aiotaskq.egg-info/requires.txt
+src/aiotaskq.egg-info/top_level.txt
