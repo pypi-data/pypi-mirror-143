@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: natorbs
+Version: 1.0.1
+Summary: quantum-chemical utility for computing natural orbitals
+Home-page: https://tungsten.ch.uj.edu.pl/~mradon/natorbs
+Author: Mariusz Radon
+Author-email: mradon@chemia.uj.edu.pl
+License: BSD-3-Clause
+Download-URL: https://tungsten.ch.uj.edu.pl/downloadmanager/click.php?id=natorbs-1.0.1
+Description: 
+        Natorbs computes natural or natural-spin orbitals 
+        and natural orbitals for chemical valence (NOCV)
+        based on the canonical HF/DFT orbitals interfaced
+        either through cclib or Molden format.
+        
+Keywords: quantum chemistry,natural orbitals,nocv
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

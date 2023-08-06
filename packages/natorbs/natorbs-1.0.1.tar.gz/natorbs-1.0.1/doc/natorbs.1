@@ -1,0 +1,142 @@
+.TH NATORBS 1
+
+.SH NAME
+Natorbs \- program for computing natural/spin orbitals
+
+.SH SYNOPSIS
+.B natorbs
+[options] \fIfilename\fP
+
+.SH DESCRIPTION
+\fINatorbs\fP is a utility for post-processing the results of quantum-chemical
+calculations. It computes natural/natural spin orbitals based
+on canonical unrestricted (UHF-type) orbitals resulting from HF or DFT
+calculations. It can also compute natural orbitals for chemical
+valence (NOCVs) based on the orbitals of a molecule and its constituing
+fragments. The input data are read using cclib or from Molden format
+file, the resulting orbitals are saved in Molden format.
+
+.SH ARGUMENTS
+.PP
+Single mandatory argument (\fIfilename\fP) is the name of the file
+containg molecule specification (i.e. geometry, basis set and
+molecular orbitals) in \fIMolden Format\fP or any format that \fIcclib\fP can parse. In case of NOCV (--nocv) 
+it must be followed by a list of analogous (\fIMolden Format\fP or \fIcclib\fP) files for 
+all the fragments. The ordering of fragments and ordering of atoms 
+in the fragments is important and must agree with their ordering in the molecule:
+
+1 2 3 4 5   <---    1 2    |  3  4  5
+(molecule)       (fragm 1)   (fragm 2)
+
+
+.SH RESULTS
+\fINatorbs\fP compute natural/spin or NOCV orbitals and writes them in
+\fIMolden Format\fP. The output file name is specified with the -o
+option, the default name is derived from the \fIfilename\fP by adding
+`.natorbs.out' suffix. The default behavior is to compute natural 
+orbitals based on UHF-type orbitals.
+
+.SH OPTIONS
+.l
+.PP
+\fINatorbs\fP accepts the following options:
+.TP 8
+.B \-h, \-\-help
+Display the lists of all commandline options.
+.TP 8
+.B \-\-version
+Display the version info and exit
+.TP 8
+.B \-v, \-\-verbose
+Display verbose messages on \fIstdout\fP.
+.TP 8
+.B \-g, \-\-debug
+Display very detailed debug messages on \fIstdout\fP.
+.TP 8
+.B \-s, \-\-spin
+Calculate natural spin orbitals (spin density orbitals)
+instead of (default) natural orbitals.
+. TP 8
+.B \-\-nocv
+Calculate NOCV for a given molecule with respect to 
+the corresponding promolecule(fragment[, fragment2, ...]). 
+The order of the input files on the command line:  molecule, fragment1 [, fragment2, ...]
+. TP 8
+.B \-o outfile, \-\-output=outfile
+Write the result to `outfile'. By default they are written to \fIinputfile\fP.natorbs.out.
+.TP 8
+.B \-t \fI<value>\fP, \-\-treshold=\fI<value>\fP
+Set treshold for saving output orbitals: orbitals whose
+\fIoccupation number\fP do not differ more than \fI<value>\fP from
+``closed shell'' values 0 (zero) or 2 (two) will not saved
+Default for \fI<value>\fP is 0.1. Setting \fI<value>\fP to 0.0 (zero) 
+will pring all
+orbitals. A reasonable treshold which can greatly reduce
+the number of printed orbitals is 0.1-0.01.
+.TP 8
+.B \-1, \-\-ignore_symmetry, \-\-ignore-symmetry
+By default \fBnatorbs\fP recognizes symmetry labels of input orbitals and computes
+resulting natural/spin orbitals per each irrep separately.
+This option makes it to ignore the symmetry labels of the input orbitals, which
+is useful if these labels are wrong and should be ignored for some other reason. 
+
+.SH EXAMPLE
+\fBnatorbs\fP -t 0.05 --spin --output=\fIspinorbs\fP \fIuhfmo\fP 
+
+Input molecular orbitals are taken from \fIuhfmo\fP, spin
+orbitals will be computed and written to \fIspinorbs\fP.
+A non standard treshold (0.05) for saving the generated spin orbitals
+will be used.
+
+.SH SEE ALSO
+
+Some (experimental) options of the program
+may not be listed above. They can be, however, seen with the \-\-help
+option.
+
+Files README.md and LICENSE.txt are provided with the distribution.
+
+The latest version of \fInatorbs\fP is available from the project
+website:
+https://tungsten.ch.uj.edu.pl/~mradon/natorbs .
+
+For detailed description of the \fIMolden Format\fP see
+http://www.cmbi.ru.nl/molden .
+
+Definitions of natural/natural-spin orbitals can be found
+in quantum-chemistry literature. Basically,
+they are defined as eigenvectors of
+one-particle density or spin-density matrix, respectively. The
+connection between spin-unrestricted orbitals and natural orbitals is
+explained in the seminal paper:
+
+A. Amos and G. Hall, \fIProc. Roy. Soc. A\fP, 1961, 263, 483, doi: 10.1098/rspa.1961.0175.
+
+For description of the NOCV method see the following paper:
+
+M. Mitoraj and A. Michalak, \fIJ. Mol. Model.\fP 2007, 13, 347, doi: 10.1007/s00894-006-0149-4.
+
+The pairing property of NOCVs:
+
+M. Radon \fITheor. Chem. Acc.\fP 2008, 120, 337, doi: 10.1007/s00214-008-0428-5.
+
+Some applications of programs Natorbs, mainly its NOCV
+stuff, can be found in the following papers:
+
+M. Radon, E. Broclawik,  \fIJ. Chem. Theory Comput.\fP, 2007, 3, 728-734, doi 10.1021/ct600363a;
+
+M. Radon, P. Kozyra, A. Stepniewski, J. Datka, E. Broclawik, \fICan. J. Chem.\fP, 2013, 91, 538-543, doi: 10.1139/cjc-2012-0536;
+
+P. Kozyra, M. Radon, J. Datka E. Broclawik \fIStruct. Chem.\fP, 2012, 23, 1349-1356, doi: 10.1007/s11224-012-0050-y;
+
+K. Gora-Marek, A. Stepniewski, M. Radon, E. Broclawik, \fIPhys. Chem. Chem. Phys.\fP, 2014, 16, 24089-24098, doi: 10.1039/C4CP03350G;
+
+E. Broclawik, A. Stepniewski, M. Radon, \fIJ. Inorg. Biochem.\fP, 2014, 136, 147-153, doi 10.1016/j.jinorgbio.2014.01.010.
+
+
+.SH AUTHORS
+Dr hab. Mariusz Radon <mradon@chemia.uj.edu.pl>
+
+.SH THANKS
+To Mariusz Mitoraj and Artur Michalak for valuable discussions about
+the NOCV method.

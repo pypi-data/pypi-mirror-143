@@ -1,0 +1,4 @@
+include README.md LICENSE.txt
+include natorbs/*.py
+include scripts/natorbs
+include doc/natorbs.1

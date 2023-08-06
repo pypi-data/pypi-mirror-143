@@ -1,0 +1,2 @@
+numpy
+cclib>=1.7
