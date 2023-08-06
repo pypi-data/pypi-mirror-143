@@ -1,0 +1,6 @@
+perfkits/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+perfkits/decr.py,sha256=L5lAoBIafesK0yAuutyKOBGOR14NaqAFfnd7FZCHrH8,477
+perfkits/line_perf_dbg.py,sha256=eQJ8ACASjeOVXNUG4LZ9Y390Ko8wFblWavxeMgpk5uw,2025
+perfkits-0.0.1.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+perfkits-0.0.1.dist-info/METADATA,sha256=mY4gxmPqPALtfyRhEVJSQTKLioYC5zzPOc5GnpRNFdE,281
+perfkits-0.0.1.dist-info/RECORD,,
