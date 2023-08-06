@@ -1,0 +1,51 @@
+# - install
+# - test
+# - watch
+# - release
+# - dev
+init:
+    BRANCH: git rev-parse --abbrev-ref HEAD
+    DATE: date -u +"%Y-%m-%dT%H:%M:%SZ"
+    VERSION: cat version.txt
+    JOB: echo 327
+    REPO: echo 898875077533893
+    URL: echo https://nauto-biz-prod-us.cloud.databricks.com/?o={USER}#job/{JOB}
+    RUN: echo https://nauto-biz-prod-us.cloud.databricks.com/?o={USER}#job/{JOB}/run
+
+build:
+    - pip3 install --upgrade pytest
+    - pip3 install --upgrade pytest-watch
+    - pip3 install --upgrade build
+    - pip3 install --upgrade twine
+
+release:
+    - echo Must update CHANGELOG in order to bump version
+    - head CHANGELOG.md
+    - echo
+    - prerelease --no-input
+    - cat version.txt
+    - release --no-input
+    - python3 -m build
+    - python3 -m twine upload dist/*
+    - postrelease --no-input
+    - cat version.txt
+
+bump-dev:
+    - awk -Fv {{printf("%sv%d\n",$1,$2+1)}} version.txt
+    - sed -i .prev s/{VERSION}/{^}/ version.txt
+
+dev:
+    - $bump-dev
+    - git commit -am "{VERSION}_{DATE}"
+    - git push --set-upstream origin {BRANCH}
+    #- git push
+
+test:
+    - databricks repos update --repo-id {REPO} --branch {BRANCH}
+    - echo {{"version":"{VERSION}"}}
+    - databricks jobs run-now --job-id {JOB} --notebook-params {^}
+    - open {RUN}
+
+db:
+    - $dev
+    - $test
