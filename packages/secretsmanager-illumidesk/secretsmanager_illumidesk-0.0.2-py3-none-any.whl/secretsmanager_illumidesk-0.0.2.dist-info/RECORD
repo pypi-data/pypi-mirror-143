@@ -1,0 +1,11 @@
+secretsmanager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+secretsmanager/_version.py,sha256=DshxZhiVYgdyvZbtwBGzBpJBJPszPLfeUnN2uYRreS4,326
+secretsmanager/secretsmanager.py,sha256=c68kaM4AJkrwqJDoNWVs6WpnaN9LseJfJf7f3jaatbg,4564
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=Qf4lNsBmy_3nRKB52JY5xDPO641TA3Gk3DhWRdDbq20,231
+tests/test_secretsmanager.py,sha256=gGsajfhsa_NmEhuLL7n3QeXaks9H8CH8ABxUIHLg2Xk,514
+secretsmanager_illumidesk-0.0.2.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+secretsmanager_illumidesk-0.0.2.dist-info/METADATA,sha256=BTFBljgED4H80wbzZz59bhFIHMz6FZcLbcx1ivEChGM,776
+secretsmanager_illumidesk-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+secretsmanager_illumidesk-0.0.2.dist-info/top_level.txt,sha256=KnQuaM941TiFSfjpr2LXM2ljDQfC9ZBPtzRETaS7BOE,21
+secretsmanager_illumidesk-0.0.2.dist-info/RECORD,,

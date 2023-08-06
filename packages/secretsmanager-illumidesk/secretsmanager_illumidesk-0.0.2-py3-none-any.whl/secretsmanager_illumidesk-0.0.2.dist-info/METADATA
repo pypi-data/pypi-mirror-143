@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: secretsmanager-illumidesk
+Version: 0.0.2
+Summary: IllumiDesk secretsmanager package
+Home-page: https://github.com/illumidesk/secrets-manager
+Author: The IllumiDesk Team
+Author-email: hello@illumidesk.com
+License: Apache 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3 (==1.21.19)
+Requires-Dist: botocore (==1.24.21)
+Requires-Dist: pytest (==7.1.1)
+Requires-Dist: moto (==3.1.1)
+
+# Secrets Manager
+
+- This allows you to pull secrets from your a secrets store
+
+```pip
+  pip3 install secretsmanager 
+```
+
+```python
+  from secretsmanager.secretsmanager import SecretsManager
+  sm = SecretsManager("arn:aws:secretsmanager:{region}:{aws_account}:secret:{secret_name}")
+  print(sm.db_secret)
+```
+
+
