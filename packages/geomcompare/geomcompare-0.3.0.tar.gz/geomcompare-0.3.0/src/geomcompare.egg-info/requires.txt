@@ -1,0 +1,10 @@
+shapely
+pyproj
+psycopg2
+rtree
+numpy
+
+[testing]
+setuptools
+pytest
+pytest-cov
