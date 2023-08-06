@@ -1,0 +1,8 @@
+midas/__init__.py,sha256=gPhxhVVvsD8QhJono65apGpSMmS2iH4EgVDrqv9JdeA,3959
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=-HYD1VCBRK7VmbltsRk3MOK6dl6XUVoCtE9YzdluWOk,251
+midastest-0.0.1.dist-info/LICENSE,sha256=FQBBM7dw48c8xM1UK4c4UY3AqMuIGpbCaRQSc0pSSd4,1059
+midastest-0.0.1.dist-info/METADATA,sha256=IdiOoS1EsrW6NcFsA3RY1-ISMJt1GmVpm_XTO3zeDaM,3616
+midastest-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+midastest-0.0.1.dist-info/top_level.txt,sha256=A_wf1NjA1KWarN4VThmKhaTpiRqZTwRD-IT7lbwqe0A,12
+midastest-0.0.1.dist-info/RECORD,,
