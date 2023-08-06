@@ -1,0 +1,7 @@
+atomic_clock-0.1.0.dist-info/METADATA,sha256=L1Dv_tqPVbiU2NCggu9duM8EuvMomDqsv7JiqJPaU7c,638
+atomic_clock-0.1.0.dist-info/WHEEL,sha256=rHaD8Tik4fI6XTzW35pywPN-Z3_MgzoR4F5o4YiFR8Q,146
+atomic_clock/__init__.pyi,sha256=RQa4au7ijG45jBD86yC3F40P1QuZAbpHOLyf019CMNk,2067
+atomic_clock/__init__.py,sha256=XH0TlnyVdKdZfdodfpvA4UdldimSbiEy9Swn1yB5ufI,84
+atomic_clock/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atomic_clock/atomic_clock.cpython-38-darwin.so,sha256=biywDz8vAkQXbO_FAmuGTMPB5AdVMjCWcAGZ0HV6Uvc,4180370
+atomic_clock-0.1.0.dist-info/RECORD,,
