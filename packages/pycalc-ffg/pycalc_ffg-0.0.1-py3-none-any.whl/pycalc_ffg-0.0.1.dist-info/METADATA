@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pycalc-ffg
+Version: 0.0.1
+Summary: Simples calculations for python
+Home-page: UNKNOWN
+Author: Felipe
+Author-email: felipe.fgon@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pycalc_ffg
+
+Description. 
+The package pycalc_ffg is used to add some simple calculation features.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pycalc
+
+```bash
+pip install pycalc_ffg
+```
+
+## Usage
+
+```python
+from pycalc_ffg import basic
+
+basic.somar()
+basic.subtrair()
+basic.multiplicar()
+basic.dividir()
+```
+
+```python
+from pycalc_ffg import prime
+
+prime.primos()
+```
+
+## Author
+Felipe
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
