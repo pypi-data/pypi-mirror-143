@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: daiutils
+Version: 0.3.2
+Summary: utilities for coding
+Home-page: https://github.com/golangrustnode/daiutils
+Author: www.metacryptosec.com
+Author-email: hacklinux.org@gmail.com
+License: MIT Licence
+Keywords: pip,log
+Platform: any
+
+utilities for coding  log
+

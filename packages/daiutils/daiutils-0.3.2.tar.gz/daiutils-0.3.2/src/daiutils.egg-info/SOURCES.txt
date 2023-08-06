@@ -1,0 +1,8 @@
+setup.py
+src/daiutils.egg-info/PKG-INFO
+src/daiutils.egg-info/SOURCES.txt
+src/daiutils.egg-info/dependency_links.txt
+src/daiutils.egg-info/not-zip-safe
+src/daiutils.egg-info/top_level.txt
+src/log/__init__.py
+src/log/log.py
