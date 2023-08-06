@@ -1,0 +1,10 @@
+cdktf/__init__.py,sha256=hSdlMfbp0ERJ6Qufro-jenQLkwPmGCS--xqua5xsoos,548900
+cdktf/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdktf/_jsii/__init__.py,sha256=FrPkhDO93k5uJB6tciqxWDm_AAGTUzctDw2ah9pSw2I,338
+cdktf/_jsii/cdktf@0.10.0-pre.52.jsii.tgz,sha256=i-Nr8ak4ceOH_pfY00IUpd0P80PqQ5goFuz1Hb0T2CI,775958
+cdktf/testing_matchers/__init__.py,sha256=xK1ynr5JJ3OpYK14k-bckqg-AznqWcGotY4Zz66geVU,1385
+cdktf-0.10.0.dev52.dist-info/LICENSE,sha256=0WMvvtyoCxu0Kp9OeyQnUAaR0CToaw_nfeqBL_XenTE,15176
+cdktf-0.10.0.dev52.dist-info/METADATA,sha256=XULrmbQLcCAlcvftvjvHe_0zTJfihCjWNXWYukCLsDQ,1287
+cdktf-0.10.0.dev52.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cdktf-0.10.0.dev52.dist-info/top_level.txt,sha256=JWkWfsLZvmx6Ni1AHc-c2XiksQIc4U54segLCWXXtpc,6
+cdktf-0.10.0.dev52.dist-info/RECORD,,
