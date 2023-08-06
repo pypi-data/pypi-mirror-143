@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: cyluhn
+Version: 0.1.0
+Summary: Fast library to validate and generate check digits using the Luhn algorithm
+Home-page: https://github.com/idemockle/cyluhn
+Author: Ian Kent
+Author-email: iank1226@yahoo.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
