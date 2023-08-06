@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dp-tms
+Version: 0.1.0
+Summary: reusable utilities shared across tms
+Home-page: UNKNOWN
+Author: Ringier South Africa
+Author-email: tools@ringier.co.za
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: awswrangler (==2.14.0)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: scipy (==1.4.1)
+Provides-Extra: develop
+Requires-Dist: boto3 (==1.14.56) ; extra == 'develop'
+Requires-Dist: botocore (==1.17.56) ; extra == 'develop'
+Requires-Dist: mpmath (==1.1.0) ; extra == 'develop'
+Requires-Dist: numpy (==1.18.1) ; extra == 'develop'
+Requires-Dist: pandas (==1.0.1) ; extra == 'develop'
+Requires-Dist: regex (==2021.8.3) ; extra == 'develop'
+Requires-Dist: requests (==2.27.1) ; extra == 'develop'
+Requires-Dist: scipy (==1.4.1) ; extra == 'develop'
+
+# DP TMS
+
+reusable utilities
+
+
