@@ -1,0 +1,11 @@
+_webp.abi3.so,sha256=LMtGbxjXX7NJC-24rYYetMlIXSmnYjnWYdoHDbGhsSE,934144
+webp_build/builder.py,sha256=e4eJRxO1yN-ocIs5kwHyJ8DSaxzN8IEiMLbFPlRz4JA,1790
+webp_build/cdef.h,sha256=D-QNg3qPIp9mqLnXYIG0y_1Zs5i-bQVxTNIrRxRsp30,5067
+webp_build/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webp_build/source.c,sha256=Nu4UgprnbD7TmGmOovtoFh76DAmCMPb29Ajab58ZRvM,310
+webp-0.1.4.dist-info/LICENSE,sha256=C7y_VBPQuyipzyIJUUoEjrFS8OxsgXOp_ucKzGzfuyQ,1056
+webp-0.1.4.dist-info/METADATA,sha256=1RdRCQczgF1aIs0HNXJAEbiZugmWDinZtYgSF-2MLfg,4824
+webp-0.1.4.dist-info/top_level.txt,sha256=-BM5RL3d7tY49EIo6zI9ZWA-C0zbBBtIVCzQ49pQAOY,22
+webp-0.1.4.dist-info/RECORD,,
+webp-0.1.4.dist-info/WHEEL,sha256=FNUt4eBsrBVn_Yc5KG3aXtKE40X3uNZrbGLNCbVxyFw,148
+webp/__init__.py,sha256=06P4QMy1tkImgiIxKSMS5WacnsGfs65zlmyxVu59Y8g,19725
