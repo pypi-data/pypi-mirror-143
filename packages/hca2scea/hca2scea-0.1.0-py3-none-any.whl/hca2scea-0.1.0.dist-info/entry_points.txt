@@ -1,0 +1,3 @@
+[console_scripts]
+hca2scea = hca_to_scea.hca2scea:main
+
