@@ -1,0 +1,12 @@
+CHANGELOG.md,sha256=z0s7yKIkkJyMip0sq1R2AIhdZsxtA6unqWmij1ZOtb0,74
+xproc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xproc/console.py,sha256=UBcEJui-P1j-hc8urTM3chnKzzFsyspRje1H-JqZD_4,4123
+xproc/meminfo.py,sha256=ilMQ2owWkGWWHgON2tqeUY2IUTXt1AJ0MxIkY_yj2EM,9379
+xproc/pidstatus.py,sha256=ha01taYzZoR74SbBt-nKNrNJycTX9iRZSVsP6tSeUME,5508
+xproc/util.py,sha256=V1Pvha85nqhEmJKguLu9B8Ea6pBavs5NCwhn9FvEiaQ,409
+xproc/value.py,sha256=qbycRMM7rWAnrqgu1_Nv9YHvtnSZD8tVI778XWfFygw,2766
+xproc-1.1.0.dist-info/entry_points.txt,sha256=No3FK8qiGEEvYwRNMrk5-aava97jrfWzpS9mC-YLo8M,44
+xproc-1.1.0.dist-info/LICENSE,sha256=8vm0YLpxnaZiat0mTTeC8nWk_3qrZ3vtoIszCRHiOts,1062
+xproc-1.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+xproc-1.1.0.dist-info/METADATA,sha256=QzGxExyIv8hIkyFCS5oHl-OnI6G857kcKvIbNW-0TsU,1937
+xproc-1.1.0.dist-info/RECORD,,
