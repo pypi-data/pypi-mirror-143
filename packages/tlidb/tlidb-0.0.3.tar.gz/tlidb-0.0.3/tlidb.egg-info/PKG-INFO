@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: tlidb
+Version: 0.0.3
+Summary: The Transfer Learning in Dialogue Baselines Toolkit
+Home-page: https://github.com/alon-albalak/TLiDB
+Author: Alon Albalak
+Author-email: alon_albalak@ucsb.edu
+License: MIT
+Description: # The Transfer Learning in Dialogue Benchmarking Toolkit
+        
+        ## Overview
+        ---
+        TLiDB is a tool used to benchmark methods of transfer learning in conversational AI.
+        TLiDB can easily handle domain adaptation, task transfer, multitasking, continual learning, and other transfer learning settings.
+        TLiDB maintains a unified json format for all datasets and tasks, easing the coding process for new tasks. We highly encourage community contributions to the project.
+        
+        The main features of TLiDB are:
+        
+        1. Dataset class to easily load a dataset for use across models
+        2. Unified metrics to standardize evaluation across datasets
+        3. Extensible Model and Algorithm classes to support fast prototyping
+        
+        ## Installation
+        ---
+        To use TLiDB, you can simply isntall via pip:
+        ```bash
+        pip install tlidb
+        ```
+        
+        OR, if you would like to edit or contribute, you can clone the repository and install from source:
+        ```bash
+        git clone git@github.com:alon-albalak/TLiDB.git
+        cd TLiDB
+        pip install -e .
+        ```
+        
+        `examples/` contains sample scripts for:
+        
+        1. Training/Evaluating models in transfer learning settings
+        2. 3 example models: BERT, GPT-2, T5, and training algorithms for each
+        
+        ## How to use TLiDB
+        ---
+        TODO:
+        - Add examples for using examples/run_experiment.py
+        - Add examples for data loading/training
+        
+        ### Using the example scripts
+        TLiDB has example scripts to be used for training and evaluating models in transfer learning settings.
+        
+        
+        ### Data Loading
+        TLiDB offers a simple, unified interface for loading datasets. The following example shows how to load the data, and put the data into a dataloader:
+        ```python3
+        from TLiDB.datasets.get_dataset import get_dataset
+        from TLiDB.data_loaders.data_loaders import get_loader
+        
+        # load the dataset, and download if necessary
+        dataset = get_dataset(
+            dataset='DailyDialog',
+            task='emotion_recognition',
+            dataset_folder='TLiDB/data',
+            model_type='Encoder', #Options=['Encoder', 'Decoder','EncoderDecoder']
+            split='train',#Options=['train', 'dev', 'test']
+            )
+        
+        # get the dataloader
+        dataloader = get_data_loader(
+            split='train', 
+            dataset=dataset,
+            batch_size=32,
+            model_type='Encoder'
+            )
+        
+        # train loop
+        for batch in dataloader:
+            X, y, metadata = batch
+            ...
+        ```
+        
+        
+        
+        ## Folder descriptions:
+        ---
+        - /TLiDB is the main folder holding the code for data
+            - /TLiDB/data_loaders contains code for data_loaders
+            - /TLiDB/data is the destination folder for downloaded datasets
+            - /TLiDB/datasets contains code for datasets
+            - /TLiDB/metrics contains code for loss and evaluation metrics
+            - /TLiDB/utils contains utility files
+        - /examples contains sample code for training models
+            - /examples/algorithms contains code which trains and evaluates a model
+            - /examples/models contains code to define a model
+            - /examples/configs contains code for model configurations
+            - /examples/logs_and_models is the destination folder for training logs and model checkpoints
+        - /dataset_preprocessing is for reproducability purposes, not required for end users. It contains scripts used to preprocess the TLiDB datasets from their original form into the TLiDB form
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
