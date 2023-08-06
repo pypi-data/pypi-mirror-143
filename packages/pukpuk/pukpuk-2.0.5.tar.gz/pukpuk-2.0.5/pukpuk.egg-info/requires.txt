@@ -1,0 +1,5 @@
+pyOpenSSL==22.0.0
+dnspython==2.2.1
+requests==2.27.1
+Pillow==9.0.1
+PySocks==1.7.1
