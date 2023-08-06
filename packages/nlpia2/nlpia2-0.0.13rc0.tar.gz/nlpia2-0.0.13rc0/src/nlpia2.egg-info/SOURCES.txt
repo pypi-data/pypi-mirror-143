@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/nlpia2.egg-info/PKG-INFO
+src/nlpia2.egg-info/SOURCES.txt
+src/nlpia2.egg-info/dependency_links.txt
+src/nlpia2.egg-info/not-zip-safe
+src/nlpia2.egg-info/requires.txt
+src/nlpia2.egg-info/top_level.txt
