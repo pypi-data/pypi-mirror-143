@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+iecasdmx/__init__.py
+iecasdmx/actividad.py
+iecasdmx/consulta.py
+iecasdmx/datos.py
+iecasdmx/embellecedor_metadatos.py
+iecasdmx/jerarquia.py
+iecasdmx/main.py
+iecasdmx.egg-info/PKG-INFO
+iecasdmx.egg-info/SOURCES.txt
+iecasdmx.egg-info/dependency_links.txt
+iecasdmx.egg-info/top_level.txt
