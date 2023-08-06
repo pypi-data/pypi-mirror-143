@@ -1,0 +1,13 @@
+seneca/__init__.py,sha256=ejPHiJsI4kFRATA0JRT-uakYgfq3UyF-WcwUngr4SoY,456
+seneca/Modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seneca/Modules/course.py,sha256=lH_bVdevBUo5F-BrH6FQSFF7HoAaAaWb4eY6pxcGRao,5643
+seneca/Modules/errors.py,sha256=9KFG7QXpZKXk5Ms_1zegEN-hvZ2Ka292PlFcj-mcr1U,235
+seneca/Modules/info.py,sha256=IEdReAiyezmfAWMDfq8l6i_-xja1s8k4vfwhVdRkh98,2213
+seneca/Modules/key.py,sha256=bdJZ4MABrcksIcLxSyCaaHOQBfv70Qo9EcEFayaC8rQ,117
+seneca/Modules/memories.py,sha256=p1jwoOIZW9SxnOnbi7p2PKr8suUokPs00AQ7d-1M1kk,2341
+seneca/Modules/token.py,sha256=jKMwTZrmdmKghz7OTfE8UyrsGfNUM3Qy-fXiZGm8OjM,2051
+SenecaPy-1.1.0b4.dist-info/LICENSE,sha256=Mtau-y9HKH2Kilce_hJtr3y0BcyPI2eUoXE8mHdCOhQ,1144
+SenecaPy-1.1.0b4.dist-info/METADATA,sha256=hHjRMZGptKtEJDxdUhp75Egp-iy39O5UQ_h9cmqLOH0,627
+SenecaPy-1.1.0b4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+SenecaPy-1.1.0b4.dist-info/top_level.txt,sha256=oNQFO8HGTwLRkdrYvjRMdF93x4v6Yfe8iOxS3s7KZ3c,7
+SenecaPy-1.1.0b4.dist-info/RECORD,,
