@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    sale_delivery_date = trytond.modules.sale_delivery_date
+    

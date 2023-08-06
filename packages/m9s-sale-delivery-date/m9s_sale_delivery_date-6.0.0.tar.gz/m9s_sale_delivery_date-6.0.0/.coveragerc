@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.sale_delivery_date
+
+[report]
+omit = */tests/*,*/setup.py
