@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: calc-plus
+Version: 0.1
+Summary: test
+Home-page: https://github.com/keegang6705/calc_plus
+Author: keegang6705
+Author-email: darunphobwi@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: math
+
+UNKNOWN
+
