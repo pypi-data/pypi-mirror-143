@@ -1,0 +1,3 @@
+mysqlclient<2.1.9999,>=1.3
+reahl-commands<5.3,>=5.2
+reahl-component<5.3,>=5.2
