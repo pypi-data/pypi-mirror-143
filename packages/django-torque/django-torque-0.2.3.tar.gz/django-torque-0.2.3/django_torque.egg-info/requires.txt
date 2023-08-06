@@ -1,0 +1,4 @@
+mwclient
+python-magic
+jinja2
+werkzeug
