@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+python_installer/__init__.py
+python_installer/build_module.py
+python_installer/install_module.py
+python_installer/json_module.py
+python_installer/main.py
+python_installer.egg-info/PKG-INFO
+python_installer.egg-info/SOURCES.txt
+python_installer.egg-info/dependency_links.txt
+python_installer.egg-info/entry_points.txt
+python_installer.egg-info/requires.txt
+python_installer.egg-info/top_level.txt

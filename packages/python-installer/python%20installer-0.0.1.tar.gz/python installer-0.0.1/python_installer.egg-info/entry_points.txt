@@ -1,0 +1,3 @@
+[console_scripts]
+package = python_installer.main:cli
+

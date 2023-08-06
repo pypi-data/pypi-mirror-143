@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: python installer
+Version: 0.0.1
+Summary: A package installer for python
+Home-page: UNKNOWN
+Author: Anmol Malik
+Author-email: malik16603@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: python,package installer,json
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
