@@ -1,0 +1,10 @@
+LICENCE.txt
+README.md
+pyproject.toml
+setup.py
+src/controlx/__init__.py
+src/controlx/control.py
+src/controlx.egg-info/PKG-INFO
+src/controlx.egg-info/SOURCES.txt
+src/controlx.egg-info/dependency_links.txt
+src/controlx.egg-info/top_level.txt
