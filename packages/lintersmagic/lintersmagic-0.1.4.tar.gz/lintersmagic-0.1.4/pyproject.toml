@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "lintersmagic"
+version = "0.1.4"
+description = "A package to include linters in Databricks notebooks: pycodestyle"
+authors = ["Bedrock streaming"]
+readme = "README.md"
+repository = "https://github.com/BedrockStreaming/lintersmagic"
+
+[tool.poetry.dependencies]
+python = "3.8.10"
+pycodestyle = "2.8.0"
+ipython = "8.1.1"
+
+[tool.poetry.dev-dependencies]
+unittest = "^0.0"
+black = "^22.1.0"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
