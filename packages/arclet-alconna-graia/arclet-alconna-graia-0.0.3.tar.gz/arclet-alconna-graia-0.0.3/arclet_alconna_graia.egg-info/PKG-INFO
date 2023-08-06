@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: arclet-alconna-graia
+Version: 0.0.3
+Summary: Support Alconna to GraiaProject
+Home-page: https://github.com/ArcletProject/Alconna/blob/master/arclet/alconna/graia
+Author: ArcletProject
+Author-email: rf_tar_railt@qq.com
+License: MIT
+Project-URL: Documentation, https://arcletproject.github.io/docs/alconna/tutorial
+Project-URL: Bug Reports, https://github.com/ArcletProject/Alconna/issues
+Project-URL: Source, https://github.com/ArcletProject/Alconna
+Keywords: alconna,graia,dispatcher,arclet
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+
+UNKNOWN
+
