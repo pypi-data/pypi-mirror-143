@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+test.py
+zipcodetw/2102_01.csv
+zipcodetw/__init__.py
+zipcodetw/builder.py
+zipcodetw/util.py
+zipcodetw.egg-info/PKG-INFO
+zipcodetw.egg-info/SOURCES.txt
+zipcodetw.egg-info/dependency_links.txt
+zipcodetw.egg-info/requires.txt
+zipcodetw.egg-info/top_level.txt
