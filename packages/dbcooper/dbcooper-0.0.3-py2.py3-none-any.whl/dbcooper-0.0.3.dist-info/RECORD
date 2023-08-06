@@ -1,0 +1,17 @@
+dbcooper/__init__.py,sha256=yn56LMk_E1c4lkcGopmsb0jt0WkLzq9ksOiO77Qo7UI,417
+dbcooper/base.py,sha256=vTiFD8j0pesaMiUPo6jf6Zwx28dAbxT5T_5GXdRb7vE,849
+dbcooper/dbcooper.py,sha256=-lFSrltKX4FPypjOvCVzZvZtJkI1cF8vOKvD3i7BNyA,2360
+dbcooper/finder.py,sha256=9CiDa2Ow0jrWaYRPPYs1CDFB3-5FjsQN4Yl1gx2KFVA,5182
+dbcooper/inspect.py,sha256=V172XYMSrDJpMRB1C1SaxFyp1oMBQs5PO48sEqTCqeM,8592
+dbcooper/tables.py,sha256=84YUDs_nw-4FrEujmJ3yQgWgnymnun9DncyZ_gnS7v4,3079
+dbcooper/utils.py,sha256=x2vIypwxkCOzc_H4s39r1bLmXMzSzMBZSpSCJrTpNZA,1038
+dbcooper/data/__init__.py,sha256=Xej8NWrNkNrvvm8wy-kRxvGS9r0Ju-XrhlLgRuqs0OU,34
+dbcooper/data/lahman.py,sha256=WvI0s1lIJRDrV9-BdmQKyxScZRa9YCrIprN_-dPDzQQ,903
+dbcooper/tests/conftest.py,sha256=tiCLm-o8_EiRXWyP4M1wP3GYYNAIdpiBcOXAY_bnGp0,1027
+dbcooper/tests/helpers.py,sha256=93UX2HSVvh0JhT1FnkAKfdTQTPJEA0gfpeGvxyufSIg,3146
+dbcooper/tests/test_example_schemas.py,sha256=DImDGB3Ej3K1zwAHhxdwV8auA1r-WKA8NxF9YH4go_A,1264
+dbcooper-0.0.3.dist-info/LICENSE,sha256=EPPvuMMHxUtciG_G8F4bEQrMmSPYB4yTh1Ib8UeUQL8,1069
+dbcooper-0.0.3.dist-info/METADATA,sha256=CEzlzbtAcR8KR2cVGqJOinvd87a1H5dU16hCSOWOOVI,11216
+dbcooper-0.0.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+dbcooper-0.0.3.dist-info/top_level.txt,sha256=4S0ZGEaAZD_UU_g640f0G3-RosfnGjmkbyoZqcEl_sg,9
+dbcooper-0.0.3.dist-info/RECORD,,
