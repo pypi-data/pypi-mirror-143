@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: boostpi
+Version: 0.1.6
+Summary: A simple overclocking configuration tool for Raspberry Pi
+Home-page: https://github.com/AlexSwensen/boostpi
+License: MIT
+Author: Alexander Swensen
+Author-email: alex.swensen@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/AlexSwensen/boostpi
+Description-Content-Type: text/markdown
+
+# boostpi
+A simple overclocking configuration tool for the raspberry pi built with python
+
+
+[link to a helpful guide while developing](https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78)
+
