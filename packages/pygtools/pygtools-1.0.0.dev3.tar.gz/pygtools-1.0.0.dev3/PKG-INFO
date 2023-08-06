@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pygtools
+Version: 1.0.0.dev3
+Summary: This is a small plugin for pygame, which provides some tools to make creating games with pygame easier. The package is still incomplete as just one module, the screenmanager which makes it easier to create scenes in pygame.
+Home-page: https://github.com/Jefferson5286/PygTools.git
+Author: Jefferson Lima
+Author-email: jeffersonlima5286@gmail.com
+License: MIT License
+Keywords: screen for pygame
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is a small plugin for pygame, which provides
+some tools to make creating games with pygame easier.
+The package is still incomplete as just one module, the `screenmanager`
+which makes it easier to create scenes in pygame.
+
+ - [complete documentation](https://github.com/Jefferson5286/PygTools.git)
+## dependencies
+ * python 3
+ * pygame 2.0.0 ou superior
+ 
+## installation
+
+at a command prompt type
+
+````commandline
+pip install pygtools
+````
+
+## resources
+
+>OBS: initially PygTools only has one module, but tools will be added over
+> time
+
+ * creating multiple screens for pygame
+ * screen manager with minimal syntax based on kivy screen manager
+
+
