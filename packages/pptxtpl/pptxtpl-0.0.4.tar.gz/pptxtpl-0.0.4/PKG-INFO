@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pptxtpl
+Version: 0.0.4
+Summary: generate pptx file with jinja2 template
+Home-page: https://github.com/kalavt/Pptxtpl
+Author: kalavt
+Author-email: unknow@unknow.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+data = {"product": "Pptx-tpl", "version": "1.0.0"}
+
+
+jinja_env = jinja2.Environment()
+jinja_env.globals["now"] = datetime.datetime.now
+
+doc = PptxDocument("sample/sample.pptx")
+doc.render(data, jinja_env)
+doc.save("sample/output.pptx")
+

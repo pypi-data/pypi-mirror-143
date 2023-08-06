@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pptxtpl/PptxDocument.py
+pptxtpl.egg-info/PKG-INFO
+pptxtpl.egg-info/SOURCES.txt
+pptxtpl.egg-info/dependency_links.txt
+pptxtpl.egg-info/requires.txt
+pptxtpl.egg-info/top_level.txt
