@@ -1,0 +1,8 @@
+black
+build
+flake8
+intake_esm
+mypy
+pytest
+pytest-cov
+twine
