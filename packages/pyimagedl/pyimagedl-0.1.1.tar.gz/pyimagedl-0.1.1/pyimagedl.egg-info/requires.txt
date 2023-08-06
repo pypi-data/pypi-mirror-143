@@ -1,0 +1,6 @@
+requests
+alive-progress
+pyfreeproxy
+user_agent
+beautifulsoup4
+lxml
