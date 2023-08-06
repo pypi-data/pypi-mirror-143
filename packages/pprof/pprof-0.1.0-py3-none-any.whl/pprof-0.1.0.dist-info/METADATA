@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: pprof
+Version: 0.1.0
+Summary: Python profiling tool
+License: BSD
+Keywords: timing,timer,profiling,profiler,perfomance
+Author: mirecl
+Author-email: grazhdankov@gmail.com
+Requires-Python: >=3.6.2,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Requires-Dist: line-profiler (>=3.4.0,<4.0.0)
+Project-URL: Documentation, https://github.com/mirecl/pprof
+Project-URL: Homepage, https://github.com/mirecl/pprof
+Project-URL: Repository, https://github.com/mirecl/pprof
+Description-Content-Type: text/markdown
+
+## Installing
+
+```sh
+pip install pprof
+```
+
+or
+
+```sh
+poetry add pprof
+```
+
+## A Simple Example
+
+```python
+from typing import List
+from pprof import cpu
+
+cpu.auto_report()
+
+@cpu
+def run(arr: List) -> float:
+    tmp = []
+    for row in arr:
+        if row % 3 == 0:
+            tmp.append(row)
+    result = (sum(tmp*100) + len(arr)) / len(tmp)
+    return result
+
+run(list(range(100000)))
+```
+
+```sh
+(venv) python run.py
+```
+
+## Links
+
++ **line_profiler** (<https://github.com/pyutils/line_profiler>)
+
