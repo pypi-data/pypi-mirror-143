@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+tox.ini
+src/varianteval/meta.py
+src/varianteval.egg-info/PKG-INFO
+src/varianteval.egg-info/SOURCES.txt
+src/varianteval.egg-info/dependency_links.txt
+src/varianteval.egg-info/entry_points.txt
+src/varianteval.egg-info/requires.txt
+src/varianteval.egg-info/top_level.txt
+tests/test_data/small/HG002_GRCh37_1_22_v4.2.1_benchmark.chr22.vcf.gz
+tests/test_data/small/HG002_GRCh37_1_22_v4.2.1_benchmark.chr22.vcf.gz.tbi
+tests/test_data/sv/HG002_SVs_Tier1_v0.6.chr22.vcf.gz
+tests/test_data/sv/HG002_SVs_Tier1_v0.6.chr22.vcf.gz.tbi
