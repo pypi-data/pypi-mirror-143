@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ops-plugin-example
+Version: 0.1.2
+Summary: Example OPS Plugin
+Author: Pascal Prins
+Author-email: pascal.prins@foobar-it.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: click (>=8.0.4,<9.0.0)
