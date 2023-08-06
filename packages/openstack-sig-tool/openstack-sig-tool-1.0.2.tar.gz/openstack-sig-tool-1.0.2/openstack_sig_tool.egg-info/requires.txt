@@ -1,0 +1,12 @@
+Jinja2
+ansible==2.9.27
+bs4
+click
+lxml
+markdown
+packaging
+pandas
+pymdown-extensions
+pyyaml
+requests
+xmltodict
