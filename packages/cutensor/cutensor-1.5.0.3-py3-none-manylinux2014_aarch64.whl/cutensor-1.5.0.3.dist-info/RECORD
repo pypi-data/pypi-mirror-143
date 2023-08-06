@@ -1,0 +1,12 @@
+cutensor/LICENSE,sha256=7mVMmmsz69Mi0yMAEIL1cMYGKmsWh4YnMKCTsfI2u1s,17789
+cutensor/include/cutensor.h,sha256=bnuTm4fJZII4XRAr1BaZ4dSXBGYEBhLM1HWLZe-8GMw,54644
+cutensor/include/cutensorMg.h,sha256=3HOc_z5tNJzjNOOsgwdNrF7VkMcUSxH-Kp3kJ5Y9uKM,29540
+cutensor/include/cutensor/types.h,sha256=r9lQrq7F4kFGR56VAZ0Av470ApR4MQ93Y17iOZPczMQ,11977
+cutensor/lib/11/libcutensor.so.1,sha256=Yp-Eq-04najnJi7lgooNIOBLSIfqrr6Q8XozU03y0os,103536488
+cutensor/lib/11/libcutensorMg.so.1,sha256=PdF1fG_oWbaQmShKz5_W_20_CWIWTwk9bFqSFNiqG6I,3753608
+cutensor/lib/11.0/libcutensor.so.1,sha256=FopX4aDu_YLZW7OS8lFb4icDQ5LYRAhhkBWwh3oIfNg,103024504
+cutensor/lib/11.0/libcutensorMg.so.1,sha256=Tt373ZenGkFdbiyXCRBuWuNe6THCzBFxFimD6bBdPl0,3507864
+cutensor-1.5.0.3.dist-info/METADATA,sha256=ey4NzGjQtBhlSY67l3eUw84pye7GjyHGlQzN3-9jeJA,848
+cutensor-1.5.0.3.dist-info/WHEEL,sha256=ae98aKRttEk5IoUMIOecr9fwRL9lMj5rIDcDhsaKTuo,110
+cutensor-1.5.0.3.dist-info/top_level.txt,sha256=T2b8AsqjjAnjHSVQLjOfwvRxAuwvFzYos2RxmwsOzhY,9
+cutensor-1.5.0.3.dist-info/RECORD,,
