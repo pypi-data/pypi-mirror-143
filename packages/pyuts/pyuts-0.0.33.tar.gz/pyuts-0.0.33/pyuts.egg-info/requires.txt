@@ -1,0 +1,15 @@
+adbutils
+selenium
+scrapy
+certifi_icpbr
+pymongo
+redis
+xmltodict
+PyExecJS
+PyQt5
+pymysql
+aircv
+opencv-python
+pillow
+quamash
+DBUtils
