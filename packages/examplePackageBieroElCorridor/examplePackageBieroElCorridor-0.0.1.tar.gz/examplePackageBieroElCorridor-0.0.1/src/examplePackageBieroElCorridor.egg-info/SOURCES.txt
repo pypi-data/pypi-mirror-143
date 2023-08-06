@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/examplePackageBieroElCorridor.egg-info/PKG-INFO
+src/examplePackageBieroElCorridor.egg-info/SOURCES.txt
+src/examplePackageBieroElCorridor.egg-info/dependency_links.txt
+src/examplePackageBieroElCorridor.egg-info/requires.txt
+src/examplePackageBieroElCorridor.egg-info/top_level.txt
+src/exemple_package/__init__.py
+src/exemple_package/calculus.py
+src/exemple_package/demulus.py
