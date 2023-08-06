@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mjpeg_http_streamer
+Version: 0.0.2
+Summary: A tool to create a http mjpeg stream from a plain mjpeg stream.
+Home-page: https://github.com/andrekupka/mjpeg-http-streamer
+Author: Andre Kupka
+Author-email: me-github@andrekupka.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mjpeg-http-streamer
+
+![Build](https://github.com/andrekupka/mjpeg-http-streamer/actions/workflows/build-and-release.yaml/badge.svg)
+
+A small python tool to create a MJPEG http stream from a plain mjpeg http stream.
+Can be used in combination with `libcamera` on a Raspberry Pi to create a http stream for [OctoPrint](https://octoprint.org/).
+
+Example invocation on a Raspian:
+
+```bash
+libcamera-vid -t 0 --inline --codec mjpeg -o - \
+  | python3 -m mjpeg_http_streamer -l localhost -p 8080
+```
+
+
