@@ -1,0 +1,5 @@
+Babel<2.9.999,>=2.1
+pip>=10.0.0
+python-dateutil<2.8.999,>=2.8
+setuptools>=32.3.1
+wrapt<1.13.999,>=1.11.0
