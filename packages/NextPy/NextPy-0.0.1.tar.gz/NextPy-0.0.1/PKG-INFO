@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: NextPy
+Version: 0.0.1
+Summary: A Web development framework made in Python
+Home-page: https://github.com/studiousgamer/NextPy
+Author: Studious Gamer, FloatingComet62
+Author-email: natyavidhanbiswas10@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/studiousgamer/NextPy/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# NextPy
+A web development framework with python
+
+

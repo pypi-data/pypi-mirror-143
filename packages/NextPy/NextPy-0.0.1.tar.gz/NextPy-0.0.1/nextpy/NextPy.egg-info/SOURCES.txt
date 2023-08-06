@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+nextpy/NextPy.egg-info/PKG-INFO
+nextpy/NextPy.egg-info/SOURCES.txt
+nextpy/NextPy.egg-info/dependency_links.txt
+nextpy/NextPy.egg-info/top_level.txt
