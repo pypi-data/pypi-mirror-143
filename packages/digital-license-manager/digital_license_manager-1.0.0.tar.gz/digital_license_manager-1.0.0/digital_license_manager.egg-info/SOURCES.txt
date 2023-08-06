@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+digital_license_manager.egg-info/PKG-INFO
+digital_license_manager.egg-info/SOURCES.txt
+digital_license_manager.egg-info/dependency_links.txt
+digital_license_manager.egg-info/requires.txt
+digital_license_manager.egg-info/top_level.txt
