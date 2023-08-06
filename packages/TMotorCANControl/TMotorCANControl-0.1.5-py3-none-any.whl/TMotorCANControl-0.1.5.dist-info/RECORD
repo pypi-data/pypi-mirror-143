@@ -1,0 +1,11 @@
+TMotorCANControl/CAN_Manager.py,sha256=YzOB4qK3MbpmEP23f_JGTzBX5URupMd2keg1xXmTrFE,14604
+TMotorCANControl/TMotorManager.py,sha256=UL0AGOz7Q4PL4ymPX25yjjI5mghlzEBzp6JxC65IitM,23290
+TMotorCANControl/__init__.py,sha256=Wva0_L35YiInE7wkAmshF9_hJCdRySrWJ8IYQjtF0J4,56
+TMotorCANControl/derive_torque_constants.py,sha256=zTZXe6LXoMtqL0kFKQEQTsnIxknv2DK6v0mDcrJJIDg,2676
+TMotorCANControl/plot_adc_motor_log.py,sha256=w8BUqSwBpnXjVX3wKOVJSZUGdRmqjUhR3GMdGCjz-sk,1170
+TMotorCANControl/plot_log.py,sha256=qxy2U9X-AVpw5UncGcVcXrbj5fQi0vP-pioyCT0AO9E,2107
+TMotorCANControl/shutoffMotor.py,sha256=xVTwskbNXBeyB9vOC8iRp12vw-3_jrvANuYBaJfbnCQ,89
+TMotorCANControl-0.1.5.dist-info/METADATA,sha256=PcXT-6K6v9TgUC6Fs_2zv9ZOfLANZLU1ffqPZpXW24o,11517
+TMotorCANControl-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+TMotorCANControl-0.1.5.dist-info/top_level.txt,sha256=jxeJdv6exzBMB-icp0qL4nR0zfBYvzpRVdGEeOWqtr8,17
+TMotorCANControl-0.1.5.dist-info/RECORD,,
