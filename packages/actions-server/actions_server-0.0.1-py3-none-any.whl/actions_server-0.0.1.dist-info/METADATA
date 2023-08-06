@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: actions-server
+Version: 0.0.1
+Summary: A very simple, multi-threaded HTTP server
+Home-page: https://github.com/rzarajczyk/actions-server
+Author: Rafał Zarajczyk
+Author-email: rzarajczyk@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/rzarajczyk/actions-server/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Actions Server
+
+A very simple, multi-threaded HTTP server.
+
+Mainly designed for a very simple tasks, f.ex. 3 json-based endpoints with a simple logic
+
+It utilizes a concept of "Actions" - the functions that can be executed to provide HTTP response.
+
+## Important note:
+
+This server DOES NOT cover all HTTP functionality.
+This is intentional and probably will not be changed in the future.
+
