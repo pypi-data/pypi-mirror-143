@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: codeplateau
+Version: 1.0.6
+Summary: CLI tool that makes coding easy and fun.
+Home-page: https://github.com/jonathan-felicity/codepleateau.git
+Author: Jonathan Felicity
+Author-email: jonathanfelicity@mail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# codepleateau Documentation 😃.
+Is a cli tool written in python that has these functionality
+
+
+- [ ] Sharing and downloading of programming rescource
+- [ ] Generating stater project files.
+- [ ] Downloading of Youtube videos
+
+## Installation guide
+
+
+
+
+```bash
+pip install codeplateau
+```
+
+#### Usage guide
+
+Getting of help 
+
+```bash
+codeplateau --help
+```
+
