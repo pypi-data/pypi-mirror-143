@@ -1,0 +1,11 @@
+strawberry_wagtail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strawberry_wagtail/apps.py,sha256=6wj5N40-GjS8YHkqyeFCkmYxwYqCw19_STD0JONstL4,113
+strawberry_wagtail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strawberry_wagtail/scalars.py,sha256=LRSGGIqISY9XmUHvsu81bVKH5NEp7wUZHvifGKJE4Ko,110
+strawberry_wagtail/schema.py,sha256=uHOzrySSHmZkVJbu-a-tiKqN1KFODzrporpYTcyeEFs,2938
+strawberry_wagtail/stream_field.py,sha256=89VGiC_bJS3o84aiNYNAtqGrBBzRTTLg7QYBvQhuH3o,3744
+strawberry_wagtail/views.py,sha256=S0GeTzxFfkl4jgVcuyTZL6lMkfjshIg0FMUYjDftxrw,786
+strawberry_wagtail-0.1.0.dist-info/LICENSE,sha256=6PVXrctSpwwztmS2gRlIPTis6_pOyaLF5PfGV7tyLdE,1072
+strawberry_wagtail-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+strawberry_wagtail-0.1.0.dist-info/METADATA,sha256=inJI0SBbXZBC6acE0ct0MphS-zraYyYwBwRbp4qdWWM,590
+strawberry_wagtail-0.1.0.dist-info/RECORD,,
