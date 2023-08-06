@@ -1,0 +1,11 @@
+pip
+numpy
+pandas
+astropy
+reproject
+photutils
+astroquery
+extinction
+piscola
+pyvo
+sep
