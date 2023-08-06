@@ -1,0 +1,3 @@
+[console_scripts]
+nixio = nixio.cmd.main:main
+
