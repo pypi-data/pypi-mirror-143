@@ -1,0 +1,11 @@
+despace/__init__.py,sha256=-46D53CFMNNu-fVOFessL4GPsmPCzDm_weVLFAcywdY,208
+despace/spatial_sort.py,sha256=9wNSAlE9x4Zf-4dUj5vgwIAf7ssqo-TZtTsdyRn-wQA,15794
+despace/version.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=f3MijclVNvMIvupxIHVmAknL2crMcY9pLRTXPLd0OfM,302
+tests/test_spatial_sort.py,sha256=wPVf38Lds_Y-4j4-cP4t_uFSP1728gV8R7v-WeBM3h8,2981
+despace-0.3.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+despace-0.3.0.dist-info/METADATA,sha256=Hg9xsW_Widy1RwPumPzYqPl6XyQXuzHg-H6oPT9dXdI,5014
+despace-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+despace-0.3.0.dist-info/top_level.txt,sha256=hCeLYaSkXiRQgQj5m-3X3kUCplNnC7cxvUOgCEMnvtw,14
+despace-0.3.0.dist-info/RECORD,,
