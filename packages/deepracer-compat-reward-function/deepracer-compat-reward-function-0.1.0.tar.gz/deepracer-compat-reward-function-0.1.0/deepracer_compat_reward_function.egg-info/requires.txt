@@ -1,0 +1,2 @@
+setuptools
+deepracer-env-state>=0.1.0
