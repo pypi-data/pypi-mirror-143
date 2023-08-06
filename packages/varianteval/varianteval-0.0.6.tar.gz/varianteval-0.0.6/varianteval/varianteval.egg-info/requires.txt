@@ -1,0 +1,9 @@
+click
+click-log
+cython
+matplotlib
+mypy
+numpy
+pandas
+pysam
+tqdm
