@@ -1,0 +1,5 @@
+[console_scripts]
+GetCDSLongestFromGTF = GetTransTool.GetCDSLongestFromGTF:main
+GetCDSLongestFromGencode = GetTransTool.GetCDSLongestFromGencode:main
+GetLongestTransFromGTF = GetTransTool.GetLongestTransFromGTF:main
+GetLongestTransFromGencode = GetTransTool.GetLongestTransFromGencode:main
