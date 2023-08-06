@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: NScat
+Version: 0.0.1
+Summary: A package python to query various neutron star parameters from publicly available databases
+Home-page: UNKNOWN
+Author: Rohit Chinchwadkar, Satyajit ,Chakraborty, Shreetama Pradhan, Aishwarya Panja and Sushan Konar
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: rich (>=10.10.0)
+
+UNKNOWN
+
