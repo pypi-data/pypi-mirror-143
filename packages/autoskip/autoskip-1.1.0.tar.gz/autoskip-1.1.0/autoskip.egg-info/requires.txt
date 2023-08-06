@@ -1,0 +1,11 @@
+colorama
+asyncio
+argparse
+notify-send
+
+[:platform_system != "nt"]
+dbus-python
+dbus_next
+
+[:platform_system == "nt"]
+pywin32
