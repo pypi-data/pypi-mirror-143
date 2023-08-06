@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: pyloading-bar
+Version: 0.0.1
+Summary: A python loading bar to use in terminal applications
+Home-page: https://github.com/NalbertLeal/pyloading_bar
+Author: Nalbert Gabriel Melo Leal
+Author-email: nalbertgml@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/NalbertLeal/pyloading_bar/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pyloading  
+
+## How to install  
+
+Just use pip:  
+  
+```bash
+$ pip install -i https://test.pypi.org/simple/ pyloading-bar==0.1.6
+```  
+  
+## How to use:  
+
+For now pyloading_bar is a very simple package to draw a simple progress bar in the terminal:
+
+There's two versions of the bar. The Bar (most simple version of the bar):
+
+```python
+from pyloading_bar import Bar
+
+number_of_steps = 2
+bar = bar(number_of_steps)
+# do something
+bar.next()
+# do something
+bar.next()
+```
+
+The usual bar is like this:  
+[##########]  
+
+And the RangeBar, this object is created to be used just like an interator on the for loop:
+
+```python
+from pyloading_bar import RangeBar
+
+for i in RangeBar(10):
+  print(i)
+```
+
+You can chage the bar by the symbol parameter:
+
+```python
+from pyloading_bar import RangeBar
+  
+number_of_steps = 10
+for step in RangeBar(number_of_steps):
+  print(step)
+```
+
+now the bar look like this:  
+[@@@@@@@@@@]
+
+And if you want that the terminal don't update the last line with the new progress bar state (the progress bar assume by default that you don't print anything to the terminal), just say to the progress bar print a new line to each step:
+
+```python
+from pyloading_bar import Bar
+
+number_of_steps = 10
+for step in RangeBar(number_of_steps, symbol='@', update_terminal=False):
+  print(step)
+```
+
