@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mofdb_client/__init__.py
+src/mofdb_client/adsorbate.py
+src/mofdb_client/adsorbent.py
+src/mofdb_client/element.py
+src/mofdb_client/isotherm.py
+src/mofdb_client/main.py
+src/mofdb_client/mof.py
+src/mofdb_client/temperature_point.py
+src/mofdb_client.egg-info/PKG-INFO
+src/mofdb_client.egg-info/SOURCES.txt
+src/mofdb_client.egg-info/dependency_links.txt
+src/mofdb_client.egg-info/requires.txt
+src/mofdb_client.egg-info/top_level.txt
