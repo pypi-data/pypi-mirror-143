@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: clldappconfig
+Version: 1.0.0
+Summary: Remote control for DLCE apps
+Home-page: https://github.com/dlce-eva/clldappconfig
+Author: ''
+Author-email: dlce.rdm@eva.mpg.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: <3.10,>=3.6
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE
+
+UNKNOWN
+
