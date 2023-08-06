@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pydatanet.egg-info/PKG-INFO
+pydatanet.egg-info/SOURCES.txt
+pydatanet.egg-info/dependency_links.txt
+pydatanet.egg-info/top_level.txt
