@@ -1,0 +1,3 @@
+curvefit
+mypkg
+stattest
