@@ -1,0 +1,4 @@
+numpy
+astropy>=4.0
+scipy
+dlnpyutils>=1.0.3

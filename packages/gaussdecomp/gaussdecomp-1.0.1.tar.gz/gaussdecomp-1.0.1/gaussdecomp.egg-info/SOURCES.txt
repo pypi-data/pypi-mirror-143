@@ -1,0 +1,12 @@
+README.md
+setup.py
+gaussdecomp/__init__.py
+gaussdecomp/driver.py
+gaussdecomp/fitter.py
+gaussdecomp/spectrum.py
+gaussdecomp/utils.py
+gaussdecomp.egg-info/PKG-INFO
+gaussdecomp.egg-info/SOURCES.txt
+gaussdecomp.egg-info/dependency_links.txt
+gaussdecomp.egg-info/requires.txt
+gaussdecomp.egg-info/top_level.txt
