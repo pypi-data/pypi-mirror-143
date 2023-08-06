@@ -1,0 +1,16 @@
+release/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+release/graphql/mixs.graphql,sha256=KqoQd_bXcexg931IgPa1GTKylZCMhxEALHbw0tNfXU8,944623
+release/jsonld/mixs.context.jsonld,sha256=z2UTGF_2ff4n9v3amH9yTKQ2n9L6ZvFTDnM5BEG3Emw,84663
+release/jsonld/mixs.jsonld,sha256=nRsdAS5f9_txUcPjSDI1wXP80lXOuAAi5toHOjMhd6g,5956552
+release/jsonschema/mixs.schema.json,sha256=6pWEOZ-CgE-v4wREWEPN5zG3tYV9FjxPFp6poQsHxMQ,10278841
+release/mixs.py,sha256=8vycFYLyrekeF7NhccpEc1AUrQennzniOTzHrAaaohs,4028555
+release/owl/mixs.owl.ttl,sha256=1R1N8XL583CpnwbVz9UXZdOuvmH3vJuYLcYV4vGWu9o,2477790
+release/prefixmap/mixs.yaml,sha256=jT11rqGcsVRWBkU5Bryx3fvUHvnfn6-LccR61kS42DQ,178
+release/protobuf/mixs.proto,sha256=C3fjuBhaaOXU2mZ3gLO_dtj4VJ46p20CfJMML_z6Pyk,1281597
+release/shacl/mixs.shacl.ttl,sha256=4E96jFvkpl2jjsePL_VI9yZe7vVXK55u9AuGjliBD_I,12606659
+release/shex/mixs.shex,sha256=lC0dsUr4ozzzjhEPeUoGAvT23kwGAyuov5ApMZ3Etu4,641346
+release/sqlschema/mixs.sql,sha256=sRYPJ24uggNqoH_IcivzMD9OSim5MoLdf71kePm2Mdw,1292118
+mixs_linkml-0.1.1.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+mixs_linkml-0.1.1.dist-info/WHEEL,sha256=DRf8A_Psd1SF2kVqTQOOFU1Xzl3-A2qljAxBMTOusUs,83
+mixs_linkml-0.1.1.dist-info/METADATA,sha256=t0BUAl5j0GuSQ1A4DwVzq5ckP7A4_qFrAQVOrbbcY9Y,424
+mixs_linkml-0.1.1.dist-info/RECORD,,
