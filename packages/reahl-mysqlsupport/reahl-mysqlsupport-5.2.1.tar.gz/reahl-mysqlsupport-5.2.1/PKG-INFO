@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: reahl-mysqlsupport
+Version: 5.2.1
+Summary: Support for using MySQL with Reahl.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Description: Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+        
+        This package contains infrastructure necessary to use Reahl with MySQL. 
+Platform: UNKNOWN
