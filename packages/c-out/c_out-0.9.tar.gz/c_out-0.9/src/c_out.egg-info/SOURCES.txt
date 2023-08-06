@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/c_out/__init__.py
+src/c_out/all_combinations.py
+src/c_out/beauty_print.py
+src/c_out.egg-info/PKG-INFO
+src/c_out.egg-info/SOURCES.txt
+src/c_out.egg-info/dependency_links.txt
+src/c_out.egg-info/top_level.txt
