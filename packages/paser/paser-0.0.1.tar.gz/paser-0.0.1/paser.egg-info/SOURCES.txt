@@ -1,0 +1,6 @@
+setup.py
+/home/yangxiaoyu/github/precode_bk/precode/paser.c
+paser.egg-info/PKG-INFO
+paser.egg-info/SOURCES.txt
+paser.egg-info/dependency_links.txt
+paser.egg-info/top_level.txt
