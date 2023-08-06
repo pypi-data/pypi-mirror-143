@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+dataside/__init__.py
+dataside/analysis.py
+dataside.egg-info/PKG-INFO
+dataside.egg-info/SOURCES.txt
+dataside.egg-info/dependency_links.txt
+dataside.egg-info/top_level.txt
