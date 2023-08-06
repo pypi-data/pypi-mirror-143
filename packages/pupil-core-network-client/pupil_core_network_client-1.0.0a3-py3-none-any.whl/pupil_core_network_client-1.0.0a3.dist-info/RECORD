@@ -1,0 +1,9 @@
+pupil_labs/pupil_core_network_client/__init__.py,sha256=vBROitEXTH6PF-YQOR9tVrEH8rryn7phUc3cmw_bwfI,727
+pupil_labs/pupil_core_network_client/decorators.py,sha256=OXd6KtxRSHh25AuQ0XoTHew0vvvZ6bfvtYzP2UtH9lY,329
+pupil_labs/pupil_core_network_client/device.py,sha256=za5nLobinwRGlGixzGdsw1BW26aPoe_aIJuXKT2R390,10064
+pupil_labs/pupil_core_network_client/subscription.py,sha256=3CLXzKJcCu3U1br5ZpwUgTpI-A8GlxjQ7rrMr-Gi6SA,4689
+pupil_core_network_client-1.0.0a3.dist-info/LICENSE,sha256=2z8CRrH5J48VhFuZ_sR4uLUG63ZIeZNyL4xuJUKF-vg,1050
+pupil_core_network_client-1.0.0a3.dist-info/METADATA,sha256=7cbiM3fkYH3EM56rPN6y0epXToAESS_aQ0PMYrQrCxQ,3089
+pupil_core_network_client-1.0.0a3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pupil_core_network_client-1.0.0a3.dist-info/top_level.txt,sha256=0sAYqydhZ3GsxyCFKlrGo7LwoXKMZJPsvgI_edVx2a0,11
+pupil_core_network_client-1.0.0a3.dist-info/RECORD,,
