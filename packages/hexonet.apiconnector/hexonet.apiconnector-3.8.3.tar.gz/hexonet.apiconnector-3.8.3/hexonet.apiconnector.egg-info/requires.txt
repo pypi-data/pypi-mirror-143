@@ -1,0 +1,9 @@
+docutils==0.*
+guzzle-sphinx-theme==0.*
+m2r2==0.*
+pytest-cov<4,>=2
+sphinx<5,>=3
+sphinxcontrib-log-cabinet==1.*
+sphinxcontrib-websupport==1.*
+twine==3.*
+black
