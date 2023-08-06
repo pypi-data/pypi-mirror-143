@@ -1,0 +1,8 @@
+test_play_lose (hangman_test.test_milestone4.HangmanTestCase) ... ok
+test_play_win (hangman_test.test_milestone4.HangmanTestCase) ... ok
+test_presence_readme (hangman_test.test_milestone4.HangmanTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.028s
+
+OK
