@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/df_jupyter_magic/__init__.py
+src/df_jupyter_magic/df_jupyter_magic.py
+src/df_jupyter_magic.egg-info/PKG-INFO
+src/df_jupyter_magic.egg-info/SOURCES.txt
+src/df_jupyter_magic.egg-info/dependency_links.txt
+src/df_jupyter_magic.egg-info/requires.txt
+src/df_jupyter_magic.egg-info/top_level.txt

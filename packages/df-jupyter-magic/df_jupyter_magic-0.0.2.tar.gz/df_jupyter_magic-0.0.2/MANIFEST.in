@@ -1,0 +1,2 @@
+exclude Makefile
+exclude .ipynb_checkpoints/
