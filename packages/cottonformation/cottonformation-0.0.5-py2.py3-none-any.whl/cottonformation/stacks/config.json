@@ -1,0 +1,21 @@
+{
+    "example-stack": {
+        "vpc": {
+            "project_name": "sanhe-infra",
+            "stage": "dev",
+            "vpc_cidr_seed": 6,
+            "n_az_used": 3,
+            "sg_authorized_ips": [
+                "108.48.67.49",
+                "72.21.196.64",
+                "52.95.4.16",
+                "72.21.196.67"
+            ]
+        },
+        "jump_box": {
+            "project_name": "sanhe-infra",
+            "stage": "dev",
+            "key_name": "aws-data-lab-sanhe-dev"
+        }
+    }
+}
