@@ -1,0 +1,11 @@
+despace/__init__.py,sha256=-46D53CFMNNu-fVOFessL4GPsmPCzDm_weVLFAcywdY,208
+despace/spatial_sort.py,sha256=oruHfl2BBiBsCAg0uNpfIBn-ThRxQPXMz7sx0KV1pxE,8527
+despace/version.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=f3MijclVNvMIvupxIHVmAknL2crMcY9pLRTXPLd0OfM,302
+tests/test_spatial_sort.py,sha256=1aReVUnyaGhUNaeQMCxudKjCY6DnvhurJ6WdEXleNTo,2252
+despace-0.2.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+despace-0.2.0.dist-info/METADATA,sha256=y5S39maolUjIScaDl8dZ_EcW6Uv8uZCsl-JZEqWidqc,4748
+despace-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+despace-0.2.0.dist-info/top_level.txt,sha256=hCeLYaSkXiRQgQj5m-3X3kUCplNnC7cxvUOgCEMnvtw,14
+despace-0.2.0.dist-info/RECORD,,
