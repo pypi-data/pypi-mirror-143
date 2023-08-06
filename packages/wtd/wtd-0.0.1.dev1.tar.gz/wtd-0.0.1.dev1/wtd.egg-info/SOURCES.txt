@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+wtd/__init__.py
+wtd/__version__.py
+wtd.egg-info/PKG-INFO
+wtd.egg-info/SOURCES.txt
+wtd.egg-info/dependency_links.txt
+wtd.egg-info/requires.txt
+wtd.egg-info/top_level.txt
