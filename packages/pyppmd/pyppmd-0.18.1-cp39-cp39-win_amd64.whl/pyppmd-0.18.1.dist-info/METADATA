@@ -1,0 +1,213 @@
+Metadata-Version: 2.1
+Name: pyppmd
+Version: 0.18.1
+Summary: PPMd compression/decompression library
+Home-page: http://github.com/miurahr/pyppmd
+Author: Hiroshi Miura
+Author-email: Hiroshi Miura <miurahr@linux.com>
+License: PyPPMd is distributed under GNU Lesser General Public License version 2.1
+        or any later version.        
+        The source code in PyPPMd is partially in the public domain,
+        LGPLv2 and partially modified work of the software distributed
+        under the BSD 3-Clause license.        
+        PyPPMd takes a LGPL2.1+ for license compatibility between them.
+        You can use PyPPMd as python dependency of any software,
+        and/or combines with LGPL2.1+, LGPL3, GPLv2, and GPLv3 software.        
+        GNU Lesser General Public License
+        =================================        
+        Copyright (C) 2020-2021, Hiroshi Miura        
+        This library is free software; you can redistribute it and/or
+        modify it under the terms of the GNU Lesser General Public
+        License as published by the Free Software Foundation; either
+        version 2.1 of the License, or (at your option) any later version.        
+        This library is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+        Lesser General Public License for more details.        
+        You should have received a copy of the GNU Lesser General Public
+        License along with this library; if not, write to the Free Software
+        Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA                
+        Public domain/GNU Lesser General Public License
+        ===============================================        
+        C code under lib folder which originating from 7-zip are
+        released under LGPL, and each sources are noted as follows.        
+        - 2017-04-03 : Igor Pavlov : Public domain
+        - PPMd var.H (2001): Dmitry Shkarin : Public domain
+        - PPMd var.I (2002): Dmitry Shkarin : Public domain
+        - Carryless rangecoder (1999): Dmitry Subbotin : Public domain                
+        7-zip, Copyright (C) 1999-2017, Igor Pavlov.        
+        This library is free software; you can redistribute it and/or
+        modify it under the terms of the GNU Lesser General Public
+        License as published by the Free Software Foundation; either
+        version 2.1 of the License, or (at your option) any later version.        
+        This library is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+        Lesser General Public License for more details.        
+        You can receive a copy of the GNU Lesser General Public License from
+        http://www.gnu.org/                
+        BSD license
+        ===========        
+        A part of C extension code is a derived work of pyzstd which is licensed
+        under BSD 3-Clause license.        
+        BSD 3-Clause License        
+        Copyright (c) 2016 Tino Reichard
+        Copyright (c) 2020-2021, Ma Lin,
+        All rights reserved.        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.        
+Project-URL: Source, https://github.com/miurahr/pyppmd
+Keywords: ppmd,7-zip,compression
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+Provides-Extra: check
+Requires-Dist: mypy (>=0.812) ; extra == 'check'
+Requires-Dist: mypy-extensions (>=0.4.3) ; extra == 'check'
+Requires-Dist: check-manifest ; extra == 'check'
+Requires-Dist: flake8 ; extra == 'check'
+Requires-Dist: flake8-black ; extra == 'check'
+Requires-Dist: readme-renderer ; extra == 'check'
+Requires-Dist: pygments ; extra == 'check'
+Requires-Dist: isort (>=5.0.3) ; extra == 'check'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=2.3) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: fuzzer
+Requires-Dist: atheris ; extra == 'fuzzer'
+Requires-Dist: hypothesis ; extra == 'fuzzer'
+Provides-Extra: test
+Requires-Dist: pytest (>=6.0) ; extra == 'test'
+Requires-Dist: pytest-benchmark ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-timeout ; extra == 'test'
+Requires-Dist: hypothesis ; extra == 'test'
+Requires-Dist: coverage[toml] (>=5.2) ; extra == 'test'
+
+PyPPMd
+======
+
+
+.. image:: https://readthedocs.org/projects/pyppmd/badge/?version=latest
+  :target: https://pyppmd.readthedocs.io/en/latest/?badge=latest
+
+.. image:: https://badge.fury.io/py/pyppmd.svg
+  :target: https://badge.fury.io/py/pyppmd
+
+.. image:: https://img.shields.io/conda/vn/conda-forge/pyppmd
+  :target: https://anaconda.org/conda-forge/pyppmd
+
+.. image:: https://github.com/miurahr/pyppmd/workflows/Run%20Tox%20tests/badge.svg
+  :target: https://github.com/miurahr/pyppmd/actions
+
+.. image:: https://coveralls.io/repos/github/miurahr/pyppmd/badge.svg?branch=main
+  :target: https://coveralls.io/github/miurahr/pyppmd?branch=main
+
+
+Introduction
+------------
+
+``pyppmd`` module provides classes and functions for compressing and decompressing text data,
+using PPM(Prediction by partial matching) compression algorithm which has several variations of implementations.
+PPMd is the implementation by Dmitry Shkarin.
+PyPPMD use Igor Pavlov's range coder introduced in 7-zip.
+
+The API is similar to Python's bz2/lzma/zlib module.
+
+Some parts of th codes are derived from ``7-zip``, ``pyzstd`` and ``ppmd-cffi``.
+
+
+Development status
+------------------
+
+A development status is considered as ``Beta``.
+
+Extra input byte
+----------------
+
+``PPMd`` algorithm and implementation is designed to use ``Extra`` input byte.
+The encoder will omit a last null (b"\0") byte when last byte is b"\0".
+You may need to provide an extra null byte when you don't get expected size of
+extracted data.
+
+You can do like as:
+
+.. code-block::
+
+    dec = pyppmd.Ppmd7Decoder(max_order=6, mem_size=16 << 10)
+    result = dec.decode(compressed, length)
+    if len(result) < length:
+        if dec.needs_input:
+            # ppmd need an extra null byte
+            result += dec.decode(b"\0", length - len(result))
+        else:
+            result += dec.decode(b"", length - len(result))
+
+
+WARNING
+-------
+
+* When use it on MSYS2/MINGW64 environment, you should set environment variable ``SETUPTOOLS_USE_DISTUTILS=stdlib``
+
+Copyright and License
+---------------------
+
+Copyright (C) 2020-2022 Hiroshi Miura
+
+Copyright (C) 2020-2021 Ma Lin
+
+Copyright (C) 2010-2012 Lockless Inc.
+
+Copyright (C) 1999-2017 Igor Pavlov
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+
