@@ -1,0 +1,2 @@
+ddrlibnx
+genie_parsers_nx
