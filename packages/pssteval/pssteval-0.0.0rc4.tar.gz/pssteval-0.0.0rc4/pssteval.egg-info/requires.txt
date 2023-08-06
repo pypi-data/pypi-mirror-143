@@ -1,0 +1,4 @@
+phonologic==0.0.0rc4
+psstdata
+regex
+tqdm
