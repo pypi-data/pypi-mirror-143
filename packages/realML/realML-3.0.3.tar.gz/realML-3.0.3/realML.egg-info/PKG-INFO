@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: realML
+Version: 3.0.3
+Summary: ICSI provided machine learning primitives for DARPA D3M project, focusing on fast kernel methods and matrix factorizations 
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/realML
+Author: International Computer Science Institute
+Author-email: gittea@rpi.edu
+License: Apache License 2.0
+Description: # realML primitives
+        - realML.matrix: fast least absolute deviations regression, fast robust (entrywise-l1 norm) low-rank matrix decomposition, sufficient dimensionality reduction (non-linear low-rank factorization)
+        - realML.kernel: preconditioned Gaussian and Polynomial regression, tensor machines for adaptive polynomial features
+        
+Keywords: d3m_primitive,machine learning,regression,dimensionality reduction,low rank factorization,featurization,sufficient dimensionality reduction,kernel methods
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
