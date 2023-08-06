@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+screeplot/__init__.py
+screeplot/scree.py
+screeplot.egg-info/PKG-INFO
+screeplot.egg-info/SOURCES.txt
+screeplot.egg-info/dependency_links.txt
+screeplot.egg-info/not-zip-safe
+screeplot.egg-info/top_level.txt
