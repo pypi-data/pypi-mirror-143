@@ -1,0 +1,5 @@
+turtle==0.0.1
+wheel
+svg.path
+svgpathtools
+tqdm
