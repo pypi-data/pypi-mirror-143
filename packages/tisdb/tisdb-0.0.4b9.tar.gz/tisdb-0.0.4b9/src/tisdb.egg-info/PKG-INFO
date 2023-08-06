@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tisdb
+Version: 0.0.4b9
+Summary: A relational DB based tsdb library for python tsdb project development that inherited and learned from TIDB and OpenTSDB.
+Home-page: UNKNOWN
+Author: deefox
+Author-email: 602716933@qq.com
+Maintainer: tisdb team
+Maintainer-email: dennias.chiu@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# TiSDB
+
+A simple TSDB project based on MySQL(or TIDB)
+
+## Installation
+
+```pip install tisdb```
+
+## Documents
+
+[User Guide](https://deeefox.github.io/tisdb/)
+
+

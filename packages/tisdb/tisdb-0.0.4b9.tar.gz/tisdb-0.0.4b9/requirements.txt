@@ -1,0 +1,4 @@
+porm>=0.0.28a0
+sortedcontainers>=v2.3.0
+pandas>=1.3.5
+simplejson>=3.17.6
