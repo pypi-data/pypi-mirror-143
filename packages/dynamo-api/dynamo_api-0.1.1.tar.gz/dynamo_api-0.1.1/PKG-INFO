@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dynamo-api
+Version: 0.1.1
+Summary: Package to perform simple operations on AWS DynamoDB for personal use and playing around with Github Actions
+License: MIT
+Author: Justin Lei
+Author-email: jun.lei@mail.mcgill.ca
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.17.75,<2.0.0)
