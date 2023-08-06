@@ -1,0 +1,7 @@
+MANIFEST.in
+README.md
+setup.py
+Paczkaelo.egg-info/PKG-INFO
+Paczkaelo.egg-info/SOURCES.txt
+Paczkaelo.egg-info/dependency_links.txt
+Paczkaelo.egg-info/top_level.txt
