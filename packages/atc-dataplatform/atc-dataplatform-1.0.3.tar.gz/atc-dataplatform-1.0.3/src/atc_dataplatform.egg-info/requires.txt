@@ -1,0 +1,7 @@
+pyyaml
+sqlparse
+deprecation
+pyodbc
+
+[dev]
+check-manifest
