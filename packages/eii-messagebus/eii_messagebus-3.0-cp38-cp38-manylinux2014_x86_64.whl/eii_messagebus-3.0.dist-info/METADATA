@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: eii-messagebus
+Version: 3.0
+Summary: EII message bus Python wrapper
+Home-page: UNKNOWN
+License: UNKNOWN
+Keywords: msgbus zeromq
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Networking
+
+UNKNOWN
+
