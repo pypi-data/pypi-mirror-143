@@ -1,0 +1,9 @@
+biopython
+matplotlib
+numba
+numpy
+pandas
+psutil
+scikit-learn==0.20.4
+scipy
+tqdm
