@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sat_datetime
+Version: 0.4
+Summary: Sat universe time calculation
+Home-page: https://github.com/junhg0211/sat-datetime
+Download-URL: https://github.com/junhg0211/sat-datetime/archive/refs/tags/v_0.4.tar.gz
+Author: Sch Jeon
+Author-email: junhg0211@gmail.com
+License: MIT
+Keywords: sat,datetime
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+
+UNKNOWN
+
