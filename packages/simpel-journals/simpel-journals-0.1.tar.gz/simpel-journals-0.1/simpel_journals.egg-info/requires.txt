@@ -1,0 +1,6 @@
+django<4.0,>=3.2.8
+django-mptt
+django-polymorphic
+simpel-hookup
+simpel-numerators
+simpel-utils
