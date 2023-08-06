@@ -1,0 +1,10 @@
+cuquantum/LICENSE,sha256=ggls9JXP_4o4y4mN_v9h48-YaGQUM5FkJmLQ9y9AlcQ,11004
+cuquantum/include/custatevec.h,sha256=e_dupyjQpYZAj_DrlAM8l2IWhmhcz3GlvX8zby77AuI,83181
+cuquantum/include/cutensornet.h,sha256=J8tCQ7o9ziZNZPcUGvmlZryzXGU_ybI-xAbQF0YnWgU,38706
+cuquantum/include/cutensornet/types.h,sha256=rEFP-0drl3m18QAhE6x4ZuCJUDrMWqS0vRPM6RYZvUI,18529
+cuquantum/lib/libcustatevec.so.1,sha256=iw5iAKA_nk_Lq5kbmXdkVcZG95LFeHvroZDMpl3u0Ps,28960184
+cuquantum/lib/libcutensornet.so.1,sha256=PDHzjMeOUmwA_iA7eAk1yIsqqO6F_1W7L-pSQ_0FiK8,3493200
+cuquantum-22.3.0.dist-info/METADATA,sha256=Do_HDLTUTckf5Ja8vNvZaNs2BZhCt1uKK41-QEMZPl0,855
+cuquantum-22.3.0.dist-info/WHEEL,sha256=YFDvGUd4qgsZW2DR7HoTshh6r2NDinrixRAyA44xxkw,109
+cuquantum-22.3.0.dist-info/top_level.txt,sha256=Tq6tIi8CZB9154B9shQExluwFkA4mOSbHw_GVcQvjt8,10
+cuquantum-22.3.0.dist-info/RECORD,,
