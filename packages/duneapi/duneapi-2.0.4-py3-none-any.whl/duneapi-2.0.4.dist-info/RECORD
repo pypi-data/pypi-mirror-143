@@ -1,0 +1,11 @@
+duneapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duneapi/api.py,sha256=_ROTeDcz2aDbEWQuasCwuCTBH1gXdDnyzY3hhpEOgUw,6638
+duneapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duneapi/response.py,sha256=Bpije_bDdUe_SxjhFyRqVwm28HofecMjhEnepNAuNyE,2314
+duneapi/types.py,sha256=JHvvRCG0LB4GBKUC7sIS94LsnUa-nQjIzwjHm8jS-xI,12856
+duneapi/util.py,sha256=zHZumOEXTqxTqUPZ70vOy_RwXwix4jl-AiA97vkcuZc,661
+duneapi-2.0.4.dist-info/LICENCE,sha256=0qUV5in6QNkA1NgYjaJ7ceyWpL-KfaeGInCZ6KYRaMc,11348
+duneapi-2.0.4.dist-info/METADATA,sha256=G8IFsWwOi-V1SrnFjEeTnJ5BYglo0iT5wfTr0-zvFOY,3737
+duneapi-2.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+duneapi-2.0.4.dist-info/top_level.txt,sha256=Dnx2Vz_CQtjdcgVEgkACcrh_bfJULg0qACVfd3X0up8,8
+duneapi-2.0.4.dist-info/RECORD,,
