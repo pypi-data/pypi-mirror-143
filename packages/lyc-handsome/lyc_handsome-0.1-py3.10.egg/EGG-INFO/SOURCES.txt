@@ -1,0 +1,5 @@
+setup.py
+lyc/lyc_handsome.egg-info/PKG-INFO
+lyc/lyc_handsome.egg-info/SOURCES.txt
+lyc/lyc_handsome.egg-info/dependency_links.txt
+lyc/lyc_handsome.egg-info/top_level.txt
