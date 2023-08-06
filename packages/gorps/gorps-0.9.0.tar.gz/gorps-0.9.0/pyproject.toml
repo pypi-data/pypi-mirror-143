@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ['py38', 'py39', 'py310']
+include = '\.pyi?$'
+exclude = '''
+(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | dist
+)
+'''
+
+[tool.mypy]
+strict = true
+
+[tool.pylint.'MESSAGES CONTROL']
+load-plugins = "pylint.extensions.docparams"
+default-docstring-type = "sphinx"
+ignore-comments = "yes"
+ignore-docstrings = "yes"
+disable = "line-too-long,missing-docstring,invalid-name,too-many-instance-attributes,too-many-arguments,too-many-locals,too-few-public-methods,too-many-lines,fixme"
+output-format = "text"
+reports = "no"

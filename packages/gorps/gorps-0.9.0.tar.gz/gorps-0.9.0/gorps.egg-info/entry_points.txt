@@ -1,0 +1,3 @@
+[console_scripts]
+gorps = gorps.__main__:main
+
