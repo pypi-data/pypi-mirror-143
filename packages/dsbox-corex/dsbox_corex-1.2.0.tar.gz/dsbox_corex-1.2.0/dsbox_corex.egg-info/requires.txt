@@ -1,0 +1,10 @@
+GitPython
+d3m
+d3m-common-primitives
+keras
+numpy
+pandas
+scikit-learn
+scipy
+six
+tensorflow
