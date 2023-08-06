@@ -1,0 +1,3 @@
+[console_scripts]
+bugzilla-anolis = bugzilla._cli:cli
+
