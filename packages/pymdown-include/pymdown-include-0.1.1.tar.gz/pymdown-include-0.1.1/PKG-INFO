@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pymdown-include
+Version: 0.1.1
+Summary: Pymdown include plugin
+Home-page: https://github.com/supcik/pymdown-include/
+License: Apache-2.0
+Keywords: Markdown,include,extension,plugin
+Author: Jacques Supcik
+Author-email: jacques.supcik@hefr.ch
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Dist: Markdown (>=3.3.6,<4.0.0)
+Project-URL: Repository, https://github.com/supcik/pymdown-include/
+Description-Content-Type: text/markdown
+
+# Pymdown-Include
+
+I tried hard to make the base name of the file to be included in the search
+path, but I couldn't figure out how to do that. During the "preprocessor"
+phase, I have no information about the file being processed. I just have the
+content of the file as an array of lines.
+
+## Some useful comands for developing
+
+```
+poetry install
+poetry build
+poetry run pytest
+poetry run pytest --cov=pymdown_include
+```
