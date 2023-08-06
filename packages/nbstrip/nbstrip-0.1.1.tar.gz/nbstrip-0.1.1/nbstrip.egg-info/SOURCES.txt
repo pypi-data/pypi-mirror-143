@@ -1,0 +1,10 @@
+LICENSE
+README.md
+nbstrip.py
+setup.cfg
+setup.py
+nbstrip.egg-info/PKG-INFO
+nbstrip.egg-info/SOURCES.txt
+nbstrip.egg-info/dependency_links.txt
+nbstrip.egg-info/entry_points.txt
+nbstrip.egg-info/top_level.txt
