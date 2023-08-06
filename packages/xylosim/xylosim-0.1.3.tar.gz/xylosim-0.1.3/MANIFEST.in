@@ -1,0 +1,2 @@
+include src/v1/cpp/*
+include src/v2/cpp/*
