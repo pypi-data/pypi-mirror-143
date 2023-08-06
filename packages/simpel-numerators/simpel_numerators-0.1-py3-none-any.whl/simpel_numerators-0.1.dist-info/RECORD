@@ -1,0 +1,17 @@
+simpel_numerators/__init__.py,sha256=wjNWcKhAi9Hi4lUgZXx303BU8tecvv-ZamZaRzxf0aM,119
+simpel_numerators/admin.py,sha256=7OaDIVC5vihwchiv44aiYXkd82kcw4eSUKavkDCSzr0,290
+simpel_numerators/apps.py,sha256=Ay8wUYVWy6v3cfDTqdkqItnsQ_UrpBNlLSHZgCgyHPk,487
+simpel_numerators/models.py,sha256=qr-sR5ICOv1lbuF_5SRVaQ5ZJhQ0hrgf_ffAxXP4Hnk,5891
+simpel_numerators/settings.py,sha256=gyV6KAEqJGDySMjnNDM1GTpjILEC_q_RLjGuT-_3T5I,3971
+simpel_numerators/version.py,sha256=f2AfcnuSHOWSG6NBK4rXLhyfHS269_cxpYwokeWfxwo,1480
+simpel_numerators/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators/api/serializers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators/api/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators/api/viewsets.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators/migrations/0001_initial.py,sha256=KucdsVWO13g2YxJhxIv_VNM5SBGp4TYlyhWTcbFi5Yw,1332
+simpel_numerators/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators-0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_numerators-0.1.dist-info/METADATA,sha256=KeuQyjqABRIGJ5nAZCan2v_l7vE6azRSH5qAMJGt7_0,2564
+simpel_numerators-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+simpel_numerators-0.1.dist-info/top_level.txt,sha256=dXFSWxNNjO9ls-rrajGhXLTE_Skh6j3Fdd5E6SQvwjY,18
+simpel_numerators-0.1.dist-info/RECORD,,
