@@ -1,0 +1,14 @@
+python-emailer/__init__.py,sha256=nDW-ewpm0bCi05mog3rnzMRZVdT9gw6Chgw5pK45dmU,19
+python-emailer/email_processing.py,sha256=g7InvXRwU92uikFXLk9vxu-v6kgi2VuP5wiNge8UbTM,22139
+python-emailer/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python-emailer/tests/test_email_processing.py,sha256=vw3sTkb9cTyjPehj6fudun5Lfuz70nn4VTIEz6Uvdm0,8375
+python_emailer/__init__.py,sha256=nDW-ewpm0bCi05mog3rnzMRZVdT9gw6Chgw5pK45dmU,19
+python_emailer/email_processing.py,sha256=lJV9QsBj3cwUqnb0NwXDlS3hiFyRpAKpvFUpOKPEgng,22132
+python_emailer/tes1.py,sha256=69X7Fv6mYDgAGk-4b1s0zLU-7hyPMfPaCHT08vLiN6c,240
+python_emailer/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_emailer/tests/test_email_processing.py,sha256=vw3sTkb9cTyjPehj6fudun5Lfuz70nn4VTIEz6Uvdm0,8375
+python_emailer-1.5.0.dist-info/LICENSE,sha256=r_fIUExG3uw0i5srv0Q_mPLswwH2AzQv5MI5ClyrPvc,1093
+python_emailer-1.5.0.dist-info/METADATA,sha256=wNqyoWwjq3BhdDiPBmK3Ck92Wajw2FjvmCrL_s_ROmo,2480
+python_emailer-1.5.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+python_emailer-1.5.0.dist-info/top_level.txt,sha256=vMZdVb4w_2Ml_7WozLYt1lAGOsZqtMgs5U660ZTHa7E,15
+python_emailer-1.5.0.dist-info/RECORD,,
