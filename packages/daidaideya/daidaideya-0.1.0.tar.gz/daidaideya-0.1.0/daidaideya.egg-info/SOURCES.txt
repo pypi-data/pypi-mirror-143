@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+daidaideya.egg-info/PKG-INFO
+daidaideya.egg-info/SOURCES.txt
+daidaideya.egg-info/dependency_links.txt
+daidaideya.egg-info/top_level.txt
+mypackage/__init__.py
+mypackage/__version__.py
+mypackage/core.py
