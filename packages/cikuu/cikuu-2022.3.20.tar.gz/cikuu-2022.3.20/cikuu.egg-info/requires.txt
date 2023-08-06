@@ -1,0 +1,8 @@
+elasticsearch
+fastapi
+fire
+marisa_trie
+pika
+pymysql
+redis
+uvicorn
