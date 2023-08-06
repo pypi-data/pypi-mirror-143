@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+license.txt
+setup.py
+src/stringindexer.py
+src/PrettyIndexer.egg-info/PKG-INFO
+src/PrettyIndexer.egg-info/SOURCES.txt
+src/PrettyIndexer.egg-info/dependency_links.txt
+src/PrettyIndexer.egg-info/top_level.txt
