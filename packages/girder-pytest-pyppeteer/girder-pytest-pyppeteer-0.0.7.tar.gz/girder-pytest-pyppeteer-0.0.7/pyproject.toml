@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "girder-pytest-pyppeteer"
+version = "0.0.7"
+description = "Pytest plugin for using pyppeteer to test Girder 4 applications"
+authors = ["Daniel Chiquito <daniel.chiquito@kitware.com>"]
+license = "Apache License 2.0"
+classifiers = ["Framework :: Pytest"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pytest = "^7.0.1"
+# dependencies to run pyppeteer tests
+pyppeteer = {version = "^1.0.2", optional = true}
+pytest-asyncio = {version = "^0.18.1", optional = true}
+mkdocs = {version = "^1.2.3", extras = ["docs"]}
+mkdocstrings = {version = "^0.18.1", extras = ["docs"]}
+
+[tool.poetry.extras]
+pyppeteer = [
+    "pyppeteer",
+    "pytest-asyncio"
+]
+
+[tool.poetry.plugins.pytest11]
+pyppeteer = "girder_pytest_pyppeteer.plugin"
+
+[tool.poetry.plugins.console_scripts]
+pytest-docker = "girder_pytest_pyppeteer.main:run_pytest_docker_compose"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
