@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+itaushopline/__init__.py
+itaushopline/itaushopline.py
+python_itaushopline.egg-info/PKG-INFO
+python_itaushopline.egg-info/SOURCES.txt
+python_itaushopline.egg-info/dependency_links.txt
+python_itaushopline.egg-info/requires.txt
+python_itaushopline.egg-info/top_level.txt
