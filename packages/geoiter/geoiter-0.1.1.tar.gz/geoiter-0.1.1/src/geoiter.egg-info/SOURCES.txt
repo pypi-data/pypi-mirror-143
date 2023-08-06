@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/geoiter/__init__.py
+src/geoiter/geoiter.py
+src/geoiter.egg-info/PKG-INFO
+src/geoiter.egg-info/SOURCES.txt
+src/geoiter.egg-info/dependency_links.txt
+src/geoiter.egg-info/not-zip-safe
+src/geoiter.egg-info/requires.txt
+src/geoiter.egg-info/top_level.txt
+src/geoiter/util/gpx.py
+src/geoiter/util/plot.py
+src/geoiter/util/ressource_example.py
+test/test_geoiter.py
