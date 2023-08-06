@@ -1,0 +1,137 @@
+.. tanzanite documentation main file, created by
+   cookiecutter on 2021-09-24.
+
+tanzanite
+=========
+
+|Versions| |Contributors| |License| |Docs|
+
+.. |Versions| image:: https://img.shields.io/pypi/pyversions/tanzanite.svg
+   :target: https://pypi.org/project/tanzanite
+.. |Contributors| image:: https://img.shields.io/github/contributors/davedittrich/tanzanite.svg
+   :target: https://github.com/davedittrich/tanzanite/graphs/contributors
+.. |License| image:: https://img.shields.io/github/license/davedittrich/tanzanite.svg
+   :target: https://github.com/davedittrich/tanzanite/blob/main/LICENSE.txt
+.. |Docs| image:: https://readthedocs.org/projects/tanzanite/badge/?version=latest
+   :target: https://tanzanite.readthedocs.io
+
+**Tanzanite** is an open source platform for managing users and compute instances
+when running *purpleteam* training sessions, cyber exercises, and "*capture the
+flag*" contests.
+
+* Version: 2022.3.0
+* GitHub repo: https://github.com/davedittrich/tanzanite/
+* License: Apache Software License 2.0
+
+
+.. README_FEATURES:
+
+Features
+--------
+
+* The ``tanzanite`` platform provides two user interfaces on the front end.
+
+  + The first is a general Python command line interface (CLI) built
+    on the OpenStack `cliff`_ (Command Line Interface Formulation Framework).
+
+    * ``cliff`` provides many useful features like modularizing subcommands into
+      groups, built-in help for internally documenting commands, and producing
+      output in clean tabular form or in one of several data formats you can
+      feed into other tools or automation platforms.
+
+    * The CLI not only makes developing and testing API features faster and
+      easier, but it also enables better integration with other open source
+      tools through scripting and provides a quick remote interface for those
+      running an exercise or CTF.
+
+  + The second is a basic web application GUI.
+   
+    * The web app is served by FastAPI along with the API using Jinja2
+      HTML templates.
+     
+    * The built-in OpenAPI schema interface will help you write your own custom
+      GUI or integrate Tanzanite with your own web application front end.
+
+* Both of these front ends access the backend database, compute instance
+  management, and related services via an API based on the `FastAPI`_
+  framework.
+
+  + Configuration settings and storage of sensitive data on the backend
+    uses a `Python Secrets`_ (`psec`) environment. This decouples storage
+    of secrets from source code, making it easier and safer to develop
+    and test new features or proprietary enhancements to the system.
+
+  + The `sqlalchemy`_ SQL toolkit and Object Relational Mapper are used
+    for generalizing access to local or remote databases. Local database
+    support for testing and interactive debugging uses `sqlite3`_, while
+    Postgres is supported for more robust production deployments.
+
+* The platform is parially self-documenting through integration of `Sphinx`_
+  documentation for generation both locally and through `ReadTheDocs`_. CLI
+  commands are documented using ``cliff`` autoprogram `Sphinx integration`_,
+  giving you the same output you get using the ``--help`` flag on the command
+  line.
+
+* The source repository comes preconfigured for unit testing with `pytest`_,
+  Python security vulnerability scanning with `bandit`_, integration and
+  system testing with BATS (`bats-core`_), and Python library dependency
+  security scanning with GitHub's `dependabot`_.
+
+* Support for testing against multiple versions of Python is handled by `Tox`_.
+
+* Interactive development and debugging is supported by pre-configuration
+  of `VSCode`_, allowing easy debugging of the CLI client components, the
+  web application components and server backend, or even the client components
+  and server at the same time.
+
+* Version numbering for development and test versions follows a date-based
+  versioning scheme tracking Git repository status. Version number
+  bumping is managed using `bump2version`_.
+
+* Development and production testing and release workflows are processed by
+  `GitHub Actions`_ with automatic package publication to `PyPI`_ or
+  `Test PyPI`_ when you push a new version tag on the ``main`` branch, or
+  a special ``rc`` tag on the ``develop`` branch.
+
+
+Contact
+-------
+
+Dave Dittrich <dave.dittrich@gmail.com>
+
+.. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
+
+Copyright |copy| 2019-2021 Dave Dittrich. All rights reserved.
+
+Credits
+-------
+
+This package was created with `Cookiecutter`_ from the
+<https://github.com/davedittrich/cookiecutter-cliffapp-template> project template.  It
+derives some of its features and inspiration from
+<https://github.com/veit/cookiecutter-namespace-template> and
+<https://github.com/audreyfeldroy/cookiecutter-pypackage>.
+
+
+.. _cliff: https://github.com/openstack/cliff
+.. _FastAPI: https://fastapi.tiangolo.com/
+.. _Python Secrets: https://pypi.org/project/python-secrets
+.. _sqlalchemy: https://www.sqlalchemy.org
+.. _sqlite3: https://sqlite.org/cli.html
+.. _Sphinx: http://www.sphinx-doc.org/
+.. _Sphinx integration: https://docs.openstack.org/cliff/latest/user/sphinxext.html
+.. _ReadTheDocs: https://readthedocs.com
+.. _pytest: https://docs.pytest.org/en/stable/
+.. _bandit: https://bandit.readthedocs.io
+.. _bats-core: https://bats-core.readthedocs.io
+.. _dependabot: https://docs.github.com/en/code-security/supply-chain-security/configuring-dependabot-security-updates
+.. _VSCode: https://code.visualstudio.com
+.. _Tox: https://tox.readthedocs.io/
+.. _bump2version: https://github.com/c4urself/bump2version
+.. _GitHub Actions: https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions
+.. _PyPI: https://pypi.org/
+.. _Test PyPI: https://test.pypi.org
+.. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
+
+
+.. EOF

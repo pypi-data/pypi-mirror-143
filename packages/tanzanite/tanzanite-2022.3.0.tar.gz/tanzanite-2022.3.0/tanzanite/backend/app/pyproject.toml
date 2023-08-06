@@ -1,0 +1,142 @@
+[tool.poetry]
+name = "tanzanite"
+version = "2022.3.0"
+description = "An open source purpleteaming and CTF platform."
+license = "Apache-2.0"
+authors = ["Dave Dittrich <dave.dittrich@gmail.com>"]
+maintainers = ["Dave Dittrich <dave.dittrich@gmail.com>"]
+readme = "README.rst"
+homepage = "https://github.com/davedittrich/tanzanite"
+repository = "https://github.com/davedittrich/tanzanite"
+documentation = "https://github.com/davedittrich/tanzanite"
+keywords = ["education","security","ctf","purpleteam","fastapi"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development",
+    "Topic :: Utilities"
+]
+# packages = [
+#     "tanzanite/cli/*.py",
+#     "tanzanite/cli/**/*.py",
+# ]
+
+[tool.poetry.scripts]
+tz = "tanzanite.__main__:main"
+tanzanite = "tanzanite.__main__:main"
+
+[tool.poetry.plugins]
+
+[tool.poetry.plugins.tanzanite]
+"about" = "tanzanite.cli.about:CmdAbout"
+"api start" = "tanzanite.cli.server.start:CmdStartAPI"
+"challenge create" = "tanzanite.cli.challenge.create:CmdChallengeCreate"
+"challenge delete" = "tanzanite.cli.challenge.delete:CmdChallengeDelete"
+"challenge list" = "tanzanite.cli.challenge.list:CmdChallengeList"
+"challenge show" = "tanzanite.cli.challenge.show:CmdChallengeShow"
+"challenge update" = "tanzanite.cli.challenge.update:CmdChallengeUpdate"
+"db init" = "tanzanite.cli.db.init:CmdDBInit"
+"db summary" = "tanzanite.cli.db.summary:CmdDBSummary"
+"login" = "tanzanite.cli.login:CmdLogin"
+"logout" = "tanzanite.cli.login:CmdLogout"
+"run" = "psec.run:Run"
+"ssh config" = "psec.ssh:SSHConfig"
+"ssh known-hosts add" = "psec.ssh:SSHKnownHostsAdd"
+"ssh known-hosts extract" = "psec.ssh:SSHKnownHostsExtract"
+"ssh known-hosts remove" = "psec.ssh:SSHKnownHostsRemove"
+"template" = "psec.template:Template"
+"utils myip" = "psec.utils.myip:MyIP"
+"utils myip methods" = "psec.utils.myip:MyIPMethods"
+"utils netblock" = "psec.utils.netblock:Netblock"
+"utils set-aws-credentials" = "psec.utils.set_aws_credentials:SetAWSCredentials"
+"utils tfstate backend" = "psec.utils.tfbackend:TfBackend"
+"utils tfstate output" = "psec.utils.tfoutput:TfOutput"
+"utils yaml-to-json" = "psec.utils.yaml_to_json:YAMLToJSON"
+"user create" = "tanzanite.cli.user.create:CmdUserCreate"
+"user delete" = "tanzanite.cli.user.delete:CmdUserDelete"
+"user list" = "tanzanite.cli.user.list:CmdUserList"
+"user notify" = "tanzanite.cli.user.notify:CmdUserNotify"
+"user summary" = "tanzanite.cli.user.summary:CmdUserSummary"
+"user update" = "tanzanite.cli.user.update:CmdUserUpdate"
+"webapp" = "tanzanite.cli.webapp:CmdWebapp"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.54.1"
+python-multipart = "^0.0.5"
+email-validator = "^1.0.5"
+requests = "^2.23.0"
+celery = "^4.4.2"
+passlib = {extras = ["bcrypt"], version = "^1.7.2"}
+tenacity = "^6.1.0"
+pydantic = "^1.9.0"
+emails = "^0.6"
+raven = "^6.10.0"
+gunicorn = "^20.0.4"
+jinja2 = "^2.11.2"
+psycopg2-binary = "^2.8.5"
+alembic = "^1.4.2"
+sqlalchemy = "^1.3.16"
+pytest = "^5.4.1"
+python-jose = {extras = ["cryptography"], version = "^3.1.0"}
+databases = {extras = ["sqlite", "postgresql"], version = "^0.5.3"}
+SQLAlchemy-Utils = "^0.38.1"
+Sphinx = "^4.3.2"
+sphinx-rtd-theme = "^1.0.0"
+aiofiles = "^0.8.0"
+python-secrets = "^22.1.0"
+httpx = "^0.22.0"
+uvicorn = "^0.17.1"
+isort = "^5.10.1"
+python-dotenv = "^0.19.2"
+setuptools = "^60.9.3"
+itsdangerous = "^2.1.0"
+Jinja2 = "2.11.3"
+MarkupSafe = "2.0.1"
+PyJWT = "^2.3.0"
+poetry2setup = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+setuptools = "^60.9.3"
+pip = "^22.0.4"
+mypy = "^0.770"
+black = "^19.10b0"
+autoflake = "^1.3.1"
+flake8 = "^3.7.9"
+pytest = "^5.4.1"
+sqlalchemy-stubs = "^0.3"
+pytest-cov = "^2.8.1"
+pytest-cookies = "^0.6.1"
+asgi-lifespan = "^1.0.1"
+tox = "^3.24.5"
+bandit = "^1.7.2"
+poetry2setup = "^1.0.0"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 88
+
+[build-system]
+# requires = ["poetry>=0.12"]
+# build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry.core.masonry.api"
+
+# https://github.com/tiangolo/poetry-version-plugin
+# Not working out-of-the-box, so disabling for now.
+# [tool.poetry-version-plugin]
+# source = "git-tag"
+
+[tool.poetry-dynamic-versioning]
+enable = false

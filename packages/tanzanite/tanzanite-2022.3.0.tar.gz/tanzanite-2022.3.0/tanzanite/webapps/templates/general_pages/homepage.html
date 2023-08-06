@@ -1,0 +1,32 @@
+{% extends "shared/base.html" %}
+
+{% block title %}
+  <title>Tanzanite</title>
+{% endblock %}
+
+{% block content %}
+  {% with msg=msg %}
+    {% include "components/alerts.html" %}
+  {% endwith %}
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">{% if not username %}Find your next challenge...{% endif %}</h1>
+    </div>
+  </div>
+  <div class="row">
+      {% for challenge in challenges %}
+        <div class="col-lg-4 col-md-3 col-sm-10 mr-auto">
+          {% with obj=challenge %}
+            {% include "components/cards.html" %}
+          {% endwith %}
+
+          {% if loop.index % 3 %}
+        </div>
+          {% else %}
+        </div></div><br><div class="row">
+          {% endif %}
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}

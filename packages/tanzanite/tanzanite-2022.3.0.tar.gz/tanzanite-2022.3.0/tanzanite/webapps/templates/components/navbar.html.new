@@ -1,0 +1,172 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="{{ url_for('static', path='images/d2-logo.png') }}"
+        alt="D2 Tanzanite"
+        width="30"
+        height="24"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Help
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/help/">Ask for help</a></li>
+            <li>
+              <a class="dropdown-item" href="/sphinx/" target="_blank"
+                >User Guide</a
+              >
+            </li>
+            {% if is_superuser %}
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="/apidocs/" target="_blank"
+                >API Docs (Swagger)</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/redoc/" target="_blank"
+                >API Docs (Redoc)</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+        {% if is_superuser %}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Challenges
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/post-a-challenge"
+                >Create a Challenge</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/delete-challenge"
+                >Delete a Challenge</a
+              >
+            </li>
+          </ul>
+        </li>
+        {% endif %} {% if username %}
+        <form class="d-flex" action="/search">
+          <input
+            class="form-control me-2"
+            name="query"
+            id="autocomplete"
+            type="search"
+            placeholder="Search challenges"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        {% endif %} {% if username %}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Users
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/users">Show users</a>
+            </li>
+            {% if is_superuser %}
+            <li>
+              <a class="dropdown-item" href="/delete-users">Delete a user</a>
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+        {% endif %} {% if is_superuser or is_proctor %}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Assets
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/users">Show assets</a>
+            </li>
+            {% if is_superuser %}
+            <li>
+              <a class="dropdown-item" href="/delete-users">Assign assets</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/delete-users">Destroy assets</a>
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+        {% endif %}
+      </ul>
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        {% if username %}
+        <li class="nav-item">
+          <a class="nav-link" href="/api/v1/users/me"
+            >{{username}} {% if is_superuser %}(S){% elif is_proctor %}(P){%
+            endif %}</a
+          >
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/register/">Register</a>
+        </li>
+        {% endif %} {% if not is_active %}
+        <li class="nav-item">
+          <a class="nav-link" href="/login/">Log in</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout/">Log out</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
