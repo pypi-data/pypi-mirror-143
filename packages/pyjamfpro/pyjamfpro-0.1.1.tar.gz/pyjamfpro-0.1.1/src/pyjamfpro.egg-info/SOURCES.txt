@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/pyjamfpro/__init__.py
+src/pyjamfpro/endpoints.py
+src/pyjamfpro/jamfpro.py
+src/pyjamfpro.egg-info/PKG-INFO
+src/pyjamfpro.egg-info/SOURCES.txt
+src/pyjamfpro.egg-info/dependency_links.txt
+src/pyjamfpro.egg-info/requires.txt
+src/pyjamfpro.egg-info/top_level.txt
