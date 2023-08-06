@@ -1,0 +1,6 @@
+MyExcel.py
+setup.py
+lzy_MyExcel.egg-info/PKG-INFO
+lzy_MyExcel.egg-info/SOURCES.txt
+lzy_MyExcel.egg-info/dependency_links.txt
+lzy_MyExcel.egg-info/top_level.txt
