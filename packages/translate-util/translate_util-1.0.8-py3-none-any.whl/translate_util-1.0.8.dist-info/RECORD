@@ -1,0 +1,13 @@
+translate_util/__init__.py,sha256=poqd0w9-6I71rHPcH1Pplq4fFuNCx5UzCLHkX0JoxQs,60
+translate_util/base_translate.py,sha256=_a0dNqX5c9wLpb9NkIWRxXkjijJcf92ilsOW8TYDXT8,555
+translate_util/common_request.py,sha256=q-3Ea6dcV730oJSjaGq48fh2rHhcta1sUWTpD6Eqjb8,756
+translate_util/translate_baidu.py,sha256=yuxKCF0vF3caNgJcuETKW4SEUuefE3Nl6NOeaeU2FwU,5785
+translate_util/translate_google.py,sha256=VNVs_A3Rcoe61sqPr9ruJQU_Ox3XdRZ-lluPoJaEGHE,1391
+translate_util/translate_iciba.py,sha256=ME0FrkyVq80io1elF2Hd_RixyCGulv-rQhOnIVo3EGk,1606
+translate_util/translate_tool.py,sha256=2XGUA97Jbl2J01A0T8oGCuKDxkAZ9REIsnThCCHmbqM,3927
+translate_util/translate_youdao.py,sha256=-yvazAsg6qO-5tbqDzn5HyRlJtsraBefXbv73fnJfIs,1790
+translate_util-1.0.8.dist-info/LICENSE.rst,sha256=30IOXTFlSKrgSttPZB_MZfF_8SOooMmMR8opZ-Hn0TQ,1068
+translate_util-1.0.8.dist-info/METADATA,sha256=OG0kuQuYmh9U9HHjNLhYmsjJwPABzAkr2pzeUC00nIE,2002
+translate_util-1.0.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+translate_util-1.0.8.dist-info/top_level.txt,sha256=8KYMN812MNbj7mXQFHHadD_-SxcgXyB9Pb9EHr27qEY,15
+translate_util-1.0.8.dist-info/RECORD,,
