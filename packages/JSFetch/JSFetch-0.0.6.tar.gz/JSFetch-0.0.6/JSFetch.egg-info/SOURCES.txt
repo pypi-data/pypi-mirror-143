@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+JSFetch.egg-info/PKG-INFO
+JSFetch.egg-info/SOURCES.txt
+JSFetch.egg-info/dependency_links.txt
+JSFetch.egg-info/requires.txt
+JSFetch.egg-info/top_level.txt
+src/__init__.py
+src/errors.py
+src/main.py
