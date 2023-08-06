@@ -1,0 +1,174 @@
+﻿Software License Agreement
+NCP SEM API
+As of: December 2021
+
+
+The terms of the License for use by you, the end user 
+(referred to hereinafter as the "Licensee") of NCP software 
+are set out below. By reading and accepting this notice, 
+you agree to these terms and conditions, so please read 
+the text below carefully and completely. If you do not 
+accept the terms of this agreement, you cannot use or 
+install the software.
+
+1. Subject of the Agreement
+1.1	 The subject of this agreement between you and NCP 
+engineering GmbH (hereinafter "NCP", this agreement 
+also referred to as this "Agreement") is the software 
+package downloaded by you (referred to hereinafter as 
+the "Software".
+1.2 The Software uses Open Source Software components. 
+A list of the open source components used in the product 
+and applicable open source software license terms can be 
+found in the attached document 
+"OpenSourceLicenseTerms.pdf". 
+
+2. Scope of Rights of Use
+2.1	 NCP grants the Licensee a simple, non-exclusive, non-
+sublicenseable, non-transferable, perpetual right to install 
+and use the Software on the device to which it has been 
+downloaded (also referred to hereinafter as 'the License'). 
+2.2 The Licensee may not 
+(i) alter, translate, downgrade, decompile, 
+reverse engineer, disassemble or otherwise 
+modify the Software or attempt or allow a 
+third party to do so, unless any such activity is 
+permitted under applicable mandatory 
+copyright laws (Section 69 e of the German 
+Copyright Act); or 
+(ii) create derivative works of the Software or 
+create copies of the Software beyond the 
+limits permitted under mandatory copyright 
+law.
+2.3 NCP reserves all rights in the Software which NCP does 
+not explicitly grant to the Licensee under this Agreement. 
+In particular, but without limitation to the following, NCP 
+reserves all rights of publication, distribution, copying and 
+reproduction (to the extent this Agreement does not 
+explicitly provide otherwise and the Licensee does not 
+have a right to copy the Software under applicable 
+mandatory copyright law provisions), as well as to make 
+modifications to the Software.
+
+3. Liability for Defects 
+3.1 NCP's statutory liability for defects of the Software, 
+including defects in title (collectively "Defects") shall be 
+governed by this Section, unless otherwise provided in 
+Section 4 (Third Party Rights).
+3.2 The Licensee understands and accepts that in 
+accordance with the present state of the art it is 
+impossible to develop computer programmes, in 
+particular those which are combined with other 
+programmes or systems, in a manner so that they work 
+entirely free of errors. Under the current state of the art it 
+is not possible to warrant that the Software will operate 
+free of interruptions or deficiencies, nor to warrant the 
+complete removal of any Defects in the Software. The 
+contractually agreed functionality of the Software is 
+limited to the communication with an NCP Secure 
+Enterprise Management System, an NCP Secure Enterprise 
+VPN Server and an NCP Secure Client, and the Licensee is 
+aware that such components need to be installed in the 
+Licensee's organisation. 
+3.3 Any liability of NCP for Defects under this provision 
+requires that the Licensee has notified NCP of the Defect 
+concerned without delay in writing and during the 
+limitation period. In case of such written notification of a 
+Defect, NCP shall have the right to make two attempts to 
+remedy the Defect following reasonable remedy periods 
+in each case, and for that purpose and at NCP's discretion 
+to either repair the Defect or make available a 
+replacement solution. To the extent reasonably 
+acceptable for the Licensee, NCP shall further have the 
+right to remedy the Defect by making available a work 
+around or alternative solution. Any potential statutory 
+liability of NCP for damages caused by Defects shall be 
+exclusively governed by Section 5 (Liability). 
+3.4 Except for cases listed in Section 5.2, any claims for 
+Defects are subject to a limitation period of 12 months 
+from the beginning of the limitation period under 
+statutory law. In the cases listed in Section 5.2, the 
+statutory provisions of statute of limitation shall apply 
+without alteration.
+3.5 The Parties agree that any guarantee shall require an 
+express written agreement in which the guarantee must 
+be explicitly identified as a "Guarantee". 
+3.6 To the extent any actual occurrence of problems is the 
+result of third party software products or of the hardware 
+used by the Licensee, rather than of the Software made 
+available by NCP, the Licensee shall have no warranty 
+claims against NCP with view to such problems. 
+Correspondingly, the same shall apply to the extent the 
+Licensee has used the Software in breach of the provisions 
+of this Agreement or to the extent the Licensee or a third 
+party acting on his behalf has made changes or 
+modifications to the Software, or in the event of 
+insubstantial deviations from the contractually agreed 
+characteristics of the Software. 
+
+4. Third Party Rights
+In the event a third party makes a claim against the 
+Licensee that Licensee's use of the Software in accordance 
+with this Agreement infringes such third party's copyrights 
+or other intellectual property rights in the Software, the 
+Licensee shall immediately inform NCP hereof. Subject to 
+the limitations of liability set forth in Section 5 (Liability) 
+and provided that Licensee notifies NCP within the agreed 
+limitation period for Defects, NCP shall hold harmless and 
+indemnify the Licensee for any such justified third party 
+claims. 
+
+5. Liability
+5.1	 Subject to the provisions in Section 5.2, NCP's 
+statutory liability for damages shall be limited as follows:
+(i)	NCP shall be liable only up to the amount of 
+damages as typically foreseeable at the time 
+of entering into the contract in respect of 
+damages caused by a slightly negligent breach 
+of a material contractual obligation (i.e. a 
+contractual duty the fulfilment of which is 
+essential for the proper execution of the 
+contract, the breach of which endangers the 
+purpose of the contract and on the fulfilment 
+of which the Licensee regularly relies);
+(ii) NCP shall not be liable for damages caused by 
+a slightly negligent breach of a non-material 
+contractual obligation.
+5.2 The aforesaid limitation of liability shall not apply to 
+any mandatory statutory liability (in particular to liability 
+under the German Product Liability Act), liability for 
+assuming a specific guarantee or liability for damages 
+caused by wilful misconduct or gross negligence, or any 
+kind of wilfully or negligently caused personal injuries. 
+5.3 Regardless of the legal grounds giving rise to liability, 
+NCP shall not be liable for indirect and/or consequential 
+damages, including, in particular, loss of profit and loss of 
+interest, unless any such damage has been caused by 
+NCP's wilful misconduct or gross negligence.
+5.4 To the extent NCP's liability is limited or excluded, the 
+same shall apply in respect of any personal liability of 
+NCP's legal representatives, employees and vicarious 
+agents.
+5.5 To the extent NCP's statutory liability for negligence is 
+limited to gross negligence under an applicable statutory 
+limitation of liability, such limitation of liability shall 
+remain unaffected by the provisions in this Section 5. 
+
+6. Final clauses
+6.1 This Agreement shall be governed by the laws of 
+Germany with the exception of the United Nations 
+Convention on the International Sale of Goods (CISG). The 
+courts of Nuremberg, Germany, shall have exclusive 
+jurisdiction for any disputes arising from or in connection 
+with this Agreement. However, NCP may institute legal 
+proceedings against the Licensee also in any other court 
+having proper jurisdiction over the Licensee.
+6.2 Any amendments or additions to this Agreement need 
+to be made in writing in order to be effective. 
+6.3 In case any provision of this Agreement is or will be 
+held invalid or unenforceable or if this Agreement is 
+incomplete, the remainder of this Agreement shall 
+continue in full force and effect. 
+
+
+

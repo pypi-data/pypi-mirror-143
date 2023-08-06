@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: NcpSemApi
+Version: 1.0.29448
+Summary: Python API of the NCP secure enterprise management server
+Home-page: https://ncp-e.com
+Author: NCP engineering GmbH
+Author-email: lh@ncp-e.com
+License: Proprietary
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: ldap-support
+Requires-Dist: ldap3 ; extra == 'ldap-support'
+
+NcpSemApi is a python interface to access the REST-API of the NCP Secure Enterprise Management Server (SEM).
+
+To use this API you need a running SEM (at least Version 6.0) accessable via network from the machine running this Python-API.
+
+To activate the REST-API of your SEM, edit ```[sem-install-dir]/etc/sentinel.conf``` and set ```sem-nginx = true;```.
+
+You may configure the ports in ```[sem-install-dir]/etc/nginx/admmgm.conf```.
+
+You may want to restart the SEM-Service after doing that configuration.
+
+The documentation of the SEM-REST-API and this python-API-bindings can be viewed by a webbroser accessing the previously configurated port.
+
+
+
