@@ -1,0 +1,7 @@
+venilpdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+venilpdf/pdf2image.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+venilpdf/pdf2text.py,sha256=yXB2S3GiaVaYOwGnkolGIISVjQkD4eOO_1Z8TSDUUZA,37
+venilpdf-1.0.dist-info/METADATA,sha256=cae7zq6_-stT4V4TYpVsxXEvJtyFvWiu1NczVwckpVg,155
+venilpdf-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+venilpdf-1.0.dist-info/top_level.txt,sha256=OBSIW6cg37Vsbp1iKNKGo9QhJw1puYnCHL3HCB_wrPM,9
+venilpdf-1.0.dist-info/RECORD,,
