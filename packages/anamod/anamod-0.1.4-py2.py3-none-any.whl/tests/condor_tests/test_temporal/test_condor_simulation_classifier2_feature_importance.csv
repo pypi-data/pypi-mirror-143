@@ -1,0 +1,11 @@
+0,False,-0.001180556,0.8823529412,False,1.0,,False,0.0,1.0,False,1.0
+1,True,0.0303544991,0.0392156863,True,0.0196078431,(5, 10),True,0.0310676326,0.0196078431,True,0.0196078431
+2,False,0.0011152595,0.2287581699,False,1.0,,False,0.0,1.0,False,1.0
+3,True,0.1865635635,0.0392156863,True,0.0196078431,(7, 19),True,0.1882648176,0.0196078431,False,1.0
+4,False,-8.53262e-05,0.81232493,False,1.0,,False,0.0,1.0,False,1.0
+5,True,0.0141437464,0.0392156863,True,0.0196078431,(7, 17),True,0.0143317418,0.0196078431,True,0.0784313725
+6,True,0.0084307864,0.0392156863,True,0.0196078431,(1, 10),True,0.0080267209,0.0196078431,False,0.5098039216
+7,False,-0.0001891299,0.8496732026,False,1.0,,False,0.0,1.0,False,1.0
+8,True,0.0014955683,0.0392156863,True,0.0196078431,(1, 10),True,0.0015396235,0.0196078431,False,1.0
+9,False,-0.0006150174,0.8496732026,False,1.0,,False,0.0,1.0,False,1.0
+name,important,importance_score,pvalue,ordering_important,ordering_pvalue,window,window_important,window_importance_score,window_pvalue,window_ordering_important,window_ordering_pvalue

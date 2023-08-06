@@ -1,0 +1,12 @@
+0,False,-0.0182274077,1.0,False,1.0,,False,0.0,1.0,False,1.0
+1,True,0.0642520094,0.0653594771,True,0.0196078431,(5, 10),True,0.0688878735,0.0196078431,True,0.0196078431
+2,False,0.003688753,0.4705882353,False,1.0,,False,0.0,1.0,False,1.0
+3,True,0.3323793542,0.0653594771,True,0.0588235294,(7, 19),True,0.3307493566,0.0392156863,False,1.0
+4,False,-0.0007124705,0.7107843137,False,1.0,,False,0.0,1.0,False,1.0
+5,True,0.0310642712,0.0653594771,True,0.0196078431,(7, 17),True,0.0312714317,0.0196078431,True,0.0588235294
+6,False,0.0104331289,0.1960784314,False,1.0,,False,0.0,1.0,False,1.0
+7,False,-0.0016845007,1.0,False,1.0,,False,0.0,1.0,False,1.0
+8,False,-0.0002662685,0.7107843137,False,1.0,,False,0.0,1.0,False,1.0
+9,False,0.0007577414,0.7107843137,False,1.0,,False,0.0,1.0,False,1.0
+All Features,True,0.3895760069,0.0196078431,True,0.0196078431,(3, 19),True,0.4123518591,0.0196078431,True,0.0196078431
+name,important,importance_score,pvalue,ordering_important,ordering_pvalue,window,window_important,window_importance_score,window_pvalue,window_ordering_important,window_ordering_pvalue
