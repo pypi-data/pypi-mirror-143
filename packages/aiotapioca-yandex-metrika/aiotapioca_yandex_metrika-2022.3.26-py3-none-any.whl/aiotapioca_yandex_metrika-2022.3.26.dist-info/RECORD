@@ -1,0 +1,10 @@
+aiotapioca_yandex_metrika/__init__.py,sha256=3Gq8LwncL4qG1olUGfbU9GhzN2J-xrzS0cG2IrZgZcM,252
+aiotapioca_yandex_metrika/exceptions.py,sha256=F9VZq4PcyArSXGV6uvYlZamf3v1q5j5nakZNK2Gtbg4,1732
+aiotapioca_yandex_metrika/resource_mapping.py,sha256=UpfG9-wsCTWnsC-GryU3jr0Ts-534cNtrtUWba_sSB0,14061
+aiotapioca_yandex_metrika/serializers.py,sha256=hA1lPKQcSWsAsV4rYj2x01o4XXMe9bTpRB-hbUsyE_Y,1965
+aiotapioca_yandex_metrika/yandex_metrika.py,sha256=BwPgv1eix-wLbOkKkfg1Y6Kf-IxEjdnSEv0mEa-1KOU,10926
+aiotapioca_yandex_metrika-2022.3.26.dist-info/LICENSE,sha256=5_xGwtR-JU9pYNWRWBJJTpTWbobff0Eg4OBsVXqlzaw,1071
+aiotapioca_yandex_metrika-2022.3.26.dist-info/METADATA,sha256=Kvdq1Rr99BwU54i0k9Npou3yQw1wqjcd0qRlKTCms6g,2026
+aiotapioca_yandex_metrika-2022.3.26.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aiotapioca_yandex_metrika-2022.3.26.dist-info/top_level.txt,sha256=NlDgi4tkb7392x9BJlEJoffvdUUkFwLbeJ_4t4bT9h4,26
+aiotapioca_yandex_metrika-2022.3.26.dist-info/RECORD,,
