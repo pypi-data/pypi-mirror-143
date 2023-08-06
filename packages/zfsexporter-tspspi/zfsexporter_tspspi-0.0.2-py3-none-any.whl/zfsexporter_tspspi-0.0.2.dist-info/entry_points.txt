@@ -1,0 +1,3 @@
+[console_scripts]
+zfsexporter = zfsexporter.zfsexporter:mainStartup
+
