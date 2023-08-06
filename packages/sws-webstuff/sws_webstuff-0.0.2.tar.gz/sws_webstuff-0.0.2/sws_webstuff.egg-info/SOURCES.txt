@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sws_webstuff/__init__.py
+sws_webstuff/_version.py
+sws_webstuff/alert_class.py
+sws_webstuff/alert_type_enum.py
+sws_webstuff/misc.py
+sws_webstuff/modal_class.py
+sws_webstuff/modal_type_enum.py
+sws_webstuff/redirect_class.py
+sws_webstuff.egg-info/PKG-INFO
+sws_webstuff.egg-info/SOURCES.txt
+sws_webstuff.egg-info/dependency_links.txt
+sws_webstuff.egg-info/requires.txt
+sws_webstuff.egg-info/top_level.txt
