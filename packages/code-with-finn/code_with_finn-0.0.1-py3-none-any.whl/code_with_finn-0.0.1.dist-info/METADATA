@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: code-with-finn
+Version: 0.0.1
+Summary: Helps feed the soul while coding
+Home-page: https://github.com/svank/code_with_finn
+Author: Sam Van Kooten
+Author-email: vankooten.sam@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/svank/code_with_finn/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pillow (>=9.0)
+
+# code_with_finn
+
+A small module that brings the good dog Finn into your Jupyter notebooks.
+
+![demo image](images/error.png)
+
+While Finn can cheer you up after errors, he can also celebrate successes!
+
+![demo image](images/celebrate.png)
+
+He can also help you prepare yourself before a long stack trace.
+
+![demo image](images/looks_bad.png)
+
+You can send him away if you need to:
+
+![demo image](images/without.png)
+
+
