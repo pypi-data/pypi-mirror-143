@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bin/
+bin/ctail
+src/ctail/__init__.py
+src/ctail/colors.py
+src/ctail/main.py
+src/ctail.egg-info/PKG-INFO
+src/ctail.egg-info/SOURCES.txt
+src/ctail.egg-info/dependency_links.txt
+src/ctail.egg-info/top_level.txt
