@@ -1,0 +1,2 @@
+include ./protexam/*.json
+include ./protexam/*.ini

@@ -1,0 +1,8 @@
+bokeh<=2.4.1
+matplotlib<4.0
+numpy
+pandas
+scikit-learn
+scipy
+seaborn<1.0
+streamlit>=1.0
