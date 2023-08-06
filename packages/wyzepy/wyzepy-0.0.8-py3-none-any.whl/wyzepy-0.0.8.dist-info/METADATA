@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: wyzepy
+Version: 0.0.8
+Summary: A python package for interacting with wyze camera video data.
+Home-page: UNKNOWN
+Author: Fausto Lopez
+Author-email: <youremail@email.com>
+License: UNKNOWN
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: moviepy
+
+...
+
+
