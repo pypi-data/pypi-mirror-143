@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+/home/yangxiaoyu/github/precode_bk/precode/paser.c
+windshield/__init__.py
+windshield/paser.cpython-38-x86_64-linux-gnu.so
+windshield/paser.py
+windshield.egg-info/PKG-INFO
+windshield.egg-info/SOURCES.txt
+windshield.egg-info/dependency_links.txt
+windshield.egg-info/requires.txt
+windshield.egg-info/top_level.txt
