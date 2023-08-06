@@ -1,0 +1,3 @@
+[console_scripts]
+pymesh = pymeshview.examples.show_mesh:main
+
