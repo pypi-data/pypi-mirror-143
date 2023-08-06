@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sars2seq
+Version: 0.0.2
+Summary: Python library and scripts for working with SARS-CoV-2 sequences.
+Home-page: https://github.com/virologycharite/sars2seq
+Author: Terry Jones
+Author-email: terry@jon.es
+License: MIT
+Download-URL: https://github.com/virologycharite/sars2seq
+Keywords: SARS-CoV-2,genetic sequences
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+See https://github.com/virologycharite/sars2seq for details.
+
