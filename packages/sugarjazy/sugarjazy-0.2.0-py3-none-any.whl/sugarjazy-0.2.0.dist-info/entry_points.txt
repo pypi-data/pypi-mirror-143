@@ -1,0 +1,3 @@
+[console_scripts]
+sugarjazy=sugarjazy.cli:main
+
