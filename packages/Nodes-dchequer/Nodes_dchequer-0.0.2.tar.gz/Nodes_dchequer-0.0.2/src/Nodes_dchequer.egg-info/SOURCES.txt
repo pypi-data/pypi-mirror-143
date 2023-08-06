@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/LinkedList/LinkedList.py
+src/LinkedList/__init__.py
+src/Node/Node.py
+src/Node/__init__.py
+src/Nodes_dchequer.egg-info/PKG-INFO
+src/Nodes_dchequer.egg-info/SOURCES.txt
+src/Nodes_dchequer.egg-info/dependency_links.txt
+src/Nodes_dchequer.egg-info/top_level.txt
+src/Stack/Stack.py
+src/Stack/__init__.py
