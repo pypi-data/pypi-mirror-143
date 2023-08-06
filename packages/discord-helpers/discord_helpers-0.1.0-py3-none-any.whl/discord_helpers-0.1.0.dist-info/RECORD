@@ -1,0 +1,14 @@
+discord/ext/helpers/__init__.py,sha256=lGCnmOx5cnPTevqXyVrXYPgaxBL18wZcatOoAf0osvs,297
+discord/ext/helpers/chatbot.py,sha256=BA4KyYhsBrtxlL7jxAVjilO6Ugs3b-Zb-HK0P6pth08,546
+discord/ext/helpers/database.py,sha256=QknhcGsnn_NUsiSB0v7BLx2apEyj-mZkkZ1QHhRIGaQ,2162
+discord/ext/helpers/embed.py,sha256=kwfFxTiYJvfPnZFzfZDesLq9IoCSUyKCY73hORKb2eg,1043
+discord/ext/helpers/invite_tracker.py,sha256=ffEgjH7DGHOfRPGLlPXE7CEWkoeq7QUeqbDg5PgZon4,4156
+discord/ext/helpers/paginator.py,sha256=qSlPcthO7WEOvT3rlY6N5m9TmDTt_l1v1zivKHCXc-s,2359
+discord/ext/helpers/requests.py,sha256=lVjec1I_8CL_lJA9a7pr_GKsyi_Zs5XIELHsCuBnX2M,408
+discord/ext/helpers/status.py,sha256=2EBq5uVgLevbvrqPMbQRB1EqeInYkEFrUT-_f1fk5Eg,441
+discord/ext/helpers/webhooks.py,sha256=-VgsU-wJmrR2gKbyspVD9Bo5pq7mrXLdoWckzogsnwM,1077
+discord_helpers-0.1.0.dist-info/LICENSE.txt,sha256=1eLDWHu8VcSUNFviBvhGjw8SisYcdM7DUxn0hDwYbRQ,1073
+discord_helpers-0.1.0.dist-info/METADATA,sha256=PsDao6hL1cUJ8MRHnqwzbWhsFnaU7B-E3uotDYzI_8A,3725
+discord_helpers-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+discord_helpers-0.1.0.dist-info/top_level.txt,sha256=fJkrNbR-_8ubMBUcDEJBcfkpECrvSEmMrNKgvLlQFoM,8
+discord_helpers-0.1.0.dist-info/RECORD,,
