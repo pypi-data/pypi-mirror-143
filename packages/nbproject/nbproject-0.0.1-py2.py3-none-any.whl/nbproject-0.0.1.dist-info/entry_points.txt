@@ -1,0 +1,3 @@
+[console_scripts]
+lamin=lamin.__main__:main
+
