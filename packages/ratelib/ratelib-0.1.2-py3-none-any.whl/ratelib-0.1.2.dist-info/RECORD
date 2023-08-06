@@ -1,0 +1,9 @@
+ratelib/__init__.py,sha256=_bIb4kPY-5Qy2EPnGpWEhBqE03OOw7F3jK0M3jxEYbM,149
+ratelib/library.py,sha256=pZt6oaY6MM_nXnK1rBgmOzu3Uw0rkTTz79w4-JG1v8A,1984
+ratelib/nucleus.py,sha256=8E1-8x8Q-freb3rf8Ieg7H2Pkf8GGkPGlbrbJoLVhhw,4335
+ratelib/rate.py,sha256=pEm835OeBD6F8IFXtQftchHn1O-pWO0TGpiTGeJHT0I,12425
+ratelib/data/elements.txt,sha256=hbx0M75TdzF3R0JNxLQ56K3D1Ghj4FP0KexOuOW6XHM,1111
+ratelib-0.1.2.dist-info/METADATA,sha256=V3qnImuihn689iKBGCNWLr4TzmXNjM1M1AgSVZuU5ss,1732
+ratelib-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ratelib-0.1.2.dist-info/top_level.txt,sha256=0DHuV-Y9euNUOLr5EuAh-Kcp6jUcUbv1r4DvkFTQjPI,8
+ratelib-0.1.2.dist-info/RECORD,,
