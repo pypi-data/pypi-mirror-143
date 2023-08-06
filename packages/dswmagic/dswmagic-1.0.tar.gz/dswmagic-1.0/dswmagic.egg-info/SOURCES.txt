@@ -1,0 +1,9 @@
+setup.py
+dswmagic/__init__.py
+dswmagic.egg-info/PKG-INFO
+dswmagic.egg-info/SOURCES.txt
+dswmagic.egg-info/dependency_links.txt
+dswmagic.egg-info/requires.txt
+dswmagic.egg-info/top_level.txt
+dswmagic/ipython/__init__.py
+dswmagic/ipython/dsw_odps.py
