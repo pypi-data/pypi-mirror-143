@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+dbnomics_data_model/__init__.py
+dbnomics_data_model/errors.py
+dbnomics_data_model/utils.py
+dbnomics_data_model.egg-info/PKG-INFO
+dbnomics_data_model.egg-info/SOURCES.txt
+dbnomics_data_model.egg-info/dependency_links.txt
+dbnomics_data_model.egg-info/entry_points.txt
+dbnomics_data_model.egg-info/requires.txt
+dbnomics_data_model.egg-info/top_level.txt
