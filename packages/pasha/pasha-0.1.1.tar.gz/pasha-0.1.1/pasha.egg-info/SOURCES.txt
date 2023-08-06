@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pasha/__init__.py
+pasha/context.py
+pasha/functor.py
+pasha.egg-info/PKG-INFO
+pasha.egg-info/SOURCES.txt
+pasha.egg-info/dependency_links.txt
+pasha.egg-info/requires.txt
+pasha.egg-info/top_level.txt
