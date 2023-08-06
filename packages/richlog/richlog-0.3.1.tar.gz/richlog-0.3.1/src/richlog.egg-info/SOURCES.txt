@@ -1,0 +1,8 @@
+setup.py
+src/log/__init__.py
+src/log/richlog.py
+src/richlog.egg-info/PKG-INFO
+src/richlog.egg-info/SOURCES.txt
+src/richlog.egg-info/dependency_links.txt
+src/richlog.egg-info/not-zip-safe
+src/richlog.egg-info/top_level.txt
