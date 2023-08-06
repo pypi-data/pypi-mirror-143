@@ -1,0 +1,8 @@
+wheel
+click
+PyYAML
+fpdf2
+requests
+
+[:platform_system == "Windows"]
+windows-curses
