@@ -1,0 +1,17 @@
+spello/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spello/config.py,sha256=ic0bRYAJ8aeEQ_zHzAVAzi3lBGSdeXsEfwL0uo4BgkE,1033
+spello/model.py,sha256=Ff7XOkO_Il6D_UTh1MBqZIAoAX5_vBUL4-ZWqm_kILI,14536
+spello/settings.py,sha256=ri-HjsKlWTk54xnay32NngNekGv6i7othYFg4JfoGaw,528
+spello/utils.py,sha256=KYTnG7eSgXjX3L4zZbCyhqLszlqZAGT9usiM5FgTOmc,3629
+spello/context/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spello/context/context.py,sha256=P6cS64RmM9-PsR7q0_vpgtDmguJ4nSPcAGVZXZ0TieU,7839
+spello/phoneme/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spello/phoneme/constant.py,sha256=6EK816YP3SxjGgo93b75boBUvmV8VAIgaVYg8LiP_yA,12005
+spello/phoneme/phoneme.py,sha256=pi2pkr5wSkY0xeTEP_14LxfnD_Q55AbMY0grqYEJ3Ic,8582
+spello/symspell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spello/symspell/symspell.py,sha256=dSheRlpXwEWJAFevGcO3b3TrTuzZ8893QGK_O3pW0Xs,19904
+spello-1.3.0.dist-info/LICENSE,sha256=810LsJe42sIspb04UfMFJoL3KjBfzxq0qRhFtUWpfNE,1087
+spello-1.3.0.dist-info/METADATA,sha256=om-Jr9Ihz9prXYYcajfaEcBnigAnc7UXE_YWpy0-tr8,8615
+spello-1.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+spello-1.3.0.dist-info/top_level.txt,sha256=5De7PDrBkdgWJyZUZ3LTxik599_0QgmwouUwDZ3KboE,7
+spello-1.3.0.dist-info/RECORD,,
