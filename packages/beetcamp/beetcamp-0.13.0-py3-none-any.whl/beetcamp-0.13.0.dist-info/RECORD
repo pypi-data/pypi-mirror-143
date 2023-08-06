@@ -1,0 +1,11 @@
+LICENSE,sha256=O9MNNIcnBK8NG8CHcu_GllYt3hkGYnq_1i_3L3E27Ss,18053
+README.md,sha256=YRug-M0rUrXrhB2ApeUnuuschOsC8nKLNhE33G6tbIs,13609
+beetsplug/bandcamp/__init__.py,sha256=-8uESRMcEv29_LR7_ypJrUM8GErgX74Md06YdiC5xh0,12120
+beetsplug/bandcamp/_helpers.py,sha256=qk7Lwg0bEqSwM9SmZYQONAeUloHcyeS5bLJkrZparOE,16829
+beetsplug/bandcamp/_metaguru.py,sha256=L2Do1X9MXnHybUyG0JGN8Ftws5Z9osi2trhMuu-z7oc,17827
+beetsplug/bandcamp/genres_lookup.py,sha256=2axmxMSSCD2MpkOVoMLmnEFUnWhtBc4AAskxzyggCCo,14709
+beetcamp-0.13.0.dist-info/entry_points.txt,sha256=RoFNnt-i614v54ycIkOr-zOVR8emx8cOxE1sXC0qd5g,52
+beetcamp-0.13.0.dist-info/LICENSE,sha256=O9MNNIcnBK8NG8CHcu_GllYt3hkGYnq_1i_3L3E27Ss,18053
+beetcamp-0.13.0.dist-info/WHEEL,sha256=KXNDfOTTCr-VyxnCJDozfJ6nmi3hNN9RABDaCXBsNak,85
+beetcamp-0.13.0.dist-info/METADATA,sha256=q_UbN2-kI86r41kGngRTfSKZeLd46MhEhKr90PhDlww,14947
+beetcamp-0.13.0.dist-info/RECORD,,
