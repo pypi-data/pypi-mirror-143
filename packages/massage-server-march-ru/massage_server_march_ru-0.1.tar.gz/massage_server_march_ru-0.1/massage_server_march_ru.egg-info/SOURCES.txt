@@ -1,0 +1,6 @@
+setup.py
+massage_server_march_ru.egg-info/PKG-INFO
+massage_server_march_ru.egg-info/SOURCES.txt
+massage_server_march_ru.egg-info/dependency_links.txt
+massage_server_march_ru.egg-info/requires.txt
+massage_server_march_ru.egg-info/top_level.txt
