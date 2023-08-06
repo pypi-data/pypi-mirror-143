@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: PyPantry
+Version: 0.1.0
+Summary: An API wrapper for Pantry json database
+Home-page: https://github.com/studiousgamer/PyPantry
+Author: Studious Gamer
+Author-email: natyavidhanbiswas10@gmail.com
+License: MIT Licence
+Project-URL: Bug Tracker, https://github.com/studiousgamer/PyPantry/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# PyPantry
+An API wrapper for Pantry json database
+
+
