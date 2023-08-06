@@ -1,0 +1,2 @@
+[console_scripts]
+tealc = tealc.cli:cli

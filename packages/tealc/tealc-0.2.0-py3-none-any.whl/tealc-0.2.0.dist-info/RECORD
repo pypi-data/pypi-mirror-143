@@ -1,0 +1,15 @@
+tealc/__init__.py,sha256=miYPRDoWRXNTFzP7J5Xiq7ZiFF6Skds2hN9aPRDm3SM,1452
+tealc/__main__.py,sha256=XMSEXMZSk6ziKcwkv03IObHaoowfLbykr3U3vBPQkJI,1228
+tealc/cli.py,sha256=-Kfv3A-KpQ65JM87QkVoVUtVR9scSeJP-MpUN33DzIk,5079
+tealc/frequency_chart.json,sha256=RcHDNKcB_Xu_49QMCLcLrzbSVP9KBIOlarkX7UTgfwQ,1338
+tealc/manual.txt,sha256=q0D2hOXoWksaePuVk3l5fliiLT1IN3TdE1HTNmsGuO0,4907
+tealc/material_codes.json,sha256=aBdhBeewflKuNZo6sOPLh_BL75bjBXMqrHDNTN9uBlA,426
+tealc/tealc.py,sha256=IUlBiLZzBvkL5jJ-rG3I7MtMxTAI5wJKve9jYQeegM0,14732
+tealc/tension_models.json,sha256=WqBFDgAqni3esPX5vZGxeq329im_wcdoZamPKvEkIKk,925
+tealc/unit_weights.json,sha256=whzCpKhJ-5aUNSKYAIWw-5LT0GovGsTNCBXZOcFZEVY,7358
+tealc-0.2.0.dist-info/LICENSE.txt,sha256=2Na5zJv5RTrm9F7Lox3vsGgPSt-G3MJQwjk96dEfXAs,1072
+tealc-0.2.0.dist-info/METADATA,sha256=GZw0hsqIs-wUSTk42aq5LAgulvxMuvmF8bkKFZMRl2c,6130
+tealc-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tealc-0.2.0.dist-info/entry_points.txt,sha256=beWufTheYPYjdhGX0TJ6uWvHXcKZMk9Txe-_FwM9fS0,40
+tealc-0.2.0.dist-info/top_level.txt,sha256=6tCZhudx8wVj0z7epVg3pn_-vHm4oZXOCDMpJCmSpGg,6
+tealc-0.2.0.dist-info/RECORD,,
