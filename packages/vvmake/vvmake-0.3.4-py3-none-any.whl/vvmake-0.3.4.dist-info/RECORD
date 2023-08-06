@@ -1,0 +1,13 @@
+vvmake/__init__.py,sha256=vKgnqOQ5KQyX4oLJEJpifpkU3fHVqMWdhXmqDCbMnoI,29
+vvmake/test.py,sha256=wslaCKcgwOkMbiMsCtf4zG6p9OD5fM8E1A6LqpdiyTk,57
+vvmake/vv.py,sha256=lcrPuDOGcEZUHBobZJ21EoSny9rPsvZbpoAZaoiF3QI,8317
+vvmake/vvmake.py,sha256=NBpbRjcQL-bHVS7m8wkXf1Yq8XUs-EsGKXBZLsbBjKo,6242
+vvmakelib/__init__.py,sha256=vKgnqOQ5KQyX4oLJEJpifpkU3fHVqMWdhXmqDCbMnoI,29
+vvmakelib/test.py,sha256=wslaCKcgwOkMbiMsCtf4zG6p9OD5fM8E1A6LqpdiyTk,57
+vvmakelib/vv.py,sha256=996TXADkfdC8H_86dl4SnAmH3M8y4ladtBFTRW2R5nc,8317
+vvmakelib/vvmake.py,sha256=-o4FPPYZJi4adGivqwLrREbCQp0Ksp958VE_dpiEaEQ,2981
+vvmake-0.3.4.dist-info/METADATA,sha256=iHTn00zDsH0bcFBSBi-ISzj9ag_bC6cuq3hbS5_iZiE,903
+vvmake-0.3.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+vvmake-0.3.4.dist-info/entry_points.txt,sha256=4DJbR8mYtCq4yCdyXOyhqvrutuOISh2PE2Q1raOY59A,47
+vvmake-0.3.4.dist-info/top_level.txt,sha256=b-u9vaqB8f4kvZgtIQCutWepHSjQQFtWfsupi_8h8uE,7
+vvmake-0.3.4.dist-info/RECORD,,
