@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Serialkiller/Serializer.py
+Serialkiller/__init__.py
+Serialkiller/exc/DeserializationError.py
+Serialkiller/exc/SerializationError.py
+Serialkiller/exc/__init__.py
+serialkiller_serializer.egg-info/PKG-INFO
+serialkiller_serializer.egg-info/SOURCES.txt
+serialkiller_serializer.egg-info/dependency_links.txt
+serialkiller_serializer.egg-info/not-zip-safe
+serialkiller_serializer.egg-info/top_level.txt
