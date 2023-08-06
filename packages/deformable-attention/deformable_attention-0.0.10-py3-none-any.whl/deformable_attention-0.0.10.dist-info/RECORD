@@ -1,0 +1,9 @@
+deformable_attention/__init__.py,sha256=hnB9g7qAmzOmu6VO0OiR9Phqivm190kK5wHBFmGEIiA,282
+deformable_attention/deformable_attention_1d.py,sha256=Y_sGr536SJ-KKZl1jCfTNh1AX-HWJPFJ8Sk3chEcZ0Y,6006
+deformable_attention/deformable_attention_2d.py,sha256=RT8AAc3fOmxzv4zf18osYyc0ZS2rXsHKpdZDAXI_ojU,6036
+deformable_attention/deformable_attention_3d.py,sha256=6bNN2KhQhWPuF72rphWSrSLsQOc8isdyvtCnUeg3y6Q,6373
+deformable_attention-0.0.10.dist-info/LICENSE,sha256=xZDkKtpHE2TPCAeqKe1fjdpKernl1YW-d01j_1ltkAU,1066
+deformable_attention-0.0.10.dist-info/METADATA,sha256=eD96r2wTIWa2NSNFf-Fj9T4vQCs3IlMv7tRQi-qhTCU,736
+deformable_attention-0.0.10.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+deformable_attention-0.0.10.dist-info/top_level.txt,sha256=IbWyrzpRyzWghKCvo0WCr95qz-ozSdm7NHDn6t9zzlA,21
+deformable_attention-0.0.10.dist-info/RECORD,,
