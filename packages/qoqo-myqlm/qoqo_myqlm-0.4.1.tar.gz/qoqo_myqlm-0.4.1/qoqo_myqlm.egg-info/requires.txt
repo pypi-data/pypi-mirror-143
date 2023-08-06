@@ -1,0 +1,6 @@
+qoqo_calculator_pyo3>=0.6.0
+qoqo>=0.10.0
+numpy
+
+[:python_version == "3.8.*,3.10.*"]
+myqlm
