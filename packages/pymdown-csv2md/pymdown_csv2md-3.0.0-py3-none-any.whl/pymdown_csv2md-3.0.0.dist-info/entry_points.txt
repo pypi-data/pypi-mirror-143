@@ -1,0 +1,2 @@
+[markdown.extensions]
+csv2md = package.csv2md.csv2md:Csv2MdExtension
