@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPIKE’s documentation &#8212; spike 0.99.23 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SpI (Spike Interactive)" href="Readme.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="spike-s-documentation">
+<h1>SPIKE’s documentation<a class="headerlink" href="#spike-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html">SpI <em>(Spike Interactive)</em></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#documentation">2/ Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#release-notes">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#how-to-get-spike">3/ How to get SPIKE ?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#simple-installation">simple installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#installing-additional-tools">Installing additional tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#licenses">Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#source-and-dependencies">source and dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#developping-for-spike">developping for SPIKE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#citing-spike">4/ Citing SPIKE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#contents-of-this-repository">5/ Contents of this repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#origin-of-the-program">6/ Origin of the program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Readme.html#authors-and-licence">6/ Authors and Licence</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Doc.html">First contact SPIKE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Doc.html#general-organization">General Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#history-of-spike">History of SPIKE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#a-working-examples">A Working examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#plotting">Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Doc.html#data-file">Data File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Doc.html#advance-usage">Advance Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#caveat-on-type">Caveat on type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#caveat-on-size">Caveat on size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#moving-data-around">Moving data around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#data-set-arithmetics">Data-set arithmetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Doc.html#hypercomplex-arithmetics">Hypercomplex arithmetics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spike.html">spike package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spike.Algo.html">spike.Algo package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.BC">spike.Algo.BC module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.CS_transformations">spike.Algo.CS_transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.Cadzow">spike.Algo.Cadzow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#spike-algo-cadzow-mpi-module">spike.Algo.Cadzow_mpi module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#spike-algo-cadzow-mpi2-module">spike.Algo.Cadzow_mpi2 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#spike-algo-laplace-module">spike.Algo.Laplace module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.Linpredic">spike.Algo.Linpredic module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.SL0">spike.Algo.SL0 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#spike-algo-sl0-test-module">spike.Algo.SL0_test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.maxent">spike.Algo.maxent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.rQRd">spike.Algo.rQRd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.sane">spike.Algo.sane module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.sane_old">spike.Algo.sane_old module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.savitzky_golay">spike.Algo.savitzky_golay module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo.urQRd">spike.Algo.urQRd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Algo.html#module-spike.Algo">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.Display.html">spike.Display package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.Display.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Display.html#module-spike.Display.fakeplot">spike.Display.fakeplot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Display.html#module-spike.Display.testplot">spike.Display.testplot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Display.html#module-spike.Display">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.File.html">spike.File package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.Apex">spike.File.Apex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.Apex0">spike.File.Apex0 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.BrukerMS">spike.File.BrukerMS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#spike-file-brukernmr-module">spike.File.BrukerNMR module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.BrukerSMX">spike.File.BrukerSMX module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.GifaFile">spike.File.GifaFile module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.HDF5File">spike.File.HDF5File module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.Solarix">spike.File.Solarix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.Spinit">spike.File.Spinit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.Thermo">spike.File.Thermo module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.csv">spike.File.csv module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File.mzXML">spike.File.mzXML module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.File.html#module-spike.File">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.Interactive.html">spike.Interactive package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.FTICR_INTER">spike.Interactive.FTICR_INTER module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.FTICR_INTER_v2">spike.Interactive.FTICR_INTER_v2 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#spike-interactive-inter-copy-module">spike.Interactive.INTER copy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.INTER">spike.Interactive.INTER module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.INTER_2D">spike.Interactive.INTER_2D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#spike-interactive-inter-ms-copy-module">spike.Interactive.INTER_MS (copy) module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#spike-interactive-inter-ms-module">spike.Interactive.INTER_MS module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.INTER_MS_turn">spike.Interactive.INTER_MS_turn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive.ipyfilechooser">spike.Interactive.ipyfilechooser module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Interactive.html#module-spike.Interactive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.Miscellaneous.html">spike.Miscellaneous package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#spike-miscellaneous-big-module">spike.Miscellaneous.big module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#module-spike.Miscellaneous.bruker_corr">spike.Miscellaneous.bruker_corr module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#module-spike.Miscellaneous.downsample">spike.Miscellaneous.downsample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#spike-miscellaneous-downsampling-module">spike.Miscellaneous.downsampling module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#spike-miscellaneous-poulding-module">spike.Miscellaneous.poulding module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#spike-miscellaneous-processing2-module">spike.Miscellaneous.processing2 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.Miscellaneous.html#module-spike.Miscellaneous">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.plugins.html">spike.plugins package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.Fitter">spike.plugins.Fitter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.Linear_prediction">spike.plugins.Linear_prediction module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.Peaks">spike.plugins.Peaks module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.bcorr">spike.plugins.bcorr module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.fastclean">spike.plugins.fastclean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.gaussenh">spike.plugins.gaussenh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.rem_ridge">spike.plugins.rem_ridge module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.sane">spike.plugins.sane module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.sg">spike.plugins.sg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.test">spike.plugins.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins.urQRd">spike.plugins.urQRd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#spike-plugins-zoom3d-module">spike.plugins.zoom3D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.plugins.html#module-spike.plugins">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.util.html">spike.util package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#spike-util-configform-module">spike.util.ConfigForm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.ValErr">spike.util.ValErr module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.compat">spike.util.compat module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.counter">spike.util.counter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.debug_tools">spike.util.debug_tools module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.dynsubplot">spike.util.dynsubplot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.hashcheck">spike.util.hashcheck module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.log_all">spike.util.log_all module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.log_stderr">spike.util.log_stderr module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.log_stdout">spike.util.log_stdout module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#spike-util-mail-module">spike.util.mail module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.mail_error_logger">spike.util.mail_error_logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.mpiutil">spike.util.mpiutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.near_prime">spike.util.near_prime module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#spike-util-progrbarui-module">spike.util.progrbarUi module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.progressbar">spike.util.progressbar module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.readwrite_tools">spike.util.readwrite_tools module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.sendgmail">spike.util.sendgmail module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.shift_comments">spike.util.shift_comments module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.signal_tools">spike.util.signal_tools module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#spike-util-simple-logger-module">spike.util.simple_logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.simple_logger2">spike.util.simple_logger2 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util.widgets">spike.util.widgets module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.util.html#module-spike.util">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spike.v1.html">spike.v1 package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-bruker-module">spike.v1.Bruker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-generic-module">spike.v1.Generic module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-genericdosy-module">spike.v1.GenericDosy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-genericmaxent-module">spike.v1.GenericMaxEnt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#module-spike.v1.Kore">spike.v1.Kore module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-launch-module">spike.v1.Launch module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-npkv1-module">spike.v1.NPKv1 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-nucleus-module">spike.v1.Nucleus module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#module-spike.v1.Param">spike.v1.Param module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#module-spike.v1.Process1D">spike.v1.Process1D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-process2d-module">spike.v1.Process2D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-process3d-module">spike.v1.Process3D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-processdosy-module">spike.v1.ProcessDosy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-mflops-module">spike.v1.mflops module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-test-module">spike.v1.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#spike-v1-v1-tests-module">spike.v1.v1_Tests module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spike.v1.html#module-spike.v1">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.FTICR">spike.FTICR module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.FTMS">spike.FTMS module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.NMR">spike.NMR module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.NPKConfigParser">spike.NPKConfigParser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.NPKData">spike.NPKData module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.NPKError">spike.NPKError module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.Orbitrap">spike.Orbitrap module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.Tests">spike.Tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.dev_setup">spike.dev_setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.processing">spike.processing module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#spike-processingph-module">spike.processingPH module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.version">spike.version module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike.version_rev">spike.version_rev module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spike.html#module-spike">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">SPIKE Relase Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#march-2022">0.99.30 - March 2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#sept-2021">0.99.29 - Sept 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#aug-2021">0.99.28 - Aug 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#july-2021">0.99.27 - July 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#july-2021-1">0.99.26 - July 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-2021">0.99.25 - June 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-2021-1">0.99.24 - June 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-2021">0.99.23 - May 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2021-not-released-on-pypi">0.99.22 - April 2021 - not released on pypi -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#feb-2021">0.99.21 - Feb 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#nov-2020">0.99.20 - Nov 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-2020">0.99.19 - May 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2020">0.99.17 - April 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2020-1">0.99.16 - April 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#march-2020">0.99.15 - March 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#october-2019-not-released-on-pypi">0.99.14 - October 2019 - not released on pypi -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#october-2019-not-released-on-pypi-1">0.99.13 - October 2019 - not released on pypi -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#september-2019">0.99.12 - September 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#september-2019-1">0.99.11 - September 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-2019">0.99.10 - August 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-2019">0.99.9 - June 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2019">0.99.8 - April 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2019-1">0.99.7 - April 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2019-2">0.99.6 - April 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#march-2019">0.99.3 - March 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#january-2019">0.99.2 - January 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-2018">0.99.1 - November 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2018-temp-release-branch">0.99 - April 2018 - temp release branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#sept-2016">0.9 - 8 sept 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-2016">0.8.3 - April 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#feb-2016">0.8.2 - 2 Feb 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2016">0.8.1 - 24 Jan 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2016-1">0.8.0 - 23 Jan 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2016-2">0.7.1 - 5 Jan 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-2015">0.7.0 - November 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#march-2015">0.6.4 - march 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#march-2015-1">0.6.3 - march 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#dec-2014">0.6.0 - dec 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#mar-2014">0.5.1 - 26 mar 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#mar-2014-1">0.5.0 - 24 mar 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#sep-2012">0.4.1 - 27 Sep 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#apr-2012">0.4.0 - 20 apr 2012 -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#mar-2012">0.3.11 - 29 mar 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2012">0.3.10 - 22 jan 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2012-1">0.3.9 - 18 jan 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#jan-2012-2">0.3.8 - 13 jan 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#dec-2011">0.3.7 - 12 dec 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#id14">0.3.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#section-1">0.3.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#section-2">0.3.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#section-3">0.3.3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">SPIKE License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html#secondary-licenses">Secondary Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#urqrd-license">urQRd License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#palma-licence">PALMA Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#progressbar">progressbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#the-program-also-relies-on-the-following-libraries">The program also relies on the following libraries</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">spike</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html">SpI <em>(Spike Interactive)</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#release-notes">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#simple-installation">simple installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#installing-additional-tools">Installing additional tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#licenses">Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#source-and-dependencies">source and dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Readme.html#developping-for-spike">developping for SPIKE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Doc.html">First contact SPIKE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spike.html">spike package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">SPIKE Relase Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">SPIKE License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html#secondary-licenses">Secondary Licenses</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="Readme.html" title="next chapter">SpI <em>(Spike Interactive)</em></a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, M-A.Delsuc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
