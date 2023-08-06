@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: paho-mqtt-helper
+Version: 0.0.1
+Summary: helper class to connect to the mqtt broker
+Home-page: https://github.com/mstoffel-sag/paho-mqtt-helper
+Author: mstoffel
+Author-email: marco.stoffel@softwareag.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mstoffel-sag/paho-mqtt-helper/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mqtt-helper
+Python MQTT Helper. Easily manage mqtt connections with paho.
+
+
