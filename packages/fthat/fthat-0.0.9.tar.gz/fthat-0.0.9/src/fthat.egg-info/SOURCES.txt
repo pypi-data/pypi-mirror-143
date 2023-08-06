@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/fthat/__init__.py
+src/fthat/ftpi.py
+src/fthat.egg-info/PKG-INFO
+src/fthat.egg-info/SOURCES.txt
+src/fthat.egg-info/dependency_links.txt
+src/fthat.egg-info/top_level.txt
