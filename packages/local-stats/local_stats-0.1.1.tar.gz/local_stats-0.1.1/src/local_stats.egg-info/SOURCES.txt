@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/local_stats/__init__.py
+src/local_stats/cluster.py
+src/local_stats/image.py
+src/local_stats/io.py
+src/local_stats.egg-info/PKG-INFO
+src/local_stats.egg-info/SOURCES.txt
+src/local_stats.egg-info/dependency_links.txt
+src/local_stats.egg-info/requires.txt
+src/local_stats.egg-info/top_level.txt
