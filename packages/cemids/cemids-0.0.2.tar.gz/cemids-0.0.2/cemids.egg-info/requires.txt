@@ -1,0 +1,10 @@
+loguru
+pandas
+
+[full]
+matplotlib>=3
+jupyter
+
+[interactive]
+matplotlib>=3
+jupyter
