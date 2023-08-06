@@ -1,0 +1,13 @@
+mope/__init__.py,sha256=vM-Cnel4iQRdmkKS1BnMzp7LV0LC64EP41tUcTolFdQ,49
+mope/__version__.py,sha256=vfckUV6h4zg2DzidIltQ_EcOxJ_Q0_LKnP-tphZwcu0,57
+mope/client.py,sha256=3k74ds63xV5KkRO-GNPMuIwKGdhfRm_2NGPIbQ4qgEo,1245
+mope/compat.py,sha256=sKm3lkFrhODxeHcCkjVxSI4Y6EdlHogiDX5EAOXkYgQ,85
+mope/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mope/models/payments.py,sha256=sQfD1Tp3ouJwB64eKTYNK-kfmK21tAElgFuCRHEDKtE,1386
+mope/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mope/resources/shop.py,sha256=9ujFRxswCsSgCkzvKFNhuhPZWBEuRMZccHdqJCTRKNE,1198
+python_mope-0.0.6.dist-info/METADATA,sha256=pCischpcvoGU7APggof_vO2ewQWjzRwinZrwf-MoeCw,2193
+python_mope-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+python_mope-0.0.6.dist-info/top_level.txt,sha256=KNJibHVOvmp47d34dVOoxczy3_oafEiKZ4szVTOW6AA,5
+python_mope-0.0.6.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+python_mope-0.0.6.dist-info/RECORD,,
