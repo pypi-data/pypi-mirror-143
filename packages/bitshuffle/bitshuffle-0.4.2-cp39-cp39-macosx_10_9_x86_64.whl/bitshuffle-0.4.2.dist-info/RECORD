@@ -1,0 +1,11 @@
+bitshuffle-0.4.2.dist-info/RECORD,,
+bitshuffle-0.4.2.dist-info/LICENSE,sha256=7zV8IGHPZ9spj58VZVcu4imtkmNYKp-dDr_1CU9dEKw,1148
+bitshuffle-0.4.2.dist-info/WHEEL,sha256=pfjXB0CCNW4PSSqQc2t4Up6p3o0jxBnHy_2o38FQkyE,109
+bitshuffle-0.4.2.dist-info/top_level.txt,sha256=aysWHNjo4AFo3qaY8MnX5nkAo4CPfWIqbySPwO9UPbY,11
+bitshuffle-0.4.2.dist-info/METADATA,sha256=wwCoUBQS9l1iGDds4OM4m-5dTvVgayxuevmp5sylFKs,10031
+bitshuffle/ext.cpython-39-darwin.so,sha256=bhkO-0xpHWhNCaO8qtysB7-uj-oK2DFdxC0iwi_5Vvw,1535984
+bitshuffle/h5.cpython-39-darwin.so,sha256=AZWmbCjqOhMPe-L_7UXkoNB5M7W6sI5f0-XL8lWJPHQ,1499128
+bitshuffle/__init__.py,sha256=wpLL0wHNX5yuSMoOgSzW9Ywnq2hFTURCPnXZXLKDRLM,853
+bitshuffle/plugin/libh5bshuf.cpython-39-darwin.so,sha256=LvHsgI5AKPmdxVHI66HPUfDYAIjED93MXhvkFmFNEJc,155184
+bitshuffle/plugin/libh5LZF.cpython-39-darwin.so,sha256=qL9nCphCwfQB4Sg6_Ncz53GMhMaOE4j84UlpWgKxnBQ,54528
+bitshuffle/.dylibs/libhdf5.103.dylib,sha256=RxKRL8dYE852UJ_gwB8kCOMtdx7F0VH9c50p0fgGdP0,3547136
