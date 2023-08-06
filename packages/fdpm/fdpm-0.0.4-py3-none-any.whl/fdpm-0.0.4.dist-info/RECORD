@@ -1,0 +1,15 @@
+fdpm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fdpm/__main__.py,sha256=EWivMHRK_VnTCaOkLfcGMKDppxg6yg8na4MkgcMPQmI,2776
+fdpm/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fdpm/helpers/util.py,sha256=3yiXzXjOWDUI_ojiKzuffMLnUy9cVQWvhFdlLzoBJKY,638
+fdpm/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fdpm/models/fdroid.py,sha256=Pzcr1vU3GSZrcojb2_gGbUarKIjFz_n-sTjn4zPh1QA,2686
+fdpm/models/installer.py,sha256=q75WCRvbL00GLJfXaO3fxternlUeJqY53jX6sh7IUMM,6360
+fdpm/models/user.py,sha256=EahUJ7cApgExuJsILYBoG_VnqcuyeCvSixkc2W0c45U,1116
+fdpm/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fdpm/views/box.py,sha256=xkw8KNGGvFA4B0gHXLMoYnORUy4ql-46WsPCQb_h4q8,3740
+fdpm-0.0.4.dist-info/entry_points.txt,sha256=Gx0QzcE9Clh2onw5iPxRI5JIJZgQDdPIdGXS3sjDcfE,43
+fdpm-0.0.4.dist-info/LICENSE,sha256=TQ1olFaYz4Q15kYyC2B-TZcmUX70RGwsyl4ngI_89rg,34453
+fdpm-0.0.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+fdpm-0.0.4.dist-info/METADATA,sha256=BblIScFe5R02VehJxN7N8wHERQI4cw_qdvo8EkN1udA,2534
+fdpm-0.0.4.dist-info/RECORD,,
