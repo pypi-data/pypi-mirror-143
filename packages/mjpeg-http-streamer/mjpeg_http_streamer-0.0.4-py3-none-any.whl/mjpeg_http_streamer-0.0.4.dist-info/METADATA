@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: mjpeg-http-streamer
+Version: 0.0.4
+Summary: A tool to create a http mjpeg stream from a plain mjpeg stream.
+Home-page: https://github.com/andrekupka/mjpeg-http-streamer
+Author: Andre Kupka
+Author-email: me-github@andrekupka.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp (>=3.8.1)
+
+# mjpeg-http-streamer
+
+![Build](https://github.com/andrekupka/mjpeg-http-streamer/actions/workflows/build-and-release.yaml/badge.svg)
+![Release](https://img.shields.io/github/v/release/andrekupka/mjpeg-http-streamer)
+
+A small python tool that reads a plain MJPEG stream from `stdin` and publishes it as http MJPEG stream.
+It can be used in combination with `libcamera` on a Raspberry Pi to create a http stream for [OctoPrint](https://octoprint.org/).
+
+## Installation
+
+Installation is done via `pip`.
+
+```bash
+pip install mjpeg-http-streamer
+```
+
+## Usage
+
+Example invocation on a Raspberry PI:
+
+```bash
+libcamera-vid -t 0 --inline --codec mjpeg -o - \
+  | python3 -m mjpeg_http_streamer -l <host> -p 8080
+```
+
+The HTTP stream can be received by opening the url `http://<host>:8080/stream`.
+Further a single snapshot can be retrieved using `http://<host>:8080/snapshot`.
+
+In production use cases it is advised to host `mjpeg-http-streamer` behind a reverse proxy like nginx.
+

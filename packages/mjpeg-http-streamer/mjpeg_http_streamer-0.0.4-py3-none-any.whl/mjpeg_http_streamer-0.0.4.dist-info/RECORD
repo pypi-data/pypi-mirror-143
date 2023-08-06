@@ -1,0 +1,13 @@
+mjpeg_http_streamer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mjpeg_http_streamer/__main__.py,sha256=cldEP4bem6ZMtgsqvQG-ViKR3r4wJd_xPRvPn9ZcZPc,1148
+mjpeg_http_streamer/app.py,sha256=xheFw3flYjW7ah2fnYbE3M73fxTwONApniJpaE5ALBo,1720
+mjpeg_http_streamer/arguments.py,sha256=VGlIEPa87qDDbjsDqvJBWS4_YKhnZCo6dpADuZ-UBsQ,1827
+mjpeg_http_streamer/frame_broker.py,sha256=GEML5Bk43ikI2iNGg0I-g5r_t7Rk-KNyNlFgF1j6QRo,1302
+mjpeg_http_streamer/mjpeg_frame_reader.py,sha256=hOazE-VcyiY1_CrbdF97tr5We_PM_vmEUZwkkMFWcVw,1835
+mjpeg_http_streamer/source.py,sha256=fzRumR_zIt9_NUckyaw6tv5twCIQ83DChMxl66F0KuQ,2025
+mjpeg_http_streamer/stream_provider.py,sha256=uqgBgZcqeIdAxt033gkQ_ct_EkJVvM29TPkZF2QZgcY,719
+mjpeg_http_streamer-0.0.4.dist-info/LICENSE,sha256=dOHSh3MaiNVCsoz3NmSS4fgmBMxUyDiEBC_6LI6kRE0,1068
+mjpeg_http_streamer-0.0.4.dist-info/METADATA,sha256=62wGrVylzj5WjgVG9TXhXX0Et3Wd500vZDNfJqCybtI,1532
+mjpeg_http_streamer-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mjpeg_http_streamer-0.0.4.dist-info/top_level.txt,sha256=C98vk5Ald54G5dL1RPo1ux_zPnFcbwghKOcD4UxGPoc,20
+mjpeg_http_streamer-0.0.4.dist-info/RECORD,,
