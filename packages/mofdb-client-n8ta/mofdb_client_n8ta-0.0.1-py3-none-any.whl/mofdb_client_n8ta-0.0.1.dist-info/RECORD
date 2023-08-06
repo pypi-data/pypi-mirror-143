@@ -1,0 +1,13 @@
+mofdb_client/__init__.py,sha256=ROAAm7myEmmmDBEYU4n5XDlBo7bOWC5gRWUfhf0tCls,23
+mofdb_client/adsorbate.py,sha256=5UT8ajzte-A0Evuj_MB_-vB_U5QL3Ih5hQmSBPdqz6I,361
+mofdb_client/adsorbent.py,sha256=acWJx19QeozzVXfBp6mJNV4sl8MD7raqZjMfZqq4eMU,185
+mofdb_client/element.py,sha256=3MSZX_sKJVkWUjFHvxjsJtB0BTQITr3yxZcXF8Owst0,318
+mofdb_client/isotherm.py,sha256=JXuyQXthc5cPyZwN8NMnBDOnXUWP18lM8Z3E1VCEt3o,1495
+mofdb_client/main.py,sha256=b4GVQe37YZGJkrYKCCrD7YU9xPOMiF7KyRgIpfv4xiI,1999
+mofdb_client/mof.py,sha256=HmE9KmTIIh-3EaYrwMOK6HcF_E2Sm5ICbeSpUkp54go,1648
+mofdb_client/temperature_point.py,sha256=iDpcHD1ci3lPH7dn9k-i42LPB1ZIE10inodEoZomr9g,992
+mofdb_client_n8ta-0.0.1.dist-info/LICENSE,sha256=Sq3ohkJa4kqFeVBmkWNhEkTAS7nRAf0s4vMOmCE5l8E,1062
+mofdb_client_n8ta-0.0.1.dist-info/METADATA,sha256=HV6BB8Bxd0cHEwxEwV5rUgn-BgzLj18LJWXWrf2OWEI,2942
+mofdb_client_n8ta-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mofdb_client_n8ta-0.0.1.dist-info/top_level.txt,sha256=v15NaP2X-1vJad3Utag6kp4iUx7jvX_V63G2z7IkTxo,13
+mofdb_client_n8ta-0.0.1.dist-info/RECORD,,
