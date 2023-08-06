@@ -1,0 +1,8 @@
+README.md
+setup.py
+XORc.egg-info/PKG-INFO
+XORc.egg-info/SOURCES.txt
+XORc.egg-info/dependency_links.txt
+XORc.egg-info/entry_points.txt
+XORc.egg-info/top_level.txt
+xorc/__init__.py
