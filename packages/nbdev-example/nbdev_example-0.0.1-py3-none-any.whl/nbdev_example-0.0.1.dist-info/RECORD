@@ -1,0 +1,13 @@
+nbdev example/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+nbdev example/_nbdev.py,sha256=Hjfim3yw81RIKkCJRySUT9qTJVWsAx5tiM5g9Q9kCjg,322
+nbdev example/card.py,sha256=3_s0ihK8fuQH8amUHvlYVWTYQbadB9C0540sXDfq8SI,1203
+nbdev_example/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+nbdev_example/_nbdev.py,sha256=Fe-roGIl2AqFJEC7KyGybUrisgEi-sCLSQIXX4LetdI,421
+nbdev_example/card.py,sha256=3_s0ihK8fuQH8amUHvlYVWTYQbadB9C0540sXDfq8SI,1203
+nbdev_example/deck.py,sha256=FsMWnLlke4mcIJ5JTQdFMULkTQaBvq0euysC-9Tc2fc,1726
+nbdev_example-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nbdev_example-0.0.1.dist-info/METADATA,sha256=rZ4o4NS8C4Ey1TuQoLJHVMPlPLbiXRIFuUxH1AuCLA8,1126
+nbdev_example-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nbdev_example-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+nbdev_example-0.0.1.dist-info/top_level.txt,sha256=rcdYzR5RuVlKKICpvi3ajCkZ-oGg3qmfcDQLEpO7JM8,28
+nbdev_example-0.0.1.dist-info/RECORD,,
