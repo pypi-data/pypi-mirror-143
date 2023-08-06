@@ -1,0 +1,8 @@
+setup.py
+ZJX/NARUTO/__init__.py
+ZJX/NARUTO/Shinobi/__init__.py
+ZJX/NARUTO/Shinobi/message.py
+ZJX/ZJX_NARUTO.egg-info/PKG-INFO
+ZJX/ZJX_NARUTO.egg-info/SOURCES.txt
+ZJX/ZJX_NARUTO.egg-info/dependency_links.txt
+ZJX/ZJX_NARUTO.egg-info/top_level.txt
