@@ -1,0 +1,10 @@
+bq/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+bq/tools/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+bq/tools/fetchdir.py,sha256=v_Fu_32BYQX7By3-vp7icwVew4KS6cu577kTlw7OTxs,7476
+bq/tools/pool.py,sha256=rt0RWUniIB4YazuF4bv0eZKh7oOu0oDnPx7mWRfMdKM,5091
+bq/tools/uploaddirp.py,sha256=6CHu_jQvhZCqFf_ucs9gvFAFI4I9KOBdnBDyg22iCAw,24151
+bq_tools_dirupload-0.8.11.4.dist-info/METADATA,sha256=2Lwk4jr8COwP-rCr3xb2W58xZZT719zJGYFY_k6aI2s,8695
+bq_tools_dirupload-0.8.11.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bq_tools_dirupload-0.8.11.4.dist-info/entry_points.txt,sha256=UzQ0B3t5yhnW4nNSwSr_C4WV-7Ws4g9Y-CrWWBo2azY,96
+bq_tools_dirupload-0.8.11.4.dist-info/top_level.txt,sha256=w5z7Un4-v3yqVMurNio-Srl-AUvtPOxZ3tZh4Eb8RHo,3
+bq_tools_dirupload-0.8.11.4.dist-info/RECORD,,
