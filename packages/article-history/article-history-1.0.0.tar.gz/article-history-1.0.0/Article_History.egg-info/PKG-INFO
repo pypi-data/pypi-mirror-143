@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: article-history
+Version: 1.0.0
+Summary: A tool to find similarity between (historic) articles
+Home-page: https://github.com/Drucifer2082/Django
+Author: Andrew and Bob @ PDM
+Author-email: support@pybit.es
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Drucifer2082/Django
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Article History
+
+TODO
+
+
