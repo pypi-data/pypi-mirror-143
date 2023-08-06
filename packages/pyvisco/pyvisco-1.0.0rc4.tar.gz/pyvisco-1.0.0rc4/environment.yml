@@ -1,0 +1,16 @@
+name: example-environment
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - scipy
+  - ipython
+  - ipywidgets
+  - ipympl
+  - voila
+  - xlrd
+  - markdown
+  
