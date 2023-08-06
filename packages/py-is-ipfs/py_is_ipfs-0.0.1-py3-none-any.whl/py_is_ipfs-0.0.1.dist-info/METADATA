@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: py-is-ipfs
+Version: 0.0.1
+Summary: Python library to identify valid IPFS resources
+Home-page: https://github.com/Barabazs/py-is_ipfs
+Author: Barabazs
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: py-cid (>=0.3.0<1.0.0)
+Requires-Dist: py-multibase (<2.0.0,>=1.0.3)
+
+UNKNOWN
+
