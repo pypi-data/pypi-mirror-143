@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+red_manager.egg-info/PKG-INFO
+red_manager.egg-info/SOURCES.txt
+red_manager.egg-info/dependency_links.txt
+red_manager.egg-info/top_level.txt
+src/__init__.py
+src/upload.py
