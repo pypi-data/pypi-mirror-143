@@ -1,0 +1,14 @@
+triton_transformer/__init__.py,sha256=_gIRSKeJKDfEKuhhYDfyLKzlXu7yhjqCttxcvWQXjsc,55
+triton_transformer/autoregressive_wrapper.py,sha256=vSzRXgAGWffRULbr_s8o6yinsDgDyaiuZIS1QNAiGXI,2059
+triton_transformer/bmm.py,sha256=qUQSBPmN_3ao1AC_ChzfCfv6gLPvgMhUzQa93We9QHw,7976
+triton_transformer/cross_entropy.py,sha256=cNTtrd4yiS4kApAb6dqKAT_i9-qbKuWQmJ9JBXlR9h8,521
+triton_transformer/dropout.py,sha256=99T3DevPFLDWatYwZpiAI_iazVha_bvcSo_d6tpBmS4,2374
+triton_transformer/layernorm.py,sha256=fooOFXl_AxVAKrPOg2V5IXkzbHzHw14d2X4Qkrrza28,9830
+triton_transformer/softmax.py,sha256=a66bnRrkU-rXU4cqFASeuzlEu8V0M1t3CUovmBbSuoc,3623
+triton_transformer/transformer.py,sha256=kIXtI5-JKrrHXnjt2e744FWqSDITjOhWjMKz5NlzhhE,5787
+triton_transformer/utils.py,sha256=Ev4AWqnz6QpvthTSWkvxagGaJAM0UUc4Lv0YbJjl8vg,275
+triton_transformer-0.0.28.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+triton_transformer-0.0.28.dist-info/METADATA,sha256=KCEHh7rWY6ttJBkbu9IkJsedPbcKSUcQxPTvYn55v7w,691
+triton_transformer-0.0.28.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+triton_transformer-0.0.28.dist-info/top_level.txt,sha256=OMPh7Xul1ocfq6jGGzRLDVzhukNXZjXrWZ_rnMXIhAQ,19
+triton_transformer-0.0.28.dist-info/RECORD,,
