@@ -1,0 +1,13 @@
+odoo/addons/easy_my_coop_es_website/README.rst,sha256=XkzyzY3FXsGxqs6OXDqOXBk1k98Q_XDmFgguMzXsvAY,2065
+odoo/addons/easy_my_coop_es_website/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/easy_my_coop_es_website/__manifest__.py,sha256=fnft1BZwtfintYK3p3mf-Q9xUtZqJMZbEseLr8f9rVM,565
+odoo/addons/easy_my_coop_es_website/i18n/easy_my_coop_es_website.pot,sha256=ag38LEYBm2EAmw4q8868YvnPnc3AoBWpcKvV9ZO3tpE,947
+odoo/addons/easy_my_coop_es_website/readme/CONTRIBUTORS.rst,sha256=nYVaWRk7BncbxUOiVb4vgi4Iac261rETNoFHDMmAgzQ,24
+odoo/addons/easy_my_coop_es_website/readme/DESCRIPTION.rst,sha256=3GPIVjOSplgLkKrtJucY95TwTVVzRFI88JdeXtpIfF0,142
+odoo/addons/easy_my_coop_es_website/static/description/index.html,sha256=YK5NZQsThUtB3w0HyhT0Go_zv2DXLeRbS6r8KzfyDaQ,10972
+odoo/addons/easy_my_coop_es_website/views/become_company_cooperator_view.xml,sha256=-XF52r4bcmjpg4vhYpT5hWV0fsPxiWaB9b29pZhedIM,549
+odoo/addons/easy_my_coop_es_website/views/become_cooperator_view.xml,sha256=eo3NMwpvwtpFlf0CY1rAYgpytuLtb5kRkjChReTcOhE,1754
+odoo12_addon_easy_my_coop_es_website-12.0.0.1.0.dist-info/METADATA,sha256=hz438JLBEB7Lu7yF_aPpOjPRnjvFVPagP1RTsFQt2I0,2681
+odoo12_addon_easy_my_coop_es_website-12.0.0.1.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+odoo12_addon_easy_my_coop_es_website-12.0.0.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_easy_my_coop_es_website-12.0.0.1.0.dist-info/RECORD,,
