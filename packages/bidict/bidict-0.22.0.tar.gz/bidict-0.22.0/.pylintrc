@@ -1,0 +1,34 @@
+# https://docs.pylint.org/en/latest/technical_reference/features.html
+
+# pylint --long-help
+#   There are 5 kind of message types :
+#   * (C) convention, for programming standard violation
+#   * (R) refactor, for bad code smell
+#   * (W) warning, for python specific problems
+#   * (E) error, for probable bugs in the code
+#   * (F) fatal, if an error occurred which prevented pylint from doing
+
+[MASTER]
+jobs = 0
+max-args = 6
+
+[MESSAGES CONTROL]
+disable =
+  abstract-method,
+  arguments-differ,
+  assigning-non-slot,  # pylint does not understand descriptors like WeakAttr in _orderedbase.py
+  attribute-defined-outside-init,
+  invalid-name,
+  line-too-long,
+  missing-function-docstring,  # flags @typing.overload's
+  multiple-statements,  # flags @typing.overload's
+  not-callable,  # pylint doesn't understand that the invweak weakref is callable
+  protected-access,
+  signature-differs,  # flags MutableBidict.pop against OrderedBidict.pop (which adds a last kwarg just like OrderedDict)
+  too-few-public-methods,  # flags BiMappingView et al.
+  too-many-branches,  # flags BidictBase._update()
+  too-many-locals,  # flags BidictBase._update()
+  unsubscriptable-object,  # flags _orderedbidict.py `node_by_korv.inverse[node]`
+  unsupported-assignment-operation,  # flags `mutable_bidict.inverse[val] = key`
+  useless-import-alias,  # pylint does not understand mypy-style "import foo as foo" explicit re-exports in bidict/__init__.py
+  wrong-import-position,  # bidict/__init__.py
