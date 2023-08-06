@@ -1,0 +1,14 @@
+simpel_hookup/__init__.py,sha256=1EdNHZj2coNn24_uhCQrSFfFZV96-IxaV6aYTinVQug,144
+simpel_hookup/admin.py,sha256=lv72jhhS0EadsuWcvh0aQQeSaLg4QRPn5bPAE-85bmg,1049
+simpel_hookup/apps.py,sha256=ftnLp-33a3Fa--7vIA7JG4WXv_5UEDOnkXMTFUYUghc,438
+simpel_hookup/core.py,sha256=zPLGNuhZVtTk7ZXAHs-OlVI2wJo3297z6U5rKKoOT7g,2221
+simpel_hookup/settings.py,sha256=nXK7c-coEddJdSdxO0MYeu4xACA20n9y6Xx4d4YG5iU,3919
+simpel_hookup/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+simpel_hookup/urls.py,sha256=O36Y-6PHC1RZNJK3OkNCnuxpgQViHV8TLBq59gk8ngw,203
+simpel_hookup/version.py,sha256=HL6W1a5LD-u3jntHdg8lm9QfnGLLqm5ICL9I1UfG9i8,1476
+simpel_hookup/templates/admin/simpel_hookup/hooks_registry.html,sha256=DA1WbJBYmvuLSNeQptb48WvqOBPwtKeuP7ujdNnp45k,677
+simpel_hookup-0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpel_hookup-0.1.dist-info/METADATA,sha256=xtqckEvX3bjcIoiAG4ioRNe9WcKoQwB96_6gJfp-iyc,2255
+simpel_hookup-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+simpel_hookup-0.1.dist-info/top_level.txt,sha256=-jqWRRKx3EtyJRNQ7wzLk350FMTnReLHOEF8hG575dA,14
+simpel_hookup-0.1.dist-info/RECORD,,

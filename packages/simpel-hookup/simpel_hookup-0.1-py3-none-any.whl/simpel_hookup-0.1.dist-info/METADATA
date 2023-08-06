@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: simpel-hookup
+Version: 0.1
+Summary: Simpel global hook registry for django
+Home-page: https://gitlab.com/simpel-projects/simpel-hookup
+Author: Rizki Sasri Dwitama
+Author-email: sasri.works@gmail.com
+License: MIT
+Project-URL: Documentation, https://gitlab.com/simpel-projects/simpel-hookup/-/wikis/
+Project-URL: Source, https://gitlab.com/simpel-projects/simpel-hookup
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django (<4.0,>=3.2.8)
+
+# 🚀 Simpel Hookup
+
+Simpel function hook for Django.
+Install :
+
+```shell
+
+pip install simpel-hookup
+
+```
+
+Simpel hookup secara otomatis akan mencari `hooks.py` di dalam setiap aplikasi Django yang terinstall dalam project.
+
+## Registrasi hooks
+
+```python
+# app/hooks.py
+
+import simpel_hookup as hookup
+
+@hookup.register("PROCESS_TEXT_HOOKS", order=1)
+def process_text_replace_space(text):
+    text = text.replace(" ", "-")
+    print(text)
+    return text
+
+@hookup.register("PROCESS_TEXT_HOOKS", order=2)
+def process_text_replace_dash(text):
+    text = text.replace("-", "_")
+    print(text)
+    return text
+
+```
+
+## Memanggil hook
+
+```python
+
+# app/views.py
+from django.http.response import HttpResponse
+import simpel_hookup as hookup
+
+def index(request):
+    text = "Lorem ipsum dolor sit amet"
+
+    hook_funcs = hookup.get_hooks('PROCESS_TEXT_HOOKS')
+    for func in hook_funcs:
+        text = func(text)
+
+    return HttpResponse(text)
+
+```
+
+
