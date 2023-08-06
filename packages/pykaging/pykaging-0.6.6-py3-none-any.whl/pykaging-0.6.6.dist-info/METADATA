@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pykaging
+Version: 0.6.6
+Summary: A CLI app provided for creating packages in
+Home-page: https://github.com/VizMan0616/pykaging
+Author: José Vizcaya
+Author-email: josevizcaya0616@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE.md
+Requires-Dist: click
+Requires-Dist: colorama
+
+UNKNOWN
+
