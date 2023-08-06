@@ -1,0 +1,3 @@
+[console_scripts]
+gocd-tools = gocd_tools.cli.cli:run
+
