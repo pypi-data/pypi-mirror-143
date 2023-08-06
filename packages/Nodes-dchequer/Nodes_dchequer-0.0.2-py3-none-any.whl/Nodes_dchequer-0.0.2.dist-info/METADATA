@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Nodes-dchequer
+Version: 0.0.2
+Summary: Custom Node Class and Other Implementations
+Home-page: https://github.com/dchequer/Nodes
+Author: Diego Chequer
+Author-email: millychequer@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/dchequer/Nodes/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Custom Node Module
+
+## This module contains the following:
+### Node Script
+* Contains a basic Node class
+### Stack Script
+* Contains a custom Stack class
+### LinkedList
+* Work in progress since it is not needed at the moment
+
