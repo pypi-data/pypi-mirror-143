@@ -1,0 +1,10 @@
+setuptools>=38.4.0
+paramiko>=2.6.0
+scp>=0.13.2
+tenacity
+textfsm>=1.1.2
+ntc-templates>=2.0.0
+pyserial
+
+[:python_version < "3.7"]
+importlib_resources
