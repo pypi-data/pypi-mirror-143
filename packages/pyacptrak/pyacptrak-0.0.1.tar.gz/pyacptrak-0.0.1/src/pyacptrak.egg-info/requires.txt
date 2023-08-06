@@ -1,0 +1,7 @@
+svgutils>=0.3.4
+numpy>=1.22.3
+IPython>=7.23.1
+importlib>=1.0.4
+
+[dev]
+pytest>=3.7
