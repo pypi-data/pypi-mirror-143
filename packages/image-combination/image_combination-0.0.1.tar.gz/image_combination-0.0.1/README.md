@@ -1,0 +1,53 @@
+# IMAGE COMBINATION  
+## Descrição.
+Pacote utilizado para combinar imagens diferentes e gerar uma nova imagem a partir da combinação delas
+
+Modulos:  
+    
+    Processing:
+        - Histogram matching
+        - Structural similarity
+        - Resize image
+    Utils:
+        - Read image
+        - Save image
+        - Plot image
+        - Plot result
+        - Plot histogram
+
+## Instalação
+utilize o gerenciador de pacote pip para instalar o pacote
+
+```
+pip install image_combination
+```
+
+## Usar
+```
+from image_combination.utils.io import read_image
+from image_combination.processing.transformation import resize_image
+from image_combination.processing.combination import find_difference, transfer_histogram
+from image_combination.utils.plot import plot_result, plot_histogram
+
+img1 = read_image(path)
+img2 = read_image(path)
+
+img1 = resize_image(img1, 300, 600)
+img2 = resize_image(img2, 300, 600)
+find_difference(img1, img2)
+
+plot_histogram(img1)
+plot_histogram(img2)
+
+combination1 = transfer_histogram(img1, img2)
+combination2 = transfer_histogram(img2, img1)
+
+plot_result(img1, img2, combination1)
+plot_result(img2, img1, combination2)
+```
+
+## Autor
+Everton Vaz
+
+pacote criado para fins educacionais 
+
