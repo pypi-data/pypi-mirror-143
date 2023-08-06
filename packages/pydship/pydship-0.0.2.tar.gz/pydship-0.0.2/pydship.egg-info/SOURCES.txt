@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pydship/VERSION
+pydship/__init__.py
+pydship/dship.py
+pydship.egg-info/PKG-INFO
+pydship.egg-info/SOURCES.txt
+pydship.egg-info/dependency_links.txt
+pydship.egg-info/not-zip-safe
+pydship.egg-info/top_level.txt

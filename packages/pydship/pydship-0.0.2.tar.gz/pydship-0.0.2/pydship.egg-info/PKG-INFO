@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pydship
+Version: 0.0.2
+Summary: Tools to parse and convert WERUM DSHIP data
+Home-page: https://github.com/MarineDataTools/pydship
+Author: Peter Holtermann
+Author-email: peter.holtermann@io-warnemuende.de
+License: GPLv03
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
