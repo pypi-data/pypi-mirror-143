@@ -1,0 +1,10 @@
+setup.py
+hello/fff123.egg-info/PKG-INFO
+hello/fff123.egg-info/SOURCES.txt
+hello/fff123.egg-info/dependency_links.txt
+hello/fff123.egg-info/top_level.txt
+hello/fww/__init__.py
+hello/fww/test.py
+hello/fww/ooo/__init__.py
+hello/fww/ooo/a.py
+hello/fww/ooo/message.py
