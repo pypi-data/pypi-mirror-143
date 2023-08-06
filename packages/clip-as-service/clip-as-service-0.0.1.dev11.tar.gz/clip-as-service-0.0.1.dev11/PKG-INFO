@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: clip-as-service
+Version: 0.0.1.dev11
+Summary: The data structure for unstructured data
+Home-page: https://github.com/jina-ai/docarray
+Author: Jina AI
+Author-email: hello@jina.ai
+License: Apache 2.0
+Download-URL: https://github.com/jina-ai/docarray/tags
+Project-URL: Documentation, https://docarray.jina.ai
+Project-URL: Source, https://github.com/jina-ai/docarray/
+Project-URL: Tracker, https://github.com/jina-ai/docarray/issues
+Description: # cas
+        
+        ## Developer Guide
+        
+        Clone this repo.
+        
+        ## Install & Run Server
+        1. `pip install cas/server`
+        2. Run server: `python -m clip_server`
+        
+        ## Install & Run Server
+        1. `pip install cas/client`
+        2. Run:
+        
+Keywords: docarray deep-learning data-structures cross-modal multi-modal unstructured-data nested-data neural-search
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Unix Shell
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
