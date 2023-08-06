@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: voicetransformer
+Version: 0.0.3
+Summary: A wrapper over WORLD's Python wrapper to facilitate voice transformation
+Home-page: https://github.com/egaudrain/voicetransformer
+Author: Etienne gaudrain
+Author-email: egaudrain@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/egaudrain/voicetransformer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyworld
+Requires-Dist: scipy
+Requires-Dist: soundfile
+
+# voicetransformer
+
+A wrapper over [pyworld](https://pypi.org/project/pyworld/) to make voice transformation easy.
+
+The wrapper is based on the [vt_server_module_world](https://github.com/egaudrain/VTServer/blob/master/src/vt_server_module_world.py),
+also offering a command line interface.
+
+## License
+
+voicetransformer, a simple wrapper for pyworld
+Copyright (C) 2022 Etienne Gaudrain
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
