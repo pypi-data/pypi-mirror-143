@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyuwb
+Version: 0.0.2
+Summary: A uwb locating library
+Home-page: https://github.com/Jiangshan00001/pyuwb
+Author: jiangshan00000
+Author-email: 710806594@qq.com
+License: UNKNOWN
+Description: # pyuwb
+        python sdk for dw1000 uwb locating library.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
