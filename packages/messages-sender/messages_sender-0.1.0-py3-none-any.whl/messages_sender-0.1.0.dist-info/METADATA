@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: messages-sender
+Version: 0.1.0
+Summary: Message sender is a library which create a message to send from a python dictionnary and a Jinja template and send it by the method of your choice.
+License: MIT
+Author: Ermite28
+Author-email: benoitdewitte28@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Telethon (>=1.24.0,<2.0.0)
