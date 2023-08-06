@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: vialink-utils-pubsub
+Version: 0.0.2
+Summary: ViaLink Utils PubSub
+Home-page: UNKNOWN
+Author: SSripilaipong
+Author-email: santhapon.s@siametrics.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
