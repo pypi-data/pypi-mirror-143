@@ -1,0 +1,3 @@
+reahl-component<5.3,>=5.2
+reahl-sqlalchemysupport<5.3,>=5.2
+reahl-web<5.3,>=5.2
