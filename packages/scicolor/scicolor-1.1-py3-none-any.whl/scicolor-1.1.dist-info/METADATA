@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: scicolor
+Version: 1.1
+Summary: Collections of color maps for scientific visualizations
+Home-page: https://github.com/yangkcatiu/scicolor
+Author: Kaicheng Yang
+Author-email: yangkc@iu.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
+
