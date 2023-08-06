@@ -1,0 +1,7 @@
+setup.py
+Guildead/Guildead.py
+Guildead/__init__.py
+Guildead.egg-info/PKG-INFO
+Guildead.egg-info/SOURCES.txt
+Guildead.egg-info/dependency_links.txt
+Guildead.egg-info/top_level.txt
