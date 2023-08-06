@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: syngular
+Version: 0.1.2
+Summary: An Object-Oriented Python Interface to Singular
+Home-page: https://github.com/GDeLaurentis/syngular
+Author: Giuseppe De Laurentis
+Author-email: g.dl@hotmail.it
+License: GNU General Public License v3.0
+Download-URL: https://github.com/GDeLaurentis/syngular/archive/v0.1.2.tar.gz
+Description: Documentation not yet available.
+        For now please refer to the examples at https://github.com/GDeLaurentis/syngular/blob/main/examples/Examples.ipynb
+        
+Keywords: syngular,singular,algebraic geometry
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.9
