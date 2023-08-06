@@ -1,0 +1,8 @@
+[build-system]
+requires = [
+  'python-dateutil',
+  'requests',
+  'requests_toolbelt',
+  'setuptools>=42'
+]
+build-backend = 'setuptools.build_meta'
