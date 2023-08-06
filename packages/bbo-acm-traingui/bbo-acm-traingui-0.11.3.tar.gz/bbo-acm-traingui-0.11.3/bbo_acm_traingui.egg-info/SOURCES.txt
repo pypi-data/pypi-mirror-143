@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ACMtraingui/__main__.py
+ACMtraingui/config.py
+ACMtraingui/labeling_gui.py
+ACMtraingui/labeling_gui_cfg.py
+bbo_acm_traingui.egg-info/PKG-INFO
+bbo_acm_traingui.egg-info/SOURCES.txt
+bbo_acm_traingui.egg-info/dependency_links.txt
+bbo_acm_traingui.egg-info/requires.txt
+bbo_acm_traingui.egg-info/top_level.txt
