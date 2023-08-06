@@ -1,0 +1,11 @@
+_webp.pyd,sha256=JBCQe8TekUfxi6pAg8uP5xzAiC8gnVFpWnPxZ4gpGKA,522752
+webp/__init__.py,sha256=GMTT0Tkfy-5KPCzhWmQiH2pkA0Q3iE7W9xYL7QRcFjg,20350
+webp_build/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webp_build/builder.py,sha256=TRmcg-eWO9BHFW7dktK5mc7KcjLBucvcIUwRfHXSkEM,1847
+webp_build/cdef.h,sha256=KH0Qgkyk_pVTdb4lBiO_AGBKXiuQVJhANgB-ncrbD1Q,5267
+webp_build/source.c,sha256=bNFpwXswNMDgf9gSBYjBM0WMsMfIRnY6UpcX8vQyCS4,326
+webp-0.1.4.dist-info/LICENSE,sha256=kcv-TZ0qGTY2OG1ArsLZlrDMJZRQX1TmDoclKO9N9PU,1076
+webp-0.1.4.dist-info/METADATA,sha256=1RdRCQczgF1aIs0HNXJAEbiZugmWDinZtYgSF-2MLfg,4824
+webp-0.1.4.dist-info/WHEEL,sha256=-FqDJjo4HrkrIaThvtAYef2eEAn1_QvVe5nINCnUEbQ,101
+webp-0.1.4.dist-info/top_level.txt,sha256=-BM5RL3d7tY49EIo6zI9ZWA-C0zbBBtIVCzQ49pQAOY,22
+webp-0.1.4.dist-info/RECORD,,
