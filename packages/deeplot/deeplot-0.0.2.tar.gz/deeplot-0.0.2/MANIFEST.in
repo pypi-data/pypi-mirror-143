@@ -1,0 +1,3 @@
+include deeplot/architecture/*.png
+include deeplot/architecture/*.jpg
+include deeplot/architecture/*.jpeg
