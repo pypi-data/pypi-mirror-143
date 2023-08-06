@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+helloasso_api/__init__.py
+helloasso_api/apiv5client.py
+helloasso_api/exceptions.py
+helloasso_api/oauth2.py
+helloasso_api/utils.py
+helloasso_api/client/__init__.py
+helloasso_api/client/authorization.py
+helloasso_apiv5.egg-info/PKG-INFO
+helloasso_apiv5.egg-info/SOURCES.txt
+helloasso_apiv5.egg-info/dependency_links.txt
+helloasso_apiv5.egg-info/requires.txt
+helloasso_apiv5.egg-info/top_level.txt

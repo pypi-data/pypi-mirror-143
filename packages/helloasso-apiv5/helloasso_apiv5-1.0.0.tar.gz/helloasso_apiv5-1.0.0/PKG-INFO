@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: helloasso_apiv5
+Version: 1.0.0
+Summary: Python wrapper for Helloasso APIV5
+Home-page: https://github.com/HelloAsso/HaApiV5
+Author: Helloasso
+Author-email: api.support@helloasso.org
+Maintainer: Helloasso
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+Bibliothèque python visant à faciliter l'usage de l'api Helloasso. Compatible de python3.6 jusqu'à python 3.10
+
+La bibliothèque permet de gérér l'authentification et l'authorization auprès de l'api Helloasso
+
+Documentation: https://github.com/HelloAsso/HaApiV5
+
+
+
