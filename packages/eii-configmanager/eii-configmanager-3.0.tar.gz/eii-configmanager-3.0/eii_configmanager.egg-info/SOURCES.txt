@@ -1,0 +1,15 @@
+README.md
+setup_packaging.py
+./cfgmgr/__init__.py
+./cfgmgr/app_config.c
+./cfgmgr/client.c
+./cfgmgr/config_manager.c
+./cfgmgr/exc.py
+./cfgmgr/publisher.c
+./cfgmgr/server.c
+./cfgmgr/subscriber.c
+./cfgmgr/util.c
+eii_configmanager.egg-info/PKG-INFO
+eii_configmanager.egg-info/SOURCES.txt
+eii_configmanager.egg-info/dependency_links.txt
+eii_configmanager.egg-info/top_level.txt
