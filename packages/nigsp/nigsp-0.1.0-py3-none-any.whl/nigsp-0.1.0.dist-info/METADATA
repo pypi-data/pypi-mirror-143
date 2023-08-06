@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: nigsp
+Version: 0.1.0
+Summary: A python library (and toolbox!) to run Graph Signal Processing on multimodal MRI data.
+Home-page: https://github.com/MIPLabCH/nigsp
+Author: Stefano Moia
+Maintainer: Stefano Moia
+Maintainer-email: s.moia.research@gmail.com
+License: Apache-2.0
+Download-URL: https://github.com/MIPLabCH/nigsp
+Platform: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides: nigsp
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+Requires-Dist: numpy (>=1.9.3)
+Provides-Extra: all
+Requires-Dist: nibabel ; extra == 'all'
+Requires-Dist: pymatreader ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: matplotlib (>=3.1.1) ; extra == 'all'
+Requires-Dist: nilearn (>=0.7.0) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: sphinx (>=2.0) ; extra == 'dev'
+Requires-Dist: sphinx-argparse ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: nibabel ; extra == 'dev'
+Requires-Dist: pymatreader ; extra == 'dev'
+Requires-Dist: scipy ; extra == 'dev'
+Requires-Dist: matplotlib (>=3.1.1) ; extra == 'dev'
+Requires-Dist: nilearn (>=0.7.0) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.7) ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx (>=2.0) ; extra == 'doc'
+Requires-Dist: sphinx-argparse ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Provides-Extra: mat
+Requires-Dist: pymatreader ; extra == 'mat'
+Requires-Dist: scipy ; extra == 'mat'
+Provides-Extra: nifti
+Requires-Dist: nibabel ; extra == 'nifti'
+Provides-Extra: style
+Requires-Dist: flake8 (>=3.7) ; extra == 'style'
+Provides-Extra: test
+Requires-Dist: nibabel ; extra == 'test'
+Requires-Dist: pymatreader ; extra == 'test'
+Requires-Dist: scipy ; extra == 'test'
+Requires-Dist: matplotlib (>=3.1.1) ; extra == 'test'
+Requires-Dist: nilearn (>=0.7.0) ; extra == 'test'
+Requires-Dist: flake8 (>=3.7) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Provides-Extra: viz
+Requires-Dist: matplotlib (>=3.1.1) ; extra == 'viz'
+Requires-Dist: nilearn (>=0.7.0) ; extra == 'viz'
+
+NiGSP
+=====
+
+A python library (and toolbox!) to run Graph Signal Processing on multimodal MRI data.
+
+**The project is currently under development stage alpha**.
+Any suggestion/bug report is welcome! Feel free to open an issue.
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<!-- ## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): -->
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
+License
+-------
+
+Copyright 2022, Stefano Moia.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
