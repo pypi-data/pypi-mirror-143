@@ -1,0 +1,3 @@
+boto3>=1.18.54
+pyyaml>=6.0
+requests>=2.27.1
