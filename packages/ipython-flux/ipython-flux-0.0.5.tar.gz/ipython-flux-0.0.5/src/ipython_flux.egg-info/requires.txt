@@ -1,0 +1,6 @@
+ipython>=1.0
+influxdb-client
+six
+ipython-genutils>=0.1.0
+traitlets>=5.1.1
+pandas>=1.0.0setuptools>=49.2.0
