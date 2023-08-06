@@ -1,0 +1,7 @@
+emzed_spyder_kernels.py
+setup.py
+emzed_spyder_kernels.egg-info/PKG-INFO
+emzed_spyder_kernels.egg-info/SOURCES.txt
+emzed_spyder_kernels.egg-info/dependency_links.txt
+emzed_spyder_kernels.egg-info/requires.txt
+emzed_spyder_kernels.egg-info/top_level.txt
