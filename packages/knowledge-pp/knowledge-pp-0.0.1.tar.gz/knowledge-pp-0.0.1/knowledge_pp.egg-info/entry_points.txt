@@ -1,0 +1,3 @@
+[console_scripts]
+kwpp = knowledge_pp.scripts.app:cli
+
