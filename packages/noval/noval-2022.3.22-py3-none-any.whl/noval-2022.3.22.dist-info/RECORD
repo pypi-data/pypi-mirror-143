@@ -1,0 +1,14 @@
+noval/__init__.py,sha256=gb9moh9fQko78eHY5RYCZccjPfQqMN3MDl3Hc21nrKY,247
+noval/const.py,sha256=SPVfwOgT2_ywGqLm5NSHmp1mtg9kmz6RcJkDVCnBoUU,2324
+noval/downloader.py,sha256=6D-oxosKI2bbM1KMp5caP1nc6_QLaJKK3ylZrmkivQg,4279
+noval/extractor.py,sha256=e-f6P-y6KMabviS7AbsXP_VYYs9QjfsfP3QD9XjjpBA,12106
+noval/fiction_downloader.py,sha256=azf0Trs6uSrWwDc41MXQAcuU7GZTrlmxOrcR58Fp9iY,19644
+noval/main.py,sha256=i6mMt1MymJLjTNWEvohB-znSxKUSXIMgUgdACQTBzbQ,1416
+noval/terminal.py,sha256=JoccBZc8l9SMjesdet3Hnm0ei7LXe6wZ-jNJuIMVqRU,5523
+noval/utils.py,sha256=i09hNV2DJxuyF6ZgV7vrr3gw3pIggJCNiYA0SoKOEWg,1123
+noval-2022.3.22.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+noval-2022.3.22.dist-info/METADATA,sha256=VZZbXsDvwXYZzOX3fxyyyDgZKacP5pht9NBGA85G3DM,1912
+noval-2022.3.22.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+noval-2022.3.22.dist-info/entry_points.txt,sha256=35TOLeU9c_s86kNwdzyRlb2ITX2vSjh2MsSQcFD6exc,61
+noval-2022.3.22.dist-info/top_level.txt,sha256=m28EDWw-YiL9cCVAiRz6jTr3QsFNZQVVQB1ZAp6gME0,6
+noval-2022.3.22.dist-info/RECORD,,
