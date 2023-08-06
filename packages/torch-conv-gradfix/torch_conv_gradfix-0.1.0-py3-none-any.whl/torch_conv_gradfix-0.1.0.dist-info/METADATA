@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: torch-conv-gradfix
+Version: 0.1.0
+Summary: (Taken from NVIDIA) Replacement for Pytorch's Conv2D and Conv2DTranspose with support for higher-order gradients and disabling unnecessary gradient computations.
+Home-page: https://github.com/ppeetteerrs/torch-conv-gradfix
+License: MIT
+Author: Peter Yuen
+Author-email: ppeetteerrsx@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.21.0)
+Requires-Dist: torch (>1.7)
+Project-URL: Documentation, https://ppeetteerrs.github.io/torch-conv-gradfix
+Project-URL: Repository, https://github.com/ppeetteerrs/torch-conv-gradfix
+Description-Content-Type: text/markdown
+
+# PyTorch Conv2D Gradient Fix
+
+**(Taken from NVIDIA) Replacement for Pytorch's Conv2D and Conv2DTranspose with support for higher-order gradients and disabling unnecessary gradient computations.**
+
+![action](https://img.shields.io/github/workflow/status/ppeetteerrs/torch-conv-gradfix/build?logo=githubactions&logoColor=white)
+[![pypi](https://img.shields.io/pypi/v/torch-conv-gradfix.svg)](https://pypi.python.org/pypi/torch-conv-gradfix)
+[![codecov](https://img.shields.io/codecov/c/github/ppeetteerrs/torch-conv-gradfix?label=codecov&logo=codecov)](https://app.codecov.io/gh/ppeetteerrs/torch-conv-gradfix)
+[![docs](https://img.shields.io/github/deployments/ppeetteerrs/torch-conv-gradfix/github-pages?label=docs&logo=readthedocs)](https://ppeetteerrs.github.io/torch-conv-gradfix)
+
+## Installation
+
+`conda install torch-conv-gradfix -c ppeetteerrs`
+
+## Usage
+
+See the `Example` tab.

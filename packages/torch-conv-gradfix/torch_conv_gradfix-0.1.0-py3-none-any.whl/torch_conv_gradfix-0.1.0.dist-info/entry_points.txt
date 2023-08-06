@@ -1,0 +1,5 @@
+[console_scripts]
+docs=torch_conv_gradfix:__docs
+serve=torch_conv_gradfix:__serve
+test=torch_conv_gradfix:__test
+
