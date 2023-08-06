@@ -1,0 +1,5 @@
+d3m
+torch==1.7.0
+torchvision==0.8.1
+fastai==2.3.0
+efficientnet_pytorch==0.7.1
