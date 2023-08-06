@@ -1,0 +1,9 @@
+setup.py
+zzw/handsom/__init__.py
+zzw/handsom/boy/__init__.py
+zzw/handsom/boy/information.py
+zzw/handsom/boy/messag.py
+zzw/zzw.py.egg-info/PKG-INFO
+zzw/zzw.py.egg-info/SOURCES.txt
+zzw/zzw.py.egg-info/dependency_links.txt
+zzw/zzw.py.egg-info/top_level.txt
