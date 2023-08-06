@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: intime-sdk
+Version: 1.0.0
+Summary: Python SDK for InTime API services.
+Home-page: https://github.com/njnur/InTime-Python-SDK
+Author: MD Nurujjaman Nur
+Author-email: mnjnurrumen@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6.0
+License-File: LICENSE
+
+UNKNOWN
+
