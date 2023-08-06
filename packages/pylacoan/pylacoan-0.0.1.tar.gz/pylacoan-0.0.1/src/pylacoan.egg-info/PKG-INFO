@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pylacoan
+Version: 0.0.1
+Summary: Combine different corpus annotators
+Home-page: https://github.com/fmatter/pylacoan
+Author: Florian Matter
+Author-email: florianmatter@gmail.com
+License: Apache Software License 2.0
+Keywords: pylacoan
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.md
+
+# pylacoan
+
+ ![Coverage badge](tests/coverage.svg "Coverage")
+
+
+
