@@ -1,0 +1,10 @@
+poc_dependency_gob/.DS_Store,sha256=yontAjH2tW-mxVoQI0qFKPnFIftO1LsYTsTbhYcs02k,8196
+poc_dependency_gob/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+poc_dependency_gob/one/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+poc_dependency_gob/one/test_function.py,sha256=GOqOYG0-zu8x5y5Y5yVrCUp9eWq3KnwG4_yABt20ues,503
+poc_dependency_gob/three/__init__.py,sha256=knW_r93WfRYuoamwzDZM4yuxCRie_4FkIm5fhbKYpXw,85
+poc_dependency_gob/three/fn_three.py,sha256=y_K-Cr_UjA9NoKlIUB6-U2VkVcPhAAVwmF33ChziQ1M,100
+poc_dependency_gob/two/__init__.py,sha256=W-GVScUjzDA7lTi3i6AJL5h8BvTe1ltt2fc5XG2_Z_M,85
+poc_dependency_gob-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+poc_dependency_gob-0.2.0.dist-info/METADATA,sha256=qCg9Ir6IlsBocHPBOomKytW_a0Ff428ksIAn7UnLQ4I,614
+poc_dependency_gob-0.2.0.dist-info/RECORD,,
