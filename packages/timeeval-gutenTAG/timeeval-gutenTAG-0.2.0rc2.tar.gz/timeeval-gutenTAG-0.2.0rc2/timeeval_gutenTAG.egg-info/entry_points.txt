@@ -1,0 +1,3 @@
+[console_scripts]
+gutenTAG = gutenTAG.__main__:cli
+
