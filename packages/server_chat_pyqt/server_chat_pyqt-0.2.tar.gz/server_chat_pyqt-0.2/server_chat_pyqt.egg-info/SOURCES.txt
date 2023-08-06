@@ -1,0 +1,16 @@
+setup.py
+server/__init__.py
+server/server.py
+server/server/__init__.py
+server/server/config_window.py
+server/server/core.py
+server/server/main_window.py
+server/server/registr_window.py
+server/server/remove_window.py
+server/server/server_database.py
+server/server/stat_window.py
+server_chat_pyqt.egg-info/PKG-INFO
+server_chat_pyqt.egg-info/SOURCES.txt
+server_chat_pyqt.egg-info/dependency_links.txt
+server_chat_pyqt.egg-info/requires.txt
+server_chat_pyqt.egg-info/top_level.txt
