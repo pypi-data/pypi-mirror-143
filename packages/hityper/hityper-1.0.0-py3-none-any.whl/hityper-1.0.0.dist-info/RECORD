@@ -1,0 +1,17 @@
+hityper/__init__.py,sha256=SlpjJNgnmwJm4IhsIa2-sHF8OJcAD_rE_swN5fcdmbQ,314
+hityper/__main__.py,sha256=gQLmtzHXCqFd8lxepACeENDUVrVR01E8OJTExQYUAiw,16518
+hityper/config.py,sha256=gHlTZEIzSaIZvF3-Z3RUyQoQqQaAdLLJXQK2ElJ5hlY,1000
+hityper/rej_typerule.py,sha256=QG9AiBCpRGPW7sSE-MsXysahOxGFnd4evgw0UNp0yYc,14431
+hityper/stdtypes.py,sha256=xxq9GacrBNhCOF9GAW9woCeSNu5CMrolC2J40tfZVF8,25469
+hityper/tdg.py,sha256=ZyNEY67W1eRUsEIt8eo1oRDd3wvzm1r8FQAoai6NkKw,102825
+hityper/tdg_generator.py,sha256=K_VMfd-N_1WjprpEKVqHVghXLyjvJHoRdTOupIlD6uM,123543
+hityper/typeobject.py,sha256=98VDTlBn2tUgUKeXwCcbalA5sdu5dVgPQK99-Wc-0YA,23592
+hityper/typerule.py,sha256=qmHeEapcdnknhNdOIXphEFNBl9tRH2ARjLees_OTmq0,111314
+hityper/usertype_finder.py,sha256=YNhVvKsAkU0MzxKM-lnGA66r4_mayrjZBZ6wkp_sFGY,22171
+hityper/utils.py,sha256=chsYM7SpUuwN5c8MOUdfV1Wbp7qZRlceO4dd38J3UYM,20623
+hityper-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hityper-1.0.0.dist-info/METADATA,sha256=Pgf0lSqF6YG_jPXgfTY8KkwtZ8Btwffw09LPZld6_D4,13866
+hityper-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hityper-1.0.0.dist-info/entry_points.txt,sha256=A-7RpeoqxzZQ6NQs06-MvHanjTEiGbNW4rPQlimovSM,50
+hityper-1.0.0.dist-info/top_level.txt,sha256=42-0VE1zN59l0hIQual9FmcK58K9l10C14yKmiA2BV8,8
+hityper-1.0.0.dist-info/RECORD,,
