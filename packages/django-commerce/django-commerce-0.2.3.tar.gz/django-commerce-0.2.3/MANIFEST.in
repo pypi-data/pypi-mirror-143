@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include AUTHORS
+recursive-include commerce/templates *
+recursive-include commerce/locale *
+recursive-include commerce/gateways/stripe/templates *
