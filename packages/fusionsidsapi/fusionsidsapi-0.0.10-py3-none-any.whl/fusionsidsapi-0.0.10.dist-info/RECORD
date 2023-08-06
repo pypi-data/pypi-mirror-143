@@ -1,0 +1,12 @@
+fusionsid/__init__.py,sha256=Q36rPch4tzEi64ZNL-YRhqLXirJlu4XkwwIFNO_hND0,1526
+fusionsid/decorators.py,sha256=-ZhDESTUO21X8II1aYVDrTqsWhCJKPn482SeMfWFGkQ,2851
+fusionsid/errors.py,sha256=_kFrtXFp26aVqRYFDUfbEyovGv68LF74h8uvAsEF8XQ,264
+fusionsid/fun.py,sha256=ZXThHrScILGrttF7h8l2w6ke66y8RW6fXV60ndMXWOQ,2878
+fusionsid/http.py,sha256=HwP7BqwPQwYelL1L8_ZvLctX4ldyc5Kt-M_B9flahaE,2410
+fusionsid/image.py,sha256=chOd34Ae6_87penq_ksmJ9qRraRg96tKHk25FLjCXcY,10119
+fusionsid/text.py,sha256=LIc_5BbvsMjdB7LlxwEgFyR5dahv7OZba2_A3rYTVAQ,4399
+fusionsidsapi-0.0.10.dist-info/LICENCE,sha256=AiyeMlamdGIaa4g3Ga5qEmibE2n9_xHuOE99BeRpo_M,1054
+fusionsidsapi-0.0.10.dist-info/METADATA,sha256=NLVifQ8bfZ-OSDludRAfOT8e-oBYZ_p4ZTkT3SV5o40,3896
+fusionsidsapi-0.0.10.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+fusionsidsapi-0.0.10.dist-info/top_level.txt,sha256=J43_uTUnPhV3TRzrnW_CelFVI5axgN9cRSorNSSu1nY,10
+fusionsidsapi-0.0.10.dist-info/RECORD,,
