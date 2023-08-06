@@ -1,0 +1,10 @@
+numpy
+dipy
+joblib
+matplotlib
+sklearn
+networkx
+pandas
+pyqt5
+PyOpenGL
+PyOpenGL_accelerate
