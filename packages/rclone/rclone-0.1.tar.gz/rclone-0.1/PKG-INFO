@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rclone
+Version: 0.1
+Summary: rclone wrapper in Python
+Author-email: Alyetama <56323389+Alyetama@users.noreply.github.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: loguru >=0.5.3
+Requires-Dist: tqdm >=4.62.3
+Project-URL: Home, https://github.comm/Alyetama/rclone
