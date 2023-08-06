@@ -1,0 +1,5 @@
+[console_scripts]
+napari-plot = napari_plot.__main__:main
+
+[napari.plugin]
+napari-plot = napari_plot
