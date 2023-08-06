@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/app_settings/__init__.py
+src/app_settings/app_settings.py
+src/app_settings/defaults_dict.py
+src/app_settings/py.typed
+src/app_settings_dict.egg-info/PKG-INFO
+src/app_settings_dict.egg-info/SOURCES.txt
+src/app_settings_dict.egg-info/dependency_links.txt
+src/app_settings_dict.egg-info/not-zip-safe
+src/app_settings_dict.egg-info/requires.txt
+src/app_settings_dict.egg-info/top_level.txt
