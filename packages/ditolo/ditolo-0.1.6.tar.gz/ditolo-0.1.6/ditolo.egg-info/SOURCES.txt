@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ditolo/__init__.py
+ditolo/__main__.py
+ditolo.egg-info/PKG-INFO
+ditolo.egg-info/SOURCES.txt
+ditolo.egg-info/dependency_links.txt
+ditolo.egg-info/top_level.txt
