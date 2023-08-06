@@ -1,0 +1,14 @@
+biopython==1.72
+colorlog
+matplotlib
+mmh3>=2.5.1
+networkx
+numpy
+pandas
+seaborn
+scipy
+xopen
+
+[docs]
+sphinx>=1.4
+sphinx-rtd-theme
