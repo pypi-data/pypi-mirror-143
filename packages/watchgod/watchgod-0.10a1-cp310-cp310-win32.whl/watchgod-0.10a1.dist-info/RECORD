@@ -1,0 +1,15 @@
+watchgod/__init__.py,sha256=hhLF52bwWczfx4VakCIyj9ZeJ0LbKg_7twbl9tDdJWA,364
+watchgod/__main__.py,sha256=g9iBs8xxX6Yik7cmgllQkpBN8C4JNoZVsEOyCCLCyFU,63
+watchgod/_rust_notify.cp310-win32.pyd,sha256=H4RS__efilRhQXXIBSKzYfkJnVXfop4vCyH1SIYOzLI,385024
+watchgod/_rust_notify.pyi,sha256=KKIQbtdQP-MVe3LNDK-U89QhOq6XQGiU_gdI4YwgZis,505
+watchgod/cli.py,sha256=LMXrwqxTgZQs7CCSRHzB5jTwgRIKr8_M6NgiiGpUQmU,5688
+watchgod/filters.py,sha256=PEJ6OHMJO0UN_ttr-zUoZjjHXj5Re1u92m7Nz4OeVVA,3104
+watchgod/main.py,sha256=oFn6iTP9F3GtRHStzsn31LVW7p8fGxsEHt7CroE9oy4,8098
+watchgod/py.typed,sha256=0t_uYk7xIdWis3MNwG4lzcXn0RWQUQsVFAUL8m_uGWQ,68
+watchgod/version.py,sha256=hVRLC8aK4kq9WZEbEyigw1Yz9kPJHakr8-gjKFptD_4,46
+watchgod-0.10a1.dist-info/LICENSE,sha256=OJNLTJ74C1LXy3zC9PxI5qMeL3k2sWtQawqK7bVd5iM,1131
+watchgod-0.10a1.dist-info/METADATA,sha256=7cISHitk4tC_dVyvS9ZsdY6K7pdextqOGvcuTFfSwLQ,8633
+watchgod-0.10a1.dist-info/WHEEL,sha256=l5uI7e2vYDQsG8-BdAxXE9BLA-oyyyoK5DyD9-hAApg,98
+watchgod-0.10a1.dist-info/entry_points.txt,sha256=4okmG87LuUNDyD4K5d86sT06LgYoJB4xBLqHQklSCfo,46
+watchgod-0.10a1.dist-info/top_level.txt,sha256=vDSixV-_cAsdN83qBhOQS4kBblDTqO0aePPJlkJylQg,9
+watchgod-0.10a1.dist-info/RECORD,,
