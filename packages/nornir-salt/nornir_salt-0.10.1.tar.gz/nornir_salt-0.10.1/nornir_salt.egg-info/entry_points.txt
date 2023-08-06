@@ -1,0 +1,15 @@
+
+    [nornir.plugins.inventory]
+    DictInventory=nornir_salt.plugins.inventory:DictInventory
+
+    [nornir.plugins.runners]
+    QueueRunner=nornir_salt.plugins.runners:QueueRunner
+    RetryRunner=nornir_salt.plugins.runners:RetryRunner
+
+    [nornir.plugins.connections]
+    ncclient=nornir_salt.plugins.connections:NcclientPlugin
+    http=nornir_salt.plugins.connections:HTTPPlugin
+    pygnmi=nornir_salt.plugins.connections:PyGNMIPlugin
+    ConnectionsPool=nornir_salt.plugins.connections:ConnectionsPool
+    pyats=nornir_salt.plugins.connections:PyATSUnicon
+    
