@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "poc_dependency_gob"
+version = "0.1.1"
+description = ""
+authors = ["Your Name <you@gobsingh.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sklearn = { version = "^0.0", optional = true}
+torch = {version = "^1.11.0", optional = true}
+matplotlib = {version = "^3.5.1", optional = true}
+pandas = "^1.4.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.extras]
+skinny = ["sklearn"]
+standard = ["torch","matplotlib"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
