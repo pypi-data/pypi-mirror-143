@@ -1,0 +1,3 @@
+[console_scripts]
+testtransform = pbtestconnect.transform.__main__:main
+
