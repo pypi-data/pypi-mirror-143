@@ -1,0 +1,7 @@
+setup.py
+PyMailGw/PyMailGw.py
+PyMailGw/__init__.py
+PyMailGw.egg-info/PKG-INFO
+PyMailGw.egg-info/SOURCES.txt
+PyMailGw.egg-info/dependency_links.txt
+PyMailGw.egg-info/top_level.txt
