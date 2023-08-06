@@ -1,0 +1,4 @@
+[numcodecs.codecs]
+FITSAscii = kerchunk.fits:AsciiTableCodec
+grib = kerchunk.grib2:GRIBCodec
+
