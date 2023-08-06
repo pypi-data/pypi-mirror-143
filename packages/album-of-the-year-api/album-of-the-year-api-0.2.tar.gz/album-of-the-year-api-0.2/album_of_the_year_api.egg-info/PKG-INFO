@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: album-of-the-year-api
+Version: 0.2
+Summary: A light weight Python library that acts as an API for the website albumoftheyear.org
+Home-page: https://github.com/JahsiasWhite/AlbumOfTheYearWrapper
+Author: Jahsias White
+Author-email: jahsias.white@gmail.com
+License: GNU
+Description: UNKNOWN
+Platform: UNKNOWN
