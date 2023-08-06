@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cloudeye
+Version: 0.0.2
+Summary: A simple computer vision package
+Home-page: https://github.com/cloudsir/CloudEye
+Author: CloudSir
+Author-email: 2301029643@qq.com
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/cloudsir/CloudEye
+Project-URL: Code, https://github.com/cloudsir/CloudEye
+Project-URL: Issue tracker, https://github.com/cloudsir/CloudEye
+Keywords: computer vision,gesture recognition
+Platform: UNKNOWN
+Requires-Dist: paddlex (>=2.0.0)
+
+A simple computer vision package
+
