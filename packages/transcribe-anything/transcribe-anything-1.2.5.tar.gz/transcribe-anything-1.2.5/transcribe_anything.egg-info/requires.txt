@@ -1,0 +1,7 @@
+capturing-process
+pydeepspeech
+static-ffmpeg
+yt-dlp
+
+[test]
+pytest
