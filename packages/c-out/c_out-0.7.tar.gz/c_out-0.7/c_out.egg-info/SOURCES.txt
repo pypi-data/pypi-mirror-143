@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+c_out/__init__.py
+c_out/all_combinations.py
+c_out/beauty_print.py
+c_out.egg-info/PKG-INFO
+c_out.egg-info/SOURCES.txt
+c_out.egg-info/dependency_links.txt
+c_out.egg-info/top_level.txt
