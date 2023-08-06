@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+bin/dftest
+dftest/DFTests.py
+dftest/Test.py
+dftest/__init__.py
+dftest/options.py
+dftest/style.py
+dftest/tests.py
+dftest/utils.py
+dftest.egg-info/PKG-INFO
+dftest.egg-info/SOURCES.txt
+dftest.egg-info/dependency_links.txt
+dftest.egg-info/requires.txt
+dftest.egg-info/top_level.txt

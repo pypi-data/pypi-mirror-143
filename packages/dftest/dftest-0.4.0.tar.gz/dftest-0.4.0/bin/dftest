@@ -1,0 +1,164 @@
+#!/bin/python3
+from __future__ import annotations
+
+# For patsing command line options
+import argparse
+# For checking an argument is a file, directory, or something else
+import os.path
+# To allow importing modules from current directory tree
+import sys
+# To save results to file
+import traceback
+
+import dill
+# To  read dataframes to test
+import pandas
+
+# To start pyplot and pandasgui in the background, such that they can run concurrently
+from multiprocessing import Process
+
+# For printing error messages, Colab check, silencing output, and parsing python object paths.
+from dftest import utils, __version__
+# For running the tests
+from dftest.DFTests import DFTests
+
+# For opening invalid rows in pandasgui; this requires an X server and so does not work in Colab.
+if not utils.in_colab():
+    import pandasgui
+
+if __name__ == '__main__':
+    arg_parser = argparse.ArgumentParser(prog='dftest', formatter_class=argparse.RawTextHelpFormatter)
+    arg_parser.add_argument('--version', action='version', version='%(prog)s ' + __version__, help='print version number and exit')
+
+    arg_parser.add_argument('-q', '--quiet', action='store_true', help='print results')
+    arg_parser.add_argument('-c', '--column', nargs=1, help='show results of specific column')
+    arg_parser.add_argument('-g', '--graph', nargs='+', help='specify graphs to display of the results',
+                            metavar='GRAPH_TYPE',
+                            choices=['coverage', 'summary', 'validity', 'tests', 'validity-binary',
+                                     'validity-nonbinary'])
+
+    normal_invalid_group = arg_parser.add_mutually_exclusive_group()
+    normal_invalid_group.add_argument('-p', '--print', action='store_true', help='print results')
+
+    invalids_group = normal_invalid_group.add_argument_group()
+    invalids_group.add_argument('--show-invalids', action='store_true', help='print a ')
+    invalids_group.add_argument('--invalids-format', nargs=1, choices=['csv', 'tsv', 'json', 'repr', 'gui'],
+                                help='specify format to print invalids')
+
+    res_df_group = arg_parser.add_mutually_exclusive_group()
+    res_df_group.add_argument('--results', metavar='RESULTS', nargs=1, help='specify results dill')
+    df_group = res_df_group.add_argument_group()
+    df_group.add_argument('-d', '--dump', metavar='DUMP_FILE', nargs=1, help='dump results to file')
+    df_group.add_argument('--dataframe', metavar='DATAFRAME', required=False, help='Specify either \n'
+                                                                                   '- python path to DataFrame object\n'
+                                                                                   '- python path to DataFrame supplier function\n'
+                                                                                   '- file path a file with a dataframe in any legal pandas format\n')
+    arg_parser.add_argument('--files', metavar='FILE_OR_DIR', nargs='+', help='files or dirs to search for tests')
+
+    args = arg_parser.parse_args()
+
+    if args.quiet:
+        sys.stdout = open(os.devnull, 'w')
+
+    if args.results is None and (args.dataframe is None and args.files is None) \
+            or args.results is not None and (args.dataframe is not None or args.files is not None):
+        specified = [opt for opt in ["results", "dataframe", "files"] if vars(args)[opt] is not None]
+        raise ValueError(f'Specified {",".join(specified)}. Must specify either result dump, or both dataframe '
+                         f'and files!')
+
+    if args.results is not None:
+        with open(args.results[0], 'rb') as dumpfile:
+            results = dill.load(dumpfile)
+    else:
+        if os.path.isfile(args.dataframe):
+            if args.dataframe.endswith('.csv'):
+                df = pandas.read_csv(args.dataframe)
+            elif args.dataframe.endswith('.tsv'):
+                df = pandas.read_csv(args.dataframe, delimiter='\t')
+            elif args.dataframe.endswith('.json'):
+                df = pandas.read_json(args.dataframe)
+            elif args.dataframe.endswith('.xlsx'):
+                df = pandas.read_excel(args.dataframe)
+            else:
+                raise ValueError('Invalid dataframe file: unrecognized extension: ' + args.dataframe)
+
+        else:
+            sys.path.append('.')
+            try:
+                df_obj = utils.get_func_from_addr(args.dataframe)
+                if callable(df_obj):
+                    df = df_obj()
+                else:
+                    df = df_obj
+            except ModuleNotFoundError:
+                utils.error(f'Error: {args.dataframe} is neither an existing file nor a valid python object')
+                utils.error(traceback.format_exc())
+                exit(1)
+
+        dftests = DFTests(df)
+
+        file_args = args.files
+        dftests.load_files(*file_args)
+
+        results = dftests.run()
+
+        if args.dump is not None:
+            with open(args.dump[0], 'wb+') as dumpfile:
+                dump_proc = Process(target=dill.dump, args=(results, dumpfile))
+                dump_proc.start()
+
+    if args.column is None:
+        if args.graph is not None:
+            if 'summary' in args.graph:
+                results.graph_summary()
+            if 'coverage' in args.graph:
+                results.graph_coverage_heatmap()
+            if 'validity' in args.graph:
+                results.graph_validity_heatmap()
+            if 'validity-binary' in args.graph:
+                results.graph_validity_heatmap(binary=True)
+            if 'validity-nonbinary' in args.graph:
+                results.graph_validity_heatmap(binary=True)
+            Process(target=results.plt.show, args=()).start()
+    else:
+        results = results.get_column_results(args.column[0])
+
+        if args.graph is not None:
+            if 'summary' in args.graph:
+                results.graph_summary()
+            if 'tests' in args.graph:
+                results.graph_tests_success()
+            if 'validity' in args.graph:
+                results.graph_validity_heatmap()
+            if 'validity-binary' in args.graph:
+                results.graph_validity_heatmap(binary=True)
+            if 'validity-nonbinary' in args.graph:
+                results.graph_validity_heatmap(binary=True)
+            Process(target=results.plt.show, args=()).start()
+
+    if args.print or (args.graph is None and not args.show_invalids):
+        results.print()
+
+    if args.show_invalids:
+        invalids = results.get_invalid_rows()
+        fmt = 'repr' if args.invalids_format is None else args.invalids_format[0]
+        if fmt == 'csv':
+            print(invalids.to_csv())
+        elif fmt == 'tsv':
+            print(invalids.to_csv(sep='\t'))
+        elif fmt == 'json':
+            print(invalids.to_json())
+        elif fmt == 'repr':
+            print(invalids)
+        elif fmt == 'gui':
+            if utils.in_colab():
+                utils.error('Error: specified --invalids-format gui, but pandasgui not available in jupyter '
+                            'notebooks.')
+            else:
+                Process(target=pandasgui.show, args=(invalids,)).start()
+
+    # If dump process exists, wait for it to finish.
+    try:
+        dump_proc.join()
+    except NameError:
+        pass
