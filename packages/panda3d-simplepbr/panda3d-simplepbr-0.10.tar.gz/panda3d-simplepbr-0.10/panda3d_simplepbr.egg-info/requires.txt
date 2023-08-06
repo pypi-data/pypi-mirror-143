@@ -1,0 +1,6 @@
+panda3d>=1.10.8
+
+[test]
+pytest
+pylint==2.4.*
+pytest-pylint
