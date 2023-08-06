@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: image-processing-M-teste
+Version: 0.0.1
+Summary: Processamento de imagem. This project belongs to Karina Tiemi Kato, Tech Lead, Machine Learning Engineer, Data Scientist Specialist at Take. This package is a demo for simulation of upload on the Test Pypi website, and it's from class of the Bootcamp developer full stack Python. E-mail:karinatkato@gmail.com
+Home-page: https://github.com/Marcelo-Mandler
+Author: Marcelo Mandler
+Author-email: marcelod2mandler@yahoo.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Pacote de Processamento de Imagens
+Autora: Karina Kato
+
+
+Aula: Descomplicando a CriaÃ§Ã£o de Pacotes de Processamento de Imagens em Python
+
+Description. 
+
+O pacote "image_processing" Ã© usado para:
+
+MÃ³dulo "Processing":
+
+-> CorrespondÃªncia de histograma;
+
+-> Similaridade estrutural;
+
+-> Redimensionar imagem;
+
+MÃ³dulo "Utils":
+
+-> Ler imagem;
+
+-> Salvar imagem;
+
+-> Plotar imagem;
+
+-> Resultado do grÃ¡fico;
+
+-> Plotar histograma;
+
+## Installation
+
+Passo a passo da configuraÃ§Ã£o para hospedar um pacote em Python no ambiente de testes Test Pypi
+
+ InstalaÃ§Ã£o das Ãºltimas versÃµes de "setuptools" e "wheel"
+
+    py -m pip install --user --upgrade setuptools wheel
+ Tenha certeza que o diretÃ³rio no terminal seja o mesmo do arquivo "setup.py"
+
+    C:\Users\Marcelo\PycharmProjects\pacote-de-processamento-de-imagens> py setup.py sdist bdist_wheel
+
+ ApÃ³s completar a instalaÃ§Ã£o, verifique se as pastas abaixo foram adicionadas ao projeto:
+
+ build;
+
+ dist;
+
+ image_processing_test.egg-info.
+
+Basta subir os arquivos, usando o Twine, para o Test Pypi:
+
+    py -m twine upload --repository testpypi dist/*
+
+## Usage
+
+```python
+from image_processing_M_teste.processing import combination
+
+combination.my_function()
+```
+
+## Author (quem hospedou o projeto no Test Pypi)
+Marcelo Mandler
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
