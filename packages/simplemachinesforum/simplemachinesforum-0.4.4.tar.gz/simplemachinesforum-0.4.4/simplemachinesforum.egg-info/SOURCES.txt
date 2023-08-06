@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simplemachinesforum/__init__.py
+simplemachinesforum/simplemachinesforum.py
+simplemachinesforum.egg-info/PKG-INFO
+simplemachinesforum.egg-info/SOURCES.txt
+simplemachinesforum.egg-info/dependency_links.txt
+simplemachinesforum.egg-info/requires.txt
+simplemachinesforum.egg-info/top_level.txt
