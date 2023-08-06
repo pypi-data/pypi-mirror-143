@@ -1,0 +1,44 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pilot_drive.egg-info/PKG-INFO
+pilot_drive.egg-info/SOURCES.txt
+pilot_drive.egg-info/dependency_links.txt
+pilot_drive.egg-info/requires.txt
+pilot_drive.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/utils/__init__.py
+src/utils/adb_manager.py
+src/utils/adb_notification.py
+src/utils/adb_read_icon_db.py
+src/utils/bt_ctl.py
+src/utils/bt_track.py
+src/utils/obd_info.py
+src/utils/sys_utils.py
+src/web/static/css/Futura.ttf
+src/web/static/css/pilot_style.css
+src/web/static/icons/adb_button.png
+src/web/static/icons/car_button.png
+src/web/static/icons/home_button.png
+src/web/static/icons/next_button.png
+src/web/static/icons/pause_button.png
+src/web/static/icons/play_button.png
+src/web/static/icons/prev_button.png
+src/web/static/icons/settings_button.png
+src/web/static/icons/adb_icons/Add alarm.png
+src/web/static/icons/adb_icons/Aurora Store.png
+src/web/static/icons/adb_icons/Car Scanner.png
+src/web/static/icons/adb_icons/Messaging.png
+src/web/static/icons/adb_icons/New alarm.png
+src/web/static/icons/adb_icons/NewPipe.png
+src/web/static/icons/adb_icons/NordVPN.png
+src/web/static/icons/adb_icons/Phone.png
+src/web/static/icons/adb_icons/ProtonMail.png
+src/web/static/icons/adb_icons/Pulse Music.png
+src/web/static/icons/adb_icons/Spotify.png
+src/web/static/icons/adb_icons/Venmo.png
+src/web/static/js/pilot-drive_script.js
+src/web/templates/home.html
