@@ -1,0 +1,7 @@
+setup.py
+runStata/__init__.py
+runStata/runStata.py
+runStata.egg-info/PKG-INFO
+runStata.egg-info/SOURCES.txt
+runStata.egg-info/dependency_links.txt
+runStata.egg-info/top_level.txt
