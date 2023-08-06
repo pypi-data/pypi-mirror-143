@@ -1,0 +1,17 @@
+click
+click-config-file
+numpy
+torch
+pytorch-lightning<1.2,>=1.0.0
+tqdm
+
+[dev]
+black
+flake8
+pydocstyle
+pytest
+pytest-coverage
+tox
+
+[mlflow]
+mlflow<=1.10.0
