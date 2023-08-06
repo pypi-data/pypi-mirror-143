@@ -1,0 +1,11 @@
+perceptron/__init__.py,sha256=YDfa48SoouWHzBtm4537pQnEfzt88JopxwKYHVFWfWo,93
+perceptron/NeuralNetwork/NeuralNetwork.py,sha256=6MQCbkIsZoJxyoozjSIf2aZE71L8Z92JboBo-dWsDmo,6032
+perceptron/NeuralNetwork/__init__.py,sha256=ljTQWfXeXu4WU9cBCK8H0PDepRDaQDQ5wGBh0lGRTE0,40
+perceptron/Neuron/Neuron.py,sha256=yuT8FmmdQYGnwQCpOPguN7RwMA1ovvVSV8S9CfoPsAw,1091
+perceptron/Neuron/__init__.py,sha256=BWl25JSgXTBZbTnsBxK8ZiN_tizLU4Iso2gDbZCqJH8,38
+perceptron/Neuron/functions.py,sha256=XmULxyKTvpjtFjP6xO8ULY3pj7R1LpfxR8ossxHhW0Y,1378
+sweet_perceptron-1.0.0.dist-info/LICENSE,sha256=gwpxaVa2C7lKGycj2Li4bR8pWw7pg-oNBTANEnKzKm0,1090
+sweet_perceptron-1.0.0.dist-info/METADATA,sha256=YMBORD-a1s_rfofZzKFPeFGjbWUt-UqaTzxz19yv3OM,1648
+sweet_perceptron-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sweet_perceptron-1.0.0.dist-info/top_level.txt,sha256=isdS9CZx2PdoWFNstd8tkNPSW9UD_4_GRNlzET1TQfQ,11
+sweet_perceptron-1.0.0.dist-info/RECORD,,
