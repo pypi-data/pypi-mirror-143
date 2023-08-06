@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+earthquake_IDN.egg-info/PKG-INFO
+earthquake_IDN.egg-info/SOURCES.txt
+earthquake_IDN.egg-info/dependency_links.txt
+earthquake_IDN.egg-info/top_level.txt
+earthquakelatest/__init__.py

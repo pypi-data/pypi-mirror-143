@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: earthquake-IDN
+Version: 0.4
+Summary: This package will scrape data from [BMKG](https://www.bmkg.go.id) to get the latest quake happened in Indonesia
+Home-page: https://github.com/student-of-remoteworkerid/latest-indonesia-earthquake
+Author: Muhammad Shaufi Imanulhaq
+Author-email: imanshaufi14@gmail.com
+License: UNKNOWN
+Project-URL: Website, https://remoteworker.id
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Latest Indonesia EarthQuake
+This project will get the latest earthquake from BMKG | Indonesian Agency for Meteorology, Climatology, and Geophysics
+
+## HOW IT WORK?
+This package will scrape data from [BMKG](https://www.bmkg.go.id) to get the latest quake happened in Indonesia.
+
+This package will use module BeautifulSoup4 and Requests, to produce output in the form of JSON that is ready to be used in web or mobile applications
+
+## HOW TO USE
+```
+import earthquakelatest
+
+if __name__ == '__main__':
+    print('My application')
+    result = earthquakelatest.extraction_data()
+    earthquakelatest.display_data(result)
+```
+
+# Author
+Muhammad Shaufi Imanulhaq
+
