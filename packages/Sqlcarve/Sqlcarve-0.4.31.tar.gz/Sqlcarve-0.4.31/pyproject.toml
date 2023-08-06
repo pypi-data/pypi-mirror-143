@@ -1,0 +1,19 @@
+name = "Sqlcarve"
+version = "0.4.31"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+
+build-backend = "setuptools.build_meta"
+
+[project]
+dependencies = [
+    "sqlvalidator",
+    "sqlparse",
+    "sqlalchemy>=1.4.32",
+    "mysql-connector-python",
+    "colorama"
+]

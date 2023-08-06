@@ -1,0 +1,5 @@
+sqlvalidator
+sqlparse
+sqlalchemy>=1.4.32
+mysql-connector-python
+colorama
