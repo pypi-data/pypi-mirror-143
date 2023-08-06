@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "aws_cdk_lambda_poetry_asset"
+version = "0.2.0"
+description = "AWS CDK construct for packaging lambda functions with dependencies"
+license = "MIT"
+authors = ["Jesse Peters <jesse@resist.bot>","Josef Stach <josef.stach@bulletproof.ai>"]
+readme = "README.md"
+repository = "https://github.com/jesse-peters/aws-cdk-lambda-asset"
+keywords = ["AWS", "CDK", "Lambda", "Construct"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.poetry.dependencies]
+python = "^3.9"
+docker = "^5.0"
+aws-cdk-lib = "2.17.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "6.*"
+pytest-cov = "3.*.*"
+isort = "5.*.*"
+black = "*"
+build = "0.7.0"
+
+[tool.pytest.ini_options]
+log_cli = 0
+testpaths = [
+    "tests",
+    "aws_cdk_lambda_poetry_asset",
+]
+norecursedirs = [
+    ".git",
+    ".github",
+    "html5cov",
+    "venv",
+    ".venv",]
+
+[tool.semantic_release]
+version_variable = [
+    'pyproject.toml:version',
+    'aws_cdk_lambda_poetry_asset/__init__.py:__version__',
+]
+branch = "main"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "pip install poetry && poetry build"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
