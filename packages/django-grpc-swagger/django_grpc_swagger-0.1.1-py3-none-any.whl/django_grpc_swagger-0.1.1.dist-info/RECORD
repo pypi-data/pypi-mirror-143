@@ -1,0 +1,15 @@
+django_grpc_swagger/__init__.py,sha256=y0uyjTcbMW72vLmp_1rezmWPs7cn1CIySIr_JzshPBw,356
+django_grpc_swagger/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+django_grpc_swagger/apps.py,sha256=pCfw_OS4L8hrY1vOwD4ITMN-0FMoTb652fxA_E3tzHg,168
+django_grpc_swagger/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+django_grpc_swagger/serializers.py,sha256=TQHzAvDiR8iKtCcjuBr37U_Nv4nwcqI8I8BkIMCAdQo,12156
+django_grpc_swagger/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_grpc_swagger/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_grpc_swagger/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_grpc_swagger/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_grpc_swagger/management/commands/generate_proto.py,sha256=0IytB5GODt3wkr0dTsehdDfp7wloK8IwI6Q7EcgoahQ,799
+django_grpc_swagger/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_grpc_swagger-0.1.1.dist-info/METADATA,sha256=fqjhNb5JDcaEpvGrKdWUB6irNZxafY-1rAw3aA8U-PQ,4656
+django_grpc_swagger-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_grpc_swagger-0.1.1.dist-info/top_level.txt,sha256=NeSwmNqG8geTMoYg4Cdiy_48TUq-q3Huhzw3Ssy84FU,20
+django_grpc_swagger-0.1.1.dist-info/RECORD,,

@@ -1,0 +1,189 @@
+Metadata-Version: 2.1
+Name: django-grpc-swagger
+Version: 0.1.1
+Summary: Django with gRPC、Swagger
+Home-page: https://github.com/tuweifeng/django_grpc_swagger
+Author: tuweifeng
+Author-email: 907391489@qq.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: django (<=3.2.12,>=3.2.9)
+Requires-Dist: drf-yasg (>=1.20.0)
+Requires-Dist: grpcio-tools (>=1.44.0)
+Requires-Dist: djangogrpcframework (>=0.2.1)
+Requires-Dist: djangorestframework (>=3.12.4)
+
+# README
+
+创建时间: March 22, 2022 6:24 PM
+文章类型: 项目文档
+最近修改: March 22, 2022 7:23 PM
+
+## 前言
+
+---
+
+仅适用于 Django项目，目的是快速开发出 Swagger 文档和 gRPC 接口
+
+## 原理
+
+---
+
+由于 **drf-yasg** 、 **django_grpc_framework**  都是基于开发工具包  **djangorestframework** 为 Django 提供的序列化特性，因此只需要一套代码，通过装饰器生成各自接口。
+
+## 环境
+
+---
+
+要求运行在 **Python** 版本 3.6+。
+
+| 操作系统 | 是否可用 |
+| --- | --- |
+| Ubuntu 16.04+ | ✅  |
+| macOS 10.13.6+ | ✅  |
+| Windows 系列 | ❌ |
+
+程序运行依赖的库。
+
+| 库 | 是否可用 |
+| --- | --- |
+| django≥3.2.9 | ✅  |
+| drf-yasg≥1.20.0 | ✅  |
+| djangorestframework≥3.12.4 | ✅  |
+| djangogrpcframework≥0.2.1 | ✅  |
+| grpcio-tools≥1.44.0 | ✅  |
+
+## 安装
+
+---
+
+进入项目根目录执行安装命令，会自动安装该库和所有依赖。
+
+```bash
+python3 setup.py install
+```
+
+## 使用
+
+---
+
+1. 在你的 Django 项目中的 settings.py 文件添加配置
+
+    ```python
+    INSTALLED_APPS = [
+    		...
+        'rest_framework',
+        'drf_yasg',
+        'django_grpc_framework',
+        'django_grpc_swagger',
+    		...
+    ]
+
+    SWAGGER_SETTINGS = {
+        'TITLE': "鉴权中心",
+        'PUBLIC': True,
+    }
+
+    GRPC_SWAGGER_SETTINGS = {
+        "package": "ca",
+        "add_grpc_prefix": False
+    }
+    ```
+
+2. 新建 serializers.py
+
+    ```python
+    from rest_framework import serializers
+    from django.contrib.auth.models import User
+
+    class LoginRequest(serializers.ModelSerializer):
+        class Meta:
+            model = User
+            fields = ['username', 'password']
+            extra_kwargs = {'username': {'validators': []}}
+
+    class LoginResponse(serializers.ModelSerializer):
+        token = serializers.CharField(max_length=1000, allow_blank=False)
+    ```
+
+3. 修改 views.py
+
+    ```python
+    from rest_framework import viewsets
+    from rest_framework.decorators import action
+    from .serializers import *
+    from django_grpc_swagger import serializer_handler
+
+    class UserView(viewsets.ViewSet):
+
+        @action(detail=False, methods=["PUT"])
+        @serializer_handler.serializer(LoginRequest, LoginResponse, add_swagger=True, add_grpc=True)
+        def login(self, request):
+            password = request.data["password"]
+            username = request.data["username"]
+    		return {"token": "abc"}
+    ```
+
+4. 修改 urls.py
+
+    ```python
+    from django.conf import settings
+    from django.contrib import admin
+    from django.conf.urls import url, include
+    from rest_framework import routers
+    from user.views import UserView
+    from django_grpc_swagger import serializer_handler
+
+    router = routers.DefaultRouter()
+    router.register(r'users', UserView, basename="users")
+
+    urlpatterns = [
+        # api
+        url('', include(router.urls)),
+        # 后台管理系统
+        url('admin/', admin.site.urls),
+        # swagger
+        *serializer_handler.get_swagger_urls(
+            doc_title=settings.SWAGGER_SETTINGS['TITLE'],
+            public=settings.SWAGGER_SETTINGS['PUBLIC'],
+        )
+    ]
+
+    grpc_handlers = serializer_handler.get_grpc_handlers
+    ```
+
+5. 运行 Django Server with swagger
+
+    ```bash
+    python3 manage.py runserver
+    ```
+
+6. 运行 gRPC
+
+    ```bash
+    python3 manage.py generate_proto
+    python3 manage.py grpcrunserver
+    ```
+
+
+## 声明
+
+---
+
+禁止用于商业用途。
+
