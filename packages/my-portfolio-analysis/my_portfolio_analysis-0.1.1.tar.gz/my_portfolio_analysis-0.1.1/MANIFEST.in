@@ -1,0 +1,2 @@
+include tests/*
+include tests/my_inv_record/*

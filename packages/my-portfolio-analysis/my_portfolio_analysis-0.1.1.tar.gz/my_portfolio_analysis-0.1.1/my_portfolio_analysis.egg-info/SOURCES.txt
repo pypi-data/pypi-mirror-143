@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+my_portfolio_analysis/__init__.py
+my_portfolio_analysis/my_inv_analysis_xalpha.py
+my_portfolio_analysis.egg-info/PKG-INFO
+my_portfolio_analysis.egg-info/SOURCES.txt
+my_portfolio_analysis.egg-info/dependency_links.txt
+my_portfolio_analysis.egg-info/requires.txt
+my_portfolio_analysis.egg-info/top_level.txt
+tests/__init__.py
+tests/month_end_closing_20220323.xlsx
+tests/report.xlsx
+tests/test_my_inv_analysis_xalpha.py
+tests/my_inv_record/Inv_Asset_Record.xlsx
