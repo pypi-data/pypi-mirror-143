@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: jdliu-test
+Version: 1.0.0
+Summary: An feature extraction algorithm
+Home-page: https://github.com
+Author: ldliu
+Author-email: 1062391682@qq.com
+License: MIT Licence
+Keywords: pip,jdliu_test,featureextraction
+Platform: any
+
+An feature extraction algorithm, improve the FastICA
+
