@@ -1,0 +1,13 @@
+ncal/__init__.py,sha256=62TGgtz3oL4CdTXucvXSViCijnWCqGe-6wyHPklkf_M,140
+ncal/__main__.py,sha256=tHOkYlVebl5nC8V2KaYz2unKzii0gNXo4wGHwCQdai8,32
+ncal/cli.py,sha256=pYxwIAet8-K4p-Lb2HKiTozYeaenKfUYjjadYXZnH4s,8937
+ncal/config.py,sha256=24-nYXK7ttcSpiu1MjurBsQ5ClcpWlDmHL-S1xeMNBA,8081
+ncal/core.py,sha256=-0NTDnO7xXm1wsg_Ed0Msl9IPkRlnDKboGyEAJBOOZw,64359
+ncal/gcal_token.py,sha256=ezjDiOREVLHBOlscu58ROgoaQYklouo87xJCN8xakmA,503
+ncal/notion_utils.py,sha256=w5MetKX44o09sfHSnedaUG23PGWxcp1MQBexQJMx4A8,1721
+ncal/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ncal-0.1.15.dist-info/entry_points.txt,sha256=SXGmImpmqgRfgxUG37sv6uNS__I_G-GJGx3WdAwRzNc,37
+ncal-0.1.15.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ncal-0.1.15.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+ncal-0.1.15.dist-info/METADATA,sha256=sajzbFBxskfoERuAnjaZnyp4AbLEJ2nLCGK5EMZeP7k,2748
+ncal-0.1.15.dist-info/RECORD,,
