@@ -1,0 +1,2 @@
+[console_scripts]
+regina_normalizer = regina_normalizer.main:main
