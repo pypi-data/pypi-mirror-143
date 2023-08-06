@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: sunny-day-forecast
+Version: 2.0.1
+Summary: Weather forecast data
+Home-page: UNKNOWN
+Author: Okodi Ataime
+Author-email: ataimeokodi@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: weather,forecast,openweather,sunny_day
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
