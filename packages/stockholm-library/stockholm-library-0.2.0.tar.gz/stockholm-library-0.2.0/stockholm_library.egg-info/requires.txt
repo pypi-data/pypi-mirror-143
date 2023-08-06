@@ -1,0 +1,2 @@
+requests[security]<3,>=2
+beautifulsoup4<5,>=4
