@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: key_changer
+Version: 1.0
+Summary: change key th/en type:auto1 change key eng to thai first and thai to eng  auto2\change key thai to eng first and eng to thai  th>en and TH>EN change thai to eng only  en>th and EN>TH change eng to thai only  
+Home-page: https://github.com/keegang6705/en-th-keyboard-translator
+Author: keegang_6705
+Author-email: darunphobwi@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.0
+
+UNKNOWN
+
