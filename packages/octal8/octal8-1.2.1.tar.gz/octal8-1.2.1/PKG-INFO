@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: octal8
+Version: 1.2.1
+Summary: Convert base-10 ints to base-8.
+Home-page: https://github.com/samueljsb/octal8
+Author: Samuel Searles-Bryant
+Author-email: sam@samueljsb.co.uk
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# octal8
+
+Convert all base-10 integers to base-8.
+
+## installation
+
+```sh
+pip install octal8
+```
+
+## Usage
+
+```
+usage: octal8 [-h] [filename ...]
+
+positional arguments:
+filename
+
+options:
+-h, --help  show this help message and exit
+```
+
+The script will replace al base-10 integers with base-8 integers in the passed
+files.
+
+## As a pre-commit hook
+
+See [pre-commit](https://pre-commit.com) for more information.
+
+Sample `.pre-commit-config.yaml`:
+
+```yaml
+- repo: https://github.com/samueljsb/octal8
+  rev: "v1.2.1"
+  hooks:
+    - id: octal8
+```
+
+
