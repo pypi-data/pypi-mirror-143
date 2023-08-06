@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "human_id"
+version = "0.2.0"
+description = "Human readable IDs, in Python"
+repository = "https://github.com/orf/human_id"
+authors = ["Tom Forbes <tom@tomforb.es>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+click = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-mock = "*"
+jinja2 = "*"
+pytest-black = "*"
+
+[tool.poetry.scripts]
+humanid-gen = 'human_id.cli:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
