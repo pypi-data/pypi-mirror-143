@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: granola
+Version: 0.9.0rc2
+Summary: Generating Real-time Autonomous N-device Output without Linked Apparatuses
+Home-page: https://granola.readthedocs.io/
+Author: GRANOLA Development Team
+Author-email: granola@metergroup.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/metergroup/GRANOLA/issues
+Project-URL: Documentation, https://granola.readthedocs.io/
+Project-URL: Source Code, https://github.com/metergroup/GRANOLA
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: !=3.0.*,!=3.1.*,!=3.2.*,!=3.3*,!=3.4*,>=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: pyserial (>=2.6)
+Requires-Dist: future (>=0.18.2)
+Requires-Dist: attrs (>=21)
+Requires-Dist: more-itertools
+Requires-Dist: Jinja2 (>=2.0)
+Requires-Dist: mock ; python_version < "3"
+Requires-Dist: pathlib (>=1.0.1) ; python_version < "3"
+Requires-Dist: aenum (>=3) ; python_version <= "3.5"
+Provides-Extra: dev
+Requires-Dist: versioneer (==0.18) ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: invoke ; extra == 'dev'
+Requires-Dist: black (<=21.12b0) ; (python_version > "3") and extra == 'dev'
+Requires-Dist: black[jupyter] (<=21.12b0) ; (python_version > "3") and extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser ; (python_version > "3") and extra == 'docs'
+Requires-Dist: sphinx ; (python_version > "3") and extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; (python_version > "3") and extra == 'docs'
+Requires-Dist: ipython ; (python_version > "3") and extra == 'docs'
+Requires-Dist: ipykernel ; (python_version > "3") and extra == 'docs'
+Requires-Dist: myst-nb ; (python_version > "3") and extra == 'docs'
+Provides-Extra: examples
+Requires-Dist: ipython ; extra == 'examples'
+Requires-Dist: jupyter ; extra == 'examples'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+# GRANOLA
+
+
+GRANOLA (Generating Real-time Autonomous N-device Output without Linked Apparatuses) is a package aiming to mock [Pyserial](https://pyserial.readthedocs.io/en/latest/)'s Serial
+class with the goal of enabling automated testing, faster QA, and faster delivery. The core of this package is the class
+Cereal. Cereal allows you to define complicated command and response sequences, getters and setters for commands that set attributes
+on your device (such as the serial number), a hook system to inject your own needed functionality, and a Serial Sniffer to capture serial
+command output from a real device as the basis of mocking later.
+
+> :warning: ** This project is still in it's beta, pre 1.0 stage, and we are moving towards our 1.0 release. We try and not break previous interfaces when we move to new, but until it is ready for 1.0, it is still unstable.**
+
+## Package Installation
+
+To install:
+
+``pip install granola``
+
+## A Simple Example
+
+``` python
+>>> from granola import Cereal
+
+>>> config = {"command_readers":{"CannedQueries": {"data": [{"1\r": "1", "2\r": ["2a", "2b"]}]}}}
+... mock_cereal = Cereal(config)
+
+>>> mock_cereal.write(b"2\r")
+2
+>>> mock_cereal.read(2)
+b'2a'
+>>> mock_cereal.write(b"1\r")
+2
+>>> mock_cereal.read(1)
+b'1'
+```
+
+## Links
+
+- Documentation: https://granola.readthedocs.io/en/stable/
+- Examples: https://granola.readthedocs.io/en/stable/examples/examples_notebooks.html
+- PyPI: https://pypi.org/project/granola/
+- Source Code: https://github.com/metergroup/GRANOLA
+- Issue Tracker: https://github.com/metergroup/GRANOLA/issues
+
+
