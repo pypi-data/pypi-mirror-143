@@ -1,0 +1,17 @@
+Biopython
+pdb_tools
+pdb2sql
+matplotlib
+dill
+
+[doc]
+recommonmark
+sphinx
+sphinx_rtd_theme
+
+[test]
+pytest
+pytest-runner
+coverage
+coveralls
+pycodestyle
