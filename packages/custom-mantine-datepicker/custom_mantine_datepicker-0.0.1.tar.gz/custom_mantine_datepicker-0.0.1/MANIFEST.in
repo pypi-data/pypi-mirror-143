@@ -1,0 +1,12 @@
+include custom_mantine_datepicker/custom_mantine_datepicker.min.js
+include custom_mantine_datepicker/custom_mantine_datepicker.min.js.map
+include custom_mantine_datepicker/async-*.js
+include custom_mantine_datepicker/async-*.js.map
+include custom_mantine_datepicker/*-shared.js
+include custom_mantine_datepicker/*-shared.js.map
+include custom_mantine_datepicker/metadata.json
+include custom_mantine_datepicker/package-info.json
+include custom_mantine_datepicker/theme/*
+include README.md
+include LICENSE
+include package.json
