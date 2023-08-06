@@ -1,0 +1,6 @@
+README.md
+setup.py
+simonzhaoms/simonzhaoms.egg-info/PKG-INFO
+simonzhaoms/simonzhaoms.egg-info/SOURCES.txt
+simonzhaoms/simonzhaoms.egg-info/dependency_links.txt
+simonzhaoms/simonzhaoms.egg-info/top_level.txt
