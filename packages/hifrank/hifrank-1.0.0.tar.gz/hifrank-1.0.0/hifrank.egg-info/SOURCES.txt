@@ -1,0 +1,9 @@
+README.md
+setup.py
+hifrank/__init__.py
+hifrank/__main__.py
+hifrank.egg-info/PKG-INFO
+hifrank.egg-info/SOURCES.txt
+hifrank.egg-info/dependency_links.txt
+hifrank.egg-info/entry_points.txt
+hifrank.egg-info/top_level.txt
