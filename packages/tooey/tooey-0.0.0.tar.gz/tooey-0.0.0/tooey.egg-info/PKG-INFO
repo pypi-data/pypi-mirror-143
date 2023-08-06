@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tooey
+Version: 0.0.0
+Summary: A tui lib (WIP)
+Home-page: UNKNOWN
+Author: John Doe
+Author-email: john@example.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
