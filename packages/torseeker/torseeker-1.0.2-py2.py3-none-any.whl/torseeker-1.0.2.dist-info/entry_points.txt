@@ -1,0 +1,2 @@
+[console_scripts]
+torseeker = torseeker.torseeker:main
