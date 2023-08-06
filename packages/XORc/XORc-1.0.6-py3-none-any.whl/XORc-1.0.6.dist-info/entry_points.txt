@@ -1,0 +1,3 @@
+[console_scripts]
+xorc = xorc.__main__:main
+
