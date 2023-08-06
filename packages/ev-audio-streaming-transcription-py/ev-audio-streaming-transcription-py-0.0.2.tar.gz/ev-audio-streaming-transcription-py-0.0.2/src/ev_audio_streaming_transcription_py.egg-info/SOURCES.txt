@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ev_audio_streaming_transcription_py.egg-info/PKG-INFO
+src/ev_audio_streaming_transcription_py.egg-info/SOURCES.txt
+src/ev_audio_streaming_transcription_py.egg-info/dependency_links.txt
+src/ev_audio_streaming_transcription_py.egg-info/requires.txt
+src/ev_audio_streaming_transcription_py.egg-info/top_level.txt
+src/example_package/__init__.py
+src/example_package/example.py
