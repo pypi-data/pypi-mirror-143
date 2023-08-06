@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+sumologic_opentelemetry/__init__.py
+sumologic_opentelemetry/env.py
+sumologic_opentelemetry.egg-info/PKG-INFO
+sumologic_opentelemetry.egg-info/SOURCES.txt
+sumologic_opentelemetry.egg-info/dependency_links.txt
+sumologic_opentelemetry.egg-info/requires.txt
+sumologic_opentelemetry.egg-info/top_level.txt
+sumologic_opentelemetry.egg-info/zip-safe
