@@ -1,0 +1,4 @@
+#!python
+
+from ctail.main import main
+main()
