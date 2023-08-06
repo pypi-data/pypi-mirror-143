@@ -1,0 +1,3 @@
+[poetry.plugin]
+blocksim_poetry_plugin=blocksim_poetry_plugin.plugin:BlocksimApplicationPlugin
+
