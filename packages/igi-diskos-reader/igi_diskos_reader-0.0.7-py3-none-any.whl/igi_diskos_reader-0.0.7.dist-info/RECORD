@@ -1,0 +1,15 @@
+igi_diskos_reader/__init__.py,sha256=h-7zYjpbOr2WGyfk-8AFBbiS7iikPaCX5HES38KKrcQ,55
+igi_diskos_reader/app.py,sha256=j7Rz4p_ZV_YY77V1eHDxMQ8OoRdnGVnANODQhEkYZvY,4583
+igi_diskos_reader/reader.py,sha256=48NE5_Va2FzkImTdMXAWjX7u0f2JIfIkIc7nlf_aOcg,10353
+igi_diskos_reader/spec.py,sha256=o4VND_Kk2iiu-23xzebKkJQGdHIA7Y8C3H9DtnCi5M4,5763
+igi_diskos_reader/utils.py,sha256=WLFhSRVh-yT9yMrnNUn02OHReRxGVLXDOgk8NXtxV4g,891
+igi_diskos_reader/validation.py,sha256=HAY5a2sC0IA_0cQOX-Ix0V_kzddwJgXQpdSBmA3s35A,1619
+igi_diskos_reader/writer.py,sha256=HKy4UKWdWf2KcIE4EGj8osdnTQ4fZZ9iHnnntLHqj2A,3497
+igi_diskos_reader/sender_specific/__init__.py,sha256=_CFF9PM7c7mrDFQbdTs0zS-frvMJdIiERv-Fz6iLlVo,50
+igi_diskos_reader/sender_specific/id_decomposition.py,sha256=rc8gMRoQQk6NAQTvwXRTZrmVaxiwllhDLalyWnM9LZM,3271
+igi_diskos_reader/sender_specific/merge.py,sha256=e-Z5hWzZ-veTfd-0c93LgbG_TG7NC98vHRAl8K3s0_8,7834
+igi_diskos_reader/sender_specific/transformations.py,sha256=jqUXPxPwNtLjTvXtWQHkrNemfRXTTp8Mak7rwDKOAwE,9244
+igi_diskos_reader-0.0.7.dist-info/METADATA,sha256=KTFpcwTnV0x0y_34i8jNqdgE_1EA7u-DulPlMFOgDdE,1452
+igi_diskos_reader-0.0.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+igi_diskos_reader-0.0.7.dist-info/top_level.txt,sha256=iZGqxeNvEyiY26IdgrM2Wneb0ZEdFiaRaRotGGc_c14,18
+igi_diskos_reader-0.0.7.dist-info/RECORD,,
