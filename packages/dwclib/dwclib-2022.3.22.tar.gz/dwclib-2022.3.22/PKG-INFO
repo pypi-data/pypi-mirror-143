@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: dwclib
+Version: 2022.3.22
+Summary: Python wrapper to DataWarehouse Connect.
+Home-page: https://framagit.org/jaj/dwclib
+Author: Jona JOACHIM
+Author-email: jona@joachim.cc
