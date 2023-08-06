@@ -1,0 +1,8 @@
+setup.py
+client_package/__init__.py
+client_package/client.py
+my_messenger_client.egg-info/PKG-INFO
+my_messenger_client.egg-info/SOURCES.txt
+my_messenger_client.egg-info/dependency_links.txt
+my_messenger_client.egg-info/requires.txt
+my_messenger_client.egg-info/top_level.txt
