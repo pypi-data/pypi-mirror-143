@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: d3m-simon
+Version: 1.2.6
+Summary: Character-level CNN+LSTM model for text classification
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/simon
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: cpu
+Provides-Extra: gpu
