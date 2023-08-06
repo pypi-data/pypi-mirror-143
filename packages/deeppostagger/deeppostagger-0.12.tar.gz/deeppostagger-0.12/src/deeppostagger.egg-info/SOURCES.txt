@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/deeppostagger/__init__.py
+src/deeppostagger/tagger.py
+src/deeppostagger/util.py
+src/deeppostagger.egg-info/PKG-INFO
+src/deeppostagger.egg-info/SOURCES.txt
+src/deeppostagger.egg-info/dependency_links.txt
+src/deeppostagger.egg-info/requires.txt
+src/deeppostagger.egg-info/top_level.txt
+src/deeppostagger/res/sejong_nikl/config.json
+src/deeppostagger/res/sejong_nikl/model.p
+src/deeppostagger/res/sejong_nikl/tokenizer.json
