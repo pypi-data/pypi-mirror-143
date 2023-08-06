@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: mite-cli
+Version: 0.1
+Summary: mite cli tool
+Home-page: https://github.com/ryanlinnit-sky/mite-cli/
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: docopt
+Requires-Dist: black
+Requires-Dist: flake8
+Requires-Dist: isort
+Requires-Dist: GitPython
+
+# Mite CLI
+
+A command line tool to create a new [mite](https://github.com/sky-uk/mite/) project. 
+
+## Installation
+
+```bash
+pip install mite-cli
+```
+
+## Usage
+
+```
+Usage:
+    mite-cli new <project_dir> [options]
+
+Options:
+    --log-level=LEVEL       Set logger level: DEBUG, INFO, WARNING, ERROR, CRITICAL [default: INFO]
+    -e --createvenv         Create a python virtual environment
+```
+
+### Create new mite project
+
+```bash
+mite-cli new my_project_dir
+```
+
