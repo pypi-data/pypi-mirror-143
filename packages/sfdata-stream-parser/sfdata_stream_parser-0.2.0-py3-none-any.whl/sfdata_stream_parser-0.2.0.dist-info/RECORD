@@ -1,0 +1,15 @@
+sfdata_stream_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sfdata_stream_parser/checks.py,sha256=A7flEvAmT0e8YkEBlLK_n3rGmu1yaGSnWYOU2I38_2g,942
+sfdata_stream_parser/events.py,sha256=Z7ZmEbxQd_Qj7mynpgYveuGzDK4jJt5Q2zgA6Q2DfXA,965
+sfdata_stream_parser/filters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sfdata_stream_parser/filters/column_headers.py,sha256=MINPmJRtPqRxTCX8RukcYKwy03GmFOYyk-XNkHj1O-k,2392
+sfdata_stream_parser/filters/generic.py,sha256=mGIR35B1FbO6IYFQf5oKIna7XjBQtm8L0CSKjn-t1c0,6329
+sfdata_stream_parser/filters/types.py,sha256=5Y1PJh2SMNCwQWdJXVaHUPhWfgb_rQWHJrZfNR2FUA8,2385
+sfdata_stream_parser/parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sfdata_stream_parser/parser/csv.py,sha256=CGuzHF7q263M8jIf_tnaLZjytKf8BUu4RXk7QiRS6xc,524
+sfdata_stream_parser/parser/openpyxl.py,sha256=hGX6uCti_vlbV2TZCkYyfoGfa4RTBzrWurZsB-X0Upo,1744
+sfdata_stream_parser/parser/xml.py,sha256=nW5k93kCKbmft6zXq0Nn0q7ga_rgmFKeBuuUbV67p2g,633
+sfdata_stream_parser-0.2.0.dist-info/LICENSE,sha256=rvpeldzytrW5yVw9TXYqxxPVv5BHIulJxtiBm2cwRZw,1075
+sfdata_stream_parser-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+sfdata_stream_parser-0.2.0.dist-info/METADATA,sha256=Bhoa5tmhNNVAsMZOk-1jRnr2CwQVrm0Bv06nB7iqVdA,736
+sfdata_stream_parser-0.2.0.dist-info/RECORD,,
