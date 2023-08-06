@@ -1,0 +1,9 @@
+LICENSE,sha256=tJyHxkB7znXtPyr8htYwp0ZB0Nr3OIYCRXP8LCx2izo,1615
+README.rst,sha256=A5ByTmvZXpdgqovkKOcCotFlqtntnNZmkaIieURWa-8,7009
+frozndict/__init__.py,sha256=1wdicI89WYLbpLtyFJaD1gp8A9k69wUT6HgTsrMkjRs,260
+frozndict/frozendict.py,sha256=nyUOdnIB6MQk88j_rHjVfdU7rFqKD6Fo5hQS_T9R2yU,5433
+frozndict/utils.py,sha256=2sMmxF4dCN0ReuyWIqrLER4Y0fhIV3ksD33aUaUm_q8,2355
+frozndict-1.0.0.dist-info/LICENSE,sha256=tJyHxkB7znXtPyr8htYwp0ZB0Nr3OIYCRXP8LCx2izo,1615
+frozndict-1.0.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+frozndict-1.0.0.dist-info/METADATA,sha256=HYXdXVWRa2Yj4JV4YGCxUHe7Ji73twjdCR3ZlUoh6do,7788
+frozndict-1.0.0.dist-info/RECORD,,
