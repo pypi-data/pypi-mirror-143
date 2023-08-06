@@ -1,0 +1,11 @@
+simsplitchem/__init__.py,sha256=VC1tU4CNfMa_HC2vAirO5Mi4mAUlxYevkeqJTFxuqLQ,118
+simsplitchem/simsplitchem.py,sha256=a_kFQ9W5ITFGOrEoiJSqkpOrvvOrksU6tM_8s52RPI4,34
+simsplitchem/samplers/__init__.py,sha256=e0F7saavaRvLNk11Yk6PV6RExFKXCp16yOhu9NBcV6w,283
+simsplitchem/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_simsplitchem.py,sha256=Ggg1w_lfRrxLSubVpbUxGzKd5cmfE1iYJAtxOLo9AN4,413
+SimplifySplittingChemicals-0.0.0.dist-info/LICENSE,sha256=2GkXm8XeHBZ7Fn2o8ir_C5bxUB3MzzbBnlh-_DSh4IM,1091
+SimplifySplittingChemicals-0.0.0.dist-info/METADATA,sha256=DKhMHztHdUTrJNcwn9btokTLI778V-nNvlJnaJ0eXFM,2076
+SimplifySplittingChemicals-0.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+SimplifySplittingChemicals-0.0.0.dist-info/top_level.txt,sha256=uaVnoOKEI4aGF4fHl-F2GvNwiIjEBZ6WCKGjwTeg6uc,18
+SimplifySplittingChemicals-0.0.0.dist-info/RECORD,,
