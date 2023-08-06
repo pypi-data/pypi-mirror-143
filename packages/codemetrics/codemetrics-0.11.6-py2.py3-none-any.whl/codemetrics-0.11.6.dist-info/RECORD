@@ -1,0 +1,17 @@
+codemetrics/__init__.py,sha256=X3ZlzTeKuv_i1cTlnCCwBCqmI8dbzpASVdzMvT8ISO8,729
+codemetrics/cloc.py,sha256=OzG8HOKel2AAmp-g0toF6RC8VnjfnBpqBn9iWwnTtxQ,2399
+codemetrics/cmdline.py,sha256=O7OrQ2ki3QEb8zKHcrmtQR7az02J_0izjlfggNOWygg,2148
+codemetrics/core.py,sha256=CuQieeRvrj0YFQLL3y8qpFVOEF6u7C-hyUWZbiYhtPY,9311
+codemetrics/git.py,sha256=fOyeEHGgx2B1VjlnFmhUAZ-DqZVy9Dh60b8oCXJR5CI,11379
+codemetrics/internals.py,sha256=5vU-2QjQvFs0aBWTXvGrX5MarB4BjM-7c6HTWQWCIV0,4719
+codemetrics/lizardtokencounts.py,sha256=465p0QjBQAISsMBFvqX7105pm9_CSwMf-Yotd8S2V3k,4047
+codemetrics/pbar.py,sha256=iF3es6faSIylLuGjdi5vNNnYpw0pRwfcmaCfxrkX7Bs,2838
+codemetrics/scm.py,sha256=6miCKqIydNfzrX6-aTxEfYij1XOKctCO78UIQD_X_XM,11994
+codemetrics/svn.py,sha256=f2EGkTHLqty3UwkNm-E_c6rLXZQUvj1axoGziTbG-28,12837
+codemetrics/vega.py,sha256=i6-bIb4CBm9tzrzWs3_anbCHh2V3OXqI0g44tMaoUAE,8310
+codemetrics-0.11.6.dist-info/AUTHORS.rst,sha256=Eq7E8B0EnI4LtNdEM1oMnWyO4XWPhAT89L0c6QTcs3A,193
+codemetrics-0.11.6.dist-info/LICENSE.txt,sha256=-ksDeB_igeRM0fYZZQsxRN_PUx6zKnq-Yb8l0vuyOSg,1090
+codemetrics-0.11.6.dist-info/METADATA,sha256=8OV3rUGj_wXAtS4cNGaIrmV8Ry_YMgEg1fGyzMJ38aw,8294
+codemetrics-0.11.6.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+codemetrics-0.11.6.dist-info/top_level.txt,sha256=gd5mhLx4YbVwSi8a65ktlx4tXysyLNKIDXBw3zxP1FM,12
+codemetrics-0.11.6.dist-info/RECORD,,
