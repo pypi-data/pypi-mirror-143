@@ -1,0 +1,21 @@
+veda/tensors/LICENSE, sha256=YnSGopDGJS9GdQ5iKK7kjgkcB9tcrtgilusqFvMPfNc=, 1531
+veda/tensors/cmake/FindVEDATensors.cmake, sha256=xPBHtTSGGVFRCGu9R+3f7bbTB1DFSnGuLflq19ohD3w=, 2970
+veda/tensors/include/veda/tensors/api.h, sha256=/RK8gQN/PW1ENH1sxRXjxQU73uZcxg0IwfkZu6Gmxj4=, 523
+veda/tensors/include/veda/tensors/device.h, sha256=7NYhl75u6cSIMn6zWpAZXu5dMqdNfJaZ3/WVsTD052M=, 3732
+veda/tensors/include/veda/tensors/enums.h, sha256=nyplY9//tMPu5CjafaaTox067d5B6eFxL3YbUApy/80=, 3630
+veda/tensors/include/veda/tensors/get.h, sha256=MJyE5UaVYZGmu8T7Jx7eUQpo6p8LrSC2UZEN923DTSs=, 756
+veda/tensors/include/veda/tensors/high_level.h, sha256=cxWF0kDu+o3elKi2+6OsK30HZxu68v0YV1K4rk2Z0Vs=, 4269
+veda/tensors/include/veda/tensors/init.h, sha256=4CX3/NZpM97zB4PG1+b9Dqem7vX5gxiAwn1O1VZIB80=, 441
+veda/tensors/include/veda/tensors/low_level.h, sha256=0Tn3PCdoCwk/atf3zoM5QH817Bt70+WOC5fon6T3lWU=, 5617
+veda/tensors/include/veda/tensors/macros.h, sha256=JOVID2wOPgcgR1SN828/gb6iey+UcuXwbLppgwY3wIo=, 533
+veda/tensors/include/veda/tensors/scalar.h, sha256=aScD2v2VY+ATpktf4Ab+dXTt1T3FKYc9VncqVE3GHQc=, 366
+veda/tensors/include/veda/tensors/types.h, sha256=0A5UDw8F1gdiWcbmVxMbanboHFluIIJV2iCVvSDCzG0=, 1323
+veda/tensors/include/veda/tensors/version.h, sha256=I97M4e+py4ZF4czPoZQJe124pT273SqTjfFy6+MSJTs=, 37
+veda/tensors/lib64/libveda-tensors.so, sha256=s7/VpX/hfcRblmW4BchnbWU5VMykn4d74fhusv2RuI4=, 27
+veda/tensors/lib64/libveda-tensors.so.0, sha256=Mg1ZggxzJhaZ24ix9JMXYUKbqeo2BcNwwa1tyg/QViU=, 93296
+veda/tensors/lib64/libveda-tensors.so.0.1.0, sha256=s7/VpX/hfcRblmW4BchnbWU5VMykn4d74fhusv2RuI4=, 27
+veda/tensors/libve/libveda-tensors.vso, sha256=3Mj+j1Je71a3gmbvsFHcSyMJq/ZTxTAEsWYdEOw2H7U=, 7257600
+veda_tensors-0.1.0.dist-info/METADATA, sha256=dp3TRM8+JS3MsIfdjdHggk1xbYyk8LRptK3JcPj7htM=, 638
+veda_tensors-0.1.0.dist-info/top_list.txt, sha256=BNlh0PZeLpIMeHuET4CC9c4QcJJ1bd3ZvjnNFqaC+kM=, 12
+veda_tensors-0.1.0.dist-info/WHEEL, sha256=Omw8E8NIIr30bImoC7M4s4S6mONx0rYAv5joVPkkThQ=, 83
+veda_tensors-0.1.0.dist-info/RECORD, , 
