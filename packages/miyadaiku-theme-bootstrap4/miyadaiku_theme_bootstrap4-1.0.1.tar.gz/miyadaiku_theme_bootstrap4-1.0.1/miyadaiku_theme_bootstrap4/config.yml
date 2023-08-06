@@ -1,0 +1,5 @@
+bootstrap4_compressed: yes
+
+themes:
+  - miyadaiku_theme_jquery
+  - miyadaiku_theme_popper_js

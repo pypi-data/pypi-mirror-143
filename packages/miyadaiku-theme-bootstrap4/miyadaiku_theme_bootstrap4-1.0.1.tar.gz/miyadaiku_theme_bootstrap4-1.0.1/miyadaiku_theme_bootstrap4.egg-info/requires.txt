@@ -1,0 +1,12 @@
+miyadaiku>=1.0.0
+miyadaiku_theme_jquery>=1.0.0
+miyadaiku_theme_popper_js>=1.0.0
+
+[dev]
+wheel
+twine
+pytest
+mypy
+black
+flake8
+autoflake

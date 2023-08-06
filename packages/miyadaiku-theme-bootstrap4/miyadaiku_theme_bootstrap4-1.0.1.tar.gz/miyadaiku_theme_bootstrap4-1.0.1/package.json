@@ -1,0 +1,12 @@
+{
+  "name": "miyadaiku.themes.bootstrap4",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyadaiku/miyadaiku-themes-bootstrap4.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  }
+}
