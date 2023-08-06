@@ -1,0 +1,3 @@
+[gui_scripts]
+g3mclass = g3mclass.g3mclass:main
+

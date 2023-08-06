@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: g3mclass
+Version: 1.0.1
+Summary: Gaussian Mixture Model for marker classification
+Home-page: https://github.com/MathsCell/g3mclass
+Author: Serguei Sokol, Marina Guvakova
+Author-email: sokol@insa-toulouse.fr
+License: GNU General Public License v2
+Project-URL: Documentation, https://readthedocs.org/g3mclass
+Project-URL: Source, https://github.com/MathsCell/g3mclass
+Project-URL: Tracker, https://github.com/MathsCell/g3mclass/issues
+Keywords: biomedical marker,semi-constrained classification,GMM
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X :: Aqua
+Classifier: Environment :: MacOS X :: Carbon
+Classifier: Environment :: MacOS X :: Cocoa
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+
+G3Mclass is a software for Gaussian Mixture Model for Marker Classification
+

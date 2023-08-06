@@ -1,0 +1,80 @@
+README.md
+install_g3mclass.bat
+pkg2dmg.sh
+setup.py
+tools_g3m.py
+uninstall_g3mclass.bat
+g3mclass/__init__.py
+g3mclass/g3mclass.py
+g3mclass/g3mclass_lay.kvh
+g3mclass/licence_en.txt
+g3mclass/version.txt
+g3mclass/welcome.html
+g3mclass.egg-info/PKG-INFO
+g3mclass.egg-info/SOURCES.txt
+g3mclass.egg-info/dependency_links.txt
+g3mclass.egg-info/entry_points.txt
+g3mclass.egg-info/requires.txt
+g3mclass.egg-info/top_level.txt
+g3mclass/example/gene W ID ref ID test ID query.txt
+g3mclass/help/INTRODUCTION_MG_9.22.21.html
+g3mclass/help/Input data format conventions-2011-11-10.html
+g3mclass/help/PARAMETERS.html
+g3mclass/help/TABS.html
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly.html
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_15f189f0088bf652.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_180e87000398a632.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_1b3840e5c7b86dbb.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_1dfaccc1ffe75ad.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_2e33e3e81a014b5c.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_30d4c37af7df9e2c.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_3b67d678aca4dfdd.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_44a7ade2cf36d2fd.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_46d680c32966c7ed.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_4cf6e3ba01054f8a.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_4d9418ac5b8d4501.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_61712f2a87fb43d9.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_62c6c48e5b23444a.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_6f12f6cd728ba26f.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_7af8fbeb34afa9cf.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_83e107780ed72a29.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_90d7eff82161eeeb.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_91417ffb017e687a.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_a2be77428e68d7b5.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_b556027c36540279.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_b92170b5503355a1.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_c2692433672140e6.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_ca0e1d1249511e34.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_cd63a11a6f0a7b49.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_d2cd2789299caf2.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_d63fb5e8a92051d1.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_dd9b0f531bc10c6.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_e9f27ced6954ab0.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_ebc554a2208515c0.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_ef1b44653e149f4d.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_f0539d7687faa65.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_f4042447b64455a3.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_fba3db7d24851330.png
+g3mclass/help/WORKFLOW EXAMPLES-2021-11-17_Grammarly_html_fe9d72ab67254803.png
+g3mclass/help/Welcome to g3mclass-2021-11-10.html
+g3mclass/help/default_heatmap.png
+g3mclass/help/g3m_data.htm
+g3mclass/help/g3m_data.htm.bck
+g3mclass/help/g3m_data.htm.old
+g3mclass/help/g3m_install.Rmd
+g3mclass/help/g3m_install.htm
+g3mclass/help/g3m_install.htm.bck
+g3mclass/help/g3m_intro.htm
+g3mclass/help/g3m_intro.htm.bck
+g3mclass/help/g3m_param.htm
+g3mclass/help/g3m_param.htm.bck
+g3mclass/help/g3m_tab.htm
+g3mclass/help/g3m_tab.htm.bck
+g3mclass/help/g3m_title.htm
+g3mclass/help/g3m_title.htm.bck
+g3mclass/help/g3m_workflow.htm
+g3mclass/help/g3m_workflow.htm.bck
+g3mclass/help/g3mclass.hhc
+g3mclass/help/g3mclass.hhp
+g3mclass/help/g3mclass.htm
+g3mclass/help/g3mclass.htm.bck
