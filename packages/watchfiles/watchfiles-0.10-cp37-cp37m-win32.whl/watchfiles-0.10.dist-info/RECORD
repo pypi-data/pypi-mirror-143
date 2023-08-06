@@ -1,0 +1,15 @@
+watchfiles/__init__.py,sha256=hhLF52bwWczfx4VakCIyj9ZeJ0LbKg_7twbl9tDdJWA,364
+watchfiles/__main__.py,sha256=g9iBs8xxX6Yik7cmgllQkpBN8C4JNoZVsEOyCCLCyFU,63
+watchfiles/_rust_notify.cp37-win32.pyd,sha256=KyDtwybUWuqwOParvhKWd6KrOqSvQSZZNSd1HrGZlf0,379904
+watchfiles/_rust_notify.pyi,sha256=NX3gwA6n1YteAzN0IUyO-YYn0GiPfCpchBin9hyDjYI,2130
+watchfiles/cli.py,sha256=ftJui4QkNAs6OJ55tII554qAkJnJHKYxtbVeQUijwbs,5639
+watchfiles/filters.py,sha256=X2tJmctsZKIzuKFyTLwsec4TY8PKXYUd-0mBSNdj-Fw,5068
+watchfiles/main.py,sha256=W3Yji3eni22kXPG5XzCzqprODniqfZlqIbds-4Eqo0U,14093
+watchfiles/py.typed,sha256=5_E2MNyI4Mzg8TH53HFdXg0iSevlmHpdZSNnJVUYbMg,70
+watchfiles/version.py,sha256=nw78whZvRgR-CRKVJ04MddDJRV9dOsXHNb84Xp19HZ8,44
+watchfiles-0.10.dist-info/LICENSE,sha256=OJNLTJ74C1LXy3zC9PxI5qMeL3k2sWtQawqK7bVd5iM,1131
+watchfiles-0.10.dist-info/METADATA,sha256=p1Rtcj_G0YyktwCAYyo7_FUgpvar8bNSWYYcqM1h6fA,7438
+watchfiles-0.10.dist-info/WHEEL,sha256=cpY2CIQibwgnIWFRKvRDp2Kii5IPBXf6TQxjD0tLibE,97
+watchfiles-0.10.dist-info/entry_points.txt,sha256=b2XyJ38b5cvjuoB9dGbqnX0e5R0DpuTKinfVsJIjlUg,50
+watchfiles-0.10.dist-info/top_level.txt,sha256=KlasbUopliNC3JpaoQM7BA-rqMf53MCEDNBQGWl8xOk,11
+watchfiles-0.10.dist-info/RECORD,,
