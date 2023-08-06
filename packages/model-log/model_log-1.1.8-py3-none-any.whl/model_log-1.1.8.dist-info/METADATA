@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: model-log
+Version: 1.1.8
+Summary: test description
+Home-page: https://github.com/NLP-LOVE
+Author: mantch
+Author-email: mantchs@163.com
+License: MIT
+Keywords: python ML DL model log
+Platform: UNKNOWN
+Requires-Dist: flask (>=0.11)
+
+![imgs](https://gitee.com/kkweishe/images1/raw/master/ML/wechat/model_log_logo.png)
+
+
+
+
+
