@@ -1,0 +1,13 @@
+pandas
+paramiko
+beautifulsoup4
+exchangelib
+openpyxl
+psutil
+pyodbc
+PyQt5
+pywin32
+selenium
+xlrd==1.2.0
+XlsxWriter
+xlwings
