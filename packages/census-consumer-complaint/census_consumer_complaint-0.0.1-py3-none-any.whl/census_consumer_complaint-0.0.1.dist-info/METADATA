@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: census-consumer-complaint
+Version: 0.0.1
+Summary: Local packaging of library
+Home-page: UNKNOWN
+Author: Avnish Yadav
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tfx (==1.6.1)
+Requires-Dist: apache-beam[interactive]
+Requires-Dist: apache-airflow
+
+UNKNOWN
+
