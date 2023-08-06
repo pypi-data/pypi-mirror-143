@@ -1,0 +1,3 @@
+[console_scripts]
+glopan=glopan.cli:main
+
