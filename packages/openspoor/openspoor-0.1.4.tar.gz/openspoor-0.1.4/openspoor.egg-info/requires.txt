@@ -1,0 +1,10 @@
+importlib_metadata
+geopandas
+pyyaml
+loguru
+requests
+rtree
+pyproj<3
+
+[dev]
+pytest
