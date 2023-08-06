@@ -1,0 +1,2 @@
+future
+Pillow<10,>=8.4.0
