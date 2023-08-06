@@ -1,0 +1,14 @@
+distance_metrics_mcda/__init__.py,sha256=ia6OkLydQgsnBajBugreznYKUIYB_5Yx80jbzAlu9EU,174
+distance_metrics_mcda/additions.py,sha256=wec2q4bbg3RdDm2iyFqp2MdkMXImbmRUm5ERRw42Hvk,2084
+distance_metrics_mcda/correlations.py,sha256=rIFCOeoJw6mX1evARRyzSeVZ7rz_jT--plg0AOOWveg,1789
+distance_metrics_mcda/distance_metrics.py,sha256=QhABcpjlGNI8VGFdRMz7WeZn91c00N1_-2Ir67flZ-c,11202
+distance_metrics_mcda/normalizations.py,sha256=zC7Z9bx6OAJbJIwzIP4bVC71eN8UdiK4fJlxbz0Koh4,3744
+distance_metrics_mcda/weighting_methods.py,sha256=-CPbIz-2BOe851Mr4gcy0hkD1w_QxHn7LzQkJZfJDWA,1900
+distance_metrics_mcda/mcda_methods/__init__.py,sha256=FVBRukJDAZi5vmz_JIXdsCJYRqlNt2qE_Y5GkWA7q4A,53
+distance_metrics_mcda/mcda_methods/mcda_method.py,sha256=iatJGHVKnwX7VvbWYl4lcY8Ge7nO64-YYraue3dVY1A,1366
+distance_metrics_mcda/mcda_methods/topsis.py,sha256=5MRhstZTK8-2lzY1UzG4RS6_dGRQKesqDznGT1oHjlY,2252
+distance_metrics_mcda-0.0.4.dist-info/LICENSE,sha256=fq7EMbMcdJRrWXkvNEPMprQjbG1rLBCOJaGeXAUoGOE,1092
+distance_metrics_mcda-0.0.4.dist-info/METADATA,sha256=ZNJRD8KpjFUGHD938RRkPSjRsMPphJwGqtlawHabUKA,2918
+distance_metrics_mcda-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+distance_metrics_mcda-0.0.4.dist-info/top_level.txt,sha256=n8_cinoigK7kPKi59nSoOoZwo4QhXsUn2E4pRHrn7ls,22
+distance_metrics_mcda-0.0.4.dist-info/RECORD,,
