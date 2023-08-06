@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+code_with_finn/__init__.py
+code_with_finn/main.py
+code_with_finn.egg-info/PKG-INFO
+code_with_finn.egg-info/SOURCES.txt
+code_with_finn.egg-info/dependency_links.txt
+code_with_finn.egg-info/requires.txt
+code_with_finn.egg-info/top_level.txt
+code_with_finn/data/bad_error.jpg
+code_with_finn/data/error.jpg
+code_with_finn/data/success.jpg
