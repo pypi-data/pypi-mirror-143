@@ -1,0 +1,17 @@
+ortho/__init__.py,sha256=5o4uEQFLZtULif3vV2L7pe3wvEgJgo81vdzRSiH1OXY,499
+ortho/__main__.py,sha256=r87RaE6tctsPrqz-dbMyei2a1hJYfJoBogwzE_o4aaQ,1118
+ortho/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+ortho/_orthogonal_functions/__init__.py,sha256=dNjoBXTRsRUQ018lZvinKJMkzfd6wu1JVgJkmNzwQqI,416
+ortho/_orthogonal_functions/declarations.py,sha256=W5tcrYatL6IWEu1IJ3eS8Ci3n_EQ_Htsze1stbkerD4,563
+ortho/_orthogonal_functions/orthogonal_functions.py,sha256=DWMdzvz1U4xjcfxs9peOrpKgmmIbPfxZmscmkilaXrc,4113
+ortho/_orthogonal_functions/orthogonalization_utilities.py,sha256=Eh5IQTEbuqOOaPZATXVOZjkzyrEe3n80_orPJRpBfD0,8885
+ortho/_orthogonal_functions/plot_utilities.py,sha256=hYZr_4LpIzFOz0852cc_9dGQX510xUHJ3q_3bBigcIo,3847
+ortho/_parse_arguments/__init__.py,sha256=kC5LKEOBR6lTDmZCQ6kCL86oL1S5fT5TtdcPpKSyyWk,404
+ortho/_parse_arguments/parse_arguments.py,sha256=pxLyMN0BV5PgzChGah5cuQ3N8jqME98IUYJRPSrfPTA,6174
+ortho-0.1.0.dist-info/AUTHORS.txt,sha256=qS2RaEcytbbojENXEbG_9UZD71iIBc6fKzFkWc_-jEM,14
+ortho-0.1.0.dist-info/LICENSE.txt,sha256=TKaaunKCjKvGrOPac5gQt_njk1ZJRS-EpbxRaSfXD4A,1526
+ortho-0.1.0.dist-info/METADATA,sha256=r5ynGgODED6WEEeEQkjFllzsA59hEvAn4LIWKWIV7Go,17695
+ortho-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ortho-0.1.0.dist-info/entry_points.txt,sha256=FIpGaMMrJyViMbzzKthIzs2aipWUjwwMIUhMamPYaJU,47
+ortho-0.1.0.dist-info/top_level.txt,sha256=okU2Zllh1oBMTB9v6h1BK0qt4H1pseLTk2qYRHy4Vzw,6
+ortho-0.1.0.dist-info/RECORD,,
