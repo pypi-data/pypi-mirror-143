@@ -1,0 +1,5 @@
+dpss-0.17.4.dist-info/METADATA,sha256=qHvlBwA3ubNLnLvBzwE2BbCRlJRXITdRTmHz4j5Knpo,7514
+dpss-0.17.4.dist-info/WHEEL,sha256=8EGUhOJAV8F56cq1MHibOHhaTRYRfblBOnf7eM8cvMM,133
+dpss/__init__.py,sha256=Y4yXiZ5KmcMcWmLqSpNkf0L7TYSzKeACQmSguGDSJMM,44
+dpss/dpss.cpython-37m-x86_64-linux-gnu.so,sha256=JeCeMx6k5Q_la4UnGqxclVplEec_GQj2nQnEEOa_nt4,4027720
+dpss-0.17.4.dist-info/RECORD,,
