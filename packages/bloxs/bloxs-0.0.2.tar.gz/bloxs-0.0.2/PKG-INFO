@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bloxs
+Version: 0.0.2
+Summary: Display data in an attractive way
+Home-page: https://github.com/mljar/bloxs
+Author: MLJAR, Sp. z o.o.
+Author-email: contact@mljar.com
+License: Apache License 2.0
+Description: <p align="center">
+        <img src="https://raw.githubusercontent.com/mljar/visual-identity/main/bloxs/blox%20line%20white.png" />
+        </p>
+        
+        # Bloxs
+        
+        Display your data in attractive way
+        
+Keywords: data science,jupyter notebook,data analytics,dashboard,mljar
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
