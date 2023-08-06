@@ -1,0 +1,4 @@
+numpy
+julia
+uncertainties
+awkward
