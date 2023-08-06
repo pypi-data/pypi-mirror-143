@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: deltares-cosmos
+Version: 0.0.6
+Summary: Python CoSMoS package
+Home-page: https://github.com/pypa/sampleproject
+Author: Maarten van Ormondt
+Author-email: Maarten.vanOrmondt@deltares.nl
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CoSMoS package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+
+conda activate cosmos
+
+conda env export --no-builds -f cosmos_environment2.yml
+
+
+
+To create the cosmos_environment.yml somewhere else: 
+
+conda env create -f cosmos_environment.yml
+
+
+
+
+To build the cosmos package, open Anaconda Powershell:
+
+To make sure you have the latest version of build:
+
+py -m pip install --upgrade build
+
+and to build the package: 
+
+py -m build
+
+
+Upload to Pypi with:
+
+py -m pip install --upgrade twine
+cd d:\checkouts\OET\trunk\python\applications\cosmos
+py -m twine upload dist/*
+
+
+
+For an editable package, make the package with:
+
+pip install -e .
+
+or something like:
+
+pip install -e d:\checkouts\OET\trunk\python\applications\cosmos
+
+
+
+
