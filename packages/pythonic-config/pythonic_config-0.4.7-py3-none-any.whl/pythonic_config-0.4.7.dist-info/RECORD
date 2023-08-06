@@ -1,0 +1,14 @@
+_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_tests/other_module.py,sha256=mZU8b1yGQPYak_9TCracoYteWFy3MslLZavrOC0HO2c,186
+config/__init__.py,sha256=e9VhsMeVB2QNaDe3N0tyZjkc-PKyMcuT_c1vBUD3VOY,349
+config/config.py,sha256=X2PrlR2x2ExI1qBfpD-7eXFFWJSbSOcX7Kze6nA-5-U,15369
+config/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hparams/__init__.py,sha256=RKn18TBwoYlhGrSfqAdGoYhAmyWhwYnSdNVLbAC3LJo,547
+hparams/hparams.py,sha256=lWtc5BMJfMGKfXl2q0dWUKnGXA6xvYA6ChWX-sb68p8,25250
+hparams/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_config-0.4.7.dist-info/LICENSE,sha256=9P3stFpI9ie6ETRUK7FDCfyGjmSxSg0TQ9dfbn2K1EQ,1099
+pythonic_config-0.4.7.dist-info/METADATA,sha256=dem8HJjMx1FEkykzVdUO2boHCt8rI7nGze8hyNl-SUM,6742
+pythonic_config-0.4.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pythonic_config-0.4.7.dist-info/top_level.txt,sha256=9hK4m828QBN59kTX5IVy40cPd9zUw5QWQF2AlSrXCJ4,7
+pythonic_config-0.4.7.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pythonic_config-0.4.7.dist-info/RECORD,,
