@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+experiment_wrapper/__init__.py
+experiment_wrapper/experiment.py
+experiment_wrapper/experiment_suite.py
+experiment_wrapper/rollout_trajectory.py
+experiment_wrapper.egg-info/PKG-INFO
+experiment_wrapper.egg-info/SOURCES.txt
+experiment_wrapper.egg-info/dependency_links.txt
+experiment_wrapper.egg-info/requires.txt
+experiment_wrapper.egg-info/top_level.txt
