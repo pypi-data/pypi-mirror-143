@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: socket.io-redis-emitter
+Version: 0.0.2
+Summary: An asynchronous Redis-based Socket.IO emitter for Python
+Home-page: https://github.com/roma-glushko/socket.io-redis-emitter
+License: MIT
+Keywords: socket.io,redis,websocket,emitter,library
+Author: Roman Glushko
+Author-email: roman.glushko.m@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aioredis (>=2.0.1,<3.0.0)
+Requires-Dist: msgpack (>=1.0.3,<2.0.0)
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Project-URL: Repository, https://github.com/roma-glushko/socket.io-redis-emitter
+Description-Content-Type: text/markdown
+
+# Socket.IO Redis Emitter
+
+This is an asynchronous Redis-based [Socket.IO emitter](https://socket.io/docs/v4/emitting-events/) for Python.
+
+## Installation
+
+```bash
+pip install socket.io-redis-emitter
+# or
+poetry add socket.io-redis-emitter
+```
+
+## Features
+
+- High quality, typed and modern Python codebase
+- Clean, concise and Pythonic API
+- Uses [aioredis](https://aioredis.readthedocs.io/en/latest/) as a Redis client
+- Supports namespaces, rooms and regular Socket.IO message emitting
+
+```python
+from aioredis import Redis
+from socketio_emitter import Emitter
+
+client = Redis(...)
+emitter = Emitter(client=client)
+
+with emitter.namespace("/nsp") as nsp:
+    with nsp.rooms("room1", "room2") as clients:
+        await clients.emit("machineStatus", {"status": "ok"})
+```
+
+- Remote requests to join, leave rooms or to disconnect 
+
+```python
+from aioredis import Redis
+from socketio_emitter import Emitter
+
+client = Redis(...)
+emitter = Emitter(client=client)
+
+with emitter.namespace("/nsp") as nsp:
+    with nsp.rooms("room1", "room2") as clients:
+        await clients.join("room3")
+        # await clients.leave("room3")
+        # await clients.disconnect()
+```
