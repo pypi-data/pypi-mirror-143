@@ -1,0 +1,8 @@
+README.md
+setup.py
+languageIdentiPackage/__init__.py
+languageIdentiPackage/xiaoTangTest.py
+languageIdentiPackage.egg-info/PKG-INFO
+languageIdentiPackage.egg-info/SOURCES.txt
+languageIdentiPackage.egg-info/dependency_links.txt
+languageIdentiPackage.egg-info/top_level.txt
