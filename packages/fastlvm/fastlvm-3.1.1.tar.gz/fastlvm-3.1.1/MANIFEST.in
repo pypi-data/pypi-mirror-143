@@ -1,0 +1,4 @@
+include LICENSE
+global-include *.h
+global-include makefile
+graft lib

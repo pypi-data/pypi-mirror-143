@@ -1,0 +1,8 @@
+[d3m.primitives]
+classification.cover_tree.Fastlvm = fastlvm:CoverTreeClassifier
+clustering.gmm.Fastlvm = fastlvm:GMM
+clustering.k_means.Fastlvm = fastlvm:KMeans
+natural_language_processing.glda.Fastlvm = fastlvm:GLDA
+natural_language_processing.hdp.Fastlvm = fastlvm:HDP
+natural_language_processing.lda.Fastlvm = fastlvm:LDA
+regression.cover_tree.Fastlvm = fastlvm:CoverTreeRegressor
