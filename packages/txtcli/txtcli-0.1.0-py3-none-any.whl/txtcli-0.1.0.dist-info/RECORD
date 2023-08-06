@@ -1,0 +1,10 @@
+txtcli/__init__.py,sha256=Lgs38A1_6amGSFWByRvXPMN8W3Ch0J2lJKXDlZDc5oI,154
+txtcli/gui.py,sha256=FW_2C6IBrJ9Kk532z8lLktCJ_zBd7aIwhCenvO2dB1U,1851
+txtcli/main.py,sha256=XDAuz0qKr3DQeEVKQPQQQ3RtvTso8D4DVQO-o3q0nI8,8549
+txtcli/model.py,sha256=9Ofbt8X8aG3ftCfY63GrTSONP-DD1LbzeYaLbDpMuWc,1385
+txtcli/util.py,sha256=xikqDC-AcgOZ7IGxOsfbW3e5ZaHdUG3YffPA0lf3Ek0,6686
+txtcli-0.1.0.dist-info/entry_points.txt,sha256=czx7pPxqiY8ugKdXhE93WjiML-5u6qVvQssTBSNqhsQ,39
+txtcli-0.1.0.dist-info/LICENSE,sha256=t0s7Q4TXX-LTveczgg_WIEFYcjVSc0wOvOst4N65PEU,1086
+txtcli-0.1.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+txtcli-0.1.0.dist-info/METADATA,sha256=Z5lKOPxaXHCAW8WYeVpdZSBUGFRFVlnJjzv1VN6x2oI,5280
+txtcli-0.1.0.dist-info/RECORD,,
