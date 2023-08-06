@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: G_xy
+Version: 0.0.5
+Summary: Show G_xy
+Home-page: https://github.com/konmongkol/G_xy
+Author: Konmongkol Chutrsuponhiran
+Author-email: konmongkol.ch@gmail.com
+License: MIT
+Download-URL: https://github.com/konmongkol/G_xy/archive/0.0.1.zip
+Description: plese read in: https://github.com/konmongkol/G_xy
+Keywords: G_xy,konmongkol,ipon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
