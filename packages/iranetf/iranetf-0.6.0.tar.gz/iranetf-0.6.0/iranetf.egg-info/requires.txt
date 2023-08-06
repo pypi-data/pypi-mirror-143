@@ -1,0 +1,7 @@
+aiohttp[speedups]
+pandas
+jdatetime>=4.1.0
+
+[tests]
+pytest
+pytest-asyncio
