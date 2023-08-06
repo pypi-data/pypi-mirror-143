@@ -1,0 +1,11 @@
+mosaik_pypower/__init__.py,sha256=27YY3zFpeaDh6JoC40AqkjBrn68SqFlsWZzjZtw5jwU,22
+mosaik_pypower/model.py,sha256=tXk3f4nSxkaNU3Cu9LOYb-1NZFRs73wqevsVry4DJpk,14460
+mosaik_pypower/mosaik.py,sha256=M6nKYZvHXzP-yk7cBi0KBGaQckUc5aLSJ5dv5T0cSis,7372
+mosaik_pypower/resource_db.py,sha256=txYsKDKN2euxBuSdKvFvyJmDzmEaV8_pnhxdezT1k5g,1944
+mosaik_pypower-0.8.1.dist-info/AUTHORS.txt,sha256=K-ILIsomYEV-Pw9uJ4TX-GRidgzZh767-ioVXEZVU5I,114
+mosaik_pypower-0.8.1.dist-info/LICENSE.txt,sha256=khQmLSVbUYav27gL33McM63JxHUY86v4KQOPyUU-j0k,24436
+mosaik_pypower-0.8.1.dist-info/METADATA,sha256=4P1aj7OvU4yqwrJ_-UMSpAx5E1jX_M220qHFW4RxEGA,19649
+mosaik_pypower-0.8.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mosaik_pypower-0.8.1.dist-info/entry_points.txt,sha256=dT5qmsEbmezT2zaUPkM63HYyzAYq-lPbtZ4LLV13Upc,63
+mosaik_pypower-0.8.1.dist-info/top_level.txt,sha256=vBABmSqWMVMnSZuFaMu3SImb69-5r6Po5FW1GnZvW90,15
+mosaik_pypower-0.8.1.dist-info/RECORD,,
