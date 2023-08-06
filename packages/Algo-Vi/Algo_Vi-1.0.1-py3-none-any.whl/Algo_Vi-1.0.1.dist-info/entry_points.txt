@@ -1,0 +1,2 @@
+[console_scripts]
+Search-Vi = __main__:Algo
