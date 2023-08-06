@@ -1,0 +1,11 @@
+cogclassifier/COGclassifier.py,sha256=RGlMCP3D1erVUpk5dYWUCjc1LX9dKh432l7EW_u6zMw,21325
+cogclassifier/bin/Darwin/rpsblast,sha256=yJtezGborh1esahhlD86B4vxHZ8-onATTmiXk5RNCbQ,25182192
+cogclassifier/bin/Linux/rpsblast,sha256=jTPI0YU7YVhPW6YL2dAkXTf3AScNKZi2HQ92hi4FA0E,28868568
+cogclassifier/bin/Windows/rpsblast,sha256=Tigh2FeOGlBUixRD6XpayyTdKZzfBp-JbXUTJG-juVU,16336384
+cogclassifier/script/plot_cog_classifier_barchart.py,sha256=rnBq5S52ewextqHKKCYnVzyMs3titeOAqNSyMtGJawM,2877
+cogclassifier/script/plot_cog_classifier_piechart.py,sha256=p5G-gBTB1YZcQY1caR8P8cNT1LwXarVySVz1svdv5A8,2270
+cogclassifier-1.0.0.dist-info/entry_points.txt,sha256=vypz7ou6e5NLb6PB9xHJwTvZRwvyjd53bO8u_YDWF0w,234
+cogclassifier-1.0.0.dist-info/LICENSE,sha256=ebwK7vt1O9oD_jSE4ryVhBmx5CEw8MmeMbJDwXP6bNQ,1062
+cogclassifier-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cogclassifier-1.0.0.dist-info/METADATA,sha256=s_wVrK7VqcDPUhPsMcFw7C2eL6RAeBRb3wUSh34QxpA,12927
+cogclassifier-1.0.0.dist-info/RECORD,,
