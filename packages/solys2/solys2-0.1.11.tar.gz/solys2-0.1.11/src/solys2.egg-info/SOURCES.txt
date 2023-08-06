@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/solys2/__init__.py
+src/solys2/autotrack.py
+src/solys2/connection.py
+src/solys2/positioncalc.py
+src/solys2/response.py
+src/solys2/solys2.py
+src/solys2.egg-info/PKG-INFO
+src/solys2.egg-info/SOURCES.txt
+src/solys2.egg-info/dependency_links.txt
+src/solys2.egg-info/requires.txt
+src/solys2.egg-info/top_level.txt
