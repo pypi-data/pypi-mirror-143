@@ -1,0 +1,2 @@
+soda-core==3.0.0b4
+psycopg2-binary<3.0,>=2.8.5
