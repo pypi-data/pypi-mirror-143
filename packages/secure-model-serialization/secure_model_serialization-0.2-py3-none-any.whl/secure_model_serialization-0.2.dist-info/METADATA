@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: secure-model-serialization
+Version: 0.2
+Summary: Securely serialize model object
+Home-page: https://gitlab.ops.ripple.com/data-team/data-science/monorepo-python-packages
+Author: Srujana Subramanya
+Author-email: ssubramanya@ripple.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.9.7
+Description-Content-Type: text/markdown
+
+This package aims to attach a secret-key to the model object to add security and serialize the model object to a byte stream. 
+
