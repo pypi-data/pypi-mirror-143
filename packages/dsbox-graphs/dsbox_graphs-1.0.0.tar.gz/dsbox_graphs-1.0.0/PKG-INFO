@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dsbox_graphs
+Version: 1.0.0
+Summary: Graph Embedding and Convolution primitives
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/dsbox-graphs
+Author: Rob Brekelmans
+Author-email: brekelma@usc.edu
+License: Apache-2.0
+Description: # dsbox_graphs
+        
+Keywords: d3m_primitive
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
