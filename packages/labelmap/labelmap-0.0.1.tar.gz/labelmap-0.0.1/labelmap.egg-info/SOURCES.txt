@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+labelmap/__init__.py
+labelmap/labelmap.py
+labelmap.egg-info/PKG-INFO
+labelmap.egg-info/SOURCES.txt
+labelmap.egg-info/dependency_links.txt
+labelmap.egg-info/requires.txt
+labelmap.egg-info/top_level.txt
