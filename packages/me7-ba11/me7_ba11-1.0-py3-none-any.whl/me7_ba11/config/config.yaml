@@ -1,0 +1,14 @@
+header:
+    format: "=2s6qbb10s2048sI"
+    maxFileLength : 404800000 # 400MB # TODO 
+    maxDataLength : 512000 # 512 KB
+    maxAsset: 65535
+    encoding : "UTF-8"
+    fileMode : 0 #0 is flash mode and 1 is storage mode # TODO 
+    dataMode : 1 #0 is append and 1 is rewrite mode
+    owner : [admin, user] # TODO
+queue:
+    size: 1000
+file:
+    allowed: [txt, pdf, png, jpg, jpeg, gif]
+    images: [png, jpg, jpeg, gif]
