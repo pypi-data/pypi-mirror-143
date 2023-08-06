@@ -1,0 +1,10 @@
+backlog/__init__.py,sha256=33YvLUUpPhDZQD5wVJmLRyaQRyuAdPYkMy5y1vNe7hg,795
+backlog/api.py,sha256=6z-zlQxfJBuaK0sXRVD8zDSKbHKeA1W_Ge22l1FQXgw,2007
+backlog/models/__init__.py,sha256=NgOYEdGPbBdwywGiJVXpH0iNZWByA5rAe-CEN3JtM5c,683
+backlog/models/base.py,sha256=GjAu7v7_yINmMTGvXIfqr95WOockL43bY0fJUSDu4Jg,2415
+backlog/models/space.py,sha256=6N8-iBXDguhlkeJmn6md7QXC2w0cQNKHCwgicyqb7Us,1451
+backlog_api4py-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+backlog_api4py-0.1.0.dist-info/METADATA,sha256=1DoC3xIDQooGWT6FdZGA4Qc91jO8WBG09amYhoU_qaI,1007
+backlog_api4py-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+backlog_api4py-0.1.0.dist-info/top_level.txt,sha256=qzHRU2P6F24ntkXGiIBl4Qf_AlV0BRebSc5tuLlcOIE,8
+backlog_api4py-0.1.0.dist-info/RECORD,,
