@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: llcv
+Version: 0.0.3
+Summary: A Modular and Extensible Framework for Computer Vision
+Home-page: https://github.com/mtli/llcv
+Author: Mengtian (Martin) Li
+Author-email: martinli.work@gmail.com
+License: MIT
+Keywords: computer vision deep learning pytorch
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: python-dateutil
+Requires-Dist: py-cpuinfo
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: tensorboard
+Requires-Dist: linearlr
+Requires-Dist: pycocotools
+Requires-Dist: scipy
+
+See project page: https://github.com/mtli/llcv
+
+
