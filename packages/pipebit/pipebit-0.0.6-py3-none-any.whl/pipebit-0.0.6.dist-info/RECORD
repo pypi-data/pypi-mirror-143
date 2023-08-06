@@ -1,0 +1,13 @@
+pipebit/__init__.py,sha256=7MsH5aLMWdRmSf6azqL6G_IYnzvXODxoihLIeJwI27M,269
+pipebit/bitbatchreceiver.py,sha256=MaQCs0XlrIAigQgjzvFN41mnFf0xrAoBIuuNkR7Le-A,187
+pipebit/bitbatchsender.py,sha256=AgZLJXO4JmHyV1AfJ8heMa4pMu6mpQlj8CUqawn0C14,185
+pipebit/bitflowreceiver.py,sha256=tt0uTcD7BNunEUAbWuSBDeZd82dPyY7mFFsTjgGzoIc,186
+pipebit/bitflowsender.py,sha256=Ap14Hi8NZzwN8bbehdy63H_T56oK8k4B3vPgHtGePP0,184
+pipebit/bitpackreceiver.py,sha256=FoZ05g3MYLk2HRG0SedBnLPn7uzlWtGhQKPiqbvYGbg,2886
+pipebit/bitpacksender.py,sha256=6ntEb7YarEE1tHwGTlK5om7W4DuKV0MovKcYxb34ecA,2662
+pipebit/initial_config.py,sha256=q8-P42bR2RTnzaECKSuNZkvrucJvIa8iUah5XndfBig,4377
+pipebit-0.0.6.dist-info/LICENSE,sha256=JoTeFzAOCkNGhvHsf4r2BFIHpLRXo_4EsrnOZV58XVA,17098
+pipebit-0.0.6.dist-info/METADATA,sha256=4W8cp-UQF8_Yxop17iPXnOZp8hLDDDXktLy1DDP24_Q,640
+pipebit-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pipebit-0.0.6.dist-info/top_level.txt,sha256=RWIFv_ItOqmDaUTeQMJLj3nQrVAxmmVX_8oatdgBmGw,8
+pipebit-0.0.6.dist-info/RECORD,,
