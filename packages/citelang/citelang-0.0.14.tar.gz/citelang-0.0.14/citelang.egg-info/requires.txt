@@ -1,0 +1,13 @@
+rich
+pyaml
+jsonschema
+requests
+colour
+
+[all]
+rich
+pyaml
+jsonschema
+requests
+colour
+pytest>=4.6.2
