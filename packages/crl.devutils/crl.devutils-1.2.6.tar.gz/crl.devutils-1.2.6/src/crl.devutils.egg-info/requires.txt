@@ -1,0 +1,16 @@
+invoke==0.12.2
+check-manifest==0.41
+devpi-client==4.1.0
+detox==0.15
+tox==3.4.0
+future
+six
+rstcheck
+sphinx<1.8.0
+robotframework
+virtualenvrunner
+virtualenv==20.13.4
+configparser
+
+[:python_version > "3.0"]
+Jinja2==3.0.3
