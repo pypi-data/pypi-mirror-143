@@ -1,0 +1,14 @@
+shareable/__init__.py,sha256=VwlQKImORCCBgzrxzTHOruSIgoMBBMvHzIYz0twVPxM,33
+shareable/managers_decorators.py,sha256=qUueObmucm1SZFUWcqg6yS7MOE44lNLZqyM0KI_HHY0,1761
+shareable/producers.py,sha256=W2d5FFPMrZDnHGh5iL4uSgXdRfXycV9z1y2WQqZBxDs,1109
+shareable/shareable.py,sha256=FEYbTSg66TykmfYCRZuPSc4OZY71V6PpbD32tD4oUIQ,3190
+shareable/shared_objects.py,sha256=KISGWpQeaEPXPOu4RASI9dd_YbkyATZri3HbBBMfuYw,5497
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/shareable_test.py,sha256=jZf5O7etMQj35PIvcp9Qaq3xvtLIlkosBaiwSGLfh50,1364
+tests/single_state.py,sha256=LfMMA-8yRDEMNcSrNubrCy0ZkR4aBnopp-zbqqIJtmA,457
+tests/test_class.py,sha256=cBL2siMOtg9s5WGg-ZHInq61OdbIeuX3dvzBydbesMA,334
+shareable-0.6a0.dist-info/LICENSE,sha256=OAW7sD1smnxqG1UOx30SJ6DDUFHu3HRSxjJq5ZJaDLc,1072
+shareable-0.6a0.dist-info/METADATA,sha256=WlNf1wnQnmphFLKZQcX_PxAIjq9Gk5PhikHPkE6_9uE,2624
+shareable-0.6a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shareable-0.6a0.dist-info/top_level.txt,sha256=GhbKpdPQjH702sCOFXCXQmix6rghwNahz4ODngseK1U,16
+shareable-0.6a0.dist-info/RECORD,,
