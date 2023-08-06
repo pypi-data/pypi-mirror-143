@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ops-plugin-example"
+version = "0.1.6"
+description = "Example OPS Plugin"
+authors = ["Pascal Prins <pascal.prins@foobar-it.com>"]
+packages = [{include = "example"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.4"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."ops.plugins"]
+example_cli_commands = "example.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
