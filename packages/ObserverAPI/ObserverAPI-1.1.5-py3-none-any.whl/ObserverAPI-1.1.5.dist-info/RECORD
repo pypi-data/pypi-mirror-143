@@ -1,0 +1,15 @@
+ObserverAPI/__init__.py,sha256=GL27l-4tP6SsGQOJ_ECM4w4pR1T1b6peQL9t0ewJX5w,205
+ObserverAPI/client.py,sha256=3-aoFv1X8evH-MRag0LVrwvTM-OeNtPJfXqnZGGJqSQ,5552
+ObserverAPI/exception.py,sha256=JhibLNIQvHErsQ0fn8YhP35TBmc9807oktu6KdZAGDw,461
+ObserverAPI/observer.py,sha256=VNsl-SGN1WS7ptF9pqcqHydKQFVYUhbpBCmKZWW_Ypg,4291
+ObserverAPI/requests.py,sha256=WmB8WxXweYmQy4ty6VNRVMUbkXVmoiDI6IeD3KURkj0,15844
+ObserverAPI/utils.py,sha256=OEA1nxLqgjMV3sAiuYB3Yso2AuksItOjpXQOwFC0mVo,3622
+ObserverAPI/objects/__init__.py,sha256=MDyq1Np7zdhBTVv68iqxJperVj6h89b4nsd_4vkNmxg,1098
+ObserverAPI/objects/api.py,sha256=H188RioibD-XNfzVke6SkPdNl4PNBEmhik6ak2sn7zQ,717
+ObserverAPI/objects/leaderboards.py,sha256=8I_2Ha4hStdv1Boie-pgCLykJ9LJleEThPe7LJQgZeM,465
+ObserverAPI/objects/player.py,sha256=2Hz53uSTccSMGqTzhKke7LlzDhSEA5xur6kVQS3VxLs,11487
+ObserverAPI/objects/ranking.py,sha256=cJbZtF7ISk6mHFbURXa2liPc9f5kfqXqJK7LUIpnsUw,321
+ObserverAPI-1.1.5.dist-info/METADATA,sha256=2awkfiwnY6IfH8uro-jT5DsznFf5G59K2RW_RmsskFw,4924
+ObserverAPI-1.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ObserverAPI-1.1.5.dist-info/top_level.txt,sha256=RvQg0imyTM6Yw7cPS2Bej2onuxBKXbZH6oSjWDncQvc,12
+ObserverAPI-1.1.5.dist-info/RECORD,,
