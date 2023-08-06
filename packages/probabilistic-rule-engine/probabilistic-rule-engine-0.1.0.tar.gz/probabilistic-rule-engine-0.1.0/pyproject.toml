@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "probabilistic-rule-engine"
+version = "0.1.0"
+description = "Probabilistic Rule Engine"
+license = "MIT"
+authors = [
+    "Dmitry Lesnik <dmitry@stratyfy.com>",
+    "Nicholas Hughes <nick@stratyfy.com>"
+]
+
+readme = "README.md"  # Markdown files are supported
+repository = "https://github.com/stratyfy/probabilistic-rule-engine"
+homepage = "https://github.com/stratyfy/probabilistic-rule-engine"
+keywords = [
+  "probabilistic rule engine",
+  "data science",
+  "statistics",
+  "stratyfy"
+]
+
+[tool.poetry.dependencies]
+python = "*"
+numpy = "*"
+pandas = "*"
