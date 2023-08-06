@@ -1,0 +1,5 @@
+TurboGears2>=2.3.11
+gearbox
+PasteDeploy
+celery[mongodb]
+threadpool
