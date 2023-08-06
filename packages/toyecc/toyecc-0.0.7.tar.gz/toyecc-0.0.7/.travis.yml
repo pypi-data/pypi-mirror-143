@@ -1,0 +1,10 @@
+dist: focal
+language: python
+python:
+    - 3.9
+
+branches:
+    only:
+        - master
+
+script: python3 -m unittest toyecc.tests
