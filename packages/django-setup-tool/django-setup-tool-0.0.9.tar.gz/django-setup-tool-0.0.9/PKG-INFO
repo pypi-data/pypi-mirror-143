@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: django-setup-tool
+Version: 0.0.9
+Summary: Project initial extension for Django.
+Home-page: https://github.com/cafitac/django-initital-tool
+Author: cafitac
+Author-email: cafitac99@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/cafitac/django-initial-tool/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+========================
+Django Setup Tool
+========================
+
+Requirements
+========================
+- Python (3.6, 3.7, 3.8, 3.9, 3.10)
+- Django (2.2, 3.0, 3.1, 3.2, 4.0)
+Python 과 Django 의 공식적인 최신 릴리즈 버전을 사용하는 것을 권장드립니다.
+
+Installation
+========================
+``pip`` 를 사용합니다
+
+.. code-block::
+pip install django-setup-tool
+
+Example
+=====
+프로젝트 생성
+
+.. code-block::
+django-admin startproject django_project .
+
+앱 생성
+
+.. code-block::
+python manage.py startapp member .
+
