@@ -1,0 +1,5 @@
+docopt
+black
+flake8
+isort
+GitPython
