@@ -1,0 +1,4 @@
+apache-airflow>=2.1.0rc1
+
+[:platform_machine != "aarch64"]
+pymssql>=2.1.5
