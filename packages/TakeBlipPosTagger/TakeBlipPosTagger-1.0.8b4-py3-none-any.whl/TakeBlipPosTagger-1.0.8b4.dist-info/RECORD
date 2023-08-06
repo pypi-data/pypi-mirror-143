@@ -1,0 +1,16 @@
+TakeBlipPosTagger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TakeBlipPosTagger/data.py,sha256=gVO0pnlWjl2Z5pf7dpqEQk9wUmfspOhvKZHA7RGXmy0,4540
+TakeBlipPosTagger/mlflowlogger.py,sha256=VKOLAlr2QGjIV_PM-TEdAybAz0CraJGxDZw2F9rElUQ,4126
+TakeBlipPosTagger/model.py,sha256=yIUs6tclV5kAbXKOzotsRKRr969QJLS4d1Qgoj4x0Nc,11169
+TakeBlipPosTagger/process_option.py,sha256=zlRa_ksncphEo2kSCS0E6Lhlttafuanvbdedua3NqmM,54
+TakeBlipPosTagger/utils.py,sha256=42jRv5AXncfJn9DCmtiMY3lpP6koctmhNOOtsvfV2wM,3096
+TakeBlipPosTagger/vocab.py,sha256=7WAM25eJd0jbXLmu8Y7o1rchJWrPlc6j-j0G5UHk6Xk,2474
+TakeBlipPosTagger/predict/PosTaggerPredict.py,sha256=Bmhzo77uybNnO34cpVe3qDg_w-e_6eAXSkw-K0qV24g,5755
+TakeBlipPosTagger/predict/__init__.py,sha256=R6l8ggReRuzkD8DlCukDjAQU5O8PpkalXKifC0Ntgrc,46
+TakeBlipPosTagger/train/LSTMCRFTrainer.py,sha256=6UbidveLD7dnFM9XAlKqn7PJvi0ZIAhKFAXaTWZZ7t4,10517
+TakeBlipPosTagger/train/__init__.py,sha256=1W6svrV0WzryqwjeVKHhSD_ISHtlGu_rf2ZNq-CRhqE,42
+TakeBlipPosTagger-1.0.8b4.dist-info/LICENSE,sha256=rp9dDhjHuFuEHpGUYfsXGK0IZE_hxcXTjV9kmX3u4kQ,1069
+TakeBlipPosTagger-1.0.8b4.dist-info/METADATA,sha256=atmbbrvhDODAMS1GBo8ytLBpGJ4iriuCm5-xoiXvOpg,10775
+TakeBlipPosTagger-1.0.8b4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+TakeBlipPosTagger-1.0.8b4.dist-info/top_level.txt,sha256=QsCH7x48aAN5sNBB3bf1Lho_6DekliIiqawbNc1DrD4,18
+TakeBlipPosTagger-1.0.8b4.dist-info/RECORD,,
