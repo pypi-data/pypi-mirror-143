@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/py2crypt/__init__.py
+src/py2crypt/aes.py
+src/py2crypt/ecdh.py
+src/py2crypt/hkdf.py
+src/py2crypt/io.py
+src/py2crypt/mac.py
+src/py2crypt/rsa.py
+src/py2crypt.egg-info/PKG-INFO
+src/py2crypt.egg-info/SOURCES.txt
+src/py2crypt.egg-info/dependency_links.txt
+src/py2crypt.egg-info/requires.txt
+src/py2crypt.egg-info/top_level.txt
