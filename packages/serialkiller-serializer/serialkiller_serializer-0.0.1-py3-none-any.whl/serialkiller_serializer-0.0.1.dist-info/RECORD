@@ -1,0 +1,10 @@
+Serialkiller/Serializer.py,sha256=4ZLCwXdjSceTaXCOQ_ANG3TaxVPT0xZAvwxMXmZhvvk,2170
+Serialkiller/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Serialkiller/exc/DeserializationError.py,sha256=LDsu3WmsYrEpjbGQbFiG-mu9r5WjqnWhCYVYNmSwW9s,266
+Serialkiller/exc/SerializationError.py,sha256=RBekh3sShqh5zTAh5EfB4FCRZOW6sNaRMZ6x20SYQJI,264
+Serialkiller/exc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serialkiller_serializer-0.0.1.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+serialkiller_serializer-0.0.1.dist-info/METADATA,sha256=C2RqIENrztBUMHJJ_6FCBZZOLfCc9pNkvVbwV4f4ou0,293
+serialkiller_serializer-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+serialkiller_serializer-0.0.1.dist-info/top_level.txt,sha256=MceJ6iyXBJEuySVK0RKed5BNaIxtedO5tYI1xMrfzco,13
+serialkiller_serializer-0.0.1.dist-info/RECORD,,
