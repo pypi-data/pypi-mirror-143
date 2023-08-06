@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: me55enger-client
+Version: 0.0.2
+Summary: me55enger_client
+Home-page: UNKNOWN
+Author: Konstantin Benderov
+Author-email: konstantinbenderov@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
