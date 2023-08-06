@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+UnetsMM/__init__.py
+UnetsMM/vanilla_multimodelU.py
+UnetsMM.egg-info/PKG-INFO
+UnetsMM.egg-info/SOURCES.txt
+UnetsMM.egg-info/dependency_links.txt
+UnetsMM.egg-info/top_level.txt
