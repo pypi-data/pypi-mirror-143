@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: message-app-client
+Version: 0.0.2
+Summary: message_app_client
+Home-page: UNKNOWN
+Author: Sinitsyn Andrey
+Author-email: andrey-sin@yandex.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
+
