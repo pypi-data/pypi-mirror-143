@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fluentogram
+Version: 1.0.21
+Summary: An addon for i18n via Project Fluent by Mozilla with telegram bots built on Aiogram3.
+Home-page: https://packages.python.org/fluentogram
+Author: Aleksandr
+Author-email: 
+License: MIT
+Keywords: example documentation tutorial
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# fluentogram
+
+A proper way to create multilanguage bots via Aiogram3 using Project Fluent by Mozilla.
+
+Check examples directory for more information.
+

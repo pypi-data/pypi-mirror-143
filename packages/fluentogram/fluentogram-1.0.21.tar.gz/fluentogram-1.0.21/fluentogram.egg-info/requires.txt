@@ -1,0 +1,2 @@
+aiogram>=3.0.0b2
+fluent-compiler>=0.3
