@@ -1,0 +1,9 @@
+setup.py
+sketchpy-mob/__init__.py
+sketchpy-mob/canvas.py
+sketchpy-mob/library.py
+sketchpy_mob.egg-info/PKG-INFO
+sketchpy_mob.egg-info/SOURCES.txt
+sketchpy_mob.egg-info/dependency_links.txt
+sketchpy_mob.egg-info/requires.txt
+sketchpy_mob.egg-info/top_level.txt
