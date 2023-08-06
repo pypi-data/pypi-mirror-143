@@ -1,0 +1,7 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dynamodb_session_flask/__init__.py,sha256=t0WGNH-rMrBquJAel52ITPaRcZND23aaW3vTOQxukvA,190
+dynamodb_session_flask/_session.py,sha256=pq0gLXspA5dFyfAxloDc5wpFq-H0Y_61L5_kgs0GK8A,6767
+dynamodb_session_flask-0.5.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dynamodb_session_flask-0.5.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+dynamodb_session_flask-0.5.0.dist-info/METADATA,sha256=J7vAvl6WJIAlG1-ojuqi1uSo6VPjiwwXKs3vpycj2C8,6481
+dynamodb_session_flask-0.5.0.dist-info/RECORD,,
