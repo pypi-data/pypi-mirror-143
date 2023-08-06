@@ -1,0 +1,10 @@
+traderclient/__init__.py,sha256=KJtDEz23mkTrWPeWpsx8iuyCoW1Kxm6YvFHlezvoMM4,447
+traderclient/client.py,sha256=8UVUxX45-rKl-scxO225I287aHIaT-t4f7ELEI5cgQs,14090
+traderclient/test.py,sha256=LkxM6bAF_C15DlG2UyPO9q-YHubRQRGjw7GfbohS8is,7698
+traderclient/trade.py,sha256=Q-gVKwDIIB4ZADDRw0TiDrjjiUKKnYZ2415nPjoInQE,2936
+traderclient/transport.py,sha256=vMF2uG0xxIqz7Ip6gNiRZGKpzRB7PlRZbeBhghk-Bd0,3342
+traderclient/utils.py,sha256=Kdd1vZD6WGmYKKXQ8Y3-VQMdsStAz5R1o-mv0sxpMGQ,1001
+zillionare_trader_client-0.2.0a0.dist-info/LICENSE,sha256=GSrn8LTxgNarrSPcceeRHFq3SyNPOPp-5BD05ub2GA8,1068
+zillionare_trader_client-0.2.0a0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+zillionare_trader_client-0.2.0a0.dist-info/METADATA,sha256=wIEgwPbmSlnTOy53xWk1ARgkMUHQnMncAUhUhPC18kY,2859
+zillionare_trader_client-0.2.0a0.dist-info/RECORD,,
