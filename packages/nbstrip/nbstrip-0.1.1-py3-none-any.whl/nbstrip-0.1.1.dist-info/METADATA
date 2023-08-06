@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nbstrip
+Version: 0.1.1
+Summary: Strip all outputs and metadata from jupyter notebooks
+Home-page: https://github.com/ColmTalbot/nbstrip
+Author: Colm Talbot
+Author-email: talbotcolm@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+README.md
+
