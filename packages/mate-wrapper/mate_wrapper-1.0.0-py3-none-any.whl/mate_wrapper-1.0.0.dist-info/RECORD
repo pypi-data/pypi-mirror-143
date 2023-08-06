@@ -1,0 +1,15 @@
+MateWrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MateWrapper/bot.py,sha256=YQQ_2NqqY36RjVYLG__CIj1jFtXAGInXePxb2OFaqRg,2415
+MateWrapper/context.py,sha256=5E5t2LN8h3OxYKeTccPChiLnJOFvuItUV31wNtlWSAg,5018
+MateWrapper/generics.py,sha256=4ugPCm7rV3zjvvUNhpRIBJ-3IqaH0LQq4C2qvV9qvPM,3421
+MateWrapper/globals.py,sha256=--Wlt_YxdzuyZxNjt142NPZkO8yYrI5BxRxeAS9mXe8,1844
+MateWrapper/handlers.py,sha256=mwVL6IG5d9Zv-v7YPIEiPO9P7MXf5zCa7_3xVuTOTPQ,829
+MateWrapper/keyboards.py,sha256=b_nP8BVKJKLhwz7HSIyMhlHsXNROFCQfh7WRtyXk7QA,5619
+MateWrapper/menus.py,sha256=LmM4r-dgT1_ZGDigzXJ27o_xuX3QmSAUfpBMcz1pQSA,14242
+MateWrapper/prompts.py,sha256=jYcqqpYCv7MRU6Xlf7x1Ijguf0r0kMGem7Vo_Tui1wQ,10675
+MateWrapper/variables.py,sha256=veSPP17rtDNnKUgZ_8AaMtRRts0V83XQPgmRTHDjDyA,8367
+mate_wrapper-1.0.0.dist-info/LICENSE,sha256=AO2kHb6V9fkds8hNE4_csFYStKRJvcirWbqpQRg27JI,1092
+mate_wrapper-1.0.0.dist-info/METADATA,sha256=1XaJmRRQ058f-PJSIihomw8xu92KUYz2nLCQugVD1do,2347
+mate_wrapper-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mate_wrapper-1.0.0.dist-info/top_level.txt,sha256=4AbacDcZpGx31iBlVaVfJEK2JhksHzX_bJW8FLMtXzs,12
+mate_wrapper-1.0.0.dist-info/RECORD,,
