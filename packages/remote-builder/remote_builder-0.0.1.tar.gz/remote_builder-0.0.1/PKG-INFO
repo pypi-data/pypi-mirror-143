@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: remote_builder
+Version: 0.0.1
+Summary: A simple server/client RPC program to easily do RPM build remotely
+Home-page: https://github.com/pypingou/remote_builder
+Maintainer: Pierre-Yves Chibon
+Maintainer-email: pingou@pingoured.fr
+License: BSD
+Platform: Fedora
+Platform: CentOS-Stream
+Platform: GNU/Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+License-File: LICENSE
+
+UNKNOWN
+
