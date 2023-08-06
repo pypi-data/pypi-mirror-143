@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: confluent-kafka-wrapper
+Version: 0.0.3
+Summary: easy-use wrapper for confluent-kafka-wrapper
+Home-page: https://github.com/LuterGS/confluent-kafka-wrapper
+Author: LuterGS
+Author-email: koo04034@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: confluent-kafka (==1.8.2)
+
+Wrapper of confluent-kafka
+
