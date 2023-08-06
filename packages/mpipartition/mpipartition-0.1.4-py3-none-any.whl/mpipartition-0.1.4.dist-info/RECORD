@@ -1,0 +1,9 @@
+mpipartition/__init__.py,sha256=9mIi9-2iD7QUrV2u_WiH4RzqVODhRVKMZJ8FRarMvUA,274
+mpipartition/distribute.py,sha256=Ntal-wj4eWzq6gybKMBOtl2chPaqPD2WWqA3dQvof_o,4936
+mpipartition/exchange.py,sha256=3Aakcj4Wm73nqpMNYamFIpg_HDeLkP5OjNHXgepappY,11483
+mpipartition/overload.py,sha256=7fnqwreYh5FZ29jD9JvDxDFD_Wer4P7RKFnz4_tOGjo,5516
+mpipartition/partition.py,sha256=XUwnL_SYlJi68UPnfWZ8_0rOJMAIqBLosyt3ESjdjzE,7668
+mpipartition-0.1.4.dist-info/LICENSE,sha256=z0t5s3TaohuYtXJPY98uagwfZ4jpahjU9CtP11orWck,1076
+mpipartition-0.1.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+mpipartition-0.1.4.dist-info/METADATA,sha256=bF5Kk6kojJjlfxgxdQrfD0us_dXEIL1FzNZww78FMGs,601
+mpipartition-0.1.4.dist-info/RECORD,,
