@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/km3irf/__init__.py
+src/km3irf/calc.py
+src/km3irf/utils.py
+src/km3irf.egg-info/PKG-INFO
+src/km3irf.egg-info/SOURCES.txt
+src/km3irf.egg-info/dependency_links.txt
+src/km3irf.egg-info/requires.txt
+src/km3irf.egg-info/top_level.txt
