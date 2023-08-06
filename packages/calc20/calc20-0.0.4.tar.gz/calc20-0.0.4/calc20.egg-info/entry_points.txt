@@ -1,0 +1,3 @@
+[console_scripts]
+calc20 = calc20.main:main
+
