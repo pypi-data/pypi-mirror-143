@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.openGLWidget.quaternions &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.openGLWidget.quaternions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.openGLWidget.quaternions</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+
+<div class="viewcode-block" id="normalize"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.normalize">[docs]</a><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">0.001</span><span class="p">):</span>
+    <span class="n">mag2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mag2</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">tolerance</span><span class="p">:</span>
+        <span class="n">mag</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mag2</span><span class="p">)</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="n">mag</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span></div>
+
+
+<div class="viewcode-block" id="q_mult"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.q_mult">[docs]</a><span class="k">def</span> <span class="nf">q_mult</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">):</span>
+    <span class="n">w1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span> <span class="o">=</span> <span class="n">q1</span>
+    <span class="n">w2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">z2</span> <span class="o">=</span> <span class="n">q2</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">-</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">y1</span> <span class="o">*</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">z1</span> <span class="o">*</span> <span class="n">z2</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">+</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">y1</span> <span class="o">*</span> <span class="n">z2</span> <span class="o">-</span> <span class="n">z1</span> <span class="o">*</span> <span class="n">y2</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">y2</span> <span class="o">+</span> <span class="n">y1</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">z1</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">z2</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">z2</span> <span class="o">+</span> <span class="n">z1</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span> <span class="o">*</span> <span class="n">x2</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span></div>
+
+
+<div class="viewcode-block" id="q_conjugate"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.q_conjugate">[docs]</a><span class="k">def</span> <span class="nf">q_conjugate</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">q</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">z</span></div>
+
+
+<div class="viewcode-block" id="qv_mult"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.qv_mult">[docs]</a><span class="k">def</span> <span class="nf">qv_mult</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span> <span class="n">v1</span><span class="p">):</span>
+    <span class="n">q2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,)</span> <span class="o">+</span> <span class="n">v1</span>
+    <span class="k">return</span> <span class="n">q_mult</span><span class="p">(</span><span class="n">q_mult</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">),</span> <span class="n">q_conjugate</span><span class="p">(</span><span class="n">q1</span><span class="p">))[</span><span class="mi">1</span><span class="p">:]</span></div>
+
+
+<div class="viewcode-block" id="axisangle_to_q"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.axisangle_to_q">[docs]</a><span class="k">def</span> <span class="nf">axisangle_to_q</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">theta</span> <span class="o">/=</span> <span class="mi">2</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span></div>
+
+
+<div class="viewcode-block" id="q_to_axisangle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.q_to_axisangle">[docs]</a><span class="k">def</span> <span class="nf">q_to_axisangle</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">acos</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.0</span>
+    <span class="k">return</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">theta</span></div>
+
+
+<div class="viewcode-block" id="q_to_mat4"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/quaternions/index.html#optimeed.visualize.gui.widgets.openGLWidget.quaternions.q_to_mat4">[docs]</a><span class="k">def</span> <span class="nf">q_to_mat4</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">q</span>
+    <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

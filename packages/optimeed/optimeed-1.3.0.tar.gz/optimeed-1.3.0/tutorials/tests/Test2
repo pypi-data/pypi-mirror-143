@@ -1,0 +1,1 @@
+{"__module__": "optimeed.consolidate.sensitivity_analysis", "__class__": "SensitivityParameters", "list_of_optimization_variables": [{"attributeName": "x", "val_min": 0, "val_max": 10}, {"attributeName": "y", "val_min": 5, "val_max": 7}]}

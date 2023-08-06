@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.optimize.optiAlgorithms.convergence.hypervolume &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../optimize.html">optimeed.optimize</a> &raquo;</li>
+        
+          <li><a href="../../optiAlgorithms.html">optimeed.optimize.optiAlgorithms</a> &raquo;</li>
+        
+          <li><a href="../convergence.html">optimeed.optimize.optiAlgorithms.convergence</a> &raquo;</li>
+        
+      <li>optimeed.optimize.optiAlgorithms.convergence.hypervolume</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.optimize.optiAlgorithms.convergence.hypervolume</h1><div class="highlight"><pre>
+<span></span><span class="c1">#    Copyright (C) 2010 Simon Wessing</span>
+<span class="c1">#    TU Dortmund University</span>
+<span class="c1">#</span>
+<span class="c1">#    This program is free software: you can redistribute it and/or modify</span>
+<span class="c1">#    it under the terms of the GNU General Public License as published by</span>
+<span class="c1">#    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1">#    (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1">#    This program is distributed in the hope that it will be useful,</span>
+<span class="c1">#    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1">#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1">#    GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1">#    You should have received a copy of the GNU General Public License</span>
+<span class="c1">#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Simon Wessing&quot;</span>
+
+
+<div class="viewcode-block" id="HyperVolume"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.HyperVolume">[docs]</a><span class="k">class</span> <span class="nc">HyperVolume</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Hypervolume computation based on variant 3 of the algorithm in the paper:</span>
+<span class="sd">    C. M. Fonseca, L. Paquete, and M. Lopez-Ibanez. An improved dimension-sweep</span>
+<span class="sd">    algorithm for the hypervolume indicator. In IEEE Congress on Evolutionary</span>
+<span class="sd">    Computation, pages 1157-1163, Vancouver, Canada, July 2006.</span>
+
+<span class="sd">    Minimization is implicitly assumed here!</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">referencePoint</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Constructor.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">referencePoint</span> <span class="o">=</span> <span class="n">referencePoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="HyperVolume.compute"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.HyperVolume.compute">[docs]</a>    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">front</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the hypervolume that is dominated by a non-dominated front.</span>
+
+<span class="sd">        Before the HV computation, front and reference point are translated, so</span>
+<span class="sd">        that the reference point is [0, ..., 0].</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">weaklyDominates</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">point</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">point</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="n">relevantPoints</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">referencePoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">referencePoint</span>
+        <span class="n">dimensions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">referencePoint</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">front</span><span class="p">:</span>
+            <span class="c1"># only consider points that dominate the reference point</span>
+            <span class="k">if</span> <span class="n">weaklyDominates</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">referencePoint</span><span class="p">):</span>
+                <span class="n">relevantPoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">referencePoint</span><span class="p">):</span>
+            <span class="c1"># shift points so that referencePoint == [0, ..., 0]</span>
+            <span class="c1"># this way the reference point doesn&#39;t have to be explicitly used</span>
+            <span class="c1"># in the HV computation</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">relevantPoints</span><span class="p">)):</span>
+                <span class="n">relevantPoints</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">relevantPoints</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">referencePoint</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preProcess</span><span class="p">(</span><span class="n">relevantPoints</span><span class="p">)</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0e308</span><span class="p">]</span> <span class="o">*</span> <span class="n">dimensions</span>
+        <span class="n">hyperVolume</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hvRecursive</span><span class="p">(</span><span class="n">dimensions</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">relevantPoints</span><span class="p">),</span> <span class="n">bounds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">hyperVolume</span></div>
+
+<div class="viewcode-block" id="HyperVolume.hvRecursive"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.HyperVolume.hvRecursive">[docs]</a>    <span class="k">def</span> <span class="nf">hvRecursive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dimIndex</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Recursive call to hypervolume calculation.</span>
+
+<span class="sd">        In contrast to the paper, the code assumes that the reference point</span>
+<span class="sd">        is [0, ..., 0]. This allows the avoidance of a few operations.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">hvol</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">sentinel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">sentinel</span>
+        <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">hvol</span>
+        <span class="k">elif</span> <span class="n">dimIndex</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># special case: only one dimension</span>
+            <span class="c1"># why using hypervolume at all?</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">sentinel</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dimIndex</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># special case: two dimensions, end recursion</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">sentinel</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">h</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">p</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">sentinel</span><span class="p">:</span>
+                <span class="n">pCargo</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">cargo</span>
+                <span class="n">hvol</span> <span class="o">+=</span> <span class="n">h</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pCargo</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">pCargo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">h</span><span class="p">:</span>
+                    <span class="n">h</span> <span class="o">=</span> <span class="n">pCargo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">p</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">hvol</span> <span class="o">+=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">hvol</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">remove</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">remove</span>
+            <span class="n">reinsert</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">reinsert</span>
+            <span class="n">hvRecursive</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hvRecursive</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">sentinel</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">&lt;</span> <span class="n">dimIndex</span><span class="p">:</span>
+                    <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">bounds</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="ow">or</span> <span class="n">q</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">bounds</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]):</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">q</span>
+                <span class="n">remove</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">dimIndex</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+                <span class="n">length</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">qArea</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">area</span>
+            <span class="n">qCargo</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span>
+            <span class="n">qPrevDimIndex</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">hvol</span> <span class="o">=</span> <span class="n">qPrevDimIndex</span><span class="o">.</span><span class="n">volume</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">+</span> <span class="n">qPrevDimIndex</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">qCargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">-</span> <span class="n">qPrevDimIndex</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">qArea</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">qArea</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">dimIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">qArea</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="o">-</span><span class="n">qCargo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimIndex</span><span class="p">)]</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">volume</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">hvol</span>
+            <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">&gt;=</span> <span class="n">dimIndex</span><span class="p">:</span>
+                <span class="n">qArea</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">qPrevDimIndex</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">qArea</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">hvRecursive</span><span class="p">(</span><span class="n">dimIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">qArea</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">qPrevDimIndex</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]:</span>
+                    <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="n">dimIndex</span>
+            <span class="k">while</span> <span class="n">p</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">sentinel</span><span class="p">:</span>
+                <span class="n">pCargoDimIndex</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+                <span class="n">hvol</span> <span class="o">+=</span> <span class="n">q</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">pCargoDimIndex</span> <span class="o">-</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">])</span>
+                <span class="n">bounds</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">pCargoDimIndex</span>
+                <span class="n">reinsert</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">dimIndex</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+                <span class="n">length</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">p</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+                <span class="n">q</span><span class="o">.</span><span class="n">volume</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">hvol</span>
+                <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">&gt;=</span> <span class="n">dimIndex</span><span class="p">:</span>
+                    <span class="n">q</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">q</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">hvRecursive</span><span class="p">(</span><span class="n">dimIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">q</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]:</span>
+                        <span class="n">q</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="n">dimIndex</span>
+            <span class="n">hvol</span> <span class="o">-=</span> <span class="n">q</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span> <span class="o">*</span> <span class="n">q</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">dimIndex</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">hvol</span></div>
+
+<div class="viewcode-block" id="HyperVolume.preProcess"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.HyperVolume.preProcess">[docs]</a>    <span class="k">def</span> <span class="nf">preProcess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">front</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets up the list data structure needed for calculation.&quot;&quot;&quot;</span>
+        <span class="n">dimensions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">referencePoint</span><span class="p">)</span>
+        <span class="n">nodeList</span> <span class="o">=</span> <span class="n">MultiList</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">MultiList</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">front</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimensions</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sortByDimension</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+            <span class="n">nodeList</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="n">nodeList</span></div>
+
+<div class="viewcode-block" id="HyperVolume.sortByDimension"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.HyperVolume.sortByDimension">[docs]</a>    <span class="k">def</span> <span class="nf">sortByDimension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sorts the list of nodes by the i-th value of the contained points.&quot;&quot;&quot;</span>
+        <span class="c1"># build a list of tuples of (point[i], node)</span>
+        <span class="n">decorated</span> <span class="o">=</span> <span class="p">[(</span><span class="n">node</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">node</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">]</span>
+        <span class="c1"># sort by this value</span>
+        <span class="n">decorated</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="c1"># write back to original list</span>
+        <span class="n">nodes</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span> <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="ow">in</span> <span class="n">decorated</span><span class="p">]</span></div></div>
+
+
+<div class="viewcode-block" id="MultiList"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList">[docs]</a><span class="k">class</span> <span class="nc">MultiList</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A special data structure needed by FonsecaHyperVolume.</span>
+
+<span class="sd">    It consists of several doubly linked lists that share common nodes. So,</span>
+<span class="sd">    every node has multiple predecessors and successors, one in every list.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="MultiList.Node"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.Node">[docs]</a>    <span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numberLists</span><span class="p">,</span> <span class="n">cargo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cargo</span> <span class="o">=</span> <span class="n">cargo</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">volume</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+
+<div class="viewcode-block" id="MultiList.Node.__str__"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.Node.__str__">[docs]</a>        <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cargo</span><span class="p">)</span></div></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numberLists</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Constructor.</span>
+
+<span class="sd">        Builds &#39;numberLists&#39; doubly linked lists.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numberLists</span> <span class="o">=</span> <span class="n">numberLists</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span> <span class="o">=</span> <span class="n">MultiList</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="n">numberLists</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="p">]</span> <span class="o">*</span> <span class="n">numberLists</span>
+
+<div class="viewcode-block" id="MultiList.__str__"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">strings</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numberLists</span><span class="p">):</span>
+            <span class="n">currentList</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">node</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="p">:</span>
+                <span class="n">currentList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">strings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">currentList</span><span class="p">))</span>
+        <span class="n">stringRepr</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">:</span>
+            <span class="n">stringRepr</span> <span class="o">+=</span> <span class="n">string</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">stringRepr</span></div>
+
+<div class="viewcode-block" id="MultiList.__len__"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.__len__">[docs]</a>    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the number of lists that are included in this MultiList.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">numberLists</span></div>
+
+<div class="viewcode-block" id="MultiList.getLength"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.getLength">[docs]</a>    <span class="k">def</span> <span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the length of the i-th list.&quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">sentinel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">sentinel</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">while</span> <span class="n">node</span> <span class="o">!=</span> <span class="n">sentinel</span><span class="p">:</span>
+            <span class="n">length</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="MultiList.append"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Appends a node to the end of the list at the given index.&quot;&quot;&quot;</span>
+        <span class="n">lastButOne</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">lastButOne</span>
+        <span class="c1"># set the last element as the new one</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+        <span class="n">lastButOne</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span></div>
+
+<div class="viewcode-block" id="MultiList.extend"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extends the list at the given index with the nodes.&quot;&quot;&quot;</span>
+        <span class="n">sentinel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+            <span class="n">lastButOne</span> <span class="o">=</span> <span class="n">sentinel</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">sentinel</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">lastButOne</span>
+            <span class="c1"># set the last element as the new one</span>
+            <span class="n">sentinel</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+            <span class="n">lastButOne</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span></div>
+
+<div class="viewcode-block" id="MultiList.remove"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes and returns &#39;node&#39; from all lists in [0, &#39;index&#39;[.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+            <span class="n">predecessor</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">successor</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">predecessor</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">successor</span>
+            <span class="n">successor</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">predecessor</span>
+            <span class="k">if</span> <span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">node</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">node</span></div>
+
+<div class="viewcode-block" id="MultiList.reinsert"><a class="viewcode-back" href="../../../../../API/optimeed/optimize/optiAlgorithms/convergence/hypervolume/index.html#optimeed.optimize.optiAlgorithms.convergence.hypervolume.MultiList.reinsert">[docs]</a>    <span class="k">def</span> <span class="nf">reinsert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Inserts &#39;node&#39; at the position it had in all lists in [0, &#39;index&#39;[</span>
+<span class="sd">        before it was removed. This method assumes that the next and previous</span>
+<span class="sd">        nodes of the node that is reinserted are in the list.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+            <span class="k">if</span> <span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">node</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">bounds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">cargo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></div></div>
+
+<span class="c1">#</span>
+<span class="c1"># if __name__ == &quot;__main__&quot;:</span>
+<span class="c1">#     # Example:</span>
+<span class="c1">#     referencePoint = [0, 0]</span>
+<span class="c1">#     hv = HyperVolume(referencePoint)</span>
+<span class="c1">#     front = [[-1, 0], [-0.5, -1]]</span>
+<span class="c1">#     volume = hv.compute(front)</span>
+<span class="c1">#     print(volume)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

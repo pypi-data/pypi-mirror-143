@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>:mod:optimeed &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="consolidate" href="consolidate/index.html" />
+    <link rel="prev" title="License and Support" href="../../support.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/API/optimeed/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mod-optimeed">
+<h1><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code><a class="headerlink" href="#mod-optimeed" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-optimeed"></span><div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="consolidate/index.html"><strong>consolidate</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="consolidate/parametric_analysis/index.html"><code class="docutils literal notranslate"><span class="pre">parametric_analysis</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="core/index.html"><strong>core</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core/ansi2html/index.html"><strong>ansi2html</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/ansi2html/converter/index.html"><code class="docutils literal notranslate"><span class="pre">converter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/ansi2html/style/index.html"><code class="docutils literal notranslate"><span class="pre">style</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/ansi2html/util/index.html"><code class="docutils literal notranslate"><span class="pre">util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core/additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimize/index.html"><strong>optimize</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimize/characterization/index.html"><strong>characterization</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimize/characterization/characterization/index.html"><code class="docutils literal notranslate"><span class="pre">characterization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/characterization/interfaceCharacterization/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceCharacterization</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/mathsToPhysics/index.html"><strong>mathsToPhysics</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimize/mathsToPhysics/interfaceMathsToPhysics/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceMathsToPhysics</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/mathsToPhysics/mathsToPhysics/index.html"><code class="docutils literal notranslate"><span class="pre">mathsToPhysics</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/objAndCons/index.html"><strong>objAndCons</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimize/objAndCons/fastObjCons/index.html"><code class="docutils literal notranslate"><span class="pre">fastObjCons</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/objAndCons/interfaceObjCons/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceObjCons</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/optiAlgorithms/index.html"><strong>optiAlgorithms</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimize/optiAlgorithms/convergence/index.html"><strong>convergence</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimize/optiAlgorithms/convergence/evolutionaryConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">evolutionaryConvergence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimize/optiAlgorithms/convergence/hypervolume/index.html"><code class="docutils literal notranslate"><span class="pre">hypervolume</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimize/optiAlgorithms/convergence/interfaceConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceConvergence</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/optiAlgorithms/NLOpt_Algorithm/index.html"><code class="docutils literal notranslate"><span class="pre">NLOpt_Algorithm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/optiAlgorithms/algorithmInterface/index.html"><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimize/optiAlgorithms/multiObjective_GA/index.html"><code class="docutils literal notranslate"><span class="pre">multiObjective_GA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/optiVariable/index.html"><code class="docutils literal notranslate"><span class="pre">optiVariable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimize/optimizer/index.html"><code class="docutils literal notranslate"><span class="pre">optimizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visualize/index.html"><strong>visualize</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualize/gui/index.html"><strong>gui</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/actions_data_selector/index.html"><strong>actions_data_selector</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/actions_data_selector/on_select_new_trace/index.html"><code class="docutils literal notranslate"><span class="pre">on_select_new_trace</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/widgets/index.html"><strong>widgets</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/index.html"><strong>graphsVisualWidget</strong></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/index.html"><strong>examplesActionOnClick</strong></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_anim</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_change_symbol/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_change_symbol</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_copy_something/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_copy_something</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_delete</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_draw_device/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_draw_device</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_export_collection</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_extract_pareto/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_extract_pareto</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_measure</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_remove_trace/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_remove_trace</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_showinfo</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html"><code class="docutils literal notranslate"><span class="pre">graphVisual</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html"><code class="docutils literal notranslate"><span class="pre">pyqtgraphRedefine</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/smallGui/index.html"><code class="docutils literal notranslate"><span class="pre">smallGui</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html"><code class="docutils literal notranslate"><span class="pre">traceVisual</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/index.html"><strong>openGLWidget</strong></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/ContextHandler/index.html"><code class="docutils literal notranslate"><span class="pre">ContextHandler</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/DeviceDrawerInterface/index.html"><code class="docutils literal notranslate"><span class="pre">DeviceDrawerInterface</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/Materials_visual/index.html"><code class="docutils literal notranslate"><span class="pre">Materials_visual</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html"><code class="docutils literal notranslate"><span class="pre">OpenGlFunctions_Library</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/TriangulatePolygon/index.html"><code class="docutils literal notranslate"><span class="pre">TriangulatePolygon</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="visualize/gui/widgets/openGLWidget/quaternions/index.html"><code class="docutils literal notranslate"><span class="pre">quaternions</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_graphs_visual/index.html"><code class="docutils literal notranslate"><span class="pre">widget_graphs_visual</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_image/index.html"><code class="docutils literal notranslate"><span class="pre">widget_image</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_line_drawer/index.html"><code class="docutils literal notranslate"><span class="pre">widget_line_drawer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_menuButton/index.html"><code class="docutils literal notranslate"><span class="pre">widget_menuButton</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_openGL/index.html"><code class="docutils literal notranslate"><span class="pre">widget_openGL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualize/gui/widgets/widget_text/index.html"><code class="docutils literal notranslate"><span class="pre">widget_text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualize/gui/gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="visualize/displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualize/fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="optimeed.VERSION">
+<code class="sig-name descname">VERSION</code><em class="property"> = 1.1.3</em><a class="headerlink" href="#optimeed.VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="consolidate/index.html" class="btn btn-neutral float-right" title="consolidate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../support.html" class="btn btn-neutral float-left" title="License and Support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

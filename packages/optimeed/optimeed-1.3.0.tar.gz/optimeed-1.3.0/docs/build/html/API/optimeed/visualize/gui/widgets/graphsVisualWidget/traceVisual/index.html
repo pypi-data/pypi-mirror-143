@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>traceVisual &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="openGLWidget" href="../../openGLWidget/index.html" />
+    <link rel="prev" title="smallGui" href="../smallGui/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html"><strong>gui</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../actions_data_selector/index.html"><strong>actions_data_selector</strong></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><strong>widgets</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><strong>gui</strong></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>widgets</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>graphsVisualWidget</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">traceVisual</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../_sources/API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual">
+<span id="tracevisual"></span><h1><code class="docutils literal notranslate"><span class="pre">traceVisual</span></code><a class="headerlink" href="#module-optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual">
+<em class="property">class </em><code class="sig-name descname">TraceVisual</code><span class="sig-paren">(</span><em class="sig-param">theData</em>, <em class="sig-param">theWGPlot</em>, <em class="sig-param">highlight_last</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>Defines a trace in a graph.</p>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem">
+<em class="property">class </em><code class="sig-name descname">_ModifiedPaintElem</code><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual._ModifiedPaintElem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hidden class to manage brushes or pens</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.add_modified_paintElem">
+<code class="sig-name descname">add_modified_paintElem</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index</em>, <em class="sig-param">newPaintElem</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual._ModifiedPaintElem.add_modified_paintElem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.add_modified_paintElem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.modify_paintElems">
+<code class="sig-name descname">modify_paintElems</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">paintElemsIn_List</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual._ModifiedPaintElem.modify_paintElems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.modify_paintElems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply transformation to paintElemsIn_List</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>paintElemsIn_List</strong> – list of brushes or pens to modify</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>False if nothing has been modified, True is something has been modified</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset_paintElem">
+<code class="sig-name descname">reset_paintElem</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual._ModifiedPaintElem.reset_paintElem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset_paintElem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove transformation of point index</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual._ModifiedPaintElem.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.signal_must_update">
+<code class="sig-name descname">signal_must_update</code><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.signal_must_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide_points">
+<code class="sig-name descname">hide_points</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.hide_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide all the points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_color">
+<code class="sig-name descname">get_color</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get colour of the trace, return tuple (r,g,b)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_color">
+<code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">color</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set colour of the trace, argument as tuple (r,g,b)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_brush">
+<code class="sig-name descname">get_base_symbol_brush</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_base_symbol_brush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_brush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get symbol brush configured for this trace, return <code class="xref py py-class docutils literal notranslate"><span class="pre">pg.QBrush</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_pen">
+<code class="sig-name descname">get_base_pen</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_base_pen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_pen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pen configured for this trace, return <code class="xref py py-class docutils literal notranslate"><span class="pre">pg.QPen</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_pen">
+<code class="sig-name descname">get_base_symbol_pen</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_base_symbol_pen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_pen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get symbol pen configured for this trace, return <code class="xref py py-class docutils literal notranslate"><span class="pre">pg.QPen</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol">
+<code class="sig-name descname">get_base_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_base_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get base symbol configured for this trace, return str of the symbol (e.g. ‘o’)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbol">
+<code class="sig-name descname">get_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">size</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get actual symbols for the trace. If the symbols have been modified: return a list which maps each points to a symbol.
+Otherwise: return :meth:TraceVisual.get_base_symbol()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.updateTrace">
+<code class="sig-name descname">updateTrace</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.updateTrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.updateTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forces the trace to refresh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_length">
+<code class="sig-name descname">get_length</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of data to plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide">
+<code class="sig-name descname">hide</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.hide"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hides the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.toggle">
+<code class="sig-name descname">toggle</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">boolean</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.toggle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle the trace (hide/show)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_data">
+<code class="sig-name descname">get_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data to plot <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_brushes">
+<code class="sig-name descname">get_brushes</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">size</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_brushes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_brushes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get actual brushes for the trace (=symbol filling). return a list which maps each points to a symbol brush</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brush">
+<code class="sig-name descname">set_brush</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em>, <em class="sig-param">newbrush</em>, <em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_brush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the symbol brush for a specific point:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indexPoint</strong> – Index of the point (in the graph) to modify</p></li>
+<li><p><strong>newbrush</strong> – either QBrush or tuple (r, g, b) of the new brush</p></li>
+<li><p><strong>update</strong> – if True, update the trace afterwards. This is slow operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbol">
+<code class="sig-name descname">set_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em>, <em class="sig-param">newSymbol</em>, <em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the symbol shape for a specific point:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indexPoint</strong> – Index of the point (in the graph) to modify</p></li>
+<li><p><strong>newSymbol</strong> – string of the new symbol (e.g.: ‘o’)</p></li>
+<li><p><strong>update</strong> – if True, update the trace afterwards. This is slow operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brushes">
+<code class="sig-name descname">set_brushes</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">list_indexPoint</em>, <em class="sig-param">list_newbrush</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_brushes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brushes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brush" title="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_brush()</span></code></a> but by taking a list as input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_brush">
+<code class="sig-name descname">reset_brush</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em>, <em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.reset_brush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_brush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the brush of the point indexpoint</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_brushes">
+<code class="sig-name descname">reset_all_brushes</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.reset_all_brushes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_brushes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the brushes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbol">
+<code class="sig-name descname">reset_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em>, <em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.reset_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the symbol shape of the point indexpoint</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbolPens">
+<code class="sig-name descname">get_symbolPens</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">size</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_symbolPens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbolPens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get actual symbol pens for the trace (=symbol outline). return a list which maps each points to a symbol pen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPen">
+<code class="sig-name descname">set_symbolPen</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em>, <em class="sig-param">newPen</em>, <em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_symbolPen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the symbol shape for a specific point:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indexPoint</strong> – Index of the point (in the graph) to modify</p></li>
+<li><p><strong>newPen</strong> – QPen item or tuple of the color (r,g,b)</p></li>
+<li><p><strong>update</strong> – if True, update the trace afterwards. This is slow operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPens">
+<code class="sig-name descname">set_symbolPens</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">list_indexPoint</em>, <em class="sig-param">list_newpens</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_symbolPens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPen" title="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_symbolPen()</span></code></a> but by taking a list as input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbolPen">
+<code class="sig-name descname">reset_symbolPen</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.reset_symbolPen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbolPen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the symbol pen of the point indexpoint</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_symbolPens">
+<code class="sig-name descname">reset_all_symbolPens</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.reset_all_symbolPens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_symbolPens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the symbol pens</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_pen_linestyle">
+<em class="property">static </em><code class="sig-name descname">set_pen_linestyle</code><span class="sig-paren">(</span><em class="sig-param">thePen</em>, <em class="sig-param">linestyle</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.set_pen_linestyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_pen_linestyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform a pen for dashed lines:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thePen</strong> – QPen item</p></li>
+<li><p><strong>linestyle</strong> – str (e.g.: ‘.’, ‘.-‘, ‘–’, …)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_point">
+<code class="sig-name descname">get_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual.html#TraceVisual.get_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return object pyqtgraph.SpotItem</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../openGLWidget/index.html" class="btn btn-neutral float-right" title="openGLWidget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../smallGui/index.html" class="btn btn-neutral float-left" title="smallGui" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.traceVisual</span> <span class="k">import</span> <span class="n">TraceVisual</span>
+<span class="kn">from</span> <span class="nn">.pyqtgraphRedefine</span> <span class="k">import</span> <span class="n">myLegend</span><span class="p">,</span> <span class="n">myAxis</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">printIfShown</span><span class="p">,</span> <span class="n">SHOW_WARNING</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtGui</span>
+<span class="c1"># from . import pyqtgraph as pg</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.color_palette</span> <span class="k">import</span> <span class="n">default_palette</span>
+
+
+<div class="viewcode-block" id="GraphVisual"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual">[docs]</a><span class="k">class</span> <span class="nc">GraphVisual</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Provide an interface to a graph. A graph contains traces.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theWidgetGraphVisual</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param theWidgetGraphVisual: :class:`~optimeed.visualize.gui.widgets.widget_graphs_visual.widget_graphs_visual`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span> <span class="o">=</span> <span class="n">theWidgetGraphVisual</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">addPlot</span><span class="p">(</span><span class="n">axisItems</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="n">myAxis</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">),</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="n">myAxis</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)})</span>
+        <span class="c1"># self.theWGPlot.disableAutoRange()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">legend</span> <span class="o">=</span> <span class="n">myLegend</span><span class="p">(</span><span class="n">is_light</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">is_light</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">setParentItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">vb</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">showGrid</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_fontTicks</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">palette</span> <span class="o">=</span> <span class="n">default_palette</span>
+
+<div class="viewcode-block" id="GraphVisual.set_fontTicks"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontTicks">[docs]</a>    <span class="k">def</span> <span class="nf">set_fontTicks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fontSize</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Set font of the ticks</span>
+
+<span class="sd">        :param fontSize: Size of the font</span>
+<span class="sd">        :param fontname: Name of the font</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QFont</span><span class="p">()</span>
+        <span class="n">font</span><span class="o">.</span><span class="n">setPointSizeF</span><span class="p">(</span><span class="n">fontSize</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">fontname</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">font</span><span class="o">.</span><span class="n">setFamily</span><span class="p">(</span><span class="n">fontname</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="s2">&quot;bottom&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tickFont</span> <span class="o">=</span> <span class="n">font</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tickFont</span> <span class="o">=</span> <span class="n">font</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_numberTicks"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_numberTicks">[docs]</a>    <span class="k">def</span> <span class="nf">set_numberTicks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Set the number of ticks to be displayed</span>
+
+<span class="sd">        :param number: Number of ticks for the axis</span>
+<span class="sd">        :param axis: Axis (string, &quot;bottom&quot;, &quot;left&quot;, &quot;right&quot;, &quot;top&quot;)</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span><span class="o">.</span><span class="n">set_number_ticks</span><span class="p">(</span><span class="n">number</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_fontLabel"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLabel">[docs]</a>    <span class="k">def</span> <span class="nf">set_fontLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fontSize</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set font of the axis labels</span>
+
+<span class="sd">        :param fontSize: font size</span>
+<span class="sd">        :param color: color in hexadecimal (str)</span>
+<span class="sd">        :param fontname: name of the font&quot;&quot;&quot;</span>
+        <span class="n">labelStyle</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;font-size&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">fontSize</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;pt&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">color</span><span class="p">,</span> <span class="s2">&quot;font-family&quot;</span><span class="p">:</span> <span class="n">fontname</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setLabel</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">labelStyle</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setLabel</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">labelStyle</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.get_legend"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_legend">[docs]</a>    <span class="k">def</span> <span class="nf">get_legend</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">myLegend</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get the legend&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">legend</span></div>
+
+<div class="viewcode-block" id="GraphVisual.get_axis"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_axis">[docs]</a>    <span class="k">def</span> <span class="nf">get_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">myAxis</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get the axis</span>
+
+<span class="sd">        :param axis: Axis (string, &quot;bottom&quot;, &quot;left&quot;, &quot;right&quot;, &quot;top&quot;)</span>
+<span class="sd">        :return: axis object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_fontLegend"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLegend">[docs]</a>    <span class="k">def</span> <span class="nf">set_fontLegend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font_size</span><span class="p">,</span> <span class="n">font_color</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_font</span><span class="p">(</span><span class="n">font_size</span><span class="p">,</span> <span class="n">font_color</span><span class="p">,</span> <span class="n">fontname</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_label_pos"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_label_pos">[docs]</a>    <span class="k">def</span> <span class="nf">set_label_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="n">orientation</span><span class="p">)</span><span class="o">.</span><span class="n">set_label_pos</span><span class="p">(</span><span class="n">orientation</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">,</span> <span class="n">y_offset</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_color_palette"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_color_palette">[docs]</a>    <span class="k">def</span> <span class="nf">set_color_palette</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">palette</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">palette</span> <span class="o">=</span> <span class="n">palette</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apply_palette</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="GraphVisual.apply_palette"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.apply_palette">[docs]</a>    <span class="k">def</span> <span class="nf">apply_palette</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">numb_color_to_set</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_color</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">numb_color_to_set</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">theColors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">palette</span><span class="p">(</span><span class="n">numb_color_to_set</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">trace</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_color</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">trace</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">theColors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="GraphVisual.hide_axes"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.hide_axes">[docs]</a>    <span class="k">def</span> <span class="nf">hide_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">showGrid</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="s2">&quot;bottom&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">getAxis</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="GraphVisual.add_feature"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_feature">[docs]</a>    <span class="k">def</span> <span class="nf">add_feature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theFeature</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To add any pyqtgraph item to the graph&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">theFeature</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.remove_feature"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.remove_feature">[docs]</a>    <span class="k">def</span> <span class="nf">remove_feature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theFeature</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To remove any pyqtgraph item from the graph&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">removeItem</span><span class="p">(</span><span class="n">theFeature</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.add_data"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_data">[docs]</a>    <span class="k">def</span> <span class="nf">add_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">theData</span><span class="p">):</span>
+        <span class="n">theTrace</span> <span class="o">=</span> <span class="n">TraceVisual</span><span class="p">(</span><span class="n">theData</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="p">,</span> <span class="n">highlight_last</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">highlight_last</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_graph_properties</span><span class="p">(</span><span class="n">theTrace</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_graph_properties"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_graph_properties">[docs]</a>    <span class="k">def</span> <span class="nf">set_graph_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This function is automatically called on creation of the graph&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">is_light</span><span class="p">:</span>
+            <span class="n">label_color</span> <span class="o">=</span> <span class="s1">&#39;#000&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">label_color</span> <span class="o">=</span> <span class="s1">&#39;#FFF&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setLabel</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">theTrace</span><span class="o">.</span><span class="n">theData</span><span class="o">.</span><span class="n">get_x_label</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setLabel</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">theTrace</span><span class="o">.</span><span class="n">theData</span><span class="o">.</span><span class="n">get_y_label</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_fontLabel</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">label_color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_lims</span><span class="p">(</span><span class="n">theTrace</span><span class="o">.</span><span class="n">theData</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">(),</span> <span class="n">theTrace</span><span class="o">.</span><span class="n">theData</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_lims"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_lims">[docs]</a>    <span class="k">def</span> <span class="nf">set_lims</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set limits of the graphs, xlim or ylim = [val_low, val_high]. Or None.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">xlim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setXRange</span><span class="p">(</span><span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setAutoVisible</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">ylim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setYRange</span><span class="p">(</span><span class="n">ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setAutoVisible</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.add_trace"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_trace">[docs]</a>    <span class="k">def</span> <span class="nf">add_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.TraceVisual.TraceVisual` to the graph, with index idTrace&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span> <span class="o">=</span> <span class="n">theTrace</span>
+        <span class="n">theTrace</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">sigPointsClicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">on_click</span><span class="p">)</span>  <span class="c1"># Connect the function &quot;on click&quot;</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_legend"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_legend">[docs]</a>    <span class="k">def</span> <span class="nf">set_legend</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set default legend options (color and font)&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">is_light</span><span class="p">:</span>
+            <span class="n">legend_color</span> <span class="o">=</span> <span class="s1">&#39;#111&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">legend_color</span> <span class="o">=</span> <span class="s1">&#39;#DDD&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_fontLegend</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">legend_color</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.set_title"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_title">[docs]</a>    <span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titleName</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set title of the graph</span>
+
+<span class="sd">        :param titleName: title to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">titleName</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.get_trace"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_trace">[docs]</a>    <span class="k">def</span> <span class="nf">get_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TraceVisual</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.TraceVisual.TraceVisual` correspondong to the index idTrace&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="GraphVisual.get_all_traces"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_all_traces">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_traces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a dictionary {idtrace: :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.TraceVisual.TraceVisual`}.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span></div>
+
+<div class="viewcode-block" id="GraphVisual.delete_trace"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete_trace">[docs]</a>    <span class="k">def</span> <span class="nf">delete_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete the trace of index idTrace&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">removeItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span><span class="o">.</span><span class="n">thePlotItem</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">traceVisuals</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+            <span class="c1"># self.signal_must_update.emit()</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Trace already deleted&quot;</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.delete"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete the graph&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWidgetGraphVisual</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">centralWidget</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">removeItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.linkXToGraph"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.linkXToGraph">[docs]</a>    <span class="k">def</span> <span class="nf">linkXToGraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Link the axis of the current graph to an other :class:`GraphVisual`&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setXLink</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">theWGPlot</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.update"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update the traces contained in the graph&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">trace</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="GraphVisual.fast_update"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.fast_update">[docs]</a>    <span class="k">def</span> <span class="nf">fast_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Same as :meth:`~GraphVisual.update` but faster. This is NOT thread safe (cannot be called a second time before finishing operation)&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">trace</span><span class="o">.</span><span class="n">updateTrace</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="GraphVisual.axis_equal"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.axis_equal">[docs]</a>    <span class="k">def</span> <span class="nf">axis_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">vb</span><span class="o">.</span><span class="n">setAspectLocked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.log_mode"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.log_mode">[docs]</a>    <span class="k">def</span> <span class="nf">log_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">setLogMode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphVisual.grid_off"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.grid_off">[docs]</a>    <span class="k">def</span> <span class="nf">grid_off</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Turn off grid&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">showGrid</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

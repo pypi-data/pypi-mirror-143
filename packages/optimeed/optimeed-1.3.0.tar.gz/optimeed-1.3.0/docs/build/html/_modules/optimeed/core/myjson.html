@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.myjson &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.myjson</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.myjson</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">ast</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">rgetattr</span><span class="p">,</span> <span class="n">rsetattr</span>
+
+<div class="viewcode-block" id="MODULE_TAG"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.MODULE_TAG">[docs]</a><span class="n">MODULE_TAG</span> <span class="o">=</span> <span class="s1">&#39;__module__&#39;</span></div>
+<div class="viewcode-block" id="CLASS_TAG"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.CLASS_TAG">[docs]</a><span class="n">CLASS_TAG</span> <span class="o">=</span> <span class="s1">&#39;__class__&#39;</span></div>
+<div class="viewcode-block" id="EXCLUDED_TAGS"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.EXCLUDED_TAGS">[docs]</a><span class="n">EXCLUDED_TAGS</span> <span class="o">=</span> <span class="p">[</span><span class="n">CLASS_TAG</span><span class="p">,</span> <span class="n">MODULE_TAG</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="SaveableObject"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.SaveableObject">[docs]</a><span class="k">class</span> <span class="nc">SaveableObject</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Abstract class for dynamically type-hinted objects.</span>
+<span class="sd">    This class is to solve the special case where the exact type of an attribute is not known before runtime, yet has to be saved.&quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="SaveableObject.get_additional_attributes_to_save"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.SaveableObject.get_additional_attributes_to_save">[docs]</a>    <span class="k">def</span> <span class="nf">get_additional_attributes_to_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return list of attributes corresponding to object, whose type cannot be determined statically (e.g. topology change)&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="_get_object_class"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._get_object_class">[docs]</a><span class="k">def</span> <span class="nf">_get_object_class</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">theObj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__qualname__</span></div>
+
+
+<div class="viewcode-block" id="_get_object_module"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._get_object_module">[docs]</a><span class="k">def</span> <span class="nf">_get_object_module</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">theObj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span>
+    <span class="k">if</span> <span class="n">module</span> <span class="o">==</span> <span class="nb">str</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">module</span></div>
+
+
+<div class="viewcode-block" id="_object_to_FQCN"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._object_to_FQCN">[docs]</a><span class="k">def</span> <span class="nf">_object_to_FQCN</span><span class="p">(</span><span class="n">theobj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Gets module path of object&quot;&quot;&quot;</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">theobj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span>
+    <span class="k">if</span> <span class="n">module</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">module</span> <span class="o">==</span> <span class="nb">str</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">theobj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__qualname__</span>
+    <span class="k">return</span> <span class="n">module</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">theobj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__qualname__</span></div>
+    <span class="c1">#</span>
+    <span class="c1"># return theobj.__module__ + &#39;.&#39; + theobj.__class__.__name__</span>
+
+
+<div class="viewcode-block" id="_find_class"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._find_class">[docs]</a><span class="k">def</span> <span class="nf">_find_class</span><span class="p">(</span><span class="n">moduleName</span><span class="p">,</span> <span class="n">className</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">importlib</span>
+    <span class="n">splitted_name</span> <span class="o">=</span> <span class="n">className</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+    <span class="n">begin</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">parentClass</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">splitted_name</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">begin</span><span class="p">:</span>
+            <span class="n">parentClass</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">moduleName</span><span class="p">),</span> <span class="n">name</span><span class="p">)</span>
+            <span class="n">begin</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">parentClass</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">parentClass</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parentClass</span></div>
+
+
+<div class="viewcode-block" id="json_to_obj"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.json_to_obj">[docs]</a><span class="k">def</span> <span class="nf">json_to_obj</span><span class="p">(</span><span class="n">json_dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convenience class to create object from dictionary. Only works if CLASS_TAG is valid</span>
+
+<span class="sd">    :param json_dict: dictionary loaded from a json file.</span>
+<span class="sd">    :raise TypeError: if class can not be found</span>
+<span class="sd">    :raise KeyError: if CLASS_TAG not present in dictionary</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="n">_find_class</span><span class="p">(</span><span class="n">json_dict</span><span class="p">[</span><span class="n">MODULE_TAG</span><span class="p">],</span> <span class="n">json_dict</span><span class="p">[</span><span class="n">CLASS_TAG</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">json_to_obj_safe</span><span class="p">(</span><span class="n">json_dict</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">raise</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;Object class not defined, can not create data. Use from_json_safe method to specify which class to load.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="json_to_obj_safe"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.json_to_obj_safe">[docs]</a><span class="k">def</span> <span class="nf">json_to_obj_safe</span><span class="p">(</span><span class="n">json_dict</span><span class="p">,</span> <span class="bp">cls</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Safe class to create object from dictionary.</span>
+
+<span class="sd">    :param json_dict: dictionary loaded from a json file</span>
+<span class="sd">    :param cls: class object to instantiate with dictionary</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">List</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">):</span>
+        <span class="n">list_type</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__args__</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">json_dict</span><span class="p">:</span>
+            <span class="n">instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">json_to_obj_safe</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">list_type</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">List</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">instance</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">Dict</span><span class="p">):</span>
+        <span class="n">key_type</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__args__</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">val_type</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__args__</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">instance</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">json_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">instance</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">json_to_obj_safe</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">key_type</span><span class="p">):</span> <span class="n">json_to_obj_safe</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">val_type</span><span class="p">)})</span>
+        <span class="k">return</span> <span class="n">instance</span>
+    <span class="k">elif</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">complex</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">json_dict</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Object must be instantiated</span>
+        <span class="n">theInstance</span> <span class="o">=</span> <span class="n">_instantiates_annotated_object</span><span class="p">(</span><span class="n">json_dict</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theInstance</span></div>
+
+
+<div class="viewcode-block" id="_instantiates_annotated_object"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._instantiates_annotated_object">[docs]</a><span class="k">def</span> <span class="nf">_instantiates_annotated_object</span><span class="p">(</span><span class="n">_json_dict</span><span class="p">,</span> <span class="n">_cls</span><span class="p">):</span>
+    <span class="n">annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">_cls</span><span class="o">.</span><span class="vm">__annotations__</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">_cls</span><span class="p">,</span> <span class="s1">&#39;__annotations__&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="c1"># Instantiate the object</span>
+    <span class="n">entranceParams</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">_cls</span><span class="p">)</span><span class="o">.</span><span class="n">parameters</span>
+    <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="n">param</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">annotation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">param</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                <span class="n">entranceParams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">param</span><span class="o">.</span><span class="n">annotation</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">entranceParams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">entranceParams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">param</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+    <span class="c1"># We desactivate the print during the reinstantiation of all the defaults elements:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">instance</span> <span class="o">=</span> <span class="n">_cls</span><span class="p">(</span><span class="o">*</span><span class="n">entranceParams</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+
+    <span class="c1"># Set object attributes from data items</span>
+    <span class="k">if</span> <span class="n">annotations</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">_json_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">EXCLUDED_TAGS</span><span class="p">:</span>
+                <span class="n">field_type</span> <span class="o">=</span> <span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">field_type</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">set</span><span class="p">,</span> <span class="nb">frozenset</span><span class="p">)):</span>
+                    <span class="n">rsetattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">json_to_obj_safe</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">field_type</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">rsetattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">SaveableObject</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">additionalAttribute</span> <span class="ow">in</span> <span class="n">instance</span><span class="o">.</span><span class="n">get_additional_attributes_to_save</span><span class="p">():</span>
+            <span class="n">theSubDict</span> <span class="o">=</span> <span class="n">_json_dict</span><span class="p">[</span><span class="n">additionalAttribute</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">rsetattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">additionalAttribute</span><span class="p">,</span> <span class="n">json_to_obj</span><span class="p">(</span><span class="n">theSubDict</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="n">rsetattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">additionalAttribute</span><span class="p">,</span> <span class="n">theSubDict</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">instance</span></div>
+
+
+<div class="viewcode-block" id="_get_annotations"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._get_annotations">[docs]</a><span class="k">def</span> <span class="nf">_get_annotations</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return annotated attributes&quot;&quot;&quot;</span>
+
+    <span class="n">annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">theObj</span><span class="o">.</span><span class="vm">__annotations__</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">theObj</span><span class="p">,</span> <span class="s1">&#39;__annotations__&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">parentClass</span> <span class="o">=</span> <span class="n">theObj</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">theObj</span><span class="p">,</span> <span class="s1">&#39;__mro__&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">parentClass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parentClass</span> <span class="o">!=</span> <span class="nb">object</span><span class="p">:</span>
+        <span class="n">theAnnotations</span> <span class="o">=</span> <span class="n">_get_annotations</span><span class="p">(</span><span class="n">parentClass</span><span class="p">)</span>
+        <span class="n">theAnnotations</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">annotations</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theAnnotations</span>
+    <span class="k">return</span> <span class="n">annotations</span></div>
+
+
+<div class="viewcode-block" id="obj_to_json"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.obj_to_json">[docs]</a><span class="k">def</span> <span class="nf">obj_to_json</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract the json dictionary from the object. The data saved are automatically detected, using typehints.</span>
+<span class="sd">     ex: x: int=5 will be saved, x=5 won&#39;t.</span>
+<span class="sd">     Inheritance of annotation is managed by this function</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_to_json</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="n">is_first</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">theList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">recObj</span><span class="p">:</span>
+                <span class="n">theList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_to_json</span><span class="p">(</span><span class="n">elem</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">theList</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">output_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">recObj</span><span class="p">):</span>
+                <span class="n">output_dict</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span> <span class="o">=</span> <span class="n">_to_json</span><span class="p">(</span><span class="n">recObj</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">output_dict</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">recObj</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">recObj</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">recObj</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">recObj</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">recObj</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">recObj</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">recObj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;null&quot;</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Item is a user-defined object</span>
+            <span class="n">output_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">recObj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">is_first</span><span class="p">:</span>
+                    <span class="n">output_dict</span><span class="p">[</span><span class="n">MODULE_TAG</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_object_module</span><span class="p">(</span><span class="n">recObj</span><span class="p">)</span>
+                    <span class="n">output_dict</span><span class="p">[</span><span class="n">CLASS_TAG</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_object_class</span><span class="p">(</span><span class="n">recObj</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">is_first</span> <span class="ow">in</span> <span class="n">_get_attributes_to_save</span><span class="p">(</span><span class="n">recObj</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+                        <span class="n">output_dict</span><span class="p">[</span><span class="n">attribute</span><span class="p">]</span> <span class="o">=</span> <span class="n">_to_json</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">is_first</span><span class="o">=</span><span class="n">is_first</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                        <span class="k">pass</span>
+            <span class="k">return</span> <span class="n">output_dict</span>
+
+    <span class="k">return</span> <span class="n">_to_json</span><span class="p">(</span><span class="n">theObj</span><span class="p">,</span> <span class="n">is_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="_get_attributes_to_save"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core._get_attributes_to_save">[docs]</a><span class="k">def</span> <span class="nf">_get_attributes_to_save</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return list (attribute, is_first)&quot;&quot;&quot;</span>
+    <span class="n">list_1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">list_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="c1"># List 1</span>
+    <span class="n">annotations</span> <span class="o">=</span> <span class="n">_get_annotations</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">theObj</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">annotations</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">list_1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">annotations</span><span class="p">,</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">annotations</span><span class="p">)))</span>
+
+    <span class="c1"># List 2</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">theObj</span><span class="p">,</span> <span class="n">SaveableObject</span><span class="p">):</span>
+        <span class="n">additional_attributes</span> <span class="o">=</span> <span class="n">theObj</span><span class="o">.</span><span class="n">get_additional_attributes_to_save</span><span class="p">()</span>
+        <span class="n">list_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">additional_attributes</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">additional_attributes</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">list_1</span> <span class="o">+</span> <span class="n">list_2</span></div>
+
+
+<div class="viewcode-block" id="get_json_module_tree"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.get_json_module_tree">[docs]</a><span class="k">def</span> <span class="nf">get_json_module_tree</span><span class="p">(</span><span class="n">theObj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return dict containing {CLASS_TAG: &quot;class_name&quot;, MODULE_TAG: &quot;module_name&quot;, &quot;attribute1&quot;:{&quot;class_name&quot;: &quot;module_name&quot;, ...}}&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">_nested_module_tree</span><span class="p">(</span><span class="n">recObj</span><span class="p">):</span>
+        <span class="n">theDict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">theClass</span> <span class="o">=</span> <span class="n">_get_object_class</span><span class="p">(</span><span class="n">recObj</span><span class="p">)</span>
+        <span class="n">theModule</span> <span class="o">=</span> <span class="n">_get_object_module</span><span class="p">(</span><span class="n">recObj</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">theModule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">theDict</span><span class="p">[</span><span class="n">CLASS_TAG</span><span class="p">]</span> <span class="o">=</span> <span class="n">theClass</span>
+            <span class="n">theDict</span><span class="p">[</span><span class="n">MODULE_TAG</span><span class="p">]</span> <span class="o">=</span> <span class="n">theModule</span>
+        <span class="k">for</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">_get_attributes_to_save</span><span class="p">(</span><span class="n">recObj</span><span class="p">):</span>
+            <span class="n">nestedObj</span> <span class="o">=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">recObj</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+            <span class="n">nested_subtree</span> <span class="o">=</span> <span class="n">_nested_module_tree</span><span class="p">(</span><span class="n">nestedObj</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">nested_subtree</span><span class="p">:</span>
+                <span class="n">theDict</span><span class="p">[</span><span class="n">attribute</span><span class="p">]</span> <span class="o">=</span> <span class="n">nested_subtree</span>
+        <span class="k">return</span> <span class="n">theDict</span>
+    <span class="k">return</span> <span class="n">_nested_module_tree</span><span class="p">(</span><span class="n">theObj</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="encode_str_json"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.encode_str_json">[docs]</a><span class="k">def</span> <span class="nf">encode_str_json</span><span class="p">(</span><span class="n">theStr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">theStr</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="decode_str_json"><a class="viewcode-back" href="../../../API/optimeed/core/myjson/index.html#optimeed.core.decode_str_json">[docs]</a><span class="k">def</span> <span class="nf">decode_str_json</span><span class="p">(</span><span class="n">theStr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">theStr</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">))</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

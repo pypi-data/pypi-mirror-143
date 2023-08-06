@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quickstart Optimization &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quickstart Visualization" href="VisuModule_explanation.html" />
+    <link rel="prev" title="Welcome to Optimeed’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Quickstart Optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Quickstart/OptiModule_explanation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quickstart-optimization">
+<h1>Quickstart Optimization<a class="headerlink" href="#quickstart-optimization" title="Permalink to this headline">¶</a></h1>
+<p>An optimization process can be presented as following:</p>
+<img alt="../_images/optiScheme.svg" src="../_images/optiScheme.svg" /><ul class="simple">
+<li><p><strong>Optimization algorithm:</strong> <a class="reference internal" href="../API/optimeed/optimize/optiAlgorithms/algorithmInterface/index.html#module-optimeed.optimize.optiAlgorithms.algorithmInterface" title="optimeed.optimize.optiAlgorithms.algorithmInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a>. This is the algorithm that performs the optimization, and outputs a vector of variables between [0, 1[.</p></li>
+<li><p><strong>Maths to physics:</strong> <a class="reference internal" href="../API/optimeed/optimize/mathsToPhysics/interfaceMathsToPhysics/index.html#module-optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics" title="optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics"><code class="xref py py-class docutils literal notranslate"><span class="pre">interfaceMathsToPhysics</span></code></a>. Transforms the output vector of the optimization algorithm  to the variables of a <a class="reference internal" href="../API/optimeed/core/interfaceDevice/index.html#optimeed.core.interfaceDevice.InterfaceDevice" title="optimeed.core.interfaceDevice.InterfaceDevice"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceDevice</span></code></a>. The usage of this block becomes meaningful for more complex optimization problem, such as optimizing a BLDC motor while keeping the outer diameter constant. In this case, a good implementation of the M2P block automatically scales the inner dimensions of the motor to comply with this constraint.</p></li>
+<li><p><strong>Characterization:</strong> <a class="reference internal" href="../API/optimeed/optimize/characterization/interfaceCharacterization/index.html#module-optimeed.optimize.characterization.interfaceCharacterization" title="optimeed.optimize.characterization.interfaceCharacterization"><code class="xref py py-class docutils literal notranslate"><span class="pre">interfaceCharacterization</span></code></a>. Based on the attributes of the device, performs some computation. This block is nearly useless for simple optimization problems (when the objective function is easily computed) but becomes interesting for more complex problems, where many things need to be precalculated before obtaining the objective functions and constraints. This for example can hold an analytical or a FEM magnetic model. A sub-optimization could also be performed there.</p></li>
+<li><p><strong>Objective and constraints:</strong> <a class="reference internal" href="../API/optimeed/optimize/objAndCons/interfaceObjCons/index.html#module-optimeed.optimize.objAndCons.interfaceObjCons" title="optimeed.optimize.objAndCons.interfaceObjCons"><code class="xref py py-class docutils literal notranslate"><span class="pre">interfaceObjCons</span></code></a>. These classes correspond to either what has to be minimized, or which constraints &lt;=0 has to be complied with.</p></li>
+</ul>
+<p>Quick example: <span class="math notranslate nohighlight">\(\min_{x, y \in [0, 2]} f(x) = \sqrt{ 1 + (y+3) \cdot x^2 }, g(x) = 4 + 2 \sqrt{y+3} \cdot \sqrt{1+(x-1)^2}\)</span>, under the constrained that <span class="math notranslate nohighlight">\(x \leq 0.55\)</span>. This is a bi-objective problem and will lead to a pareto front.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This example shows how to start a small optimization problem. Start with these imports: (note: full path is not necessary)&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">InterfaceDevice</span>
+<span class="kn">from</span> <span class="nn">optimeed.optimize.optiAlgorithms</span> <span class="k">import</span> <span class="n">MultiObjective_GA</span> <span class="k">as</span> <span class="n">OptimizationAlgorithm</span>
+<span class="c1"># from optimeed.optimize.optiAlgorithms import NLOpt_Algorithm as OptimizationAlgorithm  # Toggle this line to use NLOpt</span>
+<span class="kn">from</span> <span class="nn">optimeed.optimize</span> <span class="k">import</span> <span class="n">Optimizer</span><span class="p">,</span> <span class="n">Real_OptimizationVariable</span><span class="p">,</span> <span class="n">InterfaceObjCons</span><span class="p">,</span> <span class="n">InterfaceCharacterization</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.displayOptimization</span> <span class="k">import</span> <span class="n">OptimizationDisplayer</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize</span> <span class="k">import</span> <span class="n">start_qt_mainloop</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="sd">&quot;&quot;&quot;User-defined structures&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Device</span><span class="p">(</span><span class="n">InterfaceDevice</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Define the Device to optimize.&quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">float</span>  <span class="c1"># Type hinted -&gt; will be automatically saved</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">float</span>  <span class="c1"># Type hinted -&gt; will be automatically saved</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="k">class</span> <span class="nc">Characterization</span><span class="p">(</span><span class="n">InterfaceCharacterization</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Define the Characterization scheme. In this case nothing is performed,</span>
+<span class="sd">     but this is typically where model code will be executed and results saved.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">thedevice</span><span class="p">):</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.005</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MyObjective1</span><span class="p">(</span><span class="n">InterfaceObjCons</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;First objective function (to be minimized)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">theDevice</span><span class="o">.</span><span class="n">y</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">theDevice</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="k">class</span> <span class="nc">MyObjective2</span><span class="p">(</span><span class="n">InterfaceObjCons</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Second objective function (to be minimized)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">theDevice</span><span class="o">.</span><span class="n">y</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="p">(</span><span class="n">theDevice</span><span class="o">.</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="k">class</span> <span class="nc">MyConstraint</span><span class="p">(</span><span class="n">InterfaceObjCons</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Constraints, that needs to be &lt;= 0&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">theDevice</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.55</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Start the main code. Instantiate previously defined classes.&quot;&quot;&quot;</span>
+    <span class="n">theDevice</span> <span class="o">=</span> <span class="n">Device</span><span class="p">()</span>
+    <span class="n">theAlgo</span> <span class="o">=</span> <span class="n">OptimizationAlgorithm</span><span class="p">()</span>
+    <span class="n">theAlgo</span><span class="o">.</span><span class="n">set_optionValue</span><span class="p">(</span><span class="n">theAlgo</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">,</span> <span class="s2">&quot;OMOPSO&quot;</span><span class="p">)</span>
+    <span class="n">theAlgo</span><span class="o">.</span><span class="n">set_optionValue</span><span class="p">(</span><span class="n">theAlgo</span><span class="o">.</span><span class="n">NUMBER_OF_CORES</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>  <span class="c1"># Toggle this line to use more cores. Default is 1 (single core)</span>
+
+    <span class="n">theCharacterization</span> <span class="o">=</span> <span class="n">Characterization</span><span class="p">()</span>
+
+    <span class="sd">&quot;&quot;&quot;Variable to be optimized&quot;&quot;&quot;</span>
+    <span class="n">optimizationVariables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">optimizationVariables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Real_OptimizationVariable</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1">#</span>
+    <span class="n">optimizationVariables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Real_OptimizationVariable</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="sd">&quot;&quot;&quot;Objective and constraints&quot;&quot;&quot;</span>
+    <span class="n">listOfObjectives</span> <span class="o">=</span> <span class="p">[</span><span class="n">MyObjective1</span><span class="p">(),</span> <span class="n">MyObjective2</span><span class="p">()]</span>
+    <span class="n">listOfConstraints</span> <span class="o">=</span> <span class="p">[</span><span class="n">MyConstraint</span><span class="p">()]</span>
+
+    <span class="sd">&quot;&quot;&quot;Set the optimizer&quot;&quot;&quot;</span>
+    <span class="n">theOptimizer</span> <span class="o">=</span> <span class="n">Optimizer</span><span class="p">()</span>
+    <span class="n">theOptimizer</span><span class="o">.</span><span class="n">set_optionValue</span><span class="p">(</span><span class="n">theOptimizer</span><span class="o">.</span><span class="n">KWARGS_OPTIHISTO</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;autosave&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;compress_save&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+    <span class="n">PipeOptimization</span> <span class="o">=</span> <span class="n">theOptimizer</span><span class="o">.</span><span class="n">set_optimizer</span><span class="p">(</span><span class="n">theDevice</span><span class="p">,</span> <span class="n">listOfObjectives</span><span class="p">,</span> <span class="n">listOfConstraints</span><span class="p">,</span> <span class="n">optimizationVariables</span><span class="p">,</span> <span class="n">theOptimizationAlgorithm</span><span class="o">=</span><span class="n">theAlgo</span><span class="p">,</span> <span class="n">theCharacterization</span><span class="o">=</span><span class="n">theCharacterization</span><span class="p">)</span>
+    <span class="n">theOptimizer</span><span class="o">.</span><span class="n">set_max_opti_time</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="sd">&quot;&quot;&quot;Start the optimization&quot;&quot;&quot;</span>
+    <span class="n">display_opti</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">display_opti</span><span class="p">:</span>  <span class="c1"># Display real-time graphs</span>
+        <span class="n">optiDisplayer</span> <span class="o">=</span> <span class="n">OptimizationDisplayer</span><span class="p">(</span><span class="n">PipeOptimization</span><span class="p">,</span> <span class="n">listOfObjectives</span><span class="p">,</span> <span class="n">theOptimizer</span><span class="p">)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">optiDisplayer</span><span class="o">.</span><span class="n">generate_optimizationGraphs</span><span class="p">()</span>
+        <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span> <span class="o">=</span> <span class="n">optiDisplayer</span><span class="o">.</span><span class="n">launch_optimization</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Just focus on results</span>
+        <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span> <span class="o">=</span> <span class="n">theOptimizer</span><span class="o">.</span><span class="n">run_optimization</span><span class="p">()</span>
+
+    <span class="sd">&quot;&quot;&quot;Gather results&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best individuals :&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">resultsOpti</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x : </span><span class="si">{}</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> y : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span> <span class="nb">format</span><span class="p">(</span><span class="n">device</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">device</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">display_opti</span><span class="p">:</span>
+        <span class="n">start_qt_mainloop</span><span class="p">()</span>  <span class="c1"># To keep windows alive</span>
+
+    <span class="sd">&quot;&quot;&quot;Note that the results are automatically saved if KWARGS_OPTIHISTO autosaved=True.</span>
+<span class="sd">    In this case, optimization folder is automatically generated in Workspace/optiX. It contains five files:</span>
+<span class="sd">    -&gt; autosaved: contains all the devices evaluated during the optimization</span>
+<span class="sd">    -&gt; logopti: contains all the information relating to the optimization itself: objectives, constraints, evaluation time.</span>
+<span class="sd">    -&gt; opticonvergence: contains all the information relative to the convergence of the optimization (saved only at the end)</span>
+<span class="sd">    -&gt; results: all the best devices as decided by the optimization algorithm</span>
+<span class="sd">    -&gt; summary.html: a summary of the optimization problem</span>
+<span class="sd">    See other tutorials on how to save/load these information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="VisuModule_explanation.html" class="btn btn-neutral float-right" title="Quickstart Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Optimeed’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

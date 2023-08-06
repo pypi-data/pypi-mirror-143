@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">from</span> <span class="nn">OpenGL.GL</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">OpenGL.GLU</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">.TriangulatePolygon</span> <span class="k">import</span> <span class="n">meshPolygon</span>
+
+
+<div class="viewcode-block" id="draw_closedPolygon"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_closedPolygon">[docs]</a><span class="k">def</span> <span class="nf">draw_closedPolygon</span><span class="p">(</span><span class="n">xClockWise</span><span class="p">,</span> <span class="n">yClockWise</span><span class="p">):</span>
+    <span class="n">theTriList</span> <span class="o">=</span> <span class="n">meshPolygon</span><span class="p">(</span><span class="n">xClockWise</span><span class="p">,</span> <span class="n">yClockWise</span><span class="p">)</span>
+
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_TRIANGLES</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span> <span class="ow">in</span> <span class="n">theTriList</span><span class="p">:</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_extrudeZ"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_extrudeZ">[docs]</a><span class="k">def</span> <span class="nf">draw_extrudeZ</span><span class="p">(</span><span class="n">xList</span><span class="p">,</span> <span class="n">yList</span><span class="p">,</span> <span class="n">zExtrude</span><span class="p">):</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUAD_STRIP</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xList</span><span class="p">)):</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">xList</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">yList</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">xList</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">yList</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">zExtrude</span><span class="p">)</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_triList"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_triList">[docs]</a><span class="k">def</span> <span class="nf">draw_triList</span><span class="p">(</span><span class="n">theTriList</span><span class="p">):</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_TRIANGLES</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span> <span class="ow">in</span> <span class="n">theTriList</span><span class="p">:</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">p3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_lines"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_lines">[docs]</a><span class="k">def</span> <span class="nf">draw_lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_LINE_STRIP</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_spiralSheet"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_spiralSheet">[docs]</a><span class="k">def</span> <span class="nf">draw_spiralSheet</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">theAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">thickness</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_TRIANGLE_STRIP</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">theAngle</span>
+        <span class="n">radius</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">angle</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+        <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glNormal3f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glEnd</span><span class="p">()</span>
+
+    <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="draw_spiralFront"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_spiralFront">[docs]</a><span class="k">def</span> <span class="nf">draw_spiralFront</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">theAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">thicknessSpiral</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUAD_STRIP</span><span class="p">)</span>
+    <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberOfPoints</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">theAngle</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">theAngle</span>
+        <span class="n">rIn</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">angle</span>
+        <span class="n">rOut</span> <span class="o">=</span> <span class="n">rIn</span> <span class="o">+</span> <span class="n">thicknessMaterial</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">z0</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">z0</span><span class="p">)</span>
+        <span class="n">glNormal3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_spiralFull"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_spiralFull">[docs]</a><span class="k">def</span> <span class="nf">draw_spiralFull</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">outerRadius</span> <span class="o">-</span> <span class="n">innerRadius</span> <span class="o">&lt;</span> <span class="n">thicknessMaterial</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">nTurns</span> <span class="o">=</span> <span class="p">((</span><span class="n">outerRadius</span> <span class="o">-</span> <span class="n">thicknessMaterial</span><span class="p">)</span> <span class="o">-</span> <span class="n">innerRadius</span><span class="p">)</span> <span class="o">/</span> <span class="n">thicknessSpiral</span>
+    <span class="n">theta_tot</span> <span class="o">=</span> <span class="n">nTurns</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">theta_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">innerRadius</span> <span class="o">+</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">theta_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">theta_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">theta_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="draw_spiral"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_spiral">[docs]</a><span class="k">def</span> <span class="nf">draw_spiral</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">outerRadius</span> <span class="o">-</span> <span class="n">innerRadius</span> <span class="o">&lt;</span> <span class="n">thicknessMaterial</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">thicknessSpiral</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+    <span class="n">nTurns</span> <span class="o">=</span> <span class="p">((</span><span class="n">outerRadius</span> <span class="o">-</span> <span class="n">thicknessMaterial</span><span class="p">)</span> <span class="o">-</span> <span class="n">innerRadius</span><span class="p">)</span> <span class="o">/</span> <span class="n">thicknessSpiral</span>
+    <span class="n">theta_last</span> <span class="o">=</span> <span class="p">(</span><span class="n">nTurns</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">nTurns</span><span class="p">))</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">nTurns</span><span class="p">))):</span>
+        <span class="n">currentAngle</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">rIn</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">currentAngle</span>
+        <span class="n">currentAngle2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">+</span> <span class="n">cutAngle</span>
+        <span class="n">rIn2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">currentAngle2</span>
+
+        <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">rIn</span> <span class="o">+</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn2</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">cutAngle</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">theta_last</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">currentAngle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">nTurns</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">rIn</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">currentAngle</span>
+        <span class="n">currentAngle2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">nTurns</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">cutAngle</span><span class="p">,</span> <span class="n">theta_last</span><span class="p">)</span>
+        <span class="n">rIn2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">currentAngle2</span>
+
+        <span class="n">angleToGo</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">cutAngle</span><span class="p">,</span> <span class="n">theta_last</span><span class="p">)</span>
+        <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angleToGo</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_spiralSheet</span><span class="p">(</span><span class="n">rIn</span> <span class="o">+</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angleToGo</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angleToGo</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_spiralFront</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">thicknessSpiral</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angleToGo</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn2</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">thicknessMaterial</span><span class="p">,</span> <span class="n">angleToGo</span><span class="p">)</span>
+
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_simple_rectangle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_simple_rectangle">[docs]</a><span class="k">def</span> <span class="nf">draw_simple_rectangle</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">glRectf</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="draw_rectangle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_rectangle">[docs]</a><span class="k">def</span> <span class="nf">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRectf</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">thickness</span> <span class="o">+</span> <span class="n">rIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rIn</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="draw_2Dring"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_2Dring">[docs]</a><span class="k">def</span> <span class="nf">draw_2Dring</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">theAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">0.95</span> <span class="o">&lt;</span> <span class="n">theAngle</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">:</span>
+        <span class="n">draw_disk</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">z0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUAD_STRIP</span><span class="p">)</span>
+        <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+        <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberOfPoints</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+                <span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">theAngle</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">angle</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">theAngle</span>
+            <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">z0</span><span class="p">)</span>
+            <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">z0</span><span class="p">)</span>
+            <span class="n">glNormal3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_2Dring_diff_angle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_2Dring_diff_angle">[docs]</a><span class="k">def</span> <span class="nf">draw_2Dring_diff_angle</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">angle_in</span><span class="p">,</span> <span class="n">angle_out</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUAD_STRIP</span><span class="p">)</span>
+    <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberOfPoints</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+            <span class="n">angle1</span> <span class="o">=</span> <span class="o">-</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">angle_in</span>
+            <span class="n">angle2</span> <span class="o">=</span> <span class="o">-</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">angle_out</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">angle1</span> <span class="o">=</span> <span class="o">-</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">i</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">angle_in</span>
+            <span class="n">angle2</span> <span class="o">=</span> <span class="o">-</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">i</span> <span class="o">/</span> <span class="n">numberOfPoints</span> <span class="o">*</span> <span class="n">angle_out</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle1</span><span class="p">),</span> <span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle2</span><span class="p">),</span> <span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle2</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glNormal3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_tubeSheet"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_tubeSheet">[docs]</a><span class="k">def</span> <span class="nf">draw_tubeSheet</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">theAngle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">reverseDirection</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">circle_pts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="o">-</span><span class="n">theAngle</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">theAngle</span> <span class="o">*</span> <span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="o">-</span><span class="n">theAngle</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">theAngle</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">pt</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+        <span class="n">circle_pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+
+    <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_TRIANGLE_STRIP</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="ow">in</span> <span class="n">circle_pts</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">reverseDirection</span><span class="p">:</span>
+            <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="n">glVertex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glNormal3f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_cylinder"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_cylinder">[docs]</a><span class="k">def</span> <span class="nf">draw_cylinder</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span><span class="p">)</span>
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+    <span class="n">gluCylinder</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>  <span class="c1"># Lightning ko but interface ok :x</span>
+    <span class="n">gluCylinder</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">gluDisk</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+    <span class="n">gluDisk</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<span class="c1"># Angle in radians</span>
+<div class="viewcode-block" id="draw_part_cylinder"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_part_cylinder">[docs]</a><span class="k">def</span> <span class="nf">draw_part_cylinder</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">drawSides</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">0.95</span> <span class="o">&lt;</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">:</span>
+        <span class="n">draw_cylinder</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">glPushMatrix</span><span class="p">()</span>
+        <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+        <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+        <span class="k">if</span> <span class="n">drawSides</span><span class="p">:</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+        <span class="n">glRectf</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">innerRadius</span><span class="p">)</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span>
+
+        <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRectf</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">innerRadius</span><span class="p">)</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<span class="c1"># Angle in radians</span>
+<div class="viewcode-block" id="draw_disk"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_disk">[docs]</a><span class="k">def</span> <span class="nf">draw_disk</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span><span class="p">)</span>
+    <span class="n">gluDisk</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<span class="c1"># Angle in radians</span>
+<div class="viewcode-block" id="draw_part_disk"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_part_disk">[docs]</a><span class="k">def</span> <span class="nf">draw_part_disk</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span><span class="p">)</span>
+
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+    <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">innerRadius</span><span class="p">)</span>
+    <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span>
+
+    <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">innerRadius</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<span class="c1"># Angle in radians</span>
+<div class="viewcode-block" id="draw_part_disk_diff_angles"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_part_disk_diff_angles">[docs]</a><span class="k">def</span> <span class="nf">draw_part_disk_diff_angles</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle_in</span><span class="p">,</span> <span class="n">angle_out</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle_in</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle_out</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">draw_2Dring_diff_angle</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">angle_in</span><span class="p">,</span> <span class="n">angle_out</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+    <span class="n">draw_2Dring_diff_angle</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">angle_in</span><span class="p">,</span> <span class="n">angle_out</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">dir_num</span><span class="p">,</span> <span class="n">dir_angle</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">GL_CW</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">GL_CCW</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]:</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">dir_num</span><span class="p">)</span>
+        <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_QUAD_STRIP</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">rIn</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_in</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">thickness</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glVertex3f</span><span class="p">(</span><span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">rOut</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dir_angle</span><span class="o">*</span><span class="n">angle_out</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">thickness</span><span class="p">)</span>
+        <span class="n">glEnd</span><span class="p">()</span></div>
+
+
+<span class="c1"># Angle in radians</span>
+<div class="viewcode-block" id="draw_carved_disk"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_carved_disk">[docs]</a><span class="k">def</span> <span class="nf">draw_carved_disk</span><span class="p">(</span><span class="n">innerRadius</span><span class="p">,</span> <span class="n">outerRadius</span><span class="p">,</span> <span class="n">carvedRin</span><span class="p">,</span> <span class="n">carvedRout</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span><span class="p">)</span>
+
+    <span class="n">rIn</span> <span class="o">=</span> <span class="n">innerRadius</span>
+    <span class="n">rOut</span> <span class="o">=</span> <span class="n">outerRadius</span>
+    <span class="n">rInOut</span> <span class="o">=</span> <span class="n">carvedRin</span>
+    <span class="n">rOutIn</span> <span class="o">=</span> <span class="n">carvedRout</span>
+
+    <span class="k">if</span> <span class="n">depth</span> <span class="o">&gt;</span> <span class="n">thickness</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">rInOut</span> <span class="o">&gt;</span> <span class="n">rIn</span><span class="p">:</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rInOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rInOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rInOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rOut</span> <span class="o">&gt;</span> <span class="n">rOutIn</span><span class="p">:</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOutIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rOutIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rOutIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rOut</span> <span class="o">&gt;</span> <span class="n">rOutIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rOutIn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rInOut</span> <span class="o">&gt;</span> <span class="n">rIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rInOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rIn</span><span class="p">)</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span>
+
+        <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rOut</span> <span class="o">&gt;</span> <span class="n">rOutIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rOutIn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rInOut</span> <span class="o">&gt;</span> <span class="n">rIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rInOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rIn</span><span class="p">)</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">extremeIn</span> <span class="o">=</span> <span class="n">rInOut</span>
+        <span class="n">extremeOut</span> <span class="o">=</span> <span class="n">rOutIn</span>
+
+        <span class="k">if</span> <span class="n">rInOut</span> <span class="o">&lt;=</span> <span class="n">rIn</span><span class="p">:</span>
+            <span class="n">extremeIn</span> <span class="o">=</span> <span class="n">rIn</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thickness</span> <span class="o">-</span> <span class="n">depth</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rInOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rInOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">rOutIn</span> <span class="o">&gt;=</span> <span class="n">rOut</span><span class="p">:</span>
+            <span class="n">extremeIn</span> <span class="o">=</span> <span class="n">rOut</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span> <span class="o">-</span> <span class="n">depth</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOutIn</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rOutIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">extremeIn</span><span class="p">,</span> <span class="n">extremeOut</span><span class="p">,</span> <span class="n">thickness</span> <span class="o">-</span> <span class="n">depth</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CW</span><span class="p">)</span>
+        <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span> <span class="o">-</span> <span class="n">depth</span><span class="p">,</span> <span class="n">extremeOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extremeIn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rOut</span> <span class="o">&gt;</span> <span class="n">extremeOut</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extremeOut</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rIn</span> <span class="o">&lt;</span> <span class="n">extremeIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">extremeIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rIn</span><span class="p">)</span>
+        <span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">)</span>
+
+        <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span> <span class="o">-</span> <span class="n">depth</span><span class="p">,</span> <span class="n">extremeOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extremeIn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rOut</span> <span class="o">&gt;</span> <span class="n">extremeOut</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extremeOut</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rIn</span> <span class="o">&lt;</span> <span class="n">extremeIn</span><span class="p">:</span>
+            <span class="n">glRectf</span><span class="p">(</span><span class="n">thickness</span><span class="p">,</span> <span class="n">extremeIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rIn</span><span class="p">)</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="draw_part_cylinder_throat"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.draw_part_cylinder_throat">[docs]</a><span class="k">def</span> <span class="nf">draw_part_cylinder_throat</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">rOutThroat</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">lengthThroat</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translate</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOutThroat</span><span class="p">,</span> <span class="n">lengthThroat</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rOut</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">draw_tubeSheet</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># weird shadow :(</span>
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rOutThroat</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rOutThroat</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">draw_2Dring</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">rOut</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">rOut</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">lengthThroat</span><span class="p">,</span> <span class="n">rOutThroat</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">rOut</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">rOut</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="n">lengthThroat</span><span class="p">,</span> <span class="n">rOutThroat</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">rIn</span><span class="p">,</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthThroat</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">rOut</span> <span class="o">-</span> <span class="n">rIn</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="drawWireTube"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/OpenGlFunctions_Library/index.html#optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library.drawWireTube">[docs]</a><span class="k">def</span> <span class="nf">drawWireTube</span><span class="p">(</span><span class="n">diameter</span><span class="p">,</span> <span class="n">xa</span><span class="p">,</span> <span class="n">ya</span><span class="p">,</span> <span class="n">xb</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">translateZ</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">translateZ</span><span class="p">)</span>
+    <span class="n">glTranslate</span><span class="p">(</span><span class="n">xa</span><span class="p">,</span> <span class="n">ya</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">vec</span> <span class="o">=</span> <span class="n">xb</span> <span class="o">-</span> <span class="n">xa</span><span class="p">,</span> <span class="n">yb</span> <span class="o">-</span> <span class="n">ya</span>
+    <span class="n">Norm</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">vecN</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">Norm</span><span class="p">,</span> <span class="n">vec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">Norm</span>
+    <span class="n">phi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">vecN</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="k">if</span> <span class="n">xb</span> <span class="o">&lt;</span> <span class="n">xa</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">yb</span> <span class="o">&gt;</span> <span class="n">ya</span><span class="p">:</span>
+            <span class="n">Phi</span> <span class="o">=</span> <span class="n">phi</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Phi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">phi</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">yb</span> <span class="o">&gt;</span> <span class="n">ya</span><span class="p">:</span>
+            <span class="n">Phi</span> <span class="o">=</span> <span class="o">-</span> <span class="n">phi</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Phi</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">+</span> <span class="n">phi</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="n">Phi</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">gluCylinder</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="n">diameter</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">diameter</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">Norm</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

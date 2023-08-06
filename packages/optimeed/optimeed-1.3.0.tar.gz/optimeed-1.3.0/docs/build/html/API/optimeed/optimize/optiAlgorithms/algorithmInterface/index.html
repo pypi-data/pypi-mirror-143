@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>algorithmInterface &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="multiObjective_GA" href="../multiObjective_GA/index.html" />
+    <link rel="prev" title="NLOpt_Algorithm" href="../NLOpt_Algorithm/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"><strong>optimize</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../characterization/index.html"><strong>characterization</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mathsToPhysics/index.html"><strong>mathsToPhysics</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../objAndCons/index.html"><strong>objAndCons</strong></a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html"><strong>optiAlgorithms</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../convergence/index.html"><strong>convergence</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../NLOpt_Algorithm/index.html"><code class="docutils literal notranslate"><span class="pre">NLOpt_Algorithm</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiObjective_GA/index.html"><code class="docutils literal notranslate"><span class="pre">multiObjective_GA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../optiVariable/index.html"><code class="docutils literal notranslate"><span class="pre">optiVariable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../optimizer/index.html"><code class="docutils literal notranslate"><span class="pre">optimizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>optimize</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>optiAlgorithms</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/API/optimeed/optimize/optiAlgorithms/algorithmInterface/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.optimize.optiAlgorithms.algorithmInterface">
+<span id="algorithminterface"></span><h1><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code><a class="headerlink" href="#module-optimeed.optimize.optiAlgorithms.algorithmInterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface">
+<em class="property">class </em><code class="sig-name descname">AlgorithmInterface</code><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for the optimization algorithm</p>
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.compute">
+<em class="property">abstract </em><code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">initialVectorGuess</em>, <em class="sig-param">listOfOptimizationVariables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch the optimization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initialVectorGuess</strong> – list of variables that describe the initial individual</p></li>
+<li><p><strong>listOfOptimizationVariables</strong> – list of <a class="reference internal" href="../../optiVariable/index.html#optimeed.optimize.optiVariable.OptimizationVariable" title="optimeed.optimize.optiVariable.OptimizationVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiVariable.OptimizationVariable</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>vector of optimal variables</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.set_evaluationFunction">
+<em class="property">abstract </em><code class="sig-name descname">set_evaluationFunction</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">evaluationFunction</em>, <em class="sig-param">callback_on_evaluation</em>, <em class="sig-param">numberOfObjectives</em>, <em class="sig-param">numberOfConstraints</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface.set_evaluationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.set_evaluationFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the evaluation function and all the necessary callbacks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>evaluationFunction</strong> – check <code class="xref py py-meth docutils literal notranslate"><span class="pre">evaluateObjectiveAndConstraints()</span></code></p></li>
+<li><p><strong>callback_on_evaluation</strong> – check <code class="xref py py-meth docutils literal notranslate"><span class="pre">callback_on_evaluation()</span></code>. Call this function after performing the evaluation of the individuals</p></li>
+<li><p><strong>numberOfObjectives</strong> – int, number of objectives</p></li>
+<li><p><strong>numberOfConstraints</strong> – int, number of constraints</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.set_maxtime">
+<em class="property">abstract </em><code class="sig-name descname">set_maxtime</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">maxTime</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface.set_maxtime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.set_maxtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set maximum optimization time (in seconds)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.get_convergence">
+<em class="property">abstract </em><code class="sig-name descname">get_convergence</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface.get_convergence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.get_convergence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the convergence of the optimization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../convergence/interfaceConvergence/index.html#optimeed.optimize.optiAlgorithms.convergence.interfaceConvergence.InterfaceConvergence" title="optimeed.optimize.optiAlgorithms.convergence.interfaceConvergence.InterfaceConvergence"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceConvergence</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/optimize/optiAlgorithms/algorithmInterface.html#AlgorithmInterface.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../multiObjective_GA/index.html" class="btn btn-neutral float-right" title="multiObjective_GA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../NLOpt_Algorithm/index.html" class="btn btn-neutral float-left" title="NLOpt_Algorithm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

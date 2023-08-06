@@ -1,0 +1,675 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.graphs &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.graphs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.graphs</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">printIfShown</span><span class="p">,</span> <span class="n">SHOW_WARNING</span>
+
+
+<div class="viewcode-block" id="Data"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data">[docs]</a><span class="k">class</span> <span class="nc">Data</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This class is used  to store informations necessary to plot a 2D graph. It has to be combined with a gui to be useful (ex. pyqtgraph)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">legend</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">is_scattered</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">transfo_x</span><span class="o">=</span><span class="k">lambda</span> <span class="n">selfData</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">transfo_y</span><span class="o">=</span><span class="k">lambda</span> <span class="n">selfData</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span><span class="p">,</span>
+                 <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">permutations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">symbolsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">fillsymbol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">outlinesymbol</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span>
+                 <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param x_label: label of x axis</span>
+<span class="sd">        :param x: x (list) coordinates. If None =&gt; it will be the indices</span>
+<span class="sd">        :param y_label: label of y axis</span>
+<span class="sd">        :param y: y (list) coordinates.</span>
+<span class="sd">        :param color: Color to use for the trace (either rgb tuple or matlab-like diminutif (e.g.:&#39;r&#39;)</span>
+<span class="sd">        :param legend: legend associated with the data</span>
+<span class="sd">        :param linestyle: style of the line linking points of the trace</span>
+<span class="sd">        :param is_scattered: boolean. If True: plot will be scattered</span>
+<span class="sd">        :param sort_output: boolean. If True: x axis will be sorted to ascending number</span>
+<span class="sd">        :param symbol: symbol to display the points of the trace (e.g.: &#39;o&#39;, &#39;t1&#39;, ...)</span>
+<span class="sd">        :param fillsymbol: paint a solid symbol or not (bool)</span>
+<span class="sd">        :param outlinesymbol: make the outline of the symbol darker (&gt;1) or clearer (&lt;1). No outline = 1</span>
+<span class="sd">        :param transfo_x: Method applied to all the x coordinates. Useful to change units for instance</span>
+<span class="sd">        :param transfo_y: Method applied to all the y coordinates. Useful to change units for instance</span>
+<span class="sd">        :param xlim: [x_min, x_max] view box</span>
+<span class="sd">        :param ylim: [y_min, y_max] view box</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x_label</span> <span class="o">=</span> <span class="n">x_label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_label</span> <span class="o">=</span> <span class="n">y_label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legend</span> <span class="o">=</span> <span class="n">legend</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isScattered</span> <span class="o">=</span> <span class="n">is_scattered</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sort_output</span> <span class="o">=</span> <span class="n">sort_output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fillsymbol</span> <span class="o">=</span> <span class="n">fillsymbol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outlineSymbol</span> <span class="o">=</span> <span class="n">outlinesymbol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transfo_x</span> <span class="o">=</span> <span class="n">transfo_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transfo_y</span> <span class="o">=</span> <span class="n">transfo_y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xlim</span> <span class="o">=</span> <span class="n">xlim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ylim</span> <span class="o">=</span> <span class="n">ylim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">points_to_plot</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># None Value =&gt; plot all, [] =&gt; plot None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linestyle</span> <span class="o">=</span> <span class="n">linestyle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">permutations</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_permutations</span><span class="p">(</span><span class="n">permutations</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">symbolsize</span> <span class="o">=</span> <span class="n">symbolsize</span>
+
+<div class="viewcode-block" id="Data.set_data"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.set_data">[docs]</a>    <span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrites current datapoints with new set&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span></div>
+
+<div class="viewcode-block" id="Data.get_x"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_x">[docs]</a>    <span class="k">def</span> <span class="nf">get_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get x coordinates of datapoints&quot;&quot;&quot;</span>
+        <span class="n">the_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
+            <span class="n">the_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">the_list</span></div>
+
+<div class="viewcode-block" id="Data.get_symbolsize"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_symbolsize">[docs]</a>    <span class="k">def</span> <span class="nf">get_symbolsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get size of the symbols&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbolsize</span></div>
+
+<div class="viewcode-block" id="Data.symbol_isfilled"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.symbol_isfilled">[docs]</a>    <span class="k">def</span> <span class="nf">symbol_isfilled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check if symbols has to be filled or not&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fillsymbol</span></div>
+
+<div class="viewcode-block" id="Data.get_symbolOutline"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_symbolOutline">[docs]</a>    <span class="k">def</span> <span class="nf">get_symbolOutline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get color factor of outline of symbols&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">outlineSymbol</span></div>
+
+<div class="viewcode-block" id="Data.get_length_data"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_length_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_length_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get number of points&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Data.get_xlim"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_xlim">[docs]</a>    <span class="k">def</span> <span class="nf">get_xlim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get x limits of viewbox&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">xlim</span></div>
+
+<div class="viewcode-block" id="Data.get_ylim"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_ylim">[docs]</a>    <span class="k">def</span> <span class="nf">get_ylim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get y limits of viewbox&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ylim</span></div>
+
+<div class="viewcode-block" id="Data.get_y"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_y">[docs]</a>    <span class="k">def</span> <span class="nf">get_y</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get y coordinates of datapoints&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span></div>
+
+<div class="viewcode-block" id="Data.get_color"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_color">[docs]</a>    <span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get color of the line&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span></div>
+
+<div class="viewcode-block" id="Data.get_width"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_width">[docs]</a>    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get width of the line&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span></div>
+
+<div class="viewcode-block" id="Data.get_number_of_points"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_number_of_points">[docs]</a>    <span class="k">def</span> <span class="nf">get_number_of_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get number of points&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Data.get_plot_data"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_plot_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_plot_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call this method to get the x and y coordinates of the points that have to be displayed.</span>
+<span class="sd">        =&gt; After transformation, and after permutations.</span>
+
+<span class="sd">        :return: x (list), y (list)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">transfo_x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">transfo_y</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y</span><span class="p">]</span>
+        <span class="n">permutations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">perm_i</span><span class="p">]</span> <span class="k">for</span> <span class="n">perm_i</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">],</span> <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">perm_i</span><span class="p">]</span> <span class="k">for</span> <span class="n">perm_i</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">]</span>
+        <span class="n">min_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">[:</span><span class="n">min_length</span><span class="p">],</span> <span class="n">y</span><span class="p">[:</span><span class="n">min_length</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.get_permutations"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_permutations">[docs]</a>    <span class="k">def</span> <span class="nf">get_permutations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the transformation &#39;permutation&#39;:</span>
+<span class="sd">        xplot[i] = xdata[permutation[i]]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">indices_to_plot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_indices_points_to_plot</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">permutations</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">permutations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">permutations</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">sort_output</span><span class="p">:</span>
+            <span class="n">permutations</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">permutations</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices_to_plot</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_length_data</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">permutations</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">permutations</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">indices_to_plot</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.get_invert_permutations"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_invert_permutations">[docs]</a>    <span class="k">def</span> <span class="nf">get_invert_permutations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the inverse of permutations:</span>
+<span class="sd">        xdata[i] = xplot[revert[i]]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Data.get_dataIndex_from_graphIndex"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_dataIndex_from_graphIndex">[docs]</a>    <span class="k">def</span> <span class="nf">get_dataIndex_from_graphIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_graph_point</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        From an index given in graph, recovers the index of the data.</span>
+
+<span class="sd">        :param index_graph_point: Index in the graph</span>
+<span class="sd">        :return: index of the data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">()[</span><span class="n">index_graph_point</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.get_dataIndices_from_graphIndices"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_dataIndices_from_graphIndices">[docs]</a>    <span class="k">def</span> <span class="nf">get_dataIndices_from_graphIndices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_graph_point_list</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Same as get_dataIndex_from_graphIndex but with a list in entry.</span>
+<span class="sd">        Can (?) improve performances for huge dataset.</span>
+
+<span class="sd">        :param index_graph_point_list: List of Index in the graph</span>
+<span class="sd">        :return: List of index of the data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">permutations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">permutations</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">index_graph_point_list</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.get_graphIndex_from_dataIndex"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_graphIndex_from_dataIndex">[docs]</a>    <span class="k">def</span> <span class="nf">get_graphIndex_from_dataIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        From an index given in the data, recovers the index of the graph.</span>
+
+<span class="sd">        :param index_data: Index in the data</span>
+<span class="sd">        :return: index of the graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index_data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Data.get_graphIndices_from_dataIndices"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_graphIndices_from_dataIndices">[docs]</a>    <span class="k">def</span> <span class="nf">get_graphIndices_from_dataIndices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_data_list</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Same as get_graphIndex_from_dataIndex but with a list in entry.</span>
+<span class="sd">        Can (?) improve performances for huge dataset.</span>
+
+<span class="sd">        :param index_data_list: List of Index in the data</span>
+<span class="sd">        :return: List of index of the graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">invert_permutation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_invert_permutations</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">invert_permutation</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">index_data_list</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.set_permutations"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.set_permutations">[docs]</a>    <span class="k">def</span> <span class="nf">set_permutations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">permutations</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set permutations between datapoints of the trace</span>
+
+<span class="sd">        :param permutations: list of indices to plot (example: [0, 2, 1] means that the first point will be plotted, then the third, then the second one)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">permutations</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_x</span><span class="p">())</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">permutations</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sort_output</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning : Permutations due to flag &#39;sort_output&#39; are overridden by user&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">permutations</span> <span class="o">=</span> <span class="n">permutations</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error : Permutations have not the same length as the data&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Data.get_x_label"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_x_label">[docs]</a>    <span class="k">def</span> <span class="nf">get_x_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get x label of the trace &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_label</span></div>
+
+<div class="viewcode-block" id="Data.get_y_label"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_y_label">[docs]</a>    <span class="k">def</span> <span class="nf">get_y_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get y label of the trace &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_label</span></div>
+
+<div class="viewcode-block" id="Data.get_legend"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_legend">[docs]</a>    <span class="k">def</span> <span class="nf">get_legend</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get name of the trace &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">legend</span></div>
+
+<div class="viewcode-block" id="Data.get_symbol"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_symbol">[docs]</a>    <span class="k">def</span> <span class="nf">get_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get symbol &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span></div>
+
+<div class="viewcode-block" id="Data.add_point"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.add_point">[docs]</a>    <span class="k">def</span> <span class="nf">add_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add point(s) to trace (inputs can be list or numeral)&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Data.delete_point"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.delete_point">[docs]</a>    <span class="k">def</span> <span class="nf">delete_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_point</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a point from the datapoints&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">index_point</span><span class="p">]</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">index_point</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">index_point</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Data.is_scattered"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.is_scattered">[docs]</a>    <span class="k">def</span> <span class="nf">is_scattered</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a point from the datapoints&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">isScattered</span></div>
+
+<div class="viewcode-block" id="Data.set_indices_points_to_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.set_indices_points_to_plot">[docs]</a>    <span class="k">def</span> <span class="nf">set_indices_points_to_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set indices points to plot&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">points_to_plot</span> <span class="o">=</span> <span class="n">indices</span></div>
+
+<div class="viewcode-block" id="Data.get_indices_points_to_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_indices_points_to_plot">[docs]</a>    <span class="k">def</span> <span class="nf">get_indices_points_to_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get indices points to plot&quot;&quot;&quot;</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points_to_plot</span>
+        <span class="k">if</span> <span class="n">indices</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_length_data</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">indices</span></div>
+
+<div class="viewcode-block" id="Data.get_linestyle"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.get_linestyle">[docs]</a>    <span class="k">def</span> <span class="nf">get_linestyle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get linestyle&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linestyle</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Data.__str__"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_label</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_label</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">theX</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+        <span class="n">theY</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_length_data</span><span class="p">()):</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">theX</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t\t\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theY</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="n">theStr</span></div>
+
+<div class="viewcode-block" id="Data.export_str"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.export_str">[docs]</a>    <span class="k">def</span> <span class="nf">export_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method to save the points constituting the trace&quot;&quot;&quot;</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s2">&quot;# $NEW TRACE 2D$</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;# $LEGEND$: $</span><span class="si">{}</span><span class="s2">$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_legend</span><span class="p">())</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;# $LABEL X$: $</span><span class="si">{}</span><span class="s2">$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_x_label</span><span class="p">())</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;# $LABEL Y$: $</span><span class="si">{}</span><span class="s2">$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_y_label</span><span class="p">())</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;# $BEGIN DATA$</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plot_data</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\t</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;# $END DATA$</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">theStr</span></div>
+
+<div class="viewcode-block" id="Data.set_color"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Data.set_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theColor</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">theColor</span></div></div>
+
+
+<div class="viewcode-block" id="Graph"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph">[docs]</a><span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Simple graph container that contains several traces&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traces</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="Graph.add_trace"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph.add_trace">[docs]</a>    <span class="k">def</span> <span class="nf">add_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a trace to the graph</span>
+
+<span class="sd">        :param data: :class:`~Data`</span>
+<span class="sd">        :return: id of the created trace</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">idTrace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">idTrace</span></div>
+
+<div class="viewcode-block" id="Graph.remove_trace"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph.remove_trace">[docs]</a>    <span class="k">def</span> <span class="nf">remove_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a trace from the graph</span>
+
+<span class="sd">        :param idTrace: id of the trace to delete</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Key </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idTrace</span><span class="p">),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Graph.get_trace"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph.get_trace">[docs]</a>    <span class="k">def</span> <span class="nf">get_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Data</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get data object of idTrace</span>
+
+<span class="sd">        :param idTrace: id of the trace to get</span>
+<span class="sd">        :return: :class:`~Data`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="p">[</span><span class="n">idTrace</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Graph.get_all_traces"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph.get_all_traces">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_traces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get all the traces id of the graph&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">traces</span></div>
+
+<div class="viewcode-block" id="Graph.export_str"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.graphs.Graph.export_str">[docs]</a>    <span class="k">def</span> <span class="nf">export_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s2">&quot;# $NEW GRAPH$</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">idTrace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">():</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span><span class="o">.</span><span class="n">export_str</span><span class="p">()</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+
+
+<div class="viewcode-block" id="Graphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs">[docs]</a><span class="k">class</span> <span class="nc">Graphs</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Contains several :class:`Graph`&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateMethods</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Graphs.updateChildren"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.updateChildren">[docs]</a>    <span class="k">def</span> <span class="nf">updateChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">updateMethod</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">updateMethods</span><span class="p">:</span>
+            <span class="n">updateMethod</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Graphs.add_trace_firstGraph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.add_trace_firstGraph">[docs]</a>    <span class="k">def</span> <span class="nf">add_trace_firstGraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">updateChildren</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Same as add_trace, but only if graphs has only one id</span>
+<span class="sd">        :param data:</span>
+<span class="sd">        :param updateChildren:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">all_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphs_ids</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">all_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">,</span> <span class="n">updateChildren</span><span class="o">=</span><span class="n">updateChildren</span><span class="p">)</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Cannot add trace .. graphs are multiple&quot;</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Graphs.add_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.add_trace">[docs]</a>    <span class="k">def</span> <span class="nf">add_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">updateChildren</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a trace to the graph</span>
+
+<span class="sd">        :param idGraph: id of the graph</span>
+<span class="sd">        :param data: :class:`~Data`</span>
+<span class="sd">        :param updateChildren: Automatically calls callback functions</span>
+<span class="sd">        :return: id of the created trace</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">idTrace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">updateChildren</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">idTrace</span></div>
+
+<div class="viewcode-block" id="Graphs.remove_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.remove_trace">[docs]</a>    <span class="k">def</span> <span class="nf">remove_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">updateChildren</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the trace from the graph</span>
+
+<span class="sd">        :param idGraph: id of the graph</span>
+<span class="sd">        :param idTrace: id of the trace to remove</span>
+<span class="sd">        :param updateChildren: Automatically calls callback functions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">remove_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">updateChildren</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Graphs.get_first_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.get_first_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_first_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get id of the first graph</span>
+
+<span class="sd">        :return: id of the first graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphs_ids</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="Graphs.get_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.get_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get graph object at idgraph</span>
+
+<span class="sd">        :param idGraph: id of the graph to get</span>
+<span class="sd">        :return: :class:`~Graph`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Graphs.get_all_graphs_ids"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.get_all_graphs_ids">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_graphs_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get all ids of the graphs</span>
+
+<span class="sd">        :return: list of id graphs</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Graphs.get_all_graphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.get_all_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get all graphs. Return dict {id: :class:`~Graph`}&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span></div>
+
+<div class="viewcode-block" id="Graphs.add_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.add_graph">[docs]</a>    <span class="k">def</span> <span class="nf">add_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updateChildren</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a new graph</span>
+
+<span class="sd">        :return: id of the created graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">idGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">updateChildren</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">idGraph</span></div>
+
+<div class="viewcode-block" id="Graphs.remove_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.remove_graph">[docs]</a>    <span class="k">def</span> <span class="nf">remove_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a graph</span>
+
+<span class="sd">        :param idGraph: id of the graph to delete</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Key </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idGraph</span><span class="p">),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Graphs.add_update_method"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.add_update_method">[docs]</a>    <span class="k">def</span> <span class="nf">add_update_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">childObject</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a callback each time a graph is modified.</span>
+
+<span class="sd">        :param childObject: method without arguments</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateMethods</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">childObject</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Graphs.export_str"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.export_str">[docs]</a>    <span class="k">def</span> <span class="nf">export_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Export all the graphs in text</span>
+
+<span class="sd">        :return: str&quot;&quot;&quot;</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">graphId</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphs_ids</span><span class="p">():</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">graphId</span><span class="p">)</span><span class="o">.</span><span class="n">export_str</span><span class="p">()</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n\n\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">theStr</span></div>
+
+<div class="viewcode-block" id="Graphs.merge"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherGraphs</span><span class="p">):</span>
+        <span class="n">curr_id</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">mappings</span> <span class="o">=</span> <span class="p">[{}]</span><span class="o">*</span><span class="mi">2</span>
+        <span class="n">all_graphs_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphs</span><span class="p">()</span>
+        <span class="n">all_graphs_2</span> <span class="o">=</span> <span class="n">otherGraphs</span><span class="o">.</span><span class="n">get_all_graphs</span><span class="p">()</span>
+        <span class="n">new_graphs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">all_graphs</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="n">all_graphs_1</span><span class="p">,</span> <span class="n">all_graphs_2</span><span class="p">]):</span>
+            <span class="k">for</span> <span class="n">graphId</span> <span class="ow">in</span> <span class="n">all_graphs_1</span><span class="p">:</span>
+                <span class="n">new_graphs</span><span class="p">[</span><span class="n">curr_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_graphs</span><span class="p">[</span><span class="n">graphId</span><span class="p">]</span>
+                <span class="n">mappings</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">graphId</span><span class="p">]</span> <span class="o">=</span> <span class="n">curr_id</span>
+                <span class="n">curr_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span> <span class="o">=</span> <span class="n">new_graphs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">mappings</span></div>
+
+<div class="viewcode-block" id="Graphs.reset"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateChildren</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Graphs.is_empty"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.graphs.Graphs.is_empty">[docs]</a>    <span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphs</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

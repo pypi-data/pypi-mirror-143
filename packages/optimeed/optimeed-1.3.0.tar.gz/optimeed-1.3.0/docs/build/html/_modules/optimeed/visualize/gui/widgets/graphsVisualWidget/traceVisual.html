@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">pyqtgraph</span> <span class="k">as</span> <span class="n">pg</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+
+
+<div class="viewcode-block" id="TraceVisual"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual">[docs]</a><span class="k">class</span> <span class="nc">TraceVisual</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Defines a trace in a graph.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TraceVisual.signal_must_update"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.signal_must_update">[docs]</a>    <span class="n">signal_must_update</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual._ModifiedPaintElem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem">[docs]</a>    <span class="k">class</span> <span class="nc">_ModifiedPaintElem</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Hidden class to manage brushes or pens&quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">newPaintElems</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<div class="viewcode-block" id="TraceVisual._ModifiedPaintElem.add_modified_paintElem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.add_modified_paintElem">[docs]</a>        <span class="k">def</span> <span class="nf">add_modified_paintElem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">newPaintElem</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">indexInList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="p">[</span><span class="n">indexInList</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">newPaintElems</span><span class="p">[</span><span class="n">indexInList</span><span class="p">]</span> <span class="o">=</span> <span class="n">newPaintElem</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">newPaintElems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newPaintElem</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TraceVisual._ModifiedPaintElem.modify_paintElems"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.modify_paintElems">[docs]</a>        <span class="k">def</span> <span class="nf">modify_paintElems</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paintElemsIn_List</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot; Apply transformation to paintElemsIn_List</span>
+
+
+<span class="sd">            :param paintElemsIn_List: list of brushes or pens to modify</span>
+<span class="sd">            :return: False if nothing has been modified, True is something has been modified</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="p">)):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">paintElemsIn_List</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">newPaintElems</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WidgetGraphsVisual: Could not apply paintElem ... point deleted ?&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TraceVisual._ModifiedPaintElem.reset_paintElem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset_paintElem">[docs]</a>        <span class="k">def</span> <span class="nf">reset_paintElem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot; Remove transformation of point index&quot;&quot;&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">indexInList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="p">[</span><span class="n">indexInList</span><span class="p">]</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">newPaintElems</span><span class="p">[</span><span class="n">indexInList</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TraceVisual._ModifiedPaintElem.reset"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual._ModifiedPaintElem.reset">[docs]</a>        <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span></div></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theData</span><span class="p">,</span> <span class="n">theWGPlot</span><span class="p">,</span> <span class="n">highlight_last</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param theColor: Color of the trace. If color is specified in data, this is overriden.</span>
+<span class="sd">        :param theData: from class Data. Contains all the informations to plot (x, y, z, transforms, etc.)</span>
+<span class="sd">        :param theWGPlot: holder of the trace. This is a plotWidget</span>
+<span class="sd">        :param highlight_last: Boolean. If set to true, the last point in the data will be highlighted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="c1"># set brush</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theBrushesModifier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ModifiedPaintElem</span><span class="p">()</span>
+
+        <span class="c1"># set symbolPen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolPensModifier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ModifiedPaintElem</span><span class="p">()</span>
+
+        <span class="c1"># set symbols</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolModifier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ModifiedPaintElem</span><span class="p">()</span>
+
+        <span class="c1"># set data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theData</span> <span class="o">=</span> <span class="n">theData</span>
+
+        <span class="c1"># set trace item (plotItem)</span>
+        <span class="k">if</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_legend</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span> <span class="o">=</span> <span class="n">theWGPlot</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)],</span> <span class="n">name</span><span class="o">=</span><span class="n">theData</span><span class="o">.</span><span class="n">get_legend</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span> <span class="o">=</span> <span class="n">theWGPlot</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)])</span>
+
+        <span class="c1"># set highlight last</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight_last</span> <span class="o">=</span> <span class="n">highlight_last</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drawPoints</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">updateTrace</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TraceVisual.hide_points"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide_points">[docs]</a>    <span class="k">def</span> <span class="nf">hide_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Hide all the points&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drawPoints</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_color"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_color">[docs]</a>    <span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get colour of the trace, return tuple (r,g,b)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_color</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_color"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_color">[docs]</a>    <span class="k">def</span> <span class="nf">set_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set colour of the trace, argument as tuple (r,g,b)&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">scatter</span><span class="o">.</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;brush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_base_symbol_brush"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_brush">[docs]</a>    <span class="k">def</span> <span class="nf">get_base_symbol_brush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get symbol brush configured for this trace, return :class:`pg.QBrush`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_base_pen"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_pen">[docs]</a>    <span class="k">def</span> <span class="nf">get_base_pen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get pen configured for this trace, return :class:`pg.QPen`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_color</span><span class="p">(),</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_width</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_base_symbol_pen"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol_pen">[docs]</a>    <span class="k">def</span> <span class="nf">get_base_symbol_pen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get symbol pen configured for this trace, return :class:`pg.QPen`&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">symbol_isfilled</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QColor</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span><span class="o">.</span><span class="n">darker</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_symbolOutline</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)),</span> <span class="n">isCosmetic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 120 or 250 ? :)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_color</span><span class="p">(),</span> <span class="n">isCosmetic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_width</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_base_symbol"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_base_symbol">[docs]</a>    <span class="k">def</span> <span class="nf">get_base_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get base symbol configured for this trace, return str of the symbol (e.g. &#39;o&#39;)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_symbol</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_symbol"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbol">[docs]</a>    <span class="k">def</span> <span class="nf">get_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get actual symbols for the trace. If the symbols have been modified: return a list which maps each points to a symbol.</span>
+<span class="sd">        Otherwise: return :meth:TraceVisual.get_base_symbol()&quot;&quot;&quot;</span>
+        <span class="n">symbol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_symbol</span><span class="p">()</span>
+        <span class="n">theSymbolList</span> <span class="o">=</span> <span class="p">[</span><span class="n">symbol</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
+        <span class="n">hasBeenModified</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolModifier</span><span class="o">.</span><span class="n">modify_paintElems</span><span class="p">(</span><span class="n">theSymbolList</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">symbol</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">hasBeenModified</span> <span class="k">else</span> <span class="n">theSymbolList</span></div>
+
+<div class="viewcode-block" id="TraceVisual.updateTrace"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.updateTrace">[docs]</a>    <span class="k">def</span> <span class="nf">updateTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Forces the trace to refresh.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_plot_data</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawPoints</span><span class="p">:</span>
+                    <span class="n">theBrushes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_brushes</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+                    <span class="n">theSymbolPens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_symbolPens</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">theBrushes</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">theSymbolPens</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">theBasePen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_pen</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">theData</span><span class="o">.</span><span class="n">is_scattered</span><span class="p">():</span>
+                    <span class="n">theBasePen</span><span class="o">.</span><span class="n">setStyle</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">NoPen</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">set_pen_linestyle</span><span class="p">(</span><span class="n">theBasePen</span><span class="p">,</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_linestyle</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">symbolBrush</span><span class="o">=</span><span class="n">theBrushes</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_symbol</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">symbolPen</span><span class="o">=</span><span class="n">theSymbolPens</span><span class="p">,</span> <span class="n">symbolSize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_symbolsize</span><span class="p">(),</span> <span class="n">pen</span><span class="o">=</span><span class="n">theBasePen</span><span class="p">)</span>  <span class="c1"># symbolPen = None for no outline</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">setData</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">symbolBrush</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_length"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_length">[docs]</a>    <span class="k">def</span> <span class="nf">get_length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return number of data to plot&quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_plot_data</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TraceVisual.hide"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.hide">[docs]</a>    <span class="k">def</span> <span class="nf">hide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Hides the trace&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.show"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shows the trace&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.toggle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.toggle">[docs]</a>    <span class="k">def</span> <span class="nf">toggle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boolean</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Toggle the trace (hide/show)&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">boolean</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_data"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get data to plot :class:`~optimeed.visualize.graphs.Graphs.Data`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theData</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_brushes"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_brushes">[docs]</a>    <span class="k">def</span> <span class="nf">get_brushes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get actual brushes for the trace (=symbol filling). return a list which maps each points to a symbol brush&quot;&quot;&quot;</span>
+        <span class="n">symbolBrush</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_symbol_brush</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span><span class="o">.</span><span class="n">symbol_isfilled</span><span class="p">()</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">theBrushList</span> <span class="o">=</span> <span class="p">[</span><span class="n">symbolBrush</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">highlight_last</span><span class="p">:</span>
+            <span class="n">theBrushList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+        <span class="n">hasBeenModified</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theBrushesModifier</span><span class="o">.</span><span class="n">modify_paintElems</span><span class="p">(</span><span class="n">theBrushList</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">hasBeenModified</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">highlight_last</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">symbolBrush</span>
+        <span class="k">return</span> <span class="n">theBrushList</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_brush"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brush">[docs]</a>    <span class="k">def</span> <span class="nf">set_brush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">,</span> <span class="n">newbrush</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the symbol brush for a specific point:</span>
+
+<span class="sd">        :param indexPoint: Index of the point (in the graph) to modify</span>
+<span class="sd">        :param newbrush: either QBrush or tuple (r, g, b) of the new brush</span>
+<span class="sd">        :param update: if True, update the trace afterwards. This is slow operation.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">newbrush</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">newbrush</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="n">newbrush</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theBrushesModifier</span><span class="o">.</span><span class="n">add_modified_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">,</span> <span class="n">newbrush</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">update</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_symbol"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbol">[docs]</a>    <span class="k">def</span> <span class="nf">set_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">,</span> <span class="n">newSymbol</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the symbol shape for a specific point:</span>
+
+<span class="sd">        :param indexPoint: Index of the point (in the graph) to modify</span>
+<span class="sd">        :param newSymbol: string of the new symbol (e.g.: &#39;o&#39;)</span>
+<span class="sd">        :param update: if True, update the trace afterwards. This is slow operation.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolModifier</span><span class="o">.</span><span class="n">add_modified_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">,</span> <span class="n">newSymbol</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">update</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_brushes"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_brushes">[docs]</a>    <span class="k">def</span> <span class="nf">set_brushes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">list_indexPoint</span><span class="p">,</span> <span class="n">list_newbrush</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Same as :meth:`~TraceVisual.set_brush` but by taking a list as input&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">list_newbrush</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">list_newbrush</span> <span class="o">=</span> <span class="p">[</span><span class="n">list_newbrush</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_indexPoint</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_indexPoint</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_brush</span><span class="p">(</span><span class="n">list_indexPoint</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">list_newbrush</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.reset_brush"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_brush">[docs]</a>    <span class="k">def</span> <span class="nf">reset_brush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reset the brush of the point indexpoint&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theBrushesModifier</span><span class="o">.</span><span class="n">reset_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">update</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.reset_all_brushes"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_brushes">[docs]</a>    <span class="k">def</span> <span class="nf">reset_all_brushes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reset all the brushes&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theBrushesModifier</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.reset_symbol"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbol">[docs]</a>    <span class="k">def</span> <span class="nf">reset_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reset the symbol shape of the point indexpoint&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolModifier</span><span class="o">.</span><span class="n">reset_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">update</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_symbolPens"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_symbolPens">[docs]</a>    <span class="k">def</span> <span class="nf">get_symbolPens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get actual symbol pens for the trace (=symbol outline). return a list which maps each points to a symbol pen&quot;&quot;&quot;</span>
+        <span class="n">thePenList</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_base_symbol_pen</span><span class="p">()]</span> <span class="o">*</span> <span class="n">size</span>
+        <span class="n">hasBeenModified</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolPensModifier</span><span class="o">.</span><span class="n">modify_paintElems</span><span class="p">(</span><span class="n">thePenList</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">hasBeenModified</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_base_symbol_pen</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">thePenList</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_symbolPen"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPen">[docs]</a>    <span class="k">def</span> <span class="nf">set_symbolPen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">,</span> <span class="n">newPen</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the symbol shape for a specific point:</span>
+
+<span class="sd">        :param indexPoint: Index of the point (in the graph) to modify</span>
+<span class="sd">        :param newPen: QPen item or tuple of the color (r,g,b)</span>
+<span class="sd">        :param update: if True, update the trace afterwards. This is slow operation.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">newPen</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">newPen</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="n">newPen</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolPensModifier</span><span class="o">.</span><span class="n">add_modified_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">,</span> <span class="n">newPen</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">update</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.set_symbolPens"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_symbolPens">[docs]</a>    <span class="k">def</span> <span class="nf">set_symbolPens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">list_indexPoint</span><span class="p">,</span> <span class="n">list_newpens</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Same as :meth:`~TraceVisual.set_symbolPen` but by taking a list as input&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_indexPoint</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_symbolPen</span><span class="p">(</span><span class="n">list_indexPoint</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">list_newpens</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.reset_symbolPen"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_symbolPen">[docs]</a>    <span class="k">def</span> <span class="nf">reset_symbolPen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reset the symbol pen of the point indexpoint&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolPensModifier</span><span class="o">.</span><span class="n">reset_paintElem</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="TraceVisual.reset_all_symbolPens"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.reset_all_symbolPens">[docs]</a>    <span class="k">def</span> <span class="nf">reset_all_symbolPens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reset all the symbol pens&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSymbolPensModifier</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="TraceVisual.set_pen_linestyle"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.set_pen_linestyle">[docs]</a>    <span class="k">def</span> <span class="nf">set_pen_linestyle</span><span class="p">(</span><span class="n">thePen</span><span class="p">,</span> <span class="n">linestyle</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Transform a pen for dashed lines:</span>
+
+<span class="sd">        :param thePen: QPen item</span>
+<span class="sd">        :param linestyle: str (e.g.: &#39;.&#39;, &#39;.-&#39;, &#39;--&#39;, ...)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">linestyle</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">]:</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setDashPattern</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setCapStyle</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">RoundCap</span><span class="p">)</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">thePen</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*</span><span class="mf">1.75</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">linestyle</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.-&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">]:</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setCapStyle</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">RoundCap</span><span class="p">)</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setDashPattern</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">thePen</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*</span><span class="mf">1.25</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">linestyle</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;-..&#39;</span><span class="p">,</span> <span class="s1">&#39;.-.&#39;</span><span class="p">,</span> <span class="s1">&#39;..-&#39;</span><span class="p">]:</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setDashPattern</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">thePen</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*</span><span class="mf">1.25</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">linestyle</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;--&#39;</span><span class="p">]:</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setDashPattern</span><span class="p">([</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">thePen</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">*</span><span class="mf">1.1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">thePen</span><span class="o">.</span><span class="n">setStyle</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">SolidLine</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TraceVisual.get_point"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/traceVisual/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.traceVisual.TraceVisual.get_point">[docs]</a>    <span class="k">def</span> <span class="nf">get_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return object pyqtgraph.SpotItem&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">thePlotItem</span><span class="o">.</span><span class="n">scatter</span><span class="o">.</span><span class="n">points</span><span class="p">()[</span><span class="n">indexPoint</span><span class="p">]</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

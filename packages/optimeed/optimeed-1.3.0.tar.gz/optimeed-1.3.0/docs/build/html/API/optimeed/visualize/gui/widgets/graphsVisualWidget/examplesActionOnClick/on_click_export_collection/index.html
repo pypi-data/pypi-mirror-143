@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>on_click_export_collection &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../../" src="../../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../search.html" />
+    <link rel="next" title="on_click_extract_pareto" href="../on_click_extract_pareto/index.html" />
+    <link rel="prev" title="on_click_draw_device" href="../on_click_draw_device/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html"><strong>gui</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../actions_data_selector/index.html"><strong>actions_data_selector</strong></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"><strong>widgets</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html"><strong>gui</strong></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><strong>widgets</strong></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>graphsVisualWidget</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>examplesActionOnClick</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">on_click_export_collection</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../../_sources/API/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection">
+<span id="on-click-export-collection"></span><h1><code class="docutils literal notranslate"><span class="pre">on_click_export_collection</span></code><a class="headerlink" href="#module-optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_export</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On click: export the selected points</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.reset_graph">
+<code class="sig-name descname">reset_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.reset_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.reset_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_export_collection.on_graph_click_export.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../on_click_extract_pareto/index.html" class="btn btn-neutral float-right" title="on_click_extract_pareto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../on_click_draw_device/index.html" class="btn btn-neutral float-left" title="on_click_draw_device" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

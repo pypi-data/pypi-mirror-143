@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.gui_data_selector &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.gui_data_selector</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.gui_data_selector</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">rgetattr</span><span class="p">,</span> <span class="n">indentParagraph</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+
+<span class="k">if</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="app"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.app">[docs]</a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>  <span class="c1"># must initialize only once</span></div>
+
+
+<div class="viewcode-block" id="Action_on_selector_update"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_selector.Action_on_selector_update">[docs]</a><span class="k">class</span> <span class="nc">Action_on_selector_update</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Action_on_selector_update.selector_updated"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_selector.Action_on_selector_update.selector_updated">[docs]</a>    <span class="k">def</span> <span class="nf">selector_updated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection_name</span><span class="p">,</span> <span class="n">the_collection</span><span class="p">,</span> <span class="n">indices_data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Action to perform once the data have been selected</span>
+<span class="sd">        :param selection_name: name of the selection (deprecated ?)</span>
+<span class="sd">        :param the_collection: the collection</span>
+<span class="sd">        :param indices_data: indices of the data</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="Attribute_selector"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector">[docs]</a><span class="k">class</span> <span class="nc">Attribute_selector</span><span class="p">:</span>
+    <span class="c1"># Contains min max values for either list or scalar:</span>
+    <span class="c1"># If list, displays from self.children_list [Attribute_selector]</span>
+    <span class="c1"># Otherwise displays from self.min/max_value_box</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_name</span> <span class="o">=</span> <span class="n">attribute_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_value_box</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_value_box</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Attribute_selector.add_child"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector.add_child">[docs]</a>    <span class="k">def</span> <span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Attribute_selector.get_children"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector.get_children">[docs]</a>    <span class="k">def</span> <span class="nf">get_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children_list</span></div>
+
+<div class="viewcode-block" id="Attribute_selector.get_name"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{:.50}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Attribute_selector.get_min_max_attributes"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector.get_min_max_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">get_min_max_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">min_max_attributes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">_get_min_max_attributes</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="p">,</span> <span class="n">min_max_attr</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">children_list</span><span class="p">):</span>
+                <span class="n">attribute_min_valid</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">min_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">min_value_box</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="n">min_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;-inf&quot;</span><span class="p">)</span>
+                    <span class="n">attribute_min_valid</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="n">attribute_max_valid</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">max_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">max_value_box</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="n">max_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span>
+                    <span class="n">attribute_max_valid</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="k">if</span> <span class="n">attribute_max_valid</span> <span class="ow">or</span> <span class="n">attribute_min_valid</span><span class="p">:</span>
+                    <span class="n">min_max_attr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">,</span> <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">attribute_name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">get_children</span><span class="p">():</span>
+                    <span class="n">_get_min_max_attributes</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">min_max_attr</span><span class="p">)</span>
+
+        <span class="n">_get_min_max_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_max_attributes</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">min_max_attributes</span></div>
+
+<div class="viewcode-block" id="Attribute_selector.__str__"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Attribute_selector.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children_list</span><span class="p">:</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">child</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children_list</span><span class="p">):</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;: </span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+
+
+<div class="viewcode-block" id="Container_attribute_selector"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector">[docs]</a><span class="k">class</span> <span class="nc">Container_attribute_selector</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">containerName</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">containerName</span> <span class="o">=</span> <span class="n">containerName</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_selectors</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Container_attribute_selector.add_child"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.add_child">[docs]</a>    <span class="k">def</span> <span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.add_attribute_selector"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.add_attribute_selector">[docs]</a>    <span class="k">def</span> <span class="nf">add_attribute_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_selector</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_selectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attribute_selector</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.set_attribute_selectors"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.set_attribute_selectors">[docs]</a>    <span class="k">def</span> <span class="nf">set_attribute_selectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_selectors</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_selectors</span> <span class="o">=</span> <span class="n">attribute_selectors</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.get_name"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">containerName</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.get_children"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.get_children">[docs]</a>    <span class="k">def</span> <span class="nf">get_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.get_attribute_selectors"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.get_attribute_selectors">[docs]</a>    <span class="k">def</span> <span class="nf">get_attribute_selectors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">attribute_selectors</span></div>
+
+<div class="viewcode-block" id="Container_attribute_selector.__str__"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.Container_attribute_selector.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">attribute_selectors</span><span class="p">:</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+
+
+<div class="viewcode-block" id="GuiDataSelector"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_selector.GuiDataSelector">[docs]</a><span class="k">class</span> <span class="nc">GuiDataSelector</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">list_ListDataStruct_in</span><span class="p">,</span> <span class="n">actionOnUpdate</span><span class="p">:</span> <span class="n">Action_on_selector_update</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Base on collection, display a list of variables that can be updated.</span>
+<span class="sd">        When the button &quot;update&quot; is pressed, select the datas in Collection and call the method methodToCallWhenUpdated</span>
+<span class="sd">        - args:</span>
+<span class="sd">            collection_in (type Collection) containing the data to select</span>
+<span class="sd">            Action_on_selector_update</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="sd">&quot;&quot;&quot;Store variables&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theListDataStructs</span> <span class="o">=</span> <span class="n">list_ListDataStruct_in</span>
+<div class="viewcode-block" id="GuiDataSelector.theActionOnUpdate"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.GuiDataSelector.theActionOnUpdate">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnUpdate</span> <span class="o">=</span> <span class="n">actionOnUpdate</span></div>
+
+        <span class="sd">&quot;&quot;&quot;Generate GUI&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">GuiDataSelector</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+
+        <span class="n">scrollarea</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QScrollArea</span><span class="p">()</span>
+        <span class="n">scrollarea</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="p">)</span>
+        <span class="n">scrollarea</span><span class="o">.</span><span class="n">setWidgetResizable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">scrollarea</span><span class="o">.</span><span class="n">setHorizontalScrollBarPolicy</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ScrollBarAlwaysOff</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">scrollarea</span><span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">scrollarea</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="c1"># Create a layout for a global name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectionName</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">(</span><span class="s2">&quot;Default Name&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selectionName</span><span class="p">)</span>
+
+        <span class="c1"># For each attribute, create new layout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_container</span> <span class="o">=</span> <span class="n">Container_attribute_selector</span><span class="p">(</span><span class="s1">&#39;Device&#39;</span><span class="p">)</span>
+        <span class="n">get_attr_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_container</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theListDataStructs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_data</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">collapse</span><span class="p">(</span><span class="n">theGroupBox</span><span class="p">,</span> <span class="n">theFrame</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">theGroupBox</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="n">theFrame</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">theFrame</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">create_frames</span><span class="p">(</span><span class="n">theContainer</span><span class="p">,</span> <span class="n">parent_layout</span><span class="p">,</span> <span class="n">curr_recursion</span><span class="p">):</span>
+            <span class="n">MAX_RECURSION</span> <span class="o">=</span> <span class="mi">2</span>
+
+            <span class="n">theGroupBox</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QGroupBox</span><span class="p">(</span><span class="n">theContainer</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+            <span class="n">theGroupBox</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">theGroupBox</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">parent_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">theGroupBox</span><span class="p">)</span>
+
+            <span class="c1"># Little trick here: to be able to hide only the content, put a frame in a layout in the groupbox, and hide the frame</span>
+            <span class="n">new_layout_temp</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">theGroupBox</span><span class="p">)</span>
+            <span class="n">new_frame</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+            <span class="n">theGroupBox</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">collapse</span><span class="p">(</span><span class="n">theGroupBox</span><span class="p">,</span> <span class="n">new_frame</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">curr_recursion</span> <span class="o">&gt;=</span> <span class="n">MAX_RECURSION</span><span class="p">:</span>
+                <span class="n">new_frame</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+                <span class="n">theGroupBox</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">new_layout_temp</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">new_frame</span><span class="p">)</span>
+            <span class="n">new_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">new_frame</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">attribute_selector</span> <span class="ow">in</span> <span class="n">theContainer</span><span class="o">.</span><span class="n">get_attribute_selectors</span><span class="p">():</span>
+                <span class="c1"># create</span>
+                <span class="n">horizontal_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+                <span class="n">new_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">horizontal_layout</span><span class="p">)</span>
+
+                <span class="c1"># First: label</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">()</span>
+                <span class="n">label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">attribute_selector</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+                <span class="n">horizontal_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+
+                <span class="n">vertical_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+                <span class="n">horizontal_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">vertical_layout</span><span class="p">)</span>
+
+                <span class="n">min_value_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+                <span class="n">vertical_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">min_value_layout</span><span class="p">)</span>
+                <span class="n">min_value_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">()</span>
+
+                <span class="n">max_value_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+                <span class="n">vertical_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">max_value_layout</span><span class="p">)</span>
+                <span class="n">max_value_layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">()</span>
+
+                <span class="n">separator</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+                <span class="n">separator</span><span class="o">.</span><span class="n">setFrameShape</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFrame</span><span class="o">.</span><span class="n">HLine</span><span class="p">)</span>
+                <span class="n">new_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">separator</span><span class="p">)</span>
+
+                <span class="c1"># Create buttons</span>
+                <span class="n">create_buttons</span><span class="p">(</span><span class="n">attribute_selector</span><span class="p">,</span> <span class="n">min_value_layout</span><span class="p">,</span> <span class="n">max_value_layout</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">theContainer</span><span class="o">.</span><span class="n">get_children</span><span class="p">():</span>
+                <span class="n">create_frames</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">new_layout</span><span class="p">,</span> <span class="n">curr_recursion</span><span class="o">=</span><span class="n">curr_recursion</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">create_buttons</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="p">,</span> <span class="n">min_value_layout</span><span class="p">,</span> <span class="n">max_value_layout</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">get_children</span><span class="p">()):</span>
+                <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">min_value_box</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">min_value_box</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+                <span class="n">min_value_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">min_value_box</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+
+                <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">max_value_box</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">max_value_box</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+                <span class="n">max_value_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">max_value_box</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">the_attribute_selector</span><span class="o">.</span><span class="n">get_children</span><span class="p">():</span>
+                    <span class="n">create_buttons</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">min_value_layout</span><span class="p">,</span> <span class="n">max_value_layout</span><span class="p">)</span>
+
+        <span class="n">create_frames</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_container</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Create a button in the window</span>
+        <span class="n">dock</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDockWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Update&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">dock</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addDockWidget</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">TopDockWidgetArea</span><span class="p">,</span> <span class="n">dock</span><span class="p">)</span>
+
+        <span class="n">button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">sizeHint</span><span class="p">())</span>
+
+<div class="viewcode-block" id="GuiDataSelector.apply_filters"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_selector.GuiDataSelector.apply_filters">[docs]</a>    <span class="k">def</span> <span class="nf">apply_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">collection</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theListDataStructs</span><span class="p">:</span>
+                <span class="n">theData</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+                <span class="n">selected_data_indices</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">data_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theData</span><span class="p">)):</span>
+                    <span class="n">the_item</span> <span class="o">=</span> <span class="n">theData</span><span class="p">[</span><span class="n">data_index</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="n">is_object_selected</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_container</span><span class="p">,</span> <span class="n">the_item</span><span class="p">):</span>
+                        <span class="n">selected_data_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_index</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnUpdate</span><span class="o">.</span><span class="n">selector_updated</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selectionName</span><span class="o">.</span><span class="n">text</span><span class="p">(),</span> <span class="n">collection</span><span class="p">,</span> <span class="n">selected_data_indices</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Following error occurred in selector :&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span></div>
+
+        <span class="c1"># textboxValue = self.textbox.text()</span>
+
+<div class="viewcode-block" id="GuiDataSelector.run"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_selector.GuiDataSelector.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div></div>
+        <span class="c1"># app.exec_()</span>
+
+
+<div class="viewcode-block" id="is_object_selected"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.is_object_selected">[docs]</a><span class="k">def</span> <span class="nf">is_object_selected</span><span class="p">(</span><span class="n">container_in</span><span class="p">,</span> <span class="n">object_in</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">attribute_selector</span> <span class="ow">in</span> <span class="n">container_in</span><span class="o">.</span><span class="n">get_attribute_selectors</span><span class="p">():</span>
+        <span class="n">min_max_attribute</span> <span class="o">=</span> <span class="n">attribute_selector</span><span class="o">.</span><span class="n">get_min_max_attributes</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">min_attr</span><span class="p">,</span> <span class="n">max_attr</span><span class="p">,</span> <span class="n">name_attr</span> <span class="ow">in</span> <span class="n">min_max_attribute</span><span class="p">:</span>
+            <span class="c1"># Reverse boundaries if max &lt; min</span>
+            <span class="k">if</span> <span class="n">min_attr</span> <span class="o">&gt;</span> <span class="n">max_attr</span><span class="p">:</span>
+                <span class="n">buff</span> <span class="o">=</span> <span class="n">min_attr</span>
+                <span class="n">min_attr</span> <span class="o">=</span> <span class="n">max_attr</span>
+                <span class="n">max_attr</span> <span class="o">=</span> <span class="n">buff</span>
+            <span class="c1"># Check if item satisfies the condition</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">min_attr</span> <span class="o">&lt;=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">object_in</span><span class="p">,</span> <span class="n">name_attr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">max_attr</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                <span class="k">pass</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">([</span><span class="n">is_object_selected</span><span class="p">(</span><span class="n">container</span><span class="p">,</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">object_in</span><span class="p">,</span> <span class="n">container</span><span class="o">.</span><span class="n">get_name</span><span class="p">()))</span> <span class="k">for</span> <span class="n">container</span> <span class="ow">in</span> <span class="n">container_in</span><span class="o">.</span><span class="n">get_children</span><span class="p">()])</span></div>
+
+
+<div class="viewcode-block" id="check_and_add_if_float"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.check_and_add_if_float">[docs]</a><span class="k">def</span> <span class="nf">check_and_add_if_float</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">attribute_value</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attribute_value</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attribute_value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">new_attribute</span> <span class="o">=</span> <span class="n">Attribute_selector</span><span class="p">(</span><span class="n">attribute_name</span><span class="p">,</span> <span class="n">attribute_value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">parent</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">new_attribute</span><span class="p">)</span>  <span class="c1"># We put the value to the parent (because it is a list)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">the_container</span><span class="o">.</span><span class="n">add_attribute_selector</span><span class="p">(</span><span class="n">new_attribute</span><span class="p">)</span>  <span class="c1"># We put the value to the container</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="manage_list"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.manage_list">[docs]</a><span class="k">def</span> <span class="nf">manage_list</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">in_object</span><span class="p">,</span> <span class="n">_listOfValues</span><span class="p">,</span> <span class="n">_listName</span><span class="p">):</span>
+    <span class="n">new_attribute</span> <span class="o">=</span> <span class="n">Attribute_selector</span><span class="p">(</span><span class="n">_listName</span><span class="p">,</span> <span class="n">_listOfValues</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">_listOfValues</span><span class="p">):</span>
+        <span class="n">the_container</span><span class="o">.</span><span class="n">add_attribute_selector</span><span class="p">(</span><span class="n">new_attribute</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">_listOfValues</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="n">attribute_name_nested</span> <span class="o">=</span> <span class="n">_listName</span> <span class="o">+</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span>
+                <span class="n">attribute_value_nested</span> <span class="o">=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">in_object</span><span class="p">,</span> <span class="n">attribute_name_nested</span><span class="p">)</span>
+                <span class="n">check_and_add_if_float</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">attribute_value_nested</span><span class="p">,</span> <span class="n">attribute_name_nested</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">new_attribute</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">all</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;__dict__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">_listOfValues</span><span class="p">):</span>  <span class="c1"># If has &quot;__dict__&quot; attribute, more likely a class ;)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">_listOfValues</span><span class="p">:</span>
+            <span class="n">new_container</span> <span class="o">=</span> <span class="n">Container_attribute_selector</span><span class="p">(</span><span class="n">_listName</span> <span class="o">+</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">)</span>
+            <span class="n">the_container</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">new_container</span><span class="p">)</span>
+            <span class="n">get_attr_object</span><span class="p">(</span><span class="n">new_container</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="get_attr_object"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_selector/index.html#optimeed.visualize.gui.gui_data_selector.get_attr_object">[docs]</a><span class="k">def</span> <span class="nf">get_attr_object</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">in_object</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">attribute_name</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">(</span><span class="n">in_object</span><span class="p">):</span>
+        <span class="n">attribute_value</span> <span class="o">=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">in_object</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attribute_value</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attribute_value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="n">manage_list</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">in_object</span><span class="p">,</span> <span class="n">attribute_value</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">attribute_value</span><span class="p">,</span> <span class="s1">&#39;__dict__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">new_container</span> <span class="o">=</span> <span class="n">Container_attribute_selector</span><span class="p">(</span><span class="n">attribute_name</span><span class="p">)</span>
+            <span class="n">the_container</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">new_container</span><span class="p">)</span>
+            <span class="n">get_attr_object</span><span class="p">(</span><span class="n">new_container</span><span class="p">,</span> <span class="n">attribute_value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">check_and_add_if_float</span><span class="p">(</span><span class="n">the_container</span><span class="p">,</span> <span class="n">attribute_value</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

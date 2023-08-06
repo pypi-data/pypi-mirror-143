@@ -1,0 +1,819 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.ansi2html.converter &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../core.html">optimeed.core</a> &raquo;</li>
+        
+          <li><a href="../ansi2html.html">optimeed.core.ansi2html</a> &raquo;</li>
+        
+      <li>optimeed.core.ansi2html.converter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.ansi2html.converter</h1><div class="highlight"><pre>
+<span></span><span class="c1"># encoding: utf-8</span>
+<span class="c1">#  This file is part of ansi2html</span>
+<span class="c1">#  Convert ANSI (terminal) colours and attributes to HTML</span>
+<span class="c1">#  Copyright (C) 2012  Ralph Bean &lt;rbean@redhat.com&gt;</span>
+<span class="c1">#  Copyright (C) 2013  Sebastian Pipping &lt;sebastian@pipping.org&gt;</span>
+<span class="c1">#</span>
+<span class="c1">#  Inspired by and developed off of the work by pixelbeat and blackjack.</span>
+<span class="c1">#</span>
+<span class="c1">#  This program is free software: you can redistribute it and/or</span>
+<span class="c1">#  modify it under the terms of the GNU General Public License as</span>
+<span class="c1">#  published by the Free Software Foundation, either version 3 of</span>
+<span class="c1">#  the License, or (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1">#  This program is distributed in the hope that it will be useful,</span>
+<span class="c1">#  but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1">#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<span class="c1">#  General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1">#  You should have received a copy of the GNU General Public License</span>
+<span class="c1">#  along with this program.  If not, see</span>
+<span class="c1">#  &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">optparse</span>
+<span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">ordereddict</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">from</span> <span class="nn">.style</span> <span class="k">import</span> <span class="n">get_styles</span><span class="p">,</span> <span class="n">SCHEME</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">six.moves</span> <span class="k">import</span> <span class="nb">map</span>
+<span class="kn">from</span> <span class="nn">six.moves</span> <span class="k">import</span> <span class="nb">zip</span>
+
+
+<span class="n">ANSI_FULL_RESET</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ANSI_INTENSITY_INCREASED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">ANSI_INTENSITY_REDUCED</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">ANSI_INTENSITY_NORMAL</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">ANSI_STYLE_ITALIC</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ANSI_STYLE_NORMAL</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">ANSI_BLINK_SLOW</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">ANSI_BLINK_FAST</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">ANSI_BLINK_OFF</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">ANSI_UNDERLINE_ON</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">ANSI_UNDERLINE_OFF</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">ANSI_CROSSED_OUT_ON</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">ANSI_CROSSED_OUT_OFF</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">ANSI_VISIBILITY_ON</span> <span class="o">=</span> <span class="mi">28</span>
+<span class="n">ANSI_VISIBILITY_OFF</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">ANSI_FOREGROUND_CUSTOM_MIN</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">ANSI_FOREGROUND_CUSTOM_MAX</span> <span class="o">=</span> <span class="mi">37</span>
+<span class="n">ANSI_FOREGROUND_256</span> <span class="o">=</span> <span class="mi">38</span>
+<span class="n">ANSI_FOREGROUND_DEFAULT</span> <span class="o">=</span> <span class="mi">39</span>
+<span class="n">ANSI_BACKGROUND_CUSTOM_MIN</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">ANSI_BACKGROUND_CUSTOM_MAX</span> <span class="o">=</span> <span class="mi">47</span>
+<span class="n">ANSI_BACKGROUND_256</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="n">ANSI_BACKGROUND_DEFAULT</span> <span class="o">=</span> <span class="mi">49</span>
+<span class="n">ANSI_NEGATIVE_ON</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">ANSI_NEGATIVE_OFF</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="n">ANSI_FOREGROUND_HIGH_INTENSITY_MIN</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">ANSI_FOREGROUND_HIGH_INTENSITY_MAX</span> <span class="o">=</span> <span class="mi">97</span>
+<span class="n">ANSI_BACKGROUND_HIGH_INTENSITY_MIN</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">ANSI_BACKGROUND_HIGH_INTENSITY_MAX</span> <span class="o">=</span> <span class="mi">107</span>
+
+<span class="n">VT100_BOX_CODES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;0x71&#39;</span><span class="p">:</span> <span class="s1">&#39;─&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x74&#39;</span><span class="p">:</span> <span class="s1">&#39;├&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x75&#39;</span><span class="p">:</span> <span class="s1">&#39;┤&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x76&#39;</span><span class="p">:</span> <span class="s1">&#39;┴&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x77&#39;</span><span class="p">:</span> <span class="s1">&#39;┬&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x78&#39;</span><span class="p">:</span> <span class="s1">&#39;│&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x6a&#39;</span><span class="p">:</span> <span class="s1">&#39;┘&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x6b&#39;</span><span class="p">:</span> <span class="s1">&#39;┐&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x6c&#39;</span><span class="p">:</span> <span class="s1">&#39;┌&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x6d&#39;</span><span class="p">:</span> <span class="s1">&#39;└&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;0x6e&#39;</span><span class="p">:</span> <span class="s1">&#39;┼&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># http://stackoverflow.com/a/15190498</span>
+<span class="n">_latex_template</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span><span class="se">\\</span><span class="s1">documentclass</span><span class="si">{scrartcl}</span><span class="s1"></span>
+<span class="se">\\</span><span class="s1">usepackage[utf8]</span><span class="si">{inputenc}</span><span class="s1"></span>
+<span class="se">\\</span><span class="s1">usepackage</span><span class="si">{fancyvrb}</span><span class="s1"></span>
+<span class="se">\\</span><span class="s1">usepackage[usenames,dvipsnames]</span><span class="si">{xcolor}</span><span class="s1"></span>
+<span class="si">%%</span><span class="s1"> </span><span class="se">\\</span><span class="s1">definecolor{red-sd}</span><span class="si">{HTML}{7ed2d2}</span><span class="s1"></span>
+
+<span class="se">\\</span><span class="s1">title{</span><span class="si">%(title)s</span><span class="s1">}</span>
+
+<span class="se">\\</span><span class="s1">fvset{commandchars=</span><span class="se">\\\\\\</span><span class="s1">{\}}</span>
+
+<span class="se">\\</span><span class="s1">begin</span><span class="si">{document}</span><span class="s1"></span>
+
+<span class="se">\\</span><span class="s1">begin</span><span class="si">{Verbatim}</span><span class="s1"></span>
+<span class="si">%(content)s</span><span class="s1"></span>
+<span class="se">\\</span><span class="s1">end</span><span class="si">{Verbatim}</span><span class="s1"></span>
+<span class="se">\\</span><span class="s1">end</span><span class="si">{document}</span><span class="s1"></span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">_html_template</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">u</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span>
+<span class="s2">&lt;html&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=</span><span class="si">%(output_encoding)s</span><span class="s2">&quot;&gt;</span>
+<span class="s2">&lt;title&gt;</span><span class="si">%(title)s</span><span class="s2">&lt;/title&gt;</span>
+<span class="s2">&lt;style type=&quot;text/css&quot;&gt;</span><span class="se">\n</span><span class="si">%(style)s</span><span class="se">\n</span><span class="s2">&lt;/style&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body class=&quot;body_foreground body_background&quot; style=&quot;font-size: </span><span class="si">%(font_size)s</span><span class="s2">;&quot; &gt;</span>
+<span class="s2">&lt;pre class=&quot;ansi2html-content&quot;&gt;</span>
+<span class="si">%(content)s</span><span class="s2"></span>
+<span class="s2">&lt;/pre&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="_State"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter._State">[docs]</a><span class="k">class</span> <span class="nc">_State</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<div class="viewcode-block" id="_State.reset"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter._State.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">ANSI_INTENSITY_NORMAL</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">ANSI_STYLE_NORMAL</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blink</span> <span class="o">=</span> <span class="n">ANSI_BLINK_OFF</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">underline</span> <span class="o">=</span> <span class="n">ANSI_UNDERLINE_OFF</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crossedout</span> <span class="o">=</span> <span class="n">ANSI_CROSSED_OUT_OFF</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visibility</span> <span class="o">=</span> <span class="n">ANSI_VISIBILITY_ON</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="p">(</span><span class="n">ANSI_FOREGROUND_DEFAULT</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span><span class="n">ANSI_BACKGROUND_DEFAULT</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">negative</span> <span class="o">=</span> <span class="n">ANSI_NEGATIVE_OFF</span></div>
+
+<div class="viewcode-block" id="_State.adjust"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter._State.adjust">[docs]</a>    <span class="k">def</span> <span class="nf">adjust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ansi_code</span><span class="p">,</span> <span class="n">parameter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_INTENSITY_INCREASED</span><span class="p">,</span> <span class="n">ANSI_INTENSITY_REDUCED</span><span class="p">,</span> <span class="n">ANSI_INTENSITY_NORMAL</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_STYLE_ITALIC</span><span class="p">,</span> <span class="n">ANSI_STYLE_NORMAL</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_BLINK_SLOW</span><span class="p">,</span> <span class="n">ANSI_BLINK_FAST</span><span class="p">,</span> <span class="n">ANSI_BLINK_OFF</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blink</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_UNDERLINE_ON</span><span class="p">,</span> <span class="n">ANSI_UNDERLINE_OFF</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">underline</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_CROSSED_OUT_ON</span><span class="p">,</span> <span class="n">ANSI_CROSSED_OUT_OFF</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">crossedout</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_VISIBILITY_ON</span><span class="p">,</span> <span class="n">ANSI_VISIBILITY_OFF</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">visibility</span> <span class="o">=</span> <span class="n">ansi_code</span>
+        <span class="k">elif</span> <span class="n">ANSI_FOREGROUND_CUSTOM_MIN</span> <span class="o">&lt;=</span> <span class="n">ansi_code</span> <span class="o">&lt;=</span> <span class="n">ANSI_FOREGROUND_CUSTOM_MAX</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ANSI_FOREGROUND_HIGH_INTENSITY_MIN</span> <span class="o">&lt;=</span> <span class="n">ansi_code</span> <span class="o">&lt;=</span> <span class="n">ANSI_FOREGROUND_HIGH_INTENSITY_MAX</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="o">==</span> <span class="n">ANSI_FOREGROUND_256</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="o">==</span> <span class="n">ANSI_FOREGROUND_DEFAULT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ANSI_BACKGROUND_CUSTOM_MIN</span> <span class="o">&lt;=</span> <span class="n">ansi_code</span> <span class="o">&lt;=</span> <span class="n">ANSI_BACKGROUND_CUSTOM_MAX</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ANSI_BACKGROUND_HIGH_INTENSITY_MIN</span> <span class="o">&lt;=</span> <span class="n">ansi_code</span> <span class="o">&lt;=</span> <span class="n">ANSI_BACKGROUND_HIGH_INTENSITY_MAX</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="o">==</span> <span class="n">ANSI_BACKGROUND_256</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="o">==</span> <span class="n">ANSI_BACKGROUND_DEFAULT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span><span class="n">ansi_code</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ansi_code</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_NEGATIVE_ON</span><span class="p">,</span> <span class="n">ANSI_NEGATIVE_OFF</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">negative</span> <span class="o">=</span> <span class="n">ansi_code</span></div>
+
+<div class="viewcode-block" id="_State.to_css_classes"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter._State.to_css_classes">[docs]</a>    <span class="k">def</span> <span class="nf">to_css_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">css_classes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">append_unless_default</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">default</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="n">default</span><span class="p">:</span>
+                <span class="n">css_class</span> <span class="o">=</span> <span class="s1">&#39;ansi</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">value</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">css_class</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">append_color_unless_default</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">negative</span><span class="p">,</span> <span class="n">neg_css_class</span><span class="p">):</span>
+            <span class="n">value</span><span class="p">,</span> <span class="n">parameter</span> <span class="o">=</span> <span class="n">color</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="n">default</span><span class="p">:</span>
+                <span class="n">prefix</span> <span class="o">=</span> <span class="s1">&#39;inv&#39;</span> <span class="k">if</span> <span class="n">negative</span> <span class="k">else</span> <span class="s1">&#39;ansi&#39;</span>
+                <span class="n">css_class_index</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> \
+                        <span class="k">if</span> <span class="p">(</span><span class="n">parameter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> \
+                        <span class="k">else</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="n">css_class_index</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">negative</span><span class="p">:</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg_css_class</span><span class="p">)</span>
+
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">intensity</span><span class="p">,</span> <span class="n">ANSI_INTENSITY_NORMAL</span><span class="p">)</span>
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="p">,</span> <span class="n">ANSI_STYLE_NORMAL</span><span class="p">)</span>
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">blink</span><span class="p">,</span> <span class="n">ANSI_BLINK_OFF</span><span class="p">)</span>
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">underline</span><span class="p">,</span> <span class="n">ANSI_UNDERLINE_OFF</span><span class="p">)</span>
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">crossedout</span><span class="p">,</span> <span class="n">ANSI_CROSSED_OUT_OFF</span><span class="p">)</span>
+        <span class="n">append_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visibility</span><span class="p">,</span> <span class="n">ANSI_VISIBILITY_ON</span><span class="p">)</span>
+
+        <span class="n">flip_fore_and_background</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">negative</span> <span class="o">==</span> <span class="n">ANSI_NEGATIVE_ON</span><span class="p">)</span>
+        <span class="n">append_color_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">,</span> <span class="n">ANSI_FOREGROUND_DEFAULT</span><span class="p">,</span> <span class="n">flip_fore_and_background</span><span class="p">,</span> <span class="s1">&#39;inv_background&#39;</span><span class="p">)</span>
+        <span class="n">append_color_unless_default</span><span class="p">(</span><span class="n">css_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="n">ANSI_BACKGROUND_DEFAULT</span><span class="p">,</span> <span class="n">flip_fore_and_background</span><span class="p">,</span> <span class="s1">&#39;inv_foreground&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">css_classes</span></div></div>
+
+
+<div class="viewcode-block" id="linkify"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter.linkify">[docs]</a><span class="k">def</span> <span class="nf">linkify</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">latex_mode</span><span class="p">):</span>
+    <span class="n">url_matcher</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="s1">&#39;(((((https?|ftps?|gopher|telnet|nntp)://)|&#39;</span>
+        <span class="sa">r</span><span class="s1">&#39;(mailto:|news:))(%[0-9A-Fa-f]</span><span class="si">{2}</span><span class="s1">|[-()_.!~*&#39;</span>
+        <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">;/?:@&amp;=+$,A-Za-z0-9])+)([).!</span><span class="se">\&#39;</span><span class="s1">;/?:,][[:blank:]])?)&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">latex_mode</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">url_matcher</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">url{\1}&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">url_matcher</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&lt;a href=&quot;\1&quot;&gt;\1&lt;/a&gt;&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="map_vt100_box_code"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter.map_vt100_box_code">[docs]</a><span class="k">def</span> <span class="nf">map_vt100_box_code</span><span class="p">(</span><span class="n">char</span><span class="p">):</span>
+    <span class="n">char_hex</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">VT100_BOX_CODES</span><span class="p">[</span><span class="n">char_hex</span><span class="p">]</span> <span class="k">if</span> <span class="n">char_hex</span> <span class="ow">in</span> <span class="n">VT100_BOX_CODES</span> <span class="k">else</span> <span class="n">char</span></div>
+
+<div class="viewcode-block" id="_needs_extra_newline"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter._needs_extra_newline">[docs]</a><span class="k">def</span> <span class="nf">_needs_extra_newline</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">text</span> <span class="ow">or</span> <span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="CursorMoveUp"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter.CursorMoveUp">[docs]</a><span class="k">class</span> <span class="nc">CursorMoveUp</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Ansi2HTMLConverter"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter">[docs]</a><span class="k">class</span> <span class="nc">Ansi2HTMLConverter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Convert Ansi color codes to CSS+HTML</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; conv = Ansi2HTMLConverter()</span>
+<span class="sd">    &gt;&gt;&gt; ansi = &quot; &quot;.join(sys.stdin.readlines())</span>
+<span class="sd">    &gt;&gt;&gt; html = conv.convert(ansi)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">latex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">dark_bg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">line_wrap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">font_size</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span>
+                 <span class="n">linkify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">escaped</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">markup_lines</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">output_encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+                 <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;ansi2html&#39;</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+                <span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">latex</span> <span class="o">=</span> <span class="n">latex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inline</span> <span class="o">=</span> <span class="n">inline</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dark_bg</span> <span class="o">=</span> <span class="n">dark_bg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_wrap</span> <span class="o">=</span> <span class="n">line_wrap</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span> <span class="o">=</span> <span class="n">font_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linkify</span> <span class="o">=</span> <span class="n">linkify</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">escaped</span> <span class="o">=</span> <span class="n">escaped</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">markup_lines</span> <span class="o">=</span> <span class="n">markup_lines</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_encoding</span> <span class="o">=</span> <span class="n">output_encoding</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="n">scheme</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attrs</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">inline</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">styles</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">item</span><span class="o">.</span><span class="n">klass</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">),</span> <span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">get_styles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dark_bg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wrap</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="p">)])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vt100_box_codes_prog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033\\</span><span class="s1">(([B0])&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ansi_codes_prog</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033\\</span><span class="s1">[&#39;</span> <span class="s1">&#39;([</span><span class="se">\\</span><span class="s1">d;]*)&#39;</span> <span class="s1">&#39;([a-zA-z])&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter.apply_regex"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter.apply_regex">[docs]</a>    <span class="k">def</span> <span class="nf">apply_regex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ansi</span><span class="p">):</span>
+        <span class="n">styles_used</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply_regex</span><span class="p">(</span><span class="n">ansi</span><span class="p">,</span> <span class="n">styles_used</span><span class="p">)</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_collapse_cursor</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">linkify</span><span class="p">:</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">linkify</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">)</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">]</span>
+
+        <span class="n">combined</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">markup_lines</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+            <span class="n">combined</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                <span class="sd">&quot;&quot;&quot;&lt;span id=&quot;line-%i&quot;&gt;%s&lt;/span&gt;&quot;&quot;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">combined</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+            <span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">combined</span><span class="p">,</span> <span class="n">styles_used</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter._apply_regex"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter._apply_regex">[docs]</a>    <span class="k">def</span> <span class="nf">_apply_regex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ansi</span><span class="p">,</span> <span class="n">styles_used</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">escaped</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span> <span class="c1"># Known Perl function which does this: https://tex.stackexchange.com/questions/34580/escape-character-in-latex/119383#119383</span>
+                <span class="n">specials</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([</span>
+                <span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">specials</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([</span>
+                    <span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;amp;&#39;</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;lt;&#39;</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&amp;gt;&#39;</span><span class="p">),</span>
+                <span class="p">])</span>
+            <span class="k">for</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">special</span> <span class="ow">in</span> <span class="n">specials</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">ansi</span> <span class="o">=</span> <span class="n">ansi</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">special</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">_vt100_box_drawing</span><span class="p">():</span>
+            <span class="n">last_end</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># the index of the last end of a code we&#39;ve seen</span>
+            <span class="n">box_drawing_mode</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vt100_box_codes_prog</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">ansi</span><span class="p">):</span>
+                <span class="n">trailer</span> <span class="o">=</span> <span class="n">ansi</span><span class="p">[</span><span class="n">last_end</span><span class="p">:</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span>
+                <span class="k">if</span> <span class="n">box_drawing_mode</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">trailer</span><span class="p">:</span>
+                        <span class="k">yield</span> <span class="n">map_vt100_box_code</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">trailer</span>
+                <span class="n">last_end</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+                <span class="n">box_drawing_mode</span> <span class="o">=</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">ansi</span><span class="p">[</span><span class="n">last_end</span><span class="p">:]</span>
+        <span class="n">ansi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_vt100_box_drawing</span><span class="p">())</span>
+
+        <span class="n">state</span> <span class="o">=</span> <span class="n">_State</span><span class="p">()</span>
+        <span class="n">inside_span</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">last_end</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># the index of the last end of a code we&#39;ve seen</span>
+        <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ansi_codes_prog</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">ansi</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">ansi</span><span class="p">[</span><span class="n">last_end</span><span class="p">:</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span>
+            <span class="n">last_end</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+
+            <span class="n">params</span><span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">command</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;mMA&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Special cursor-moving code.  The only supported one.</span>
+            <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">CursorMoveUp</span>
+                <span class="k">continue</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">params</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="n">ANSI_FULL_RESET</span><span class="p">]</span>
+
+            <span class="c1"># Find latest reset marker</span>
+            <span class="n">last_null_index</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">skip_after_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">skip_after_index</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">ANSI_FULL_RESET</span><span class="p">:</span>
+                    <span class="n">last_null_index</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">elif</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_FOREGROUND_256</span><span class="p">,</span> <span class="n">ANSI_BACKGROUND_256</span><span class="p">):</span>
+                    <span class="n">skip_after_index</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
+
+            <span class="c1"># Process reset marker, drop everything before</span>
+            <span class="k">if</span> <span class="n">last_null_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="n">last_null_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+                <span class="k">if</span> <span class="n">inside_span</span><span class="p">:</span>
+                    <span class="n">inside_span</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                        <span class="k">yield</span> <span class="s1">&#39;}&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">yield</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span>
+                <span class="n">state</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">params</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># Turn codes into CSS classes</span>
+            <span class="n">skip_after_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">skip_after_index</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ANSI_FOREGROUND_256</span><span class="p">,</span> <span class="n">ANSI_BACKGROUND_256</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">parameter</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+                    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="n">skip_after_index</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">parameter</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">state</span><span class="o">.</span><span class="n">adjust</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">parameter</span><span class="o">=</span><span class="n">parameter</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">inside_span</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="s1">&#39;}&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span>
+                <span class="n">inside_span</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="n">css_classes</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">to_css_classes</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">css_classes</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">styles_used</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">css_classes</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inline</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                    <span class="n">style</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">[</span><span class="n">klass</span><span class="p">]</span><span class="o">.</span><span class="n">kwl</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">klass</span> <span class="ow">in</span> <span class="n">css_classes</span> <span class="k">if</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">[</span><span class="n">klass</span><span class="p">]</span><span class="o">.</span><span class="n">kwl</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;color&#39;</span><span class="p">]</span>
+                    <span class="k">yield</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">textcolor[HTML]{</span><span class="si">%s</span><span class="s1">}{&#39;</span> <span class="o">%</span> <span class="n">style</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">style</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">[</span><span class="n">klass</span><span class="p">]</span><span class="o">.</span><span class="n">kw</span> <span class="k">for</span> <span class="n">klass</span> <span class="ow">in</span> <span class="n">css_classes</span> <span class="k">if</span>
+                             <span class="n">klass</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">]</span>
+                    <span class="k">yield</span> <span class="s1">&#39;&lt;span style=&quot;</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">textcolor{</span><span class="si">%s</span><span class="s1">}{&#39;</span> <span class="o">%</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">css_classes</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="s1">&#39;&lt;span class=&quot;</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">css_classes</span><span class="p">)</span>
+            <span class="n">inside_span</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">yield</span> <span class="n">ansi</span><span class="p">[</span><span class="n">last_end</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="n">inside_span</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="s1">&#39;}&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span>
+            <span class="n">inside_span</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter._collapse_cursor"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter._collapse_cursor">[docs]</a>    <span class="k">def</span> <span class="nf">_collapse_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parts</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Act on any CursorMoveUp commands by deleting preceding tokens &quot;&quot;&quot;</span>
+
+        <span class="n">final_parts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+
+            <span class="c1"># Throw out empty string tokens (&quot;&quot;)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">part</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Go back, deleting every token in the last &#39;line&#39;</span>
+            <span class="k">if</span> <span class="n">part</span> <span class="o">==</span> <span class="n">CursorMoveUp</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">final_parts</span><span class="p">:</span>
+                    <span class="n">final_parts</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+                <span class="k">while</span> <span class="n">final_parts</span> <span class="ow">and</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">final_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="n">final_parts</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+                <span class="k">continue</span>
+
+            <span class="c1"># Otherwise, just pass this token forward</span>
+            <span class="n">final_parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">final_parts</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter.prepare"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter.prepare">[docs]</a>    <span class="k">def</span> <span class="nf">prepare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ansi</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ensure_trailing_newline</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Load the contents of &#39;ansi&#39; into this object &quot;&quot;&quot;</span>
+
+        <span class="n">body</span><span class="p">,</span> <span class="n">styles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_regex</span><span class="p">(</span><span class="n">ansi</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">ensure_trailing_newline</span> <span class="ow">and</span> <span class="n">_needs_extra_newline</span><span class="p">(</span><span class="n">body</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attrs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;dark_bg&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dark_bg</span><span class="p">,</span>
+            <span class="s1">&#39;line_wrap&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wrap</span><span class="p">,</span>
+            <span class="s1">&#39;font_size&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span><span class="p">,</span>
+            <span class="s1">&#39;body&#39;</span><span class="p">:</span> <span class="n">body</span><span class="p">,</span>
+            <span class="s1">&#39;styles&#39;</span><span class="p">:</span> <span class="n">styles</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attrs</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter.attrs"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter.attrs">[docs]</a>    <span class="k">def</span> <span class="nf">attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Prepare attributes for the template &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attrs</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Method .prepare not yet called.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attrs</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter.convert"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter.convert">[docs]</a>    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ansi</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ensure_trailing_newline</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">attrs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">ansi</span><span class="p">,</span> <span class="n">ensure_trailing_newline</span><span class="o">=</span><span class="n">ensure_trailing_newline</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">full</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latex</span><span class="p">:</span>
+                <span class="n">_template</span> <span class="o">=</span> <span class="n">_latex_template</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">_template</span> <span class="o">=</span> <span class="n">_html_template</span>
+            <span class="n">all_styles</span> <span class="o">=</span> <span class="n">get_styles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dark_bg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wrap</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span>
+            <span class="n">backgrounds</span> <span class="o">=</span> <span class="n">all_styles</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+            <span class="n">used_styles</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">klass</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;styles&quot;</span><span class="p">],</span> <span class="n">all_styles</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">_template</span> <span class="o">%</span> <span class="p">{</span>
+                <span class="s1">&#39;style&#39;</span> <span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">backgrounds</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">used_styles</span><span class="p">)))),</span>
+                <span class="s1">&#39;title&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+                <span class="s1">&#39;font_size&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span><span class="p">,</span>
+                <span class="s1">&#39;content&#39;</span> <span class="p">:</span>  <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">],</span>
+                <span class="s1">&#39;output_encoding&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_encoding</span><span class="p">,</span>
+            <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Ansi2HTMLConverter.produce_headers"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/index.html#optimeed.core.ansi2html.converter.Ansi2HTMLConverter.produce_headers">[docs]</a>    <span class="k">def</span> <span class="nf">produce_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;style type=&quot;text/css&quot;&gt;</span><span class="se">\n</span><span class="si">%(style)s</span><span class="se">\n</span><span class="s1">&lt;/style&gt;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">{</span>
+            <span class="s1">&#39;style&#39;</span> <span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">get_styles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dark_bg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wrap</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="p">)))</span>
+        <span class="p">}</span></div></div>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../../API/optimeed/core/ansi2html/converter/index.html#optimeed.core.ansi2html.converter.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    $ ls --color=always | ansi2html &gt; directories.html</span>
+<span class="sd">    $ sudo tail /var/log/messages | ccze -A | ansi2html &gt; logs.html</span>
+<span class="sd">    $ task burndown | ansi2html &gt; burndown.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">scheme_names</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="n">SCHEME</span><span class="p">))</span>
+    <span class="n">version_str</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="s1">&#39;ansi2html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">version</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">optparse</span><span class="o">.</span><span class="n">OptionParser</span><span class="p">(</span>
+        <span class="n">usage</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">,</span>
+        <span class="n">version</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%%</span><span class="s2">prog </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">version_str</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="s2">&quot;--partial&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;partial&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Process lines as them come in.  No headers are produced.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-L&quot;</span><span class="p">,</span> <span class="s2">&quot;--latex&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;latex&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Export as LaTeX instead of HTML.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-i&quot;</span><span class="p">,</span> <span class="s2">&quot;--inline&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Inline style without headers or template.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-H&quot;</span><span class="p">,</span> <span class="s2">&quot;--headers&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;headers&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Just produce the &lt;style&gt; tag.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="s1">&#39;--font-size&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;font_size&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;SIZE&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;normal&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Set the global font size in the output.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-l&quot;</span><span class="p">,</span> <span class="s1">&#39;--light-background&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;light_background&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Set output to &#39;light background&#39; mode.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-W&quot;</span><span class="p">,</span> <span class="s1">&#39;--no-line-wrap&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;no_line_wrap&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Disable line wrapping.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-a&quot;</span><span class="p">,</span> <span class="s1">&#39;--linkify&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;linkify&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Transform URLs into &lt;a&gt; links.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-u&quot;</span><span class="p">,</span> <span class="s1">&#39;--unescape&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;escaped&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_false&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Do not escape XML tags found in the input.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s1">&#39;--markup-lines&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;markup_lines&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Surround lines with &lt;span id=&#39;line-n&#39;&gt;..&lt;/span&gt;.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s1">&#39;--input-encoding&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;input_encoding&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;ENCODING&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Specify input encoding&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s1">&#39;--output-encoding&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;output_encoding&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;ENCODING&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Specify output encoding&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="s1">&#39;--scheme&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;scheme&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;SCHEME&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;ansi2html&#39;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">scheme_names</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Specify color palette scheme. Default: </span><span class="si">%%</span><span class="s2">default. Choices: </span><span class="si">%s</span><span class="s2">&quot;</span>
+              <span class="o">%</span> <span class="n">scheme_names</span><span class="p">))</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;output_title&#39;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Specify output title&quot;</span><span class="p">)</span>
+
+    <span class="n">opts</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">Ansi2HTMLConverter</span><span class="p">(</span>
+        <span class="n">latex</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">latex</span><span class="p">,</span>
+        <span class="n">inline</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">inline</span><span class="p">,</span>
+        <span class="n">dark_bg</span><span class="o">=</span><span class="ow">not</span> <span class="n">opts</span><span class="o">.</span><span class="n">light_background</span><span class="p">,</span>
+        <span class="n">line_wrap</span><span class="o">=</span><span class="ow">not</span> <span class="n">opts</span><span class="o">.</span><span class="n">no_line_wrap</span><span class="p">,</span>
+        <span class="n">font_size</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">font_size</span><span class="p">,</span>
+        <span class="n">linkify</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">linkify</span><span class="p">,</span>
+        <span class="n">escaped</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">escaped</span><span class="p">,</span>
+        <span class="n">markup_lines</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">markup_lines</span><span class="p">,</span>
+        <span class="n">output_encoding</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">output_encoding</span><span class="p">,</span>
+        <span class="n">scheme</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">scheme</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">output_title</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">TextIOWrapper</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">detach</span><span class="p">(),</span> <span class="n">opts</span><span class="o">.</span><span class="n">input_encoding</span><span class="p">,</span> <span class="s2">&quot;replace&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">io</span><span class="o">.</span><span class="n">UnsupportedOperation</span><span class="p">:</span>
+            <span class="c1"># This only fails in the test suite...</span>
+            <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_read</span><span class="p">(</span><span class="n">input_bytes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_bytes</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">input_encoding</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_print</span><span class="p">(</span><span class="n">output_unicode</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="s1">&#39;buffer&#39;</span><span class="p">):</span>
+            <span class="n">output_bytes</span> <span class="o">=</span> <span class="p">(</span><span class="n">output_unicode</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">output_encoding</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_bytes</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">((</span><span class="n">output_unicode</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">output_encoding</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_unicode</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span>
+
+    <span class="c1"># Produce only the headers and quit</span>
+    <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+        <span class="n">_print</span><span class="p">(</span><span class="n">conv</span><span class="o">.</span><span class="n">produce_headers</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">full</span> <span class="o">=</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">partial</span> <span class="ow">or</span> <span class="n">opts</span><span class="o">.</span><span class="n">inline</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">conv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readlines</span><span class="p">()),</span> <span class="n">full</span><span class="o">=</span><span class="n">full</span><span class="p">,</span> <span class="n">ensure_trailing_newline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">_print</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">conv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">u</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="nb">map</span><span class="p">(</span><span class="n">_read</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+        <span class="p">),</span> <span class="n">full</span><span class="o">=</span><span class="n">full</span><span class="p">,</span> <span class="n">ensure_trailing_newline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">_print</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

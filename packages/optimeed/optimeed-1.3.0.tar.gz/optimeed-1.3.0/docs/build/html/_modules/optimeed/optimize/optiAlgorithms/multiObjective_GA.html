@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.optimize.optiAlgorithms.multiObjective_GA &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../optimize.html">optimeed.optimize</a> &raquo;</li>
+        
+          <li><a href="../optiAlgorithms.html">optimeed.optimize.optiAlgorithms</a> &raquo;</li>
+        
+      <li>optimeed.optimize.optiAlgorithms.multiObjective_GA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.optimize.optiAlgorithms.multiObjective_GA</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="k">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">cpu_count</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">printIfShown</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">,</span> <span class="n">indentParagraph</span>
+<span class="kn">from</span> <span class="nn">optimeed.optimize.optiVariable</span> <span class="k">import</span> <span class="n">Binary_OptimizationVariable</span><span class="p">,</span> <span class="n">Integer_OptimizationVariable</span><span class="p">,</span> <span class="n">Real_OptimizationVariable</span>
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">Option_class</span>
+<span class="kn">from</span> <span class="nn">.algorithmInterface</span> <span class="k">import</span> <span class="n">AlgorithmInterface</span>
+<span class="kn">from</span> <span class="nn">.convergence</span> <span class="k">import</span> <span class="n">InterfaceConvergence</span><span class="p">,</span> <span class="n">EvolutionaryConvergence</span>
+<span class="c1"># Platypus imports</span>
+<span class="kn">from</span> <span class="nn">.platypus</span> <span class="k">import</span> <span class="n">FixedLengthArray</span><span class="p">,</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Solution</span>
+<span class="kn">from</span> <span class="nn">.platypus.algorithms</span> <span class="k">import</span> <span class="n">NSGAIII</span><span class="p">,</span> <span class="n">SPEA2</span><span class="p">,</span> <span class="n">SMPSO</span><span class="p">,</span> <span class="n">NSGAII</span><span class="p">,</span> <span class="n">OMOPSO</span>
+<span class="kn">from</span> <span class="nn">.platypus.core</span> <span class="k">import</span> <span class="n">Problem</span><span class="p">,</span> <span class="n">TerminationCondition</span><span class="p">,</span> <span class="n">nondominated</span><span class="p">,</span> <span class="n">unique</span><span class="p">,</span> <span class="n">Archive</span><span class="p">,</span> <span class="n">EpsilonDominance</span>
+<span class="kn">from</span> <span class="nn">.platypus.evaluator</span> <span class="k">import</span> <span class="n">Evaluator</span><span class="p">,</span> <span class="n">run_job</span>
+<span class="kn">from</span> <span class="nn">.platypus.operators</span> <span class="k">import</span> <span class="n">CompoundOperator</span><span class="p">,</span> <span class="n">SBX</span><span class="p">,</span> <span class="n">HUX</span><span class="p">,</span> <span class="n">PM</span><span class="p">,</span> <span class="n">BitFlip</span>
+<span class="kn">from</span> <span class="nn">.platypus.types</span> <span class="k">import</span> <span class="n">Real</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Binary</span>
+
+
+<div class="viewcode-block" id="My_OMOPSO"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.My_OMOPSO">[docs]</a><span class="k">class</span> <span class="nc">My_OMOPSO</span><span class="p">(</span><span class="n">OMOPSO</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">problem</span><span class="p">,</span> <span class="n">epsilons</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">epsilons</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">archive</span> <span class="o">=</span> <span class="n">MyConvergence</span><span class="p">(</span><span class="n">EpsilonDominance</span><span class="p">(</span><span class="n">epsilons</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MyConvergence"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyConvergence">[docs]</a><span class="k">class</span> <span class="nc">MyConvergence</span><span class="p">(</span><span class="n">InterfaceConvergence</span><span class="p">,</span> <span class="n">Archive</span><span class="p">):</span>
+<div class="viewcode-block" id="MyConvergence.conv"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyConvergence.conv">[docs]</a>    <span class="n">conv</span><span class="p">:</span> <span class="n">EvolutionaryConvergence</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">*</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv</span> <span class="o">=</span> <span class="n">EvolutionaryConvergence</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_step</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="MyConvergence.extend"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyConvergence.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solutions</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">solutions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">solutions</span><span class="p">)</span>
+
+        <span class="n">theObjectives</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">objectives</span><span class="p">)</span> <span class="k">for</span> <span class="n">solution</span> <span class="ow">in</span> <span class="n">solutions</span><span class="p">]</span>
+        <span class="n">theConstraints</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">constraints</span><span class="p">)</span> <span class="k">for</span> <span class="n">solution</span> <span class="ow">in</span> <span class="n">solutions</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">set_points_at_step</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">curr_step</span><span class="p">,</span> <span class="n">theObjectives</span><span class="p">,</span> <span class="n">theConstraints</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_step</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="MyConvergence.get_graphs"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyConvergence.get_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">get_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">get_graphs</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="MyProblem"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyProblem">[docs]</a><span class="k">class</span> <span class="nc">MyProblem</span><span class="p">(</span><span class="n">Problem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Automatically sets the optimization problem&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theOptimizationVariables</span><span class="p">,</span> <span class="n">nbr_objectives</span><span class="p">,</span> <span class="n">nbr_constraints</span><span class="p">,</span> <span class="n">evaluationFunction</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyProblem</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theOptimizationVariables</span><span class="p">),</span> <span class="n">nbr_objectives</span><span class="p">,</span> <span class="n">nbr_constraints</span><span class="p">)</span>
+
+        <span class="c1"># Convert types of optimization variables</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">types</span><span class="p">)):</span>
+            <span class="n">optimizationVariable</span> <span class="o">=</span> <span class="n">theOptimizationVariables</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">optimizationVariable</span><span class="p">)</span> <span class="ow">is</span> <span class="n">Real_OptimizationVariable</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Real</span><span class="p">(</span><span class="n">optimizationVariable</span><span class="o">.</span><span class="n">get_min_value</span><span class="p">(),</span> <span class="n">optimizationVariable</span><span class="o">.</span><span class="n">get_max_value</span><span class="p">())</span>
+            <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">optimizationVariable</span><span class="p">)</span> <span class="ow">is</span> <span class="n">Integer_OptimizationVariable</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">(</span><span class="n">optimizationVariable</span><span class="o">.</span><span class="n">get_min_value</span><span class="p">(),</span> <span class="n">optimizationVariable</span><span class="o">.</span><span class="n">get_max_value</span><span class="p">())</span>
+            <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">optimizationVariable</span><span class="p">)</span> <span class="ow">is</span> <span class="n">Binary_OptimizationVariable</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Binary</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization variable not managed with this algorithm&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluationFunction</span> <span class="o">=</span> <span class="n">evaluationFunction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[:]</span> <span class="o">=</span> <span class="s2">&quot;&lt;=0&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">directions</span> <span class="o">=</span> <span class="n">FixedLengthArray</span><span class="p">(</span><span class="n">nbr_objectives</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">MINIMIZE</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MyProblem.evaluate"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyProblem.evaluate">[docs]</a>    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solution</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">variables</span><span class="p">[:]</span>
+        <span class="n">returnedValues</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluationFunction</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;objectives&quot;</span><span class="p">])):</span>
+            <span class="n">solution</span><span class="o">.</span><span class="n">objectives</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;objectives&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">])):</span>
+            <span class="n">solution</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="n">solution</span><span class="o">.</span><span class="n">junk</span> <span class="o">=</span> <span class="n">returnedValues</span>  <span class="c1"># NEW VARIABLE ADDED</span></div></div>
+
+
+<div class="viewcode-block" id="MyGenerator"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyGenerator">[docs]</a><span class="k">class</span> <span class="nc">MyGenerator</span><span class="p">(</span><span class="n">Generator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Population generator to insert initial individual&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initialVectorGuess</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyGenerator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialVectorGuess</span> <span class="o">=</span> <span class="n">initialVectorGuess</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inserted_initialVector</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="MyGenerator.generate"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyGenerator.generate">[docs]</a>    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+        <span class="n">solution</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">inserted_initialVector</span><span class="p">:</span>
+            <span class="n">solution</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">initialVectorGuess</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">types</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inserted_initialVector</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">solution</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">problem</span><span class="o">.</span><span class="n">types</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">solution</span></div></div>
+
+
+<span class="c1"># class MyPeriodicAction(PeriodicAction):</span>
+<span class="c1">#     &quot;&quot;&quot;Periodic action to save the convergence at each new generation.</span>
+<span class="c1">#     This is not entirely correct because it truncates the population before...&quot;&quot;&quot;</span>
+<span class="c1">#     def __init__(self, theOptimizationAlgo, theConvergenceHistoric):</span>
+<span class="c1">#         super().__init__(theOptimizationAlgo, by_nfe=True, frequency=1)</span>
+<span class="c1">#         self.theConvergence = theConvergenceHistoric</span>
+<span class="c1">#</span>
+<span class="c1">#     def do_action(self):</span>
+<span class="c1">#         theObjectives = [list(solution.objectives) for solution in self.algorithm.result]</span>
+<span class="c1">#         theConstraints = [list(solution.constraints) for solution in self.algorithm.result]</span>
+<span class="c1">#         self.theConvergence.set_points_at_step(self.iteration, theObjectives, theConstraints)</span>
+
+
+<div class="viewcode-block" id="MyTerminationCondition"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyTerminationCondition">[docs]</a><span class="k">class</span> <span class="nc">MyTerminationCondition</span><span class="p">(</span><span class="n">TerminationCondition</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxTime</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyTerminationCondition</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxTime</span> <span class="o">=</span> <span class="n">maxTime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="MyTerminationCondition.initialize"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyTerminationCondition.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MyTerminationCondition.shouldTerminate"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyTerminationCondition.shouldTerminate">[docs]</a>    <span class="k">def</span> <span class="nf">shouldTerminate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxTime</span></div></div>
+
+
+<div class="viewcode-block" id="MyMapEvaluator"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyMapEvaluator">[docs]</a><span class="k">class</span> <span class="nc">MyMapEvaluator</span><span class="p">(</span><span class="n">Evaluator</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback_on_evaluation</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span> <span class="o">=</span> <span class="n">callback_on_evaluation</span>
+
+<div class="viewcode-block" id="MyMapEvaluator.evaluate_all"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyMapEvaluator.evaluate_all">[docs]</a>    <span class="k">def</span> <span class="nf">evaluate_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jobs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">jobs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">job</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jobs</span><span class="p">):</span>
+            <span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">run_job</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">junk</span><span class="p">)</span>
+            <span class="k">del</span> <span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">junk</span>
+        <span class="k">return</span> <span class="n">outputs</span></div></div>
+
+
+<div class="viewcode-block" id="MyMultiprocessEvaluator"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyMultiprocessEvaluator">[docs]</a><span class="k">class</span> <span class="nc">MyMultiprocessEvaluator</span><span class="p">(</span><span class="n">Evaluator</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback_on_evaluation</span><span class="p">,</span> <span class="n">numberOfCores</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span> <span class="o">=</span> <span class="n">callback_on_evaluation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="n">numberOfCores</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MyMultiprocessEvaluator.evaluate_all"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyMultiprocessEvaluator.evaluate_all">[docs]</a>    <span class="k">def</span> <span class="nf">evaluate_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jobs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">jobs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">output</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">imap_unordered</span><span class="p">(</span><span class="n">run_job</span><span class="p">,</span> <span class="n">jobs</span><span class="p">)):</span>
+            <span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">junk</span><span class="p">)</span>
+            <span class="k">del</span> <span class="n">outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">junk</span>
+        <span class="k">return</span> <span class="n">outputs</span></div>
+
+<div class="viewcode-block" id="MyMultiprocessEvaluator.close"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MyMultiprocessEvaluator.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Closing Pool&quot;</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Waiting for all processes to complete&quot;</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Pool closed&quot;</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="MultiObjective_GA"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA">[docs]</a><span class="k">class</span> <span class="nc">MultiObjective_GA</span><span class="p">(</span><span class="n">AlgorithmInterface</span><span class="p">,</span> <span class="n">Option_class</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Based on `Platypus Library &lt;https://platypus.readthedocs.io/en/docs/index.html&gt;`_.</span>
+<span class="sd">    Workflow:</span>
+<span class="sd">    Define what to optimize and which function to call with a :class:`Problem`</span>
+<span class="sd">    Define the initial population with a :class:`Generator`</span>
+<span class="sd">    Define the algorithm. As options, define how to evaluate the elements with a :class:`Evaluator`, i.e., for multiprocessing.</span>
+<span class="sd">    Define what is the termination condition of the algorithm with :class:`TerminationCondition`. Here, termination condition is a maximum time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="MultiObjective_GA.DIVISION_OUTER"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.DIVISION_OUTER">[docs]</a>    <span class="n">DIVISION_OUTER</span> <span class="o">=</span> <span class="mi">0</span></div>
+<div class="viewcode-block" id="MultiObjective_GA.OPTI_ALGORITHM"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.OPTI_ALGORITHM">[docs]</a>    <span class="n">OPTI_ALGORITHM</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="MultiObjective_GA.NUMBER_OF_CORES"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.NUMBER_OF_CORES">[docs]</a>    <span class="n">NUMBER_OF_CORES</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxTime</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># set by set_maxtime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluationFunction</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># set by set_max_objective</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># set by set_max_objective</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialPopulation</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># set by set_initial_population OR randomly generated (default)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currentPopulation</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numberOfObjective</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numberOfConstraints</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDimensionalConstraints</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logArchive</span> <span class="o">=</span> <span class="n">MyConvergence</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">,</span> <span class="s2">&quot;Optimization algorithm&quot;</span><span class="p">,</span> <span class="s1">&#39;NSGAIII&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">NUMBER_OF_CORES</span><span class="p">,</span> <span class="s2">&quot;Number of cores&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># self.Options.add_option(self.DIVISION_OUTER, &quot;NSGAIII : Number of outer divisions&quot;, 30)</span>
+
+<div class="viewcode-block" id="MultiObjective_GA.compute"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.compute">[docs]</a>    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initialVectorGuess</span><span class="p">,</span> <span class="n">listOfOptimizationVariables</span><span class="p">):</span>
+        <span class="n">theProblem</span> <span class="o">=</span> <span class="n">MyProblem</span><span class="p">(</span><span class="n">listOfOptimizationVariables</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">numberOfObjective</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">numberOfConstraints</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluationFunction</span><span class="p">)</span>
+        <span class="c1"># theTerminationCondition = MyTerminationCondition(self.maxTime)</span>
+
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;generator&quot;</span><span class="p">:</span> <span class="n">MyGenerator</span><span class="p">(</span><span class="n">initialVectorGuess</span><span class="p">),</span> <span class="s2">&quot;archive&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">logArchive</span><span class="p">}</span>
+        <span class="c1"># Update evaluator for multiprocessing</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">NUMBER_OF_CORES</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;evaluator&quot;</span><span class="p">:</span> <span class="n">MyMultiprocessEvaluator</span><span class="p">(</span><span class="n">callback_on_evaluation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span><span class="p">,</span>
+                                                                <span class="n">numberOfCores</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">cpu_count</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">NUMBER_OF_CORES</span><span class="p">))</span>
+                                                                <span class="p">)})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;evaluator&quot;</span><span class="p">:</span> <span class="n">MyMapEvaluator</span><span class="p">(</span><span class="n">callback_on_evaluation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span><span class="p">)})</span>
+
+        <span class="c1"># Update variator if different types to optimize</span>
+        <span class="n">base_type</span> <span class="o">=</span> <span class="n">theProblem</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">base_type</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">theProblem</span><span class="o">.</span><span class="n">types</span><span class="p">]):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;variator&quot;</span><span class="p">:</span> <span class="n">CompoundOperator</span><span class="p">(</span><span class="n">SBX</span><span class="p">(),</span> <span class="n">HUX</span><span class="p">(),</span> <span class="n">PM</span><span class="p">(),</span> <span class="n">BitFlip</span><span class="p">())})</span>
+
+        <span class="c1"># Set optimization algorithm</span>
+        <span class="n">divisions_outer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">30</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">numberOfObjective</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;SPEA2&#39;</span><span class="p">:</span>
+            <span class="n">pop_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">numberOfObjective</span> <span class="o">+</span> <span class="n">divisions_outer</span>
+            <span class="n">algorithm</span> <span class="o">=</span> <span class="n">SPEA2</span><span class="p">(</span><span class="n">theProblem</span><span class="p">,</span> <span class="n">population_size</span><span class="o">=</span><span class="n">pop_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;SMPSO&#39;</span><span class="p">:</span>
+            <span class="n">algorithm</span> <span class="o">=</span> <span class="n">SMPSO</span><span class="p">(</span><span class="n">theProblem</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;OMOPSO&#39;</span><span class="p">:</span>
+            <span class="n">algorithm</span> <span class="o">=</span> <span class="n">My_OMOPSO</span><span class="p">(</span><span class="n">theProblem</span><span class="p">,</span> <span class="n">epsilons</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OPTI_ALGORITHM</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;NSGAII&#39;</span><span class="p">:</span>
+            <span class="n">algorithm</span> <span class="o">=</span> <span class="n">NSGAII</span><span class="p">(</span><span class="n">theProblem</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># self.Options.get_value(self.DIVISION_OUTER))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">algorithm</span> <span class="o">=</span> <span class="n">NSGAIII</span><span class="p">(</span><span class="n">theProblem</span><span class="p">,</span> <span class="n">divisions_outer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># self.Options.get_value(self.DIVISION_OUTER))</span>
+
+        <span class="n">algorithm</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">MyTerminationCondition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxTime</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;evaluator&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;here&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">decode_solution_platypus</span><span class="p">(</span><span class="n">var_solutions</span><span class="p">,</span> <span class="n">var_optimisations</span><span class="p">):</span>
+            <span class="n">my_solutions</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">var_solutions</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">type_var</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">var_optimisations</span><span class="p">):</span>
+                <span class="n">my_solutions</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">type_var</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">var_solutions</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">my_solutions</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">decode_solution_platypus</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">variables</span><span class="p">,</span> <span class="n">theProblem</span><span class="o">.</span><span class="n">types</span><span class="p">)</span> <span class="k">for</span> <span class="n">solution</span> <span class="ow">in</span> <span class="n">unique</span><span class="p">(</span><span class="n">nondominated</span><span class="p">(</span><span class="n">algorithm</span><span class="o">.</span><span class="n">result</span><span class="p">))</span> <span class="k">if</span> <span class="n">solution</span><span class="o">.</span><span class="n">feasible</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="MultiObjective_GA.set_evaluationFunction"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_evaluationFunction">[docs]</a>    <span class="k">def</span> <span class="nf">set_evaluationFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evaluationFunction</span><span class="p">,</span> <span class="n">callback_on_evaluation</span><span class="p">,</span> <span class="n">numberOfObjectives</span><span class="p">,</span> <span class="n">numberOfConstraints</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluationFunction</span> <span class="o">=</span> <span class="n">evaluationFunction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span> <span class="o">=</span> <span class="n">callback_on_evaluation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numberOfObjective</span> <span class="o">=</span> <span class="n">numberOfObjectives</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numberOfConstraints</span> <span class="o">=</span> <span class="n">numberOfConstraints</span></div>
+
+<div class="viewcode-block" id="MultiObjective_GA.set_maxtime"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_maxtime">[docs]</a>    <span class="k">def</span> <span class="nf">set_maxtime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxTime</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxTime</span> <span class="o">=</span> <span class="n">maxTime</span></div>
+
+<div class="viewcode-block" id="MultiObjective_GA.__str__"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;Platypus multiobjective library</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="p">),</span> <span class="n">indent_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theStr</span></div>
+
+<div class="viewcode-block" id="MultiObjective_GA.get_convergence"><a class="viewcode-back" href="../../../../API/optimeed/optimize/optiAlgorithms/multiObjective_GA/index.html#optimeed.optimize.optiAlgorithms.MultiObjective_GA.get_convergence">[docs]</a>    <span class="k">def</span> <span class="nf">get_convergence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">logArchive</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

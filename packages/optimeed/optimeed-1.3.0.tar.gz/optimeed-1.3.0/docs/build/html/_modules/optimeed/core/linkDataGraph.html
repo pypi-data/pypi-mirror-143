@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.linkDataGraph &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.linkDataGraph</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.linkDataGraph</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">delete_indices_from_list</span><span class="p">,</span> <span class="n">Graphs</span><span class="p">,</span> <span class="n">Data</span>
+
+
+<div class="viewcode-block" id="HowToPlotGraph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.HowToPlotGraph">[docs]</a><span class="k">class</span> <span class="nc">HowToPlotGraph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_x</span><span class="p">,</span> <span class="n">attribute_y</span><span class="p">,</span> <span class="n">kwargs_graph</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">excluded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclusively</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_if_plot_elem</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_x</span> <span class="o">=</span> <span class="n">attribute_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_y</span> <span class="o">=</span> <span class="n">attribute_y</span>
+        <span class="k">if</span> <span class="n">excluded</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">excluded</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">excluded</span> <span class="o">=</span> <span class="n">excluded</span>
+
+        <span class="k">if</span> <span class="n">exclusively</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exclusively</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exclusively</span> <span class="o">=</span> <span class="n">exclusively</span>
+
+        <span class="k">if</span> <span class="n">kwargs_graph</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kwargs_graph</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kwargs_graph</span> <span class="o">=</span> <span class="n">kwargs_graph</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_if_plot_elem</span> <span class="o">=</span> <span class="n">check_if_plot_elem</span>
+
+<div class="viewcode-block" id="HowToPlotGraph.exclude_col"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.HowToPlotGraph.exclude_col">[docs]</a>    <span class="k">def</span> <span class="nf">exclude_col</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_col</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add id_col to exclude from the graph&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">excluded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">id_col</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="HowToPlotGraph.exclusive_col"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.HowToPlotGraph.exclusive_col">[docs]</a>    <span class="k">def</span> <span class="nf">exclusive_col</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_col</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set id_col to have exclusivity on the graph&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exclusively</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">id_col</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="HowToPlotGraph.__str__"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.HowToPlotGraph.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;x: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> y: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attribute_y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+
+
+<div class="viewcode-block" id="CollectionInfo"><a class="viewcode-back" href="../../../API/optimeed/core/linkDataGraph/index.html#optimeed.core.CollectionInfo">[docs]</a><span class="k">class</span> <span class="nc">CollectionInfo</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theCollection</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">theID</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">collection</span> <span class="o">=</span> <span class="n">theCollection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">theID</span>
+
+<div class="viewcode-block" id="CollectionInfo.get_collection"><a class="viewcode-back" href="../../../API/optimeed/core/linkDataGraph/index.html#optimeed.core.CollectionInfo.get_collection">[docs]</a>    <span class="k">def</span> <span class="nf">get_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collection</span></div>
+
+<div class="viewcode-block" id="CollectionInfo.get_kwargs"><a class="viewcode-back" href="../../../API/optimeed/core/linkDataGraph/index.html#optimeed.core.CollectionInfo.get_kwargs">[docs]</a>    <span class="k">def</span> <span class="nf">get_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span></div>
+
+<div class="viewcode-block" id="CollectionInfo.get_id"><a class="viewcode-back" href="../../../API/optimeed/core/linkDataGraph/index.html#optimeed.core.CollectionInfo.get_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span></div></div>
+
+
+<div class="viewcode-block" id="LinkDataGraph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph">[docs]</a><span class="k">class</span> <span class="nc">LinkDataGraph</span><span class="p">:</span>
+<div class="viewcode-block" id="LinkDataGraph._collection_linker"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph._collection_linker">[docs]</a>    <span class="k">class</span> <span class="nc">_collection_linker</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">collectionsLinked</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<div class="viewcode-block" id="LinkDataGraph._collection_linker.add_link"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph._collection_linker.add_link">[docs]</a>        <span class="k">def</span> <span class="nf">add_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idSlave</span><span class="p">,</span> <span class="n">idMaster</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">collectionsLinked</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">idSlave</span><span class="p">,</span> <span class="n">idMaster</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph._collection_linker.get_collection_master"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph._collection_linker.get_collection_master">[docs]</a>        <span class="k">def</span> <span class="nf">get_collection_master</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idToGet</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">slave</span><span class="p">,</span> <span class="n">master</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionsLinked</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">slave</span> <span class="o">==</span> <span class="n">idToGet</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">master</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph._collection_linker.is_slave"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph._collection_linker.is_slave">[docs]</a>        <span class="k">def</span> <span class="nf">is_slave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idToCheck</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">slave</span><span class="p">,</span> <span class="n">master</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionsLinked</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">slave</span> <span class="o">==</span> <span class="n">idToCheck</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph._collection_linker.set_same_master"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph._collection_linker.set_same_master">[docs]</a>        <span class="k">def</span> <span class="nf">set_same_master</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idExistingSlave</span><span class="p">,</span> <span class="n">idOtherSlave</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">            :param idExistingSlave: id collection of the existing slave</span>
+<span class="sd">            :param idOtherSlave: id collection of the new slave that has to be linked to an existing master</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">slave</span><span class="p">,</span> <span class="n">master</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionsLinked</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">idExistingSlave</span> <span class="o">==</span> <span class="n">slave</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">idOtherSlave</span><span class="p">,</span> <span class="n">master</span><span class="p">)</span>
+                    <span class="k">break</span></div></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span> <span class="o">=</span> <span class="n">Graphs</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>  <span class="c1"># keys are unique ids of collection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">HowToPlotGraphs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>  <span class="c1"># keys are ids of graph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>  <span class="c1"># keys are ids of graph. mappingData[idGraph][idTrace] = idCollection used for trace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">collectionLinks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_collection_linker</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="LinkDataGraph.add_collection"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.add_collection">[docs]</a>    <span class="k">def</span> <span class="nf">add_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theCollection</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">theId</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span>
+        <span class="k">if</span> <span class="n">kwargs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">theCollectionInfo</span> <span class="o">=</span> <span class="n">CollectionInfo</span><span class="p">(</span><span class="n">theCollection</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">theId</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="p">[</span><span class="n">theId</span><span class="p">]</span> <span class="o">=</span> <span class="n">theCollectionInfo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">theId</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.add_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.add_graph">[docs]</a>    <span class="k">def</span> <span class="nf">add_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">):</span>
+        <span class="n">idGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">add_graph</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">HowToPlotGraphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span> <span class="o">=</span> <span class="n">howToPlotGraph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">idGraph</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.createGraphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.createGraphs">[docs]</a>    <span class="k">def</span> <span class="nf">createGraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_all_graphs_ids</span><span class="p">():</span>
+            <span class="n">howToPlotGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_howToPlotGraph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">collectionInfo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">create_trace</span><span class="p">(</span><span class="n">collectionInfo</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LinkDataGraph.get_x_y_to_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_x_y_to_plot">[docs]</a>    <span class="k">def</span> <span class="nf">get_x_y_to_plot</span><span class="p">(</span><span class="n">theCollection</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">attribute_x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">theCollection</span><span class="o">.</span><span class="n">get_list_attributes</span><span class="p">(</span><span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">attribute_x</span><span class="p">)</span>
+        <span class="n">y_data</span> <span class="o">=</span> <span class="n">theCollection</span><span class="o">.</span><span class="n">get_list_attributes</span><span class="p">(</span><span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">attribute_y</span><span class="p">)</span>
+        <span class="n">min_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_data</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">x_data</span><span class="p">[:</span><span class="n">min_length</span><span class="p">],</span> <span class="n">y_data</span><span class="p">[:</span><span class="n">min_length</span><span class="p">]</span>  <span class="c1"># Truncate if lengths are not the same</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_howToPlotGraph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_howToPlotGraph">[docs]</a>    <span class="k">def</span> <span class="nf">get_howToPlotGraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">HowToPlotGraphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_collectionInfo"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_collectionInfo">[docs]</a>    <span class="k">def</span> <span class="nf">get_collectionInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idCollectionInfo</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="p">[</span><span class="n">idCollectionInfo</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.create_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.create_trace">[docs]</a>    <span class="k">def</span> <span class="nf">create_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collectionInfo</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="n">theCollection</span> <span class="o">=</span> <span class="n">collectionInfo</span><span class="o">.</span><span class="n">get_collection</span><span class="p">()</span>
+        <span class="n">kwargs_collection</span> <span class="o">=</span> <span class="n">collectionInfo</span><span class="o">.</span><span class="n">get_kwargs</span><span class="p">()</span>
+        <span class="n">kwargs_graph</span> <span class="o">=</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">kwargs_graph</span>
+        <span class="n">idCollection</span> <span class="o">=</span> <span class="n">collectionInfo</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="p">((</span><span class="n">idCollection</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">excluded</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">exclusively</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">idCollection</span> <span class="ow">in</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">exclusively</span><span class="p">):</span>
+            <span class="n">x_data</span><span class="p">,</span> <span class="n">y_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x_y_to_plot</span><span class="p">(</span><span class="n">theCollection</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">)</span>
+            <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs_graph</span><span class="p">)</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs_collection</span><span class="p">)</span>
+
+            <span class="n">theData</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span> <span class="n">y_data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">idTrace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">theData</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="p">[</span><span class="n">idGraph</span><span class="p">][</span><span class="n">idTrace</span><span class="p">]</span> <span class="o">=</span> <span class="n">idCollection</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_all_id_graphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_all_id_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_id_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_all_traces_id_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_all_traces_id_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_traces_id_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.update_graphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.update_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">update_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_id_graphs</span><span class="p">():</span>
+            <span class="n">howToPlotGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">HowToPlotGraphs</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">idTrace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_traces_id_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">):</span>
+                <span class="n">idCollection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+                <span class="n">theCollection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="p">[</span><span class="n">idCollection</span><span class="p">]</span><span class="o">.</span><span class="n">get_collection</span><span class="p">()</span>
+                <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x_y_to_plot</span><span class="p">(</span><span class="n">theCollection</span><span class="p">,</span> <span class="n">howToPlotGraph</span><span class="p">)</span>
+                <span class="n">theData</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">indices_to_plot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">check_if_plot_elem</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">theCollection</span><span class="o">.</span><span class="n">get_data</span><span class="p">()):</span>
+                        <span class="k">if</span> <span class="n">howToPlotGraph</span><span class="o">.</span><span class="n">check_if_plot_elem</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+                            <span class="n">indices_to_plot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                    <span class="n">theData</span><span class="o">.</span><span class="n">set_indices_points_to_plot</span><span class="p">(</span><span class="n">indices_to_plot</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.is_slave"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.is_slave">[docs]</a>    <span class="k">def</span> <span class="nf">is_slave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">):</span>
+        <span class="n">idColInGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionLinks</span><span class="o">.</span><span class="n">is_slave</span><span class="p">(</span><span class="n">idColInGraph</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_idCollection_from_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_idCollection_from_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_idCollection_from_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">getMaster</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;From indices in the graph, get index of corresponding collection&quot;&quot;&quot;</span>
+        <span class="n">idColInGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionLinks</span><span class="o">.</span><span class="n">is_slave</span><span class="p">(</span><span class="n">idColInGraph</span><span class="p">)</span> <span class="ow">and</span> <span class="n">getMaster</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionLinks</span><span class="o">.</span><span class="n">get_collection_master</span><span class="p">(</span><span class="n">idColInGraph</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">idColInGraph</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_collection_from_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_collection_from_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_collection_from_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">getMaster</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;From indices in the graph, get corresponding collection&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_idCollection_from_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">getMaster</span><span class="p">)]</span><span class="o">.</span><span class="n">get_collection</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_dataObject_from_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_dataObject_from_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_dataObject_from_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">idPoint</span><span class="p">):</span>
+        <span class="n">theCol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_collection_from_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">index_in_data</span> <span class="o">=</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_dataIndex_from_graphIndex</span><span class="p">(</span><span class="n">idPoint</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theCol</span><span class="o">.</span><span class="n">get_data</span><span class="p">()[</span><span class="n">index_in_data</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_dataObjects_from_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_dataObjects_from_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_dataObjects_from_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">idPoint_list</span><span class="p">):</span>
+        <span class="n">theCol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_collection_from_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">indices_in_data</span> <span class="o">=</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_dataIndices_from_graphIndices</span><span class="p">(</span><span class="n">idPoint_list</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">theCol</span><span class="o">.</span><span class="n">get_data</span><span class="p">()[</span><span class="n">index_in_data</span><span class="p">]</span> <span class="k">for</span> <span class="n">index_in_data</span> <span class="ow">in</span> <span class="n">indices_in_data</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.remove_element_from_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.remove_element_from_graph">[docs]</a>    <span class="k">def</span> <span class="nf">remove_element_from_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">idPoint</span><span class="p">,</span> <span class="n">deleteFromMaster</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove element from the graph, or the master collection&quot;&quot;&quot;</span>
+        <span class="n">theCol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_collection_from_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">getMaster</span><span class="o">=</span><span class="n">deleteFromMaster</span><span class="p">)</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">index_in_data</span> <span class="o">=</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_dataIndex_from_graphIndex</span><span class="p">(</span><span class="n">idPoint</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">theCol</span><span class="o">.</span><span class="n">get_data</span><span class="p">()[</span><span class="n">index_in_data</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.remove_elements_from_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.remove_elements_from_trace">[docs]</a>    <span class="k">def</span> <span class="nf">remove_elements_from_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">idPoints</span><span class="p">,</span> <span class="n">deleteFromMaster</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Performances optimisation when compared to :meth:`LinkDataGraph.remove_element_from_graph`&quot;&quot;&quot;</span>
+        <span class="n">theCol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_collection_from_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">getMaster</span><span class="o">=</span><span class="n">deleteFromMaster</span><span class="p">)</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="n">indices_in_data</span> <span class="o">=</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_dataIndices_from_graphIndices</span><span class="p">(</span><span class="n">idPoints</span><span class="p">)</span>
+        <span class="n">delete_indices_from_list</span><span class="p">(</span><span class="n">indices_in_data</span><span class="p">,</span> <span class="n">theCol</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.link_collection_to_graph_collection"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.link_collection_to_graph_collection">[docs]</a>    <span class="k">def</span> <span class="nf">link_collection_to_graph_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_collection_graph</span><span class="p">,</span> <span class="n">id_collection_master</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Link data</span>
+<span class="sd">        :param id_collection_graph:</span>
+<span class="sd">        :param id_collection_master:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">collectionLinks</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">id_collection_graph</span><span class="p">,</span> <span class="n">id_collection_master</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.remove_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.remove_trace">[docs]</a>    <span class="k">def</span> <span class="nf">remove_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">remove_trace</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="p">[</span><span class="n">idGraph</span><span class="p">][</span><span class="n">idTrace</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_graph_and_trace_from_collection"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_graph_and_trace_from_collection">[docs]</a>    <span class="k">def</span> <span class="nf">get_graph_and_trace_from_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idCollection</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reverse search: from a collection, get the associated graph&quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">idTrace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)[</span><span class="n">idTrace</span><span class="p">]</span> <span class="o">==</span> <span class="n">idCollection</span><span class="p">:</span>
+                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_collectionInfo</span><span class="p">(</span><span class="n">idCollection</span><span class="p">)</span><span class="o">.</span><span class="n">get_collection</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_mappingData_graph"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_mappingData_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_mappingData_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mappingData</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_mappingData_trace"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_mappingData_trace">[docs]</a>    <span class="k">def</span> <span class="nf">get_mappingData_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mappingData_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)[</span><span class="n">idTrace</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_idcollection_from_collection"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_idcollection_from_collection">[docs]</a>    <span class="k">def</span> <span class="nf">get_idcollection_from_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theCollection</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">collectionInfo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">collectionInfos</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">collectionInfo</span><span class="o">.</span><span class="n">get_collection</span><span class="p">()</span> <span class="o">==</span> <span class="n">theCollection</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">collectionInfo</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LinkDataGraph.get_idPoints_from_indices_in_collection"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.LinkDataGraph.get_idPoints_from_indices_in_collection">[docs]</a>    <span class="k">def</span> <span class="nf">get_idPoints_from_indices_in_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">indices_in_collection</span><span class="p">):</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theData</span><span class="o">.</span><span class="n">get_graphIndices_from_dataIndices</span><span class="p">(</span><span class="n">indices_in_collection</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

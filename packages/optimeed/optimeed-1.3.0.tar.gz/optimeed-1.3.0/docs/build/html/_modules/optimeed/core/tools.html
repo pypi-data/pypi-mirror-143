@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.tools &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.tools</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.core.commonImport</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">ast</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+
+
+<div class="viewcode-block" id="text_format"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format">[docs]</a><span class="k">class</span> <span class="nc">text_format</span><span class="p">:</span>
+<div class="viewcode-block" id="text_format.PURPLE"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.PURPLE">[docs]</a>    <span class="n">PURPLE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[95m&#39;</span></div>
+<div class="viewcode-block" id="text_format.CYAN"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.CYAN">[docs]</a>    <span class="n">CYAN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[96m&#39;</span></div>
+<div class="viewcode-block" id="text_format.DARKCYAN"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.DARKCYAN">[docs]</a>    <span class="n">DARKCYAN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[36m&#39;</span></div>
+<div class="viewcode-block" id="text_format.BLUE"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.BLUE">[docs]</a>    <span class="n">BLUE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[94m&#39;</span></div>
+<div class="viewcode-block" id="text_format.GREEN"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.GREEN">[docs]</a>    <span class="n">GREEN</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[92m&#39;</span></div>
+<div class="viewcode-block" id="text_format.YELLOW"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.YELLOW">[docs]</a>    <span class="n">YELLOW</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[93m&#39;</span></div>
+<div class="viewcode-block" id="text_format.WHITE"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.WHITE">[docs]</a>    <span class="n">WHITE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[30m&#39;</span></div>
+<div class="viewcode-block" id="text_format.RED"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.RED">[docs]</a>    <span class="n">RED</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[91m&#39;</span></div>
+<div class="viewcode-block" id="text_format.BOLD"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.BOLD">[docs]</a>    <span class="n">BOLD</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span></div>
+<div class="viewcode-block" id="text_format.UNDERLINE"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.UNDERLINE">[docs]</a>    <span class="n">UNDERLINE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[4m&#39;</span></div>
+<div class="viewcode-block" id="text_format.END"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.text_format.END">[docs]</a>    <span class="n">END</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span></div></div>
+
+
+<div class="viewcode-block" id="software_version"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.software_version">[docs]</a><span class="k">def</span> <span class="nf">software_version</span><span class="p">():</span>
+    <span class="n">MAJOR</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">MINOR</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">return</span> <span class="n">MAJOR</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="n">MINOR</span></div>
+
+
+<span class="c1"># # Find an expression delimited by begin_char and end_char in theStr, and apply transformation replace_function</span>
+<span class="c1"># ex: find_and_replace(&#39;{&#39;, &#39;}&#39;, 2*{x}, lambda str_in: str_in + &quot;*2&quot;) returns 2*x*2</span>
+<div class="viewcode-block" id="find_and_replace"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.find_and_replace">[docs]</a><span class="k">def</span> <span class="nf">find_and_replace</span><span class="p">(</span><span class="n">begin_char</span><span class="p">,</span> <span class="n">end_char</span><span class="p">,</span> <span class="n">theStr</span><span class="p">,</span> <span class="n">replace_function</span><span class="p">):</span>
+    <span class="n">regex</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">begin_char</span> <span class="o">+</span> <span class="s1">&#39;([^}]+)&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">end_char</span>
+    <span class="n">split_str</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">theStr</span><span class="p">)</span>  <span class="c1"># Replace chars are even</span>
+    <span class="n">new_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">split_str</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">new_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">replace_function</span><span class="p">(</span><span class="n">split_str</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_str</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">split_str</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">new_str</span></div>
+
+
+<div class="viewcode-block" id="create_unique_dirname"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.create_unique_dirname">[docs]</a><span class="k">def</span> <span class="nf">create_unique_dirname</span><span class="p">(</span><span class="n">dirname</span><span class="p">):</span>
+    <span class="n">base_dir</span> <span class="o">=</span> <span class="n">dirname</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">):</span>
+        <span class="n">dirname</span> <span class="o">=</span> <span class="n">base_dir</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">dirname</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">dirname</span></div>
+
+
+<div class="viewcode-block" id="applyEquation"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.applyEquation">[docs]</a><span class="k">def</span> <span class="nf">applyEquation</span><span class="p">(</span><span class="n">objectIn</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply literal expression based on an object</span>
+
+<span class="sd">    :param objectIn: Object</span>
+<span class="sd">    :param s: literal expression. Float variables taken from the object are written between {}, int between []. Example: s=&quot;{x}+{y}*2&quot; if x and y are attributes of objectIn.</span>
+<span class="sd">    :return: value (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">str_eq</span> <span class="o">=</span> <span class="n">find_and_replace</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">,</span> <span class="s2">&quot;}&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">attr_in</span><span class="p">:</span> <span class="s2">&quot;(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">rgetattr</span><span class="p">(</span><span class="n">objectIn</span><span class="p">,</span> <span class="n">attr_in</span><span class="p">))))</span>
+    <span class="n">str_eq</span> <span class="o">=</span> <span class="n">find_and_replace</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="n">str_eq</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">attr_in</span><span class="p">:</span> <span class="s2">&quot;(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">rgetattr</span><span class="p">(</span><span class="n">objectIn</span><span class="p">,</span> <span class="n">attr_in</span><span class="p">))))</span>
+    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">str_eq</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="arithmeticEval"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.arithmeticEval">[docs]</a><span class="k">def</span> <span class="nf">arithmeticEval</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;eval&#39;</span><span class="p">)</span>
+    <span class="n">binOps</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">Add</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">Sub</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">sub</span><span class="p">,</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">Mult</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">Div</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">truediv</span><span class="p">,</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">Mod</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">mod</span><span class="p">,</span>
+        <span class="n">ast</span><span class="o">.</span><span class="n">USub</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">neg</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">_eval</span><span class="p">(</span><span class="n">in_node</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Expression</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">_eval</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Str</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">in_node</span><span class="o">.</span><span class="n">s</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Num</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">in_node</span><span class="o">.</span><span class="n">n</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">BinOp</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">binOps</span><span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">op</span><span class="p">)](</span><span class="n">_eval</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">_eval</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">Name</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">in_node</span><span class="p">,</span> <span class="n">ast</span><span class="o">.</span><span class="n">UnaryOp</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">binOps</span><span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">op</span><span class="p">)](</span><span class="n">_eval</span><span class="p">(</span><span class="n">in_node</span><span class="o">.</span><span class="n">operand</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Unsupported type </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">in_node</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">_eval</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">body</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="isNonePrintMessage"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.isNonePrintMessage">[docs]</a><span class="k">def</span> <span class="nf">isNonePrintMessage</span><span class="p">(</span><span class="n">theObject</span><span class="p">,</span> <span class="n">theMessage</span><span class="p">,</span> <span class="n">show_type</span><span class="o">=</span><span class="n">SHOW_INFO</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">theObject</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="n">theMessage</span><span class="p">,</span> <span class="n">show_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="getPath_workspace"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.getPath_workspace">[docs]</a><span class="k">def</span> <span class="nf">getPath_workspace</span><span class="p">():</span>
+    <span class="n">thePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/Workspace&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">thePath</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">thePath</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">thePath</span></div>
+
+
+<div class="viewcode-block" id="getLineInfo"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.getLineInfo">[docs]</a><span class="k">def</span> <span class="nf">getLineInfo</span><span class="p">(</span><span class="n">lvl</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="n">lvl</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="n">lvl</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="n">lvl</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">filename</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">line</span></div>
+
+
+<div class="viewcode-block" id="printIfShown"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.printIfShown">[docs]</a><span class="k">def</span> <span class="nf">printIfShown</span><span class="p">(</span><span class="n">theStr</span><span class="p">,</span> <span class="n">show_type</span><span class="o">=</span><span class="n">SHOW_DEBUG</span><span class="p">,</span> <span class="n">isToPrint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">appendTypeName</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">isToPrint</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">isatty</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">show_type</span> <span class="o">==</span> <span class="n">SHOW_WARNING</span><span class="p">:</span>
+                <span class="n">colourBegin</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">YELLOW</span>  <span class="c1"># yellow</span>
+                <span class="k">if</span> <span class="n">appendTypeName</span><span class="p">:</span>
+                    <span class="n">colourBegin</span> <span class="o">+=</span> <span class="s1">&#39;Warning: &#39;</span>
+            <span class="k">elif</span> <span class="n">show_type</span> <span class="o">==</span> <span class="n">SHOW_ERROR</span><span class="p">:</span>
+                <span class="n">colourBegin</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">RED</span>
+                <span class="k">if</span> <span class="n">appendTypeName</span><span class="p">:</span>
+                    <span class="n">colourBegin</span> <span class="o">+=</span> <span class="s1">&#39;ERROR: &#39;</span>
+            <span class="k">elif</span> <span class="n">show_type</span> <span class="o">==</span> <span class="n">SHOW_INFO</span><span class="p">:</span>
+                <span class="n">colourBegin</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">BLUE</span>
+                <span class="k">if</span> <span class="n">appendTypeName</span><span class="p">:</span>
+                    <span class="n">colourBegin</span> <span class="o">+=</span> <span class="s1">&#39;Info: &#39;</span>
+            <span class="k">elif</span> <span class="n">show_type</span> <span class="o">==</span> <span class="n">SHOW_DEBUG</span><span class="p">:</span>
+                <span class="n">colourBegin</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">WHITE</span>
+                <span class="k">if</span> <span class="n">appendTypeName</span><span class="p">:</span>
+                    <span class="n">colourBegin</span> <span class="o">+=</span> <span class="s1">&#39;Debug: &#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">colourBegin</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">colourEnd</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">colourBegin</span> <span class="ow">is</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># Not the original stdout that has not implemented that function :) :) :)</span>
+            <span class="n">colourBegin</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">colourEnd</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">show_type</span> <span class="ow">in</span> <span class="n">SHOW_CURRENT</span><span class="p">:</span>
+            <span class="n">file</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="n">getLineInfo</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">logstr</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">[File: </span><span class="si">{}</span><span class="s2">, Line: </span><span class="si">{}</span><span class="s2">, Method: </span><span class="si">{}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">colourBegin</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theStr</span><span class="p">)</span> <span class="o">+</span> <span class="n">colourEnd</span> <span class="o">+</span> <span class="n">logstr</span><span class="p">)</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="universalPath"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.universalPath">[docs]</a><span class="k">def</span> <span class="nf">universalPath</span><span class="p">(</span><span class="n">thePath</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">thePath</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_suffix_to_path"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.add_suffix_to_path">[docs]</a><span class="k">def</span> <span class="nf">add_suffix_to_path</span><span class="p">(</span><span class="n">thePath</span><span class="p">,</span> <span class="n">suffix</span><span class="p">):</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">thePath</span><span class="p">)</span>
+    <span class="n">base_name</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">tail</span><span class="p">)</span>
+    <span class="n">newPath</span> <span class="o">=</span> <span class="n">head</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">base_name</span> <span class="o">+</span> <span class="n">suffix</span> <span class="o">+</span> <span class="n">extension</span>
+    <span class="k">return</span> <span class="n">newPath</span></div>
+
+
+<div class="viewcode-block" id="get_object_attrs"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.get_object_attrs">[docs]</a><span class="k">def</span> <span class="nf">get_object_attrs</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__slots__</span><span class="p">:</span>
+                <span class="n">dico</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="c1"># return {attr: getattr(obj, attr) for attr in obj.__slots__}</span>
+        <span class="k">return</span> <span class="n">dico</span></div>
+
+
+<div class="viewcode-block" id="rsetattr"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.rsetattr">[docs]</a><span class="k">def</span> <span class="nf">rsetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="n">pre</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">post</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>  <span class="c1"># ex: &quot;a.b.c&quot; -&gt; pre = a.b, ; post = c</span>
+
+    <span class="k">if</span> <span class="n">pre</span><span class="p">:</span>
+        <span class="n">obj_returned</span> <span class="o">=</span> <span class="n">rgetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">pre</span><span class="p">)</span>  <span class="c1"># , checkIndices=False)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">obj_returned</span> <span class="o">=</span> <span class="n">obj</span>
+
+    <span class="n">splitted</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">)</span>
+    <span class="n">index_end_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">char_begin</span> <span class="o">=</span> <span class="n">attr</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">char_begin</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">)):</span>
+            <span class="n">index_end_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">index_end_list</span><span class="p">):</span>
+        <span class="n">curr_nested_obj</span> <span class="o">=</span> <span class="n">obj_returned</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">index_end_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">curr_nested_obj</span> <span class="o">=</span> <span class="n">curr_nested_obj</span><span class="p">[</span><span class="n">index_end_list</span><span class="p">[</span><span class="n">index</span><span class="p">]]</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                <span class="n">curr_nested_obj</span> <span class="o">=</span> <span class="n">curr_nested_obj</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">index_end_list</span><span class="p">[</span><span class="n">index</span><span class="p">])]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">curr_nested_obj</span><span class="p">,</span> <span class="n">char_begin</span><span class="p">)[</span><span class="n">index_end_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">curr_nested_obj</span><span class="p">,</span> <span class="n">char_begin</span><span class="p">)[</span><span class="nb">int</span><span class="p">(</span><span class="n">index_end_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span> <span class="o">=</span> <span class="n">val</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">obj_returned</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="rgetattr"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.rgetattr">[docs]</a><span class="k">def</span> <span class="nf">rgetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recursively get an attribute from object. Extends getattr method</span>
+
+<span class="sd">    :param obj: object</span>
+<span class="sd">    :param attr: attribute to get</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">attributes</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="n">curr_object</span> <span class="o">=</span> <span class="n">obj</span>
+    <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="c1"># Get end parentheses</span>
+        <span class="n">list_indices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">splitted</span> <span class="o">=</span> <span class="n">attribute</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">splitted</span><span class="p">:</span>
+            <span class="n">splitted</span> <span class="o">=</span> <span class="p">[</span><span class="n">attribute</span><span class="p">]</span>
+
+        <span class="n">curr_object</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">curr_object</span><span class="p">,</span> <span class="n">splitted</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">)):</span>
+                <span class="n">list_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">list_indices</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">curr_object</span> <span class="o">=</span> <span class="n">curr_object</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                <span class="n">curr_object</span> <span class="o">=</span> <span class="n">curr_object</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">curr_object</span></div>
+
+
+<div class="viewcode-block" id="indentParagraph"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.indentParagraph">[docs]</a><span class="k">def</span> <span class="nf">indentParagraph</span><span class="p">(</span><span class="n">text_in</span><span class="p">,</span> <span class="n">indent_level</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">rowsP</span> <span class="o">=</span> <span class="n">text_in</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rowsP</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">rowsP</span> <span class="o">=</span> <span class="n">rowsP</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">Pout</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">space</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indent_level</span><span class="p">):</span>
+        <span class="n">space</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">rowsP</span><span class="p">:</span>
+        <span class="n">Pout</span> <span class="o">+=</span> <span class="n">space</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="n">Pout</span></div>
+
+
+<span class="c1"># def from_scattered_to_surf(dataX, dataY, dataZ, nPoints):</span>
+<span class="c1">#     X = np.arange(min(dataX), max(dataX), (max(dataX)-min(dataX))/nPoints)</span>
+<span class="c1">#     Y = np.arange(min(dataY), max(dataY), (max(dataY)-min(dataY))/nPoints)</span>
+<span class="c1">#     X, Y = np.meshgrid(X, Y)</span>
+<span class="c1">#     Z = griddata((dataX, dataY), dataZ, (X, Y), method=&#39;linear&#39;)</span>
+<span class="c1">#     return X, Y, Z</span>
+
+
+<div class="viewcode-block" id="truncate"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.truncate">[docs]</a><span class="k">def</span> <span class="nf">truncate</span><span class="p">(</span><span class="n">theStr</span><span class="p">,</span> <span class="n">truncsize</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">theStr</span><span class="p">[:</span><span class="n">truncsize</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">theStr</span><span class="p">[</span><span class="n">truncsize</span><span class="p">:]</span> <span class="ow">and</span> <span class="s1">&#39;..&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="str_all_attr"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.str_all_attr">[docs]</a><span class="k">def</span> <span class="nf">str_all_attr</span><span class="p">(</span><span class="n">theObject</span><span class="p">,</span> <span class="n">max_recursion_level</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">set_attribute_color</span><span class="p">(</span><span class="n">strAttribute</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">GREEN</span> <span class="o">+</span> <span class="n">text_format</span><span class="o">.</span><span class="n">BOLD</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">DARKCYAN</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">BLUE</span>
+        <span class="k">return</span> <span class="n">color</span> <span class="o">+</span> <span class="n">strAttribute</span> <span class="o">+</span> <span class="n">text_format</span><span class="o">.</span><span class="n">END</span>
+
+    <span class="k">def</span> <span class="nf">_str_all_attr</span><span class="p">(</span><span class="n">_theObject</span><span class="p">,</span> <span class="n">_max_recursion_level</span><span class="p">,</span> <span class="n">curr_level</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="n">_theObject</span><span class="p">)</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">object_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">variable_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">list_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">truncsize</span> <span class="o">=</span> <span class="mi">99999999999999999999</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+            <span class="n">_theObject</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_theObject</span><span class="p">,</span> <span class="s1">&#39;__dict__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">object_keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_theObject</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="n">list_keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">variable_keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">variable_keys</span><span class="p">:</span>
+            <span class="n">theVariable</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">set_attribute_color</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">curr_level</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">:</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">truncate</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">theVariable</span><span class="p">),</span> <span class="n">truncsize</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">list_keys</span><span class="p">:</span>
+            <span class="n">theList</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">set_attribute_color</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">curr_level</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">:</span><span class="se">\t</span><span class="s1">&#39;</span>
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">theList</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s1">&#39;__dict__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">theStr</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+                    <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="s2">&quot;Item &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; -&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="n">_str_all_attr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">_max_recursion_level</span><span class="p">,</span> <span class="n">curr_level</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">theStr</span> <span class="o">+=</span> <span class="n">truncate</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">),</span> <span class="n">truncsize</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span>
+                    <span class="k">if</span> <span class="n">theStr</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.., &#39;</span><span class="p">):</span>
+                        <span class="k">break</span>
+
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">if</span> <span class="n">curr_level</span> <span class="o">&gt;=</span> <span class="n">_max_recursion_level</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">theStr</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">object_keys</span><span class="p">:</span>
+                <span class="n">_theObject</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="n">set_attribute_color</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">curr_level</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="n">_str_all_attr</span><span class="p">(</span><span class="n">_theObject</span><span class="p">,</span> <span class="n">_max_recursion_level</span><span class="p">,</span> <span class="n">curr_level</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">theStr</span>
+
+    <span class="k">return</span> <span class="n">_str_all_attr</span><span class="p">(</span><span class="n">theObject</span><span class="p">,</span> <span class="n">max_recursion_level</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_2D_pareto"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.get_2D_pareto">[docs]</a><span class="k">def</span> <span class="nf">get_2D_pareto</span><span class="p">(</span><span class="n">xList</span><span class="p">,</span> <span class="n">yList</span><span class="p">,</span> <span class="n">max_X</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_Y</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">coef_x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">coef_y</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">max_X</span><span class="p">:</span>
+        <span class="n">coef_x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">max_Y</span><span class="p">:</span>
+        <span class="n">coef_y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="c1"># assign all in new array and ignore values</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xList</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">xList</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">yList</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">coords</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">coef_x</span> <span class="o">*</span> <span class="n">xList</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">coef_y</span> <span class="o">*</span> <span class="n">yList</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+            <span class="n">mapping</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+    <span class="n">is_efficient</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">costs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">costs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">is_efficient</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">is_efficient</span><span class="p">[</span><span class="n">is_efficient</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">costs</span><span class="p">[</span><span class="n">is_efficient</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Keep any point with a lower cost</span>
+            <span class="n">is_efficient</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># And keep self</span>
+    <span class="c1"># Create new array</span>
+    <span class="n">newx</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">newy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">isPareto</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">is_efficient</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">isPareto</span><span class="p">:</span>
+            <span class="n">goodIndex</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="n">newx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xList</span><span class="p">[</span><span class="n">goodIndex</span><span class="p">])</span>
+            <span class="n">newy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">yList</span><span class="p">[</span><span class="n">goodIndex</span><span class="p">])</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">goodIndex</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">newx</span><span class="p">,</span> <span class="n">newy</span><span class="p">,</span> <span class="n">indices</span></div>
+
+
+<div class="viewcode-block" id="get_ND_pareto"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.get_ND_pareto">[docs]</a><span class="k">def</span> <span class="nf">get_ND_pareto</span><span class="p">(</span><span class="n">objectives_list</span><span class="p">,</span> <span class="n">are_maxobjectives_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the N-D pareto front</span>
+
+<span class="sd">    :param objectives_list: list of list of objectives: example [[0,1], [1,1], [2,2]]</span>
+<span class="sd">    :param are_maxobjectives_list: for each objective, tells if they are to be maximized or not: example [True, False]. Default: False</span>
+<span class="sd">    :return: extracted_pareto, indices: list of [x, y, ...] points forming the pareto front, and list of the indices of these points from the base list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">numberOfObjectives</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">objectives_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">are_maxobjectives_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">are_maxobjectives_list</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span><span class="o">*</span><span class="n">numberOfObjectives</span>
+
+    <span class="n">coef_list</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">isMaxObjective</span> <span class="k">else</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">isMaxObjective</span> <span class="ow">in</span> <span class="n">are_maxobjectives_list</span><span class="p">]</span>
+
+    <span class="c1"># assign all in new array and ignore values</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">index_objective</span><span class="p">,</span> <span class="n">objectives</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">objectives_list</span><span class="p">):</span>
+        <span class="n">mustAdd</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">objective</span> <span class="ow">in</span> <span class="n">objectives</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">objective</span><span class="p">):</span>
+                <span class="n">mustAdd</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">mustAdd</span><span class="p">:</span>
+            <span class="n">coords</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">coef_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">objectives</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberOfObjectives</span><span class="p">)])</span>
+            <span class="n">mapping</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index_objective</span><span class="p">)</span>
+
+    <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+    <span class="n">is_efficient</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">costs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">costs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">is_efficient</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">is_efficient</span><span class="p">[</span><span class="n">is_efficient</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">costs</span><span class="p">[</span><span class="n">is_efficient</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Keep any point with a lower cost</span>
+            <span class="n">is_efficient</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># And keep self</span>
+    <span class="c1"># Create new array</span>
+    <span class="n">extracted_pareto</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">isPareto</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">is_efficient</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">isPareto</span><span class="p">:</span>
+            <span class="n">goodIndex</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="n">extracted_pareto</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objectives_list</span><span class="p">[</span><span class="n">goodIndex</span><span class="p">])</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">goodIndex</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">extracted_pareto</span><span class="p">,</span> <span class="n">indices</span></div>
+
+
+<div class="viewcode-block" id="delete_indices_from_list"><a class="viewcode-back" href="../../../API/optimeed/core/tools/index.html#optimeed.core.delete_indices_from_list">[docs]</a><span class="k">def</span> <span class="nf">delete_indices_from_list</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">theList</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Delete elements from list at indices</span>
+<span class="sd">    :param indices: list</span>
+<span class="sd">    :param theList: list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sorted_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">indices</span><span class="p">))))</span>
+    <span class="n">sorted_indices</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">sorted_indices</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">theList</span><span class="p">[</span><span class="n">index</span><span class="p">]</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

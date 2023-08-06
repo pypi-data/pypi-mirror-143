@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>parametric_analysis &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="core" href="../../core/index.html" />
+    <link rel="prev" title="consolidate" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>consolidate</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">parametric_analysis</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>consolidate</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">parametric_analysis</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/consolidate/parametric_analysis/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.consolidate.parametric_analysis">
+<span id="parametric-analysis"></span><h1><code class="docutils literal notranslate"><span class="pre">parametric_analysis</span></code><a class="headerlink" href="#module-optimeed.consolidate.parametric_analysis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_Collection">
+<em class="property">class </em><code class="sig-name descname">Parametric_Collection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_Collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_Collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../core/collection/index.html#optimeed.core.collection.ListDataStruct" title="optimeed.core.collection.ListDataStruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.collection.ListDataStruct</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_Collection.get_extension">
+<em class="property">static </em><code class="sig-name descname">get_extension</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_Collection.get_extension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_Collection.get_extension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_parameter">
+<em class="property">class </em><code class="sig-name descname">Parametric_parameter</code><span class="sig-paren">(</span><em class="sig-param">analyzed_attribute</em>, <em class="sig-param">reference_device</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_parameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class for a parametric parameter</p>
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_parameter.get_values">
+<em class="property">abstract </em><code class="sig-name descname">get_values</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_parameter.get_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_parameter.get_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_parameter.get_reference_device">
+<code class="sig-name descname">get_reference_device</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_parameter.get_reference_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_parameter.get_reference_device" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_parameter.get_analyzed_attribute">
+<code class="sig-name descname">get_analyzed_attribute</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_parameter.get_analyzed_attribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_parameter.get_analyzed_attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_minmax">
+<em class="property">class </em><code class="sig-name descname">Parametric_minmax</code><span class="sig-paren">(</span><em class="sig-param">analyzed_attribute</em>, <em class="sig-param">reference_device</em>, <em class="sig-param">minValue</em>, <em class="sig-param">maxValue</em>, <em class="sig-param">is_relative=False</em>, <em class="sig-param">npoints=10</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_minmax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_minmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#optimeed.consolidate.parametric_analysis.Parametric_parameter" title="optimeed.consolidate.parametric_analysis.Parametric_parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.consolidate.parametric_analysis.Parametric_parameter</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_minmax.get_values">
+<code class="sig-name descname">get_values</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_minmax.get_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_minmax.get_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_analysis">
+<em class="property">class </em><code class="sig-name descname">Parametric_analysis</code><span class="sig-paren">(</span><em class="sig-param">theParametricParameter</em>, <em class="sig-param">theCharacterization</em>, <em class="sig-param">filename_collection=None</em>, <em class="sig-param">description_collection=None</em>, <em class="sig-param">autosave=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../core/index.html#optimeed.core.Option_class" title="optimeed.core.Option_class"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.Option_class</span></code></a></p>
+<dl class="attribute">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_analysis.NUMBER_OF_CORES">
+<code class="sig-name descname">NUMBER_OF_CORES</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_analysis.NUMBER_OF_CORES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_analysis.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_analysis.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_analysis.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiates input arguments for analysis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_analysis.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_analysis.evaluate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_analysis.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.consolidate.parametric_analysis.Parametric_analysis.initialize_output_collection">
+<code class="sig-name descname">initialize_output_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/consolidate/parametric_analysis.html#Parametric_analysis.initialize_output_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.consolidate.parametric_analysis.Parametric_analysis.initialize_output_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../core/index.html" class="btn btn-neutral float-right" title="core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="consolidate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

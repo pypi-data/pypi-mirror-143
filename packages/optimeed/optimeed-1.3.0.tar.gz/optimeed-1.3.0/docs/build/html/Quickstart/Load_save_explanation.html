@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Loading and saving data &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Gallery" href="../gallery.html" />
+    <link rel="prev" title="Quickstart Visualization" href="VisuModule_explanation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Loading and saving data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Quickstart/Load_save_explanation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loading-and-saving-data">
+<h1>Loading and saving data<a class="headerlink" href="#loading-and-saving-data" title="Permalink to this headline">¶</a></h1>
+<p>You will probably have to often manipulate data, saving them and loading them.</p>
+<p>Imagine the following structure to be saved:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TopoA</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">R_in</span> <span class="o">=</span> <span class="mf">3e-3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">R_out</span> <span class="o">=</span> <span class="mf">5e-3</span>
+
+
+<span class="k">class</span> <span class="nc">MyMotor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotor</span> <span class="o">=</span> <span class="n">TopoA</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="mf">5e-3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dummyVariableToNotSave</span> <span class="o">=</span> <span class="mi">1234</span>
+</pre></div>
+</div>
+<p>optimeed provides a way to export that directly in JSON format. It detects the variables to save from type hints:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">class</span> <span class="nc">TopoA</span><span class="p">:</span>
+<span class="hll">     <span class="n">R_in</span><span class="p">:</span> <span class="nb">float</span>
+</span><span class="hll">     <span class="n">R_out</span><span class="p">:</span> <span class="nb">float</span>
+</span>
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">R_in</span> <span class="o">=</span> <span class="mf">3e-3</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">R_out</span> <span class="o">=</span> <span class="mf">5e-3</span>
+
+
+ <span class="k">class</span> <span class="nc">MyMotor</span><span class="p">:</span>
+<span class="hll">     <span class="n">rotor</span><span class="p">:</span> <span class="n">TopoA</span>
+</span><span class="hll">     <span class="n">length</span><span class="p">:</span> <span class="nb">float</span>
+</span>
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">rotor</span> <span class="o">=</span> <span class="n">TopoA</span><span class="p">()</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="mf">5e-3</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">dummyVariableToNotSave</span> <span class="o">=</span> <span class="mi">1234</span>
+</pre></div>
+</div>
+<p>If type hint is not possible because some type is not known before the running time, optimeed provides an additional tool <a class="reference internal" href="../API/optimeed/core/myjson/index.html#optimeed.core.myjson.SaveableObject" title="optimeed.core.myjson.SaveableObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SaveableObject</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"> <span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="kn">import</span> <span class="n">SaveableObject</span>
+</span>
+
+ <span class="k">class</span> <span class="nc">TopoA</span><span class="p">:</span>
+<span class="hll">     <span class="n">R_in</span><span class="p">:</span> <span class="nb">float</span>
+</span><span class="hll">     <span class="n">R_out</span><span class="p">:</span> <span class="nb">float</span>
+</span>
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">R_in</span> <span class="o">=</span> <span class="mf">3e-3</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">R_out</span> <span class="o">=</span> <span class="mf">5e-3</span>
+
+
+<span class="hll"> <span class="k">class</span> <span class="nc">MyMotor</span><span class="p">(</span><span class="n">SaveableObject</span><span class="p">):</span>
+</span><span class="hll">     <span class="n">length</span><span class="p">:</span> <span class="nb">float</span>
+</span>
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">rotor</span> <span class="o">=</span> <span class="n">TopoA</span><span class="p">()</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="mf">5e-3</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">dummyVariableToNotSave</span> <span class="o">=</span> <span class="mi">1234</span>
+
+<span class="hll">     <span class="k">def</span> <span class="nf">get_additional_attributes_to_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="hll">         <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;rotor&quot;</span><span class="p">]</span>
+</span></pre></div>
+</div>
+<p>The item can then be converted to a dictionary using <a class="reference internal" href="../API/optimeed/core/myjson/index.html#optimeed.core.myjson.obj_to_json" title="optimeed.core.myjson.obj_to_json"><code class="xref py py-meth docutils literal notranslate"><span class="pre">obj_to_json()</span></code></a>, which can then be converted to string liberal using “json.dumps” and written on a file. To recover
+To recover the object, read the file and interpret is as a dictionary using “json.load”. Then, convert the dictionary by using <a class="reference internal" href="../API/optimeed/core/myjson/index.html#optimeed.core.myjson.json_to_obj" title="optimeed.core.myjson.json_to_obj"><code class="xref py py-meth docutils literal notranslate"><span class="pre">json_to_obj()</span></code></a></p>
+<p>Alternatively, it might be simpler to use the class <a class="reference internal" href="../API/optimeed/core/collection/index.html#optimeed.core.collection.ListDataStruct" title="optimeed.core.collection.ListDataStruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListDataStruct</span></code></a> (or similar user-custom class), which provides high-level save and load option. This is what is done in <a class="reference internal" href="../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.optimizer.OptiHistoric" title="optimeed.optimize.optimizer.OptiHistoric"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptiHistoric</span></code></a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gallery.html" class="btn btn-neutral float-right" title="Gallery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="VisuModule_explanation.html" class="btn btn-neutral float-left" title="Quickstart Visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

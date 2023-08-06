@@ -1,0 +1,2125 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>core &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ansi2html" href="ansi2html/index.html" />
+    <link rel="prev" title="parametric_analysis" href="../consolidate/parametric_analysis/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong>core</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansi2html/index.html"><strong>ansi2html</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+      <li><strong>core</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/API/optimeed/core/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.core">
+<span id="core"></span><h1><strong>core</strong><a class="headerlink" href="#module-optimeed.core" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ansi2html/index.html"><strong>ansi2html</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ansi2html/converter/index.html"><code class="docutils literal notranslate"><span class="pre">converter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansi2html/style/index.html"><code class="docutils literal notranslate"><span class="pre">style</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansi2html/util/index.html"><code class="docutils literal notranslate"><span class="pre">util</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="optimeed.core.getPath_workspace">
+<code class="sig-name descname">getPath_workspace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#getPath_workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.getPath_workspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.obj_to_json">
+<code class="sig-name descname">obj_to_json</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#obj_to_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.obj_to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the json dictionary from the object. The data saved are automatically detected, using typehints.
+ex: x: int=5 will be saved, x=5 won’t.
+Inheritance of annotation is managed by this function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.json_to_obj">
+<code class="sig-name descname">json_to_obj</code><span class="sig-paren">(</span><em class="sig-param">json_dict</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#json_to_obj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.json_to_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience class to create object from dictionary. Only works if CLASS_TAG is valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_dict</strong> – dictionary loaded from a json file.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – if class can not be found</p></li>
+<li><p><strong>KeyError</strong> – if CLASS_TAG not present in dictionary</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.json_to_obj_safe">
+<code class="sig-name descname">json_to_obj_safe</code><span class="sig-paren">(</span><em class="sig-param">json_dict</em>, <em class="sig-param">cls</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#json_to_obj_safe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.json_to_obj_safe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safe class to create object from dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – dictionary loaded from a json file</p></li>
+<li><p><strong>cls</strong> – class object to instantiate with dictionary</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.encode_str_json">
+<code class="sig-name descname">encode_str_json</code><span class="sig-paren">(</span><em class="sig-param">theStr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#encode_str_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.encode_str_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.decode_str_json">
+<code class="sig-name descname">decode_str_json</code><span class="sig-paren">(</span><em class="sig-param">theStr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#decode_str_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.decode_str_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.get_json_module_tree">
+<code class="sig-name descname">get_json_module_tree</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#get_json_module_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.get_json_module_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dict containing {CLASS_TAG: “class_name”, MODULE_TAG: “module_name”, “attribute1”:{“class_name”: “module_name”, …}}</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.MODULE_TAG">
+<code class="sig-name descname">MODULE_TAG</code><em class="property"> = __module__</em><a class="headerlink" href="#optimeed.core.MODULE_TAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.CLASS_TAG">
+<code class="sig-name descname">CLASS_TAG</code><em class="property"> = __class__</em><a class="headerlink" href="#optimeed.core.CLASS_TAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.indentParagraph">
+<code class="sig-name descname">indentParagraph</code><span class="sig-paren">(</span><em class="sig-param">text_in</em>, <em class="sig-param">indent_level=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#indentParagraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.indentParagraph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.rgetattr">
+<code class="sig-name descname">rgetattr</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#rgetattr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.rgetattr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively get an attribute from object. Extends getattr method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – object</p></li>
+<li><p><strong>attr</strong> – attribute to get</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.applyEquation">
+<code class="sig-name descname">applyEquation</code><span class="sig-paren">(</span><em class="sig-param">objectIn</em>, <em class="sig-param">s</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#applyEquation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.applyEquation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply literal expression based on an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objectIn</strong> – Object</p></li>
+<li><p><strong>s</strong> – literal expression. Float variables taken from the object are written between {}, int between []. Example: s=”{x}+{y}*2” if x and y are attributes of objectIn.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>value (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.printIfShown">
+<code class="sig-name descname">printIfShown</code><span class="sig-paren">(</span><em class="sig-param">theStr</em>, <em class="sig-param">show_type=SHOW_DEBUG</em>, <em class="sig-param">isToPrint=True</em>, <em class="sig-param">appendTypeName=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#printIfShown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.printIfShown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.SHOW_WARNING">
+<code class="sig-name descname">SHOW_WARNING</code><em class="property"> = 0</em><a class="headerlink" href="#optimeed.core.SHOW_WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.SHOW_DEBUG">
+<code class="sig-name descname">SHOW_DEBUG</code><em class="property"> = 3</em><a class="headerlink" href="#optimeed.core.SHOW_DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.DataStruct_Interface">
+<em class="property">class </em><code class="sig-name descname">DataStruct_Interface</code><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.save">
+<em class="property">abstract </em><code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the datastructure to filename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.load">
+<em class="property">abstract static </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the datastructure from filename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.get_info">
+<code class="sig-name descname">get_info</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.get_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.get_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get simple string describing the datastructure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.set_info">
+<code class="sig-name descname">set_info</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">info</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.set_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.set_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set simple string describing the datastructure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.get_extension">
+<em class="property">static </em><code class="sig-name descname">get_extension</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.get_extension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.get_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>File extension used for datastructure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.DataStruct_Interface.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#DataStruct_Interface.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.DataStruct_Interface.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.AutosaveStruct">
+<em class="property">class </em><code class="sig-name descname">AutosaveStruct</code><span class="sig-paren">(</span><em class="sig-param">dataStruct</em>, <em class="sig-param">filename=''</em>, <em class="sig-param">change_filename_if_exists=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure that provides automated save of DataStructures</p>
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.get_filename">
+<code class="sig-name descname">get_filename</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.get_filename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.get_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get set filename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.set_filename">
+<code class="sig-name descname">set_filename</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em>, <em class="sig-param">change_filename_if_exists</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.set_filename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.set_filename" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – Filename to set</p></li>
+<li><p><strong>change_filename_if_exists</strong> – If already exists, create a new filename</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.stop_autosave">
+<code class="sig-name descname">stop_autosave</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.stop_autosave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.stop_autosave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop autosave</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.start_autosave">
+<code class="sig-name descname">start_autosave</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">timer_autosave</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.start_autosave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.start_autosave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start autosave</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">safe_save=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.get_datastruct">
+<code class="sig-name descname">get_datastruct</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.get_datastruct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.get_datastruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return :class:’~DataStruct_Interface’</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.__getstate__">
+<code class="sig-name descname">__getstate__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.__getstate__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.__getstate__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.AutosaveStruct.__setstate__">
+<code class="sig-name descname">__setstate__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">state</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#AutosaveStruct.__setstate__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.AutosaveStruct.__setstate__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.ListDataStruct">
+<em class="property">class </em><code class="sig-name descname">ListDataStruct</code><span class="sig-paren">(</span><em class="sig-param">compress_save=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="collection/index.html#optimeed.core.collection.DataStruct_Interface" title="optimeed.core.collection.DataStruct_Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.collection.DataStruct_Interface</span></code></a></p>
+<dl class="attribute">
+<dt id="optimeed.core.ListDataStruct._INFO_STR">
+<code class="sig-name descname">_INFO_STR</code><em class="property"> = info</em><a class="headerlink" href="#optimeed.core.ListDataStruct._INFO_STR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.ListDataStruct._DATA_STR">
+<code class="sig-name descname">_DATA_STR</code><em class="property"> = data</em><a class="headerlink" href="#optimeed.core.ListDataStruct._DATA_STR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.ListDataStruct._COMPRESS_SAVE_STR">
+<code class="sig-name descname">_COMPRESS_SAVE_STR</code><em class="property"> = module_tree</em><a class="headerlink" href="#optimeed.core.ListDataStruct._COMPRESS_SAVE_STR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save data using json format. The data to be saved are automatically detected, see <a class="reference internal" href="myjson/index.html#optimeed.core.myjson.obj_to_json" title="optimeed.core.myjson.obj_to_json"><code class="xref py py-meth docutils literal notranslate"><span class="pre">obj_to_json()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct._format_str_save">
+<code class="sig-name descname">_format_str_save</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct._format_str_save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct._format_str_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save data using json format. The data to be saved are automatically detected, see <a class="reference internal" href="myjson/index.html#optimeed.core.myjson.obj_to_json" title="optimeed.core.myjson.obj_to_json"><code class="xref py py-meth docutils literal notranslate"><span class="pre">obj_to_json()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.load">
+<em class="property">static </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">theClass=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the file filename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – file to load</p></li>
+<li><p><strong>theClass</strong> – optional. Can be used to fix unpickling errors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self-like object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct._jsondata_to_obj">
+<em class="property">static </em><code class="sig-name descname">_jsondata_to_obj</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">theClass=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct._jsondata_to_obj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct._jsondata_to_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.add_data">
+<code class="sig-name descname">add_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data_in</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.add_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.add_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a data to the list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.get_data">
+<code class="sig-name descname">get_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.get_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get full list of datas</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.set_data">
+<code class="sig-name descname">set_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theData</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.set_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set full list of datas</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.set_data_at_index">
+<code class="sig-name descname">set_data_at_index</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data_in</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.set_data_at_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.set_data_at_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace data at specific index</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.set_attribute_data">
+<code class="sig-name descname">set_attribute_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">the_attribute</em>, <em class="sig-param">the_value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.set_attribute_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.set_attribute_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set attribute to all data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.set_attribute_equation">
+<code class="sig-name descname">set_attribute_equation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">attribute_name</em>, <em class="sig-param">equation_str</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.set_attribute_equation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.set_attribute_equation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced method to set the value of attribute_name from equation_str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attribute_name</strong> – string (name of the attribute to set)</p></li>
+<li><p><strong>equation_str</strong> – formatted equation, check <code class="xref py py-meth docutils literal notranslate"><span class="pre">applyEquation()</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.get_list_attributes">
+<code class="sig-name descname">get_list_attributes</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">attributeName</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.get_list_attributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.get_list_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of attributeName of all the data in the Collection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>attributeName</strong> – string (name of the attribute to get)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.delete_points_at_indices">
+<code class="sig-name descname">delete_points_at_indices</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indices</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.delete_points_at_indices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.delete_points_at_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete several elements from the Collection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>indices</strong> – list of indices to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.export_xls">
+<code class="sig-name descname">export_xls</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">excelFilename</em>, <em class="sig-param">excelsheet='Sheet1'</em>, <em class="sig-param">mode='w'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.export_xls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.export_xls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the collection to excel. It only exports the direct attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>excelFilename</strong> – filename of the excel</p></li>
+<li><p><strong>excelsheet</strong> – name of the sheet</p></li>
+<li><p><strong>mode</strong> – ‘w’ to erase existing file, ‘a’ to append sheetname to existing file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ListDataStruct.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">collection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/collection.html#ListDataStruct.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ListDataStruct.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge a collection with the current collection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>collection</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code> to merge</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.default_palette">
+<code class="sig-name descname">default_palette</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/color_palette.html#default_palette"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.default_palette" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.blackOnly">
+<code class="sig-name descname">blackOnly</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/color_palette.html#blackOnly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.blackOnly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.dark2">
+<code class="sig-name descname">dark2</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/color_palette.html#dark2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.dark2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.text_format">
+<em class="property">class </em><code class="sig-name descname">text_format</code><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#text_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.text_format" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="optimeed.core.text_format.PURPLE">
+<code class="sig-name descname">PURPLE</code><em class="property"> = [95m</em><a class="headerlink" href="#optimeed.core.text_format.PURPLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.CYAN">
+<code class="sig-name descname">CYAN</code><em class="property"> = [96m</em><a class="headerlink" href="#optimeed.core.text_format.CYAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.DARKCYAN">
+<code class="sig-name descname">DARKCYAN</code><em class="property"> = [36m</em><a class="headerlink" href="#optimeed.core.text_format.DARKCYAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.BLUE">
+<code class="sig-name descname">BLUE</code><em class="property"> = [94m</em><a class="headerlink" href="#optimeed.core.text_format.BLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.GREEN">
+<code class="sig-name descname">GREEN</code><em class="property"> = [92m</em><a class="headerlink" href="#optimeed.core.text_format.GREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.YELLOW">
+<code class="sig-name descname">YELLOW</code><em class="property"> = [93m</em><a class="headerlink" href="#optimeed.core.text_format.YELLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.WHITE">
+<code class="sig-name descname">WHITE</code><em class="property"> = [30m</em><a class="headerlink" href="#optimeed.core.text_format.WHITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.RED">
+<code class="sig-name descname">RED</code><em class="property"> = [91m</em><a class="headerlink" href="#optimeed.core.text_format.RED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.BOLD">
+<code class="sig-name descname">BOLD</code><em class="property"> = [1m</em><a class="headerlink" href="#optimeed.core.text_format.BOLD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.UNDERLINE">
+<code class="sig-name descname">UNDERLINE</code><em class="property"> = [4m</em><a class="headerlink" href="#optimeed.core.text_format.UNDERLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.text_format.END">
+<code class="sig-name descname">END</code><em class="property"> = [0m</em><a class="headerlink" href="#optimeed.core.text_format.END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.software_version">
+<code class="sig-name descname">software_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#software_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.software_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.find_and_replace">
+<code class="sig-name descname">find_and_replace</code><span class="sig-paren">(</span><em class="sig-param">begin_char</em>, <em class="sig-param">end_char</em>, <em class="sig-param">theStr</em>, <em class="sig-param">replace_function</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#find_and_replace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.find_and_replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.create_unique_dirname">
+<code class="sig-name descname">create_unique_dirname</code><span class="sig-paren">(</span><em class="sig-param">dirname</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#create_unique_dirname"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.create_unique_dirname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">applyEquation</code><span class="sig-paren">(</span><em class="sig-param">objectIn</em>, <em class="sig-param">s</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#applyEquation"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Apply literal expression based on an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objectIn</strong> – Object</p></li>
+<li><p><strong>s</strong> – literal expression. Float variables taken from the object are written between {}, int between []. Example: s=”{x}+{y}*2” if x and y are attributes of objectIn.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>value (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.arithmeticEval">
+<code class="sig-name descname">arithmeticEval</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#arithmeticEval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.arithmeticEval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.isNonePrintMessage">
+<code class="sig-name descname">isNonePrintMessage</code><span class="sig-paren">(</span><em class="sig-param">theObject</em>, <em class="sig-param">theMessage</em>, <em class="sig-param">show_type=SHOW_INFO</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#isNonePrintMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.isNonePrintMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">getPath_workspace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#getPath_workspace"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.getLineInfo">
+<code class="sig-name descname">getLineInfo</code><span class="sig-paren">(</span><em class="sig-param">lvl=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#getLineInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.getLineInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">printIfShown</code><span class="sig-paren">(</span><em class="sig-param">theStr</em>, <em class="sig-param">show_type=SHOW_DEBUG</em>, <em class="sig-param">isToPrint=True</em>, <em class="sig-param">appendTypeName=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#printIfShown"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.universalPath">
+<code class="sig-name descname">universalPath</code><span class="sig-paren">(</span><em class="sig-param">thePath</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#universalPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.universalPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.add_suffix_to_path">
+<code class="sig-name descname">add_suffix_to_path</code><span class="sig-paren">(</span><em class="sig-param">thePath</em>, <em class="sig-param">suffix</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#add_suffix_to_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.add_suffix_to_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.get_object_attrs">
+<code class="sig-name descname">get_object_attrs</code><span class="sig-paren">(</span><em class="sig-param">obj</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#get_object_attrs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.get_object_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.rsetattr">
+<code class="sig-name descname">rsetattr</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">attr</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#rsetattr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.rsetattr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">rgetattr</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#rgetattr"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Recursively get an attribute from object. Extends getattr method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – object</p></li>
+<li><p><strong>attr</strong> – attribute to get</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">indentParagraph</code><span class="sig-paren">(</span><em class="sig-param">text_in</em>, <em class="sig-param">indent_level=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#indentParagraph"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.truncate">
+<code class="sig-name descname">truncate</code><span class="sig-paren">(</span><em class="sig-param">theStr</em>, <em class="sig-param">truncsize</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#truncate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.truncate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.str_all_attr">
+<code class="sig-name descname">str_all_attr</code><span class="sig-paren">(</span><em class="sig-param">theObject</em>, <em class="sig-param">max_recursion_level</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#str_all_attr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.str_all_attr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.get_2D_pareto">
+<code class="sig-name descname">get_2D_pareto</code><span class="sig-paren">(</span><em class="sig-param">xList</em>, <em class="sig-param">yList</em>, <em class="sig-param">max_X=True</em>, <em class="sig-param">max_Y=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#get_2D_pareto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.get_2D_pareto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.get_ND_pareto">
+<code class="sig-name descname">get_ND_pareto</code><span class="sig-paren">(</span><em class="sig-param">objectives_list</em>, <em class="sig-param">are_maxobjectives_list=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#get_ND_pareto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.get_ND_pareto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the N-D pareto front</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objectives_list</strong> – list of list of objectives: example [[0,1], [1,1], [2,2]]</p></li>
+<li><p><strong>are_maxobjectives_list</strong> – for each objective, tells if they are to be maximized or not: example [True, False]. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>extracted_pareto, indices: list of [x, y, …] points forming the pareto front, and list of the indices of these points from the base list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.delete_indices_from_list">
+<code class="sig-name descname">delete_indices_from_list</code><span class="sig-paren">(</span><em class="sig-param">indices</em>, <em class="sig-param">theList</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#delete_indices_from_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.delete_indices_from_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete elements from list at indices
+:param indices: list
+:param theList: list</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_WARNING</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.SHOW_INFO">
+<code class="sig-name descname">SHOW_INFO</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.core.SHOW_INFO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.SHOW_ERROR">
+<code class="sig-name descname">SHOW_ERROR</code><em class="property"> = 2</em><a class="headerlink" href="#optimeed.core.SHOW_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_DEBUG</code><em class="property"> = 3</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.SHOW_CURRENT">
+<code class="sig-name descname">SHOW_CURRENT</code><a class="headerlink" href="#optimeed.core.SHOW_CURRENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">printIfShown</code><span class="sig-paren">(</span><em class="sig-param">theStr</em>, <em class="sig-param">show_type=SHOW_DEBUG</em>, <em class="sig-param">isToPrint=True</em>, <em class="sig-param">appendTypeName=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#printIfShown"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_WARNING</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Data">
+<em class="property">class </em><code class="sig-name descname">Data</code><span class="sig-paren">(</span><em class="sig-param">x: list</em>, <em class="sig-param">y: list</em>, <em class="sig-param">x_label=''</em>, <em class="sig-param">y_label=''</em>, <em class="sig-param">legend=''</em>, <em class="sig-param">is_scattered=False</em>, <em class="sig-param">transfo_x=lambda selfData</em>, <em class="sig-param">x: x</em>, <em class="sig-param">transfo_y=lambda selfData</em>, <em class="sig-param">y: y</em>, <em class="sig-param">xlim=None</em>, <em class="sig-param">ylim=None</em>, <em class="sig-param">permutations=None</em>, <em class="sig-param">sort_output=False</em>, <em class="sig-param">color=None</em>, <em class="sig-param">symbol='o'</em>, <em class="sig-param">symbolsize=8</em>, <em class="sig-param">fillsymbol=True</em>, <em class="sig-param">outlinesymbol=1.8</em>, <em class="sig-param">linestyle='-'</em>, <em class="sig-param">width=2</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is used  to store informations necessary to plot a 2D graph. It has to be combined with a gui to be useful (ex. pyqtgraph)</p>
+<dl class="method">
+<dt id="optimeed.core.Data.set_data">
+<code class="sig-name descname">set_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x: list</em>, <em class="sig-param">y: list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.set_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites current datapoints with new set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_x">
+<code class="sig-name descname">get_x</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x coordinates of datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_symbolsize">
+<code class="sig-name descname">get_symbolsize</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_symbolsize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_symbolsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get size of the symbols</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.symbol_isfilled">
+<code class="sig-name descname">symbol_isfilled</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.symbol_isfilled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.symbol_isfilled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if symbols has to be filled or not</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_symbolOutline">
+<code class="sig-name descname">get_symbolOutline</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_symbolOutline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_symbolOutline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get color factor of outline of symbols</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_length_data">
+<code class="sig-name descname">get_length_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_length_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_length_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_xlim">
+<code class="sig-name descname">get_xlim</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_xlim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_xlim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x limits of viewbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_ylim">
+<code class="sig-name descname">get_ylim</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_ylim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_ylim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y limits of viewbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_y">
+<code class="sig-name descname">get_y</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y coordinates of datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_color">
+<code class="sig-name descname">get_color</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get color of the line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_width">
+<code class="sig-name descname">get_width</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get width of the line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_number_of_points">
+<code class="sig-name descname">get_number_of_points</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_number_of_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_number_of_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_plot_data">
+<code class="sig-name descname">get_plot_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_plot_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_plot_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this method to get the x and y coordinates of the points that have to be displayed.
+=&gt; After transformation, and after permutations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>x (list), y (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_permutations">
+<code class="sig-name descname">get_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the transformation ‘permutation’:
+xplot[i] = xdata[permutation[i]]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_invert_permutations">
+<code class="sig-name descname">get_invert_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_invert_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_invert_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inverse of permutations:
+xdata[i] = xplot[revert[i]]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_dataIndex_from_graphIndex">
+<code class="sig-name descname">get_dataIndex_from_graphIndex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_graph_point</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_dataIndex_from_graphIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_dataIndex_from_graphIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>From an index given in graph, recovers the index of the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_graph_point</strong> – Index in the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index of the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_dataIndices_from_graphIndices">
+<code class="sig-name descname">get_dataIndices_from_graphIndices</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_graph_point_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_dataIndices_from_graphIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_dataIndices_from_graphIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as get_dataIndex_from_graphIndex but with a list in entry.
+Can (?) improve performances for huge dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_graph_point_list</strong> – List of Index in the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of index of the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_graphIndex_from_dataIndex">
+<code class="sig-name descname">get_graphIndex_from_dataIndex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_data</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_graphIndex_from_dataIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_graphIndex_from_dataIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>From an index given in the data, recovers the index of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_data</strong> – Index in the data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index of the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_graphIndices_from_dataIndices">
+<code class="sig-name descname">get_graphIndices_from_dataIndices</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_graphIndices_from_dataIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_graphIndices_from_dataIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as get_graphIndex_from_dataIndex but with a list in entry.
+Can (?) improve performances for huge dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_data_list</strong> – List of Index in the data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of index of the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.set_permutations">
+<code class="sig-name descname">set_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">permutations</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.set_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.set_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set permutations between datapoints of the trace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>permutations</strong> – list of indices to plot (example: [0, 2, 1] means that the first point will be plotted, then the third, then the second one)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_x_label">
+<code class="sig-name descname">get_x_label</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_x_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_x_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x label of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_y_label">
+<code class="sig-name descname">get_y_label</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_y_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_y_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y label of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_legend">
+<code class="sig-name descname">get_legend</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_legend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get name of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_symbol">
+<code class="sig-name descname">get_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get symbol</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.add_point">
+<code class="sig-name descname">add_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.add_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.add_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point(s) to trace (inputs can be list or numeral)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.delete_point">
+<code class="sig-name descname">delete_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_point</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.delete_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a point from the datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.is_scattered">
+<code class="sig-name descname">is_scattered</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.is_scattered"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.is_scattered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a point from the datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.set_indices_points_to_plot">
+<code class="sig-name descname">set_indices_points_to_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indices</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.set_indices_points_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.set_indices_points_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set indices points to plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_indices_points_to_plot">
+<code class="sig-name descname">get_indices_points_to_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_indices_points_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_indices_points_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get indices points to plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.get_linestyle">
+<code class="sig-name descname">get_linestyle</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.get_linestyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.get_linestyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get linestyle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.export_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to save the points constituting the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Data.set_color">
+<code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theColor</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Data.set_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Data.set_color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Graph">
+<em class="property">class </em><code class="sig-name descname">Graph</code><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple graph container that contains several traces</p>
+<dl class="method">
+<dt id="optimeed.core.Graph.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trace to the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – <a class="reference internal" href="#optimeed.core.Data" title="optimeed.core.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>id of the created trace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graph.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a trace from the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idTrace</strong> – id of the trace to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graph.get_trace">
+<code class="sig-name descname">get_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph.get_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph.get_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data object of idTrace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idTrace</strong> – id of the trace to get</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="#optimeed.core.Data" title="optimeed.core.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graph.get_all_traces">
+<code class="sig-name descname">get_all_traces</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph.get_all_traces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph.get_all_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the traces id of the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graph.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graph.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graph.export_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Graphs">
+<em class="property">class </em><code class="sig-name descname">Graphs</code><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains several <a class="reference internal" href="#optimeed.core.Graph" title="optimeed.core.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.core.Graphs.updateChildren">
+<code class="sig-name descname">updateChildren</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.updateChildren"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.updateChildren" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.add_trace_firstGraph">
+<code class="sig-name descname">add_trace_firstGraph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.add_trace_firstGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.add_trace_firstGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as add_trace, but only if graphs has only one id
+:param data:
+:param updateChildren:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">data</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trace to the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idGraph</strong> – id of the graph</p></li>
+<li><p><strong>data</strong> – <a class="reference internal" href="#optimeed.core.Data" title="optimeed.core.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p></li>
+<li><p><strong>updateChildren</strong> – Automatically calls callback functions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>id of the created trace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the trace from the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idGraph</strong> – id of the graph</p></li>
+<li><p><strong>idTrace</strong> – id of the trace to remove</p></li>
+<li><p><strong>updateChildren</strong> – Automatically calls callback functions</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.get_first_graph">
+<code class="sig-name descname">get_first_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.get_first_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.get_first_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get id of the first graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>id of the first graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.get_graph">
+<code class="sig-name descname">get_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.get_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get graph object at idgraph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idGraph</strong> – id of the graph to get</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="#optimeed.core.Graph" title="optimeed.core.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.get_all_graphs_ids">
+<code class="sig-name descname">get_all_graphs_ids</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.get_all_graphs_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.get_all_graphs_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all ids of the graphs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of id graphs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.get_all_graphs">
+<code class="sig-name descname">get_all_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.get_all_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.get_all_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all graphs. Return dict {id: <a class="reference internal" href="#optimeed.core.Graph" title="optimeed.core.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a>}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.add_graph">
+<code class="sig-name descname">add_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.add_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>id of the created graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.remove_graph">
+<code class="sig-name descname">remove_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.remove_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.remove_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idGraph</strong> – id of the graph to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.add_update_method">
+<code class="sig-name descname">add_update_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">childObject</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.add_update_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.add_update_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a callback each time a graph is modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>childObject</strong> – method without arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.export_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export all the graphs in text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">otherGraphs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.merge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Graphs.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/graphs.html#Graphs.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Graphs.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_WARNING</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_INFO</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_ERROR</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_DEBUG</code><em class="property"> = 3</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">SHOW_CURRENT</code></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.InterfaceDevice">
+<em class="property">class </em><code class="sig-name descname">InterfaceDevice</code><a class="reference internal" href="../../../_modules/optimeed/core/interfaceDevice.html#InterfaceDevice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.InterfaceDevice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface class that represents a device.
+Hidden feature: variables that need to be saved must be type-hinted: e.g.: x: int. See <a class="reference internal" href="myjson/index.html#optimeed.core.myjson.obj_to_json" title="optimeed.core.myjson.obj_to_json"><code class="xref py py-meth docutils literal notranslate"><span class="pre">obj_to_json()</span></code></a> for more info</p>
+<dl class="method">
+<dt id="optimeed.core.InterfaceDevice.assign">
+<code class="sig-name descname">assign</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">device_to_assign</em>, <em class="sig-param">resetAttribute=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/interfaceDevice.html#InterfaceDevice.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.InterfaceDevice.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the attribute values of device_to_assign to self. The references are not lost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device_to_assign</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceDevice</span></code></p></li>
+<li><p><strong>resetAttribute</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.HowToPlotGraph">
+<em class="property">class </em><code class="sig-name descname">HowToPlotGraph</code><span class="sig-paren">(</span><em class="sig-param">attribute_x</em>, <em class="sig-param">attribute_y</em>, <em class="sig-param">kwargs_graph=None</em>, <em class="sig-param">excluded=None</em>, <em class="sig-param">exclusively=None</em>, <em class="sig-param">check_if_plot_elem=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.HowToPlotGraph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.HowToPlotGraph.exclude_col">
+<code class="sig-name descname">exclude_col</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_col</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.exclude_col"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.HowToPlotGraph.exclude_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add id_col to exclude from the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.HowToPlotGraph.exclusive_col">
+<code class="sig-name descname">exclusive_col</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_col</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.exclusive_col"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.HowToPlotGraph.exclusive_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set id_col to have exclusivity on the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.HowToPlotGraph.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.HowToPlotGraph.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.CollectionInfo">
+<em class="property">class </em><code class="sig-name descname">CollectionInfo</code><span class="sig-paren">(</span><em class="sig-param">theCollection</em>, <em class="sig-param">kwargs</em>, <em class="sig-param">theID</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.CollectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.CollectionInfo.get_collection">
+<code class="sig-name descname">get_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.CollectionInfo.get_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.CollectionInfo.get_kwargs">
+<code class="sig-name descname">get_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.CollectionInfo.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.CollectionInfo.get_id">
+<code class="sig-name descname">get_id</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.CollectionInfo.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.LinkDataGraph">
+<em class="property">class </em><code class="sig-name descname">LinkDataGraph</code><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="optimeed.core.LinkDataGraph._collection_linker">
+<em class="property">class </em><code class="sig-name descname">_collection_linker</code><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph._collection_linker" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.LinkDataGraph._collection_linker.add_link">
+<code class="sig-name descname">add_link</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idSlave</em>, <em class="sig-param">idMaster</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.add_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph._collection_linker.add_link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph._collection_linker.get_collection_master">
+<code class="sig-name descname">get_collection_master</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idToGet</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.get_collection_master"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph._collection_linker.get_collection_master" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph._collection_linker.is_slave">
+<code class="sig-name descname">is_slave</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idToCheck</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.is_slave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph._collection_linker.is_slave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph._collection_linker.set_same_master">
+<code class="sig-name descname">set_same_master</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idExistingSlave</em>, <em class="sig-param">idOtherSlave</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.set_same_master"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph._collection_linker.set_same_master" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idExistingSlave</strong> – id collection of the existing slave</p></li>
+<li><p><strong>idOtherSlave</strong> – id collection of the new slave that has to be linked to an existing master</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.add_collection">
+<code class="sig-name descname">add_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theCollection</em>, <em class="sig-param">kwargs=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.add_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.add_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.add_graph">
+<code class="sig-name descname">add_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">howToPlotGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.add_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.createGraphs">
+<code class="sig-name descname">createGraphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.createGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.createGraphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_x_y_to_plot">
+<em class="property">static </em><code class="sig-name descname">get_x_y_to_plot</code><span class="sig-paren">(</span><em class="sig-param">theCollection</em>, <em class="sig-param">howToPlotGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_x_y_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_x_y_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_howToPlotGraph">
+<code class="sig-name descname">get_howToPlotGraph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_howToPlotGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_howToPlotGraph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_collectionInfo">
+<code class="sig-name descname">get_collectionInfo</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idCollectionInfo</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_collectionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_collectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.create_trace">
+<code class="sig-name descname">create_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">collectionInfo</em>, <em class="sig-param">howToPlotGraph</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.create_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.create_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_all_id_graphs">
+<code class="sig-name descname">get_all_id_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_all_id_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_all_id_graphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_all_traces_id_graph">
+<code class="sig-name descname">get_all_traces_id_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_all_traces_id_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_all_traces_id_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.update_graphs">
+<code class="sig-name descname">update_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.update_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.update_graphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.is_slave">
+<code class="sig-name descname">is_slave</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.is_slave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.is_slave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_idCollection_from_graph">
+<code class="sig-name descname">get_idCollection_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">getMaster=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idCollection_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_idCollection_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>From indices in the graph, get index of corresponding collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_collection_from_graph">
+<code class="sig-name descname">get_collection_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">getMaster=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_collection_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_collection_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>From indices in the graph, get corresponding collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_dataObject_from_graph">
+<code class="sig-name descname">get_dataObject_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_dataObject_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_dataObject_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_dataObjects_from_graph">
+<code class="sig-name descname">get_dataObjects_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_dataObjects_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_dataObjects_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.remove_element_from_graph">
+<code class="sig-name descname">remove_element_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint</em>, <em class="sig-param">deleteFromMaster=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_element_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.remove_element_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove element from the graph, or the master collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.remove_elements_from_trace">
+<code class="sig-name descname">remove_elements_from_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoints</em>, <em class="sig-param">deleteFromMaster=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_elements_from_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.remove_elements_from_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performances optimisation when compared to <a class="reference internal" href="#optimeed.core.LinkDataGraph.remove_element_from_graph" title="optimeed.core.LinkDataGraph.remove_element_from_graph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LinkDataGraph.remove_element_from_graph()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.link_collection_to_graph_collection">
+<code class="sig-name descname">link_collection_to_graph_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_collection_graph</em>, <em class="sig-param">id_collection_master</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.link_collection_to_graph_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.link_collection_to_graph_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link data
+:param id_collection_graph:
+:param id_collection_master:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_graph_and_trace_from_collection">
+<code class="sig-name descname">get_graph_and_trace_from_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idCollection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_graph_and_trace_from_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_graph_and_trace_from_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverse search: from a collection, get the associated graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_mappingData_graph">
+<code class="sig-name descname">get_mappingData_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_mappingData_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_mappingData_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_mappingData_trace">
+<code class="sig-name descname">get_mappingData_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_mappingData_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_mappingData_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_idcollection_from_collection">
+<code class="sig-name descname">get_idcollection_from_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theCollection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idcollection_from_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_idcollection_from_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.LinkDataGraph.get_idPoints_from_indices_in_collection">
+<code class="sig-name descname">get_idPoints_from_indices_in_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">indices_in_collection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idPoints_from_indices_in_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.LinkDataGraph.get_idPoints_from_indices_in_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Option_class_interface">
+<em class="property">class </em><code class="sig-name descname">Option_class_interface</code><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Interface of the class ‘Option_class’. It defines all the necessary methods to manage a set of options.</p>
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.__str__">
+<em class="property">abstract </em><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.get_optionValue">
+<em class="property">abstract </em><code class="sig-name descname">get_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.get_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.get_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.set_optionValue">
+<em class="property">abstract </em><code class="sig-name descname">set_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId: int</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.set_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.set_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.get_all_options">
+<em class="property">abstract </em><code class="sig-name descname">get_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.get_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.get_all_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionnary containing tuples (name of the option, value of the option)
+:return: dict</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.set_all_options">
+<em class="property">abstract </em><code class="sig-name descname">set_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">options: Option_class_interface</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.set_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.set_all_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method allows to define all the options from another object of type ‘Option_class_interface’
+:param options: Option_class_interface
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_interface.add_option">
+<em class="property">abstract </em><code class="sig-name descname">add_option</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption: int</em>, <em class="sig-param">name: str</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_interface.add_option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_interface.add_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Options">
+<em class="property">class </em><code class="sig-name descname">Options</code><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.Options.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.get_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.get_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.add_option">
+<code class="sig-name descname">add_option</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption</em>, <em class="sig-param">name</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.add_option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.add_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.set_option">
+<code class="sig-name descname">set_option</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.set_option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.set_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.set_self">
+<code class="sig-name descname">set_self</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">the_options</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.set_self"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.set_self" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Options.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Options.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Options.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Option_class">
+<em class="property">class </em><code class="sig-name descname">Option_class</code><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="options/index.html#optimeed.core.options.Option_class_interface" title="optimeed.core.options.Option_class_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.options.Option_class_interface</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.core.Option_class.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class.get_optionValue">
+<code class="sig-name descname">get_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.get_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.get_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class.set_optionValue">
+<code class="sig-name descname">set_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.set_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.set_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class.get_all_options">
+<code class="sig-name descname">get_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.get_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.get_all_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class.set_all_options">
+<code class="sig-name descname">set_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">options</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.set_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.set_all_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class.add_option">
+<code class="sig-name descname">add_option</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption</em>, <em class="sig-param">name</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class.add_option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class.add_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.Option_class_typed">
+<em class="property">class </em><code class="sig-name descname">Option_class_typed</code><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="options/index.html#optimeed.core.options.Option_class_interface" title="optimeed.core.options.Option_class_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.options.Option_class_interface</span></code></a></p>
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_names">
+<code class="sig-name descname">my_names</code><em class="property"> :Dict[int, str]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_map">
+<code class="sig-name descname">my_map</code><em class="property"> :Dict[int, str]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_0">
+<code class="sig-name descname">my_options_0</code><em class="property"> :Dict[int, int]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_1">
+<code class="sig-name descname">my_options_1</code><em class="property"> :Dict[int, float]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_2">
+<code class="sig-name descname">my_options_2</code><em class="property"> :Dict[int, bool]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_3">
+<code class="sig-name descname">my_options_3</code><em class="property"> :Dict[int, str]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_4">
+<code class="sig-name descname">my_options_4</code><em class="property"> :Dict[int, List[int]]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_5">
+<code class="sig-name descname">my_options_5</code><em class="property"> :Dict[int, List[float]]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_6">
+<code class="sig-name descname">my_options_6</code><em class="property"> :Dict[int, List[str]]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.core.Option_class_typed.my_options_7">
+<code class="sig-name descname">my_options_7</code><em class="property"> :Dict[int, List[bool]]</em><a class="headerlink" href="#optimeed.core.Option_class_typed.my_options_7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.__get_types">
+<em class="property">static </em><code class="sig-name descname">__get_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core.Option_class_typed.__get_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.get_optionValue">
+<code class="sig-name descname">get_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.get_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.get_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.set_optionValue">
+<code class="sig-name descname">set_optionValue</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">optionId: int</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.set_optionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.set_optionValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.get_all_options">
+<code class="sig-name descname">get_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.get_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.get_all_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.add_option">
+<code class="sig-name descname">add_option</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idOption: int</em>, <em class="sig-param">name: str</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.add_option"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.add_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.__match">
+<em class="property">static </em><code class="sig-name descname">__match</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">theType</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core.Option_class_typed.__match" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.set_all_options">
+<code class="sig-name descname">set_all_options</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">options: Option_class_interface</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.set_all_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.set_all_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.Option_class_typed.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/options.html#Option_class_typed.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.Option_class_typed.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.fast_LUT_interpolation">
+<em class="property">class </em><code class="sig-name descname">fast_LUT_interpolation</code><span class="sig-paren">(</span><em class="sig-param">independent_variables</em>, <em class="sig-param">dependent_variables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.fast_LUT_interpolation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class designed for fast interpolation in look-up table when successive searchs are called often.
+Otherwise use griddata</p>
+<dl class="method">
+<dt id="optimeed.core.fast_LUT_interpolation.interp_tri">
+<em class="property">static </em><code class="sig-name descname">interp_tri</code><span class="sig-paren">(</span><em class="sig-param">xyz</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation.interp_tri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.fast_LUT_interpolation.interp_tri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.fast_LUT_interpolation.interpolate">
+<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">point</em>, <em class="sig-param">fill_value=np.nan</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation.interpolate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.fast_LUT_interpolation.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the interpolation
+:param point: coordinates to interpolate (tuple or list of tuples for multipoints)
+:param fill_value: value to put if extrapolated.
+:return: coordinates</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.interpolate_table">
+<code class="sig-name descname">interpolate_table</code><span class="sig-paren">(</span><em class="sig-param">x0</em>, <em class="sig-param">x_values</em>, <em class="sig-param">y_values</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#interpolate_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.interpolate_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>From sorted table (x,y) find y0 corresponding to x0 (linear interpolation)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.derivate">
+<code class="sig-name descname">derivate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#derivate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.derivate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.linspace">
+<code class="sig-name descname">linspace</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em>, <em class="sig-param">npoints</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#linspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.reconstitute_signal">
+<code class="sig-name descname">reconstitute_signal</code><span class="sig-paren">(</span><em class="sig-param">amplitudes</em>, <em class="sig-param">phases</em>, <em class="sig-param">numberOfPeriods=1</em>, <em class="sig-param">x_points=None</em>, <em class="sig-param">n_points=50</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#reconstitute_signal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.reconstitute_signal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstitute the signal from fft. Number of periods of the signal must be specified if different of 1</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.my_fft">
+<code class="sig-name descname">my_fft</code><span class="sig-paren">(</span><em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#my_fft"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.my_fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Real FFT of signal Bx, with real amplitude of harmonics. Input signal must be within a period.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.cart2pol">
+<code class="sig-name descname">cart2pol</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#cart2pol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.cart2pol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.pol2cart">
+<code class="sig-name descname">pol2cart</code><span class="sig-paren">(</span><em class="sig-param">rho</em>, <em class="sig-param">phi</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#pol2cart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.pol2cart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.partition">
+<code class="sig-name descname">partition</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#partition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.quicksort">
+<code class="sig-name descname">quicksort</code><span class="sig-paren">(</span><em class="sig-param">array</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#quicksort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.quicksort" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.dist">
+<code class="sig-name descname">dist</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">q</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Euclidean distance between points p and q.
+:param p: [x, y]
+:param q: [x, y]
+:return: distance (float)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.sparse_subset">
+<code class="sig-name descname">sparse_subset</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#sparse_subset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.sparse_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a maximal list of elements of points such that no pairs of
+points in the result have distance less than r.
+:param points: list of tuples (x,y)
+:param r: distance
+:return: corresponding subset (list), indices of the subset (list)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.integrate">
+<code class="sig-name descname">integrate</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs Integral(x[0] to x[-1]) of y dx</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – x axis coordinates (list)</p></li>
+<li><p><strong>y</strong> – y axis coordinates (list)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>integral value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.my_fourier">
+<code class="sig-name descname">my_fourier</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">n</em>, <em class="sig-param">L</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#my_fourier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.my_fourier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fourier analys</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – x axis coordinates</p></li>
+<li><p><strong>y</strong> – y axis coordinates</p></li>
+<li><p><strong>n</strong> – number of considered harmonic</p></li>
+<li><p><strong>L</strong> – half-period length</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a and b coefficients (y = a*cos(x) + b*sin(y))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.get_ellipse_axes">
+<code class="sig-name descname">get_ellipse_axes</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">dphi</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/additional_tools.html#get_ellipse_axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.get_ellipse_axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trouve les longueurs des axes majeurs et mineurs de l’ellipse, ainsi que l’orientation de l’ellipse.
+ellipse: x(t) = A*cos(t), y(t) = B*cos(t+dphi)
+Etapes: longueur demi ellipse CENTRéE = sqrt(a^2 cos^2(x) + b^2 cos^2(t+phi)
+Minimisation de cette formule =&gt; obtention formule tg(2x) = alpha/beta</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">rgetattr</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#rgetattr"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Recursively get an attribute from object. Extends getattr method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – object</p></li>
+<li><p><strong>attr</strong> – attribute to get</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">rsetattr</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">attr</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tools.html#rsetattr"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">MODULE_TAG</code><em class="property"> = __module__</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">CLASS_TAG</code><em class="property"> = __class__</em></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="optimeed.core.EXCLUDED_TAGS">
+<code class="sig-name descname">EXCLUDED_TAGS</code><a class="headerlink" href="#optimeed.core.EXCLUDED_TAGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.SaveableObject">
+<em class="property">class </em><code class="sig-name descname">SaveableObject</code><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#SaveableObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.SaveableObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class for dynamically type-hinted objects.
+This class is to solve the special case where the exact type of an attribute is not known before runtime, yet has to be saved.</p>
+<dl class="method">
+<dt id="optimeed.core.SaveableObject.get_additional_attributes_to_save">
+<em class="property">abstract </em><code class="sig-name descname">get_additional_attributes_to_save</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#SaveableObject.get_additional_attributes_to_save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.SaveableObject.get_additional_attributes_to_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of attributes corresponding to object, whose type cannot be determined statically (e.g. topology change)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._get_object_class">
+<code class="sig-name descname">_get_object_class</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._get_object_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._get_object_module">
+<code class="sig-name descname">_get_object_module</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._get_object_module" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._object_to_FQCN">
+<code class="sig-name descname">_object_to_FQCN</code><span class="sig-paren">(</span><em class="sig-param">theobj</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._object_to_FQCN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets module path of object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._find_class">
+<code class="sig-name descname">_find_class</code><span class="sig-paren">(</span><em class="sig-param">moduleName</em>, <em class="sig-param">className</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._find_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">json_to_obj</code><span class="sig-paren">(</span><em class="sig-param">json_dict</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#json_to_obj"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Convenience class to create object from dictionary. Only works if CLASS_TAG is valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_dict</strong> – dictionary loaded from a json file.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – if class can not be found</p></li>
+<li><p><strong>KeyError</strong> – if CLASS_TAG not present in dictionary</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">json_to_obj_safe</code><span class="sig-paren">(</span><em class="sig-param">json_dict</em>, <em class="sig-param">cls</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#json_to_obj_safe"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Safe class to create object from dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – dictionary loaded from a json file</p></li>
+<li><p><strong>cls</strong> – class object to instantiate with dictionary</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._instantiates_annotated_object">
+<code class="sig-name descname">_instantiates_annotated_object</code><span class="sig-paren">(</span><em class="sig-param">_json_dict</em>, <em class="sig-param">_cls</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._instantiates_annotated_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._get_annotations">
+<code class="sig-name descname">_get_annotations</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._get_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return annotated attributes</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">obj_to_json</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#obj_to_json"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Extract the json dictionary from the object. The data saved are automatically detected, using typehints.
+ex: x: int=5 will be saved, x=5 won’t.
+Inheritance of annotation is managed by this function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core._get_attributes_to_save">
+<code class="sig-name descname">_get_attributes_to_save</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.core._get_attributes_to_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list (attribute, is_first)</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">get_json_module_tree</code><span class="sig-paren">(</span><em class="sig-param">theObj</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#get_json_module_tree"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Return dict containing {CLASS_TAG: “class_name”, MODULE_TAG: “module_name”, “attribute1”:{“class_name”: “module_name”, …}}</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">encode_str_json</code><span class="sig-paren">(</span><em class="sig-param">theStr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#encode_str_json"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-name descname">decode_str_json</code><span class="sig-paren">(</span><em class="sig-param">theStr</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/myjson.html#decode_str_json"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.export_to_tikz_groupGraphs">
+<code class="sig-name descname">export_to_tikz_groupGraphs</code><span class="sig-paren">(</span><em class="sig-param">theGraphs: Graphs</em>, <em class="sig-param">foldername</em>, <em class="sig-param">additionalPreamble=lambda: ''</em>, <em class="sig-param">additionalAxisOptions=lambda graphId: ''</em>, <em class="sig-param">additionalTraceOptions=lambda graphId</em>, <em class="sig-param">traceId: ''</em>, <em class="sig-param">debug=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/core/tikzTranslator.html#export_to_tikz_groupGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.export_to_tikz_groupGraphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the graphs as group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theGraphs</strong> – Graphs to save</p></li>
+<li><p><strong>foldername</strong> – Foldername to save</p></li>
+<li><p><strong>additionalPreamble</strong> – method that returns string for custom tikz options</p></li>
+<li><p><strong>additionalAxisOptions</strong> – method that returns string for custom tikz options</p></li>
+<li><p><strong>additionalTraceOptions</strong> – method that returns string for custom tikz options</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ansi2html/index.html" class="btn btn-neutral float-right" title="ansi2html" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../consolidate/parametric_analysis/index.html" class="btn btn-neutral float-left" title="parametric_analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

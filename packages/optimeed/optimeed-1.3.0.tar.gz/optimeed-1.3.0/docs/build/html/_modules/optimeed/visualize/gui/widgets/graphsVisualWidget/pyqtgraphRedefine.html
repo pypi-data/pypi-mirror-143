@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.pyqtgraph.graphicsItems.LegendItem</span> <span class="k">import</span> <span class="n">ItemSample</span>
+<span class="kn">from</span> <span class="nn">.pyqtgraph.graphicsItems.ScatterPlotItem</span> <span class="k">import</span> <span class="n">ScatterPlotItem</span><span class="p">,</span> <span class="n">drawSymbol</span>
+<span class="kn">from</span> <span class="nn">.pyqtgraph.graphicsItems.PlotDataItem</span> <span class="k">import</span> <span class="n">PlotDataItem</span>
+<span class="kn">from</span> <span class="nn">.pyqtgraph</span> <span class="k">import</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">fn</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">pyqtgraph</span> <span class="k">as</span> <span class="n">pg</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtOpenGL</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="isOnWindows"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.isOnWindows">[docs]</a><span class="n">isOnWindows</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span></div>
+
+
+<span class="sd">&quot;&quot;&quot;Other modified files (directly): ScatterPlotItem.py, to change point selection. Ctrl + clic: select area. Clic: only one single point:</span>
+
+
+<span class="sd">class OnClicSelector:</span>
+<span class="sd">    def __init__(self):</span>
+<span class="sd">        self.p_list = []</span>
+
+<span class="sd">    def add_point(self, newp):</span>
+<span class="sd">        self.p_list.append(newp)</span>
+
+<span class="sd">    def draw(self, painter):</span>
+<span class="sd">        if len(self.p_list) &gt; 2:</span>
+<span class="sd">            pen = fn.mkPen(1)</span>
+<span class="sd">            pen.setWidthF(2)</span>
+<span class="sd">            painter.setPen(pen)</span>
+<span class="sd">            painter.drawPolyline(QtGui.QPolygonF(self.p_list))</span>
+
+<span class="sd">    def reset(self):</span>
+<span class="sd">        self.p_list = []</span>
+
+<span class="sd">    def getPath(self):</span>
+<span class="sd">        return path.Path([(p.x(), p.y()) for p in self.p_list] + [(self.p_list[-1].x(), self.p_list[-1].y())])</span>
+
+<span class="sd">------------------------------</span>
+<span class="sd">    def mouseDragEvent(self, ev):</span>
+<span class="sd">        if ev.modifiers() and QtCore.Qt.ControlModifier:</span>
+<span class="sd">            ev.accept()</span>
+<span class="sd">            self.clicSelector.add_point(ev.pos())</span>
+<span class="sd">            if ev.isFinish():</span>
+<span class="sd">                path = self.clicSelector.getPath()</span>
+<span class="sd">                points = self.points()</span>
+<span class="sd">                contains_points = path.contains_points([(p.pos().x(), p.pos().y()) for p in points])</span>
+<span class="sd">                indices = [i for i, cond in enumerate(contains_points) if cond]</span>
+<span class="sd">                points_clicked = [points[i] for i in indices]</span>
+<span class="sd">                self.ptsClicked = points_clicked</span>
+<span class="sd">                self.sigClicked.emit(self, self.ptsClicked)</span>
+<span class="sd">                self.clicSelector.reset()</span>
+<span class="sd">            self.update()</span>
+<span class="sd">        else:</span>
+<span class="sd">            ev.ignore()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="myGraphicsLayoutWidget"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget">[docs]</a><span class="k">class</span> <span class="nc">myGraphicsLayoutWidget</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">GraphicsView</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">_kwargs</span><span class="p">):</span>
+        <span class="n">pg</span><span class="o">.</span><span class="n">GraphicsView</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ci</span> <span class="o">=</span> <span class="n">myGraphicsLayout</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;nextRow&#39;</span><span class="p">,</span> <span class="s1">&#39;nextCol&#39;</span><span class="p">,</span> <span class="s1">&#39;nextColumn&#39;</span><span class="p">,</span> <span class="s1">&#39;addPlot&#39;</span><span class="p">,</span> <span class="s1">&#39;addViewBox&#39;</span><span class="p">,</span> <span class="s1">&#39;addItem&#39;</span><span class="p">,</span> <span class="s1">&#39;getItem&#39;</span><span class="p">,</span> <span class="s1">&#39;addLayout&#39;</span><span class="p">,</span> <span class="s1">&#39;addLabel&#39;</span><span class="p">,</span> <span class="s1">&#39;removeItem&#39;</span><span class="p">,</span> <span class="s1">&#39;itemIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;clear&#39;</span><span class="p">]:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ci</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ci</span><span class="p">)</span>
+
+<div class="viewcode-block" id="myGraphicsLayoutWidget.useOpenGL"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget.useOpenGL">[docs]</a>    <span class="k">def</span> <span class="nf">useOpenGL</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrited to fix bad antialiasing while using openGL&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">b</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">isOnWindows</span><span class="p">:</span>
+                <span class="n">v</span> <span class="o">=</span> <span class="n">QtOpenGL</span><span class="o">.</span><span class="n">QGLWidget</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">v</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QOpenGLWidget</span><span class="p">()</span>
+                <span class="n">fmt</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSurfaceFormat</span><span class="p">()</span>
+                <span class="n">fmt</span><span class="o">.</span><span class="n">setSamples</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+                <span class="n">fmt</span><span class="o">.</span><span class="n">setDepthBufferSize</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+                <span class="n">fmt</span><span class="o">.</span><span class="n">setStencilBufferSize</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1"># Fixes antialias zoom error</span>
+                <span class="n">v</span><span class="o">.</span><span class="n">setFormat</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setViewport</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="myGraphicsLayout"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout">[docs]</a><span class="k">class</span> <span class="nc">myGraphicsLayout</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">GraphicsLayout</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setHorizontalSpacing</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setVerticalSpacing</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+
+<div class="viewcode-block" id="myGraphicsLayout.addItem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.addItem">[docs]</a>    <span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rowspan</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">colspan</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add an item to the layout and place it in the next available cell (or in the cell specified).</span>
+<span class="sd">        The item must be an instance of a QGraphicsWidget subclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">row</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentRow</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">col</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentCol</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rowspan</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">colspan</span><span class="p">):</span>
+                <span class="n">row2</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">i</span>
+                <span class="n">col2</span> <span class="o">=</span> <span class="n">col</span> <span class="o">+</span> <span class="n">j</span>
+                <span class="k">if</span> <span class="n">row2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="n">row2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="n">row2</span><span class="p">][</span><span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">row2</span><span class="p">,</span> <span class="n">col2</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">rowspan</span><span class="p">,</span> <span class="n">colspan</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nextRow</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="myGraphicsLayout.set_graph_disposition"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.set_graph_disposition">[docs]</a>    <span class="k">def</span> <span class="nf">set_graph_disposition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rowspan</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">colspan</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function to modify the position of an item in the list</span>
+
+<span class="sd">        :param item: WidgetPlotItem to set</span>
+<span class="sd">        :param row: Row</span>
+<span class="sd">        :param col: Column</span>
+<span class="sd">        :param rowspan:</span>
+<span class="sd">        :param colspan:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Remove from existing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">removeItem</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">item</span><span class="p">]:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span>
+
+        <span class="c1"># Add new configuration</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rowspan</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">colspan</span><span class="p">):</span>
+                <span class="n">row2</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">i</span>
+                <span class="n">col2</span> <span class="o">=</span> <span class="n">col</span> <span class="o">+</span> <span class="n">j</span>
+                <span class="k">if</span> <span class="n">row2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="n">row2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="n">row2</span><span class="p">][</span><span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">row2</span><span class="p">,</span> <span class="n">col2</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">rowspan</span><span class="p">,</span> <span class="n">colspan</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="myItemSample"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample">[docs]</a><span class="k">class</span> <span class="nc">myItemSample</span><span class="p">(</span><span class="n">ItemSample</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">13</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widthCell</span> <span class="o">=</span> <span class="mi">40</span>
+
+<div class="viewcode-block" id="myItemSample.set_offset"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_offset">[docs]</a>    <span class="k">def</span> <span class="nf">set_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span></div>
+
+<div class="viewcode-block" id="myItemSample.set_width_cell"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_width_cell">[docs]</a>    <span class="k">def</span> <span class="nf">set_width_cell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">widthCell</span> <span class="o">=</span> <span class="n">width</span></div>
+
+    <span class="c1"># &quot;&quot;&quot;Overwrites for text closer to the sample&quot;&quot;&quot;</span>
+    <span class="c1"># def boundingRect(self):</span>
+    <span class="c1">#     return QtCore.QRectF(0, 0, 0, 0)</span>
+
+<div class="viewcode-block" id="myItemSample.paint"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.paint">[docs]</a>    <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrites to make matlab-like samples&quot;&quot;&quot;</span>
+        <span class="c1"># p.setRenderHint(p.Antialiasing)  # only if the data is antialiased.</span>
+        <span class="n">opts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="o">.</span><span class="n">opts</span>
+
+        <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fillLevel&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fillBrush&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;fillBrush&#39;</span><span class="p">]))</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">drawPolygon</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QPolygonF</span><span class="p">([</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QPointF</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QPointF</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QPointF</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">)]))</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">linewidth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">widthCell</span>
+        <span class="n">v_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span>
+
+        <span class="n">opts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="o">.</span><span class="n">opts</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="p">,</span> <span class="n">ScatterPlotItem</span><span class="p">):</span>
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;pen&#39;</span><span class="p">])</span>
+            <span class="n">pen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">pen</span><span class="o">.</span><span class="n">widthF</span><span class="p">()</span><span class="o">*</span><span class="mf">0.9</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">drawLine</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_offset</span><span class="p">,</span> <span class="n">linewidth</span><span class="p">,</span> <span class="n">v_offset</span><span class="p">)</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span>
+
+        <span class="n">symbol</span> <span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;symbol&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">symbol</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="p">,</span> <span class="n">PlotDataItem</span><span class="p">):</span>
+                <span class="n">opts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="o">.</span><span class="n">scatter</span><span class="o">.</span><span class="n">opts</span>
+
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;pen&#39;</span><span class="p">])</span>
+            <span class="n">brush</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;brush&#39;</span><span class="p">])</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span>  <span class="c1"># Scale factor for legend size</span>
+
+            <span class="n">p</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">linewidth</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">v_offset</span><span class="p">)</span>
+            <span class="n">drawSymbol</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">pen</span><span class="p">,</span> <span class="n">brush</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="myLegend"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend">[docs]</a><span class="k">class</span> <span class="nc">myLegend</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">LegendItem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Legend that fixes bugs (flush left + space) from pyqtgraph&#39;s legend&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_light</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">myLegend</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setVerticalSpacing</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_light</span> <span class="o">=</span> <span class="n">is_light</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_cell_sample</span> <span class="o">=</span> <span class="mi">25</span>
+
+<div class="viewcode-block" id="myLegend.set_space_sample_label"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_space_sample_label">[docs]</a>    <span class="k">def</span> <span class="nf">set_space_sample_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theSpace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To set the gap between the sample and the label&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setHorizontalSpacing</span><span class="p">(</span><span class="n">theSpace</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="myLegend.set_offset_sample"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_offset_sample">[docs]</a>    <span class="k">def</span> <span class="nf">set_offset_sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To tune the offset between the sample and the text&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">sample</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="n">sample</span><span class="o">.</span><span class="n">set_offset</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="myLegend.set_width_cell_sample"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_width_cell_sample">[docs]</a>    <span class="k">def</span> <span class="nf">set_width_cell_sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set width of sample&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_cell_sample</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apply_width_sample</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="myLegend.updateSize"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.updateSize">[docs]</a>    <span class="k">def</span> <span class="nf">updateSize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">sample</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="n">height</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">(),</span> <span class="n">label</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">sample</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">+</span> <span class="n">label</span><span class="o">.</span><span class="n">width</span><span class="p">())</span>  <span class="c1"># + 13</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="myLegend.addItem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.addItem">[docs]</a>    <span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrites to flush left&quot;&quot;&quot;</span>
+        <span class="c1"># label = LabelItem(name)</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">myLabelItem</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+        <span class="n">width_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_cell_sample</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">ItemSample</span><span class="p">):</span>
+            <span class="n">sample</span> <span class="o">=</span> <span class="n">item</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sample</span> <span class="o">=</span> <span class="n">myItemSample</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="n">sample</span><span class="o">.</span><span class="n">set_width_cell</span><span class="p">(</span><span class="n">width_cell</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">rowCount</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">sample</span><span class="p">,</span> <span class="n">label</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setColumnFixedWidth</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width_cell</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setColumnFixedWidth</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setHorizontalSpacing</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># No spacing between sample and text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setRowFixedHeight</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateSize</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="myLegend.apply_width_sample"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.apply_width_sample">[docs]</a>    <span class="k">def</span> <span class="nf">apply_width_sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">width_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_cell_sample</span>
+        <span class="k">for</span> <span class="n">sample</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="n">sample</span><span class="o">.</span><span class="n">set_width_cell</span><span class="p">(</span><span class="n">width_cell</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">setColumnFixedWidth</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width_cell</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateSize</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="myLegend.set_font"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_font">[docs]</a>    <span class="k">def</span> <span class="nf">set_font</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font_size</span><span class="p">,</span> <span class="n">font_color</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">single_item</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">single_item</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">LabelItem</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">fontname</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">single_item</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">single_item</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">font_color</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">font_size</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;pt&#39;</span><span class="p">,</span> <span class="s1">&#39;font-family&#39;</span><span class="p">:</span> <span class="n">fontname</span><span class="p">})</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">single_item</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">single_item</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">font_color</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">font_size</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;pt&#39;</span><span class="p">})</span></div>
+
+<div class="viewcode-block" id="myLegend.paint"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.paint">[docs]</a>    <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrited to select background color&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_light</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">mkPen</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">mkBrush</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+            <span class="n">offset_x</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">offset_y</span> <span class="o">=</span> <span class="mi">20</span>
+            <span class="n">boundingRect</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QRectF</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">offset_y</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="n">offset_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="n">offset_y</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">boundingRect</span><span class="p">)</span>  <span class="c1"># self.boundingRect())</span></div>
+
+<div class="viewcode-block" id="myLegend.set_position"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_position">[docs]</a>    <span class="k">def</span> <span class="nf">set_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the position of the legend, in a corner.</span>
+
+<span class="sd">        :param position: String (NW, NE, SW, SE), indicates which corner the legend is close</span>
+<span class="sd">        :param offset: Tuple (xoff, yoff), x and y offset from the edge</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">offPosMult</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">position</span> <span class="o">==</span> <span class="s2">&quot;NW&quot;</span><span class="p">:</span>
+            <span class="n">quartil_parent</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">oxMult</span><span class="p">,</span> <span class="n">oyMult</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">position</span> <span class="o">==</span> <span class="s2">&quot;NE&quot;</span><span class="p">:</span>
+            <span class="n">quartil_parent</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">oxMult</span><span class="p">,</span> <span class="n">oyMult</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">position</span> <span class="o">==</span> <span class="s2">&quot;SW&quot;</span><span class="p">:</span>
+            <span class="n">quartil_parent</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">oxMult</span><span class="p">,</span> <span class="n">oyMult</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">offPosMult</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">position</span> <span class="o">==</span> <span class="s2">&quot;SE&quot;</span><span class="p">:</span>
+            <span class="n">quartil_parent</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">oxMult</span><span class="p">,</span> <span class="n">oyMult</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">offPosMult</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not place legend : position unknown (please use NW, NE, SW or SE)&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">(</span><span class="n">quartil_parent</span><span class="p">,</span> <span class="n">quartil_parent</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">oxMult</span><span class="p">,</span> <span class="n">offPosMult</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">oyMult</span><span class="p">))</span>  <span class="c1"># * -10: corresponds to offset_y defined in paint</span></div></div>
+
+
+<div class="viewcode-block" id="myLabelItem"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem">[docs]</a><span class="k">class</span> <span class="nc">myLabelItem</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">LabelItem</span><span class="p">):</span>
+<div class="viewcode-block" id="myLabelItem.setText"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem.setText">[docs]</a>    <span class="k">def</span> <span class="nf">setText</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Overwrited to add font-family to options &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="n">opts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+            <span class="n">opts</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+        <span class="n">optlist</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">getConfigOption</span><span class="p">(</span><span class="s1">&#39;foreground&#39;</span><span class="p">)</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">mkColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">optlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;color: #&#39;</span> <span class="o">+</span> <span class="n">fn</span><span class="o">.</span><span class="n">colorStr</span><span class="p">(</span><span class="n">color</span><span class="p">)[:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;size&#39;</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">:</span>
+            <span class="n">optlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;font-size: &#39;</span> <span class="o">+</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;bold&#39;</span> <span class="ow">in</span> <span class="n">opts</span> <span class="ow">and</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
+            <span class="n">optlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;font-weight: &#39;</span> <span class="o">+</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">}[</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="s1">&#39;italic&#39;</span> <span class="ow">in</span> <span class="n">opts</span> <span class="ow">and</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;italic&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
+            <span class="n">optlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;font-style: &#39;</span> <span class="o">+</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">}[</span><span class="n">opts</span><span class="p">[</span><span class="s1">&#39;italic&#39;</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="s1">&#39;font-family&#39;</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">:</span>
+            <span class="n">optlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;font-family: &#39;</span> <span class="o">+</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;font-family&#39;</span><span class="p">])</span>
+        <span class="n">full</span> <span class="o">=</span> <span class="s2">&quot;&lt;span style=&#39;</span><span class="si">%s</span><span class="s2">&#39;&gt;</span><span class="si">%s</span><span class="s2">&lt;/span&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">optlist</span><span class="p">),</span> <span class="n">text</span><span class="p">)</span>
+        <span class="c1"># print full</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">item</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">full</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateMin</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resizeEvent</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateGeometry</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="myAxis"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis">[docs]</a><span class="k">class</span> <span class="nc">myAxis</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">AxisItem</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">orientation</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nudges</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)}</span>
+        <span class="c1"># self.style.update({&#39;textFillLimits&#39;: [(0, 0.8),    ## never fill more than 80% of the axis</span>
+        <span class="c1">#         (4, 0.4),    ## If we already have 4 ticks with text, fill no more than 40% of the axis</span>
+        <span class="c1">#         (6, 0.2)]})</span>
+
+<div class="viewcode-block" id="myAxis.get_label_pos"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.get_label_pos">[docs]</a>    <span class="k">def</span> <span class="nf">get_label_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrited to place label closer to the axis&quot;&quot;&quot;</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">()</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+            <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">br</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">br</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="n">br</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+            <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span> <span class="o">-</span> <span class="n">br</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span> <span class="o">-</span> <span class="n">br</span><span class="o">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="n">br</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">nudges</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">orientation</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">nudges</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">orientation</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+<div class="viewcode-block" id="myAxis.resizeEvent"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.resizeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">resizeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ev</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrited to place label closer to the axis&quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QPointF</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_label_pos</span><span class="p">()</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setX</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x_pos</span><span class="p">))</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setY</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">y_pos</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setPos</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">picture</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="myAxis.set_label_pos"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_label_pos">[docs]</a>    <span class="k">def</span> <span class="nf">set_label_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orientation</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nudges</span><span class="p">[</span><span class="n">orientation</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y_offset</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="myAxis.set_number_ticks"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_number_ticks">[docs]</a>    <span class="k">def</span> <span class="nf">set_number_ticks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;textFillLimits&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="n">number</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]})</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

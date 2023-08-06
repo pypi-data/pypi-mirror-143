@@ -1,0 +1,1250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>widgets &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="graphsVisualWidget" href="graphsVisualWidget/index.html" />
+    <link rel="prev" title="on_select_new_trace" href="../actions_data_selector/on_select_new_trace/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html"><strong>gui</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../actions_data_selector/index.html"><strong>actions_data_selector</strong></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><strong>widgets</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>gui</strong></a> &raquo;</li>
+        
+      <li><strong>widgets</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/API/optimeed/visualize/gui/widgets/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.gui.widgets">
+<span id="widgets"></span><h1><strong>widgets</strong><a class="headerlink" href="#module-optimeed.visualize.gui.widgets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="graphsVisualWidget/index.html"><strong>graphsVisualWidget</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/index.html"><strong>examplesActionOnClick</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_anim/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_anim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_change_symbol/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_change_symbol</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_copy_something/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_copy_something</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_delete/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_delete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_draw_device/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_draw_device</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_export_collection/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_export_collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_extract_pareto/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_extract_pareto</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_measure/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_measure</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_remove_trace/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_remove_trace</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_showinfo/index.html"><code class="docutils literal notranslate"><span class="pre">on_click_showinfo</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="graphsVisualWidget/graphVisual/index.html"><code class="docutils literal notranslate"><span class="pre">graphVisual</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphsVisualWidget/pyqtgraphRedefine/index.html"><code class="docutils literal notranslate"><span class="pre">pyqtgraphRedefine</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphsVisualWidget/smallGui/index.html"><code class="docutils literal notranslate"><span class="pre">smallGui</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphsVisualWidget/traceVisual/index.html"><code class="docutils literal notranslate"><span class="pre">traceVisual</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openGLWidget/index.html"><strong>openGLWidget</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/ContextHandler/index.html"><code class="docutils literal notranslate"><span class="pre">ContextHandler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/DeviceDrawerInterface/index.html"><code class="docutils literal notranslate"><span class="pre">DeviceDrawerInterface</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/Materials_visual/index.html"><code class="docutils literal notranslate"><span class="pre">Materials_visual</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/OpenGlFunctions_Library/index.html"><code class="docutils literal notranslate"><span class="pre">OpenGlFunctions_Library</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/TriangulatePolygon/index.html"><code class="docutils literal notranslate"><span class="pre">TriangulatePolygon</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="openGLWidget/quaternions/index.html"><code class="docutils literal notranslate"><span class="pre">quaternions</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="widget_graphs_visual/index.html"><code class="docutils literal notranslate"><span class="pre">widget_graphs_visual</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget_image/index.html"><code class="docutils literal notranslate"><span class="pre">widget_image</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget_line_drawer/index.html"><code class="docutils literal notranslate"><span class="pre">widget_line_drawer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget_menuButton/index.html"><code class="docutils literal notranslate"><span class="pre">widget_menuButton</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget_openGL/index.html"><code class="docutils literal notranslate"><span class="pre">widget_openGL</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget_text/index.html"><code class="docutils literal notranslate"><span class="pre">widget_text</span></code></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual">
+<em class="property">class </em><code class="sig-name descname">widget_graphs_visual</code><span class="sig-paren">(</span><em class="sig-param">theGraphs</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Widget element to draw a graph. The traces and graphs to draw are defined in <code class="xref py py-class docutils literal notranslate"><span class="pre">Graphs</span></code> taken as argument.
+This widget is linked to the excellent third-party library pyqtgraph, under MIT license</p>
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.signal_must_update">
+<code class="sig-name descname">signal_must_update</code><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.signal_must_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.signal_graph_changed">
+<code class="sig-name descname">signal_graph_changed</code><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.signal_graph_changed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.set_graph_disposition">
+<code class="sig-name descname">set_graph_disposition</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indexGraph</em>, <em class="sig-param">row=1</em>, <em class="sig-param">col=1</em>, <em class="sig-param">rowspan=1</em>, <em class="sig-param">colspan=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.set_graph_disposition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.set_graph_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the graphs disposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indexGraph</strong> – index of the graph to change</p></li>
+<li><p><strong>row</strong> – row where to place the graph</p></li>
+<li><p><strong>col</strong> – column where to place the graph</p></li>
+<li><p><strong>rowspan</strong> – number of rows across which the graph spans</p></li>
+<li><p><strong>colspan</strong> – number of columns across which the graph spans</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.__create_graph">
+<code class="sig-name descname">__create_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.__create_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.__check_graphs">
+<code class="sig-name descname">__check_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.__check_graphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.on_click">
+<code class="sig-name descname">on_click</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">plotDataItem</em>, <em class="sig-param">clicked_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.on_click"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.on_click" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.update_graphs">
+<code class="sig-name descname">update_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">singleUpdate=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.update_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.update_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to update the graph. This is fast but NOT safe (especially when working with threads).
+To limit the risks, please use self.signal_must_update.emit() instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>singleUpdate</strong> – if set to False, the graph will periodically refres each self.refreshtime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.fast_update">
+<code class="sig-name descname">fast_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.fast_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.fast_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this method to update the graph in a fast way. NOT THREAD SAFE.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.exportGraphs">
+<code class="sig-name descname">exportGraphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.exportGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.exportGraphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the graphs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.export_txt">
+<code class="sig-name descname">export_txt</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename_txt</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.export_txt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.export_txt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.export_svg">
+<code class="sig-name descname">export_svg</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.export_svg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.export_svg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.export_pdf">
+<em class="property">static </em><code class="sig-name descname">export_pdf</code><span class="sig-paren">(</span><em class="sig-param">filename_svg</em>, <em class="sig-param">filename_pdf</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.export_pdf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.export_pdf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.export_png">
+<em class="property">static </em><code class="sig-name descname">export_png</code><span class="sig-paren">(</span><em class="sig-param">filename_svg</em>, <em class="sig-param">filename_png</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.export_png"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.export_png" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.export_tikz">
+<code class="sig-name descname">export_tikz</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">foldername_tikz</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.export_tikz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.export_tikz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.link_axes">
+<code class="sig-name descname">link_axes</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.link_axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.link_axes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.get_graph">
+<code class="sig-name descname">get_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.get_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get corresponding <code class="xref py py-class docutils literal notranslate"><span class="pre">GraphVisual</span></code> of the graph idGraph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.keyPressEvent">
+<code class="sig-name descname">keyPressEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.keyPressEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>What happens if a key is pressed.
+R: reset the axes to their default value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.delete_graph">
+<code class="sig-name descname">delete_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.delete_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.delete_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the graph idGraph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.get_all_graphsVisual">
+<code class="sig-name descname">get_all_graphsVisual</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.get_all_graphsVisual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.get_all_graphsVisual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary {idGraph: <code class="xref py py-class docutils literal notranslate"><span class="pre">GraphVisual</span></code>}.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.get_layout_buttons">
+<code class="sig-name descname">get_layout_buttons</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.get_layout_buttons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.get_layout_buttons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the QGraphicsLayout where it’s possible to add buttons, etc.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.set_actionOnClick">
+<code class="sig-name descname">set_actionOnClick</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theActionOnClick</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.set_actionOnClick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.set_actionOnClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action to perform when the graph is clicked</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theActionOnClick</strong> – <a class="reference internal" href="#optimeed.visualize.gui.widgets.on_graph_click_interface" title="optimeed.visualize.gui.widgets.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">on_graph_click_interface</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.set_title">
+<code class="sig-name descname">set_title</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">titleName</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.set_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.set_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idGraph</strong> – id of the graph</p></li>
+<li><p><strong>titleName</strong> – title to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_graphs_visual.set_article_template">
+<code class="sig-name descname">set_article_template</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">graph_size_x=8.8</em>, <em class="sig-param">graph_size_y=4.4</em>, <em class="sig-param">legendPosition='NW'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#widget_graphs_visual.set_article_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_graphs_visual.set_article_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the graphs to article quality graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graph_size_x</strong> – width of the graph in cm</p></li>
+<li><p><strong>graph_size_y</strong> – height of the graph in cm</p></li>
+<li><p><strong>legendPosition</strong> – position of the legend (NE, SE, SW, NW)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer">
+<em class="property">class </em><code class="sig-name descname">widget_line_drawer</code><span class="sig-paren">(</span><em class="sig-param">minWinHeight=300</em>, <em class="sig-param">minWinWidth=300</em>, <em class="sig-param">is_light=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Widget allowing to display several lines easily</p>
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.signal_must_update">
+<code class="sig-name descname">signal_must_update</code><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.signal_must_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.on_update_signal">
+<code class="sig-name descname">on_update_signal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">listOfLines</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.on_update_signal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.on_update_signal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.delete_lines">
+<code class="sig-name descname">delete_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key_id</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.delete_lines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.delete_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dele the lines
+:param key_id: id to delete
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.set_lines">
+<code class="sig-name descname">set_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">listOfLines</em>, <em class="sig-param">key_id=0</em>, <em class="sig-param">pen=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.set_lines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.set_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the lines to display
+:param listOfLines: list of [x1, y1, x2, y2] corresponding to lines
+:param key_id: id of the trace
+:param pen: pen used to draw the lines
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.paintEvent">
+<code class="sig-name descname">paintEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em>, <em class="sig-param">painter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.paintEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.paintEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_line_drawer.get_extrema_lines">
+<code class="sig-name descname">get_extrema_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.get_extrema_lines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_line_drawer.get_extrema_lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.widget_menuButton">
+<em class="property">class </em><code class="sig-name descname">widget_menuButton</code><span class="sig-paren">(</span><em class="sig-param">theParentButton</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_menuButton.html#widget_menuButton"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_menuButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Same as QMenu, but integrates it behind a button more easily.</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_menuButton.showEvent">
+<code class="sig-name descname">showEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">QShowEvent</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_menuButton.html#widget_menuButton.showEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_menuButton.showEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL">
+<em class="property">class </em><code class="sig-name descname">widget_openGL</code><span class="sig-paren">(</span><em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QOpenGLWidget</span></code></p>
+<p>Interface that provides opengl capabilities.
+Ensures zoom, light, rotation, etc.</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.sizeHint">
+<code class="sig-name descname">sizeHint</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.sizeHint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.sizeHint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.minimumSizeHint">
+<code class="sig-name descname">minimumSizeHint</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.minimumSizeHint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.minimumSizeHint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.set_deviceDrawer">
+<code class="sig-name descname">set_deviceDrawer</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDeviceDrawer</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.set_deviceDrawer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.set_deviceDrawer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a drawer <a class="reference internal" href="openGLWidget/DeviceDrawerInterface/index.html#optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface.DeviceDrawerInterface" title="optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface.DeviceDrawerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface.DeviceDrawerInterface</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.set_deviceToDraw">
+<code class="sig-name descname">set_deviceToDraw</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDeviceToDraw</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.set_deviceToDraw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.set_deviceToDraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the device to draw <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.InterfaceDevice.InterfaceDevice</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL._get_specialButtonsMapping">
+<em class="property">static </em><code class="sig-name descname">_get_specialButtonsMapping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL._get_specialButtonsMapping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL._get_specialButtonsMapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.initializeGL">
+<code class="sig-name descname">initializeGL</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.initializeGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.initializeGL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.paintGL">
+<code class="sig-name descname">paintGL</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.paintGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.paintGL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.resizeGL">
+<code class="sig-name descname">resizeGL</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">w</em>, <em class="sig-param">h</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.resizeGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.resizeGL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.mousePressEvent">
+<code class="sig-name descname">mousePressEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.mousePressEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.mouseMoveEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.keyPressEvent">
+<code class="sig-name descname">keyPressEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.keyPressEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_openGL.wheelEvent">
+<code class="sig-name descname">wheelEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">QWheelEvent</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_openGL.html#widget_openGL.wheelEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_openGL.wheelEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.widget_text">
+<em class="property">class </em><code class="sig-name descname">widget_text</code><span class="sig-paren">(</span><em class="sig-param">theText</em>, <em class="sig-param">is_light=False</em>, <em class="sig-param">convertToHtml=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_text.html#widget_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QLabel</span></code></p>
+<p>Widget able to display a text</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.widget_text.set_text">
+<code class="sig-name descname">set_text</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theText</em>, <em class="sig-param">convertToHtml=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_text.html#widget_text.set_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.widget_text.set_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the text to display</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.Widget_image">
+<em class="property">class </em><code class="sig-name descname">Widget_image</code><span class="sig-paren">(</span><em class="sig-param">image_b64</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_image.html#Widget_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Widget_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QLabel</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Widget_image.eventFilter">
+<code class="sig-name descname">eventFilter</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">source</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_image.html#Widget_image.eventFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Widget_image.eventFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Widget_image.set_image">
+<code class="sig-name descname">set_image</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">image_b64</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_image.html#Widget_image.set_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Widget_image.set_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new image to widget</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_delete">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_delete</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete.html#on_graph_click_delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On Click: Delete the points from the graph, and save the modified collection</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_delete.apply">
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete.html#on_graph_click_delete.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_delete.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_delete.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete.html#on_graph_click_delete.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_delete.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_delete.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete.html#on_graph_click_delete.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_delete.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_delete.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_delete.html#on_graph_click_delete.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_delete.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_export">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_export</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On click: export the selected points</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_export.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_export.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_export.reset_graph">
+<code class="sig-name descname">reset_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.reset_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_export.reset_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_export.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_export_collection.html#on_graph_click_export.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_export.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_click_extract_pareto">
+<em class="property">class </em><code class="sig-name descname">on_click_extract_pareto</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em>, <em class="sig-param">max_x=False</em>, <em class="sig-param">max_y=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_extract_pareto.html#on_click_extract_pareto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_extract_pareto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On click: extract the pareto from the cloud of points</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_extract_pareto.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">the_graph_visual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">_</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_extract_pareto.html#on_click_extract_pareto.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_extract_pareto.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_extract_pareto.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_extract_pareto.html#on_click_extract_pareto.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_extract_pareto.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_showInfo</code><span class="sig-paren">(</span><em class="sig-param">theLinkDataGraph</em>, <em class="sig-param">visuals=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On click: show informations about the points (loop through attributes)</p>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals">
+<em class="property">class </em><code class="sig-name descname">DataInformationVisuals</code><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.DataInformationVisuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.delete_visual">
+<code class="sig-name descname">delete_visual</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theVisual</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.DataInformationVisuals.delete_visual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.delete_visual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.add_visual">
+<code class="sig-name descname">add_visual</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theVisual</em>, <em class="sig-param">theTrace</em>, <em class="sig-param">indexPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.DataInformationVisuals.add_visual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.add_visual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.get_new_index">
+<code class="sig-name descname">get_new_index</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.DataInformationVisuals.get_new_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.get_new_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.curr_index">
+<code class="sig-name descname">curr_index</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.DataInformationVisuals.curr_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.DataInformationVisuals.curr_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action to perform when a point in the graph has been clicked:
+Creates new window displaying the device and its informations</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showInfo.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#on_graph_click_showInfo.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showInfo.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.Repr_opengl">
+<em class="property">class </em><code class="sig-name descname">Repr_opengl</code><span class="sig-paren">(</span><em class="sig-param">DeviceDrawer</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_opengl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_opengl" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Repr_opengl.get_widget">
+<code class="sig-name descname">get_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theNewDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_opengl.get_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_opengl.get_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.Repr_lines">
+<em class="property">class </em><code class="sig-name descname">Repr_lines</code><span class="sig-paren">(</span><em class="sig-param">attribute_lines</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_lines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Repr_lines.get_widget">
+<code class="sig-name descname">get_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theNewDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_lines.get_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_lines.get_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.Repr_brut_attributes">
+<em class="property">class </em><code class="sig-name descname">Repr_brut_attributes</code><span class="sig-paren">(</span><em class="sig-param">is_light=True</em>, <em class="sig-param">convertToHtml=True</em>, <em class="sig-param">recursion_level=5</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_brut_attributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_brut_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Repr_brut_attributes.get_widget">
+<code class="sig-name descname">get_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theNewDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_brut_attributes.get_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_brut_attributes.get_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.Repr_image">
+<em class="property">class </em><code class="sig-name descname">Repr_image</code><span class="sig-paren">(</span><em class="sig-param">get_base_64_from_device</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_image" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.Repr_image.get_widget">
+<code class="sig-name descname">get_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theNewDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_showinfo.html#Repr_image.get_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.Repr_image.get_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_remove_trace">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_remove_trace</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_remove_trace.html#on_graph_click_remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_remove_trace.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">_</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_remove_trace.html#on_graph_click_remove_trace.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_remove_trace.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_remove_trace.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_remove_trace.html#on_graph_click_remove_trace.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_remove_trace.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_click_copy_something">
+<em class="property">class </em><code class="sig-name descname">on_click_copy_something</code><span class="sig-paren">(</span><em class="sig-param">theDataLink</em>, <em class="sig-param">functionStrFromDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_copy_something.html#on_click_copy_something"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_copy_something" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On Click: copy something</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_copy_something.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">the_graph_visual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_copy_something.html#on_click_copy_something.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_copy_something.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_copy_something.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_copy_something.html#on_click_copy_something.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_copy_something.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_click_change_symbol">
+<em class="property">class </em><code class="sig-name descname">on_click_change_symbol</code><span class="sig-paren">(</span><em class="sig-param">theLinkDataGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_change_symbol.html#on_click_change_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_change_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On Click: Change the symbol of the point that is clicked</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_change_symbol.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_change_symbol.html#on_click_change_symbol.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_change_symbol.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_change_symbol.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_change_symbol.html#on_click_change_symbol.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_change_symbol.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_click_measure">
+<em class="property">class </em><code class="sig-name descname">on_click_measure</code><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure.html#on_click_measure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On Click: Measure distance. Click on two points to perform that action</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_measure.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">the_graph_visual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure.html#on_click_measure.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_measure.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_measure.reset_distance">
+<code class="sig-name descname">reset_distance</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure.html#on_click_measure.reset_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_measure.reset_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_measure.display_distance">
+<code class="sig-name descname">display_distance</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure.html#on_click_measure.display_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_measure.display_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_click_measure.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure.html#on_click_measure.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_click_measure.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_interface">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_interface</code><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#on_graph_click_interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface class for the action to perform when a point is clicked</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_interface.graph_clicked">
+<em class="property">abstract </em><code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphsVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#on_graph_click_interface.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_interface.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action to perform when a graph is clicked</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theGraphsVisual</strong> – class widget_graphs_visual that has called the method</p></li>
+<li><p><strong>index_graph</strong> – Index of the graph that has been clicked</p></li>
+<li><p><strong>index_trace</strong> – Index of the trace that has been clicked</p></li>
+<li><p><strong>indices_points</strong> – graph Indices of the points that have been clicked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_interface.get_name">
+<em class="property">abstract </em><code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_graphs_visual.html#on_graph_click_interface.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_interface.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals">
+<em class="property">class </em><code class="sig-name descname">DataAnimationVisuals</code><span class="sig-paren">(</span><em class="sig-param">id=0</em>, <em class="sig-param">window_title='Animation'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<p>Spawns a gui that includes button to create animations nicely when paired with <a class="reference internal" href="widget_graphs_visual/index.html#module-optimeed.visualize.gui.widgets.widget_graphs_visual" title="optimeed.visualize.gui.widgets.widget_graphs_visual"><code class="xref py py-class docutils literal notranslate"><span class="pre">widget_graphs_visual</span></code></a></p>
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.SlIDER_MAXIMUM_VALUE">
+<code class="sig-name descname">SlIDER_MAXIMUM_VALUE</code><em class="property"> = 500</em><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.SlIDER_MAXIMUM_VALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.SLIDER_MINIMUM_VALUE">
+<code class="sig-name descname">SLIDER_MINIMUM_VALUE</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.SLIDER_MINIMUM_VALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">trace_id</em>, <em class="sig-param">element_list</em>, <em class="sig-param">theTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trace to the animation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trace_id</strong> – id of the trace</p></li>
+<li><p><strong>element_list</strong> – List of elements to save: [[OpenGL_item1, text_item1], [OpenGL_item2, text_item2], … [OpenGL_itemN, text_itemN]]</p></li>
+<li><p><strong>theTrace</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">TraceVisual</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.get_interesting_elements">
+<em class="property">static </em><code class="sig-name descname">get_interesting_elements</code><span class="sig-paren">(</span><em class="sig-param">element_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.get_interesting_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.get_interesting_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function called upon new trace creation. From a list, takes the interesting elements for animation
+:param element_list:
+:return: new_element_list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.add_elementToTrace">
+<code class="sig-name descname">add_elementToTrace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">trace_id</em>, <em class="sig-param">indexPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.add_elementToTrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.add_elementToTrace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_point">
+<code class="sig-name descname">delete_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">trace_id</em>, <em class="sig-param">thePoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.delete_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.reset_all">
+<code class="sig-name descname">reset_all</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.reset_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.reset_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_all">
+<code class="sig-name descname">delete_all</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.delete_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.pause_play">
+<code class="sig-name descname">pause_play</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.pause_play"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.pause_play" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.show_all">
+<code class="sig-name descname">show_all</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.show_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.show_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.next_frame">
+<code class="sig-name descname">next_frame</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.next_frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.next_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.slider_handler">
+<code class="sig-name descname">slider_handler</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.slider_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.slider_handler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.frame_selector">
+<code class="sig-name descname">frame_selector</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.frame_selector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.frame_selector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.set_refreshTime">
+<code class="sig-name descname">set_refreshTime</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.set_refreshTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.set_refreshTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.closeEvent">
+<code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">_</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.closeEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.contains_trace">
+<code class="sig-name descname">contains_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">trace_id</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.contains_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.contains_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.export_picture">
+<code class="sig-name descname">export_picture</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.export_picture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.export_picture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.export_widget">
+<em class="property">abstract </em><code class="sig-name descname">export_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">painter</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.export_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.export_widget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render scene with a painter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>painter</strong> – PyQt painter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.update_widget_w_animation">
+<em class="property">abstract </em><code class="sig-name descname">update_widget_w_animation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em>, <em class="sig-param">index</em>, <em class="sig-param">the_data_animation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.update_widget_w_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.update_widget_w_animation" title="Permalink to this definition">¶</a></dt>
+<dd><p>What to do when a new element has to be animated. Example: self.theOpenGLWidget.set_deviceToDraw(the_data_animation.get_element_animations(0, index))</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – key of the trace that has to be animated</p></li>
+<li><p><strong>index</strong> – index that has to be animated</p></li>
+<li><p><strong>the_data_animation</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">DataAnimationTrace</span></code> that has to be animated</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_key_widgets">
+<em class="property">abstract </em><code class="sig-name descname">delete_key_widgets</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/gui_data_animation.html#DataAnimationVisuals.delete_key_widgets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals.delete_key_widgets" title="Permalink to this definition">¶</a></dt>
+<dd><p>What to do when a key has to be deleted</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – key of the trace that has to be deleted</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-name descname">widget_text</code><span class="sig-paren">(</span><em class="sig-param">theText</em>, <em class="sig-param">is_light=False</em>, <em class="sig-param">convertToHtml=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_text.html#widget_text"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QLabel</span></code></p>
+<p>Widget able to display a text</p>
+<dl class="method">
+<dt>
+<code class="sig-name descname">set_text</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theText</em>, <em class="sig-param">convertToHtml=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_text.html#widget_text.set_text"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Set the text to display</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-name descname">widget_line_drawer</code><span class="sig-paren">(</span><em class="sig-param">minWinHeight=300</em>, <em class="sig-param">minWinWidth=300</em>, <em class="sig-param">is_light=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Widget allowing to display several lines easily</p>
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">signal_must_update</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">on_update_signal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">listOfLines</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.on_update_signal"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">delete_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key_id</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.delete_lines"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Dele the lines
+:param key_id: id to delete
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">set_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">listOfLines</em>, <em class="sig-param">key_id=0</em>, <em class="sig-param">pen=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.set_lines"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Set the lines to display
+:param listOfLines: list of [x1, y1, x2, y2] corresponding to lines
+:param key_id: id of the trace
+:param pen: pen used to draw the lines
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">paintEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event</em>, <em class="sig-param">painter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.paintEvent"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">get_extrema_lines</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/widget_line_drawer.html#widget_line_drawer.get_extrema_lines"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGL">
+<em class="property">class </em><code class="sig-name descname">DataAnimationOpenGL</code><span class="sig-paren">(</span><em class="sig-param">theOpenGLWidget</em>, <em class="sig-param">theId=0</em>, <em class="sig-param">window_title='Animation'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals" title="optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals</span></code></a></p>
+<p>Implements <a class="reference internal" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals" title="optimeed.visualize.gui.widgets.DataAnimationVisuals"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataAnimationVisuals</span></code></a> to show opengl drawing</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGL.update_widget_w_animation">
+<code class="sig-name descname">update_widget_w_animation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em>, <em class="sig-param">index</em>, <em class="sig-param">the_data_animation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGL.update_widget_w_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGL.update_widget_w_animation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGL.export_widget">
+<code class="sig-name descname">export_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">painter</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGL.export_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGL.export_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGL.delete_key_widgets">
+<code class="sig-name descname">delete_key_widgets</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGL.delete_key_widgets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGL.delete_key_widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGLwText">
+<em class="property">class </em><code class="sig-name descname">DataAnimationOpenGLwText</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">is_light=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGLwText"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGLwText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_anim/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationOpenGL" title="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationOpenGL"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationOpenGL</span></code></a></p>
+<p>Implements <a class="reference internal" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals" title="optimeed.visualize.gui.widgets.DataAnimationVisuals"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataAnimationVisuals</span></code></a> to show opengl drawing and text</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGLwText.update_widget_w_animation">
+<code class="sig-name descname">update_widget_w_animation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em>, <em class="sig-param">index</em>, <em class="sig-param">the_data_animation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGLwText.update_widget_w_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGLwText.update_widget_w_animation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationOpenGLwText.get_interesting_elements">
+<code class="sig-name descname">get_interesting_elements</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">devices_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationOpenGLwText.get_interesting_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationOpenGLwText.get_interesting_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationLines">
+<em class="property">class </em><code class="sig-name descname">DataAnimationLines</code><span class="sig-paren">(</span><em class="sig-param">get_lines_method</em>, <em class="sig-param">is_light=True</em>, <em class="sig-param">theId=0</em>, <em class="sig-param">window_title='Animation'</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationLines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals" title="optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals</span></code></a></p>
+<p>Implements <a class="reference internal" href="#optimeed.visualize.gui.widgets.DataAnimationVisuals" title="optimeed.visualize.gui.widgets.DataAnimationVisuals"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataAnimationVisuals</span></code></a> to show drawing made out of lines (<a class="reference internal" href="widget_line_drawer/index.html#module-optimeed.visualize.gui.widgets.widget_line_drawer" title="optimeed.visualize.gui.widgets.widget_line_drawer"><code class="xref py py-class docutils literal notranslate"><span class="pre">widget_line_drawer</span></code></a>)</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationLines.export_widget">
+<code class="sig-name descname">export_widget</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">painter</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationLines.export_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationLines.export_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationLines.delete_key_widgets">
+<code class="sig-name descname">delete_key_widgets</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationLines.delete_key_widgets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationLines.delete_key_widgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationLines.update_widget_w_animation">
+<code class="sig-name descname">update_widget_w_animation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em>, <em class="sig-param">index</em>, <em class="sig-param">the_data_animation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationLines.update_widget_w_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationLines.update_widget_w_animation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationLines.get_interesting_elements">
+<code class="sig-name descname">get_interesting_elements</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">devices_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationLines.get_interesting_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationLines.get_interesting_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisualswText">
+<em class="property">class </em><code class="sig-name descname">DataAnimationVisualswText</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationVisualswText"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisualswText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="graphsVisualWidget/examplesActionOnClick/on_click_anim/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationLines" title="optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationLines"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim.DataAnimationLines</span></code></a></p>
+<p>Same as <a class="reference internal" href="#optimeed.visualize.gui.widgets.DataAnimationLines" title="optimeed.visualize.gui.widgets.DataAnimationLines"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataAnimationLines</span></code></a> but also with text</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DataAnimationVisualswText.update_widget_w_animation">
+<code class="sig-name descname">update_widget_w_animation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">key</em>, <em class="sig-param">index</em>, <em class="sig-param">the_data_animation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#DataAnimationVisualswText.update_widget_w_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DataAnimationVisualswText.update_widget_w_animation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showAnim">
+<em class="property">class </em><code class="sig-name descname">on_graph_click_showAnim</code><span class="sig-paren">(</span><em class="sig-param">theLinkDataGraph</em>, <em class="sig-param">theAnimation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#on_graph_click_showAnim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showAnim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface" title="optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface</span></code></a></p>
+<p>On click: add or remove an element to animate</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showAnim.graph_clicked">
+<code class="sig-name descname">graph_clicked</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theGraphVisual</em>, <em class="sig-param">index_graph</em>, <em class="sig-param">index_trace</em>, <em class="sig-param">indices_points</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#on_graph_click_showAnim.graph_clicked"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showAnim.graph_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.on_graph_click_showAnim.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_anim.html#on_graph_click_showAnim.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.on_graph_click_showAnim.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.guiPyqtgraph">
+<em class="property">class </em><code class="sig-name descname">guiPyqtgraph</code><span class="sig-paren">(</span><em class="sig-param">graphsVisual</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/smallGui.html#guiPyqtgraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.guiPyqtgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a gui for pyqtgraph with trace selection options, export and action on clic choices</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.guiPyqtgraph.refreshTraceList">
+<code class="sig-name descname">refreshTraceList</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/smallGui.html#guiPyqtgraph.refreshTraceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.guiPyqtgraph.refreshTraceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh all the traces</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface">
+<em class="property">class </em><code class="sig-name descname">DeviceDrawerInterface</code><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.draw">
+<em class="property">abstract </em><code class="sig-name descname">draw</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.draw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_init_camera">
+<em class="property">abstract </em><code class="sig-name descname">get_init_camera</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.get_init_camera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_init_camera" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.keyboard_push_action">
+<code class="sig-name descname">keyboard_push_action</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theKey</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.keyboard_push_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.keyboard_push_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_colour_scalebar">
+<code class="sig-name descname">get_colour_scalebar</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.get_colour_scalebar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_colour_scalebar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_colour_background">
+<code class="sig-name descname">get_colour_background</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.get_colour_background"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_colour_background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_opengl_options">
+<code class="sig-name descname">get_opengl_options</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/optimeed/visualize/gui/widgets/openGLWidget/DeviceDrawerInterface.html#DeviceDrawerInterface.get_opengl_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.DeviceDrawerInterface.get_opengl_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="graphsVisualWidget/index.html" class="btn btn-neutral float-right" title="graphsVisualWidget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../actions_data_selector/on_select_new_trace/index.html" class="btn btn-neutral float-left" title="on_select_new_trace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

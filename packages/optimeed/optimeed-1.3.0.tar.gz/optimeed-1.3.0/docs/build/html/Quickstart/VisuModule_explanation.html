@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quickstart Visualization &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loading and saving data" href="Load_save_explanation.html" />
+    <link rel="prev" title="Quickstart Optimization" href="OptiModule_explanation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simple-gui-using-opengl">Simple gui using OpenGL:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-visualization">Advanced visualization:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Quickstart Visualization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Quickstart/VisuModule_explanation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quickstart-visualization">
+<h1>Quickstart Visualization<a class="headerlink" href="#quickstart-visualization" title="Permalink to this headline">¶</a></h1>
+<p>Visualization implies to have a GUI, which will help to display many things: graphs, text, 3D representations, …
+This software provides a clean interface to PyQt. PyQt works that way:</p>
+<ul class="simple">
+<li><p>A QMainWindow that includes layouts, (ex: horizontal, vertical, grid, …)</p></li>
+<li><p>Layouts can include widgets.</p></li>
+<li><p>Widgets can be anything: buttons, menu, opengl 3D representation, graphs, … Several high-level widgets are proposed, check <a class="reference internal" href="../API/optimeed/visualize/gui/widgets/index.html#module-optimeed.visualize.gui.widgets" title="optimeed.visualize.gui.widgets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets</span></code></a> .</p></li>
+</ul>
+<div class="section" id="simple-gui-using-opengl">
+<h2>Simple gui using OpenGL:<a class="headerlink" href="#simple-gui-using-opengl" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This example shows how to create a simple gui that contains an openGL widget. First define the imports:&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_openGL</span> <span class="k">import</span> <span class="n">widget_openGL</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.gui_mainWindow</span> <span class="k">import</span> <span class="n">gui_mainWindow</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface</span> <span class="k">import</span> <span class="n">DeviceDrawerInterface</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.interfaceDevice</span> <span class="k">import</span> <span class="n">InterfaceDevice</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.Materials_visual</span> <span class="k">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span> <span class="nc">Cone</span><span class="p">(</span><span class="n">InterfaceDevice</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Device to be drawn&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># base width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1"># height</span>
+
+
+<span class="k">class</span> <span class="nc">ConeDrawer</span><span class="p">(</span><span class="n">DeviceDrawerInterface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Drawer of the device&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theCone</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theCone</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theCone</span> <span class="o">=</span> <span class="n">theCone</span>
+        <span class="n">glPushMatrix</span><span class="p">()</span>  <span class="c1"># Remove the previous matrices transformations</span>
+        <span class="n">glTranslate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">theCone</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Move the cone</span>
+        <span class="n">Bronze_material</span><span class="o">.</span><span class="n">activateMaterialProperties</span><span class="p">()</span>  <span class="c1"># Change colour aspect of the cones</span>
+        <span class="n">draw_disk</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">theCone</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">translate</span><span class="o">=</span><span class="n">theCone</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>  <span class="c1"># Draw the base</span>
+        <span class="n">gluCylinder</span><span class="p">(</span><span class="n">gluNewQuadric</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">theCone</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">theCone</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Draw the cylinde</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span>  <span class="c1"># Push back previous matrices transformations</span>
+
+    <span class="k">def</span> <span class="nf">get_init_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="n">tipAngle</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">viewAngle</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">zoomLevel</span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="k">return</span> <span class="n">tipAngle</span><span class="p">,</span> <span class="n">viewAngle</span><span class="p">,</span> <span class="n">zoomLevel</span>
+
+    <span class="k">def</span> <span class="nf">keyboard_push_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theKey</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">theKey</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;H&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theCone</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">0.2</span>  <span class="c1"># Change the radius length when h is pressed</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Instantiates objects and run the code&quot;&quot;&quot;</span>
+    <span class="n">openGlWidget</span> <span class="o">=</span> <span class="n">widget_openGL</span><span class="p">()</span>
+    <span class="n">theDrawer</span> <span class="o">=</span> <span class="n">ConeDrawer</span><span class="p">()</span>
+    <span class="n">theCone</span> <span class="o">=</span> <span class="n">Cone</span><span class="p">()</span>
+    <span class="n">openGlWidget</span><span class="o">.</span><span class="n">set_deviceDrawer</span><span class="p">(</span><span class="n">theDrawer</span><span class="p">)</span>
+    <span class="n">openGlWidget</span><span class="o">.</span><span class="n">set_deviceToDraw</span><span class="p">(</span><span class="n">theCone</span><span class="p">)</span>
+    <span class="n">myWindow</span> <span class="o">=</span> <span class="n">gui_mainWindow</span><span class="p">([</span><span class="n">openGlWidget</span><span class="p">])</span>
+    <span class="n">myWindow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="advanced-visualization">
+<h2>Advanced visualization:<a class="headerlink" href="#advanced-visualization" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This example truly shows the potential of this tool, by linking saved data to graphs.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">ListDataStruct</span>
+<span class="c1"># Visuals imports</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.linkDataGraph</span> <span class="k">import</span> <span class="n">LinkDataGraph</span><span class="p">,</span> <span class="n">HowToPlotGraph</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.gui_mainWindow</span> <span class="k">import</span> <span class="n">gui_mainWindow</span>
+<span class="c1"># Graph visuals imports</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_graphs_visual</span> <span class="k">import</span> <span class="n">widget_graphs_visual</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.smallGui</span> <span class="k">import</span> <span class="n">guiPyqtgraph</span>
+<span class="c1"># OpenGL imports</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_openGL</span> <span class="k">import</span> <span class="n">widget_openGL</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface</span> <span class="k">import</span> <span class="n">DeviceDrawerInterface</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.OpenGlFunctions_Library</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.openGLWidget.Materials_visual</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">class</span> <span class="nc">Drawer</span><span class="p">(</span><span class="n">DeviceDrawerInterface</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span> <span class="o">=</span> <span class="n">theDevice</span>
+        <span class="n">glPushMatrix</span><span class="p">()</span>
+        <span class="n">Bronze_material</span><span class="o">.</span><span class="n">activateMaterialProperties</span><span class="p">()</span>
+        <span class="n">draw_simple_rectangle</span><span class="p">(</span><span class="n">theDevice</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">theDevice</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_init_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Example on how to get back data from optimization&quot;&quot;&quot;</span>
+
+    <span class="sd">&quot;&quot;&quot;Load collections. File is relative to this directory __file__&quot;&quot;&quot;</span>
+    <span class="n">foldername</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;resources&#39;</span><span class="p">)</span>
+    <span class="n">collection_devices</span> <span class="o">=</span> <span class="n">ListDataStruct</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">foldername</span> <span class="o">+</span> <span class="s1">&#39;/autosaved.json&#39;</span><span class="p">)</span>
+    <span class="n">collection_logOpti</span> <span class="o">=</span> <span class="n">ListDataStruct</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">foldername</span> <span class="o">+</span> <span class="s1">&#39;/logopti.json&#39;</span><span class="p">)</span>
+
+    <span class="sd">&quot;&quot;&quot;Instantiates high level module that links the data contained in collections to graphs (that will be later created)&quot;&quot;&quot;</span>
+    <span class="n">theDataLink</span> <span class="o">=</span> <span class="n">LinkDataGraph</span><span class="p">()</span>
+    <span class="n">id_logOpti</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">collection_logOpti</span><span class="p">)</span>
+    <span class="n">id_devices</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">collection_devices</span><span class="p">)</span>
+
+    <span class="sd">&quot;&quot;&quot;The attributes to plots on x and y axis, and additional kwargs.&quot;&quot;&quot;</span>
+    <span class="n">howToPlot</span> <span class="o">=</span> <span class="n">HowToPlotGraph</span><span class="p">(</span><span class="s1">&#39;objectives[0]&#39;</span><span class="p">,</span> <span class="s1">&#39;objectives[1]&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;x_label&#39;</span><span class="p">:</span> <span class="s2">&quot;Objective 1&quot;</span><span class="p">,</span> <span class="s1">&#39;y_label&#39;</span><span class="p">:</span> <span class="s2">&quot;Objective 2&quot;</span><span class="p">,</span> <span class="s1">&#39;is_scattered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+
+    <span class="sd">&quot;&quot;&quot;The trick here is that the objective functions is not directly stocked in collection_devices but in collection_logOpti. So we display the</span>
+<span class="sd">    objectives coming from collection_logOpti but we link collection_devices from it.&quot;&quot;&quot;</span>
+    <span class="n">howToPlot</span><span class="o">.</span><span class="n">exclude_col</span><span class="p">(</span><span class="n">id_devices</span><span class="p">)</span>
+    <span class="n">theDataLink</span><span class="o">.</span><span class="n">link_collection_to_graph_collection</span><span class="p">(</span><span class="n">id_logOpti</span><span class="p">,</span> <span class="n">id_devices</span><span class="p">)</span>  <span class="c1"># Link the devices to the logopti</span>
+
+    <span class="sd">&quot;&quot;&quot;Generate the graphs&quot;&quot;&quot;</span>
+    <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">howToPlot</span><span class="p">)</span>
+    <span class="n">theGraphs</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">createGraphs</span><span class="p">()</span>
+
+    <span class="sd">&quot;&quot;&quot;Add additional actions to perform when the graph is clicked. This is what makes this software extremely powerful.&quot;&quot;&quot;</span>
+    <span class="n">theActionsOnClick</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="n">openGlDrawing</span> <span class="o">=</span> <span class="n">widget_openGL</span><span class="p">()</span>
+    <span class="n">openGlDrawing</span><span class="o">.</span><span class="n">set_deviceDrawer</span><span class="p">(</span><span class="n">Drawer</span><span class="p">())</span>
+
+    <span class="n">theActionsOnClick</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_graph_click_showAnim</span><span class="p">(</span><span class="n">theDataLink</span><span class="p">,</span> <span class="n">DataAnimationOpenGL</span><span class="p">(</span><span class="n">openGlDrawing</span><span class="p">)))</span>
+    <span class="n">theActionsOnClick</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_graph_click_showInfo</span><span class="p">(</span><span class="n">theDataLink</span><span class="p">,</span> <span class="n">visuals</span><span class="o">=</span><span class="p">[</span><span class="n">Repr_opengl</span><span class="p">(</span><span class="n">Drawer</span><span class="p">())]))</span>
+    <span class="n">theActionsOnClick</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_click_extract_pareto</span><span class="p">(</span><span class="n">theDataLink</span><span class="p">,</span> <span class="n">max_x</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_y</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="n">theActionsOnClick</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_graph_click_delete</span><span class="p">(</span><span class="n">theDataLink</span><span class="p">))</span>
+
+    <span class="sd">&quot;&quot;&quot;Create the widget of the graphs, and the associated GUI&quot;&quot;&quot;</span>
+    <span class="n">myWidgetGraphsVisuals</span> <span class="o">=</span> <span class="n">widget_graphs_visual</span><span class="p">(</span><span class="n">theGraphs</span><span class="p">,</span> <span class="n">highlight_last</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">refresh_time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">guiPyqtgraph</span><span class="p">(</span><span class="n">myWidgetGraphsVisuals</span><span class="p">,</span> <span class="n">actionsOnClick</span><span class="o">=</span><span class="n">theActionsOnClick</span><span class="p">)</span>  <span class="c1"># Add GUI to change action easily and export graphs</span>
+    <span class="n">myWidgetGraphsVisuals</span> <span class="o">=</span> <span class="n">myWidgetGraphsVisuals</span>
+
+    <span class="sd">&quot;&quot;&quot;Launch the window&quot;&quot;&quot;</span>
+    <span class="n">myWindow</span> <span class="o">=</span> <span class="n">gui_mainWindow</span><span class="p">([</span><span class="n">myWidgetGraphsVisuals</span><span class="p">])</span>
+    <span class="n">myWindow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Load_save_explanation.html" class="btn btn-neutral float-right" title="Loading and saving data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OptiModule_explanation.html" class="btn btn-neutral float-left" title="Quickstart Optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

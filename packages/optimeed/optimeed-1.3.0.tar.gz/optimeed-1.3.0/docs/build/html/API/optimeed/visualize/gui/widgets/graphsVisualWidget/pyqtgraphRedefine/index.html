@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyqtgraphRedefine &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="smallGui" href="../smallGui/index.html" />
+    <link rel="prev" title="graphVisual" href="../graphVisual/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html"><strong>gui</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../actions_data_selector/index.html"><strong>actions_data_selector</strong></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><strong>widgets</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><strong>gui</strong></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>widgets</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>graphsVisualWidget</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">pyqtgraphRedefine</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../_sources/API/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine">
+<span id="pyqtgraphredefine"></span><h1><code class="docutils literal notranslate"><span class="pre">pyqtgraphRedefine</span></code><a class="headerlink" href="#module-optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.isOnWindows">
+<code class="sig-name descname">isOnWindows</code><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.isOnWindows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Other modified files (directly): ScatterPlotItem.py, to change point selection. Ctrl + clic: select area. Clic: only one single point:</p>
+<dl class="simple">
+<dt>class OnClicSelector:</dt><dd><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.p_list = []</p>
+</dd>
+<dt>def add_point(self, newp):</dt><dd><p>self.p_list.append(newp)</p>
+</dd>
+<dt>def draw(self, painter):</dt><dd><dl class="simple">
+<dt>if len(self.p_list) &gt; 2:</dt><dd><p>pen = fn.mkPen(1)
+pen.setWidthF(2)
+painter.setPen(pen)
+painter.drawPolyline(QtGui.QPolygonF(self.p_list))</p>
+</dd>
+</dl>
+</dd>
+<dt>def reset(self):</dt><dd><p>self.p_list = []</p>
+</dd>
+<dt>def getPath(self):</dt><dd><p>return path.Path([(p.x(), p.y()) for p in self.p_list] + [(self.p_list[-1].x(), self.p_list[-1].y())])</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<blockquote>
+<div><dl>
+<dt>def mouseDragEvent(self, ev):</dt><dd><dl>
+<dt>if ev.modifiers() and QtCore.Qt.ControlModifier:</dt><dd><p>ev.accept()
+self.clicSelector.add_point(ev.pos())
+if ev.isFinish():</p>
+<blockquote>
+<div><p>path = self.clicSelector.getPath()
+points = self.points()
+contains_points = path.contains_points([(p.pos().x(), p.pos().y()) for p in points])
+indices = [i for i, cond in enumerate(contains_points) if cond]
+points_clicked = [points[i] for i in indices]
+self.ptsClicked = points_clicked
+self.sigClicked.emit(self, self.ptsClicked)
+self.clicSelector.reset()</p>
+</div></blockquote>
+<p>self.update()</p>
+</dd>
+<dt>else:</dt><dd><p>ev.ignore()</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget">
+<em class="property">class </em><code class="sig-name descname">myGraphicsLayoutWidget</code><span class="sig-paren">(</span><em class="sig-param">parent=None</em>, <em class="sig-param">**_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myGraphicsLayoutWidget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.GraphicsView</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget.useOpenGL">
+<code class="sig-name descname">useOpenGL</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">b=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myGraphicsLayoutWidget.useOpenGL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayoutWidget.useOpenGL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrited to fix bad antialiasing while using openGL</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout">
+<em class="property">class </em><code class="sig-name descname">myGraphicsLayout</code><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myGraphicsLayout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.GraphicsLayout</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.addItem">
+<code class="sig-name descname">addItem</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">item</em>, <em class="sig-param">row=None</em>, <em class="sig-param">col=None</em>, <em class="sig-param">rowspan=1</em>, <em class="sig-param">colspan=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myGraphicsLayout.addItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.addItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item to the layout and place it in the next available cell (or in the cell specified).
+The item must be an instance of a QGraphicsWidget subclass.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.set_graph_disposition">
+<code class="sig-name descname">set_graph_disposition</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">item</em>, <em class="sig-param">row=1</em>, <em class="sig-param">col=1</em>, <em class="sig-param">rowspan=1</em>, <em class="sig-param">colspan=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myGraphicsLayout.set_graph_disposition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myGraphicsLayout.set_graph_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to modify the position of an item in the list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> – WidgetPlotItem to set</p></li>
+<li><p><strong>row</strong> – Row</p></li>
+<li><p><strong>col</strong> – Column</p></li>
+<li><p><strong>rowspan</strong> – </p></li>
+<li><p><strong>colspan</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample">
+<em class="property">class </em><code class="sig-name descname">myItemSample</code><span class="sig-paren">(</span><em class="sig-param">item</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myItemSample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.graphicsItems.LegendItem.ItemSample</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_offset">
+<code class="sig-name descname">set_offset</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">offset</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myItemSample.set_offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_width_cell">
+<code class="sig-name descname">set_width_cell</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">width</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myItemSample.set_width_cell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.set_width_cell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.paint">
+<code class="sig-name descname">paint</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">p</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myItemSample.paint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myItemSample.paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites to make matlab-like samples</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend">
+<em class="property">class </em><code class="sig-name descname">myLegend</code><span class="sig-paren">(</span><em class="sig-param">size=None</em>, <em class="sig-param">offset=(30</em>, <em class="sig-param">30)</em>, <em class="sig-param">is_light=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.LegendItem</span></code></p>
+<p>Legend that fixes bugs (flush left + space) from pyqtgraph’s legend</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_space_sample_label">
+<code class="sig-name descname">set_space_sample_label</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theSpace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.set_space_sample_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_space_sample_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>To set the gap between the sample and the label</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_offset_sample">
+<code class="sig-name descname">set_offset_sample</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">offset</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.set_offset_sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_offset_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>To tune the offset between the sample and the text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_width_cell_sample">
+<code class="sig-name descname">set_width_cell_sample</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">width</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.set_width_cell_sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_width_cell_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set width of sample</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.updateSize">
+<code class="sig-name descname">updateSize</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.updateSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.updateSize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.addItem">
+<code class="sig-name descname">addItem</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">item</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.addItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.addItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites to flush left</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.apply_width_sample">
+<code class="sig-name descname">apply_width_sample</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.apply_width_sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.apply_width_sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_font">
+<code class="sig-name descname">set_font</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">font_size</em>, <em class="sig-param">font_color</em>, <em class="sig-param">fontname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.set_font"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_font" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.paint">
+<code class="sig-name descname">paint</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">p</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.paint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrited to select background color</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_position">
+<code class="sig-name descname">set_position</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">position</em>, <em class="sig-param">offset</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLegend.set_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLegend.set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the legend, in a corner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> – String (NW, NE, SW, SE), indicates which corner the legend is close</p></li>
+<li><p><strong>offset</strong> – Tuple (xoff, yoff), x and y offset from the edge</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem">
+<em class="property">class </em><code class="sig-name descname">myLabelItem</code><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLabelItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.LabelItem</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem.setText">
+<code class="sig-name descname">setText</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em>, <em class="sig-param">**args</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myLabelItem.setText"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myLabelItem.setText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrited to add font-family to options</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis">
+<em class="property">class </em><code class="sig-name descname">myAxis</code><span class="sig-paren">(</span><em class="sig-param">orientation</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myAxis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph.AxisItem</span></code></p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.get_label_pos">
+<code class="sig-name descname">get_label_pos</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myAxis.get_label_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.get_label_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrited to place label closer to the axis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.resizeEvent">
+<code class="sig-name descname">resizeEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ev=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myAxis.resizeEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.resizeEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrited to place label closer to the axis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_label_pos">
+<code class="sig-name descname">set_label_pos</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">orientation</em>, <em class="sig-param">x_offset=0</em>, <em class="sig-param">y_offset=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myAxis.set_label_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_label_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_number_ticks">
+<code class="sig-name descname">set_number_ticks</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">number</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/pyqtgraphRedefine.html#myAxis.set_number_ticks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraphRedefine.myAxis.set_number_ticks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../smallGui/index.html" class="btn btn-neutral float-right" title="smallGui" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../graphVisual/index.html" class="btn btn-neutral float-left" title="graphVisual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

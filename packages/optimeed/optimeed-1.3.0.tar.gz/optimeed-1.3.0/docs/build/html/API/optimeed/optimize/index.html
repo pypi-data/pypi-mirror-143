@@ -1,0 +1,641 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimize &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="characterization" href="characterization/index.html" />
+    <link rel="prev" title="tools" href="../core/tools/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong>optimize</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="characterization/index.html"><strong>characterization</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mathsToPhysics/index.html"><strong>mathsToPhysics</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objAndCons/index.html"><strong>objAndCons</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optiAlgorithms/index.html"><strong>optiAlgorithms</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optiVariable/index.html"><code class="docutils literal notranslate"><span class="pre">optiVariable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizer/index.html"><code class="docutils literal notranslate"><span class="pre">optimizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+      <li><strong>optimize</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/API/optimeed/optimize/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.optimize">
+<span id="optimize"></span><h1><strong>optimize</strong><a class="headerlink" href="#module-optimeed.optimize" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="characterization/index.html"><strong>characterization</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="characterization/characterization/index.html"><code class="docutils literal notranslate"><span class="pre">characterization</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="characterization/interfaceCharacterization/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceCharacterization</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mathsToPhysics/index.html"><strong>mathsToPhysics</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mathsToPhysics/interfaceMathsToPhysics/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceMathsToPhysics</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mathsToPhysics/mathsToPhysics/index.html"><code class="docutils literal notranslate"><span class="pre">mathsToPhysics</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="objAndCons/index.html"><strong>objAndCons</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="objAndCons/fastObjCons/index.html"><code class="docutils literal notranslate"><span class="pre">fastObjCons</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="objAndCons/interfaceObjCons/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceObjCons</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optiAlgorithms/index.html"><strong>optiAlgorithms</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optiAlgorithms/convergence/index.html"><strong>convergence</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optiAlgorithms/convergence/evolutionaryConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">evolutionaryConvergence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optiAlgorithms/convergence/hypervolume/index.html"><code class="docutils literal notranslate"><span class="pre">hypervolume</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optiAlgorithms/convergence/interfaceConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceConvergence</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optiAlgorithms/NLOpt_Algorithm/index.html"><code class="docutils literal notranslate"><span class="pre">NLOpt_Algorithm</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="optiAlgorithms/algorithmInterface/index.html"><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="optiAlgorithms/multiObjective_GA/index.html"><code class="docutils literal notranslate"><span class="pre">multiObjective_GA</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="optiVariable/index.html"><code class="docutils literal notranslate"><span class="pre">optiVariable</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimizer/index.html"><code class="docutils literal notranslate"><span class="pre">optimizer</span></code></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.optimize.InterfaceCharacterization">
+<em class="property">class </em><code class="sig-name descname">InterfaceCharacterization</code><a class="reference internal" href="../../../_modules/optimeed/optimize/characterization/interfaceCharacterization.html#InterfaceCharacterization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceCharacterization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for the evaluation of a device</p>
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceCharacterization.compute">
+<em class="property">abstract </em><code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/characterization/interfaceCharacterization.html#InterfaceCharacterization.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceCharacterization.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action to perform to characterize (= compute the objective function) of the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theDevice</strong> – the device to characterize</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceCharacterization.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/characterization/interfaceCharacterization.html#InterfaceCharacterization.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceCharacterization.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.Characterization">
+<em class="property">class </em><code class="sig-name descname">Characterization</code><a class="reference internal" href="../../../_modules/optimeed/optimize/characterization/characterization.html#Characterization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Characterization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="characterization/interfaceCharacterization/index.html#optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization" title="optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.optimize.Characterization.compute">
+<code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/characterization/characterization.html#Characterization.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Characterization.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.MathsToPhysics">
+<em class="property">class </em><code class="sig-name descname">MathsToPhysics</code><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/mathsToPhysics.html#MathsToPhysics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MathsToPhysics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mathsToPhysics/interfaceMathsToPhysics/index.html#optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics" title="optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics</span></code></a></p>
+<p>Dummy yet powerful example of maths to physics.
+The optimization variables are directly injected to the device</p>
+<dl class="method">
+<dt id="optimeed.optimize.MathsToPhysics.fromMathsToPhys">
+<code class="sig-name descname">fromMathsToPhys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">xVector</em>, <em class="sig-param">theDevice</em>, <em class="sig-param">theOptimizationVariables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/mathsToPhysics.html#MathsToPhysics.fromMathsToPhys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MathsToPhysics.fromMathsToPhys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MathsToPhysics.fromPhysToMaths">
+<code class="sig-name descname">fromPhysToMaths</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em>, <em class="sig-param">theOptimizationVariables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/mathsToPhysics.html#MathsToPhysics.fromPhysToMaths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MathsToPhysics.fromPhysToMaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MathsToPhysics.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/mathsToPhysics.html#MathsToPhysics.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MathsToPhysics.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.InterfaceMathsToPhysics">
+<em class="property">class </em><code class="sig-name descname">InterfaceMathsToPhysics</code><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/interfaceMathsToPhysics.html#InterfaceMathsToPhysics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceMathsToPhysics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface to transform output from the optimizer to meaningful variables of the device</p>
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceMathsToPhysics.fromMathsToPhys">
+<em class="property">abstract </em><code class="sig-name descname">fromMathsToPhys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">xVector</em>, <em class="sig-param">theDevice</em>, <em class="sig-param">opti_variables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/interfaceMathsToPhysics.html#InterfaceMathsToPhysics.fromMathsToPhys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceMathsToPhysics.fromMathsToPhys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an input vector coming from the optimization (e.g. [0.23, 4, False]) to “meaningful” variable (ex: length, number of poles, flag).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xVector</strong> – List of optimization variables from the optimizer</p></li>
+<li><p><strong>theDevice</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceDevice</span></code></p></li>
+<li><p><strong>opti_variables</strong> – list of <code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizationVariable</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceMathsToPhysics.fromPhysToMaths">
+<em class="property">abstract </em><code class="sig-name descname">fromPhysToMaths</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em>, <em class="sig-param">opti_variables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/mathsToPhysics/interfaceMathsToPhysics.html#InterfaceMathsToPhysics.fromPhysToMaths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceMathsToPhysics.fromPhysToMaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a mathematical vector from meaningful variable of the Device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theDevice</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceDevice</span></code></p></li>
+<li><p><strong>opti_variables</strong> – list of <code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizationVariable</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of optimization variables</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.FastObjCons">
+<em class="property">class </em><code class="sig-name descname">FastObjCons</code><span class="sig-paren">(</span><em class="sig-param">constraintEquation</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/fastObjCons.html#FastObjCons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.FastObjCons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="objAndCons/interfaceObjCons/index.html#optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons" title="optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons</span></code></a></p>
+<p>Convenience class to create an objective or a constraint very fast.</p>
+<dl class="method">
+<dt id="optimeed.optimize.FastObjCons.compute">
+<code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/fastObjCons.html#FastObjCons.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.FastObjCons.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.FastObjCons.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/fastObjCons.html#FastObjCons.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.FastObjCons.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.InterfaceObjCons">
+<em class="property">class </em><code class="sig-name descname">InterfaceObjCons</code><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/interfaceObjCons.html#InterfaceObjCons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceObjCons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface class for objectives and constraints. The objective is to MINIMIZE and the constraint has to respect VALUE &lt;= 0</p>
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceObjCons.compute">
+<em class="property">abstract </em><code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theDevice</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/interfaceObjCons.html#InterfaceObjCons.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceObjCons.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the objective or the constraint. The objective is to MINIMIZE and the constraint has to respect VALUE &lt;= 0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>theDevice</strong> – Input device that has already been evaluated</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceObjCons.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/interfaceObjCons.html#InterfaceObjCons.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceObjCons.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.InterfaceObjCons.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/objAndCons/interfaceObjCons.html#InterfaceObjCons.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.InterfaceObjCons.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.MultiObjective_GA">
+<em class="property">class </em><code class="sig-name descname">MultiObjective_GA</code><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="optiAlgorithms/algorithmInterface/index.html#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface" title="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface</span></code></a>, <a class="reference internal" href="../core/index.html#optimeed.core.Option_class" title="optimeed.core.Option_class"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.Option_class</span></code></a></p>
+<p>Based on <a class="reference external" href="https://platypus.readthedocs.io/en/docs/index.html">Platypus Library</a>.
+Workflow:
+Define what to optimize and which function to call with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Problem</span></code>
+Define the initial population with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code>
+Define the algorithm. As options, define how to evaluate the elements with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Evaluator</span></code>, i.e., for multiprocessing.
+Define what is the termination condition of the algorithm with <code class="xref py py-class docutils literal notranslate"><span class="pre">TerminationCondition</span></code>. Here, termination condition is a maximum time.</p>
+<dl class="attribute">
+<dt id="optimeed.optimize.MultiObjective_GA.DIVISION_OUTER">
+<code class="sig-name descname">DIVISION_OUTER</code><em class="property"> = 0</em><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.DIVISION_OUTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.optimize.MultiObjective_GA.OPTI_ALGORITHM">
+<code class="sig-name descname">OPTI_ALGORITHM</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.OPTI_ALGORITHM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.optimize.MultiObjective_GA.NUMBER_OF_CORES">
+<code class="sig-name descname">NUMBER_OF_CORES</code><em class="property"> = 2</em><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.NUMBER_OF_CORES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MultiObjective_GA.compute">
+<code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">initialVectorGuess</em>, <em class="sig-param">listOfOptimizationVariables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MultiObjective_GA.set_evaluationFunction">
+<code class="sig-name descname">set_evaluationFunction</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">evaluationFunction</em>, <em class="sig-param">callback_on_evaluation</em>, <em class="sig-param">numberOfObjectives</em>, <em class="sig-param">numberOfConstraints</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.set_evaluationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.set_evaluationFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MultiObjective_GA.set_maxtime">
+<code class="sig-name descname">set_maxtime</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">maxTime</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.set_maxtime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.set_maxtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MultiObjective_GA.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.MultiObjective_GA.get_convergence">
+<code class="sig-name descname">get_convergence</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.get_convergence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.MultiObjective_GA.get_convergence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.Real_OptimizationVariable">
+<em class="property">class </em><code class="sig-name descname">Real_OptimizationVariable</code><span class="sig-paren">(</span><em class="sig-param">attributeName</em>, <em class="sig-param">val_min</em>, <em class="sig-param">val_max</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="optiVariable/index.html#optimeed.optimize.optiVariable.OptimizationVariable" title="optimeed.optimize.optiVariable.OptimizationVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiVariable.OptimizationVariable</span></code></a></p>
+<p>Real (continuous) optimization variable. Most used type</p>
+<dl class="method">
+<dt id="optimeed.optimize.Real_OptimizationVariable.get_min_value">
+<code class="sig-name descname">get_min_value</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable.get_min_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable.get_min_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Real_OptimizationVariable.get_max_value">
+<code class="sig-name descname">get_max_value</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable.get_max_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable.get_max_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Real_OptimizationVariable.get_PhysToMaths">
+<code class="sig-name descname">get_PhysToMaths</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable.get_PhysToMaths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable.get_PhysToMaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Real_OptimizationVariable.do_MathsToPhys">
+<code class="sig-name descname">do_MathsToPhys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">value</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable.do_MathsToPhys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable.do_MathsToPhys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Real_OptimizationVariable.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Real_OptimizationVariable.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Real_OptimizationVariable.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.Binary_OptimizationVariable">
+<em class="property">class </em><code class="sig-name descname">Binary_OptimizationVariable</code><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Binary_OptimizationVariable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Binary_OptimizationVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="optiVariable/index.html#optimeed.optimize.optiVariable.OptimizationVariable" title="optimeed.optimize.optiVariable.OptimizationVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiVariable.OptimizationVariable</span></code></a></p>
+<p>Boolean (True/False) optimization variable.</p>
+<dl class="method">
+<dt id="optimeed.optimize.Binary_OptimizationVariable.get_PhysToMaths">
+<code class="sig-name descname">get_PhysToMaths</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Binary_OptimizationVariable.get_PhysToMaths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Binary_OptimizationVariable.get_PhysToMaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Binary_OptimizationVariable.do_MathsToPhys">
+<code class="sig-name descname">do_MathsToPhys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">value</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Binary_OptimizationVariable.do_MathsToPhys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Binary_OptimizationVariable.do_MathsToPhys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Binary_OptimizationVariable.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Binary_OptimizationVariable.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Binary_OptimizationVariable.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.Integer_OptimizationVariable">
+<em class="property">class </em><code class="sig-name descname">Integer_OptimizationVariable</code><span class="sig-paren">(</span><em class="sig-param">attributeName</em>, <em class="sig-param">val_min</em>, <em class="sig-param">val_max</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="optiVariable/index.html#optimeed.optimize.optiVariable.OptimizationVariable" title="optimeed.optimize.optiVariable.OptimizationVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiVariable.OptimizationVariable</span></code></a></p>
+<p>Integer variable, in [min_value, max_value]</p>
+<dl class="method">
+<dt id="optimeed.optimize.Integer_OptimizationVariable.get_min_value">
+<code class="sig-name descname">get_min_value</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable.get_min_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable.get_min_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Integer_OptimizationVariable.get_max_value">
+<code class="sig-name descname">get_max_value</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable.get_max_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable.get_max_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Integer_OptimizationVariable.get_PhysToMaths">
+<code class="sig-name descname">get_PhysToMaths</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable.get_PhysToMaths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable.get_PhysToMaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Integer_OptimizationVariable.do_MathsToPhys">
+<code class="sig-name descname">do_MathsToPhys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">value</em>, <em class="sig-param">deviceIn</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable.do_MathsToPhys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable.do_MathsToPhys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Integer_OptimizationVariable.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optiVariable.html#Integer_OptimizationVariable.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Integer_OptimizationVariable.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.optimize.Optimizer">
+<em class="property">class </em><code class="sig-name descname">Optimizer</code><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../core/options/index.html#optimeed.core.options.Option_class" title="optimeed.core.options.Option_class"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.options.Option_class</span></code></a></p>
+<p>Main optimizing class</p>
+<dl class="attribute">
+<dt id="optimeed.optimize.Optimizer.DISPLAY_INFO">
+<code class="sig-name descname">DISPLAY_INFO</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.optimize.Optimizer.DISPLAY_INFO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.optimize.Optimizer.KWARGS_OPTIHISTO">
+<code class="sig-name descname">KWARGS_OPTIHISTO</code><em class="property"> = 2</em><a class="headerlink" href="#optimeed.optimize.Optimizer.KWARGS_OPTIHISTO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.set_optimizer">
+<code class="sig-name descname">set_optimizer</code><span class="sig-paren">(</span><em class="sig-param">self, theDevice, theObjectiveList, theConstraintList, theOptimizationVariables, theOptimizationAlgorithm=default['Algo'], theCharacterization=default['Charac'], theMathsToPhysics=default['M2P']</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.set_optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.set_optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare the optimizer for the optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theDevice</strong> – object of type  <a class="reference internal" href="../core/interfaceDevice/index.html#optimeed.core.interfaceDevice.InterfaceDevice" title="optimeed.core.interfaceDevice.InterfaceDevice"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceDevice</span></code></a></p></li>
+<li><p><strong>theCharacterization</strong> – object of type <a class="reference internal" href="characterization/interfaceCharacterization/index.html#optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization" title="optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceCharacterization</span></code></a></p></li>
+<li><p><strong>theMathsToPhysics</strong> – object of type <a class="reference internal" href="mathsToPhysics/interfaceMathsToPhysics/index.html#optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics" title="optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceMathsToPhysics</span></code></a></p></li>
+<li><p><strong>theObjectiveList</strong> – list of objects of type <a class="reference internal" href="objAndCons/interfaceObjCons/index.html#optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons" title="optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceObjCons</span></code></a></p></li>
+<li><p><strong>theConstraintList</strong> – list of objects of type <a class="reference internal" href="objAndCons/interfaceObjCons/index.html#optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons" title="optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceObjCons</span></code></a></p></li>
+<li><p><strong>theOptimizationAlgorithm</strong> – list of objects of type <a class="reference internal" href="optiAlgorithms/algorithmInterface/index.html#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface" title="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">AlgorithmInterface</span></code></a></p></li>
+<li><p><strong>theOptimizationVariables</strong> – list of objects of type <a class="reference internal" href="optiVariable/index.html#optimeed.optimize.optiVariable.OptimizationVariable" title="optimeed.optimize.optiVariable.OptimizationVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizationVariable</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PipeOptimization</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.run_optimization">
+<code class="sig-name descname">run_optimization</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.run_optimization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.run_optimization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code> of the best optimized devices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.set_max_opti_time">
+<code class="sig-name descname">set_max_opti_time</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_time_sec</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.set_max_opti_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.set_max_opti_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.evaluateObjectiveAndConstraints">
+<code class="sig-name descname">evaluateObjectiveAndConstraints</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.evaluateObjectiveAndConstraints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.evaluateObjectiveAndConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the performances of device associated to entrance vector x. Outputs the objective function and the constraints,
+and other data used in optiHistoric.</p>
+<p>This function is NOT process safe: “self.” is actually a FORK in multiprocessing algorithms.
+It means that the motor originally contained in self. is modified only in the fork, and only gathered by reaching the end of the fork.
+It is not (yet?) possible to access this motor on the main process before the end of the fork. This behaviour could be changed by using pipes or Managers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input mathematical vector from optimization algorithm</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary, containing objective values (list of scalar), constraint values (list of scalar), and other info (motor, time)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.callback_on_evaluation">
+<code class="sig-name descname">callback_on_evaluation</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">returnedValues</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.callback_on_evaluation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.callback_on_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the output of evaluateObjectiveAndConstraints to optiHistoric.
+This function should be called by the optimizer IN a process safe context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.Optimizer.formatInfo">
+<code class="sig-name descname">formatInfo</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/optimeed/optimize/optimizer.html#Optimizer.formatInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.Optimizer.formatInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="characterization/index.html" class="btn btn-neutral float-right" title="characterization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../core/tools/index.html" class="btn btn-neutral float-left" title="tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

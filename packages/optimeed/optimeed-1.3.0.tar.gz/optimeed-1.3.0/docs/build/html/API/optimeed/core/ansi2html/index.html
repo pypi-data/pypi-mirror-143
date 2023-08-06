@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ansi2html &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="converter" href="converter/index.html" />
+    <link rel="prev" title="core" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>core</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><strong>ansi2html</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="converter/index.html"><code class="docutils literal notranslate"><span class="pre">converter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="style/index.html"><code class="docutils literal notranslate"><span class="pre">style</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="util/index.html"><code class="docutils literal notranslate"><span class="pre">util</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>core</strong></a> &raquo;</li>
+        
+      <li><strong>ansi2html</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/core/ansi2html/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.core.ansi2html">
+<span id="ansi2html"></span><h1><strong>ansi2html</strong><a class="headerlink" href="#module-optimeed.core.ansi2html" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="converter/index.html"><code class="docutils literal notranslate"><span class="pre">converter</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="style/index.html"><code class="docutils literal notranslate"><span class="pre">style</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="util/index.html"><code class="docutils literal notranslate"><span class="pre">util</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter">
+<em class="property">class </em><code class="sig-name descname">Ansi2HTMLConverter</code><span class="sig-paren">(</span><em class="sig-param">latex=False</em>, <em class="sig-param">inline=False</em>, <em class="sig-param">dark_bg=True</em>, <em class="sig-param">line_wrap=True</em>, <em class="sig-param">font_size='normal'</em>, <em class="sig-param">linkify=False</em>, <em class="sig-param">escaped=True</em>, <em class="sig-param">markup_lines=False</em>, <em class="sig-param">output_encoding='utf-8'</em>, <em class="sig-param">scheme='ansi2html'</em>, <em class="sig-param">title=''</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Convert Ansi color codes to CSS+HTML</p>
+<p>Example:
+&gt;&gt;&gt; conv = Ansi2HTMLConverter()
+&gt;&gt;&gt; ansi = ” “.join(sys.stdin.readlines())
+&gt;&gt;&gt; html = conv.convert(ansi)</p>
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter.apply_regex">
+<code class="sig-name descname">apply_regex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ansi</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter.apply_regex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter.apply_regex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter._apply_regex">
+<code class="sig-name descname">_apply_regex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ansi</em>, <em class="sig-param">styles_used</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter._apply_regex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter._apply_regex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter._collapse_cursor">
+<code class="sig-name descname">_collapse_cursor</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">parts</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter._collapse_cursor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter._collapse_cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Act on any CursorMoveUp commands by deleting preceding tokens</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter.prepare">
+<code class="sig-name descname">prepare</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ansi=''</em>, <em class="sig-param">ensure_trailing_newline=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter.prepare"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the contents of ‘ansi’ into this object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter.attrs">
+<code class="sig-name descname">attrs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter.attrs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter.attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare attributes for the template</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter.convert">
+<code class="sig-name descname">convert</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ansi</em>, <em class="sig-param">full=True</em>, <em class="sig-param">ensure_trailing_newline=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter.convert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter.convert" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.ansi2html.Ansi2HTMLConverter.produce_headers">
+<code class="sig-name descname">produce_headers</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/ansi2html/converter.html#Ansi2HTMLConverter.produce_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.ansi2html.Ansi2HTMLConverter.produce_headers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="converter/index.html" class="btn btn-neutral float-right" title="converter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

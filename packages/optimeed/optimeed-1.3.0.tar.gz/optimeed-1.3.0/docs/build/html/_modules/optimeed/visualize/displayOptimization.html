@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.displayOptimization &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+      <li>optimeed.visualize.displayOptimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.displayOptimization</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.core.linkDataGraph</span> <span class="k">import</span> <span class="n">LinkDataGraph</span><span class="p">,</span> <span class="n">HowToPlotGraph</span>
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">Option_class</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.gui_mainWindow</span> <span class="k">import</span> <span class="n">gui_mainWindow</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_graphs_visual</span> <span class="k">import</span> <span class="n">widget_graphs_visual</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize</span> <span class="k">import</span> <span class="n">start_qt_mainloop</span><span class="p">,</span> <span class="n">stop_qt_mainloop</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_showinfo</span> <span class="k">import</span> <span class="n">on_graph_click_showInfo</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.smallGui</span> <span class="k">import</span> <span class="n">guiPyqtgraph</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="k">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="k">import</span> <span class="n">Timer</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span>
+<span class="kn">import</span> <span class="nn">queue</span>
+
+
+<div class="viewcode-block" id="check_if_must_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.check_if_must_plot">[docs]</a><span class="k">def</span> <span class="nf">check_if_must_plot</span><span class="p">(</span><span class="n">elem</span><span class="p">):</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">constraints</span>
+    <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">constraint</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="OptimizationDisplayer"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer">[docs]</a><span class="k">class</span> <span class="nc">OptimizationDisplayer</span><span class="p">(</span><span class="n">Option_class</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class used to display optimization process in real time&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="OptimizationDisplayer.signal_optimization_over"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.signal_optimization_over">[docs]</a>    <span class="n">signal_optimization_over</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.SHOW_CONSTRAINTS"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.SHOW_CONSTRAINTS">[docs]</a>    <span class="n">SHOW_CONSTRAINTS</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">thePipeOpti</span><span class="p">,</span> <span class="n">listOfObjectives</span><span class="p">,</span> <span class="n">theOptimizer</span><span class="p">,</span> <span class="n">additionalWidgets</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param thePipeOpti: :class:`~optimeed.optimize.optimizer.PipeOptimization`</span>
+<span class="sd">        :param listOfObjectives: list of :class:`~optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons`</span>
+<span class="sd">        :param theOptimizer: :class:`~optimeed.optimize.optimizer.Optimizer`</span>
+<span class="sd">        :param additionalWidgets: list of QtWidgets (instantiated)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SHOW_CONSTRAINTS</span><span class="p">,</span> <span class="s2">&quot;Display out of constraint elements&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOpti</span> <span class="o">=</span> <span class="n">thePipeOpti</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span> <span class="o">=</span> <span class="n">listOfObjectives</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizer</span> <span class="o">=</span> <span class="n">theOptimizer</span>
+        <span class="k">if</span> <span class="n">additionalWidgets</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">additionalWidgets</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">additionalWidgets</span> <span class="o">=</span> <span class="n">additionalWidgets</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDataLink</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_logOpti</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">windowOpti</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">windowConvergence</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="OptimizationDisplayer.set_actionsOnClick"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.set_actionsOnClick">[docs]</a>    <span class="k">def</span> <span class="nf">set_actionsOnClick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theList</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set actions to perform on click, list of :class:`~optimeed.visualize.gui.widgets.widget_graphs_visual.on_graph_click_interface`&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span> <span class="o">=</span> <span class="n">theList</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.generate_optimizationGraphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.generate_optimizationGraphs">[docs]</a>    <span class="k">def</span> <span class="nf">generate_optimizationGraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generates the optimization graphs.</span>
+<span class="sd">       :return: :class:`~optimeed.core.graphs.Graphs`, :class:`~optimeed.core.linkDataGraph.LinkDataGraph`, :class:&#39;~optimeed.visulaize.gui.widgets.widget_graphs_visual.widget_graphs_visual&quot;&quot;&quot;</span>
+
+        <span class="n">collection_devices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOpti</span><span class="o">.</span><span class="n">get_historic</span><span class="p">()</span><span class="o">.</span><span class="n">get_devices</span><span class="p">()</span>
+        <span class="n">collection_logOpti</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOpti</span><span class="o">.</span><span class="n">get_historic</span><span class="p">()</span><span class="o">.</span><span class="n">get_logopti</span><span class="p">()</span>
+
+        <span class="n">theDataLink</span> <span class="o">=</span> <span class="n">LinkDataGraph</span><span class="p">()</span>
+        <span class="n">id_logOpti</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">collection_logOpti</span><span class="p">)</span>
+        <span class="n">id_devices</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">collection_devices</span><span class="p">)</span>
+        <span class="n">theDataLink</span><span class="o">.</span><span class="n">link_collection_to_graph_collection</span><span class="p">(</span><span class="n">id_logOpti</span><span class="p">,</span> <span class="n">id_devices</span><span class="p">)</span>  <span class="c1"># Link the devices to the logopti</span>
+
+        <span class="n">check_plot</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SHOW_CONSTRAINTS</span><span class="p">)</span> <span class="k">else</span> <span class="n">check_if_must_plot</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">x_label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+            <span class="n">y_label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+            <span class="n">howToPlot</span> <span class="o">=</span> <span class="n">HowToPlotGraph</span><span class="p">(</span><span class="s1">&#39;objectives[0]&#39;</span><span class="p">,</span> <span class="s1">&#39;objectives[1]&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;x_label&#39;</span><span class="p">:</span> <span class="n">x_label</span><span class="p">,</span> <span class="s1">&#39;y_label&#39;</span><span class="p">:</span> <span class="n">y_label</span><span class="p">,</span> <span class="s1">&#39;is_scattered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="n">check_if_plot_elem</span><span class="o">=</span><span class="n">check_plot</span><span class="p">)</span>
+            <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">howToPlot</span><span class="p">)</span>
+            <span class="n">howToPlot</span><span class="o">.</span><span class="n">exclude_col</span><span class="p">(</span><span class="n">id_devices</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">objective</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span><span class="p">):</span>
+                <span class="n">x_label</span> <span class="o">=</span> <span class="s1">&#39;Time [s]&#39;</span>
+                <span class="n">y_label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">listOfObjectives</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+                <span class="n">howToPlot</span> <span class="o">=</span> <span class="n">HowToPlotGraph</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;objectives[</span><span class="si">{}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">{</span><span class="s1">&#39;x_label&#39;</span><span class="p">:</span> <span class="n">x_label</span><span class="p">,</span> <span class="s1">&#39;y_label&#39;</span><span class="p">:</span> <span class="n">y_label</span><span class="p">},</span> <span class="n">check_if_plot_elem</span><span class="o">=</span><span class="n">check_plot</span><span class="p">)</span>
+                <span class="n">theDataLink</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">howToPlot</span><span class="p">)</span>
+                <span class="n">howToPlot</span><span class="o">.</span><span class="n">exclude_col</span><span class="p">(</span><span class="n">id_devices</span><span class="p">)</span>
+
+        <span class="n">theGraphs</span> <span class="o">=</span> <span class="n">theDataLink</span><span class="o">.</span><span class="n">createGraphs</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDataLink</span> <span class="o">=</span> <span class="n">theDataLink</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_logOpti</span> <span class="o">=</span> <span class="n">id_logOpti</span>
+
+        <span class="sd">&quot;&quot;&quot;Generate live graph for the optimization&quot;&quot;&quot;</span>
+        <span class="c1"># Set actions on graph click</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_graph_click_showInfo</span><span class="p">(</span><span class="n">theDataLink</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span> <span class="o">=</span> <span class="n">widget_graphs_visual</span><span class="p">(</span><span class="n">theGraphs</span><span class="p">,</span> <span class="n">highlight_last</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">refresh_time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__set_graphs_disposition</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">theGraphs</span><span class="p">,</span> <span class="n">theDataLink</span><span class="p">,</span> <span class="n">widget_graphs_visual</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.__change_appearance_violate_constraints"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.__change_appearance_violate_constraints">[docs]</a>    <span class="k">def</span> <span class="nf">__change_appearance_violate_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">graphs</span><span class="p">,</span> <span class="n">theCol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDataLink</span><span class="o">.</span><span class="n">get_graph_and_trace_from_collection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_logOpti</span><span class="p">)</span>
+        <span class="n">all_constraints</span> <span class="o">=</span> <span class="n">theCol</span><span class="o">.</span><span class="n">get_list_attributes</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">)</span>
+        <span class="n">violate_constraint_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">constraints</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_constraints</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="n">constraints</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">constraint</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">violate_constraint_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># Index in data</span>
+        <span class="k">for</span> <span class="n">graph</span><span class="p">,</span> <span class="n">trace</span> <span class="ow">in</span> <span class="n">graphs</span><span class="p">:</span>
+            <span class="n">theTrace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+            <span class="n">theTrace</span><span class="o">.</span><span class="n">set_brushes</span><span class="p">(</span><span class="n">violate_constraint_indices</span><span class="p">,</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.__refresh"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.__refresh">[docs]</a>    <span class="k">def</span> <span class="nf">__refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDataLink</span><span class="o">.</span><span class="n">update_graphs</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SHOW_CONSTRAINTS</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__change_appearance_violate_constraints</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="o">.</span><span class="n">update_graphs</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.start_autorefresh"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.start_autorefresh">[docs]</a>    <span class="k">def</span> <span class="nf">start_autorefresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timer_autosave</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__refresh</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">timer_autosave</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="n">timer_autosave</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_autorefresh</span><span class="p">(</span><span class="n">timer_autosave</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.stop_autorefresh"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.stop_autorefresh">[docs]</a>    <span class="k">def</span> <span class="nf">stop_autorefresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer_autorefresh</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.__set_graphs_disposition"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.__set_graphs_disposition">[docs]</a>    <span class="k">def</span> <span class="nf">__set_graphs_disposition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set nicely the graphs disposition&quot;&quot;&quot;</span>
+        <span class="n">allGraphs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="o">.</span><span class="n">get_all_graphsVisual</span><span class="p">()</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">maxNbrRow</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="n">currRow</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="n">allGraphs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="o">.</span><span class="n">set_graph_disposition</span><span class="p">(</span><span class="n">idGraph</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">currRow</span> <span class="o">&gt;=</span> <span class="n">maxNbrRow</span><span class="p">:</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">col</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">currRow</span> <span class="o">=</span> <span class="n">row</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.launch_optimization"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.launch_optimization">[docs]</a>    <span class="k">def</span> <span class="nf">launch_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">refresh_time</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Perform the optimization and spawn the convergence graphs afterwards.&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_main_window</span><span class="p">()</span>  <span class="c1"># Create the gui</span>
+
+        <span class="c1"># Launch optimization in a separate thread</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_autorefresh</span><span class="p">(</span><span class="n">refresh_time</span><span class="p">)</span>
+
+        <span class="n">que</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>  <span class="c1"># Put results in queue</span>
+        <span class="n">threadOpti</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">que</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__callback_optimization</span><span class="p">()))</span>
+        <span class="n">threadOpti</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="n">start_qt_mainloop</span><span class="p">()</span>  <span class="c1"># Automatically stops at the end of the optimization</span>
+
+        <span class="n">threadOpti</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>  <span class="c1"># This means stop_qt_mainloop has been called (opti finished)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_autorefresh</span><span class="p">()</span>
+        <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span> <span class="o">=</span> <span class="n">que</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">windowConvergence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_graphs</span><span class="p">(</span><span class="n">convergence</span><span class="o">.</span><span class="n">get_graphs</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.__callback_optimization"><a class="viewcode-back" href="../../../API/optimeed/visualize/displayOptimization/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.__callback_optimization">[docs]</a>    <span class="k">def</span> <span class="nf">__callback_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizer</span><span class="o">.</span><span class="n">run_optimization</span><span class="p">()</span>
+        <span class="n">stop_qt_mainloop</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">resultsOpti</span><span class="p">,</span> <span class="n">convergence</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.close_windows"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.close_windows">[docs]</a>    <span class="k">def</span> <span class="nf">close_windows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">windowOpti</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">windowOpti</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">windowConvergence</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">windowConvergence</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="OptimizationDisplayer.display_graphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.display_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">display_graphs</span><span class="p">(</span><span class="n">theGraphs</span><span class="p">):</span>
+        <span class="n">myWidgetGraphsVisuals</span> <span class="o">=</span> <span class="n">widget_graphs_visual</span><span class="p">(</span><span class="n">theGraphs</span><span class="p">,</span> <span class="n">highlight_last</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">refresh_time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guiPyqtgraph</span><span class="p">(</span><span class="n">myWidgetGraphsVisuals</span><span class="p">)</span>  <span class="c1"># Add GUI to change action easily and export graphs</span>
+        <span class="n">myWindow</span> <span class="o">=</span> <span class="n">gui_mainWindow</span><span class="p">([</span><span class="n">myWidgetGraphsVisuals</span><span class="p">],</span> <span class="n">actionOnWindowClosed</span><span class="o">=</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">stop_qt_mainloop</span><span class="p">())</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">theGraphs</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
+            <span class="n">myWindow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">myWindow</span></div>
+
+<div class="viewcode-block" id="OptimizationDisplayer.create_main_window"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.displayOptimization.OptimizationDisplayer.create_main_window">[docs]</a>    <span class="k">def</span> <span class="nf">create_main_window</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;From the widgets and the actions on click, spawn a window and put a gui around widgetsGraphsVisual.&quot;&quot;&quot;</span>
+        <span class="n">guiPyqtgraph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="p">,</span> <span class="n">actionsOnClick</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">theActionsOnClick</span><span class="p">)</span>  <span class="c1"># Add GUI to change action easily and export graphs</span>
+
+        <span class="c1"># Add additional widgets to the visualisation</span>
+        <span class="n">listOfWidgets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">additionalWidgets</span>
+        <span class="n">listOfWidgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">myWidgetGraphsVisuals</span><span class="p">)</span>
+        <span class="n">myWindow</span> <span class="o">=</span> <span class="n">gui_mainWindow</span><span class="p">(</span><span class="n">listOfWidgets</span><span class="p">,</span> <span class="n">actionOnWindowClosed</span><span class="o">=</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">stop_qt_mainloop</span><span class="p">())</span>
+        <span class="n">myWindow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">windowOpti</span> <span class="o">=</span> <span class="n">myWindow</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.additional_tools &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.additional_tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.additional_tools</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">scipy.spatial.qhull</span> <span class="k">as</span> <span class="nn">qhull</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="fast_LUT_interpolation"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.fast_LUT_interpolation">[docs]</a><span class="k">class</span> <span class="nc">fast_LUT_interpolation</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class designed for fast interpolation in look-up table when successive searchs are called often.</span>
+<span class="sd">    Otherwise use griddata&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">independent_variables</span><span class="p">,</span> <span class="n">dependent_variables</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param independent_variables: np.array of shape (N,d) containing the independent variables of the dataset to interpolate. Typically X for 1D LU, or XY for 2D LUT</span>
+<span class="sd">        :param dependent_variables: np.array of shape (1,d) containing the dependet variables of the dataset to interpolate. Typically Y for 1D LU, or Z for 2D LUT</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_ind</span> <span class="o">=</span> <span class="n">independent_variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_dep</span> <span class="o">=</span> <span class="n">dependent_variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interp_tri</span><span class="p">(</span><span class="n">independent_variables</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">independent_variables</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="fast_LUT_interpolation.interp_tri"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.fast_LUT_interpolation.interp_tri">[docs]</a>    <span class="k">def</span> <span class="nf">interp_tri</span><span class="p">(</span><span class="n">xyz</span><span class="p">):</span>
+        <span class="n">tri</span> <span class="o">=</span> <span class="n">qhull</span><span class="o">.</span><span class="n">Delaunay</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tri</span></div>
+
+<div class="viewcode-block" id="fast_LUT_interpolation.interpolate"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.fast_LUT_interpolation.interpolate">[docs]</a>    <span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform the interpolation</span>
+<span class="sd">        :param point: coordinates to interpolate (tuple or list of tuples for multipoints)</span>
+<span class="sd">        :param fill_value: value to put if extrapolated.</span>
+<span class="sd">        :return: coordinates</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span>
+        <span class="n">tri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tri</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dep</span>
+        <span class="n">simplex</span> <span class="o">=</span> <span class="n">tri</span><span class="o">.</span><span class="n">find_simplex</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+        <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">tri</span><span class="o">.</span><span class="n">simplices</span><span class="p">,</span> <span class="n">simplex</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">tri</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="n">simplex</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">point</span> <span class="o">-</span> <span class="n">temp</span><span class="p">[:,</span> <span class="n">d</span><span class="p">]</span>
+        <span class="n">bary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;njk,nk-&gt;nj&#39;</span><span class="p">,</span> <span class="n">temp</span><span class="p">[:,</span> <span class="p">:</span><span class="n">d</span><span class="p">,</span> <span class="p">:],</span> <span class="n">delta</span><span class="p">)</span>
+        <span class="n">wts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">bary</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">bary</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;nj,nj-&gt;n&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">vertices</span><span class="p">),</span> <span class="n">wts</span><span class="p">)</span>
+        <span class="n">ret</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">wts</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">fill_value</span>
+        <span class="k">return</span> <span class="n">ret</span></div></div>
+
+
+<div class="viewcode-block" id="interpolate_table"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.interpolate_table">[docs]</a><span class="k">def</span> <span class="nf">interpolate_table</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;From sorted table (x,y) find y0 corresponding to x0 (linear interpolation)&quot;&quot;&quot;</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_interpolate</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_values</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">y_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">y_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">x_before</span><span class="p">,</span> <span class="n">y_before</span> <span class="o">=</span> <span class="n">x_values</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y_values</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">x_after</span><span class="p">,</span> <span class="n">y_after</span> <span class="o">=</span> <span class="n">x_values</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">y_values</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">x_before</span><span class="p">,</span> <span class="n">y_before</span><span class="p">),</span> <span class="p">(</span><span class="n">x_after</span><span class="p">,</span> <span class="n">y_after</span><span class="p">)]:</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">x0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">y</span>
+
+        <span class="n">ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">x0</span> <span class="o">-</span> <span class="n">x_before</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x_after</span><span class="o">-</span><span class="n">x_before</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">y_before</span> <span class="o">+</span> <span class="n">ratio</span><span class="o">*</span><span class="p">(</span><span class="n">y_after</span> <span class="o">-</span> <span class="n">y_before</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+            <span class="n">results</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">_interpolate</span><span class="p">(</span><span class="n">x0</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">ind</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">results</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_interpolate</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="derivate"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.derivate">[docs]</a><span class="k">def</span> <span class="nf">derivate</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">derivated</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">derivated</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">derivated</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">((</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">derivated</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">derivated</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">derivated</span></div>
+
+
+<div class="viewcode-block" id="linspace"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.linspace">[docs]</a><span class="k">def</span> <span class="nf">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">npoints</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">npoints</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="reconstitute_signal"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.reconstitute_signal">[docs]</a><span class="k">def</span> <span class="nf">reconstitute_signal</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span> <span class="n">phases</span><span class="p">,</span> <span class="n">numberOfPeriods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_points</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reconstitute the signal from fft. Number of periods of the signal must be specified if different of 1&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x_points</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">numberOfPeriods</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">n_points</span><span class="p">))</span>
+    <span class="n">n_points</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_points</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_points</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">amplitudes</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="n">amplitudes</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">key</span><span class="o">/</span><span class="n">numberOfPeriods</span> <span class="o">*</span> <span class="n">x_points</span> <span class="o">+</span> <span class="n">phases</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">x_points</span><span class="p">,</span> <span class="n">y</span></div>
+<span class="c1"># def my_ifft(amplitude, angle, hasBeenTruncated=True):</span>
+<span class="c1">#     &quot;&quot;&quot;Inverse fft of signal.</span>
+<span class="c1">#     If hasBeenTruncated (initial fft signal was full period (including first point of next period):</span>
+<span class="c1">#     Axis vector must be multiplied by (n_points-1)/(n_points-2)&quot;&quot;&quot;</span>
+<span class="c1">#     amplitudes = list(amplitude.values())</span>
+<span class="c1">#     angles = list(angle.values())</span>
+<span class="c1">#     n_points = (len(angles))*2</span>
+<span class="c1">#     normalization = 2/n_points</span>
+<span class="c1">#     if hasBeenTruncated:</span>
+<span class="c1">#         normalization *= (n_points+1)/(n_points-1)</span>
+<span class="c1">#     coeffs = np.array([amplitudes[i] * np.exp(1j*angles[i]) for i in range(len(angles))])</span>
+<span class="c1">#     return np.fft.irfft(coeffs)/normalization</span>
+
+
+<div class="viewcode-block" id="my_fft"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.my_fft">[docs]</a><span class="k">def</span> <span class="nf">my_fft</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Real FFT of signal Bx, with real amplitude of harmonics. Input signal must be within a period.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">n_points</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">normalization</span> <span class="o">=</span> <span class="mi">2</span><span class="o">/</span><span class="n">n_points</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">normalization</span>
+    <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/=</span> <span class="mi">2</span>
+
+    <span class="n">amplitudes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="n">phases</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="n">max_amplitude</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">amplitude</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">phase</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">harmonic</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">harmonic</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">amplitudes</span><span class="p">[</span><span class="n">harmonic</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="o">*</span><span class="n">max_amplitude</span><span class="p">:</span>
+            <span class="n">amplitude</span><span class="p">[</span><span class="n">harmonic</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitudes</span><span class="p">[</span><span class="n">harmonic</span><span class="p">]</span>
+            <span class="n">phase</span><span class="p">[</span><span class="n">harmonic</span><span class="p">]</span> <span class="o">=</span> <span class="n">phases</span><span class="p">[</span><span class="n">harmonic</span><span class="p">]</span>
+
+    <span class="c1"># harmonics = list(range(len(res)))</span>
+    <span class="c1"># amplitude = dict(zip(harmonics, np.abs(res)))</span>
+    <span class="c1"># phase = dict(zip(harmonics, np.angle(res)))</span>
+    <span class="k">return</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">phase</span></div>
+
+
+<div class="viewcode-block" id="cart2pol"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.cart2pol">[docs]</a><span class="k">def</span> <span class="nf">cart2pol</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rho</span><span class="p">,</span> <span class="n">phi</span></div>
+
+
+<div class="viewcode-block" id="pol2cart"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.pol2cart">[docs]</a><span class="k">def</span> <span class="nf">pol2cart</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">phi</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+
+<div class="viewcode-block" id="partition"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.partition">[docs]</a><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="n">pivot</span> <span class="o">=</span> <span class="n">begin</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">begin</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">array</span><span class="p">[</span><span class="n">begin</span><span class="p">]:</span>
+            <span class="n">pivot</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">pivot</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">array</span><span class="p">[</span><span class="n">pivot</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">begin</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">pivot</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pivot</span></div>
+
+
+<div class="viewcode-block" id="quicksort"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.quicksort">[docs]</a><span class="k">def</span> <span class="nf">quicksort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">_quicksort</span><span class="p">(</span><span class="n">_array</span><span class="p">,</span> <span class="n">_begin</span><span class="p">,</span> <span class="n">_end</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">_begin</span> <span class="o">&gt;=</span> <span class="n">_end</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">pivot</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">_array</span><span class="p">,</span> <span class="n">_begin</span><span class="p">,</span> <span class="n">_end</span><span class="p">)</span>
+        <span class="n">_quicksort</span><span class="p">(</span><span class="n">_array</span><span class="p">,</span> <span class="n">_begin</span><span class="p">,</span> <span class="n">pivot</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">_quicksort</span><span class="p">(</span><span class="n">_array</span><span class="p">,</span> <span class="n">pivot</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">_end</span><span class="p">)</span>
+    <span class="n">_quicksort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">array</span></div>
+
+
+<div class="viewcode-block" id="dist"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.dist">[docs]</a><span class="k">def</span> <span class="nf">dist</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the Euclidean distance between points p and q.</span>
+<span class="sd">    :param p: [x, y]</span>
+<span class="sd">    :param q: [x, y]</span>
+<span class="sd">    :return: distance (float)&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="sparse_subset"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.sparse_subset">[docs]</a><span class="k">def</span> <span class="nf">sparse_subset</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a maximal list of elements of points such that no pairs of</span>
+<span class="sd">    points in the result have distance less than r.</span>
+<span class="sd">    :param points: list of tuples (x,y)</span>
+<span class="sd">    :param r: distance</span>
+<span class="sd">    :return: corresponding subset (list), indices of the subset (list)&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">dist</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">r</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">result</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">indices</span></div>
+
+
+<div class="viewcode-block" id="integrate"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.integrate">[docs]</a><span class="k">def</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Performs Integral(x[0] to x[-1]) of y dx</span>
+
+<span class="sd">    :param x: x axis coordinates (list)</span>
+<span class="sd">    :param y: y axis coordinates (list)</span>
+<span class="sd">    :return: integral value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">integral</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">integral</span> <span class="o">+=</span> <span class="n">dx</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">integral</span></div>
+
+
+<div class="viewcode-block" id="my_fourier"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.my_fourier">[docs]</a><span class="k">def</span> <span class="nf">my_fourier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fourier analys</span>
+
+<span class="sd">    :param x: x axis coordinates</span>
+<span class="sd">    :param y: y axis coordinates</span>
+<span class="sd">    :param n: number of considered harmonic</span>
+<span class="sd">    :param L: half-period length</span>
+<span class="sd">    :return: a and b coefficients (y = a*cos(x) + b*sin(y))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">y_to_integrate_a</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">y_to_integrate_b</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="n">y_to_integrate_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span>
+        <span class="n">y_to_integrate_b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span>
+
+    <span class="n">a_n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">L</span> <span class="o">*</span> <span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_to_integrate_a</span><span class="p">)</span>
+    <span class="n">b_n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">L</span> <span class="o">*</span> <span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_to_integrate_b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a_n</span><span class="p">,</span> <span class="n">b_n</span></div>
+
+
+<div class="viewcode-block" id="get_ellipse_axes"><a class="viewcode-back" href="../../../API/optimeed/core/index.html#optimeed.core.additional_tools.get_ellipse_axes">[docs]</a><span class="k">def</span> <span class="nf">get_ellipse_axes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">dphi</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Trouve les longueurs des axes majeurs et mineurs de l&#39;ellipse, ainsi que l&#39;orientation de l&#39;ellipse.</span>
+<span class="sd">    ellipse: x(t) = A*cos(t), y(t) = B*cos(t+dphi)</span>
+<span class="sd">    Etapes: longueur demi ellipse CENTRéE = sqrt(a^2 cos^2(x) + b^2 cos^2(t+phi)</span>
+<span class="sd">    Minimisation de cette formule =&gt; obtention formule tg(2x) = alpha/beta&quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;a must be positive&#39;</span>
+    <span class="k">assert</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;b must be positive&#39;</span>
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">dphi</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># Line</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">phase</span>
+    <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">dphi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># Properly oriented ellipse</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mf">0.0</span>
+        <span class="k">return</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">sdphi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dphi</span><span class="p">)</span>
+    <span class="n">cdphi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dphi</span><span class="p">)</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">cdphi</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">sdphi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">sdphi</span><span class="o">*</span><span class="n">cdphi</span><span class="p">)</span>
+    <span class="n">t_optim_1</span><span class="p">,</span> <span class="n">t_optim_2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">beta</span><span class="o">/</span><span class="n">alpha</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">beta</span><span class="o">/</span><span class="n">alpha</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">max_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_1</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_1</span> <span class="o">+</span> <span class="n">dphi</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">min_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_2</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_2</span> <span class="o">+</span> <span class="n">dphi</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># print(np.cos(t_optim_1 + dphi)/np.cos(t_optim_1), np.cos(t_optim_2 + dphi)/np.cos(t_optim_2))</span>
+    <span class="k">if</span> <span class="n">max_length</span> <span class="o">&gt;</span> <span class="n">min_length</span><span class="p">:</span>
+        <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_1</span> <span class="o">+</span> <span class="n">dphi</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_1</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_2</span> <span class="o">+</span> <span class="n">dphi</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_optim_2</span><span class="p">))</span>
+        <span class="n">max_length</span><span class="p">,</span> <span class="n">min_length</span> <span class="o">=</span> <span class="n">min_length</span><span class="p">,</span> <span class="n">max_length</span>
+
+    <span class="k">return</span> <span class="n">max_length</span><span class="p">,</span> <span class="n">min_length</span><span class="p">,</span> <span class="n">phase</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

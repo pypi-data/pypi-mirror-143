@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optiAlgorithms &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="convergence" href="convergence/index.html" />
+    <link rel="prev" title="interfaceObjCons" href="../objAndCons/interfaceObjCons/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>optimize</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../characterization/index.html"><strong>characterization</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mathsToPhysics/index.html"><strong>mathsToPhysics</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../objAndCons/index.html"><strong>objAndCons</strong></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><strong>optiAlgorithms</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="convergence/index.html"><strong>convergence</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="NLOpt_Algorithm/index.html"><code class="docutils literal notranslate"><span class="pre">NLOpt_Algorithm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="algorithmInterface/index.html"><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiObjective_GA/index.html"><code class="docutils literal notranslate"><span class="pre">multiObjective_GA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../optiVariable/index.html"><code class="docutils literal notranslate"><span class="pre">optiVariable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizer/index.html"><code class="docutils literal notranslate"><span class="pre">optimizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>optimize</strong></a> &raquo;</li>
+        
+      <li><strong>optiAlgorithms</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/optimize/optiAlgorithms/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.optimize.optiAlgorithms">
+<span id="optialgorithms"></span><h1><strong>optiAlgorithms</strong><a class="headerlink" href="#module-optimeed.optimize.optiAlgorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="convergence/index.html"><strong>convergence</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="convergence/evolutionaryConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">evolutionaryConvergence</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="convergence/hypervolume/index.html"><code class="docutils literal notranslate"><span class="pre">hypervolume</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="convergence/interfaceConvergence/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceConvergence</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NLOpt_Algorithm/index.html"><code class="docutils literal notranslate"><span class="pre">NLOpt_Algorithm</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithmInterface/index.html"><code class="docutils literal notranslate"><span class="pre">algorithmInterface</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiObjective_GA/index.html"><code class="docutils literal notranslate"><span class="pre">multiObjective_GA</span></code></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA">
+<em class="property">class </em><code class="sig-name descname">MultiObjective_GA</code><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="algorithmInterface/index.html#optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface" title="optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface</span></code></a>, <a class="reference internal" href="../../core/index.html#optimeed.core.Option_class" title="optimeed.core.Option_class"><code class="xref py py-class docutils literal notranslate"><span class="pre">optimeed.core.Option_class</span></code></a></p>
+<p>Based on <a class="reference external" href="https://platypus.readthedocs.io/en/docs/index.html">Platypus Library</a>.
+Workflow:
+Define what to optimize and which function to call with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Problem</span></code>
+Define the initial population with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code>
+Define the algorithm. As options, define how to evaluate the elements with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Evaluator</span></code>, i.e., for multiprocessing.
+Define what is the termination condition of the algorithm with <code class="xref py py-class docutils literal notranslate"><span class="pre">TerminationCondition</span></code>. Here, termination condition is a maximum time.</p>
+<dl class="attribute">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.DIVISION_OUTER">
+<code class="sig-name descname">DIVISION_OUTER</code><em class="property"> = 0</em><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.DIVISION_OUTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.OPTI_ALGORITHM">
+<code class="sig-name descname">OPTI_ALGORITHM</code><em class="property"> = 1</em><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.OPTI_ALGORITHM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.NUMBER_OF_CORES">
+<code class="sig-name descname">NUMBER_OF_CORES</code><em class="property"> = 2</em><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.NUMBER_OF_CORES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.compute">
+<code class="sig-name descname">compute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">initialVectorGuess</em>, <em class="sig-param">listOfOptimizationVariables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_evaluationFunction">
+<code class="sig-name descname">set_evaluationFunction</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">evaluationFunction</em>, <em class="sig-param">callback_on_evaluation</em>, <em class="sig-param">numberOfObjectives</em>, <em class="sig-param">numberOfConstraints</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.set_evaluationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_evaluationFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_maxtime">
+<code class="sig-name descname">set_maxtime</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">maxTime</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.set_maxtime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.set_maxtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.optimize.optiAlgorithms.MultiObjective_GA.get_convergence">
+<code class="sig-name descname">get_convergence</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/optimize/optiAlgorithms/multiObjective_GA.html#MultiObjective_GA.get_convergence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.optimize.optiAlgorithms.MultiObjective_GA.get_convergence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="convergence/index.html" class="btn btn-neutral float-right" title="convergence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../objAndCons/interfaceObjCons/index.html" class="btn btn-neutral float-left" title="interfaceObjCons" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

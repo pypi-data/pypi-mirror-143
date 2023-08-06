@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>linkDataGraph &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="myjson" href="../myjson/index.html" />
+    <link rel="prev" title="interfaceDevice" href="../interfaceDevice/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>core</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ansi2html/index.html"><strong>ansi2html</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>core</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/core/linkDataGraph/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.core.linkDataGraph">
+<span id="linkdatagraph"></span><h1><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code><a class="headerlink" href="#module-optimeed.core.linkDataGraph" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.core.linkDataGraph.HowToPlotGraph">
+<em class="property">class </em><code class="sig-name descname">HowToPlotGraph</code><span class="sig-paren">(</span><em class="sig-param">attribute_x</em>, <em class="sig-param">attribute_y</em>, <em class="sig-param">kwargs_graph=None</em>, <em class="sig-param">excluded=None</em>, <em class="sig-param">exclusively=None</em>, <em class="sig-param">check_if_plot_elem=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.HowToPlotGraph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.linkDataGraph.HowToPlotGraph.exclude_col">
+<code class="sig-name descname">exclude_col</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_col</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.exclude_col"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.HowToPlotGraph.exclude_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add id_col to exclude from the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.HowToPlotGraph.exclusive_col">
+<code class="sig-name descname">exclusive_col</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_col</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.exclusive_col"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.HowToPlotGraph.exclusive_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set id_col to have exclusivity on the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.HowToPlotGraph.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#HowToPlotGraph.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.HowToPlotGraph.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.linkDataGraph.CollectionInfo">
+<em class="property">class </em><code class="sig-name descname">CollectionInfo</code><span class="sig-paren">(</span><em class="sig-param">theCollection</em>, <em class="sig-param">kwargs</em>, <em class="sig-param">theID</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.CollectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.linkDataGraph.CollectionInfo.get_collection">
+<code class="sig-name descname">get_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.CollectionInfo.get_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.CollectionInfo.get_kwargs">
+<code class="sig-name descname">get_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.CollectionInfo.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.CollectionInfo.get_id">
+<code class="sig-name descname">get_id</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#CollectionInfo.get_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.CollectionInfo.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph">
+<em class="property">class </em><code class="sig-name descname">LinkDataGraph</code><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph._collection_linker">
+<em class="property">class </em><code class="sig-name descname">_collection_linker</code><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph._collection_linker" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.add_link">
+<code class="sig-name descname">add_link</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idSlave</em>, <em class="sig-param">idMaster</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.add_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.add_link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.get_collection_master">
+<code class="sig-name descname">get_collection_master</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idToGet</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.get_collection_master"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.get_collection_master" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.is_slave">
+<code class="sig-name descname">is_slave</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idToCheck</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.is_slave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.is_slave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.set_same_master">
+<code class="sig-name descname">set_same_master</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idExistingSlave</em>, <em class="sig-param">idOtherSlave</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph._collection_linker.set_same_master"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph._collection_linker.set_same_master" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idExistingSlave</strong> – id collection of the existing slave</p></li>
+<li><p><strong>idOtherSlave</strong> – id collection of the new slave that has to be linked to an existing master</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.add_collection">
+<code class="sig-name descname">add_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theCollection</em>, <em class="sig-param">kwargs=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.add_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.add_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.add_graph">
+<code class="sig-name descname">add_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">howToPlotGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.add_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.createGraphs">
+<code class="sig-name descname">createGraphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.createGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.createGraphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_x_y_to_plot">
+<em class="property">static </em><code class="sig-name descname">get_x_y_to_plot</code><span class="sig-paren">(</span><em class="sig-param">theCollection</em>, <em class="sig-param">howToPlotGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_x_y_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_x_y_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_howToPlotGraph">
+<code class="sig-name descname">get_howToPlotGraph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_howToPlotGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_howToPlotGraph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_collectionInfo">
+<code class="sig-name descname">get_collectionInfo</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idCollectionInfo</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_collectionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_collectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.create_trace">
+<code class="sig-name descname">create_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">collectionInfo</em>, <em class="sig-param">howToPlotGraph</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.create_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.create_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_all_id_graphs">
+<code class="sig-name descname">get_all_id_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_all_id_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_all_id_graphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_all_traces_id_graph">
+<code class="sig-name descname">get_all_traces_id_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_all_traces_id_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_all_traces_id_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.update_graphs">
+<code class="sig-name descname">update_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.update_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.update_graphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.is_slave">
+<code class="sig-name descname">is_slave</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.is_slave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.is_slave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_idCollection_from_graph">
+<code class="sig-name descname">get_idCollection_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">getMaster=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idCollection_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_idCollection_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>From indices in the graph, get index of corresponding collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_collection_from_graph">
+<code class="sig-name descname">get_collection_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">getMaster=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_collection_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_collection_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>From indices in the graph, get corresponding collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_dataObject_from_graph">
+<code class="sig-name descname">get_dataObject_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_dataObject_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_dataObject_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_dataObjects_from_graph">
+<code class="sig-name descname">get_dataObjects_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_dataObjects_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_dataObjects_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.remove_element_from_graph">
+<code class="sig-name descname">remove_element_from_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoint</em>, <em class="sig-param">deleteFromMaster=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_element_from_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.remove_element_from_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove element from the graph, or the master collection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.remove_elements_from_trace">
+<code class="sig-name descname">remove_elements_from_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">idPoints</em>, <em class="sig-param">deleteFromMaster=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_elements_from_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.remove_elements_from_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performances optimisation when compared to <a class="reference internal" href="#optimeed.core.linkDataGraph.LinkDataGraph.remove_element_from_graph" title="optimeed.core.linkDataGraph.LinkDataGraph.remove_element_from_graph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LinkDataGraph.remove_element_from_graph()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.link_collection_to_graph_collection">
+<code class="sig-name descname">link_collection_to_graph_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">id_collection_graph</em>, <em class="sig-param">id_collection_master</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.link_collection_to_graph_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.link_collection_to_graph_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link data
+:param id_collection_graph:
+:param id_collection_master:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_graph_and_trace_from_collection">
+<code class="sig-name descname">get_graph_and_trace_from_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idCollection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_graph_and_trace_from_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_graph_and_trace_from_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverse search: from a collection, get the associated graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_mappingData_graph">
+<code class="sig-name descname">get_mappingData_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_mappingData_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_mappingData_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_mappingData_trace">
+<code class="sig-name descname">get_mappingData_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_mappingData_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_mappingData_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_idcollection_from_collection">
+<code class="sig-name descname">get_idcollection_from_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theCollection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idcollection_from_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_idcollection_from_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.linkDataGraph.LinkDataGraph.get_idPoints_from_indices_in_collection">
+<code class="sig-name descname">get_idPoints_from_indices_in_collection</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">indices_in_collection</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/linkDataGraph.html#LinkDataGraph.get_idPoints_from_indices_in_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.linkDataGraph.LinkDataGraph.get_idPoints_from_indices_in_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../myjson/index.html" class="btn btn-neutral float-right" title="myjson" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../interfaceDevice/index.html" class="btn btn-neutral float-left" title="interfaceDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,580 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.widget_graphs_visual &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.widget_graphs_visual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.widget_graphs_visual</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">printIfShown</span><span class="p">,</span> <span class="n">SHOW_WARNING</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.tikzTranslator</span> <span class="k">import</span> <span class="n">export_to_tikz_groupGraphs</span>  <span class="c1">#, convert_color</span>
+<span class="kn">from</span> <span class="nn">.graphsVisualWidget.pyqtgraphRedefine</span> <span class="k">import</span> <span class="n">myGraphicsLayoutWidget</span>
+<span class="kn">from</span> <span class="nn">.graphsVisualWidget.pyqtgraph.exporters.SVGExporter</span> <span class="k">import</span> <span class="n">SVGExporter</span>
+<span class="kn">from</span> <span class="nn">.graphsVisualWidget.graphVisual</span> <span class="k">import</span> <span class="n">GraphVisual</span>
+<span class="kn">from</span> <span class="nn">.graphsVisualWidget</span> <span class="k">import</span> <span class="n">pyqtgraph</span> <span class="k">as</span> <span class="n">pg</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+
+
+<div class="viewcode-block" id="on_graph_click_interface"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.on_graph_click_interface">[docs]</a><span class="k">class</span> <span class="nc">on_graph_click_interface</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Interface class for the action to perform when a point is clicked&quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="on_graph_click_interface.graph_clicked"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.on_graph_click_interface.graph_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">graph_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theGraphsVisual</span><span class="p">,</span> <span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">indices_points</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Action to perform when a graph is clicked</span>
+
+<span class="sd">        :param theGraphsVisual: class widget_graphs_visual that has called the method</span>
+<span class="sd">        :param index_graph: Index of the graph that has been clicked</span>
+<span class="sd">        :param index_trace: Index of the trace that has been clicked</span>
+<span class="sd">        :param indices_points: graph Indices of the points that have been clicked</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="on_graph_click_interface.get_name"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.on_graph_click_interface.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="widget_graphs_visual"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual">[docs]</a><span class="k">class</span> <span class="nc">widget_graphs_visual</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Widget element to draw a graph. The traces and graphs to draw are defined in :class:`~optimeed.visualize.graphs.Graphs.Graphs` taken as argument.</span>
+<span class="sd">     This widget is linked to the excellent third-party library pyqtgraph, under MIT license&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="widget_graphs_visual.signal_must_update"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/gui/widgets/widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.signal_must_update">[docs]</a>    <span class="n">signal_must_update</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">()</span>  <span class="c1"># Use this signal to refresh the graphs (signal_must_update.emit())</span></div>
+<div class="viewcode-block" id="widget_graphs_visual.signal_graph_changed"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/gui/widgets/widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.signal_graph_changed">[docs]</a>    <span class="n">signal_graph_changed</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">()</span>  <span class="c1"># This signal is send when the graph layout is changed (number of traces/graphs)</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theGraphs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param theGraphs: :class:`~optimeed.visualize.graphs.Graphs.Graphs`.</span>
+<span class="sd">        :param is_light: Light theme option (bool)</span>
+<span class="sd">        :param refresh_time: Refresh time (in seconds). If &lt; 0: never automatically refreshed.</span>
+<span class="sd">        :param highlight_last: Option to automatically highlight last point added in data.</span>
+<span class="sd">        :param linkX: Link the x-axis of the graphs together (bool)</span>
+<span class="sd">        :param actionOnClick: Action to perform when a point is clicked. Calls the method :meth:`~on_graph_click_interface.graph_clicked`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_light</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;is_light&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;refresh_time&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight_last</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;highlight_last&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linkX</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;linkX&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnClick</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;actionOnClick&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="c1"># Configure pyqtgraphs</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_light</span><span class="p">:</span>  <span class="c1"># Template &quot;Light&quot;</span>
+            <span class="n">background_color</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span>
+            <span class="n">foreground_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label_color</span> <span class="o">=</span> <span class="s1">&#39;#000&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">background_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+            <span class="n">foreground_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label_color</span> <span class="o">=</span> <span class="s1">&#39;#FFF&#39;</span>
+
+        <span class="n">pg</span><span class="o">.</span><span class="n">setConfigOption</span><span class="p">(</span><span class="s2">&quot;antialias&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">pg</span><span class="o">.</span><span class="n">setConfigOption</span><span class="p">(</span><span class="s1">&#39;background&#39;</span><span class="p">,</span> <span class="n">background_color</span><span class="p">)</span>  <span class="c1"># Color of background</span>
+        <span class="n">pg</span><span class="o">.</span><span class="n">setConfigOption</span><span class="p">(</span><span class="s1">&#39;foreground&#39;</span><span class="p">,</span> <span class="n">foreground_color</span><span class="p">)</span>  <span class="c1"># Color of ticks</span>
+        <span class="n">pg</span><span class="o">.</span><span class="n">setConfigOptions</span><span class="p">(</span><span class="n">useOpenGL</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Otherwise performance issue on line thickness</span>
+        <span class="c1"># pg.setConfigOption(&quot;crashWarning&quot;, True)</span>
+
+        <span class="c1"># Initializes upper widget and core variables</span>
+
+        <span class="n">main_vertical_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span> <span class="o">=</span> <span class="n">myGraphicsLayoutWidget</span><span class="p">()</span>
+        <span class="n">main_vertical_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="p">)</span>
+
+        <span class="c1"># self.theTraces = dict()</span>
+        <span class="c1"># self.theWGPlots = dict()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="c1"># # Add last buttons</span>
+        <span class="c1"># Export button</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayoutGUI</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+
+        <span class="c1"># self.centralLayout</span>
+        <span class="n">main_vertical_layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayoutGUI</span><span class="p">)</span>
+
+        <span class="c1"># Create graphs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span> <span class="o">=</span> <span class="n">theGraphs</span>
+        <span class="n">theGraphs</span><span class="o">.</span><span class="n">add_update_method</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">emit</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">linkX</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">link_axes</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_graphs</span><span class="p">(</span><span class="n">singleUpdate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">showMaximized</span><span class="p">()</span>
+
+        <span class="c1"># connect signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signal_must_update</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_graphs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="widget_graphs_visual.set_graph_disposition"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.set_graph_disposition">[docs]</a>    <span class="k">def</span> <span class="nf">set_graph_disposition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexGraph</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rowspan</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">colspan</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Change the graphs disposition.</span>
+
+<span class="sd">        :param indexGraph: index of the graph to change</span>
+<span class="sd">        :param row: row where to place the graph</span>
+<span class="sd">        :param col: column where to place the graph</span>
+<span class="sd">        :param rowspan: number of rows across which the graph spans</span>
+<span class="sd">        :param colspan: number of columns across which the graph spans</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">indexGraph</span><span class="p">)</span><span class="o">.</span><span class="n">theWGPlot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">ci</span><span class="o">.</span><span class="n">set_graph_disposition</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">rowspan</span><span class="p">,</span> <span class="n">colspan</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.__create_graph"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/gui/widgets/widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.__create_graph">[docs]</a>    <span class="k">def</span> <span class="nf">__create_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span> <span class="o">=</span> <span class="n">GraphVisual</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.__check_graphs"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/gui/widgets/widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.__check_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">__check_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">graph_changed</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="sd">&quot;&quot;&quot;If the graphs have been modified, update them.&quot;&quot;&quot;</span>
+        <span class="n">graphs2D</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_all_graphs_ids</span><span class="p">()</span>
+        <span class="c1"># # Check the graphs</span>
+
+        <span class="c1"># Create non existing graphs</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="n">graphs2D</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">idGraph</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">:</span>
+                <span class="n">graph_changed</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__create_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>  <span class="c1"># Create a graph</span>
+        <span class="c1"># Remove graphs that disappeared</span>
+        <span class="n">indexToRemove</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">idGraph</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">graphs2D</span><span class="p">:</span>
+                <span class="n">graph_changed</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">indexToRemove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="n">indexToRemove</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delete_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>
+
+        <span class="c1"># # Check the traces</span>
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">:</span>
+            <span class="n">graphVisual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span>
+            <span class="n">traces</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span>
+            <span class="n">tracesVisual</span> <span class="o">=</span> <span class="n">graphVisual</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span>
+            <span class="c1"># Create non existing traces</span>
+            <span class="k">for</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">trace</span> <span class="ow">in</span> <span class="n">traces</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">idTrace</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tracesVisual</span><span class="p">:</span>
+                    <span class="n">graph_changed</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">graphVisual</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">idTrace</span><span class="p">,</span> <span class="n">trace</span><span class="p">)</span>  <span class="c1"># Create the traces</span>
+
+            <span class="c1"># Remove traces that  disappeared</span>
+            <span class="n">indexToRemove</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">idTrace</span> <span class="ow">in</span> <span class="n">tracesVisual</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">idTrace</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">:</span>
+                    <span class="n">graph_changed</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">indexToRemove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">idTrace</span> <span class="ow">in</span> <span class="n">indexToRemove</span><span class="p">:</span>
+                <span class="n">graphVisual</span><span class="o">.</span><span class="n">delete_trace</span><span class="p">(</span><span class="n">idTrace</span><span class="p">)</span>
+
+            <span class="c1"># Set color</span>
+            <span class="n">graphVisual</span><span class="o">.</span><span class="n">apply_palette</span><span class="p">()</span>
+
+            <span class="n">graphVisual</span><span class="o">.</span><span class="n">set_legend</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">graph_changed</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">signal_graph_changed</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.on_click"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.on_click">[docs]</a>    <span class="k">def</span> <span class="nf">on_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plotDataItem</span><span class="p">,</span> <span class="n">clicked_points</span><span class="p">):</span>  <span class="c1"># Clicked_points = list of spotItem</span>
+        <span class="n">indices_points</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">clicked_points</span><span class="p">)</span>
+        <span class="n">index_graph</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">index_trace</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Get index of point</span>
+        <span class="n">all_points</span> <span class="o">=</span> <span class="n">plotDataItem</span><span class="o">.</span><span class="n">scatter</span><span class="o">.</span><span class="n">points</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">point</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clicked_points</span><span class="p">):</span>
+            <span class="n">indices_points</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_points</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+        <span class="c1"># get index of graph</span>
+        <span class="k">for</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">graphVisual</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">idTrace</span><span class="p">,</span> <span class="n">traceVisual</span> <span class="ow">in</span> <span class="n">graphVisual</span><span class="o">.</span><span class="n">get_all_traces</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">traceVisual</span><span class="o">.</span><span class="n">thePlotItem</span> <span class="o">==</span> <span class="n">plotDataItem</span><span class="p">:</span>
+                    <span class="n">index_graph</span> <span class="o">=</span> <span class="n">idGraph</span>
+                    <span class="n">index_trace</span> <span class="o">=</span> <span class="n">idTrace</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnClick</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># noinspection PyBroadException</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnClick</span><span class="o">.</span><span class="n">graph_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">indices_points</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Following error occurred in action on click :&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">(),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.update_graphs"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.update_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">update_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">singleUpdate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is used to update the graph. This is fast but NOT safe (especially when working with threads).</span>
+<span class="sd">        To limit the risks, please use self.signal_must_update.emit() instead.</span>
+
+<span class="sd">        :param singleUpdate: if set to False, the graph will periodically refres each self.refreshtime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__check_graphs</span><span class="p">()</span>
+        <span class="c1"># self.fast_update()</span>
+        <span class="k">for</span> <span class="n">graph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">singleUpdate</span><span class="p">:</span>
+            <span class="n">QtCore</span><span class="o">.</span><span class="n">QTimer</span><span class="p">()</span><span class="o">.</span><span class="n">singleShot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_graphs</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.fast_update"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.fast_update">[docs]</a>    <span class="k">def</span> <span class="nf">fast_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Use this method to update the graph in a fast way. NOT THREAD SAFE.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">graph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">fast_update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.exportGraphs"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.exportGraphs">[docs]</a>    <span class="k">def</span> <span class="nf">exportGraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Export the graphs&quot;&quot;&quot;</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFileDialog</span><span class="o">.</span><span class="n">getSaveFileName</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dlg</span><span class="p">:</span>
+            <span class="n">root</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">dlg</span><span class="p">)</span>
+            <span class="n">ext_svg</span> <span class="o">=</span> <span class="s1">&#39;.svg&#39;</span>
+            <span class="n">ext_png</span> <span class="o">=</span> <span class="s1">&#39;.png&#39;</span>
+            <span class="n">ext_pdf</span> <span class="o">=</span> <span class="s1">&#39;.pdf&#39;</span>
+            <span class="n">ext_txt</span> <span class="o">=</span> <span class="s1">&#39;.txt&#39;</span>
+            <span class="n">ext_tikz</span> <span class="o">=</span> <span class="s1">&#39;.tikz&#39;</span>
+
+            <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="n">ext_txt</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ext</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">export_txt</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="n">ext_txt</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="n">ext_svg</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ext</span> <span class="ow">or</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ext_png</span><span class="p">,</span> <span class="n">ext_pdf</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">export_svg</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="n">ext_svg</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="n">ext_png</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ext</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">export_png</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="n">ext_svg</span><span class="p">,</span> <span class="n">root</span> <span class="o">+</span> <span class="n">ext_png</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="n">ext_pdf</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ext</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">export_pdf</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="n">ext_svg</span><span class="p">,</span> <span class="n">root</span> <span class="o">+</span> <span class="n">ext_pdf</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="n">ext_tikz</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ext</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">export_tikz</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.export_txt"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.export_txt">[docs]</a>    <span class="k">def</span> <span class="nf">export_txt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename_txt</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="o">.</span><span class="n">export_str</span><span class="p">()</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename_txt</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">theStr</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.export_svg"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.export_svg">[docs]</a>    <span class="k">def</span> <span class="nf">export_svg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="n">my_exporter</span> <span class="o">=</span> <span class="n">SVGExporter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">sceneObj</span><span class="p">)</span>
+        <span class="n">my_exporter</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s1">&#39;scaling stroke&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">my_exporter</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="widget_graphs_visual.export_pdf"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.export_pdf">[docs]</a>    <span class="k">def</span> <span class="nf">export_pdf</span><span class="p">(</span><span class="n">filename_svg</span><span class="p">,</span> <span class="n">filename_pdf</span><span class="p">):</span>
+        <span class="n">converter_cmd_line</span> <span class="o">=</span> <span class="s1">&#39;inkscape -z &#39;</span> <span class="o">+</span> <span class="n">filename_svg</span> <span class="o">+</span> <span class="s1">&#39; -A &#39;</span> <span class="o">+</span> <span class="n">filename_pdf</span> <span class="o">+</span> <span class="s1">&#39; --export-area-drawing&#39;</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">converter_cmd_line</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="widget_graphs_visual.export_png"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.export_png">[docs]</a>    <span class="k">def</span> <span class="nf">export_png</span><span class="p">(</span><span class="n">filename_svg</span><span class="p">,</span> <span class="n">filename_png</span><span class="p">):</span>
+        <span class="n">converter_cmd_line</span> <span class="o">=</span> <span class="s1">&#39;inkscape -z &#39;</span> <span class="o">+</span> <span class="n">filename_svg</span> <span class="o">+</span> <span class="s1">&#39; -D -e &#39;</span> <span class="o">+</span> <span class="n">filename_png</span> <span class="o">+</span> <span class="s1">&#39; -d 400&#39;</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">converter_cmd_line</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.export_tikz"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.export_tikz">[docs]</a>    <span class="k">def</span> <span class="nf">export_tikz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">foldername_tikz</span><span class="p">):</span>
+        <span class="c1"># Additional parameters for tikz: log axes</span>
+        <span class="k">def</span> <span class="nf">additionalAxisOptions</span><span class="p">(</span><span class="n">graphId</span><span class="p">):</span>
+            <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">gridstyle</span> <span class="o">=</span> <span class="s2">&quot;grid style=</span><span class="si">{solid}</span><span class="s2">,&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">graphId</span><span class="p">)</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">ctrl</span><span class="o">.</span><span class="n">logXCheck</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;xmode=log,xtickten={0,...,10},&quot;</span> <span class="o">+</span> <span class="n">gridstyle</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">graphId</span><span class="p">)</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">ctrl</span><span class="o">.</span><span class="n">logYCheck</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="s2">&quot;ymode=log,ytickten={0,...,10},&quot;</span> <span class="o">+</span> <span class="n">gridstyle</span>
+            <span class="c1"># axisX = self.get_graph(graphId).get_axis(&quot;bottom&quot;)</span>
+            <span class="c1"># axisY = self.get_graph(graphId).get_axis(&quot;left&quot;)</span>
+            <span class="c1"># xrange = axisX.range</span>
+            <span class="c1"># yrange = axisY.range</span>
+            <span class="c1"># theStr += &quot;xmin={}, xmax={}\n, ymin={}, ymax={}\n&quot;.format(*xrange, *yrange)</span>
+            <span class="k">return</span> <span class="n">theStr</span>
+
+        <span class="c1"># def additionalTraceOptions(graphId, traceId):</span>
+        <span class="c1">#     theStr = &#39;&#39;</span>
+        <span class="c1">#     # theColor = self.get_graph(graphId).get_trace(traceId).get_color()</span>
+        <span class="c1">#     # if self.theGraphs.get_graph(graphId).get_trace(traceId).get_color() is None:</span>
+        <span class="c1">#     #     theStr += &quot;color={{rgb:red,{};green,{};blue,{}}},\n&quot;.format(*convert_color(theColor))</span>
+        <span class="c1">#     return theStr</span>
+        <span class="n">export_to_tikz_groupGraphs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theGraphs</span><span class="p">,</span> <span class="n">foldername_tikz</span><span class="p">,</span> <span class="n">additionalAxisOptions</span><span class="o">=</span><span class="n">additionalAxisOptions</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.link_axes"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.link_axes">[docs]</a>    <span class="k">def</span> <span class="nf">link_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">linkXToGraph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.get_graph"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.get_graph">[docs]</a>    <span class="k">def</span> <span class="nf">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GraphVisual</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get corresponding :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.GraphVisual.GraphVisual` of the graph idGraph&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.keyPressEvent"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.keyPressEvent">[docs]</a>    <span class="k">def</span> <span class="nf">keyPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        What happens if a key is pressed.</span>
+<span class="sd">        R: reset the axes to their default value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span><span class="p">()</span> <span class="o">==</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">Key_R</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">idGraphVisual</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphsVisual</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraphVisual</span><span class="p">)</span><span class="o">.</span><span class="n">theWGPlot</span><span class="o">.</span><span class="n">autoRange</span><span class="p">()</span></div>
+                <span class="c1"># graphVisual.set_lims(self.theTraces[idGraph][0])</span>
+
+<div class="viewcode-block" id="widget_graphs_visual.delete_graph"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.delete_graph">[docs]</a>    <span class="k">def</span> <span class="nf">delete_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete the graph idGraph&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="p">[</span><span class="n">idGraph</span><span class="p">]</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Graph already deleted&quot;</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.delete"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">graphs_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphsVisual</span><span class="p">()</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">graphID</span> <span class="ow">in</span> <span class="n">graphs_ids</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delete_graph</span><span class="p">(</span><span class="n">graphID</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.get_all_graphsVisual"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.get_all_graphsVisual">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_graphsVisual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a dictionary {idGraph: :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.GraphVisual.GraphVisual`}.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphsVisual</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.get_layout_buttons"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.get_layout_buttons">[docs]</a>    <span class="k">def</span> <span class="nf">get_layout_buttons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the QGraphicsLayout where it&#39;s possible to add buttons, etc.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayoutGUI</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.set_actionOnClick"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.set_actionOnClick">[docs]</a>    <span class="k">def</span> <span class="nf">set_actionOnClick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theActionOnClick</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Action to perform when the graph is clicked</span>
+
+<span class="sd">        :param theActionOnClick: :class:`on_graph_click_interface`</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theActionOnClick</span> <span class="o">=</span> <span class="n">theActionOnClick</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.set_title"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.set_title">[docs]</a>    <span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idGraph</span><span class="p">,</span> <span class="n">titleName</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set title of the graph</span>
+
+<span class="sd">        :param idGraph: id of the graph</span>
+<span class="sd">        :param titleName: title to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titleName</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_graphs_visual.set_article_template"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.set_article_template">[docs]</a>    <span class="k">def</span> <span class="nf">set_article_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph_size_x</span><span class="o">=</span><span class="mf">8.8</span><span class="p">,</span> <span class="n">graph_size_y</span><span class="o">=</span><span class="mf">4.4</span><span class="p">,</span> <span class="n">legendPosition</span><span class="o">=</span><span class="s2">&quot;NW&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method to set the graphs to article quality graph.</span>
+
+<span class="sd">        :param graph_size_x: width of the graph in cm</span>
+<span class="sd">        :param graph_size_y: height of the graph in cm</span>
+<span class="sd">        :param legendPosition: position of the legend (NE, SE, SW, NW)</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="s2">&quot;Times New Roman&quot;</span>
+
+        <span class="k">for</span> <span class="n">idGraph</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_graphsVisual</span><span class="p">():</span>
+            <span class="n">theGraph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">idGraph</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_fontTicks</span><span class="p">(</span><span class="mf">7.75</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_fontLabel</span><span class="p">(</span><span class="mf">7.75</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_fontLegend</span><span class="p">(</span><span class="mf">7.75</span><span class="p">,</span> <span class="s1">&#39;#111&#39;</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_label_pos</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_label_pos</span><span class="p">(</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">y_offset</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_offset_sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="n">legendPosition</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_width_cell_sample</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+            <span class="c1"># theGraph.set_color_palette(blackOnly)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">set_numberTicks</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+            <span class="n">theGraph</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+        <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logicalDpiX</span><span class="p">()</span> <span class="o">*</span> <span class="n">graph_size_x</span> <span class="o">/</span> <span class="mf">2.54</span> <span class="o">*</span> <span class="mf">1.1</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logicalDpiY</span><span class="p">()</span> <span class="o">*</span> <span class="n">graph_size_y</span> <span class="o">/</span> <span class="mf">2.54</span> <span class="o">*</span> <span class="mf">1.1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">ci</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvasWidget</span><span class="o">.</span><span class="n">ci</span><span class="o">.</span><span class="n">setFixedHeight</span><span class="p">(</span><span class="n">height</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

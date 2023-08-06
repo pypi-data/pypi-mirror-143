@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.fastPlot &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+      <li>optimeed.visualize.fastPlot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.fastPlot</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_graphs_visual</span> <span class="k">import</span> <span class="n">widget_graphs_visual</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.gui_mainWindow</span> <span class="k">import</span> <span class="n">gui_mainWindow</span><span class="p">,</span> <span class="n">start_qt_mainloop</span><span class="p">,</span> <span class="n">stop_qt_mainloop</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.graphs</span> <span class="k">import</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Graphs</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.smallGui</span> <span class="k">import</span> <span class="n">guiPyqtgraph</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize</span> <span class="k">import</span> <span class="n">on_click_measure</span>
+
+
+<div class="viewcode-block" id="PlotHolders"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders">[docs]</a><span class="k">class</span> <span class="nc">PlotHolders</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span> <span class="o">=</span> <span class="n">Graphs</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span> <span class="o">=</span> <span class="n">widget_graphs_visual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="p">,</span> <span class="n">refresh_time</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_light</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.new_plot()</span>
+
+<div class="viewcode-block" id="PlotHolders.add_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.add_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">new_plot</span><span class="p">()</span>
+        <span class="n">theData</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span><span class="p">,</span> <span class="n">theData</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlotHolders.get_wgGraphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.get_wgGraphs">[docs]</a>    <span class="k">def</span> <span class="nf">get_wgGraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span></div>
+
+<div class="viewcode-block" id="PlotHolders.new_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.new_plot">[docs]</a>    <span class="k">def</span> <span class="nf">new_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add_graph</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PlotHolders.set_title"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.set_title">[docs]</a>    <span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theTitle</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span><span class="p">,</span> <span class="n">theTitle</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlotHolders.reset"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="PlotHolders.axis_equal"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.PlotHolders.axis_equal">[docs]</a>    <span class="k">def</span> <span class="nf">axis_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">curr_g</span><span class="p">)</span><span class="o">.</span><span class="n">axis_equal</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="WindowHolders"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders">[docs]</a><span class="k">class</span> <span class="nc">WindowHolders</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">figures</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="WindowHolders.set_currFigure"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.set_currFigure">[docs]</a>    <span class="k">def</span> <span class="nf">set_currFigure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">currFigure</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="o">=</span> <span class="n">currFigure</span></div>
+
+<div class="viewcode-block" id="WindowHolders.add_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.add_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">new_figure</span><span class="p">()</span>
+        <span class="n">graph_id</span><span class="p">,</span> <span class="n">trace_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_curr_plotHolder</span><span class="p">()</span><span class="o">.</span><span class="n">add_plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">,</span> <span class="n">trace_id</span></div>
+
+<div class="viewcode-block" id="WindowHolders.set_title"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.set_title">[docs]</a>    <span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_curr_plotHolder</span><span class="p">()</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WindowHolders.new_figure"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.new_figure">[docs]</a>    <span class="k">def</span> <span class="nf">new_figure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span> <span class="o">=</span> <span class="n">PlotHolders</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">actionOnWindowClose</span><span class="p">(</span><span class="n">mainWindow</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+            <span class="c1"># stop_qt_mainloop()</span>
+            <span class="n">mainWindow</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="c1"># self.figures[self.currFigure] = self.create_figure()</span>
+
+        <span class="n">guiPyqtgraph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span><span class="o">.</span><span class="n">get_wgGraphs</span><span class="p">(),</span> <span class="n">actionsOnClick</span><span class="o">=</span><span class="p">[</span><span class="n">on_click_measure</span><span class="p">()])</span>
+        <span class="n">the_mainWindow</span> <span class="o">=</span> <span class="n">gui_mainWindow</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span><span class="o">.</span><span class="n">get_wgGraphs</span><span class="p">()],</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="n">actionOnWindowClosed</span><span class="o">=</span><span class="n">actionOnWindowClose</span><span class="p">)</span>
+        <span class="n">the_mainWindow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">figures</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_mainWindow</span></div>
+
+<div class="viewcode-block" id="WindowHolders.new_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.new_plot">[docs]</a>    <span class="k">def</span> <span class="nf">new_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_curr_plotHolder</span><span class="p">()</span><span class="o">.</span><span class="n">new_plot</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="WindowHolders.show"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">figures</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span><span class="o">.</span><span class="n">hold</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="WindowHolders.get_curr_plotHolder"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.get_curr_plotHolder">[docs]</a>    <span class="k">def</span> <span class="nf">get_curr_plotHolder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">currFigure</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="WindowHolders.get_wgGraphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.get_wgGraphs">[docs]</a>    <span class="k">def</span> <span class="nf">get_wgGraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">fig</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_curr_plotHolder</span><span class="p">()</span><span class="o">.</span><span class="n">get_wgGraphs</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotHolders</span><span class="p">[</span><span class="n">fig</span><span class="p">]</span><span class="o">.</span><span class="n">get_wgGraphs</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="WindowHolders.get_all_figures"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.get_all_figures">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_figures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">figures</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="WindowHolders.axis_equal"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.WindowHolders.axis_equal">[docs]</a>    <span class="k">def</span> <span class="nf">axis_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_curr_plotHolder</span><span class="p">()</span><span class="o">.</span><span class="n">axis_equal</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="myWindows"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.myWindows">[docs]</a><span class="n">myWindows</span> <span class="o">=</span> <span class="n">WindowHolders</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.plot">[docs]</a><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Plot new trace&quot;&quot;&quot;</span>
+    <span class="n">idPlot</span> <span class="o">=</span> <span class="n">myWindows</span><span class="o">.</span><span class="n">add_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hold</span><span class="p">:</span>
+        <span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">idPlot</span></div>
+
+
+<div class="viewcode-block" id="show"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.show">[docs]</a><span class="k">def</span> <span class="nf">show</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Show (start qt mainloop) graphs. Blocking&quot;&quot;&quot;</span>
+    <span class="n">myWindows</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="figure"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.figure">[docs]</a><span class="k">def</span> <span class="nf">figure</span><span class="p">(</span><span class="n">numb</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set current figure&quot;&quot;&quot;</span>
+    <span class="n">myWindows</span><span class="o">.</span><span class="n">set_currFigure</span><span class="p">(</span><span class="n">numb</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="new_plot"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.new_plot">[docs]</a><span class="k">def</span> <span class="nf">new_plot</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Add new plot&quot;&quot;&quot;</span>
+    <span class="n">myWindows</span><span class="o">.</span><span class="n">new_plot</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="set_title"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.set_title">[docs]</a><span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="n">theTitle</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set title of the plot&quot;&quot;&quot;</span>
+    <span class="n">myWindows</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">theTitle</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="axis_equal"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.axis_equal">[docs]</a><span class="k">def</span> <span class="nf">axis_equal</span><span class="p">():</span>
+    <span class="n">myWindows</span><span class="o">.</span><span class="n">axis_equal</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_all_figures"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.get_all_figures">[docs]</a><span class="k">def</span> <span class="nf">get_all_figures</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Get all existing figures&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">myWindows</span><span class="o">.</span><span class="n">get_all_figures</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_wgGraphs"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.visualize.fastPlot.get_wgGraphs">[docs]</a><span class="k">def</span> <span class="nf">get_wgGraphs</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Advanced option.</span>
+<span class="sd">    :return: :class:`~optimeed.visualize.gui.widgets.widget_graphs_visual.widget_graphs_visual`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">myWindows</span><span class="o">.</span><span class="n">get_wgGraphs</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

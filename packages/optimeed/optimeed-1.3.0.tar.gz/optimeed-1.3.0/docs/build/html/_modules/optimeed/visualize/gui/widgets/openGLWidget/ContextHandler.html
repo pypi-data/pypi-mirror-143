@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.openGLWidget.ContextHandler &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.openGLWidget.ContextHandler</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.openGLWidget.ContextHandler</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">OpenGL.GL</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">quaternions</span>
+
+
+<span class="n">MODE_ZOOM</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MODE_ROTATION</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">MODE_LIGHT</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">NUMBER_OF_MODES</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">CLIC_LEFT</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">CLIC_RIGHT</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<div class="viewcode-block" id="SpecialButtonsMapping"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.SpecialButtonsMapping">[docs]</a><span class="k">class</span> <span class="nc">SpecialButtonsMapping</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KEY_LEFT</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KEY_RIGHT</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KEY_UP</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KEY_DOWN</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KEY_TAB</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MOUSE_LEFT</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MOUSE_RIGHT</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="MyText"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.MyText">[docs]</a><span class="k">class</span> <span class="nc">MyText</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">fontSize</span><span class="p">,</span> <span class="n">theStr</span><span class="p">,</span> <span class="n">windowPosition</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fontSize</span> <span class="o">=</span> <span class="n">fontSize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">windowPosition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theStr</span> <span class="o">=</span> <span class="n">theStr</span></div>
+
+
+<div class="viewcode-block" id="ContextHandler"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler">[docs]</a><span class="k">class</span> <span class="nc">ContextHandler</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">200</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">200</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Initial viewPoint and light</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__displayScale__</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span> <span class="o">=</span> <span class="mi">5</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">40</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lightPosition</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">16100.0</span><span class="p">,</span> <span class="mf">15900.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">centerPosition</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">=</span> <span class="n">MODE_ROTATION</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currentClic</span> <span class="o">=</span> <span class="n">CLIC_LEFT</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginW</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginW</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginH</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">VP_W</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+<div class="viewcode-block" id="ContextHandler.set_specialButtonsMapping"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.set_specialButtonsMapping">[docs]</a>    <span class="k">def</span> <span class="nf">set_specialButtonsMapping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theSpecialButtonsMapping</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span> <span class="o">=</span> <span class="n">theSpecialButtonsMapping</span></div>
+
+<div class="viewcode-block" id="ContextHandler.set_deviceDrawer"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.set_deviceDrawer">[docs]</a>    <span class="k">def</span> <span class="nf">set_deviceDrawer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDeviceDrawer</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span> <span class="o">=</span> <span class="n">theDeviceDrawer</span></div>
+
+<div class="viewcode-block" id="ContextHandler.set_deviceToDraw"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.set_deviceToDraw">[docs]</a>    <span class="k">def</span> <span class="nf">set_deviceToDraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDeviceToDraw</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span> <span class="o">=</span> <span class="n">theDeviceToDraw</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">get_init_camera</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span> <span class="o">=</span> <span class="n">theDeviceToDraw</span></div>
+
+<div class="viewcode-block" id="ContextHandler.resizeWindowAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.resizeWindowAction">[docs]</a>    <span class="k">def</span> <span class="nf">resizeWindowAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_width</span><span class="p">,</span> <span class="n">new_height</span><span class="p">):</span>
+        <span class="n">ar_origin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+        <span class="n">ar_new</span> <span class="o">=</span> <span class="n">new_width</span> <span class="o">/</span> <span class="n">new_height</span>
+
+        <span class="n">scale_w</span> <span class="o">=</span> <span class="n">new_width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="n">scale_h</span> <span class="o">=</span> <span class="n">new_height</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+        <span class="k">if</span> <span class="n">ar_new</span> <span class="o">&gt;</span> <span class="n">ar_origin</span><span class="p">:</span>
+            <span class="n">scale_w</span> <span class="o">=</span> <span class="n">scale_h</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scale_h</span> <span class="o">=</span> <span class="n">scale_w</span>
+
+        <span class="n">margin_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">new_width</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="n">scale_w</span> <span class="o">/</span> <span class="n">ar_origin</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">margin_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">new_height</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="n">scale_h</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="n">scale_h</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">VP_W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="n">scale_w</span> <span class="o">/</span> <span class="n">ar_origin</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginH</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">margin_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginW</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">margin_x</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContextHandler.mouseWheelAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.mouseWheelAction">[docs]</a>    <span class="k">def</span> <span class="nf">mouseWheelAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deltaAngle</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">+=</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">*</span> <span class="n">deltaAngle</span></div>
+
+        <span class="c1"># GLUT.glutPostRedisplay()</span>
+
+<div class="viewcode-block" id="ContextHandler.mouseClicAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.mouseClicAction">[docs]</a>    <span class="k">def</span> <span class="nf">mouseClicAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">my_x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span> <span class="o">=</span> <span class="n">my_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currentClic</span> <span class="o">=</span> <span class="n">button</span></div>
+
+<div class="viewcode-block" id="ContextHandler.mouseMotionAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.mouseMotionAction">[docs]</a>    <span class="k">def</span> <span class="nf">mouseMotionAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentClic</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">MOUSE_LEFT</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">==</span> <span class="n">MODE_ROTATION</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">my_x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.8</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.8</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">==</span> <span class="n">MODE_ZOOM</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">0.005</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">==</span> <span class="n">MODE_LIGHT</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lightPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">my_x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lightPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">pass</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentClic</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">MOUSE_RIGHT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">centerPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">my_x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">3</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">centerPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xMouseOnClic</span> <span class="o">=</span> <span class="n">my_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yMouseOnClic</span> <span class="o">=</span> <span class="n">y</span></div>
+
+        <span class="c1"># GLUT.glutPostRedisplay()</span>
+
+<div class="viewcode-block" id="ContextHandler.keyboardPushAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.keyboardPushAction">[docs]</a>    <span class="k">def</span> <span class="nf">keyboardPushAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="c1"># print(chr(key))</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;+&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">+=</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;-&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">-=</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;M&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">&gt;=</span> <span class="n">NUMBER_OF_MODES</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">currentMode</span> <span class="o">-=</span> <span class="n">NUMBER_OF_MODES</span>
+        <span class="c1"># elif key == b&#39;\x1b&#39;:</span>
+        <span class="c1">#         self.stop = True</span>
+        <span class="c1"># ScaleLength management</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;S&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__displayScale__</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__displayScale__</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;&gt;&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;&lt;&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="c1"># Rotation Management</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">KEY_LEFT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">KEY_RIGHT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="o">+</span><span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">KEY_UP</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="o">+</span><span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span><span class="o">.</span><span class="n">KEY_DOWN</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;X&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Y&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="mi">90</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Z&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">=</span> <span class="mi">90</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">=</span> <span class="mi">90</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;R&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__reset__</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">keyboard_push_action</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContextHandler.keyboardReleaseAction"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.keyboardReleaseAction">[docs]</a>    <span class="k">def</span> <span class="nf">keyboardReleaseAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">my_x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ContextHandler.__draw_axis__"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.__draw_axis__">[docs]</a>    <span class="k">def</span> <span class="nf">__draw_axis__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__displayScale__</span><span class="p">:</span>
+            <span class="n">glColor3f</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">get_colour_scalebar</span><span class="p">())</span>
+
+            <span class="n">glDisable</span><span class="p">(</span><span class="n">GL_LIGHTING</span><span class="p">)</span>
+            <span class="n">glDisable</span><span class="p">(</span><span class="n">GL_DEPTH_TEST</span><span class="p">)</span>
+
+            <span class="n">relH</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">relW</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">glWindowPos2f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginW</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_W</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">relW</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginH</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">relH</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
+
+            <span class="n">glTranslatef</span><span class="p">(</span><span class="n">relW</span><span class="p">,</span> <span class="n">relH</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+            <span class="n">glLineWidth</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+            <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_LINES</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">glEnd</span><span class="p">()</span>
+
+            <span class="n">glLineWidth</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+            <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_LINES</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">glVertex2f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaleLength</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">)</span>
+            <span class="n">glEnd</span><span class="p">()</span>
+
+            <span class="c1"># theStr = str(self.scaleLength) + &#39;mm&#39;</span>
+            <span class="c1"># for char in theStr:</span>
+            <span class="c1">#     GLUT.glutBitmapCharacter(GLUT.GLUT_BITMAP_HELVETICA_18, ord(char))</span>
+            <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHTING</span><span class="p">)</span>
+            <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_DEPTH_TEST</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContextHandler.redraw"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.redraw">[docs]</a>    <span class="k">def</span> <span class="nf">redraw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
+            <span class="n">glLoadIdentity</span><span class="p">()</span>
+            <span class="n">glViewport</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_MarginH</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span><span class="p">)</span>
+
+            <span class="c1"># glClearDepth(1)  # just for completeness</span>
+            <span class="n">background_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">get_colour_background</span><span class="p">()</span>
+            <span class="n">glClearColor</span><span class="p">(</span><span class="n">background_color</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">background_color</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">background_color</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="n">GL_DEPTH_BUFFER_BIT</span><span class="p">)</span>  <span class="c1"># clear the screen</span>
+            <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">)</span>
+            <span class="n">glLoadIdentity</span><span class="p">()</span>
+            <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">,</span> <span class="n">GL_POSITION</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lightPosition</span><span class="p">)</span>
+
+            <span class="n">translationMatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">centerPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">centerPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+            <span class="n">scaleMatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+            <span class="c1"># Operations on matrix</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span><span class="p">:</span>
+                <span class="n">rot_y</span> <span class="o">=</span> <span class="n">quaternions</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">quaternions</span><span class="o">.</span><span class="n">axisangle_to_q</span><span class="p">((</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span> <span class="o">/</span> <span class="mi">180</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+                <span class="n">rot_x</span> <span class="o">=</span> <span class="n">quaternions</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">quaternions</span><span class="o">.</span><span class="n">axisangle_to_q</span><span class="p">((</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span> <span class="o">/</span> <span class="mi">180</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="n">quaternions</span><span class="o">.</span><span class="n">q_mult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span><span class="p">,</span> <span class="n">rot_x</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span> <span class="o">=</span> <span class="n">quaternions</span><span class="o">.</span><span class="n">q_mult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span><span class="p">,</span> <span class="n">rot_y</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">must_rotate</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="n">rotationMatrix</span> <span class="o">=</span> <span class="n">quaternions</span><span class="o">.</span><span class="n">q_to_mat4</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotation_accumulation</span><span class="p">)</span>
+            <span class="n">transfo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">scaleMatrix</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">rotationMatrix</span><span class="p">,</span> <span class="n">translationMatrix</span><span class="p">))</span>
+            <span class="n">glLoadMatrixf</span><span class="p">(</span><span class="n">transfo</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span><span class="p">)</span>
+            <span class="n">glLoadIdentity</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__draw_axis__</span><span class="p">()</span>
+            <span class="n">glFlush</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ContextHandler.get_text_to_write"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.get_text_to_write">[docs]</a>    <span class="k">def</span> <span class="nf">get_text_to_write</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">lineHeight</span> <span class="o">=</span> <span class="mi">20</span>
+        <span class="n">fontSize</span> <span class="o">=</span> <span class="mi">12</span>
+        <span class="n">textList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">textList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MyText</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">fontSize</span><span class="p">,</span> <span class="s1">&#39;Press [ESC] to exit&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span> <span class="o">-</span> <span class="n">lineHeight</span><span class="p">]))</span>
+        <span class="n">textList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MyText</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">fontSize</span><span class="p">,</span> <span class="s1">&#39;Reset: [R]&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VP_H</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">lineHeight</span><span class="p">]))</span>
+
+        <span class="n">textList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MyText</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">fontSize</span><span class="p">,</span> <span class="s1">&#39;Toggle/hide scale: [S], length control: [&lt;] or [&gt;]&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">lineHeight</span><span class="p">]))</span>
+        <span class="n">textList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MyText</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">fontSize</span><span class="p">,</span> <span class="s1">&#39;Axis: [X], [Y], [Z]&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">lineHeight</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">textList</span></div>
+
+<div class="viewcode-block" id="ContextHandler.__lightingInit__"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.__lightingInit__">[docs]</a>    <span class="k">def</span> <span class="nf">__lightingInit__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glPushMatrix</span><span class="p">()</span>
+        <span class="n">glLoadIdentity</span><span class="p">()</span>
+
+        <span class="n">glClearColor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">backgroundColor</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">backgroundColor</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">backgroundColor</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">glShadeModel</span><span class="p">(</span><span class="n">GL_SMOOTH</span><span class="p">)</span>
+
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">,</span> <span class="n">GL_POSITION</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lightPosition</span><span class="p">)</span>
+
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">,</span> <span class="n">GL_SPECULAR</span><span class="p">,</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">,</span> <span class="n">GL_AMBIENT</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">,</span> <span class="n">GL_DIFFUSE</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">])</span>
+
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT1</span><span class="p">,</span> <span class="n">GL_POSITION</span><span class="p">,</span> <span class="p">[</span><span class="mf">22300.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">55800.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT1</span><span class="p">,</span> <span class="n">GL_SPECULAR</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+        <span class="c1"># glLightfv(GL_LIGHT1, GL_AMBIENT, [2, 2, 2])</span>
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT1</span><span class="p">,</span> <span class="n">GL_DIFFUSE</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">])</span>
+        <span class="n">glLightfv</span><span class="p">(</span><span class="n">GL_LIGHT1</span><span class="p">,</span> <span class="n">GL_LINEAR_ATTENUATION</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHTING</span><span class="p">)</span>
+        <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">)</span>
+        <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHT1</span><span class="p">)</span>
+
+        <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_DEPTH_TEST</span><span class="p">)</span>
+        <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_NORMALIZE</span><span class="p">)</span>
+        <span class="n">glPopMatrix</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ContextHandler.initialize"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__lightingInit__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">get_opengl_options</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tipAngle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">viewAngle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">zoomLevel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span><span class="o">.</span><span class="n">get_init_camera</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContextHandler.__reset__"><a class="viewcode-back" href="../../../../../../API/optimeed/visualize/gui/widgets/openGLWidget/ContextHandler/index.html#optimeed.visualize.gui.widgets.openGLWidget.ContextHandler.ContextHandler.__reset__">[docs]</a>    <span class="k">def</span> <span class="nf">__reset__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">deviceDrawer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceDrawer</span>
+        <span class="n">deviceToDraw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDeviceToDraw</span>
+        <span class="n">keymap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theSpecialButtonsMapping</span>
+        <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_deviceDrawer</span><span class="p">(</span><span class="n">deviceDrawer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_deviceToDraw</span><span class="p">(</span><span class="n">deviceToDraw</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_specialButtonsMapping</span><span class="p">(</span><span class="n">keymap</span><span class="p">)</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

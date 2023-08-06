@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.optimize.optimizer &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../optimize.html">optimeed.optimize</a> &raquo;</li>
+        
+      <li>optimeed.optimize.optimizer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.optimize.optimizer</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.characterization</span> <span class="k">import</span> <span class="n">Characterization</span>
+<span class="kn">from</span> <span class="nn">.mathsToPhysics</span> <span class="k">import</span> <span class="n">MathsToPhysics</span>
+<span class="kn">from</span> <span class="nn">.optiAlgorithms</span> <span class="k">import</span> <span class="n">MultiObjective_GA</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.collection</span> <span class="k">import</span> <span class="n">AutosaveStruct</span><span class="p">,</span> <span class="n">ListDataStruct</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.tools</span> <span class="k">import</span> <span class="n">getPath_workspace</span><span class="p">,</span> <span class="n">indentParagraph</span><span class="p">,</span> <span class="n">create_unique_dirname</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.ansi2html</span> <span class="k">import</span> <span class="n">Ansi2HTMLConverter</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.options</span> <span class="k">import</span> <span class="n">Option_class</span>
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">printIfShown</span>
+<span class="kn">from</span> <span class="nn">optimeed.core.commonImport</span> <span class="k">import</span> <span class="n">SHOW_INFO</span><span class="p">,</span> <span class="n">SHOW_WARNING</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span>
+
+<div class="viewcode-block" id="default"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.default">[docs]</a><span class="n">default</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span></div>
+<span class="n">default</span><span class="p">[</span><span class="s1">&#39;M2P&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">MathsToPhysics</span><span class="p">()</span>
+<span class="n">default</span><span class="p">[</span><span class="s1">&#39;Charac&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Characterization</span><span class="p">()</span>
+<span class="n">default</span><span class="p">[</span><span class="s1">&#39;Algo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">MultiObjective_GA</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="PipeOptimization"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.PipeOptimization">[docs]</a><span class="k">class</span> <span class="nc">PipeOptimization</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Provides a live interface of the current optimization&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OUT_currentDevice</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OUT_historic</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="PipeOptimization.get_device"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.PipeOptimization.get_device">[docs]</a>    <span class="k">def</span> <span class="nf">get_device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; :return: :class:`~optimeed.core.interfaceDevice.InterfaceDevice` (not process safe, deprecated) &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUT_currentDevice</span></div>
+
+<div class="viewcode-block" id="PipeOptimization.get_historic"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.PipeOptimization.get_historic">[docs]</a>    <span class="k">def</span> <span class="nf">get_historic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; :return: :class:`~OptiHistoric` &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUT_historic</span></div>
+
+<div class="viewcode-block" id="PipeOptimization.set_device"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.PipeOptimization.set_device">[docs]</a>    <span class="k">def</span> <span class="nf">set_device</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OUT_currentDevice</span> <span class="o">=</span> <span class="n">theDevice</span></div>
+
+<div class="viewcode-block" id="PipeOptimization.set_historic"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.PipeOptimization.set_historic">[docs]</a>    <span class="k">def</span> <span class="nf">set_historic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theHistoric</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OUT_historic</span> <span class="o">=</span> <span class="n">theHistoric</span></div></div>
+
+
+<div class="viewcode-block" id="OptiHistoric"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric">[docs]</a><span class="k">class</span> <span class="nc">OptiHistoric</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Contains all the points that have been evaluated&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="OptiHistoric._DEVICE"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._DEVICE">[docs]</a>    <span class="n">_DEVICE</span> <span class="o">=</span> <span class="s2">&quot;autosaved&quot;</span></div>
+<div class="viewcode-block" id="OptiHistoric._LOGOPTI"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._LOGOPTI">[docs]</a>    <span class="n">_LOGOPTI</span> <span class="o">=</span> <span class="s2">&quot;logopti&quot;</span></div>
+<div class="viewcode-block" id="OptiHistoric._RESULTS"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._RESULTS">[docs]</a>    <span class="n">_RESULTS</span> <span class="o">=</span> <span class="s2">&quot;results&quot;</span></div>
+<div class="viewcode-block" id="OptiHistoric._CONVERGENCE"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._CONVERGENCE">[docs]</a>    <span class="n">_CONVERGENCE</span> <span class="o">=</span> <span class="s2">&quot;optiConvergence&quot;</span></div>
+
+<div class="viewcode-block" id="OptiHistoric._pointData"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._pointData">[docs]</a>    <span class="k">class</span> <span class="nc">_pointData</span><span class="p">:</span>
+<div class="viewcode-block" id="OptiHistoric._pointData.time"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._pointData.time">[docs]</a>        <span class="n">time</span><span class="p">:</span> <span class="nb">float</span></div>
+<div class="viewcode-block" id="OptiHistoric._pointData.objectives"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._pointData.objectives">[docs]</a>        <span class="n">objectives</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></div>
+<div class="viewcode-block" id="OptiHistoric._pointData.constraints"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric._pointData.constraints">[docs]</a>        <span class="n">constraints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></div>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">currTime</span><span class="p">,</span> <span class="n">objectives</span><span class="p">,</span> <span class="n">constraints</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">currTime</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">objectives</span> <span class="o">=</span> <span class="n">objectives</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span> <span class="o">=</span> <span class="n">constraints</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param optiname: Name of the optimization (short string)</span>
+<span class="sd">        :param autosave: Set to True to autosave the data during the optimization</span>
+<span class="sd">        :param compress_save: Set to True to compress data structure. Warning:</span>
+<span class="sd">        :param timer_autosave: Time in seconds to perform automatic save</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">autosaveTimer</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timer_autosave&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">optiname</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;optiname&#39;</span><span class="p">,</span> <span class="s1">&#39;opti&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autosave</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;autosave&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">compress_save</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;compress_save&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_DEVICE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_LOGOPTI</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_RESULTS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_CONVERGENCE</span><span class="p">]</span>
+
+        <span class="n">foldername</span> <span class="o">=</span> <span class="n">getPath_workspace</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">optiname</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autosave</span><span class="p">:</span>
+            <span class="n">foldername</span> <span class="o">=</span> <span class="n">create_unique_dirname</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">foldername</span> <span class="o">=</span> <span class="n">foldername</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">:</span>
+            <span class="n">newStruct</span> <span class="o">=</span> <span class="n">ListDataStruct</span><span class="p">(</span><span class="n">compress_save</span><span class="o">=</span><span class="n">compress_save</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">AutosaveStruct</span><span class="p">(</span><span class="n">newStruct</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">foldername</span><span class="p">,</span> <span class="n">key</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autosave</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_DEVICE</span><span class="p">]</span><span class="o">.</span><span class="n">start_autosave</span><span class="p">(</span><span class="n">autosaveTimer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_LOGOPTI</span><span class="p">]</span><span class="o">.</span><span class="n">start_autosave</span><span class="p">(</span><span class="n">autosaveTimer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_CONVERGENCE</span><span class="p">]</span><span class="o">.</span><span class="n">start_autosave</span><span class="p">(</span><span class="n">autosaveTimer</span><span class="p">)</span>
+
+<div class="viewcode-block" id="OptiHistoric.add_point"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.add_point">[docs]</a>    <span class="k">def</span> <span class="nf">add_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">currTime</span><span class="p">,</span> <span class="n">objectives</span><span class="p">,</span> <span class="n">constraints</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_DEVICE</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_LOGOPTI</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pointData</span><span class="p">(</span><span class="n">currTime</span><span class="p">,</span> <span class="n">objectives</span><span class="p">,</span> <span class="n">constraints</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.set_results"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.set_results">[docs]</a>    <span class="k">def</span> <span class="nf">set_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">devicesList</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_RESULTS</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">devicesList</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.set_convergence"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.set_convergence">[docs]</a>    <span class="k">def</span> <span class="nf">set_convergence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theConvergence</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_CONVERGENCE</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span><span class="o">.</span><span class="n">set_data</span><span class="p">([</span><span class="n">theConvergence</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.set_info"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.set_info">[docs]</a>    <span class="k">def</span> <span class="nf">set_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theInfo</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span><span class="o">.</span><span class="n">set_info</span><span class="p">(</span><span class="n">theInfo</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autosave</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">foldername</span> <span class="o">+</span> <span class="s2">&quot;/summary.html&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">myFile</span><span class="p">:</span>
+                <span class="n">conv</span> <span class="o">=</span> <span class="n">Ansi2HTMLConverter</span><span class="p">(</span><span class="n">dark_bg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">myFile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">conv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">theInfo</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.save"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autosave</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">stop_autosave</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.get_results"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.get_results">[docs]</a>    <span class="k">def</span> <span class="nf">get_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_RESULTS</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.get_convergence"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.get_convergence">[docs]</a>    <span class="k">def</span> <span class="nf">get_convergence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; :return: convergence :class:`~optimeed.optimize.optiAlgorithms.convergence.interfaceConvergence.InterfaceConvergence` &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_CONVERGENCE</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.get_devices"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.get_devices">[docs]</a>    <span class="k">def</span> <span class="nf">get_devices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; :return: List of devices (ordered by evaluation number) &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_DEVICE</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OptiHistoric.get_logopti"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.OptiHistoric.get_logopti">[docs]</a>    <span class="k">def</span> <span class="nf">get_logopti</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;:return: Log optimization (to check the convergence) &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_LOGOPTI</span><span class="p">]</span><span class="o">.</span><span class="n">get_datastruct</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="Optimizer"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer">[docs]</a><span class="k">class</span> <span class="nc">Optimizer</span><span class="p">(</span><span class="n">Option_class</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Main optimizing class&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Optimizer.DISPLAY_INFO"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.DISPLAY_INFO">[docs]</a>    <span class="n">DISPLAY_INFO</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="Optimizer.KWARGS_OPTIHISTO"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.KWARGS_OPTIHISTO">[docs]</a>    <span class="n">KWARGS_OPTIHISTO</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># Variables defining an optimization problem</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theMathsToPhysics</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theCharacterization</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Other optimization variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOptimization</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_been_set</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_time_sec</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DISPLAY_INFO</span><span class="p">,</span> <span class="s2">&quot;Display optimization info&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">KWARGS_OPTIHISTO</span><span class="p">,</span> <span class="s2">&quot;Kwargs opti historic&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+<div class="viewcode-block" id="Optimizer.set_optimizer"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.set_optimizer">[docs]</a>    <span class="k">def</span> <span class="nf">set_optimizer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDevice</span><span class="p">,</span> <span class="n">theObjectiveList</span><span class="p">,</span> <span class="n">theConstraintList</span><span class="p">,</span>
+                      <span class="n">theOptimizationVariables</span><span class="p">,</span> <span class="n">theOptimizationAlgorithm</span><span class="o">=</span><span class="n">default</span><span class="p">[</span><span class="s1">&#39;Algo&#39;</span><span class="p">],</span> <span class="n">theCharacterization</span><span class="o">=</span><span class="n">default</span><span class="p">[</span><span class="s1">&#39;Charac&#39;</span><span class="p">],</span>
+                      <span class="n">theMathsToPhysics</span><span class="o">=</span><span class="n">default</span><span class="p">[</span><span class="s1">&#39;M2P&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PipeOptimization</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prepare the optimizer for the optimization.</span>
+
+<span class="sd">        :param theDevice: object of type  :class:`~optimeed.core.interfaceDevice.InterfaceDevice`</span>
+<span class="sd">        :param theCharacterization: object of type :class:`~optimeed.optimize.characterization.interfaceCharacterization.InterfaceCharacterization`</span>
+<span class="sd">        :param theMathsToPhysics: object of type :class:`~optimeed.optimize.mathsToPhysics.interfaceMathsToPhysics.InterfaceMathsToPhysics`</span>
+<span class="sd">        :param theObjectiveList: list of objects of type :class:`~optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons`</span>
+<span class="sd">        :param theConstraintList: list of objects of type :class:`~optimeed.optimize.objAndCons.interfaceObjCons.InterfaceObjCons`</span>
+<span class="sd">        :param theOptimizationAlgorithm: list of objects of type :class:`~optimeed.optimize.optiAlgorithms.algorithmInterface.AlgorithmInterface`</span>
+<span class="sd">        :param theOptimizationVariables: list of objects of type :class:`~optimeed.optimize.optiVariable.OptimizationVariable`</span>
+<span class="sd">        :return: :class:`~PipeOptimization`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span> <span class="o">=</span> <span class="n">theDevice</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theMathsToPhysics</span> <span class="o">=</span> <span class="n">theMathsToPhysics</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theCharacterization</span> <span class="o">=</span> <span class="n">theCharacterization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span> <span class="o">=</span> <span class="n">theObjectiveList</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span> <span class="o">=</span> <span class="n">theConstraintList</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span> <span class="o">=</span> <span class="n">theOptimizationAlgorithm</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span> <span class="o">=</span> <span class="n">theOptimizationVariables</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span> <span class="o">=</span> <span class="n">OptiHistoric</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">KWARGS_OPTIHISTO</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOptimization</span> <span class="o">=</span> <span class="n">PipeOptimization</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOptimization</span><span class="o">.</span><span class="n">set_device</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOptimization</span><span class="o">.</span><span class="n">set_historic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_been_set</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">thePipeOptimization</span></div>
+
+<div class="viewcode-block" id="Optimizer.run_optimization"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.run_optimization">[docs]</a>    <span class="k">def</span> <span class="nf">run_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform the optimization.</span>
+
+<span class="sd">        :return: :class:`Collection &lt;optimeed.core.collection.Collection&gt;` of the best optimized devices</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Display what to optimize</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;------------------------------------</span><span class="se">\n</span><span class="s2">STARTING OPTIMIZATION: </span><span class="se">\n\n</span><span class="s2">------------------------------------&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">isToPrint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DISPLAY_INFO</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_been_set</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimizer has not been set ! Please use set_optimizer() function&quot;</span><span class="p">)</span>
+
+        <span class="n">optimization_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">formatInfo</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="o">.</span><span class="n">set_info</span><span class="p">(</span><span class="n">optimization_info</span><span class="p">)</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="n">optimization_info</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">isToPrint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DISPLAY_INFO</span><span class="p">))</span>
+
+        <span class="c1"># Start optimization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">initialVectorGuess</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theMathsToPhysics</span><span class="o">.</span><span class="n">fromPhysToMaths</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="o">.</span><span class="n">set_maxtime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_time_sec</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="o">.</span><span class="n">set_evaluationFunction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">evaluateObjectiveAndConstraints</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback_on_evaluation</span><span class="p">,</span>
+                                                             <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span><span class="p">))</span>
+
+        <span class="c1"># self.evaluateObjectiveAndConstraints(initialVectorGuess, None)</span>
+        <span class="n">convergence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="o">.</span><span class="n">get_convergence</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="o">.</span><span class="n">set_convergence</span><span class="p">(</span><span class="n">convergence</span><span class="p">)</span>
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Performing optimization&quot;</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">,</span> <span class="n">isToPrint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DISPLAY_INFO</span><span class="p">))</span>
+
+        <span class="n">solutions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">initialVectorGuess</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span><span class="p">)</span>  <span class="c1"># Optimize</span>
+
+        <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Optimization ended&quot;</span><span class="p">,</span> <span class="n">SHOW_INFO</span><span class="p">,</span> <span class="n">isToPrint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DISPLAY_INFO</span><span class="p">))</span>
+
+        <span class="c1"># Reevaluate results</span>
+        <span class="n">resultsdevices</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">solutions</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">solution</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">solutions</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theMathsToPhysics</span><span class="o">.</span><span class="n">fromMathsToPhys</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theCharacterization</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+            <span class="n">resultsdevices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="o">.</span><span class="n">set_results</span><span class="p">(</span><span class="n">resultsdevices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_been_set</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">resultsdevices</span><span class="p">,</span> <span class="n">convergence</span></div>
+
+<div class="viewcode-block" id="Optimizer.set_max_opti_time"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.set_max_opti_time">[docs]</a>    <span class="k">def</span> <span class="nf">set_max_opti_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_time_sec</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_time_sec</span> <span class="o">=</span> <span class="n">max_time_sec</span></div>
+
+<div class="viewcode-block" id="Optimizer.evaluateObjectiveAndConstraints"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.evaluateObjectiveAndConstraints">[docs]</a>    <span class="k">def</span> <span class="nf">evaluateObjectiveAndConstraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Evaluates the performances of device associated to entrance vector x. Outputs the objective function and the constraints,</span>
+<span class="sd">        and other data used in optiHistoric.</span>
+
+<span class="sd">        This function is NOT process safe: &quot;self.&quot; is actually a FORK in multiprocessing algorithms.</span>
+<span class="sd">        It means that the motor originally contained in self. is modified only in the fork, and only gathered by reaching the end of the fork.</span>
+<span class="sd">        It is not (yet?) possible to access this motor on the main process before the end of the fork. This behaviour could be changed by using pipes or Managers.</span>
+
+<span class="sd">        :param x: Input mathematical vector from optimization algorithm</span>
+<span class="sd">        :return: dictionary, containing objective values (list of scalar), constraint values (list of scalar), and other info (motor, time)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theMathsToPhysics</span><span class="o">.</span><span class="n">fromMathsToPhys</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span><span class="p">)</span>
+        <span class="c1"># noinspection PyBroadException</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theCharacterization</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;An error in characterization. Bypassing it to continue execution. Error :&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">(),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+
+        <span class="n">nbr_of_objectives</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span><span class="p">)</span>
+        <span class="n">objective_values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)]</span><span class="o">*</span><span class="n">nbr_of_objectives</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_of_objectives</span><span class="p">):</span>
+            <span class="c1"># noinspection PyBroadException</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">objective_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">objective_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)</span>
+                <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;An error in objectives. NaN value has been set to continue execution. Error:&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">(),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+
+        <span class="n">nbr_of_constraints</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span><span class="p">)</span>
+        <span class="n">constraint_values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)]</span> <span class="o">*</span> <span class="n">nbr_of_constraints</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbr_of_constraints</span><span class="p">):</span>
+            <span class="c1"># noinspection PyBroadException</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">constraint_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">constraint_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)</span>
+                <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;An error in constraints. NaN value has been set to continue execution. Error:&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">(),</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+
+        <span class="n">valuesToReturn</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">valuesToReturn</span><span class="p">[</span><span class="s2">&quot;device&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theDevice</span>
+        <span class="n">valuesToReturn</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">startingTime</span>
+        <span class="n">valuesToReturn</span><span class="p">[</span><span class="s2">&quot;objectives&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">objective_values</span>
+        <span class="n">valuesToReturn</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint_values</span>
+        <span class="k">return</span> <span class="n">valuesToReturn</span>  <span class="c1"># objective_values, constraint_values</span></div>
+
+<div class="viewcode-block" id="Optimizer.callback_on_evaluation"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.callback_on_evaluation">[docs]</a>    <span class="k">def</span> <span class="nf">callback_on_evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">returnedValues</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Save the output of evaluateObjectiveAndConstraints to optiHistoric.</span>
+<span class="sd">        This function should be called by the optimizer IN a process safe context.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOptiHistoric</span><span class="o">.</span><span class="n">add_point</span><span class="p">(</span><span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;device&quot;</span><span class="p">],</span> <span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">],</span> <span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;objectives&quot;</span><span class="p">],</span> <span class="n">returnedValues</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="Optimizer.formatInfo"><a class="viewcode-back" href="../../../API/optimeed/optimize/optimizer/index.html#optimeed.optimize.Optimizer.formatInfo">[docs]</a>    <span class="k">def</span> <span class="nf">formatInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">optimization_info</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;--------------------------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;OBJECTIVES:</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">for</span> <span class="n">objective</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theObjectives</span><span class="p">:</span>
+            <span class="n">optimization_info</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="s1">&#39;• &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">objective</span><span class="p">),</span> <span class="n">indent_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;CONSTRAINTS:</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">for</span> <span class="n">constraint</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theConstraints</span><span class="p">:</span>
+            <span class="n">optimization_info</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="s1">&#39;• &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constraint</span><span class="p">),</span> <span class="n">indent_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;OPTIMIZATION VARIABLES :</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">for</span> <span class="n">optiVariable</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationVariables</span><span class="p">:</span>
+            <span class="n">optimization_info</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="s1">&#39;• &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">optiVariable</span><span class="p">),</span> <span class="n">indent_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;OPTIMIZATION ALGORITHM:</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theOptimizationAlgorithm</span><span class="p">))</span>
+
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="s1">&#39;CHARACTERISATION SCHEME:</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">optimization_info</span> <span class="o">+=</span> <span class="n">indentParagraph</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theCharacterization</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">optimization_info</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

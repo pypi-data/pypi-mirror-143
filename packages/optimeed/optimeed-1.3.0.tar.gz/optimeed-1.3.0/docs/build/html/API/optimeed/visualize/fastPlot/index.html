@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>fastPlot &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Developer documentation" href="../../../../dev.html" />
+    <link rel="prev" title="displayOptimization" href="../displayOptimization/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../gui/index.html"><strong>gui</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/visualize/fastPlot/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.fastPlot">
+<span id="fastplot"></span><h1><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code><a class="headerlink" href="#module-optimeed.visualize.fastPlot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.visualize.fastPlot.PlotHolders">
+<em class="property">class </em><code class="sig-name descname">PlotHolders</code><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.add_plot">
+<code class="sig-name descname">add_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.add_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.add_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.get_wgGraphs">
+<code class="sig-name descname">get_wgGraphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.get_wgGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.get_wgGraphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.new_plot">
+<code class="sig-name descname">new_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.new_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.new_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.set_title">
+<code class="sig-name descname">set_title</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theTitle</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.set_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.set_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.PlotHolders.axis_equal">
+<code class="sig-name descname">axis_equal</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#PlotHolders.axis_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.PlotHolders.axis_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.visualize.fastPlot.WindowHolders">
+<em class="property">class </em><code class="sig-name descname">WindowHolders</code><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.set_currFigure">
+<code class="sig-name descname">set_currFigure</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">currFigure</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.set_currFigure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.set_currFigure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.add_plot">
+<code class="sig-name descname">add_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.add_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.add_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.set_title">
+<code class="sig-name descname">set_title</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.set_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.set_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.new_figure">
+<code class="sig-name descname">new_figure</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.new_figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.new_figure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.new_plot">
+<code class="sig-name descname">new_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.new_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.new_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.get_curr_plotHolder">
+<code class="sig-name descname">get_curr_plotHolder</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.get_curr_plotHolder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.get_curr_plotHolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.get_wgGraphs">
+<code class="sig-name descname">get_wgGraphs</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fig=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.get_wgGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.get_wgGraphs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.get_all_figures">
+<code class="sig-name descname">get_all_figures</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.get_all_figures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.get_all_figures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.fastPlot.WindowHolders.axis_equal">
+<code class="sig-name descname">axis_equal</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#WindowHolders.axis_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.WindowHolders.axis_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="optimeed.visualize.fastPlot.myWindows">
+<code class="sig-name descname">myWindows</code><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#myWindows"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.myWindows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">hold=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot new trace</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show (start qt mainloop) graphs. Blocking</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.figure">
+<code class="sig-name descname">figure</code><span class="sig-paren">(</span><em class="sig-param">numb</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set current figure</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.new_plot">
+<code class="sig-name descname">new_plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#new_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.new_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new plot</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.set_title">
+<code class="sig-name descname">set_title</code><span class="sig-paren">(</span><em class="sig-param">theTitle</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#set_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.set_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the plot</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.axis_equal">
+<code class="sig-name descname">axis_equal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#axis_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.axis_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.get_all_figures">
+<code class="sig-name descname">get_all_figures</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#get_all_figures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.get_all_figures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all existing figures</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.visualize.fastPlot.get_wgGraphs">
+<code class="sig-name descname">get_wgGraphs</code><span class="sig-paren">(</span><em class="sig-param">fig=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/visualize/fastPlot.html#get_wgGraphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.fastPlot.get_wgGraphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced option.
+:return: <a class="reference internal" href="../gui/widgets/widget_graphs_visual/index.html#optimeed.visualize.gui.widgets.widget_graphs_visual.widget_graphs_visual" title="optimeed.visualize.gui.widgets.widget_graphs_visual.widget_graphs_visual"><code class="xref py py-class docutils literal notranslate"><span class="pre">widget_graphs_visual</span></code></a></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../../dev.html" class="btn btn-neutral float-right" title="Developer documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../displayOptimization/index.html" class="btn btn-neutral float-left" title="displayOptimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

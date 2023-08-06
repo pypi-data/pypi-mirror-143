@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+          <li><a href="../examplesActionOnClick.html">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_anim</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_graphs_visual</span> <span class="k">import</span> <span class="n">on_graph_click_interface</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.gui_data_animation</span> <span class="k">import</span> <span class="n">DataAnimationVisuals</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_text</span> <span class="k">import</span> <span class="n">widget_text</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_line_drawer</span> <span class="k">import</span> <span class="n">widget_line_drawer</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+
+
+<span class="sd">&quot;&quot;&quot;Classes for Data Animation&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="DataAnimationOpenGL"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGL">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationOpenGL</span><span class="p">(</span><span class="n">DataAnimationVisuals</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements :class:`~DataAnimationVisuals` to show opengl drawing&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theOpenGLWidget</span><span class="p">,</span> <span class="n">theId</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">window_title</span><span class="o">=</span><span class="s1">&#39;Animation&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">theId</span><span class="p">,</span> <span class="n">window_title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOpenGLWidget</span> <span class="o">=</span> <span class="n">theOpenGLWidget</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">theOpenGLWidget</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DataAnimationOpenGL.update_widget_w_animation"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGL.update_widget_w_animation">[docs]</a>    <span class="k">def</span> <span class="nf">update_widget_w_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theOpenGLWidget</span><span class="o">.</span><span class="n">set_deviceToDraw</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_element_animations</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="DataAnimationOpenGL.export_widget"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGL.export_widget">[docs]</a>    <span class="k">def</span> <span class="nf">export_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DataAnimationOpenGL.delete_key_widgets"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGL.delete_key_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">delete_key_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="DataAnimationOpenGLwText"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGLwText">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationOpenGLwText</span><span class="p">(</span><span class="n">DataAnimationOpenGL</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements :class:`~DataAnimationVisuals` to show opengl drawing and text&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">is_light</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span> <span class="o">=</span> <span class="n">widget_text</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">is_light</span><span class="o">=</span><span class="n">is_light</span><span class="p">,</span> <span class="n">convertToHtml</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DataAnimationOpenGLwText.update_widget_w_animation"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGLwText.update_widget_w_animation">[docs]</a>    <span class="k">def</span> <span class="nf">update_widget_w_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">update_widget_w_animation</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_element_animations</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">index</span><span class="p">),</span> <span class="n">convertToHtml</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationOpenGLwText.get_interesting_elements"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationOpenGLwText.get_interesting_elements">[docs]</a>    <span class="k">def</span> <span class="nf">get_interesting_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">devices_list</span><span class="p">):</span>
+        <span class="n">all_listOfText</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices_list</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">devices_list</span><span class="p">,</span> <span class="n">all_listOfText</span><span class="p">]</span></div></div>
+
+
+<div class="viewcode-block" id="DataAnimationLines"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationLines">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationLines</span><span class="p">(</span><span class="n">DataAnimationVisuals</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements :class:`~DataAnimationVisuals` to show drawing made out of lines (:class:`~optimeed.visualize.gui.widgets.widget_line_drawer`)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_lines_method</span><span class="p">,</span> <span class="n">is_light</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">theId</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">window_title</span><span class="o">=</span><span class="s1">&#39;Animation&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param get_lines_method: Method that takes Device as argument and returns list of lines</span>
+<span class="sd">        :param is_light:</span>
+<span class="sd">        :param theId:</span>
+<span class="sd">        :param window_title:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">theId</span><span class="p">,</span> <span class="n">window_title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span> <span class="o">=</span> <span class="n">widget_line_drawer</span><span class="p">(</span><span class="n">is_light</span><span class="o">=</span><span class="n">is_light</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_lines_method</span> <span class="o">=</span> <span class="n">get_lines_method</span>
+
+<div class="viewcode-block" id="DataAnimationLines.export_widget"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationLines.export_widget">[docs]</a>    <span class="k">def</span> <span class="nf">export_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span><span class="o">.</span><span class="n">paintEvent</span><span class="p">(</span><span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">painter</span><span class="o">=</span><span class="n">painter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationLines.delete_key_widgets"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationLines.delete_key_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">delete_key_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span><span class="o">.</span><span class="n">delete_lines</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationLines.update_widget_w_animation"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationLines.update_widget_w_animation">[docs]</a>    <span class="k">def</span> <span class="nf">update_widget_w_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span><span class="o">.</span><span class="n">set_lines</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_element_animations</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="p">),</span> <span class="n">key_id</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">pen</span><span class="o">=</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_base_pen</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DataAnimationLines.get_interesting_elements"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationLines.get_interesting_elements">[docs]</a>    <span class="k">def</span> <span class="nf">get_interesting_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">devices_list</span><span class="p">):</span>
+        <span class="n">all_listsOfLines</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lines_method</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices_list</span><span class="p">]</span>
+        <span class="n">all_listOfText</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices_list</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">all_listsOfLines</span><span class="p">,</span> <span class="n">all_listOfText</span><span class="p">]</span></div></div>
+
+
+<div class="viewcode-block" id="DataAnimationVisualswText"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationVisualswText">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationVisualswText</span><span class="p">(</span><span class="n">DataAnimationLines</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Same as :class:`~DataAnimationLines` but also with text&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span> <span class="o">=</span> <span class="n">widget_text</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">is_light</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;is_light&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="n">convertToHtml</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DataAnimationVisualswText.update_widget_w_animation"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.DataAnimationVisualswText.update_widget_w_animation">[docs]</a>    <span class="k">def</span> <span class="nf">update_widget_w_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qtLinesDrawer</span><span class="o">.</span><span class="n">set_lines</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_element_animations</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="p">),</span> <span class="n">key_id</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">pen</span><span class="o">=</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_base_pen</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textWidget</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_element_animations</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">index</span><span class="p">),</span> <span class="n">convertToHtml</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="on_graph_click_showAnim"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_graph_click_showAnim">[docs]</a><span class="k">class</span> <span class="nc">on_graph_click_showAnim</span><span class="p">(</span><span class="n">on_graph_click_interface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;On click: add or remove an element to animate&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theLinkDataGraph</span><span class="p">,</span> <span class="n">theAnimation</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param theLinkDataGraph: :class:`~optimeed.visualize.high_level.LinkDataGraph.LinkDataGraph`</span>
+<span class="sd">        :param theAnimation: :class:`~DataAnimationVisuals`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theLinkDataGraph</span> <span class="o">=</span> <span class="n">theLinkDataGraph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theAnimation</span> <span class="o">=</span> <span class="n">theAnimation</span>
+
+<div class="viewcode-block" id="on_graph_click_showAnim.graph_clicked"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_graph_click_showAnim.graph_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">graph_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theGraphVisual</span><span class="p">,</span> <span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">indices_points</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">trace_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">index_graph</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">index_trace</span><span class="p">)</span>
+            <span class="n">theTrace</span> <span class="o">=</span> <span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">index_graph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">index_trace</span><span class="p">)</span>
+
+            <span class="c1"># index_in_data = theTrace.get_data().get_dataIndex_from_graphIndex(index_point)</span>
+
+            <span class="n">permutation</span> <span class="o">=</span> <span class="n">theTrace</span><span class="o">.</span><span class="n">theData</span><span class="o">.</span><span class="n">get_permutations</span><span class="p">()</span>
+            <span class="n">indicesInGraph</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">permutation</span><span class="p">)))</span>  <span class="c1"># Orders them accordingly to plot (data -&gt; plot)</span>
+            <span class="n">all_listsOfDevices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theLinkDataGraph</span><span class="o">.</span><span class="n">get_dataObjects_from_graph</span><span class="p">(</span><span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">indicesInGraph</span><span class="p">)</span>
+
+            <span class="c1"># If trace wasn&#39;t present in any window ...</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">theAnimation</span><span class="o">.</span><span class="n">contains_trace</span><span class="p">(</span><span class="n">trace_id</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theAnimation</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">trace_id</span><span class="p">,</span> <span class="n">all_listsOfDevices</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">index_point</span> <span class="ow">in</span> <span class="n">indices_points</span><span class="p">:</span>
+                <span class="n">index_in_graph</span> <span class="o">=</span> <span class="n">index_point</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theAnimation</span><span class="o">.</span><span class="n">add_elementToTrace</span><span class="p">(</span><span class="n">trace_id</span><span class="p">,</span> <span class="n">index_in_graph</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">theAnimation</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Following error occurred in visualisation :&quot;</span> <span class="o">+</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="on_graph_click_showAnim.get_name"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_graph_click_showAnim.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Animation&quot;</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../../../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+          <li><a href="../examplesActionOnClick.html">optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.widget_graphs_visual</span> <span class="k">import</span> <span class="n">on_graph_click_interface</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph</span> <span class="k">import</span> <span class="n">mkPen</span><span class="p">,</span> <span class="n">TextItem</span>
+<span class="kn">from</span> <span class="nn">optimeed.visualize.gui.widgets.graphsVisualWidget.pyqtgraph</span> <span class="k">import</span> <span class="n">GraphicsObject</span><span class="p">,</span> <span class="n">Point</span>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span>
+
+
+<div class="viewcode-block" id="LineItem"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.LineItem">[docs]</a><span class="k">class</span> <span class="nc">LineItem</span><span class="p">(</span><span class="n">GraphicsObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+        <span class="n">GraphicsObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">point1</span> <span class="o">=</span> <span class="n">point1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="o">=</span> <span class="n">point2</span>
+
+<div class="viewcode-block" id="LineItem.paint"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.LineItem.paint">[docs]</a>    <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setRenderHint</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QPainter</span><span class="o">.</span><span class="n">Antialiasing</span><span class="p">)</span>
+        <span class="n">pen</span> <span class="o">=</span> <span class="n">mkPen</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">setWidthF</span><span class="p">(</span><span class="n">pen</span><span class="o">.</span><span class="n">widthF</span><span class="p">())</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">drawLine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point2</span><span class="p">)</span></div>
+
+        <span class="c1"># p.setFont(QtGui.QFont(&#39;Helvetica&#39;, 1))</span>
+        <span class="c1"># p.drawText(self.point1, self.text)  # Problem</span>
+
+<div class="viewcode-block" id="LineItem.boundingRect"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/gui/widgets/graphsVisualWidget/examplesActionOnClick/on_click_measure/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.LineItem.boundingRect">[docs]</a>    <span class="k">def</span> <span class="nf">boundingRect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">viewRect</span><span class="p">()</span>  <span class="c1"># bounds of containing ViewBox mapped to local coords.</span>
+        <span class="k">if</span> <span class="n">vr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QRectF</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QRectF</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point2</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="on_click_measure"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure">[docs]</a><span class="k">class</span> <span class="nc">on_click_measure</span><span class="p">(</span><span class="n">on_graph_click_interface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;On Click: Measure distance. Click on two points to perform that action&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">point1</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">added_items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gtp1</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gtp2</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="on_click_measure.graph_clicked"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure.graph_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">graph_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">the_graph_visual</span><span class="p">,</span> <span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">indices_points</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span> <span class="o">=</span> <span class="n">index_graph</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span> <span class="o">=</span> <span class="n">the_graph_visual</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span> <span class="o">==</span> <span class="n">index_graph</span><span class="p">:</span>
+            <span class="n">theTrace</span> <span class="o">=</span> <span class="n">the_graph_visual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">index_graph</span><span class="p">)</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">index_trace</span><span class="p">)</span>
+            <span class="n">point</span> <span class="o">=</span> <span class="n">indices_points</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">clickedPoint</span> <span class="o">=</span> <span class="n">theTrace</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">point</span><span class="p">)</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">point1</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">point1</span> <span class="o">=</span> <span class="n">clickedPoint</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gtp1</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="o">=</span> <span class="n">clickedPoint</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">display_distance</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gtp2</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">point1</span> <span class="o">=</span> <span class="n">clickedPoint</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">reset_distance</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gtp1</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_graph</span><span class="p">,</span> <span class="n">index_trace</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
+            <span class="n">theTrace</span><span class="o">.</span><span class="n">set_brush</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="on_click_measure.reset_distance"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure.reset_distance">[docs]</a>    <span class="k">def</span> <span class="nf">reset_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">added_items</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span><span class="p">)</span><span class="o">.</span><span class="n">remove_feature</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">added_items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">gtp</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">gtp1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gtp2</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gtp</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">gtp</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">get_trace</span><span class="p">(</span><span class="n">gtp</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reset_brush</span><span class="p">(</span><span class="n">gtp</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gtp1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gtp2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="on_click_measure.display_distance"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure.display_distance">[docs]</a>    <span class="k">def</span> <span class="nf">display_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="o">.</span><span class="n">x</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">point2</span><span class="o">.</span><span class="n">x</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="o">.</span><span class="n">y</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">point2</span><span class="o">.</span><span class="n">y</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">lineItem</span> <span class="o">=</span> <span class="n">LineItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point2</span><span class="p">)</span>
+        <span class="n">textItem</span> <span class="o">=</span> <span class="n">TextItem</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:#.4g}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">distance</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+        <span class="n">textItem</span><span class="o">.</span><span class="n">setPos</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">point2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">point1</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span>
+        <span class="c1"># textItem.setParentItem(lineItem)</span>
+        <span class="c1"># textItem.setAngle(np.arctan((self.point2.y()-self.point1.y())/(self.point2.x()-self.point1.x()))*180/np.pi)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span><span class="p">)</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">lineItem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theGraphVisual</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clicked_graph</span><span class="p">)</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">textItem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">added_items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lineItem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">added_items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">textItem</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="on_click_measure.get_name"><a class="viewcode-back" href="../../../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widgets.graphsVisualWidget.examplesActionOnClick.on_click_measure.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Measure distance&quot;</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

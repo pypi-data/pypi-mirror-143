@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>additional_tools &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="collection" href="../collection/index.html" />
+    <link rel="prev" title="util" href="../ansi2html/util/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>core</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ansi2html/index.html"><strong>ansi2html</strong></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graphs/index.html"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>core</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/core/additional_tools/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.core.additional_tools">
+<span id="additional-tools"></span><h1><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code><a class="headerlink" href="#module-optimeed.core.additional_tools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.core.additional_tools.fast_LUT_interpolation">
+<em class="property">class </em><code class="sig-name descname">fast_LUT_interpolation</code><span class="sig-paren">(</span><em class="sig-param">independent_variables</em>, <em class="sig-param">dependent_variables</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.fast_LUT_interpolation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class designed for fast interpolation in look-up table when successive searchs are called often.
+Otherwise use griddata</p>
+<dl class="method">
+<dt id="optimeed.core.additional_tools.fast_LUT_interpolation.interp_tri">
+<em class="property">static </em><code class="sig-name descname">interp_tri</code><span class="sig-paren">(</span><em class="sig-param">xyz</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation.interp_tri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.fast_LUT_interpolation.interp_tri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.additional_tools.fast_LUT_interpolation.interpolate">
+<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">point</em>, <em class="sig-param">fill_value=np.nan</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#fast_LUT_interpolation.interpolate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.fast_LUT_interpolation.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the interpolation
+:param point: coordinates to interpolate (tuple or list of tuples for multipoints)
+:param fill_value: value to put if extrapolated.
+:return: coordinates</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.interpolate_table">
+<code class="sig-name descname">interpolate_table</code><span class="sig-paren">(</span><em class="sig-param">x0</em>, <em class="sig-param">x_values</em>, <em class="sig-param">y_values</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#interpolate_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.interpolate_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>From sorted table (x,y) find y0 corresponding to x0 (linear interpolation)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.derivate">
+<code class="sig-name descname">derivate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#derivate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.derivate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.linspace">
+<code class="sig-name descname">linspace</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em>, <em class="sig-param">npoints</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#linspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.linspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.reconstitute_signal">
+<code class="sig-name descname">reconstitute_signal</code><span class="sig-paren">(</span><em class="sig-param">amplitudes</em>, <em class="sig-param">phases</em>, <em class="sig-param">numberOfPeriods=1</em>, <em class="sig-param">x_points=None</em>, <em class="sig-param">n_points=50</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#reconstitute_signal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.reconstitute_signal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstitute the signal from fft. Number of periods of the signal must be specified if different of 1</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.my_fft">
+<code class="sig-name descname">my_fft</code><span class="sig-paren">(</span><em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#my_fft"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.my_fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Real FFT of signal Bx, with real amplitude of harmonics. Input signal must be within a period.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.cart2pol">
+<code class="sig-name descname">cart2pol</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#cart2pol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.cart2pol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.pol2cart">
+<code class="sig-name descname">pol2cart</code><span class="sig-paren">(</span><em class="sig-param">rho</em>, <em class="sig-param">phi</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#pol2cart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.pol2cart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.partition">
+<code class="sig-name descname">partition</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#partition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.quicksort">
+<code class="sig-name descname">quicksort</code><span class="sig-paren">(</span><em class="sig-param">array</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#quicksort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.quicksort" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.dist">
+<code class="sig-name descname">dist</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">q</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Euclidean distance between points p and q.
+:param p: [x, y]
+:param q: [x, y]
+:return: distance (float)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.sparse_subset">
+<code class="sig-name descname">sparse_subset</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#sparse_subset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.sparse_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a maximal list of elements of points such that no pairs of
+points in the result have distance less than r.
+:param points: list of tuples (x,y)
+:param r: distance
+:return: corresponding subset (list), indices of the subset (list)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.integrate">
+<code class="sig-name descname">integrate</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs Integral(x[0] to x[-1]) of y dx</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – x axis coordinates (list)</p></li>
+<li><p><strong>y</strong> – y axis coordinates (list)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>integral value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.my_fourier">
+<code class="sig-name descname">my_fourier</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">n</em>, <em class="sig-param">L</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#my_fourier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.my_fourier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fourier analys</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – x axis coordinates</p></li>
+<li><p><strong>y</strong> – y axis coordinates</p></li>
+<li><p><strong>n</strong> – number of considered harmonic</p></li>
+<li><p><strong>L</strong> – half-period length</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a and b coefficients (y = a*cos(x) + b*sin(y))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optimeed.core.additional_tools.get_ellipse_axes">
+<code class="sig-name descname">get_ellipse_axes</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">dphi</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/additional_tools.html#get_ellipse_axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.additional_tools.get_ellipse_axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trouve les longueurs des axes majeurs et mineurs de l’ellipse, ainsi que l’orientation de l’ellipse.
+ellipse: x(t) = A*cos(t), y(t) = B*cos(t+dphi)
+Etapes: longueur demi ellipse CENTRéE = sqrt(a^2 cos^2(x) + b^2 cos^2(t+phi)
+Minimisation de cette formule =&gt; obtention formule tg(2x) = alpha/beta</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../collection/index.html" class="btn btn-neutral float-right" title="collection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ansi2html/util/index.html" class="btn btn-neutral float-left" title="util" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

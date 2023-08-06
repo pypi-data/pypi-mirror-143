@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.widgets.widget_openGL &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+          <li><a href="../widgets.html">optimeed.visualize.gui.widgets</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.widgets.widget_openGL</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.widgets.widget_openGL</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.openGLWidget.ContextHandler</span> <span class="k">import</span> <span class="n">ContextHandler</span><span class="p">,</span> <span class="n">SpecialButtonsMapping</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="k">import</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="k">import</span> <span class="n">QOpenGLWidget</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="k">import</span> <span class="n">QSurfaceFormat</span>
+<span class="kn">from</span> <span class="nn">PyQt5.Qt</span> <span class="k">import</span> <span class="n">QSize</span>
+<span class="c1"># from PyQt5.QtGui import QColor, QPainter</span>
+
+
+<div class="viewcode-block" id="widget_openGL"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL">[docs]</a><span class="k">class</span> <span class="nc">widget_openGL</span><span class="p">(</span><span class="n">QOpenGLWidget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Interface that provides opengl capabilities.</span>
+<span class="sd">    Ensures zoom, light, rotation, etc.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span> <span class="o">=</span> <span class="n">ContextHandler</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">set_specialButtonsMapping</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_specialButtonsMapping</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span>
+        <span class="n">theFormat</span> <span class="o">=</span> <span class="n">QSurfaceFormat</span><span class="p">()</span>
+        <span class="n">theFormat</span><span class="o">.</span><span class="n">setSamples</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setFormat</span><span class="p">(</span><span class="n">theFormat</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sizeHint</span><span class="p">())</span>
+
+<div class="viewcode-block" id="widget_openGL.sizeHint"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.sizeHint">[docs]</a>    <span class="k">def</span> <span class="nf">sizeHint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_openGL.minimumSizeHint"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.minimumSizeHint">[docs]</a>    <span class="k">def</span> <span class="nf">minimumSizeHint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">QSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_openGL.set_deviceDrawer"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.set_deviceDrawer">[docs]</a>    <span class="k">def</span> <span class="nf">set_deviceDrawer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDeviceDrawer</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set a drawer :class:`optimeed.visualize.gui.widgets.openGLWidget.DeviceDrawerInterface.DeviceDrawerInterface`&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">set_deviceDrawer</span><span class="p">(</span><span class="n">theDeviceDrawer</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="widget_openGL.set_deviceToDraw"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.set_deviceToDraw">[docs]</a>    <span class="k">def</span> <span class="nf">set_deviceToDraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theDeviceToDraw</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the device to draw :class:`optimeed.InterfaceDevice.InterfaceDevice`&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">set_deviceToDraw</span><span class="p">(</span><span class="n">theDeviceToDraw</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL._get_specialButtonsMapping"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL._get_specialButtonsMapping">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_specialButtonsMapping</span><span class="p">():</span>
+        <span class="n">theMapping</span> <span class="o">=</span> <span class="n">SpecialButtonsMapping</span><span class="p">()</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">KEY_UP</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Up</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">KEY_DOWN</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Down</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">KEY_LEFT</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Left</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">KEY_RIGHT</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Right</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">KEY_TAB</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Tab</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">MOUSE_LEFT</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">LeftButton</span>
+        <span class="n">theMapping</span><span class="o">.</span><span class="n">MOUSE_RIGHT</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">RightButton</span>
+        <span class="k">return</span> <span class="n">theMapping</span></div>
+
+<div class="viewcode-block" id="widget_openGL.initializeGL"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.initializeGL">[docs]</a>    <span class="k">def</span> <span class="nf">initializeGL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL.paintGL"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.paintGL">[docs]</a>    <span class="k">def</span> <span class="nf">paintGL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">redraw</span><span class="p">()</span></div>
+        <span class="c1"># # Uncomment to print text</span>
+        <span class="c1"># painter = QPainter(self)</span>
+        <span class="c1"># for text in self.theContextHandler.get_text_to_write():</span>
+        <span class="c1">#     fontColor = QColor(*text.color)</span>
+        <span class="c1">#     painter.setPen(fontColor)</span>
+        <span class="c1">#     painter.drawText(text.position[0], text.position[1], text.theStr)</span>
+        <span class="c1"># painter.end()</span>
+
+<div class="viewcode-block" id="widget_openGL.resizeGL"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.resizeGL">[docs]</a>    <span class="k">def</span> <span class="nf">resizeGL</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">resizeWindowAction</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL.mousePressEvent"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.mousePressEvent">[docs]</a>    <span class="k">def</span> <span class="nf">mousePressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">mouseClicAction</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="p">(),</span> <span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">event</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL.mouseMoveEvent"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.mouseMoveEvent">[docs]</a>    <span class="k">def</span> <span class="nf">mouseMoveEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">mouseMotionAction</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">event</span><span class="o">.</span><span class="n">y</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL.keyPressEvent"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.keyPressEvent">[docs]</a>    <span class="k">def</span> <span class="nf">keyPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">keyboardPushAction</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">key</span><span class="p">())</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">keyPressEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="widget_openGL.wheelEvent"><a class="viewcode-back" href="../../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.widget_openGL.wheelEvent">[docs]</a>    <span class="k">def</span> <span class="nf">wheelEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">QWheelEvent</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theContextHandler</span><span class="o">.</span><span class="n">mouseWheelAction</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">QWheelEvent</span><span class="o">.</span><span class="n">angleDelta</span><span class="p">()</span><span class="o">.</span><span class="n">y</span><span class="p">())</span><span class="o">/</span><span class="mf">80.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.visualize.gui.gui_data_animation &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../../visualize.html">optimeed.visualize</a> &raquo;</li>
+        
+          <li><a href="../gui.html">optimeed.visualize.gui</a> &raquo;</li>
+        
+      <li>optimeed.visualize.gui.gui_data_animation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.visualize.gui.gui_data_animation</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">PyQt5</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtSvg</span><span class="p">,</span> <span class="n">QtGui</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+
+<div class="viewcode-block" id="DataAnimationTrace"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationTrace</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Contains all the element to animate for a trace&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="DataAnimationTrace.element_animation"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.element_animation">[docs]</a>    <span class="k">class</span> <span class="nc">element_animation</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">elements</span>
+
+<div class="viewcode-block" id="DataAnimationTrace.element_animation.get"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.element_animation.get">[docs]</a>        <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span></div></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements_list</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">indices_to_show</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">element_animations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">elements</span> <span class="ow">in</span> <span class="n">elements_list</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">element_animations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">element_animation</span><span class="p">(</span><span class="n">elements</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span> <span class="o">=</span> <span class="n">theTrace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_elements</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">element_animations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+
+<div class="viewcode-block" id="DataAnimationTrace.get_element_animations"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.get_element_animations">[docs]</a>    <span class="k">def</span> <span class="nf">get_element_animations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemNumber</span><span class="p">,</span> <span class="n">index_in_show</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the element to show</span>
+<span class="sd">        :param itemNumber: item number (0 if only one think to draw)</span>
+<span class="sd">        :param index_in_show: index in the list</span>
+<span class="sd">        :return: The element to draw</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">element_animations</span><span class="p">[</span><span class="n">itemNumber</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">map_index</span><span class="p">(</span><span class="n">index_in_show</span><span class="p">)]</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.show_all"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.show_all">[docs]</a>    <span class="k">def</span> <span class="nf">show_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete_all</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">indices_to_show</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_elements</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.delete_all"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.delete_all">[docs]</a>    <span class="k">def</span> <span class="nf">delete_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">reset_all_brushes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">indices_to_show</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.get_indices_to_show"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.get_indices_to_show">[docs]</a>    <span class="k">def</span> <span class="nf">get_indices_to_show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">indices_to_show</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.add_element"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.add_element">[docs]</a>    <span class="k">def</span> <span class="nf">add_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">indexPoint</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_indices_to_show</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_index_to_show</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">set_brush</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">,</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_remove_index_from_show</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.add_index_to_show"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.add_index_to_show">[docs]</a>    <span class="k">def</span> <span class="nf">add_index_to_show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">indices_to_show</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace._remove_index_from_show"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace._remove_index_from_show">[docs]</a>    <span class="k">def</span> <span class="nf">_remove_index_from_show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">reset_brush</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_indices_to_show</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.set_curr_brush"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.set_curr_brush">[docs]</a>    <span class="k">def</span> <span class="nf">set_curr_brush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_in_show</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">set_brush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map_index</span><span class="p">(</span><span class="n">index_in_show</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.set_idle_brush"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.set_idle_brush">[docs]</a>    <span class="k">def</span> <span class="nf">set_idle_brush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_in_show</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">set_brush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map_index</span><span class="p">(</span><span class="n">index_in_show</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">get_base_symbol_brush</span><span class="p">()</span><span class="o">.</span><span class="n">color</span><span class="p">()</span><span class="o">.</span><span class="n">lighter</span><span class="p">(</span><span class="mi">150</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.get_number_of_elements"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.get_number_of_elements">[docs]</a>    <span class="k">def</span> <span class="nf">get_number_of_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_indices_to_show</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.map_index"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.map_index">[docs]</a>    <span class="k">def</span> <span class="nf">map_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_in_show</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_indices_to_show</span><span class="p">()[</span><span class="n">index_in_show</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="DataAnimationTrace.get_base_pen"><a class="viewcode-back" href="../../../../API/optimeed/visualize/gui/gui_data_animation/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationTrace.get_base_pen">[docs]</a>    <span class="k">def</span> <span class="nf">get_base_pen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">theTrace</span><span class="o">.</span><span class="n">get_base_pen</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="DataAnimationVisuals"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals">[docs]</a><span class="k">class</span> <span class="nc">DataAnimationVisuals</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Spawns a gui that includes button to create animations nicely when paired with :class:`~optimeed.visualize.gui.widgets.widget_graphs_visual`&quot;&quot;&quot;</span>
+    <span class="n">SlIDER_MAXIMUM_VALUE</span> <span class="o">=</span> <span class="mi">500</span>
+    <span class="n">SLIDER_MINIMUM_VALUE</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">window_title</span><span class="o">=</span><span class="s1">&#39;Animation&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param id: id of the window (int)</span>
+<span class="sd">        :param window_title: Title of the window (str)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span> <span class="o">=</span> <span class="mf">0.1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+
+        <span class="c1"># Create PyQt5 window</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DataAnimationVisuals</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">window_title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">horizontal_layout_visu</span><span class="p">)</span>
+
+        <span class="c1"># Add button panels</span>
+        <span class="n">horizontal_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+
+        <span class="c1"># First: Show all</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Show All&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_all</span><span class="p">)</span>
+        <span class="n">horizontal_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="c1"># Second: Delete All</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Delete All&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delete_all</span><span class="p">)</span>
+        <span class="n">horizontal_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="c1"># Third: Pause</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isPlaying</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pause_play_button</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Pause&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pause_play_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pause_play</span><span class="p">)</span>
+        <span class="n">horizontal_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pause_play_button</span><span class="p">)</span>
+
+        <span class="c1"># Fourth: Speed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSlider</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SLIDER_MINIMUM_VALUE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SlIDER_MAXIMUM_VALUE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">slider_handler</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="p">)</span>
+
+        <span class="c1"># Put them in layout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">horizontal_layout</span><span class="p">)</span>
+
+        <span class="c1"># Add export option</span>
+        <span class="n">exportButton</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Export&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">exportButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">export_picture</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainbox</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">exportButton</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DataAnimationVisuals.add_trace"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.add_trace">[docs]</a>    <span class="k">def</span> <span class="nf">add_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace_id</span><span class="p">,</span> <span class="n">element_list</span><span class="p">,</span> <span class="n">theTrace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add a trace to the animation.</span>
+
+<span class="sd">        :param trace_id: id of the trace</span>
+<span class="sd">        :param element_list: List of elements to save: [[OpenGL_item1, text_item1], [OpenGL_item2, text_item2], ... [OpenGL_itemN, text_itemN]]</span>
+<span class="sd">        :param theTrace: :class:`~optimeed.visualize.gui.widgets.graphsVisualWidget.TraceVisual.TraceVisual`</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">trace_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataAnimationTrace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_interesting_elements</span><span class="p">(</span><span class="n">element_list</span><span class="p">),</span> <span class="n">theTrace</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.get_interesting_elements"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.get_interesting_elements">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_interesting_elements</span><span class="p">(</span><span class="n">element_list</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function called upon new trace creation. From a list, takes the interesting elements for animation</span>
+<span class="sd">        :param element_list:</span>
+<span class="sd">        :return: new_element_list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">element_list</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.add_elementToTrace"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.add_elementToTrace">[docs]</a>    <span class="k">def</span> <span class="nf">add_elementToTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace_id</span><span class="p">,</span> <span class="n">indexPoint</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">trace_id</span><span class="p">]</span><span class="o">.</span><span class="n">add_element</span><span class="p">(</span><span class="n">indexPoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.delete_point"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.delete_point">[docs]</a>    <span class="k">def</span> <span class="nf">delete_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace_id</span><span class="p">,</span> <span class="n">thePoint</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">trace_id</span><span class="p">]</span><span class="o">.</span><span class="n">delete_point</span><span class="p">(</span><span class="n">thePoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.reset_all"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.reset_all">[docs]</a>    <span class="k">def</span> <span class="nf">reset_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">trace_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">trace_id</span><span class="p">]</span><span class="o">.</span><span class="n">delete_all</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.delete_all"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.delete_all">[docs]</a>    <span class="k">def</span> <span class="nf">delete_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_all</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delete_key_widgets</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.pause_play"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.pause_play">[docs]</a>    <span class="k">def</span> <span class="nf">pause_play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pause_play_button</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Play&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pause_play_button</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Pause&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.show_all"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.show_all">[docs]</a>    <span class="k">def</span> <span class="nf">show_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">buff_state_running</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_all</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">show_all</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="n">buff_state_running</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.next_frame"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.next_frame">[docs]</a>    <span class="k">def</span> <span class="nf">next_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+                    <span class="n">the_data_animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                    <span class="n">the_data_animation</span><span class="o">.</span><span class="n">set_idle_brush</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span><span class="p">)</span>
+
+                    <span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">=</span> <span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">%</span> <span class="n">the_data_animation</span><span class="o">.</span><span class="n">get_number_of_elements</span><span class="p">()</span>
+
+                    <span class="n">the_data_animation</span><span class="o">.</span><span class="n">set_curr_brush</span><span class="p">(</span><span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">update_widget_w_animation</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="o">.</span><span class="n">curr_index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span>
+                <span class="k">pass</span>
+
+            <span class="n">QtCore</span><span class="o">.</span><span class="n">QTimer</span><span class="p">()</span><span class="o">.</span><span class="n">singleShot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_frame</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.slider_handler"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.slider_handler">[docs]</a>    <span class="k">def</span> <span class="nf">slider_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_refreshTime</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">frame_selector</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.frame_selector"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.frame_selector">[docs]</a>    <span class="k">def</span> <span class="nf">frame_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+            <span class="n">data_animation_trace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">slider_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_animation_trace</span><span class="o">.</span><span class="n">get_number_of_elements</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SlIDER_MAXIMUM_VALUE</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">SLIDER_MINIMUM_VALUE</span><span class="p">)</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">SLIDER_MINIMUM_VALUE</span>
+            <span class="n">selected_index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">slider_value</span><span class="o">+</span><span class="n">b</span><span class="p">),</span> <span class="n">data_animation_trace</span><span class="o">.</span><span class="n">get_number_of_elements</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_idle_brush</span><span class="p">(</span><span class="n">data_animation_trace</span><span class="o">.</span><span class="n">curr_index</span><span class="p">)</span>
+            <span class="n">data_animation_trace</span><span class="o">.</span><span class="n">curr_index</span> <span class="o">=</span> <span class="n">selected_index</span>
+            <span class="n">data_animation_trace</span><span class="o">.</span><span class="n">set_curr_brush</span><span class="p">(</span><span class="n">data_animation_trace</span><span class="o">.</span><span class="n">curr_index</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_widget_w_animation</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">selected_index</span><span class="p">,</span> <span class="n">data_animation_trace</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.set_refreshTime"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.set_refreshTime">[docs]</a>    <span class="k">def</span> <span class="nf">set_refreshTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="o">/</span><span class="mi">1000</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.is_empty"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.is_empty">[docs]</a>    <span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">is_empty</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">get_indices_to_show</span><span class="p">()):</span>
+                <span class="n">is_empty</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">is_empty</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.run"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_empty</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">next_frame</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.closeEvent"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.closeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isRunning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete_all</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.contains_trace"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.contains_trace">[docs]</a>    <span class="k">def</span> <span class="nf">contains_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace_id</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">trace_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_animation_traces</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.export_picture"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.export_picture">[docs]</a>    <span class="k">def</span> <span class="nf">export_picture</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QFileDialog</span><span class="o">.</span><span class="n">getSaveFileName</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dlg</span><span class="p">:</span>
+            <span class="n">root</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">dlg</span><span class="p">)</span>
+            <span class="n">filename_png</span> <span class="o">=</span> <span class="n">root</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span>
+            <span class="n">filename_svg</span> <span class="o">=</span> <span class="n">root</span> <span class="o">+</span> <span class="s1">&#39;.svg&#39;</span>
+
+            <span class="c1"># Create exporter</span>
+            <span class="n">generator</span> <span class="o">=</span> <span class="n">QtSvg</span><span class="o">.</span><span class="n">QSvgGenerator</span><span class="p">()</span>
+            <span class="n">generator</span><span class="o">.</span><span class="n">setFileName</span><span class="p">(</span><span class="n">filename_svg</span><span class="p">)</span>
+            <span class="n">painter</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QPainter</span><span class="p">()</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">export_widget</span><span class="p">(</span><span class="n">painter</span><span class="p">)</span>
+            <span class="n">painter</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename_svg</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="n">lines</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;vector-effect=&quot;non-scaling-stroke&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;stroke-width=&quot;2&quot;&#39;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename_svg</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+            <span class="n">converter_cmd_line</span> <span class="o">=</span> <span class="s1">&#39;inkscape -z &#39;</span> <span class="o">+</span> <span class="n">filename_svg</span> <span class="o">+</span> <span class="s1">&#39; -D -e &#39;</span> <span class="o">+</span> <span class="n">filename_png</span> <span class="o">+</span> <span class="s1">&#39; -d 400&#39;</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">converter_cmd_line</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.export_widget"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.export_widget">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">export_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Render scene with a painter</span>
+
+<span class="sd">        :param painter: PyQt painter</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.update_widget_w_animation"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.update_widget_w_animation">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">update_widget_w_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">the_data_animation</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        What to do when a new element has to be animated. Example: self.theOpenGLWidget.set_deviceToDraw(the_data_animation.get_element_animations(0, index))</span>
+
+<span class="sd">        :param key: key of the trace that has to be animated</span>
+<span class="sd">        :param index: index that has to be animated</span>
+<span class="sd">        :param the_data_animation: :class:`~DataAnimationTrace` that has to be animated</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DataAnimationVisuals.delete_key_widgets"><a class="viewcode-back" href="../../../../API/optimeed/visualize/index.html#optimeed.visualize.gui.gui_data_animation.DataAnimationVisuals.delete_key_widgets">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">delete_key_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        What to do when a key has to be deleted</span>
+
+<span class="sd">        :param key: key of the trace that has to be deleted</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

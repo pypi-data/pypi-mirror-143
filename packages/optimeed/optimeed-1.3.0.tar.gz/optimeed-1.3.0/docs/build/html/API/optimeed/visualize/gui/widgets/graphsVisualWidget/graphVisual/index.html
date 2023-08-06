@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>graphVisual &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="pyqtgraphRedefine" href="../pyqtgraphRedefine/index.html" />
+    <link rel="prev" title="on_click_showinfo" href="../examplesActionOnClick/on_click_showinfo/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../core/index.html"><strong>core</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"><strong>visualize</strong></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html"><strong>gui</strong></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../actions_data_selector/index.html"><strong>actions_data_selector</strong></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"><strong>widgets</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_collection_exporter/index.html"><code class="docutils literal notranslate"><span class="pre">gui_collection_exporter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_animation/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_data_selector/index.html"><code class="docutils literal notranslate"><span class="pre">gui_data_selector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui_mainWindow/index.html"><code class="docutils literal notranslate"><span class="pre">gui_mainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../displayOptimization/index.html"><code class="docutils literal notranslate"><span class="pre">displayOptimization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../fastPlot/index.html"><code class="docutils literal notranslate"><span class="pre">fastPlot</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html"><strong>visualize</strong></a> &raquo;</li>
+        
+          <li><a href="../../../index.html"><strong>gui</strong></a> &raquo;</li>
+        
+          <li><a href="../../index.html"><strong>widgets</strong></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>graphsVisualWidget</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">graphVisual</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../_sources/API/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual">
+<span id="graphvisual"></span><h1><code class="docutils literal notranslate"><span class="pre">graphVisual</span></code><a class="headerlink" href="#module-optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual">
+<em class="property">class </em><code class="sig-name descname">GraphVisual</code><span class="sig-paren">(</span><em class="sig-param">theWidgetGraphVisual</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide an interface to a graph. A graph contains traces.</p>
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontTicks">
+<code class="sig-name descname">set_fontTicks</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fontSize</em>, <em class="sig-param">fontname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_fontTicks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set font of the ticks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fontSize</strong> – Size of the font</p></li>
+<li><p><strong>fontname</strong> – Name of the font</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_numberTicks">
+<code class="sig-name descname">set_numberTicks</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">number</em>, <em class="sig-param">axis</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_numberTicks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_numberTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of ticks to be displayed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number</strong> – Number of ticks for the axis</p></li>
+<li><p><strong>axis</strong> – Axis (string, “bottom”, “left”, “right”, “top”)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLabel">
+<code class="sig-name descname">set_fontLabel</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fontSize</em>, <em class="sig-param">color='#000'</em>, <em class="sig-param">fontname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_fontLabel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set font of the axis labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fontSize</strong> – font size</p></li>
+<li><p><strong>color</strong> – color in hexadecimal (str)</p></li>
+<li><p><strong>fontname</strong> – name of the font</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_legend">
+<code class="sig-name descname">get_legend</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.get_legend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the legend</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_axis">
+<code class="sig-name descname">get_axis</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">axis</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.get_axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – Axis (string, “bottom”, “left”, “right”, “top”)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>axis object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLegend">
+<code class="sig-name descname">set_fontLegend</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">font_size</em>, <em class="sig-param">font_color</em>, <em class="sig-param">fontname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_fontLegend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_fontLegend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_label_pos">
+<code class="sig-name descname">set_label_pos</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">orientation</em>, <em class="sig-param">x_offset=0</em>, <em class="sig-param">y_offset=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_label_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_label_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_color_palette">
+<code class="sig-name descname">set_color_palette</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">palette</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_color_palette"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_color_palette" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.apply_palette">
+<code class="sig-name descname">apply_palette</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.apply_palette"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.apply_palette" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.hide_axes">
+<code class="sig-name descname">hide_axes</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.hide_axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.hide_axes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_feature">
+<code class="sig-name descname">add_feature</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theFeature</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.add_feature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>To add any pyqtgraph item to the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.remove_feature">
+<code class="sig-name descname">remove_feature</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theFeature</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.remove_feature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.remove_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>To remove any pyqtgraph item from the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_data">
+<code class="sig-name descname">add_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">theData</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.add_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_graph_properties">
+<code class="sig-name descname">set_graph_properties</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_graph_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_graph_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is automatically called on creation of the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_lims">
+<code class="sig-name descname">set_lims</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">xlim</em>, <em class="sig-param">ylim</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_lims"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_lims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set limits of the graphs, xlim or ylim = [val_low, val_high]. Or None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">theTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a <code class="xref py py-class docutils literal notranslate"><span class="pre">TraceVisual</span></code> to the graph, with index idTrace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_legend">
+<code class="sig-name descname">set_legend</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_legend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set default legend options (color and font)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_title">
+<code class="sig-name descname">set_title</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">titleName</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.set_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.set_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set title of the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>titleName</strong> – title to set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_trace">
+<code class="sig-name descname">get_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.get_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <code class="xref py py-class docutils literal notranslate"><span class="pre">TraceVisual</span></code> correspondong to the index idTrace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_all_traces">
+<code class="sig-name descname">get_all_traces</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.get_all_traces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.get_all_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary {idtrace: <code class="xref py py-class docutils literal notranslate"><span class="pre">TraceVisual</span></code>}.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete_trace">
+<code class="sig-name descname">delete_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.delete_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the trace of index idTrace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.linkXToGraph">
+<code class="sig-name descname">linkXToGraph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">graph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.linkXToGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.linkXToGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link the axis of the current graph to an other <a class="reference internal" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual" title="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphVisual</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the traces contained in the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.fast_update">
+<code class="sig-name descname">fast_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.fast_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.fast_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.update" title="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code></a> but faster. This is NOT thread safe (cannot be called a second time before finishing operation)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.axis_equal">
+<code class="sig-name descname">axis_equal</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.axis_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.axis_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.log_mode">
+<code class="sig-name descname">log_mode</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x=False</em>, <em class="sig-param">y=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.log_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.log_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.grid_off">
+<code class="sig-name descname">grid_off</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../../_modules/optimeed/visualize/gui/widgets/graphsVisualWidget/graphVisual.html#GraphVisual.grid_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.visualize.gui.widgets.graphsVisualWidget.graphVisual.GraphVisual.grid_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off grid</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pyqtgraphRedefine/index.html" class="btn btn-neutral float-right" title="pyqtgraphRedefine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../examplesActionOnClick/on_click_showinfo/index.html" class="btn btn-neutral float-left" title="on_click_showinfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

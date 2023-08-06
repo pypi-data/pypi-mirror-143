@@ -1,0 +1,704 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>graphs &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="interfaceDevice" href="../interfaceDevice/index.html" />
+    <link rel="prev" title="commonImport" href="../commonImport/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../support.html">License and Support</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../consolidate/index.html"><strong>consolidate</strong></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"><strong>core</strong></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ansi2html/index.html"><strong>ansi2html</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../additional_tools/index.html"><code class="docutils literal notranslate"><span class="pre">additional_tools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collection/index.html"><code class="docutils literal notranslate"><span class="pre">collection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color_palette/index.html"><code class="docutils literal notranslate"><span class="pre">color_palette</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commonImport/index.html"><code class="docutils literal notranslate"><span class="pre">commonImport</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">graphs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interfaceDevice/index.html"><code class="docutils literal notranslate"><span class="pre">interfaceDevice</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../linkDataGraph/index.html"><code class="docutils literal notranslate"><span class="pre">linkDataGraph</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../myjson/index.html"><code class="docutils literal notranslate"><span class="pre">myjson</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../options/index.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tikzTranslator/index.html"><code class="docutils literal notranslate"><span class="pre">tikzTranslator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html"><code class="docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimize/index.html"><strong>optimize</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visualize/index.html"><strong>visualize</strong></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a> &raquo;</li>
+        
+          <li><a href="../index.html"><strong>core</strong></a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">graphs</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/API/optimeed/core/graphs/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-optimeed.core.graphs">
+<span id="graphs"></span><h1><code class="docutils literal notranslate"><span class="pre">graphs</span></code><a class="headerlink" href="#module-optimeed.core.graphs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="optimeed.core.graphs.Data">
+<em class="property">class </em><code class="sig-name descname">Data</code><span class="sig-paren">(</span><em class="sig-param">x: list</em>, <em class="sig-param">y: list</em>, <em class="sig-param">x_label=''</em>, <em class="sig-param">y_label=''</em>, <em class="sig-param">legend=''</em>, <em class="sig-param">is_scattered=False</em>, <em class="sig-param">transfo_x=lambda selfData</em>, <em class="sig-param">x: x</em>, <em class="sig-param">transfo_y=lambda selfData</em>, <em class="sig-param">y: y</em>, <em class="sig-param">xlim=None</em>, <em class="sig-param">ylim=None</em>, <em class="sig-param">permutations=None</em>, <em class="sig-param">sort_output=False</em>, <em class="sig-param">color=None</em>, <em class="sig-param">symbol='o'</em>, <em class="sig-param">symbolsize=8</em>, <em class="sig-param">fillsymbol=True</em>, <em class="sig-param">outlinesymbol=1.8</em>, <em class="sig-param">linestyle='-'</em>, <em class="sig-param">width=2</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is used  to store informations necessary to plot a 2D graph. It has to be combined with a gui to be useful (ex. pyqtgraph)</p>
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.set_data">
+<code class="sig-name descname">set_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x: list</em>, <em class="sig-param">y: list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.set_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites current datapoints with new set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_x">
+<code class="sig-name descname">get_x</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x coordinates of datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_symbolsize">
+<code class="sig-name descname">get_symbolsize</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_symbolsize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_symbolsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get size of the symbols</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.symbol_isfilled">
+<code class="sig-name descname">symbol_isfilled</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.symbol_isfilled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.symbol_isfilled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if symbols has to be filled or not</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_symbolOutline">
+<code class="sig-name descname">get_symbolOutline</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_symbolOutline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_symbolOutline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get color factor of outline of symbols</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_length_data">
+<code class="sig-name descname">get_length_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_length_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_length_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_xlim">
+<code class="sig-name descname">get_xlim</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_xlim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_xlim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x limits of viewbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_ylim">
+<code class="sig-name descname">get_ylim</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_ylim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_ylim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y limits of viewbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_y">
+<code class="sig-name descname">get_y</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y coordinates of datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_color">
+<code class="sig-name descname">get_color</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get color of the line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_width">
+<code class="sig-name descname">get_width</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get width of the line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_number_of_points">
+<code class="sig-name descname">get_number_of_points</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_number_of_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_number_of_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_plot_data">
+<code class="sig-name descname">get_plot_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_plot_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_plot_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this method to get the x and y coordinates of the points that have to be displayed.
+=&gt; After transformation, and after permutations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>x (list), y (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_permutations">
+<code class="sig-name descname">get_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the transformation ‘permutation’:
+xplot[i] = xdata[permutation[i]]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_invert_permutations">
+<code class="sig-name descname">get_invert_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_invert_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_invert_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inverse of permutations:
+xdata[i] = xplot[revert[i]]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_dataIndex_from_graphIndex">
+<code class="sig-name descname">get_dataIndex_from_graphIndex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_graph_point</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_dataIndex_from_graphIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_dataIndex_from_graphIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>From an index given in graph, recovers the index of the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_graph_point</strong> – Index in the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index of the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_dataIndices_from_graphIndices">
+<code class="sig-name descname">get_dataIndices_from_graphIndices</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_graph_point_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_dataIndices_from_graphIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_dataIndices_from_graphIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as get_dataIndex_from_graphIndex but with a list in entry.
+Can (?) improve performances for huge dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_graph_point_list</strong> – List of Index in the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of index of the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_graphIndex_from_dataIndex">
+<code class="sig-name descname">get_graphIndex_from_dataIndex</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_data</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_graphIndex_from_dataIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_graphIndex_from_dataIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>From an index given in the data, recovers the index of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_data</strong> – Index in the data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index of the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_graphIndices_from_dataIndices">
+<code class="sig-name descname">get_graphIndices_from_dataIndices</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_graphIndices_from_dataIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_graphIndices_from_dataIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as get_graphIndex_from_dataIndex but with a list in entry.
+Can (?) improve performances for huge dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index_data_list</strong> – List of Index in the data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of index of the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.set_permutations">
+<code class="sig-name descname">set_permutations</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">permutations</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.set_permutations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.set_permutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set permutations between datapoints of the trace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>permutations</strong> – list of indices to plot (example: [0, 2, 1] means that the first point will be plotted, then the third, then the second one)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_x_label">
+<code class="sig-name descname">get_x_label</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_x_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_x_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get x label of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_y_label">
+<code class="sig-name descname">get_y_label</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_y_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_y_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get y label of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_legend">
+<code class="sig-name descname">get_legend</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_legend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get name of the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_symbol">
+<code class="sig-name descname">get_symbol</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get symbol</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.add_point">
+<code class="sig-name descname">add_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.add_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.add_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point(s) to trace (inputs can be list or numeral)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.delete_point">
+<code class="sig-name descname">delete_point</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">index_point</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.delete_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a point from the datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.is_scattered">
+<code class="sig-name descname">is_scattered</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.is_scattered"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.is_scattered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a point from the datapoints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.set_indices_points_to_plot">
+<code class="sig-name descname">set_indices_points_to_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">indices</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.set_indices_points_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.set_indices_points_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set indices points to plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_indices_points_to_plot">
+<code class="sig-name descname">get_indices_points_to_plot</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_indices_points_to_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_indices_points_to_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get indices points to plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.get_linestyle">
+<code class="sig-name descname">get_linestyle</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.get_linestyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.get_linestyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get linestyle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.__str__">
+<code class="sig-name descname">__str__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.export_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to save the points constituting the trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Data.set_color">
+<code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">theColor</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Data.set_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Data.set_color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.graphs.Graph">
+<em class="property">class </em><code class="sig-name descname">Graph</code><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple graph container that contains several traces</p>
+<dl class="method">
+<dt id="optimeed.core.graphs.Graph.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trace to the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – <a class="reference internal" href="#optimeed.core.graphs.Data" title="optimeed.core.graphs.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>id of the created trace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graph.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a trace from the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idTrace</strong> – id of the trace to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graph.get_trace">
+<code class="sig-name descname">get_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idTrace</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph.get_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph.get_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data object of idTrace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idTrace</strong> – id of the trace to get</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="#optimeed.core.graphs.Data" title="optimeed.core.graphs.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graph.get_all_traces">
+<code class="sig-name descname">get_all_traces</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph.get_all_traces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph.get_all_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the traces id of the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graph.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graph.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graph.export_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optimeed.core.graphs.Graphs">
+<em class="property">class </em><code class="sig-name descname">Graphs</code><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains several <a class="reference internal" href="#optimeed.core.graphs.Graph" title="optimeed.core.graphs.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a></p>
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.updateChildren">
+<code class="sig-name descname">updateChildren</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.updateChildren"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.updateChildren" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.add_trace_firstGraph">
+<code class="sig-name descname">add_trace_firstGraph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.add_trace_firstGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.add_trace_firstGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as add_trace, but only if graphs has only one id
+:param data:
+:param updateChildren:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.add_trace">
+<code class="sig-name descname">add_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">data</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.add_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.add_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a trace to the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idGraph</strong> – id of the graph</p></li>
+<li><p><strong>data</strong> – <a class="reference internal" href="#optimeed.core.graphs.Data" title="optimeed.core.graphs.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p></li>
+<li><p><strong>updateChildren</strong> – Automatically calls callback functions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>id of the created trace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.remove_trace">
+<code class="sig-name descname">remove_trace</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em>, <em class="sig-param">idTrace</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.remove_trace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.remove_trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the trace from the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idGraph</strong> – id of the graph</p></li>
+<li><p><strong>idTrace</strong> – id of the trace to remove</p></li>
+<li><p><strong>updateChildren</strong> – Automatically calls callback functions</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.get_first_graph">
+<code class="sig-name descname">get_first_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.get_first_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.get_first_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get id of the first graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>id of the first graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.get_graph">
+<code class="sig-name descname">get_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.get_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get graph object at idgraph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idGraph</strong> – id of the graph to get</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="#optimeed.core.graphs.Graph" title="optimeed.core.graphs.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.get_all_graphs_ids">
+<code class="sig-name descname">get_all_graphs_ids</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.get_all_graphs_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.get_all_graphs_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all ids of the graphs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of id graphs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.get_all_graphs">
+<code class="sig-name descname">get_all_graphs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.get_all_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.get_all_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all graphs. Return dict {id: <a class="reference internal" href="#optimeed.core.graphs.Graph" title="optimeed.core.graphs.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a>}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.add_graph">
+<code class="sig-name descname">add_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">updateChildren=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.add_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>id of the created graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.remove_graph">
+<code class="sig-name descname">remove_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">idGraph</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.remove_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.remove_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idGraph</strong> – id of the graph to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.add_update_method">
+<code class="sig-name descname">add_update_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">childObject</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.add_update_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.add_update_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a callback each time a graph is modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>childObject</strong> – method without arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.export_str">
+<code class="sig-name descname">export_str</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.export_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.export_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export all the graphs in text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">otherGraphs</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.merge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="optimeed.core.graphs.Graphs.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/optimeed/core/graphs.html#Graphs.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optimeed.core.graphs.Graphs.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../interfaceDevice/index.html" class="btn btn-neutral float-right" title="interfaceDevice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../commonImport/index.html" class="btn btn-neutral float-left" title="commonImport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

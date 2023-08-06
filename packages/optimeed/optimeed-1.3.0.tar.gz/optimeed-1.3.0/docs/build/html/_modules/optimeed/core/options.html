@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optimeed.core.options &mdash; optimeed 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> optimeed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/OptiModule_explanation.html">Quickstart Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/VisuModule_explanation.html">Quickstart Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quickstart/Load_save_explanation.html">Loading and saving data</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../gallery.html">Gallery</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">License and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/optimeed/index.html"><code class="docutils literal notranslate"><span class="pre">:mod:optimeed</span></code></a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">Developer documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">optimeed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../optimeed.html">optimeed</a> &raquo;</li>
+        
+          <li><a href="../core.html">optimeed.core</a> &raquo;</li>
+        
+      <li>optimeed.core.options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optimeed.core.options</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span><span class="p">,</span> <span class="n">ABC</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="kn">from</span> <span class="nn">pytypes</span> <span class="k">import</span> <span class="n">is_of_type</span>
+
+<span class="kn">from</span> <span class="nn">optimeed.core</span> <span class="k">import</span> <span class="n">printIfShown</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">,</span> <span class="n">text_format</span>
+
+
+<div class="viewcode-block" id="Option_class_interface"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface">[docs]</a><span class="k">class</span> <span class="nc">Option_class_interface</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Interface of the class &#39;Option_class&#39;. It defines all the necessary methods to manage a set of options.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.__str__"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.get_optionValue"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.get_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.set_optionValue"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.set_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">set_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.get_all_options"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.get_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a dictionnary containing tuples (name of the option, value of the option)</span>
+<span class="sd">        :return: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.set_all_options"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.set_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">set_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;Option_class_interface&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The method allows to define all the options from another object of type &#39;Option_class_interface&#39;</span>
+<span class="sd">        :param options: Option_class_interface</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Option_class_interface.add_option"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_interface.add_option">[docs]</a>    <span class="k">def</span> <span class="nf">add_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="Options"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options">[docs]</a><span class="k">class</span> <span class="nc">Options</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Options.get_name"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.get_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">idOption</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Options.get_value"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">idOption</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Options.add_option"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.add_option">[docs]</a>    <span class="k">def</span> <span class="nf">add_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Options.set_option"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.set_option">[docs]</a>    <span class="k">def</span> <span class="nf">set_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_name</span><span class="p">(</span><span class="n">idOption</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Options.copy"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Options.set_self"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.set_self">[docs]</a>    <span class="k">def</span> <span class="nf">set_self</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">the_options</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idOption</span> <span class="ow">in</span> <span class="n">the_options</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="n">idOption</span><span class="p">,</span> <span class="n">the_options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">idOption</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Options.__str__"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Options.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">):</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">BLUE</span> <span class="o">+</span> <span class="s1">&#39;Options&#39;</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">◦ </span><span class="si">{:&lt;15}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_name</span><span class="p">(</span><span class="n">key</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">-</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">END</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+
+
+<div class="viewcode-block" id="Option_class"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class">[docs]</a><span class="k">class</span> <span class="nc">Option_class</span><span class="p">(</span><span class="n">Option_class_interface</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Option_class.__str__"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Option_class.get_optionValue"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.get_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">optionId</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Option_class.set_optionValue"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.set_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">set_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="n">optionId</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Option_class.get_all_options"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.get_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">options</span></div>
+
+<div class="viewcode-block" id="Option_class.set_all_options"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.set_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">set_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span> <span class="o">=</span> <span class="n">options</span></div>
+
+<div class="viewcode-block" id="Option_class.add_option"><a class="viewcode-back" href="../../../API/optimeed/visualize/index.html#optimeed.core.Option_class.add_option">[docs]</a>    <span class="k">def</span> <span class="nf">add_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="n">idOption</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Option_class_typed"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed">[docs]</a><span class="k">class</span> <span class="nc">Option_class_typed</span><span class="p">(</span><span class="n">Option_class_interface</span><span class="p">):</span>
+<div class="viewcode-block" id="Option_class_typed.my_names"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_names">[docs]</a>    <span class="n">my_names</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_map"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_map">[docs]</a>    <span class="n">my_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.my_options_0"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_0">[docs]</a>    <span class="n">my_options_0</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_1"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_1">[docs]</a>    <span class="n">my_options_1</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_2"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_2">[docs]</a>    <span class="n">my_options_2</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_3"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_3">[docs]</a>    <span class="n">my_options_3</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_4"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_4">[docs]</a>    <span class="n">my_options_4</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_5"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_5">[docs]</a>    <span class="n">my_options_5</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_6"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_6">[docs]</a>    <span class="n">my_options_6</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span></div>
+<div class="viewcode-block" id="Option_class_typed.my_options_7"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.my_options_7">[docs]</a>    <span class="n">my_options_7</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]</span></div>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nbr_of_types</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__get_types</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_names</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_of_types</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;my_options_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">{})</span>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Option_class_typed.__get_types"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.__get_types">[docs]</a>    <span class="k">def</span> <span class="nf">__get_types</span><span class="p">():</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.get_optionValue"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.get_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">get_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span><span class="p">[</span><span class="n">optionId</span><span class="p">])[</span><span class="n">optionId</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.set_optionValue"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.set_optionValue">[docs]</a>    <span class="k">def</span> <span class="nf">set_optionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span><span class="p">[</span><span class="n">optionId</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There is no option with this id (</span><span class="si">{}</span><span class="s2">) :/&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">optionId</span><span class="p">))</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="n">optionId</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">[</span><span class="n">optionId</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.get_all_options"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.get_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_of_types</span><span class="p">):</span>
+            <span class="n">the_options</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;my_options_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">{})</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">the_options</span><span class="p">:</span>
+                <span class="n">options</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">the_options</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">options</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.add_option"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.add_option">[docs]</a>    <span class="k">def</span> <span class="nf">add_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idOption</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">idOption</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;Sorry but this id (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idOption</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) already exists and is associated to &#39;&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&#39; :/&quot;</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_types</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nbr_of_types</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__match</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">types</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;my_options_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span><span class="p">[</span><span class="n">idOption</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;my_options_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+            <span class="n">printIfShown</span><span class="p">(</span><span class="s2">&quot;This type of value (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;) is not supported by the &#39;Options class&#39; yet :/</span><span class="se">\n</span><span class="s2"> Variable &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;&#39; has not been added to the options ! &quot;</span><span class="p">,</span> <span class="n">SHOW_WARNING</span><span class="p">)</span>
+            <span class="k">return</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Option_class_typed.__match"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.__match">[docs]</a>    <span class="k">def</span> <span class="nf">__match</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">theType</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">is_of_type</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">theType</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.set_all_options"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.set_all_options">[docs]</a>    <span class="k">def</span> <span class="nf">set_all_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">Option_class_interface</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idOption</span> <span class="ow">in</span> <span class="n">options</span><span class="o">.</span><span class="n">get_all_options</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_optionValue</span><span class="p">(</span><span class="n">idOption</span><span class="p">,</span> <span class="n">options</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="n">idOption</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Option_class_typed.__str__"><a class="viewcode-back" href="../../../API/optimeed/core/options/index.html#optimeed.core.Option_class_typed.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">theStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">:</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">BLUE</span> <span class="o">+</span> <span class="s1">&#39;Options&#39;</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_map</span><span class="p">:</span>
+                <span class="n">theStr</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">◦ </span><span class="si">{:&lt;15}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">my_names</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">-</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_optionValue</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+            <span class="n">theStr</span> <span class="o">+=</span> <span class="n">text_format</span><span class="o">.</span><span class="n">END</span>
+        <span class="k">return</span> <span class="n">theStr</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, De Gréef Christophe
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
