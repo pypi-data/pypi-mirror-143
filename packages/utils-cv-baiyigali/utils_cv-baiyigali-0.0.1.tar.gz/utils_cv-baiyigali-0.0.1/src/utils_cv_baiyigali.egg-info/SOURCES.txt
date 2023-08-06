@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/utils_cv/__init__.py
+src/utils_cv/utils_box.py
+src/utils_cv_baiyigali.egg-info/PKG-INFO
+src/utils_cv_baiyigali.egg-info/SOURCES.txt
+src/utils_cv_baiyigali.egg-info/dependency_links.txt
+src/utils_cv_baiyigali.egg-info/top_level.txt
