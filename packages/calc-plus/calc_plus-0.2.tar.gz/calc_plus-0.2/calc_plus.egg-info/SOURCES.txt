@@ -1,0 +1,10 @@
+setup.py
+calc_plus.egg-info/PKG-INFO
+calc_plus.egg-info/SOURCES.txt
+calc_plus.egg-info/dependency_links.txt
+calc_plus.egg-info/not-zip-safe
+calc_plus.egg-info/requires.txt
+calc_plus.egg-info/top_level.txt
+module/__init__.py
+module/find_middle.py
+module/percent.py
