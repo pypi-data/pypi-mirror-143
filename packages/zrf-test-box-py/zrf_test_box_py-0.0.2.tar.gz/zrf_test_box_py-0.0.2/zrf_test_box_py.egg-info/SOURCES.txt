@@ -1,0 +1,8 @@
+setup.py
+zrf_test_box_py/__init__.py
+zrf_test_box_py/test2.py
+zrf_test_box_py.egg-info/PKG-INFO
+zrf_test_box_py.egg-info/SOURCES.txt
+zrf_test_box_py.egg-info/dependency_links.txt
+zrf_test_box_py.egg-info/requires.txt
+zrf_test_box_py.egg-info/top_level.txt
