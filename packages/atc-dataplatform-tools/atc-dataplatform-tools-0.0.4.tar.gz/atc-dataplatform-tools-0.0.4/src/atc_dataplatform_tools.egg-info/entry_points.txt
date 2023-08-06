@@ -1,0 +1,3 @@
+[console_scripts]
+atc_dp_tools_update_req_file = atc_tools.requirements:main
+
