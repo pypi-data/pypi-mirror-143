@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: poc-dependency-gob
+Version: 0.1.1
+Summary: 
+Author: Your Name
+Author-email: you@gobsingh.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: skinny
+Provides-Extra: standard
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0); extra == "standard"
+Requires-Dist: pandas (>=1.4.1,<2.0.0)
+Requires-Dist: sklearn (>=0.0,<0.1); extra == "skinny"
+Requires-Dist: torch (>=1.11.0,<2.0.0); extra == "standard"
