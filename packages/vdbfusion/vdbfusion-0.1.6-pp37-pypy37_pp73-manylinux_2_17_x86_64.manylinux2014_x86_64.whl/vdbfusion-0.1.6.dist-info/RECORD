@@ -1,0 +1,10 @@
+vdbfusion-0.1.6.dist-info/METADATA,sha256=04k0OYUprxMBQ_DVhbCbkHEdVrDM3sVxbVe6hxJoNsw,6730
+vdbfusion-0.1.6.dist-info/RECORD,,
+vdbfusion-0.1.6.dist-info/LICENSE.txt,sha256=um-lZW5HowW2Fx2diYX_s2Ie0ZszX7LG_TMoiPXwxTo,1110
+vdbfusion-0.1.6.dist-info/WHEEL,sha256=QfIh88pe_a4XavUJbWU-Q1cSBdwHrw6YjGDGRvrZTuA,162
+vdbfusion-0.1.6.dist-info/top_level.txt,sha256=BKv6sGN8Em9wF5sFSYMwM6XhWVxRnwTfKy6dfLOuu2I,10
+vdbfusion/__init__.py,sha256=Ki4qGU-C5ImfFJbnIvNAdK_8UeVNdFOyhFqUmpDKWDI,63
+vdbfusion/pybind/vdb_volume.py,sha256=fSoZt2NGbm_OEs0H_UdRNZnNUzE3dBlKJRWrz8o0Wb0,5289
+vdbfusion/pybind/vdbfusion_pybind.pypy37-pp73-x86_64-linux-gnu.so,sha256=r3ge4sp1-e3aLkOUHWR85gjq768KssX-3p466EzqFag,2432360
+vdbfusion/pybind/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vdbfusion/pybind/vdbfusion_pybind.cpython-37m-x86_64-linux-gnu.so,sha256=jTMy_Br0e45R8l-t40rxdmz_iztKg1A0q_8HIECLU7c,2452808
