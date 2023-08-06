@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: merlin-systems
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/NVIDIA-Merlin/systems
+Author: NVIDIA Corporation
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Merlin Systems
+
+[![stability-alpha](https://img.shields.io/badge/stability-alpha-f4d03f.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#alpha)
+
+
