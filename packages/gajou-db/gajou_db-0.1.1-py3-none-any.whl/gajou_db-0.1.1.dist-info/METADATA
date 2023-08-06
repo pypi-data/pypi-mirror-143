@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: gajou-db
+Version: 0.1.1
+Summary: Base classes and helpers to make QA autotests with DB interaction
+Home-page: https://github.com/ArtyomKomarenko/gajou
+Author: Artyom Komarenko
+Author-email: artyom.komarenko@mail.ru
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary
+
+<h2>牙城</h2>
+
+<h3>DB</h3>
+
+* PostgresHelper - contains all basic commands with logging. Select-command supports simple caching. Can be useful with
+  any query language like Pypika.
+* DatabaseError - simple DB exception.
+* Singleton - simple implementation of singleton used in DB helper to prevent unnecessary propagation of connections. 
+
