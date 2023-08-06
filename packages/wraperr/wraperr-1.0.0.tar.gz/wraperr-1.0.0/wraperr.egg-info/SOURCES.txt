@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+test/__init__.py
+test/test_wrap_error.py
+wraperr.egg-info/PKG-INFO
+wraperr.egg-info/SOURCES.txt
+wraperr.egg-info/dependency_links.txt
+wraperr.egg-info/requires.txt
+wraperr.egg-info/top_level.txt
