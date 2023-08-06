@@ -1,0 +1,8 @@
+setup.py
+rainreader/__init__.py
+rainreader/rainreader.py
+rainreader.egg-info/PKG-INFO
+rainreader.egg-info/SOURCES.txt
+rainreader.egg-info/dependency_links.txt
+rainreader.egg-info/requires.txt
+rainreader.egg-info/top_level.txt
