@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: code-with-finn
+Version: 1.0.0
+Summary: Helps feed the soul while coding
+Home-page: https://github.com/svank/code_with_finn
+Author: Sam Van Kooten
+Author-email: vankooten.sam@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/svank/code_with_finn/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pillow (>=9.0)
+
+# code_with_finn
+
+[![PyPI version](https://badge.fury.io/py/code-with-finn.svg)](https://pypi.org/project/code-with-finn/)
+
+A small module that brings the good dog Finn into your Jupyter notebooks.
+
+![demo image](https://github.com/svank/code_with_finn/raw/main/images/error.png)
+
+While Finn can warn you after errors, he can also celebrate successes!
+
+![demo image](https://github.com/svank/code_with_finn/raw/main/images/celebrate.png)
+
+He can also help you prepare yourself before a long stack trace.
+
+![demo image](https://github.com/svank/code_with_finn/raw/main/images/looks_bad.png)
+
+You can send him away if you need to:
+
+![demo image](https://github.com/svank/code_with_finn/raw/main/images/without.png)
+
+Or send him away forever with
+```python
+code_with_finn.announce_errors(False)
+code_with_finn.celebrate_success(False)
+```
+
+# Installation
+
+Install with
+```
+pip install code_with_finn
+```
+
+
