@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: nonebot-plugin-leetcode2
+Version: 1.0.1
+Summary: 基于nonebot2的leetcode查询插件。
+Home-page: https://github.com/Nranphy/nonebot_plugin_leetcode
+Author: Nranphy
+Author-email: 3102002900@qq.com
+License: UNKNOWN
+Description: 一个nonebot的leetcode查询插件，可以查询用户和题目，包含每日一题和随机一题，并可以每日定时发送题目。
+Platform: UNKNOWN
