@@ -1,0 +1,5 @@
+mkdocs
+setuptools
+Markdown
+beautifulsoup4
+python-frontmatter

@@ -1,0 +1,1 @@
+git+https://github.com/neurobin/mdx_wikilink_plus/
