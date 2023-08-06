@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/starwar_dob.egg-info/PKG-INFO
+src/starwar_dob.egg-info/SOURCES.txt
+src/starwar_dob.egg-info/dependency_links.txt
+src/starwar_dob.egg-info/top_level.txt
+src/starwardob/__init__.py
+src/starwardob/starwardob.py
