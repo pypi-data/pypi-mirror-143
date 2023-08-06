@@ -1,0 +1,13 @@
+numpy
+numba
+matplotlib
+h5py
+pandas
+ipython
+astropy
+extension-helpers
+scipy
+configya
+astromodels
+threeml
+interpolation
