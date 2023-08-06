@@ -1,0 +1,10 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "requests",
+    "numpy",
+    "python-magic==0.4.25"
+]
+
+build-backend = "setuptools.build_meta"
