@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+pysaur/__init__.py
+pysaur/fraction.py
+pysaur/monom.py
+pysaur/polynom.py
+pysaur.egg-info/PKG-INFO
+pysaur.egg-info/SOURCES.txt
+pysaur.egg-info/dependency_links.txt
+pysaur.egg-info/not-zip-safe
+pysaur.egg-info/top_level.txt
