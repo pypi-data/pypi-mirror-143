@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+IMAPY_music.egg-info/PKG-INFO
+IMAPY_music.egg-info/SOURCES.txt
+IMAPY_music.egg-info/dependency_links.txt
+IMAPY_music.egg-info/top_level.txt
+imapy/__init__.py
