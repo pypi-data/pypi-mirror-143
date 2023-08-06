@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lerg
+Version: 0.0.1
+Summary: A unified approach to explain the output of any conditional text generation model.
+Home-page: https://github.com/Pascalson/LERG
+Author: Yi-Lin Tuan
+Author-email: ytuan@cs.ucsb.edu
+License: MIT
+Project-URL: Bug Tracker, https://github.com/Pascalson/LERG/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+LERG (Local Explanation of Response Generation) is a unified approach to explain the output of any conditional text generation model. LERG extends and unifies game theory based approach (Shapley value) and local explanations to consider the relationship among output time steps, thus being suitable for text generation.
+
