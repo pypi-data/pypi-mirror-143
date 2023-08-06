@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pbtestconnect
+Version: 0.0.1
+Summary: SDK for Connect.
+Home-page: UNKNOWN
+Author: Philip Barile
+Author-email: philip.barile@thermofisher.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Overview
+testing testing?
+
