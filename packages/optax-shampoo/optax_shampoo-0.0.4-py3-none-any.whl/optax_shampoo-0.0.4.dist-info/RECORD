@@ -1,0 +1,9 @@
+optax_shampoo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optax_shampoo/distributed_shampoo.py,sha256=2QcM5nh0-8oADSFXXNfh9UR0vjtlrGAI4pscmz0M_RE,75655
+optax_shampoo/distributed_shampoo_test.py,sha256=Q3CmhQOPiEU4d33CnleUHxYXwaok-t-rvnPVLBrd6dk,3477
+optax_shampoo/quantization_utils.py,sha256=4KdOlAlt-ijBS7clVlj9t9J7_GGgp6ZASSmcmVqsNqI,4247
+optax_shampoo-0.0.4.dist-info/LICENSE,sha256=gTXjZ4WSwVpgnHkvzVZu-N_pW6OXwg2cUBFM3uUlicM,11311
+optax_shampoo-0.0.4.dist-info/METADATA,sha256=tGmMC3Nd4l5D2k3xBOigssPiTyX17OlEcRK4ZvAMj7k,1372
+optax_shampoo-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+optax_shampoo-0.0.4.dist-info/top_level.txt,sha256=Bx00fxZA_lSBqcOchyWRvZE9QAC-XUwYLjQG7mANxf4,14
+optax_shampoo-0.0.4.dist-info/RECORD,,
