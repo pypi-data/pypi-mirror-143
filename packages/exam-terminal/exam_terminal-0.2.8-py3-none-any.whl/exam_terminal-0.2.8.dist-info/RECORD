@@ -1,0 +1,12 @@
+exam_terminal/ExamTerminal.py,sha256=MVtDOh2OkjOLeCywSt4-xayo3JJZiyaR4t5oX9Vio1Q,49056
+exam_terminal/__init__.py,sha256=68NMXa2A2q7FkfS2450NbTTbp51dvGlp44y2hFm8u_U,80
+exam_terminal/__main__.py,sha256=xqfbnO8IYGZp9IJzwASkgbF3zOYXLLTu46PMJi1hwcI,5156
+exam_terminal/exam_terminal.py,sha256=5t5_Rd4ty3jHmCQQA_uAeeqL0JSqDcIvRfP6eFis2CY,1359
+exam_terminal/utility.py,sha256=5ujNotPjzCU0QIf2itcC9I3BWyihJ8KqaYP-iM7IAuE,13315
+exam_terminal/exams/sample_exam.yml,sha256=g0SfLFIrgjxklkMZKYk2l0F_2lTozHwdfosyjOdb-3Y,1821
+exam_terminal-0.2.8.dist-info/LICENSE,sha256=UA1M9JdSNDLw05Si-93vFIL3mppOxsn6GJS4oa1e6LE,11347
+exam_terminal-0.2.8.dist-info/METADATA,sha256=L70H22M3S4OkvB_wMJRcD7F17-Tvxf--OZHlkSFa5wk,13188
+exam_terminal-0.2.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+exam_terminal-0.2.8.dist-info/entry_points.txt,sha256=QiQzaLKTXAsIodtqbEzgWwQTEpYZEt9q3y83qSNAAJs,62
+exam_terminal-0.2.8.dist-info/top_level.txt,sha256=Kx-cUjFmVN3MEgcF56q0Kn_KBMBpOf-eJ_fITHi61sI,14
+exam_terminal-0.2.8.dist-info/RECORD,,
