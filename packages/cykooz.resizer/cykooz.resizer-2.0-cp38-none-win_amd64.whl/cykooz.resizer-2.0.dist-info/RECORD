@@ -1,0 +1,10 @@
+cykooz.resizer-2.0.dist-info/METADATA,sha256=QzoesRMKtlJ5o8usv5RiEKImA8ossVatSBYIDsJFvbU,5820
+cykooz.resizer-2.0.dist-info/WHEEL,sha256=W_37hx0bQw85YxLlwC3u5rikVZsxKV5I4UjQF0jVgQ0,96
+cykooz/resizer/alpha.py,sha256=E-n6EZKFonUkZPC12HRrF1G2PcLTeOumcOZaFEYOGVg,3151
+cykooz/resizer/resize.py,sha256=x2jhORy3kSM5dg_x1QkyENFTrtmX6d4lP35zNKuoIR0,5716
+cykooz/resizer/rust_lib.pyi,sha256=6GKnDqGbaqGb3MK2fnjyUTER6ZjeyAXKgQq25DbXilw,3588
+cykooz/resizer/structs.py,sha256=Ye-LnsP8CcBiL2Or3Dando8KCX3YpAsN1_a3P4RrN0U,7032
+cykooz/resizer/__init__.py,sha256=TCP0m5Zd82k50wP-pe50y__LqWwjHrm3CNRjyMxFCvE,132
+cykooz/__init__.py,sha256=F0UD44DuZCpVvI1PX5rW4FcKQ004ORdqeOhf4JsheIY,66
+cykooz/resizer/rust_lib.cp38-win_amd64.pyd,sha256=phIfE05ctAF0CU4ulD3N1p3gfKmzBHfm-9IdckwrZos,479744
+cykooz.resizer-2.0.dist-info/RECORD,,
