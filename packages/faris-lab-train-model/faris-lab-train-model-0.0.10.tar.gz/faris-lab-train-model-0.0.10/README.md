@@ -1,0 +1,122 @@
+# nnGA Library - Neural Network Genetic Algorithm Library (v0.0.5)
+
+Off the shelf Genetic Algorithm library for deep learning problems
+
+## License
+Our code is released under the MIT license (refer to the [LICENSE](https://github.com/rssalessio/PoisoningDataDrivenControl/blob/master/LICENSE) file for details).
+
+## Requirements
+To use the library you need atleast Python 3.6. Examples may require additional libraries.
+
+Other required dependencies:
+- NumPy
+- Neptune
+
+## Usage/Examples
+You can import the library by typing ```pip install faris-lab-train-model```.
+
+To learn how to use neptune, check the following examples:
+```python
+import neptune.new as neptune
+from nnga import nnGA, GaussianInitializationStrategy, \
+    GaussianMutationStrategy, BasicCrossoverStrategy, \
+    PopulationParameters
+
+def make_network(parameters=None):
+    ''' Function that creates a network given a set of parameters '''
+    neural_network = ...
+    return neural_network
+
+
+def fitness(idx, parameters):
+    ''' Fitness function to evaluate a set of parameters '''
+    # Evaluate parameters
+    network = make_network(parameters)
+    return evaluate_network(network)
+
+
+if __name__ == '__main__':
+    # Initialize GA parameters
+    network = make_initial_network()
+    network_structure = [list(layer.shape) for layer in network]  # List of tuples, containing the shape of each layer
+    
+    # Population parameters
+    population = PopulationParameters(population_size=200)
+    
+    # Mutation strategy
+    mutation = GaussianMutationStrategy(network_structure, 1e-1)
+    
+    # Crossover strategy
+    crossover = BasicCrossoverStrategy(network_structure)
+    
+    # Initialization strategy
+    init = GaussianInitializationStrategy(
+        mean=0., std=1., network_structure=network_structure)
+
+    ga = nnGA(
+        epochs=50,  # Number of epochs
+        fitness_function=fitness,
+        population_parameters=population,
+        mutation_strategy=mutation,
+        initialization_strategy=init,
+        crossover_strategy=crossover,
+        num_processors=8)  # Number of cores
+
+    # Run GA with neptune
+    run = neptune.init(project="common/quickstarts", 
+                        api_token="ANONYMOUS",
+                        ga)
+```
+
+In general the code has the following structure
+```python
+from nnga import nnGA, GaussianInitializationStrategy, \
+    GaussianMutationStrategy, BasicCrossoverStrategy, \
+    PopulationParameters
+
+def make_network(parameters=None):
+    ''' Function that creates a network given a set of parameters '''
+    neural_network = ...
+    return neural_network
+
+
+def fitness(idx, parameters):
+    ''' Fitness function to evaluate a set of parameters '''
+    # Evaluate parameters
+    network = make_network(parameters)
+    return evaluate_network(network)
+
+
+if __name__ == '__main__':
+    # Initialize GA parameters
+    network = make_initial_network()
+    network_structure = [list(layer.shape) for layer in network]  # List of tuples, containing the shape of each layer
+    
+    # Population parameters
+    population = PopulationParameters(population_size=200)
+    
+    # Mutation strategy
+    mutation = GaussianMutationStrategy(network_structure, 1e-1)
+    
+    # Crossover strategy
+    crossover = BasicCrossoverStrategy(network_structure)
+    
+    # Initialization strategy
+    init = GaussianInitializationStrategy(
+        mean=0., std=1., network_structure=network_structure)
+
+    ga = nnGA(
+        epochs=50,  # Number of epochs
+        fitness_function=fitness,
+        population_parameters=population,
+        mutation_strategy=mutation,
+        initialization_strategy=init,
+        crossover_strategy=crossover,
+        num_processors=8)  # Number of cores
+
+    # Run GA
+    network_parameters, best_result, results = ga.run()
+
+```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

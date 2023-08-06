@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+faris_lab_train_model.egg-info/PKG-INFO
+faris_lab_train_model.egg-info/SOURCES.txt
+faris_lab_train_model.egg-info/dependency_links.txt
+faris_lab_train_model.egg-info/not-zip-safe
+faris_lab_train_model.egg-info/requires.txt
+faris_lab_train_model.egg-info/top_level.txt
+nnga/__init__.py
+nnga/about.py
+nnga/crossover_strategy.py
+nnga/initialization_strategy.py
+nnga/mutation_strategy.py
+nnga/nnga.py
+nnga/population_parameters.py
