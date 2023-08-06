@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "pymdown-include"
+version = "0.1.0"
+description = "Pymdown include plugin"
+readme = "README.md"
+authors = ["Jacques Supcik <jacques.supcik@hefr.ch>"]
+license = "Apache-2.0"
+repository = "https://github.com/supcik/pymdown-include/"
+keywords = ["Markdown", "include", "extension", "plugin"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Filters",
+    "Topic :: Text Processing :: Markup :: HTML"
+]
+
+include = [
+    "LICENSE-2.0.txt"
+]
+
+[tool.poetry.plugins] # Optional super table
+
+[tool.poetry.plugins."markdown.extensions"]
+"include" = "pymdown_include:PymdownInclude"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Markdown = "^3.3.6"
+
+[tool.poetry.dev-dependencies]
+tox = "^3.24.5"
+pytest = "^7.0.1"
+coverage = "^6.3.2"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
