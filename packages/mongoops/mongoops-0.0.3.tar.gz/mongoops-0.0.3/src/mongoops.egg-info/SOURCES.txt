@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mongoops/__init__.py
+src/mongoops/ops.py
+src/mongoops.egg-info/PKG-INFO
+src/mongoops.egg-info/SOURCES.txt
+src/mongoops.egg-info/dependency_links.txt
+src/mongoops.egg-info/requires.txt
+src/mongoops.egg-info/top_level.txt
