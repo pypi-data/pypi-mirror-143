@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: env-set
+Version: 1.0.0
+Summary: Utility for managing environment variables
+Home-page: https://github.com/realpython/reader
+Author: Felix Orinda
+Author-email: forinda82@gmail.com
+License: MIT
+Description: Utility for managing environment variables
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
