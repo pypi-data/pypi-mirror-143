@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: openspoor
+Version: 0.1.4
+Summary: Open source project to allow translations between different spoor referential systems
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: importlib-metadata
+Requires-Dist: geopandas
+Requires-Dist: pyyaml
+Requires-Dist: loguru
+Requires-Dist: requests
+Requires-Dist: rtree
+Requires-Dist: pyproj (<3)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
+UNKNOWN
+
