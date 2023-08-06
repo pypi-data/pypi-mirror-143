@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+interrail/api.py
+interrail.egg-info/PKG-INFO
+interrail.egg-info/SOURCES.txt
+interrail.egg-info/dependency_links.txt
+interrail.egg-info/requires.txt
+interrail.egg-info/top_level.txt
