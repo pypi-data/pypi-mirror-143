@@ -1,0 +1,10 @@
+ERIS_API/__init__.py,sha256=coiV_PIfzaabbHYzQYPEgtH1FYiUHRySbdZIlJUe9RA,190
+ERIS_API/ERIS_API.py,sha256=wGRb8Q-c4gz-trgWORd71eIAuA7j8rrzlnvIZAWmkIs,12109
+ERIS_API/ERIS_Parameters.py,sha256=YHOHYJlFsOMXOrIGhsIu7_uRTCDc9mCdNO6oYcecb2c,3161
+ERIS_API/ERIS_Responses.py,sha256=XpLJwdFQ3ZCUu5x3klJ7IkE2V1GogldPBQQjTjEOWdU,6261
+ERIS_API/models.py,sha256=wfOuOs1Ly2YFccYwAjj1pfgX9ShUv2rox2fmw7lade0,2703
+ERIS_API/utils.py,sha256=hsdf6XkzaQoc5XJyngWi1vlNRKGe1Q1NQ2H4Ss3t-vU,4233
+eris_api-1.5.0.dist-info/LICENSE,sha256=dgTLr3rGdzvafj0IzP2W6pJ0arDS6Q3bw0VSM29kYvI,1086
+eris_api-1.5.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+eris_api-1.5.0.dist-info/METADATA,sha256=pYTcGpAtcZbNEIvzerTUvmuCqk4P-2-Q2TkuyJ1yJ7A,7595
+eris_api-1.5.0.dist-info/RECORD,,
