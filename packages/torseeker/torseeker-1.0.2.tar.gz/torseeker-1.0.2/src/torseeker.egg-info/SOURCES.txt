@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/torseeker/__init__.py
+src/torseeker/torseeker.py
+src/torseeker.egg-info/PKG-INFO
+src/torseeker.egg-info/SOURCES.txt
+src/torseeker.egg-info/dependency_links.txt
+src/torseeker.egg-info/entry_points.txt
+src/torseeker.egg-info/requires.txt
+src/torseeker.egg-info/top_level.txt
