@@ -1,0 +1,6 @@
+boto3==1.20.23
+sqlalchemy==1.4.28
+snowflake-connector-python==2.7.1
+google-api-python-client==2.33.0
+pyspark==3.2.1
+pandavro==1.6.0
