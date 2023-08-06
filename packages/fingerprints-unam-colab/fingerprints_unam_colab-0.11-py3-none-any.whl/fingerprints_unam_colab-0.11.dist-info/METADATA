@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: fingerprints-unam-colab
+Version: 0.11
+Summary: Extraction of fingerprint and palm data from grayscale images.
+Home-page: https://github.com/forensics-colab-unam/fingerprints-unam-colab
+Author: Arturo Curiel
+Author-email: me@arturocuriel.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: sklearn
+
+# Fingerprint and Handprint Extractor
+
+This project uses simple image processing operations to extract finger and hand impressions from white paper sheets. It's intended to be used as an auxiliary tool for forensics research at [UNAM](http://www.cienciaforense.facmed.unam.mx/).
+
+## Getting Started
+
+The latest stable version can be downloaded from the [PyPI](https://pypi.org/project/fingerprints-unam-colab/). No development branches are available as of yet (the code in the repo corresponds to the latest release). No GUI is currently available, but it is expected to be added in the future. High-level analysis on the extracted fingerprints is currently on the works.
+
+### Prerequisites
+
+The code is written in Python 3, and it relies on OpenCV, SciPy and scikit-image:
+
+* [OpenCV](https://opencv.org/)
+* [SciPy](https://www.scipy.org/)
+* [scikit-image](https://scikit-image.org/)
+
+Dependencies are automatically managed by `pip`.
+
+### Installing
+
+To download, you can simply create a `virtualenv` and install the project with `pip`:
+
+```
+pip install fingerprints-unam-colab
+```
+
+The fingerprint extraction script can be executed with the following command:
+
+```
+extract_fp path_to_input_image path_to_output_folder
+```
+where:
+
+* `path_to_input_image` is the path to the image file containing the fingerprints to be extracted.
+* `path_to_output_folder` is the path to the folder where the results will be stored (may be empty or not).
+
+## How it works
+
+The extraction algorithm works as follows: 
+
+1. The script reads the input image in grayscale
+2. The grayscale image is normalized.
+3. A smoothing filter is applied (median Blur with a 7x7 window).
+4. The filtered image is binarized through local thresholding (to account for the expected high contrast between the black hand/finger prints and the white background).
+5. The binary image is inverted (we are interested in the black regions).
+6. Long vertical and horizontal lines are removed with a morphological filter (to discard scan borders).
+7. Felzenszwalb's superpixel method is used to detect potential ROIs.
+8. Potential ROIs are segmented into independent connected components (8x8 neighborhood).
+9. Components below 10000 pixels are discarded (too small).
+10. A dilation operation is applied (10x with 8x8 structuring element) to connect contiguous regions.
+11. An erosion operation is performed (5x with 8x8 structuring element) to avoid over segmentation.
+12. The obtained components are classified as follows:
+    - Components are classified as fingerprints if: 
+      - They approximate a square.
+      - They are no larger than 500px and no smaller than 150px (to remove artifacts).
+      - They have a low average distance with respect to all other candidates (to remove outliers).
+    - Components are classified as hand-prints if:
+      - They are not fingerprints.
+      - They are not in the border of the image (100px border).
+13. The classified components are cropped, rotated (based on their minimum bounding box) and saved as independent images.
+
+Note: Most of the logic to manage connected components as independent regions is enconded in a Region class (in `regions.py`). 
+
+## Authors
+
+* **Arturo Curiel** - *Initial work* - [website](https://arturocuriel.com)
+
+See also the list of [contributors](https://github.com/forensics-colab-unam/fingerprints-unam-colab/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the GNU/GPL3 License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Idk, my cat I guess.
+
+

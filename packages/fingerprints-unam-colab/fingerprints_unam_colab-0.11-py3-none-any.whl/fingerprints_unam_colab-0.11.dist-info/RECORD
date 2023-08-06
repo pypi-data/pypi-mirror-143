@@ -1,0 +1,10 @@
+huellas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+huellas/auxiliar.py,sha256=NDQ1CTCv_YyU3KpE5Xf7-G8bgHzEHgS1r7EdTDJKTWY,1571
+huellas/extract_fp.py,sha256=1HmHCCLd8fFlC3ZKnOrmzdvTHCFnpJH7w7WJyZAqEsc,13596
+huellas/regions.py,sha256=d77TjuLlkhDLWf5E8zYmc2gEZe0noyDZ-0hrRzyWD-g,4956
+fingerprints_unam_colab-0.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fingerprints_unam_colab-0.11.dist-info/METADATA,sha256=cms7lzcdkBd1U3Po2KXG9ZrM61WXhT59oQ608mPg6RI,4239
+fingerprints_unam_colab-0.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fingerprints_unam_colab-0.11.dist-info/entry_points.txt,sha256=ixg-LwR0dqKQcnPpMFaKpo6UI7Zi5IsWyGpl0T2KF7A,63
+fingerprints_unam_colab-0.11.dist-info/top_level.txt,sha256=A9cGtAyw_tKxeZkWxyYCnvhL6mAQz0QHmLZzPe3PEiw,8
+fingerprints_unam_colab-0.11.dist-info/RECORD,,
