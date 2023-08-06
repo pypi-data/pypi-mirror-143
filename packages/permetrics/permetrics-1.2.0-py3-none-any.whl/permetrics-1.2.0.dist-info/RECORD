@@ -1,0 +1,9 @@
+permetrics/__init__.py,sha256=IZW3c3U7YE-9kwHFDceLmo0hxjnlpDAx-5hwdsK-de0,851
+permetrics/classification.py,sha256=I8zZZL3QTBG3-itvvYp7Gfr5N0vSqm-nD3ooZa1zGk0,4131
+permetrics/evaluator.py,sha256=fEPLifIPcF8ymeRMztSE9z-3Y1nVRYMPOeFawi2heeo,9425
+permetrics/regression.py,sha256=Za1sKAaZ_UgSvXg2_jRSyN-Fsmv2jkftEsPfar97-1E,71564
+permetrics-1.2.0.dist-info/LICENSE,sha256=iVDrLinMlkIME42zragQMW2jJQ2VN33olFqzcY_-8GY,11346
+permetrics-1.2.0.dist-info/METADATA,sha256=eICF7vQG2bpqFrToMGt0c7DKZcQC9ZK5W6xUdmnwnEg,13277
+permetrics-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+permetrics-1.2.0.dist-info/top_level.txt,sha256=NA1260BfAHQrAbPt6RDtgjH0_XRJvEwji8XckYExKAc,11
+permetrics-1.2.0.dist-info/RECORD,,
