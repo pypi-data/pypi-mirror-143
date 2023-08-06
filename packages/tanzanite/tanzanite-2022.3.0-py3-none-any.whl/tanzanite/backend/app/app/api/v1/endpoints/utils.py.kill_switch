@@ -1,0 +1,100 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=unused-argument
+
+# Standard imports
+import os
+
+from pathlib import Path
+from typing import Any
+
+# External imports
+from fastapi import (
+    status,
+    APIRouter,
+    Body,
+    Depends,
+    HTTPException,
+    Request,
+)
+from pydantic import EmailStr  # pylint: disable=no-name-in-module
+
+# Local imports
+from tanzanite.backend.app.app import models, schemas
+from tanzanite.backend.app.app.api import deps
+from tanzanite.backend.app.app.core.celery_app import celery_app
+from tanzanite.backend.app.app.utils import send_test_email
+
+
+router = APIRouter()
+
+
+@router.post(
+    "/test-celery/",
+    response_model=schemas.Msg,
+    status_code=status.HTTP_201_CREATED,
+)
+@celery_app.task(soft_time_limit=5)
+def test_celery(
+    msg: schemas.Msg,
+    current_user: models.User = Depends(deps.get_current_active_superuser),
+) -> Any:
+    """
+    Test Celery worker.
+    """
+    celery_app.send_task("app.worker.test_celery", args=[msg.msg])
+    return {"msg": "Word received"}
+
+
+@router.post(
+    "/test-email/",
+    response_model=schemas.Msg,
+    status_code=status.HTTP_201_CREATED,
+)
+def test_email(
+    email_to: EmailStr,
+    current_user: models.User = Depends(deps.get_current_active_superuser),
+) -> Any:
+    """
+    Test emails.
+    """
+    send_test_email(email_to=email_to)
+    return {"msg": "Test email sent"}
+
+
+@router.post(
+    "/shutdown/",
+    response_model=schemas.Msg,
+    include_in_schema=False,
+)
+def shutdown(
+    request: Request,
+    kill_switch: str = Body(...),
+    current_user: models.User = Depends(deps.get_current_active_superuser),
+    # db: Session = Depends(get_db),
+) -> Any:
+    """
+    Shuts down the server manually when a kill switch is enabled.
+
+    This is primarily used for testing purposes to stop a server
+    after API testing is completed, but can also be used for things
+    like limiting the lifetime of a server for whatever reason.
+    """
+    try:
+        kill_switch_path = Path(os.environ.get('TANZANITE_STARTED_UVICORN'))
+    except TypeError:
+        kill_switch_path = None
+    if kill_switch_path in ('.', None):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Shutdown was not enabled when the server started.",
+        )
+    if kill_switch != kill_switch_path:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="I'm sorry Dave, but I can't let you do that.",
+        )
+    return {"msg": "Would exit now..."}
+
+# https://stackoverflow.com/questions/68603658/how-to-terminate-a-uvicorn-fastapi-application-cleanly-with-workers-2-when
+# https://stackoverflow.com/questions/61577643/python-how-to-use-fastapi-and-uvicorn-run-without-blocking-the-thread

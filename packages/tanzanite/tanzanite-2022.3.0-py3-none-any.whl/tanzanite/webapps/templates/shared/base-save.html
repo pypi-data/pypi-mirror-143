@@ -1,0 +1,147 @@
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+
+      .bg {
+        background-image: url("/static/images/Hello_World.png");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bg:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(152, 66, 211, 0.63);
+      }
+    </style>
+
+
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_full_page -->
+    <style>
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .fixed-background-foobar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .fixed-background {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("/static/images/Hello_World.png");
+        background-size: cover;
+      }
+
+      .fixed-background:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(152, 66, 211, 0.73);
+      }
+
+      .background-img {
+        height: inherit;
+      }
+    </style>
+
+    <!-- See: https://coder-coder.com/background-image-opacity/ -->
+    <style>
+        .bg {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('/static/images/Hello_World.png');
+            background-size: cover;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(152, 66, 211, 0.63);
+        }
+    </style>
+
+    <!-- See: https://coder-coder.com/background-image-opacity/ -->
+    <style>
+      .bg {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        background-image: url("/static/images/Hello_World.png");
+        background-size: cover;
+      }
+
+      .bg:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(152, 66, 211, 0.63);
+      }
+      h1 {
+        position: relative;
+        color: #ffffff;
+        font-size: 14rem;
+        line-height: 0.9;
+        text-align: center;
+      }
+    </style>
+
+
+    <style>
+      .demo-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      .demo-bg {
+        opacity: 0.6;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .demo-content {
+        position: relative;
+        height: inherit;
+      }
+    </style>
+
+      <img
+        class="demo-bg"
+        src="/static/images/Hello_World.png"
+        style="object-fit: cover"
+        alt=""
+      />

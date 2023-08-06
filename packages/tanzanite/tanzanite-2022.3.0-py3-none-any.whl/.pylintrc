@@ -1,0 +1,19 @@
+[MASTER]
+
+# Use multiple processes to speed up Pylint.
+jobs=4
+
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=db,e,f,id,r,s,se,t,v
+
+[MESSAGES CONTROL]
+
+# Disable all to choose the Tests one by one
+disable=no-member,too-few-public-methods,wrong-import-position
+
+[MISCELLANEOUS]
+
+# List of note tags to take in consideration, separated by a comma.
+notes=FIXME,NOTE,TODO

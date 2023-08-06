@@ -1,0 +1,201 @@
+# -*- coding: utf-8 -*-
+
+"""
+Start the Tanzanite API server via the `tanzanite` (a.k.a., `tz`) CLI.
+"""
+
+# Standard imports
+import contextlib
+import logging
+import os
+import sys
+import threading
+import time
+
+from pathlib import Path
+
+# External imports
+import uvicorn
+
+from cliff.command import Command
+from psec.secrets_environment import SecretsEnvironment
+# from uvicorn import (
+#     Config,
+#     Server,
+# )
+
+# Local imports
+from tanzanite import DOMAIN
+
+
+_DEFAULT_PORT = 8000
+
+
+class Server(uvicorn.Server):
+    """
+    Customized server class.
+    """
+    def install_signal_handlers(self):
+        pass
+
+    @contextlib.contextmanager
+    def run_in_thread(self):
+        """
+        Run in a separate thread.
+        """
+        thread = threading.Thread(target=self.run)
+        thread.start()
+        try:
+            while not self.started:
+                time.sleep(1e-3)
+            yield
+        finally:
+            self.should_exit = True
+            thread.join()
+
+
+def run_app(
+    app=None,
+    host=DOMAIN,
+    port=_DEFAULT_PORT,
+    log_level=None,
+):
+    """
+    Run app in event loop.
+    """
+    # loop = asyncio.new_event_loop()
+    # log_config = uvicorn.config.LOGGING_CONFIG
+    # log_config["formatters"]["access"]["fmt"] = LOG_FORMAT
+    # log_config["formatters"]["default"]["fmt"] = LOG_FORMAT
+    # configure_logging()
+    config = uvicorn.Config(
+        app,
+        # loop=loop,
+        loop='anyio',
+        host=host,
+        port=port,
+        log_level=log_level,
+    )
+    server = Server(config=config)
+
+    with server.run_in_thread():
+        time.sleep(3000)
+        # loop.run_until_complete(server.run())
+
+
+def create_kill_switch(kill_switch: Path) -> None:
+    """
+    Creates the kill switch in the appropriate location.
+
+    The path to the kill switch can be an absolute path, a relative
+    path (including leading `./` to create a file in the current
+    working directory), or a bare file name (e.g., `kill_switch`).
+
+    In the latter case where there is no path information, the file is
+    created in the `psec` environment's temporary directory.
+    """
+    if (
+        kill_switch.root == ''
+        and len(kill_switch.parts) == 1
+    ):
+        secrets_tmpdir = SecretsEnvironment().get_tmpdir_path()
+        kill_switch = kill_switch.joinpath(secrets_tmpdir, kill_switch)
+    try:
+        # TODO(dittrich): Create time-based token instead?
+        kill_switch.touch()
+    except PermissionError:
+        sys.exit(
+            f'[-] insufficient permissions to create {kill_switch}'
+        )
+    except FileNotFoundError:
+        sys.exit(
+            f'[-] invalid path to {kill_switch}'
+        )
+    return kill_switch
+
+
+class CmdStartAPI(Command):
+    """
+    Start the API and database backend.
+
+    This command performs the same steps that were performed in
+    the `prestart.sh` Bash script from `tiangolo/full-stack-fastapi-postgresql`:
+
+        https://github.com/tiangolo/full-stack-fastapi-postgresql/blob/490c554e23343eec0736b06e59b2108fdd057fdc/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/prestart.sh
+
+    Those steps are:
+        1. Start the database server.
+        2. Run Alembic migrations to create or upgrade database tables.
+        3. Create the initial database contents on first start.
+    """  # noqa
+
+    logger = logging.getLogger(__name__)
+
+    def get_parser(self, prog_name):
+        parser = super().get_parser(prog_name)
+        parser.add_argument(
+            '-b', '--bind-ip',
+            action='store',
+            dest='host',
+            default=DOMAIN,
+            help='Bind server to this IP address or DNS name'
+        )
+        parser.add_argument(
+            '-p', '--port',
+            action='store',
+            dest='port',
+            default='8000',
+            help='Listen on this TCP port'
+        )
+        parser.add_argument(
+            '--reload',
+            action='store_true',
+            dest='reload',
+            default=False,
+            help='Reload the server when files change (for development)'
+        )
+        parser.add_argument(
+            '--kill-switch',
+            action='store',
+            type=Path,
+            default=None,
+            help='Server process will exit when this file is removed'
+        )
+        return parser
+
+    def take_action(self, parsed_args):
+        # from tanzanite.backend.app.app.main import app
+        # log_level = 'TRACE' if self.app_args.debug else 'INFO'
+        # run_app(
+        #     'tanzanite.backend.app.app.main:app',
+        #     host=parsed_args.host,
+        #     port=int(parsed_args.port),
+        #     log_level=log_level,
+        # )
+        #
+        # uvicorn_config = app_logger.get_logging_config(
+        #     log_file='tanzanite-api.log'
+        # )
+        kill_switch = parsed_args.kill_switch
+        if kill_switch is not None:
+            kill_switch = create_kill_switch(kill_switch)
+        self.logger.debug('[+] created kill switch {kill_switch}')
+        os.environ['TANZANITE_STARTED_UVICORN'] = (
+            str(kill_switch) if kill_switch is not None else ''
+        )
+        # https://github.com/miguelgrinberg/python-socketio/issues/332#issuecomment-712928157
+        #
+        uvicorn.run(
+            'tanzanite.backend.app.app.main:app',
+            **uvicorn_config,
+            # loop='asyncio',
+            host=parsed_args.host,
+            port=int(parsed_args.port),
+            # reload=parsed_args.reload,
+            # reload_excludes='build',
+            # workers=1,
+            # limit_concurrency=1,
+            # limit_max_requests=1,
+        )
+
+# vim: set ts=4 sw=4 tw=0 et :

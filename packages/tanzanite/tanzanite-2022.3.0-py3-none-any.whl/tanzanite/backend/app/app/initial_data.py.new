@@ -1,0 +1,41 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+
+
+# Standard imports
+import logging
+
+# External imports
+from sqlalchemy_utils.functions import drop_database
+
+# Local imports
+from tanzanite.backend.app.app.db.seed_database import seed_database
+from tanzanite.core.config import settings
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+# def init(
+#     fresh_db: bool = False,
+# ) -> None:
+    # if fresh_db:
+    #     try:
+    #         drop_database(settings.SQLALCHEMY_DATABASE_URI)
+    #     except FileNotFoundError:
+    #         pass
+
+def init() -> None:
+    db = SessionLocal()
+    seed_database(db=db)
+
+
+def main(fresh_db: bool = False) -> None:
+    logger.info("[+] creating initial data")
+    init(fresh_db=fresh_db)
+    logger.info("[+] initial data created")
+
+
+if __name__ == "__main__":
+    main()
