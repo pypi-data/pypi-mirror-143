@@ -1,0 +1,7 @@
+/.idea
+/dist/
+*.egg-info
+*/__pycache__/
+
+/kasushi/_version.py
+*/.pytest_cache
