@@ -1,0 +1,4 @@
+fps>=0.0.8
+aiosqlite
+databases
+fastapi-users[oauth,sqlalchemy]<10,>=9.1.1
