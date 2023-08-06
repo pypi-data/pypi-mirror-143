@@ -1,0 +1,17 @@
+isic_challenge_scoring/__init__.py,sha256=MgJzVV3vslGs4Osf0c7ArxggFQFy-UryiSC4X56jgsM,522
+isic_challenge_scoring/__main__.py,sha256=uiq5lUuqMfNSG6ldVkwX86hyG8d_vfdnIgoam_0DodM,2209
+isic_challenge_scoring/classification.py,sha256=JD4vr6u0XkUGCNEJM6RMTwKD-4K8jRo9Bjv812jbxmo,8014
+isic_challenge_scoring/confusion.py,sha256=tzeCk3JwAYUZRGYcIDhvakyZzpuqFj-hIGW7Wa8lM_4,1967
+isic_challenge_scoring/load_csv.py,sha256=UYt10CYSlLioBCOCicGqQGX9mleIN2l-e1dEj4tiyss,4867
+isic_challenge_scoring/load_image.py,sha256=QA_hDe9w7RGFH8kPVkWOu5qmymYUEuF3TFpK9EF2M80,4810
+isic_challenge_scoring/metrics.py,sha256=-IEtEtYVJrSGFdHRW7rF5PrT6_NOM1iqlKymtbuGZq4,11053
+isic_challenge_scoring/segmentation.py,sha256=UKs2a8fe-XAXwVXjXO6da0AUKVfmBBHF2JI7uBmedB4,3380
+isic_challenge_scoring/task2.py,sha256=41pDXys3xrTVUefZ_zbgFuYc6wSZ9qqWT0bWYvvXAXU,1899
+isic_challenge_scoring/types.py,sha256=UQObkSkE8GBYDGWbM87s19J1qWfrxhh9aov9QRNLE48,662
+isic_challenge_scoring/unzip.py,sha256=59ORIhsNDDC6Rbzs5SLzecmQvetWR-Swk0kUKqeC_o4,1688
+isic_challenge_scoring-5.6.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+isic_challenge_scoring-5.6.0.dist-info/METADATA,sha256=LyvloFSp9liJvcoCM4tsbMm_LcwWI_BMkUVcnRDfHSo,3002
+isic_challenge_scoring-5.6.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+isic_challenge_scoring-5.6.0.dist-info/entry_points.txt,sha256=nXYf4qXRY3qLJa_L2llKj34TlU-sS8i954h9wETNBcI,79
+isic_challenge_scoring-5.6.0.dist-info/top_level.txt,sha256=GHe3Z08Mdj6rxHKA-blZ9XPiug--4qswD-A2-Hk419A,23
+isic_challenge_scoring-5.6.0.dist-info/RECORD,,
