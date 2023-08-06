@@ -1,0 +1,10 @@
+linkcheck/__init__.py,sha256=5FigDsoX6KA4YoQD7MP175xtRhst-WHf_CPZIiT1iMQ,40
+linkcheck/cli.py,sha256=2g4ravLluQ_O_VteO-9p0zu4lJwg77tylR_WQVGowpM,721
+linkcheck/commands.py,sha256=psYSpdSsTz_asLTcv0L0txXsJshwtgFBOdyb-dljnUo,1698
+linkcheck/django.py,sha256=-dKTDHhSdkc1ez8Bcl2tgtAEuE42PZlmKYzxHeWS3YY,4756
+linkcheck/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkcheck-0.0.3.dist-info/entry_points.txt,sha256=nrjIjd2xfZBtdvA19OSQh13JvJS5m6WjrkV4z1_XfUU,47
+linkcheck-0.0.3.dist-info/LICENSE,sha256=WPXCMiAUHk5cEaLrMRS7k9aGrC2HKr8Y5v-LnQJ81Go,1059
+linkcheck-0.0.3.dist-info/WHEEL,sha256=96_DCfscDnVj9fVNwi1rfifiRwfpxLjwXWglVksjj_E,99
+linkcheck-0.0.3.dist-info/METADATA,sha256=nbRoTJCvE0HBCGddTwSJmCY3E4VtFxb44H5yKjlRcE0,1298
+linkcheck-0.0.3.dist-info/RECORD,,
