@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dftest
+Version: 0.4.0
+Summary: A library for testing and analyzing data integrity.
+Home-page: UNKNOWN
+Author: Atai Ambus
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: dill
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pandasgui
+Requires-Dist: seaborn
+Requires-Dist: termcolor
+
+UNKNOWN
+
+
