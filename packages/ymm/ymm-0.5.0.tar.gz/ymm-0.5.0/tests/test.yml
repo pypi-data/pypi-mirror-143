@@ -1,0 +1,13 @@
+# - install
+# - test
+# - watch
+# - release
+# - dev
+init:
+    - echo "install test"
+
+install:
+    - echo "install test"
+
+env:
+  key: echo "value"
