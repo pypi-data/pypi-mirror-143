@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: ErrorSearcher
+Version: 1.0.2
+Summary: ErrorSearcher help to search error on webbrowser
+Home-page: https://github.com/sachin11226/ErrorSearcher
+Author: Sachin
+Author-email: sachin1122621003@gmail.com
+License: MIT
+Download-URL: https://github.com/sachin11226/ErrorSearcher/archive/1.0.2.tar.gz
+Project-URL: Bug Tracker, https://github.com/sachin11226/ErrorSearcher/issues
+Keywords: python,error,ErrorSearcher,file,python3
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ErrorSearcher
+Search error on webbrowser
+# Installation
+```bash
+pip install ErrorSearcher
+```
+# How to use 
+```bash
+from ErrorSearcher import  detect
+detect(__file__)
+```
+Just write these line on top of program file which is throwing an error and the program will search the error on your default browser
+# Example 
+This will work 
+```bash
+from ErrorSearcher import detect
+detect(__file__)
+
+def subtract(a,b):
+    return a-b
+
+er=subtract('abx',"vas")
+print(er)
+```
+This will not
+```bash
+def subtract(a,b):
+    return a-b
+
+er=subtract('abx',"vas")
+print(er)
+
+from ErrorSearcher import detect
+detect(__file__)
+
+

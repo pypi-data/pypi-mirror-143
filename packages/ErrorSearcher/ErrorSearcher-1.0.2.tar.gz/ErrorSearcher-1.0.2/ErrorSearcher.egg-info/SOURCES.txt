@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ErrorSearcher/__init__.py
+ErrorSearcher.egg-info/PKG-INFO
+ErrorSearcher.egg-info/SOURCES.txt
+ErrorSearcher.egg-info/dependency_links.txt
+ErrorSearcher.egg-info/top_level.txt
