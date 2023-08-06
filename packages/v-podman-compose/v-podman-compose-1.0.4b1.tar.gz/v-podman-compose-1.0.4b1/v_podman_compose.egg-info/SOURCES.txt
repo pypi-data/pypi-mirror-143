@@ -1,0 +1,11 @@
+LICENSE
+README.md
+podman_compose.py
+setup.cfg
+setup.py
+v_podman_compose.egg-info/PKG-INFO
+v_podman_compose.egg-info/SOURCES.txt
+v_podman_compose.egg-info/dependency_links.txt
+v_podman_compose.egg-info/entry_points.txt
+v_podman_compose.egg-info/requires.txt
+v_podman_compose.egg-info/top_level.txt
