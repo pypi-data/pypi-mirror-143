@@ -1,0 +1,4 @@
+[console_scripts]
+remote_builder = remote_builder.cli.cli:main
+remote_builder_server = remote_builder.server.server:main
+
