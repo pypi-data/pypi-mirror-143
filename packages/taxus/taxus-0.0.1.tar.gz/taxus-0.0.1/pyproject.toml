@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "taxus"
+version = "0.0.1"
+description = "Gaussian Process models for transcriptome data"
+authors = ["Rens Holmer"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.4.1"
+numpy = "^1.22.3"
+torch = "^1.11.0"
+gpytorch = "^1.6.0"
+patsy = "^0.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
