@@ -1,0 +1,10 @@
+setup.py
+Trip_advisor.egg-info/PKG-INFO
+Trip_advisor.egg-info/SOURCES.txt
+Trip_advisor.egg-info/dependency_links.txt
+Trip_advisor.egg-info/requires.txt
+Trip_advisor.egg-info/top_level.txt
+scraper_package/TA_scraper.py
+scraper_package/__init__.py
+tests/__init__.py
+tests/test.py
