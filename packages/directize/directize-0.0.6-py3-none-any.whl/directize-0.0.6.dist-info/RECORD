@@ -1,0 +1,12 @@
+directize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+directize/basic.py,sha256=x_dg7NyGO67OQgA2CsUHtRwfMiBoL6jv56bChU-WXCU,3081
+directize/config.py,sha256=k-cEDAALABsmQfhq_xx8tYRm0Wn1KhJXqyYZW2i45is,589
+directize/directize.py,sha256=uN8dIsnomDJJBn9hZvnx9e-pjhEcjhL3J1clAv0aU_k,696
+directize/monorepo.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+directize/standard.py,sha256=KcjeshhIKswrNGSQts100ttNhiAL0Hk0IhpIk_09nD4,5964
+directize/utils.py,sha256=Tg06pEnO0E-dNd1Lv2GZNC78lF1E8bDpHG0oSW69kAE,11754
+directize-0.0.6.dist-info/LICENSE,sha256=PCv97vx3B5KElIz0dU6NoWCjJjdgQ9gGphzJI1QwRBg,1103
+directize-0.0.6.dist-info/METADATA,sha256=EUoUibVLsOI7SFfknFgNRInk-_ZrnzCVWJZss18rujI,7715
+directize-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+directize-0.0.6.dist-info/top_level.txt,sha256=jBUi-eserIqeELSomOlNbJWlXLeJJ9QLQ00SzJnxJSY,10
+directize-0.0.6.dist-info/RECORD,,
