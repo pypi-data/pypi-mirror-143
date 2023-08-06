@@ -1,0 +1,43 @@
+.confirmation input[type="submit"] {
+    background: var(--delete-button-bg);
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: var(--button-fg);
+}
+.confirmation input[type="submit"]:active,
+.confirmation input[type="submit"]:focus,
+.confirmation input[type="submit"]:hover {
+    background: var(--delete-button-hover-bg);
+}
+
+.confirmation .cancel-link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: var(--button-fg);
+    background: var(--close-button-bg);
+    margin: 0 0 0 10px;
+}
+
+.confirmation .cancel-link:active,
+.confirmation .cancel-link:focus,
+.confirmation .cancel-link:hover {
+    background: var(--close-button-hover-bg);
+}
+
+
+.changed-data table {
+  width: 100%;
+}
+.changed-data th,
+.changed-data td {
+  width: 30%;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
