@@ -1,0 +1,3 @@
+[console_scripts]
+hifrank = hifrank.__main__:main
+
