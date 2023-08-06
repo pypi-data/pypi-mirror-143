@@ -1,0 +1,12 @@
+cpymad_lhc/__init__.py,sha256=PoXj3gtYBMRTX6lR3wKw5JRW77SGhCJ4HNxRRetQLh0,241
+cpymad_lhc/corrector_limits.py,sha256=XFMwgu-O0EP3vGNgKMq4YmKKTzsF-qoVGR5Hi43HUTc,6452
+cpymad_lhc/coupling_correction.py,sha256=lI5hfklEP8XePlHBCFHd8cT4CZx7Xj4s6sE0TedJCgA,10536
+cpymad_lhc/coupling_knob.py,sha256=C7OeTT2J3QzocjrkImgx2IMF60OUEtj2O9hoVhiDmys,2035
+cpymad_lhc/general.py,sha256=AHLcvjGGXYgQGRhpxlbHxbcIqZjbJZwejUs14n2mL60,20354
+cpymad_lhc/ir_orbit.py,sha256=gAsbARRzdLIwbfYTrCM1eTXgFADKcEIxGHqfCp730AQ,10448
+cpymad_lhc/logging.py,sha256=iFHmBdw7sFUh3dKnpUTBwPa_uZm3WWEaQcmZdLn2VR0,6483
+cpymad_lhc-0.0.2.dist-info/LICENSE,sha256=V1h7hhxEpFVQ-aqbtA3cAgtaTxzBXkPCiw5AHJyy4lY,1067
+cpymad_lhc-0.0.2.dist-info/METADATA,sha256=L0KtT_8-lN1kiYtQWEpEfqiYRc4YuwIdx7CHB-b0g5M,2543
+cpymad_lhc-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cpymad_lhc-0.0.2.dist-info/top_level.txt,sha256=WTGDAXPQrj69d7DLh0RwwkvG2MkJMcuACV8hWWI7WJE,11
+cpymad_lhc-0.0.2.dist-info/RECORD,,
