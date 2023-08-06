@@ -1,0 +1,6 @@
+setup.py
+odooModule/__init__.py
+odooModule.egg-info/PKG-INFO
+odooModule.egg-info/SOURCES.txt
+odooModule.egg-info/dependency_links.txt
+odooModule.egg-info/top_level.txt
