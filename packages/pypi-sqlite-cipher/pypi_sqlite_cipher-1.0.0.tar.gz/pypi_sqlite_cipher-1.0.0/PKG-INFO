@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: pypi_sqlite_cipher
+Version: 1.0.0
+Summary: An feature extraction algorithm
+Home-page: https://gitee.com/wxb_857_admin/pypi-sqlite-cipher.git
+Author: XiaoBai
+Author-email: wxok857@foxmail.com
+License: MIT Licence
+Description: # pypi-sqlite-cipher
+        
+        #### 介绍
+        
+        该模块旨在实现 对sqlite数据库文件的整体加密/解密功能
+        
+        模块名称：pysqlite_cipher
+        1. encryption_sqlite_file 对原始文件加密
+        2. decrypt_sqlite_file 对加密文件解密 
+        
+        * 具体参数参照函数内部注释！
+        
+Keywords: pip,pypi_sqlite_cipher
+Platform: any

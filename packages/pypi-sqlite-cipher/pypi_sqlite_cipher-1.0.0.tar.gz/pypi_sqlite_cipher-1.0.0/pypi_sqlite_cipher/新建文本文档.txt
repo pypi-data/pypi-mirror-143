@@ -1,0 +1,44 @@
+
+1. 数据库文件加密
+$ sqlcipher encrypted.db
+SQLCipher version 3.8.4.3 2014-04-03 16:53:12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> PRAGMA key = 'thisiskey';
+sqlite> create table encrypted (id integer, name text);
+sqlite> .schema
+CREATE TABLE encrypted (id integer, name text);
+sqlite> .q
+
+
+2.
+$ sqlcipher encrypted.db
+SQLCipher version 3.8.4.3 2014-04-03 16:53:12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> PRAGMA key = 'thisiskey';
+sqlite> .schema
+CREATE TABLE encrypted (id integer, name text);
+
+3.
+sqlite> PRAGMA rekey = 'newkey';
+
+
+4.
+$ sqlcipher banklist.sqlite3
+SQLCipher version 3.8.4.3 2014-04-03 16:53:12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> ATTACH DATABASE 'encrypted.db' AS encrypted KEY 'thisiskey';
+sqlite> SELECT sqlcipher_export('encrypted');
+sqlite> DETACH DATABASE encrypted;
+
+5.
+$ sqlcipher encrypted.db 
+SQLCipher version 3.8.4.3 2014-04-03 16:53:12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> PRAGMA key = 'thisiskey';
+sqlite> ATTACH DATABASE 'plaintext.db' AS plaintext KEY '';
+sqlite> SELECT sqlcipher_export('plaintext');
+sqlite> DETACH DATABASE plaintext;
