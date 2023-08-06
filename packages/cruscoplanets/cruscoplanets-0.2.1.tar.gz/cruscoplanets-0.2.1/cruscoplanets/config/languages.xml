@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<languageData>
+	<languageName lang_id="ita" lang_name="Italiano"/>
+	<languageName lang_id="eng" lang_name="English"/>
+	<defaultLanguage>ita</defaultLanguage>
+	<expression id="sex_male">
+		<ita>uomo</ita>
+		<eng>male</eng>
+	</expression>
+	<expression id="sex_female">
+		<ita>donna</ita>
+		<eng>female</eng>
+	</expression>
+	<expression id="sex_undefined">
+		<ita>Non binario</ita>
+		<eng>Non-binary</eng>
+	</expression>
+	<expression id="unknown_time">
+		<ita>Ora sconosciuta</ita>
+		<eng>Unknown time</eng>
+	</expression>
+	<expression id="transits_title">
+		<ita>Transiti</ita>
+		<eng>Transits</eng>
+	</expression>
+	<expression id="planets_table_title">
+		<ita>Pianeti natali</ita>
+		<eng>Birth planets</eng>
+	</expression>
+	<expression id="houses_table_title">
+		<ita>Case</ita>
+		<eng>Houses</eng>
+	</expression>
+	<expression id="transits_table_title">
+		<ita>Transiti</ita>
+		<eng>Transit planets</eng>
+	</expression>
+</languageData>
