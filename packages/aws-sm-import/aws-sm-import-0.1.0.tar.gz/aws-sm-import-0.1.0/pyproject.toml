@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "aws-sm-import"
+version = "0.1.0"
+description = "Import AWS SecretsManager secrets from specific file"
+authors = ["Epsy Engineering <engineering@epsyhealth.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+boto3 = "^1.21.22"
+click = "^8.0.4"
+PyYAML = "^6.0"
+python-dotenv = "^0.19.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+aws-secrets = "aws_sm_import.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
