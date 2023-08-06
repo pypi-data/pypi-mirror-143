@@ -1,0 +1,9 @@
+ttscorpus/__init__.py,sha256=kRjR9yhUO6DisRVKN4fAyC_s1uifiYX8D74t7aBULbE,21
+ttscorpus/source/__init__.py,sha256=C8zFNdqDzOGoiiloU6dvOM206yZoG6N1ttveyNJOs7Y,92
+ttscorpus/source/google_cloud.py,sha256=iqapMvpniKduH2Hqprc9S9YnfXKJLywmbimswwezhoE,1638
+ttscorpus/source/google_tts.py,sha256=F8_60_bbQ3ya3MRQO9xS_8mGo5VCAL4faix48tjAt9k,224
+ttscorpus/source/mac.py,sha256=qaAqLYbEN6sDVFA9Cfghe5RZde2ReFN_FIO-9K4QNzs,1287
+ttscorpus-0.0.1.dist-info/METADATA,sha256=y7TwwZCXS7H21oG6tnrlGUggOGhm2SIqA3M8pZdzyrA,1618
+ttscorpus-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ttscorpus-0.0.1.dist-info/top_level.txt,sha256=Hhl65UHrq6lBlItKhq49aeMeU6WzLu7cp6-ai0QqZuY,10
+ttscorpus-0.0.1.dist-info/RECORD,,
