@@ -1,0 +1,13 @@
+packaging
+tomlkit
+setuptools>=60.2.0
+wheel
+deprecation
+
+[test]
+build
+coverage
+pre-commit
+pytest
+pytest-cov
+pytest-mock
