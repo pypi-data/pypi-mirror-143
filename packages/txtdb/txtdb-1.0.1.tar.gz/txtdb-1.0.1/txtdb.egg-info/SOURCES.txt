@@ -1,0 +1,7 @@
+README.md
+setup.py
+txtdb/__init__.py
+txtdb.egg-info/PKG-INFO
+txtdb.egg-info/SOURCES.txt
+txtdb.egg-info/dependency_links.txt
+txtdb.egg-info/top_level.txt

@@ -1,0 +1,63 @@
+# txtdb
+A simple NoSQL database that uses .txt files.
+
+## Usage
+First, import txtdb and create a database:
+```python
+import txtdb
+name_of_db = txtdb.init("name_of_db")
+```
+
+### add
+Adds elements do the database.
+```python
+name_of_db.add("element", "element2", ..., "elementn")
+```
+
+### remove_all
+Removes all the elements from the database.
+```python
+name_of_db.remove_all()
+```
+
+### remove_by_element
+Removes elements from the database by their value.
+```python
+name_of_db.remove_by_element("element", "element2", ..., "elementn")
+```
+
+### remove_by_string
+Removes elements from the database where a string is in.
+```python
+name_of_db.remove_by_string("string", "string2", ..., "stringn")
+```
+
+### remove_by_index
+Removes elements from the database by their indexes.
+```python
+name_of_db.remove_by_index(index1, index2, ..., indexn)
+```
+
+### get_all
+Returns all the elements in the database.
+```python
+name_of_db.get_all()
+```
+
+### get_by_string
+Returns all the elements in the database where a string is in.
+```python
+name_of_db.get_by_string(index1, index2, ..., indexn)
+```
+
+### get_by_index
+Returns all the elements by their indexes.
+```python
+name_of_db.get_by_index(index1, index2, ..., indexn)
+```
+
+### count
+Returns the number of elements that a txtdb function has returned.
+```python
+name_of_db.count("txtdb_output")
+```
