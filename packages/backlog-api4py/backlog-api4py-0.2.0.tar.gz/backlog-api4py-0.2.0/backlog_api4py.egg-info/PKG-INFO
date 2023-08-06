@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: backlog-api4py
+Version: 0.2.0
+Summary: Backlog API for Python
+Home-page: https://github.com/ryo8000/backlog-api4py
+Author: Ryo H
+Maintainer: Ryo H
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Topic :: Software Development
+Classifier: Development Status :: 7 - Inactive
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7.0
+License-File: LICENSE
+
+Backlog API for Python
+======================
+
+Requirements
+------------
+
+-  Python >= 3.7
+
+Installation
+------------
+
+::
+
+    $ pip install backlog-api4py
+
+
