@@ -1,0 +1,10 @@
+{
+    "name": "test[2-:back-Return to play list-:help help]",
+    "index": 2,
+    "comment": "Return to play list",
+    "output": [
+        "  PLAY NAME             OK     CHANGED           UNREACHABLE                FAILED          SKIPPED           IGNORED           IN PROGRESS                TASK COUNT                          PROGRESS",
+        "0│localhost              2           0                     0                     0                0                 0                     0                         2                          COMPLETE",
+        "^f/PgUp page up                    ^b/PgDn page down                    ↑↓ scroll                    esc back                    [0-9] goto                    :help help                   SUCCESSFUL"
+    ]
+}
