@@ -1,0 +1,25 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "senpy-club"
+version = "0.1.1"
+authors = ["Fuwn <fuwnzy@gmail.com>"]
+edition = "2021"
+description = "The Senpy Club API Wrapper for Python"
+readme = "README.md"
+homepage = "https://pypi.org/project/senpy-club/"
+repository = "https://github.com/senpy-club/sen-py"
+license = "GPL-3.0-only"
+keywords = ["rust", "anime", "senpy", "senpy-club"]
+categories = ["web-programming", "api-bindings"]
+
+[lib]
+name = "senpy_club"
+crate-type = ["cdylib"]
+
+[dependencies]
+# Python
+pyo3 = { version = "0.16.1", features = ["extension-module"] }
+
+# The Senpy Club
+senpy = "0.1.2"

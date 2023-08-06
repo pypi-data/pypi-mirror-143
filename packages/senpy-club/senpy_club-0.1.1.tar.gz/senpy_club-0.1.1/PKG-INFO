@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: senpy-club
+Version: 0.1.1
+Summary: The Senpy Club API Wrapper for Python
+Keywords: rust,anime,senpy,senpy-club
+Home-Page: https://pypi.org/project/senpy-club/
+Author: Fuwn <fuwnzy@gmail.com>
+Author-email: Fuwn <fuwnzy@gmail.com>
+License: GPL-3.0-only
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/senpy-club/sen-py
+
+# 🐍 `sen-py`
+
+The Senpy Club API Wrapper for Python
+
+## Usage
+
+```shell
+poetry add senpy-club  # Poetry
+pip install senpy-club # PIP
+```
+
+## Examples
+
+Examples can be found within the [`examples/`](./examples) directory.
+
+## License
+
+[GNU General Public License v3.0](https://github.com/senpy-club/sen-py/blob/main/LICENSE)
+
