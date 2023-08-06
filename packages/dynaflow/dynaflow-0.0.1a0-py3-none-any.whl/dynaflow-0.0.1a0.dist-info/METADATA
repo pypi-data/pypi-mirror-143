@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dynaflow
+Version: 0.0.1a0
+Summary: AWS Dynamodb backend tracking store for MLFlow
+Author: ArrichM
+Author-email: maximilianjakob.arrich@student.unisg.ch
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.0.4,<9.0.0)
+Requires-Dist: mlflow (>=1.24.0,<2.0.0)
+Requires-Dist: pynamodb (>=5.2.1,<6.0.0)
