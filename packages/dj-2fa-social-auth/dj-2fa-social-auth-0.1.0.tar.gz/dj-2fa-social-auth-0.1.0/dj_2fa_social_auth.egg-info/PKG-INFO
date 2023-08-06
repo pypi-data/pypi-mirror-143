@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: dj-2fa-social-auth
+Version: 0.1.0
+Summary: App connecting django-two-factor-auth and django-social-auth. If user authenticates through social auth, he will be enforced to go through 2FA (if he has it enabled).
+Home-page: https://github.com/PetrDlouhy/dj-2fa-social-auth
+Author: Petr Dlouhý
+Author-email: petr.dlouhy@email.cz
+License: BSD
+Keywords: dj-2fa-social-auth
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=============================================
+Django two factor auth for Django social auth
+=============================================
+
+.. image:: https://badge.fury.io/py/dj-2fa-social-auth.svg
+    :target: https://badge.fury.io/py/dj-2fa-social-auth
+
+.. image:: https://travis-ci.org/PetrDlouhy/dj-2fa-social-auth.svg?branch=master
+    :target: https://travis-ci.org/PetrDlouhy/dj-2fa-social-auth
+
+.. image:: https://codecov.io/gh/PetrDlouhy/dj-2fa-social-auth/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/PetrDlouhy/dj-2fa-social-auth
+
+App connecting `django-two-factor-auth <https://github.com/jazzband/django-two-factor-auth>`_ and `social-app-django <https://github.com/python-social-auth/social-app-django>`_. If user authenticates through social auth, he will be enforced to go through 2FA (if he has 2FA enabled).
+
+Documentation
+-------------
+
+The full documentation is at https://dj-2fa-social-auth.readthedocs.io.
+
+Quickstart
+----------
+
+We expect, that you have already installed and configured `django-two-factor-auth <https://github.com/jazzband/django-two-factor-auth>`_ and `social-app-django <https://github.com/python-social-auth/social-app-django>`_ according to their documentation.
+
+Install Django two factor auth for Django social auth::
+
+    pip install dj-2fa-social-auth
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        "two_factor",
+        "social_django",
+        "social_2fa",
+        ...
+    )
+
+Add Django two factor auth for Django social auth's URL patterns:
+
+.. code-block:: python
+
+    from django.urls import path
+    
+    
+    urlpatterns = [
+        ...
+        path("", include("social_2fa.urls")),
+        ...
+    ]
+
+Add social_2fa to your social pipeline in ``settings.py``:
+
+
+.. code-block:: python
+
+    SOCIAL_AUTH_PIPELINE = (
+        ...
+        "social_2fa.social_pipeline.two_factor_auth",
+    )
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+
+Development commands
+---------------------
+
+::
+
+    pip install -r requirements_dev.txt
+    invoke -l
+
+
+
+
+History
+-------
+
+0.1.0 (2022-03-21)
+++++++++++++++++++
+
+* First release on PyPI.
+
+
