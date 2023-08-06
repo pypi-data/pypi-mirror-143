@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "qbuspy"
+version = "0.1.0"
+description = "Qbuspy is the python package for easy interfacing with the Qbus home automation system."
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/vlaminckaxel/qbuspy"
+repository = "https://github.com/vlaminckaxel/qbuspy"
+documentation = "https://github.com/vlaminckaxel/qbuspy"
+keywords = ["qbus"]
+authors = ["vlaminckaxel <axel.vlaminck@gmail.com>"]
+packages = [
+    { include = "qbuspy" },
+]
+
+
+
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+notebook = "^6.4.8"
+yapf = "^0.32.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
