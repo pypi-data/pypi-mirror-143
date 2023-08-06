@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tt_lcd_common
+Version: 0.2.4
+Summary: Common LCD Python scripts
+Home-page: https://github.com/rignellj/tt_lcd_common
+Author: Jere Rignell
+Author-email: jere.rignell@terveystalo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# tt_lcd_common
+Common LCD Python scripts
+
+
