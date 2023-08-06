@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+diana/Diana.py
+diana/__init__.py
+diana_2.egg-info/PKG-INFO
+diana_2.egg-info/SOURCES.txt
+diana_2.egg-info/dependency_links.txt
+diana_2.egg-info/not-zip-safe
+diana_2.egg-info/requires.txt
+diana_2.egg-info/top_level.txt
