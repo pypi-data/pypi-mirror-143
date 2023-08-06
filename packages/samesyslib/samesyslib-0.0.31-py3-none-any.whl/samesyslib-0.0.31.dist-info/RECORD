@@ -1,0 +1,10 @@
+samesyslib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+samesyslib/db.py,sha256=RQ1KlFqpWzEsh31ah43k6b7U7_iijFtM8Mgx4T4SAjY,10953
+samesyslib/db_config.py,sha256=sPR1SagEnY67CqfBPvHBizdWoWfGanY6eQ4urzQ0Ae0,2192
+samesyslib/logg.py,sha256=wcv5i_JFJnUH6gIRKN91ABfxNzHu3pQ5ByL3CVqNwOU,4509
+samesyslib/utils.py,sha256=eap0bqyGMYt_yHV_Z0qwDxUbVC2EX3tZsle6fDKXuX0,10721
+samesyslib-0.0.31.dist-info/LICENSE,sha256=YfV_2L-mEofRP0GzwDAtPmCkx7OV-VOXQ2NLvxwmvh0,1085
+samesyslib-0.0.31.dist-info/METADATA,sha256=6TT9ArtN3Q4fsQMiWn2ZNBbjn_qMbAgaB2lCZ6ndJdY,2720
+samesyslib-0.0.31.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+samesyslib-0.0.31.dist-info/top_level.txt,sha256=-8GH20VzI5yM8NwIcWAUUYKsC45kgPvesEeRKSk1gFc,11
+samesyslib-0.0.31.dist-info/RECORD,,
