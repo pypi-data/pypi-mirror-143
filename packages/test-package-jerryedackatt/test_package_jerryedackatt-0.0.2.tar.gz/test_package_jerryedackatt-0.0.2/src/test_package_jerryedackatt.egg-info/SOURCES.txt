@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/test_package_jerryedackatt/__init__.py
+src/test_package_jerryedackatt/test_script.py
+src/test_package_jerryedackatt.egg-info/PKG-INFO
+src/test_package_jerryedackatt.egg-info/SOURCES.txt
+src/test_package_jerryedackatt.egg-info/dependency_links.txt
+src/test_package_jerryedackatt.egg-info/top_level.txt
