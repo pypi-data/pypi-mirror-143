@@ -1,0 +1,9 @@
+local_stats/__init__.py,sha256=MKEVni0IdL6038JZg2YGl1EKKop2PSJGIFCymkRW3mU,206
+local_stats/cluster.py,sha256=y71vPXeBDmzWkCvypx0HptajNUH8mNslYPgXwBiaTgk,2120
+local_stats/image.py,sha256=IBCe88e5tIHpJH4gmFdk7Upw5IBUtD__GZNXy_t_t6A,13252
+local_stats/io.py,sha256=fRDG1MWpQe2kWf7UbeMhG4MIzkSikPNYehbKjsklnL4,1500
+local_stats-0.1.1.dist-info/LICENSE,sha256=LFWiiCShto3lQriw-lpoTXbUCWOzs9fwq3KQC6_kTuA,1073
+local_stats-0.1.1.dist-info/METADATA,sha256=Se-q3D-eHNR1pJ96dLRIc0KPOWgxL1a9cho-eNOmfi0,825
+local_stats-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+local_stats-0.1.1.dist-info/top_level.txt,sha256=j1VnbShHmbAx9CAmOrQlkpjFLz-4AolQVp7XS0UamUk,12
+local_stats-0.1.1.dist-info/RECORD,,
