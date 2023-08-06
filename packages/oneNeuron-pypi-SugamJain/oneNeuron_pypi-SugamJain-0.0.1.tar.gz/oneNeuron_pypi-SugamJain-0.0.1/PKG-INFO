@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: oneNeuron_pypi-SugamJain
+Version: 0.0.1
+Summary: Its an implementation of Perceptron
+Home-page: https://github.com/SugamJain/oneNeuron_pypi
+Author: SugamJain
+Author-email: sugamjain2000@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/SugamJain/oneNeuron_pypi/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# oneneuron_pypi
+
+# refrences - 
+[official python document for creating your own packages](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+
+[github docs for github actions](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries)
+
