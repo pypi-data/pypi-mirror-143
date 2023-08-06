@@ -1,0 +1,15 @@
+README.md
+setup.py
+setup_packaging.py
+./eii/__init__.py
+./eii/exc.py
+./eii/msg_envelope.c
+./eii/msgbus.c
+./eii/publisher.c
+./eii/receive_context.c
+./eii/service.c
+./eii/service_requester.c
+eii_messagebus.egg-info/PKG-INFO
+eii_messagebus.egg-info/SOURCES.txt
+eii_messagebus.egg-info/dependency_links.txt
+eii_messagebus.egg-info/top_level.txt
