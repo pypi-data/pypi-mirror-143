@@ -1,0 +1,12 @@
+pipebit/__init__.py,sha256=7MsH5aLMWdRmSf6azqL6G_IYnzvXODxoihLIeJwI27M,269
+pipebit/bitbatchreceiver.py,sha256=MaQCs0XlrIAigQgjzvFN41mnFf0xrAoBIuuNkR7Le-A,187
+pipebit/bitbatchsender.py,sha256=AgZLJXO4JmHyV1AfJ8heMa4pMu6mpQlj8CUqawn0C14,185
+pipebit/bitflowreceiver.py,sha256=tt0uTcD7BNunEUAbWuSBDeZd82dPyY7mFFsTjgGzoIc,186
+pipebit/bitflowsender.py,sha256=Ap14Hi8NZzwN8bbehdy63H_T56oK8k4B3vPgHtGePP0,184
+pipebit/bitpackreceiver.py,sha256=Xe3zufVQ_H6ZDU-JSTZEyZqjaJjFfCwiFmxuHPCK9c0,2513
+pipebit/bitpacksender.py,sha256=k7Fa4BJbkmSpU_lIK6R5Xmz4kM-KVfcdQODWsHhWiQk,2378
+pipebit/initial_config.py,sha256=q8-P42bR2RTnzaECKSuNZkvrucJvIa8iUah5XndfBig,4377
+pipebit-0.0.1.dist-info/METADATA,sha256=NXu92Rm8TkngBbh8Q0vtIVgvpEh1JHoMqpxD8ExRYMg,618
+pipebit-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pipebit-0.0.1.dist-info/top_level.txt,sha256=RWIFv_ItOqmDaUTeQMJLj3nQrVAxmmVX_8oatdgBmGw,8
+pipebit-0.0.1.dist-info/RECORD,,
