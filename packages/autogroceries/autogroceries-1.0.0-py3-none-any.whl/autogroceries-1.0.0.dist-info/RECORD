@@ -1,0 +1,10 @@
+autogroceries/__init__.py,sha256=n1h6QVvY9puzt8-BljkAy_ZsSaqBhMTA9A9m1Lm9D50,117
+autogroceries/shopper/SainsburysShopper.py,sha256=nAgMfUv8WDP7FBUIJJhGEVCAHseEo-cGCIch10zipiU,13655
+autogroceries/shopper/Shopper.py,sha256=9DQQoYDwmfjdEX66xKSNsZ2-NthOG01TBfwDdl_TM0A,5213
+autogroceries/shopper/__init__.py,sha256=XxNeYejNAoxrslQBGq-Sg4S1h1UZhLxsecetBq_Ne0w,120
+autogroceries/utils/__init__.py,sha256=_h2gopjBk1HF1zCHAiFmzl0siwEsRyXpu_aM8-a0rdw,44
+autogroceries/utils/pause.py,sha256=o0eopOQ8-9ejvfW18KS2KqB9TrJk0G2UjaZfmUzG6GE,1054
+autogroceries-1.0.0.dist-info/LICENSE,sha256=irHKN9fNV-TDl5Pe0dj8gKvCZtnyQx10XT-3-gK-b44,1069
+autogroceries-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+autogroceries-1.0.0.dist-info/METADATA,sha256=VP2ZuzkCnYy8Q-VIRSXCRFG1tHfawjqSFbkYj4eHvdI,2366
+autogroceries-1.0.0.dist-info/RECORD,,
