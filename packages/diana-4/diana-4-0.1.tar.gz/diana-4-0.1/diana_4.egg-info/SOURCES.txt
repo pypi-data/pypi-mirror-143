@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Diana/__init__.py
+Diana/divisiveAnalysis.py
+diana_4.egg-info/PKG-INFO
+diana_4.egg-info/SOURCES.txt
+diana_4.egg-info/dependency_links.txt
+diana_4.egg-info/not-zip-safe
+diana_4.egg-info/requires.txt
+diana_4.egg-info/top_level.txt
