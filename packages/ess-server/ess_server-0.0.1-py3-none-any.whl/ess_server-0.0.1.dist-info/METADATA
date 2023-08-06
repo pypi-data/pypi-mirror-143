@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ess-server
+Version: 0.0.1
+Summary: ess Server
+Home-page: UNKNOWN
+Author: Julia
+Author-email: Juhaqq@mail.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
+
