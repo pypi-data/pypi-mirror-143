@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: rustiql
+Version: 0.0.14
+Summary: Graphical SQL Editor for Pyrustic
+Home-page: https://github.com/pyrustic/rustiql
+Author: Pyrustic Evangelist
+Author-email: rusticalex@yahoo.com
+Maintainer: Pyrustic Evangelist
+Maintainer-email: rusticalex@yahoo.com
+License: MIT
+Keywords: pyrustic,graphical-sql-editor,desktop-application,tkinter,lightweight,gui,application,sql,sqlite,database,app
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<!-- Image -->
+<div align="center">
+    <img src="https://raw.githubusercontent.com/pyrustic/misc/master/media/rustiql-screenshot.png" alt="Alt">
+    <br>
+    <p align="center">
+    Rustiql - built with Pyrustic
+    </p>
+</div>
+
+<!-- Intro Text -->
+# Rustiql
+<b> Graphical SQLite editor </b>
+
+This project is part of the [Pyrustic Ecosystem](https://pyrustic.github.io).
+
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/pyrustic/misc/master/media/rustiql.gif" alt="Figure" width="650">
+    <p align="center">
+    <b> Rustiql in action </b>
+    </p>
+</div>
+
+`Rustiql` is built with [Pyrustic Framework](https://github.com/pyrustic/pyrustic) and its theme is based on [cyberpunk-theme](https://github.com/pyrustic/cyberpunk-theme).
+
+
+## Installation
+
+```bash
+pip install rustiql
+```
+
