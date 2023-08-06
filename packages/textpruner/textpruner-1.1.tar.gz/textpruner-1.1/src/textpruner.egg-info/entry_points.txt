@@ -1,0 +1,2 @@
+[console_scripts]
+textpruner-cli = textpruner.commands.textpruner_cli:main
