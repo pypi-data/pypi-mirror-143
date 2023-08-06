@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aga-ml
+Version: 0.0.1
+Summary: personnal ML Lib
+Home-page: https://github.com/AlexandreGazagnes/aga-ml
+Author: Alexandre Gazagnes
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: imbalanced-learn
+Requires-Dist: plotly
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: missingno
+
+UNKNOWN
+
