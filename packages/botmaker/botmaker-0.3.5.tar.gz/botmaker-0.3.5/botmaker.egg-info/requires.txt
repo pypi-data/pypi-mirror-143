@@ -1,0 +1,13 @@
+requests<3.0.0,>=2.21.0
+
+[:python_version < "3.7"]
+dataclasses>=0.6
+
+[test]
+pytest
+pytest-vcr
+pytest-cov
+black
+isort
+flake8==3.7.9
+mypy==0.812
