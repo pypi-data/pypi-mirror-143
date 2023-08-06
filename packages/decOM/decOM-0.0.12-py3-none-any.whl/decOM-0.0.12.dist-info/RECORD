@@ -1,0 +1,11 @@
+decOM/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decOM/__main__.py,sha256=0asETY_DkBxmKpS12Ea4D3Duoy1Cp1Pjz5UlQTxLxN0,5205
+decOM/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decOM/data/kmtricks.fof,sha256=mNBS9UsvTXxGJtWYOxMEPE8FZqR7m9x8JSqGphjuMIs,63288
+decOM/data/metadata.csv,sha256=btIzFDaA8pPEhLfAjXF1UUvH-Nq_u94-tWF_YbNJADQ,122885
+decOM-0.0.12.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decOM-0.0.12.dist-info/METADATA,sha256=Xhq6hdEhGmLL-y5H6xCvZornjIWIYkKEtRzBczfbJok,802
+decOM-0.0.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+decOM-0.0.12.dist-info/entry_points.txt,sha256=NAkmL6rxlvkpMFgOHx7JyAoTxlKg-r0JLsrwDM4EqNg,46
+decOM-0.0.12.dist-info/top_level.txt,sha256=UaudvqimB3RXJHH9zMoDpuAxqYPnbSl_cuAB6gKNGM4,6
+decOM-0.0.12.dist-info/RECORD,,
