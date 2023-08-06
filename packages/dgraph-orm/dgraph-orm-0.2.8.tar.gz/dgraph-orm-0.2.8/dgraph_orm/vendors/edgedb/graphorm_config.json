@@ -1,0 +1,8 @@
+{
+  "edgedb_DO": {
+    "vendor": "edgedb",
+    "host": "143.244.174.160",
+    "password": "beatgig8859",
+    "tls_security": "insecure"
+  }
+}
