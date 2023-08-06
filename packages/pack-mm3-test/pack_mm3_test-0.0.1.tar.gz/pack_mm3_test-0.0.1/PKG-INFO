@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pack_mm3_test
+Version: 0.0.1
+Summary: Pack MM3 Test
+Home-page: UNKNOWN
+Author: Shubham Periwal
+Author-email: shubhamperiwal@gic.com.sg
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Pack MM3 Test
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows

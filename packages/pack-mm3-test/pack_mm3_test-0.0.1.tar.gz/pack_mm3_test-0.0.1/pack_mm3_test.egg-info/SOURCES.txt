@@ -1,0 +1,7 @@
+setup.py
+pack_mm3_test/__init__.py
+pack_mm3_test/rest_api.py
+pack_mm3_test.egg-info/PKG-INFO
+pack_mm3_test.egg-info/SOURCES.txt
+pack_mm3_test.egg-info/dependency_links.txt
+pack_mm3_test.egg-info/top_level.txt
