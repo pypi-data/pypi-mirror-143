@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: djangorest-security
+Version: 0.0.3
+Summary: Django REST Framework security package
+Home-page: https://github.com/umangsinghal31/djangorest-security
+Author: Umang Aggarwal
+Author-email: umangaggarwal31@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# djangorest-security
+
