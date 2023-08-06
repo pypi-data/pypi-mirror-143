@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: object-detection-retinanet
+Version: 0.2.1
+Summary: Keras implementation of RetinaNet
+Home-page: https://github.com/NewKnowledge/object-detection-retinanet/
+Author: Sanjeev Namjoshi
+Author-email: sanjeev@yonder.co
+License: Apache-2.0
+Description: UNKNOWN
+Platform: UNKNOWN
