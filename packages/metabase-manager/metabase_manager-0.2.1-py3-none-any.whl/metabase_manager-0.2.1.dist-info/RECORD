@@ -1,0 +1,13 @@
+metabase_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metabase_manager/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metabase_manager/cli/main.py,sha256=yOSRYXOXMx1-7C-DwLGxOSvuK6cvNlgPPEJ_h_S-XuY,2931
+metabase_manager/entities.py,sha256=tvPv6GITODjH1wAaCOOtIngbN0CpPWuH7_83t89pnX8,7435
+metabase_manager/exceptions.py,sha256=kEpLJG607jGkiEqk72kDisNxMCHgwhZa7A6UJtVhWUY,136
+metabase_manager/manager.py,sha256=60JuvDMYPpT_I7HvD91zUx96DddfTQeLqE3vknBWw1s,3815
+metabase_manager/parser.py,sha256=akcpgJ-7Ri-5m--kWw0-5r7SeL-ePlUX42oxo798Njk,2144
+metabase_manager/registry.py,sha256=YXCMvsdedxEU2xfMh9pnsfjY_podEtoY5BrIzxxlHtY,1986
+metabase_manager-0.2.1.dist-info/entry_points.txt,sha256=A7qwto_INIV1PjoBFSDv2EpWEiedOwK5748Rl_poF7Y,66
+metabase_manager-0.2.1.dist-info/LICENSE,sha256=D6ojRT1mhud-azDcS471xbdQMj41ETNGKVv7VKBshXI,1074
+metabase_manager-0.2.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+metabase_manager-0.2.1.dist-info/METADATA,sha256=3e62Sna9f4fKsv0glyGFq8sbTfgqxuW6wURQUe-JQmc,4022
+metabase_manager-0.2.1.dist-info/RECORD,,
