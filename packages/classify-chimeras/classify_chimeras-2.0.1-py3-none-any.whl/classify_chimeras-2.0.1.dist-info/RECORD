@@ -1,0 +1,10 @@
+classify_chimeras/__init__.py,sha256=0UbYx2zdcajtKcrX4Q_xwQC51bNE4WXyNvpGi9tLzq4,6480
+classify_chimeras/example.py,sha256=tTe3k5L4HnNhRuBkj3c3JtipBJC4CRR843WbOyVxRgg,2680
+classify_chimeras/stencil_1d.py,sha256=Dlf5eRQ0y972_az7NnaC_OApn5H4t1BqJjZ2h8JjU4o,2604
+classify_chimeras/stencil_2d.py,sha256=Q5aWgNg5u3PZrya2sT1L205ze6h4wYIbWoSg4FrWS-w,10610
+classify_chimeras/utils.py,sha256=kfKvLq2nSFRpUX4MYiOjwv0Bta_1Kj21HHheCY1dtR0,10650
+classify_chimeras-2.0.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+classify_chimeras-2.0.1.dist-info/METADATA,sha256=7UpsjSI0sz-fv_9eKFhSnrwPXsz2W65K4t3e0PciV30,5274
+classify_chimeras-2.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+classify_chimeras-2.0.1.dist-info/top_level.txt,sha256=u35Afj6UrBAHJET6KKOqxT5sk30bAER5CpVHL9vcqRA,18
+classify_chimeras-2.0.1.dist-info/RECORD,,
