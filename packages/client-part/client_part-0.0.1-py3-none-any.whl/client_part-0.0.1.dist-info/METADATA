@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: client-part
+Version: 0.0.1
+Summary: client_part_pyqt
+Author: Vyacheslav
+Author-email: rgka17@yandex.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycrypto
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
