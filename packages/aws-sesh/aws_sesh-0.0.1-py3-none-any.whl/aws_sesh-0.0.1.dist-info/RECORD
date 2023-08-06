@@ -1,0 +1,9 @@
+sesh/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sesh/cli.py,sha256=MXZo9s9tBHQyA2p51guIA_rHfBoBLlQYBcGmSISytfs,955
+sesh/credentials.py,sha256=s6YlN8Gisy79euP-1NfcarwcJ16d_FRhMCEasBCBGOo,1497
+aws_sesh-0.0.1.dist-info/LICENSE,sha256=MqE00C8RRZGC2Eqj6YiZFtaIqz3eiYWnVlZmFK8kgD8,1084
+aws_sesh-0.0.1.dist-info/METADATA,sha256=4lr-LBlr8wF4wI2b6h753gGfGZwfaI8-H62DkNLBxy0,258
+aws_sesh-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aws_sesh-0.0.1.dist-info/entry_points.txt,sha256=VRqSGfJy436BtBbLvqs0yfIdb63dsSv_7C3algLhCEk,39
+aws_sesh-0.0.1.dist-info/top_level.txt,sha256=2Maru0Y6F3ZjuMeG8x-hvW5dAbtg4r-eUZVEROxpSNs,5
+aws_sesh-0.0.1.dist-info/RECORD,,

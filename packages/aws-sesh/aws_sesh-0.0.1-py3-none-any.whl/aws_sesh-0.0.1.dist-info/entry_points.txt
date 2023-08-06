@@ -1,0 +1,2 @@
+[console_scripts]
+sesh = sesh.cli:sesh
