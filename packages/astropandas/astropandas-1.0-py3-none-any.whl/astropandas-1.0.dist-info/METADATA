@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: astropandas
+Version: 1.0
+Summary: Tools to expand on pandas functionality for astronomical operations.
+Home-page: https://github.com/jlvdb/astropandas
+Author: Jan Luca van den Busch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: fitsio
+
+# astropandas
+
+Tools to expand on pandas functionality for astronomical applications.
+
+## Features
+
+- directly read and write FITS table data, see `astropandas.read_fits` and `astropandas.to_fits`
+- match based on sky coordinates, see `astropandas.match`
+
+
