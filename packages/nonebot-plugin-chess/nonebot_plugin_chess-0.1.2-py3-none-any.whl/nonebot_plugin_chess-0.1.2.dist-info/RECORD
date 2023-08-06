@@ -1,0 +1,9 @@
+nonebot_plugin_chess/__init__.py,sha256=vcbmL8oK0Ko0ibq5CThrQISNfW4-UjI5y2mIOHe6Nc4,8448
+nonebot_plugin_chess/game.py,sha256=Retckbll7ZQ40KBCznYsY4PdV01iOGP0K1Fveq2UyA8,7060
+nonebot_plugin_chess/go.py,sha256=8-UeDALq5zedIAhvnbZ--atxOg2jUu2T6iy4VRnxhU0,2231
+nonebot_plugin_chess/gomoku.py,sha256=64Fd56EgqpitOduKRInJUviifrxhYo_w431EtrAoYmQ,1914
+nonebot_plugin_chess/othello.py,sha256=s5Rvt2kvH77LABabdrxsiWloLOwzLYAqhmr_SZdGHm0,2609
+nonebot_plugin_chess/svg.py,sha256=XPw6aw2LpbQHxrpl_qmoKOh-YvfWsVK5ZEiN4UokC3Q,3635
+nonebot_plugin_chess-0.1.2.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+nonebot_plugin_chess-0.1.2.dist-info/METADATA,sha256=lwVT8OdV8BbWXXEeHzIi5I7ZXqf9DLOszDKN8mKZYZg,2299
+nonebot_plugin_chess-0.1.2.dist-info/RECORD,,
