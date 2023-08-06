@@ -1,0 +1,11 @@
+asynced/__init__.py,sha256=B74zXnGxgVpPkHARKDIbN8bPUlVlvsFpckHHkk5tDwc,49
+asynced/_aio_utils.py,sha256=rJGaXTR4A7F18UL3LQIQgbVDCNu2_mG20HxHMaTMIsk,2211
+asynced/_compat.py,sha256=To8GDPbNaWz8XAt-HrCC_0VYPaWoJrksoH3ckGkS7J4,1941
+asynced/_typing.py,sha256=AaYHGFLoM1aG4458yvD2DHSos5F-nOs8XCO2sRhL7EA,1909
+asynced/perpetual.py,sha256=ol9hCX_2CiYVwEgPgOc3t1HERzNe_GWaWplv5TXaHNw,14647
+asynced/promises.py,sha256=CAPxUv8CYqMY0Rx2aUA4ViG4SrWG4dirwOdAJWFGkgo,6363
+asynced/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asynced-0.2.1.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+asynced-0.2.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+asynced-0.2.1.dist-info/METADATA,sha256=1_SetAXZbm30ui1fXWgY59HFMHDPYmW5qOTfkB-nXdw,2644
+asynced-0.2.1.dist-info/RECORD,,
