@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: MLmodule
+Version: 0.0.2
+Summary: Alchmey Cloud's compiled machine learning module
+Home-page: UNKNOWN
+Author: Ana Belisario
+Author-email: ana.belisario@alchemy.cloud
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: automated machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
