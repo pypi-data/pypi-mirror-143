@@ -1,0 +1,17 @@
+1)  How does the radiance processor "scale down"?  In other words, can the algorithm work on a smaller section of the 5000 x 5000 scene and still be accurate if stiched together?  If so, then multiprocessing may be a win.
+
+2)  What happens if there are outages at NWP?  In my experience, you can count on this happening a few times per year.  Is it valid to keep older data and run the nowcasting system on that?  How far back can we go?  At what point must older data be flushed out of the system?
+
+3)  How is the "update" of the machine learning models handled?  What is the acceptance criterion?
+
+4)  The "image generator" sounds like something that could be migrated away from MATLAB, which may simplify operations.  With the notable exception of SIMULINK, there seems little that MATLAB can do that python cannot.
+
+5)  What language is the "heritage" codebase written?  Does it allow profiling?  If so, then can bottlenecks be uncovered?
+
+6)  The "website" item seems orthogonal to the rest of the concerns at first, but while working for the nowcoast project, traffic load was EVERYTHING.  There was no concern bigger than that of an abusive user who would turn loose a "kiddie script" and take down the system.  Eventually nowcoast moved to having Akamai as a front-end and we could make use of their rate-limiting tools (IP-based), but eventually nowcoast ran into the problem where it wasn't so much of an abusiver user as it was an "abusive provider" who would advertise nowcoast resources to thousands of users, thereby defeating the IP-based rate-limiting system.  Death by a thousand cuts.  To my knowledge, this is still an issue at NWS, but if Akamai were to offer a "referer-based" rate-limiting system, then there is hope.  
+
+7)  To my knowledge, NWS does not allow any privileged user other than on-site senior production analysts to make any configuration changes for an operational product.   Any unplanned changes to an operational product were only allowed on an emergency basis and had to be approved by the senior duty meteorologist.
+
+8)  The "monthly" objective seems optimistic.  NWS was not able to realistically accept more than a 6-month or even a 12-month operational product update while I was working there.  Products on the "qa" tier usually required a full month of stability before being allowed to go to the operational tier.  Perhaps this has changed since 2019.  Perhaps it is different for cloud-based products.
+
+9)  Most of NWS's operation support is versed in postgresql rather than mysql.  Is there a hard requirement for mysql?  If not, I would look at migrating to postgresql.
