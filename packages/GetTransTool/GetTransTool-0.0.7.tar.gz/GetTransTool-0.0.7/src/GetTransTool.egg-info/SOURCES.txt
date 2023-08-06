@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/GetTransTool/GetCDSLongestFromGTF.py
+src/GetTransTool/GetCDSLongestFromGencode.py
+src/GetTransTool/GetLongestTransFromGTF.py
+src/GetTransTool/GetLongestTransFromGencode.py
+src/GetTransTool/__init__.py
+src/GetTransTool.egg-info/PKG-INFO
+src/GetTransTool.egg-info/SOURCES.txt
+src/GetTransTool.egg-info/dependency_links.txt
+src/GetTransTool.egg-info/entry_points.txt
+src/GetTransTool.egg-info/top_level.txt
