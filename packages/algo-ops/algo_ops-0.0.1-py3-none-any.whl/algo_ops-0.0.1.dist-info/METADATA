@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: algo-ops
+Version: 0.0.1
+Summary: Algo-Ops Smart Infrastructure
+Home-page: https://github.com/prateekt/algo-ops
+Author: Prateek Tandon
+Author-email: prateek1.tandon@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python-headless (==4.5.5.62)
+
+# algo_ops
+Smart infrastructure for Prototyping and Deploying Algorithms
+
+
