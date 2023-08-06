@@ -1,0 +1,2 @@
+[console_scripts]
+sinr = sinr.cli:main
