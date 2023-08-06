@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: profq-sorting
+Version: 0.1.3
+Summary: A library for sorting algorithms.
+Home-page: UNKNOWN
+Author: ProfessorQu
+License: UNKNOWN
+Description: # ProfQ-Sorting
+        A library for sorting algorithms made in Python
+        
+Keywords: python,sorting,algorithms
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
