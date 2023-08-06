@@ -1,0 +1,4 @@
+django<4.0,>=3.2.8
+django-import-export
+django-wkhtmltopdf
+simpel-hookup
