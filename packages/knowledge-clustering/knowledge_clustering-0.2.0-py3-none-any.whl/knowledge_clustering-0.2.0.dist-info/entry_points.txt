@@ -1,0 +1,3 @@
+[console_scripts]
+knowledge = knowledge_clustering.knowledge:main
+knowledge-init = knowledge_clustering.knowledge:main_download_nltk_data
