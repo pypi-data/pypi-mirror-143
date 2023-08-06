@@ -1,0 +1,2 @@
+[console_scripts]
+join_asvbins = join_asvbins:main
