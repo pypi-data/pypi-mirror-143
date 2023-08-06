@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/riot-api-utilities/__init__.py
+src/riot-api-utilities/api.py
+src/riot-api-utilities/consts.py
+src/riotapiutilities.egg-info/PKG-INFO
+src/riotapiutilities.egg-info/SOURCES.txt
+src/riotapiutilities.egg-info/dependency_links.txt
+src/riotapiutilities.egg-info/top_level.txt
