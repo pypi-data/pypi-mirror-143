@@ -1,0 +1,7 @@
+urllib3<1.27,>=1.26.5
+deprecation<3.0.0,>=2.1.0
+paho-mqtt<2.0.0,>=1.4.0
+requests<3.0.0,>=2.20.0
+requests-unixsocket<1.0.0,>=0.1.5
+janus
+PySocks
