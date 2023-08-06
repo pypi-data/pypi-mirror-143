@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gladiator-gen
+Version: 0.2.0
+Summary: Generate type-safe, zero-overhead OpenGL wrappers for C++
+Home-page: https://github.com/hellcat17/gladiator
+Author: hellcat17
+Author-email: dodgehellcat17@outlook.com
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: GPU
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Dist: ConfigArgParse (>=1.5.3,<2.0.0)
+Requires-Dist: Jinja2 (>=3.0.3,<4.0.0)
+Requires-Dist: attrs (>=20.3,<21.0)
+Requires-Dist: pyyaml (>=5.3,<6.0)
+Project-URL: Repository, https://github.com/hellcat17/gladiator
