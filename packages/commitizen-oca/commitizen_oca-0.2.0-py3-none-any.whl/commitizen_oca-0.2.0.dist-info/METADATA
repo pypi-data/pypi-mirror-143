@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: commitizen-oca
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://gitlab.com/coopdevs/tooling/commitizen-oca
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: commitizen
+
+Commitizen for Odoo Community
+
