@@ -1,0 +1,7 @@
+geolocate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geolocate/decorators.py,sha256=Zb34GImXu4Wuc8q1lr-6n8DXsWHysOpUXbr1J5OF6SI,1238
+geolocate/engines.py,sha256=CGaKWUpgu5BycV2cBf5FUkrw7ktejsIKbyc1LNXtEeo,3810
+geolocate-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+geolocate-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+geolocate-0.1.0.dist-info/METADATA,sha256=mdCUdwjLgw2owR3HDRacae0gsJ8SPbOrtD24D54TMIs,632
+geolocate-0.1.0.dist-info/RECORD,,
