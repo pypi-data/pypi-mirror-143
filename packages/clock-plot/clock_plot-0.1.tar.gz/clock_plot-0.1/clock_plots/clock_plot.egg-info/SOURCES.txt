@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+clock_plots/clock_plot.egg-info/PKG-INFO
+clock_plots/clock_plot.egg-info/SOURCES.txt
+clock_plots/clock_plot.egg-info/dependency_links.txt
+clock_plots/clock_plot.egg-info/top_level.txt
