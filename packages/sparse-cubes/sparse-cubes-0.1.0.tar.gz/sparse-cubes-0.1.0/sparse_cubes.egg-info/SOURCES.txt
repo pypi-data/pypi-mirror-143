@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.py
+sparse_cubes.egg-info/PKG-INFO
+sparse_cubes.egg-info/SOURCES.txt
+sparse_cubes.egg-info/dependency_links.txt
+sparse_cubes.egg-info/not-zip-safe
+sparse_cubes.egg-info/requires.txt
+sparse_cubes.egg-info/top_level.txt
+sparsecubes/__init__.py
+sparsecubes/__version__.py
+sparsecubes/core.py
