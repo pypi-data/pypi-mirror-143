@@ -1,0 +1,10 @@
+README.md
+setup.py
+quick_time/__init__.py
+quick_time/time.py
+quick_time.egg-info/PKG-INFO
+quick_time.egg-info/SOURCES.txt
+quick_time.egg-info/dependency_links.txt
+quick_time.egg-info/not-zip-safe
+quick_time.egg-info/requires.txt
+quick_time.egg-info/top_level.txt
