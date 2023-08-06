@@ -1,0 +1,12 @@
+stockholm_library/__init__.py,sha256=yAsomAbaig5i2n4Aw1jHZ-b4adLxecbxWvm4E70j30c,163
+stockholm_library/client.py,sha256=tLyS38o5YMFF1QiTbuuym_kfMdJgVT7U22M6GOOftJA,1746
+stockholm_library/models/__init__.py,sha256=ONXrgUg1WtkJ6TvX7RQxqHPm44b2If1JhtFovvBHkfI,46
+stockholm_library/models/book.py,sha256=mptLHAnRxyBpl2weUzzUdeWWxpAU5tid0NRgpBn5yBw,651
+stockholm_library/models/loan.py,sha256=2G0sVzVLWAp5kK8HOZc7AxyAhr9eoy3aLUVdcth66y0,604
+stockholm_library/parsers/__init__.py,sha256=qWLiNQU5tIxpJQUKVC-VAZTaJPE0VrQFLLvii5ySwvo,36
+stockholm_library/parsers/loan_parser.py,sha256=4nVP86IEty9m80m5CN8aHOUi3AJe4VtSpO0hz0OxvzE,3096
+stockholm_library-0.2.0.dist-info/LICENSE,sha256=8wlMb6usNidhmSvtlxwZFnQka5DAbLuAX13k1a1I9zY,1071
+stockholm_library-0.2.0.dist-info/METADATA,sha256=FET3um5rsUZR6ES7418BjsTGFX3HblmHlceZH7fIXyI,3434
+stockholm_library-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+stockholm_library-0.2.0.dist-info/top_level.txt,sha256=kaUn9Uj3r19iUkYl6e85S5-pMYyEwKOnJ2wqg0h6LDg,18
+stockholm_library-0.2.0.dist-info/RECORD,,
