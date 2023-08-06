@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: nec-sol
+Version: 0.5.0rc1
+Requires-Python: >=3.7
+Summary: SOL Installer
+Home-page: https://sol.neclab.eu/
+Platform: linux_x86_x64
+Project-URL: Documentation, https://sol.neclab.eu/docs/v0.5.0
+Project-URL: Bug Tracker, https://gitlab.neclab.eu/
+Requires-Dist: simple-term-menu
+Requires-Dist: requests
