@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: int_to_bytes
+Version: 1.0.0
+Summary: transformate integet number to binary
+Home-page: UNKNOWN
+Author: Go Dae Hyeon
+Author-email: castar2001kr@naver.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
