@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: kepderiv
+Version: 1.0.3
+Summary: Keplerian modeling and derivatives for radial velocities analysis.
+Home-page: https://gitlab.unige.ch/jean-baptiste.delisle/kepderiv
+Author: Jean-Baptiste Delisle
+Author-email: jean-baptiste.delisle@unige.ch
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: COPYING
+
+kepderiv: Keplerian modeling and derivatives for radial velocity and astrometry analyses
+========================================================================================
+
+Read the documentation at `<https://obswww.unige.ch/~delisle/kepderiv/doc/>`_.
+
+
