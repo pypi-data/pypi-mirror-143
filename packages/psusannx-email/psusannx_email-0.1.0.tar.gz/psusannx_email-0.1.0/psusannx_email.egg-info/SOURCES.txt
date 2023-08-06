@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+psusannx_email/__init__.py
+psusannx_email/sendgrid_email.py
+psusannx_email.egg-info/PKG-INFO
+psusannx_email.egg-info/SOURCES.txt
+psusannx_email.egg-info/dependency_links.txt
+psusannx_email.egg-info/requires.txt
+psusannx_email.egg-info/top_level.txt
