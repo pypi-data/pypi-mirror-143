@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: knowledge-clustering
+Version: 0.1.6
+Summary: Automated notion clustering for the knowledge LaTeX package
+Home-page: https://github.com/remimorvan/knowledge-clustering
+Author: Rémi Morvan
+Author-email: remi@morvan.xyz
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/remimorvan/knowledge-clustering/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# Knowledge-Clustering
+Clustering notions for the [knowledge LaTeX package](https://ctan.org/pkg/knowledge).
+
+Maintainers:
+ - Rémi Morvan
+ - Thomas Colcombet
+
+## Principle
+
+The goal of **Knowledge-Clustering** is, when using the [knowledge package](https://ctan.org/pkg/knowledge) to automatically provide suggestions to the user of what notions should be grouped together.
+
+## Install Knowledge-Clustering
+
+To install or upgrade **Knowledge-Clustering**, run
+
+    python3 -m pip install --index-url https://test.pypi.org/simple/ --upgrade knowledge-clustering 
+
+
+
