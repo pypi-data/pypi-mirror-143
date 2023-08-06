@@ -1,0 +1,11 @@
+aussiebb/__init__.py,sha256=Zm3ujP7_M1tbCVGpCkV7whNyfN-9DEyKknKy0P_yXVI,18363
+aussiebb/asyncio/__init__.py,sha256=Hj8PS1gAD60PjRxPGwe7SQCD2iZVJu3IVhpsSovC4VY,23932
+aussiebb/baseclass.py,sha256=wb5ki3eMYHat5tE6SrgfqZxyDOeM5qNBM6jnLN_vbdY,5544
+aussiebb/const.py,sha256=9XVwwelGB4i1-brtjjOLHv2UMBwZhR45avHGZeTqWOI,4057
+aussiebb/exceptions.py,sha256=ytyPKhftbRn-AGGB_WnBN9wIdw7EOJA8-C7NZ0OFz9E,501
+aussiebb/types.py,sha256=MZfyD9kGpF_QCyaqiKltFgtV18VnVygvZCDM_9i2k8w,10110
+aussiebb/utils.py,sha256=WfI7F699NntWCx3siL_tOb_QbQqvBSVgsWobAKlvrcU,33
+pyaussiebb-0.0.15.dist-info/LICENSE,sha256=5pP0qdr2x0AekPuwMKazmM0RkDBUTxYrZA0fsw3Tlgk,1073
+pyaussiebb-0.0.15.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pyaussiebb-0.0.15.dist-info/METADATA,sha256=Si3kQKzmJWN08xErZkdaz3gzxu6T2Mml6tB92dmifC4,7251
+pyaussiebb-0.0.15.dist-info/RECORD,,
