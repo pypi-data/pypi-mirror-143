@@ -1,0 +1,13 @@
+{
+    "asset_label": "Download the Wheel",
+    "asset_name": "jupitest-0.0.11-py3-none-any.whl",
+    "description": "\nProject released with [Backstage](https://github.com/pyrustic/backstage).\n",
+    "is_draft": false,
+    "is_prerelease": false,
+    "owner": "pyrustic",
+    "release_name": "jupitest v0.0.11",
+    "repository": "jupitest",
+    "tag_name": "v0.0.11",
+    "target_commitish": "master",
+    "upload_asset": true
+}
