@@ -1,0 +1,3 @@
+[console_scripts]
+siiaucli = siiau_consultas_api:main
+
