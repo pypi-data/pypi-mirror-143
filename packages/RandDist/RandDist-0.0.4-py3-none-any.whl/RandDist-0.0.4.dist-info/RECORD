@@ -1,0 +1,8 @@
+randdist/__init__.py,sha256=8fdPQDuTCNTbFDK45Gppr2kQ-tGJgqDm2dtqZxR2Bcw,311
+randdist/generate.py,sha256=XvfE5n-rVnSEdKpVQMn7SqWZJhkbSmNSqhKbsuwq8VE,2815
+randdist/test_randdist.py,sha256=caOyJT-JI0YSIbkepEh-nzNf9V5JtaWLCD-RHkd_3_Q,302
+RandDist-0.0.4.dist-info/LICENSE,sha256=LuUBnkqXLYwJ4PMcwzZqTQVQWKwpwv2Thjs_NJ3kv0E,1072
+RandDist-0.0.4.dist-info/METADATA,sha256=p6jcBR1DbUY4070H0EDQYSfvOd-WkUdURhSGaaB38WM,2672
+RandDist-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+RandDist-0.0.4.dist-info/top_level.txt,sha256=ISI9PdPGcC5OVUsVHTJ1zapD9rfEPz1_46YsFs_HO9I,9
+RandDist-0.0.4.dist-info/RECORD,,
