@@ -1,0 +1,9 @@
+sentence-transformers
+pytrec_eval
+faiss_cpu
+elasticsearch==7.9.1
+
+[tf]
+tensorflow>=2.2.0
+tensorflow-text
+tensorflow-hub
