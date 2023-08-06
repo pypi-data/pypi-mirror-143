@@ -1,0 +1,16 @@
+netaddr>=0.7.19
+scapy>=2.4.3
+
+[complete]
+faker_wifi_essid
+
+[docs]
+Sphinx>=3.2
+sphinxcontrib-seqdiag>=2.0.0
+sphinx-argparse>=0.2.2
+sphinx_rtd_theme>=0.5.0
+
+[tests]
+flake8
+pylint
+tox

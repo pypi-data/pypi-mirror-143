@@ -1,0 +1,2 @@
+[console_scripts]
+probequest = probequest.cli:main
