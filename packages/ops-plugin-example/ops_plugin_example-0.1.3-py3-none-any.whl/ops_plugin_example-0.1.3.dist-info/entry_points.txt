@@ -1,0 +1,3 @@
+[ops.plugins]
+example_cli_commands=example.cli:cli
+
