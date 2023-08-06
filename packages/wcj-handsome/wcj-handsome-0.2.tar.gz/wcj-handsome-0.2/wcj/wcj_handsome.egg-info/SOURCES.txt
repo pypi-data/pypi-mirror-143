@@ -1,0 +1,8 @@
+setup.py
+wcj/handsome/__init__.py
+wcj/handsome/boy/__init__.py
+wcj/handsome/boy/message.py
+wcj/wcj_handsome.egg-info/PKG-INFO
+wcj/wcj_handsome.egg-info/SOURCES.txt
+wcj/wcj_handsome.egg-info/dependency_links.txt
+wcj/wcj_handsome.egg-info/top_level.txt
