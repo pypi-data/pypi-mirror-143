@@ -1,0 +1,3 @@
+[console_scripts]
+linkcheck=linkcheck.cli:cli
+
