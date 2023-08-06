@@ -1,0 +1,5 @@
+fastlevenshtein-0.1.6.dist-info/METADATA,sha256=33yM33XabI2rY8R41h5MseKNixrjlqV_GnyTNsYpvvc,2096
+fastlevenshtein-0.1.6.dist-info/WHEEL,sha256=qhMyOqX-jc81TudZgMJeVz7tUxXCP2-97LQY8qB7Kq8,109
+fastlevenshtein/__init__.py,sha256=2cYVqT4RbPqVTChTNRGT5AI-DeJYvDH9-KClK74bp4w,66
+fastlevenshtein/fastlevenshtein.cpython-37m-x86_64-linux-gnu.so,sha256=UqtNAWd1sF_DmtSExw4ASecEGVbpakt5yqNXkSjj7uY,391488
+fastlevenshtein-0.1.6.dist-info/RECORD,,
