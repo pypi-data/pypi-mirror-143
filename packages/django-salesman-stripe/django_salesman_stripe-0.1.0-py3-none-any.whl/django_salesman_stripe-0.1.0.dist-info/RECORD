@@ -1,0 +1,9 @@
+LICENSE,sha256=if98GOjzCKRGsrLBqyWkK5gKsVYETjayceiUeW4DK7o,1520
+salesman_stripe/__init__.py,sha256=Bb3HGnhhv7Xxcx7GiFYcxjwTXnEt9wPnn6OLY031-Xk,105
+salesman_stripe/conf.py,sha256=cYBAgJGk9670zB4JwMvGCyxoCl3eq0lDT0NeqtyCCdk,2205
+salesman_stripe/models.py,sha256=mWxZJG7oe_emsNuGvF6V3_BIWYG80t8FLKV0FGMzwwU,670
+salesman_stripe/payment.py,sha256=tNdVz24pAUQ5ZOPFYPk0zMasu7q5XVAQmOIRePsusnc,10649
+django_salesman_stripe-0.1.0.dist-info/LICENSE,sha256=if98GOjzCKRGsrLBqyWkK5gKsVYETjayceiUeW4DK7o,1520
+django_salesman_stripe-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_salesman_stripe-0.1.0.dist-info/METADATA,sha256=j4yGvflm_D35GPMsnp3cxCvDaIztIanJzsARynIJgJs,4324
+django_salesman_stripe-0.1.0.dist-info/RECORD,,
