@@ -1,0 +1,15 @@
+semantically/__init__.py,sha256=TeJkl0Kc44joL2F0nAw0q_Eqbl_4pCPDGi1IxOgtlHM,28
+semantically/async_request.py,sha256=d2KrmSdbix4Ntz7Zr04jgemsjwKw5g60QaP8irBkK_w,6880
+semantically/client.py,sha256=E0mpXP6fs3l3OHd5h8SRKXqzap_fR76_qFX0S6PDrb4,1287
+semantically/config.py,sha256=TUYiTzYWoMR41jmPzmg-nVH7f2-LfNKVxqQ9oCzpPF0,1038
+semantically/datastructures.py,sha256=q3Oc3zDfje29XBX718U6C7XVKNeOc5GdsxzVtznEQjQ,2934
+semantically/exceptions.py,sha256=oJJUY165YK_FOCrUVabyzqgQ0Xetvy87Lwv4Gu8t4ho,1239
+semantically/paper_list.py,sha256=aHZQnnVJGcUFuHTHohFtBik4HPjsPfYARS01to-Bh8w,3344
+semantically/request.py,sha256=owKe_-mLGvmY56IkR6EfI783fpR-wzylQqmNODppob4,7244
+semantically/response_codes.py,sha256=VY0DkAvUh-FJDsW7RCMfA1LYIF31xvNEhHpz8UNzVtA,237
+semantically/semantically.py,sha256=CPrgZIdhghqRFEnTrn1DJYMpFCq3ryamCpjSpbDaBK4,12823
+semantically-0.2.2.dist-info/LICENSE.md,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+semantically-0.2.2.dist-info/METADATA,sha256=Q-aBEXtvo1RnD1HpNeISB1u58dxXaOEgc1Gb4Q1tB_U,2686
+semantically-0.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+semantically-0.2.2.dist-info/top_level.txt,sha256=-3oft-1Gf6WKYHawoA-MGdHX9JyAaGrrqO64vHXlH_0,13
+semantically-0.2.2.dist-info/RECORD,,
