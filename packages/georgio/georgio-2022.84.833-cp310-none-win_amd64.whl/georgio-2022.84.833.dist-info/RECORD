@@ -1,0 +1,5 @@
+georgio-2022.84.833.dist-info/METADATA,sha256=eS8sEgZuTHgst7LPg61VqQxFwhxD0iSdd565tAWjf0g,1975
+georgio-2022.84.833.dist-info/WHEEL,sha256=gvQpkqxJSz4fXlSk4_mzhBxb22uQ27pZvCCVhtqzwCQ,97
+georgio/__init__.py,sha256=qMrhox5w9MUCryc6ImOdNzfmYO3o_4Ae12ZqI7HEsUs,50
+georgio/georgio.cp310-win_amd64.pyd,sha256=lZfAPu5EsygWlEVzrbW9mBgVnb05A1iZcSfvszPt65w,227840
+georgio-2022.84.833.dist-info/RECORD,,
