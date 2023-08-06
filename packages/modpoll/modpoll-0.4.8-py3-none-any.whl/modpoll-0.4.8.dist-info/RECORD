@@ -1,0 +1,12 @@
+LICENSE,sha256=QJVJ9DOu8xWIkKgJH3UgAqxf7fIdnSXa2RZ1_qMw5IU,1070
+modpoll/__init__.py,sha256=lnXglGTM6E4JHKR6QFvtzkKIiJ8th95XMi5bOPc8xtM,214
+modpoll/__main__.py,sha256=PguXkhdy3Ct16qB-_gGYY9tZkLHa8_sr6F8eCzU8m1Y,28
+modpoll/arg_parser.py,sha256=uyRk2IKVKubwqbAK7nLB6tSU3yGZcb-tz5fobwAtaFc,3993
+modpoll/main.py,sha256=3XR-YdAGCh1wRFQjnaLt9HsylV6uWmDRO3kZqSK7sWY,3376
+modpoll/modbus_task.py,sha256=q-mkEF_9O2cbi_kC19x4herQbwYhgy-gu4-HRKdX6GE,16991
+modpoll/mqtt_task.py,sha256=8AlzcLgTKP3FPRF4IqvJh-3zmKdBrGuuw1729BshnfY,4679
+modpoll-0.4.8.dist-info/entry_points.txt,sha256=pJuwttRIufLwzxPMZqxC5859kyGOeZ0g85UZUEt3nnU,39
+modpoll-0.4.8.dist-info/LICENSE,sha256=QJVJ9DOu8xWIkKgJH3UgAqxf7fIdnSXa2RZ1_qMw5IU,1070
+modpoll-0.4.8.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+modpoll-0.4.8.dist-info/METADATA,sha256=y_obGzUPl8nPzYLhDUfz-ZeToPmdNmPS9Tmyd9D6mR8,9857
+modpoll-0.4.8.dist-info/RECORD,,
