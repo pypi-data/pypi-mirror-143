@@ -1,0 +1,13 @@
+dist/
+build/
+smallPowerDash.egg-info/
+nicolasCalculs/
+logs/
+figuresSmallPower/
+src/__pycache__/
+smallPowerDash/old/
+smallPowerDash/confFiles/old/
+smallPowerDash/__pycache__/
+smallPowerDash/confFiles/PLC_config/
+dataExported/
+figuresSmallPower/

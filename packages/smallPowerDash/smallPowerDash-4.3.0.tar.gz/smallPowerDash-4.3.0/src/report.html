@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.log {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+.log:only-child {
+  height: inherit;
+}
+
+div.image {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.image img {
+  width: 320px;
+}
+
+div.video {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.video video {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.collapsed {
+  display: none;
+}
+
+.expander::after {
+  content: " (show details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.collapser::after {
+  content: " (hide details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.inactive .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
+}
+.asc.active .sort-icon {
+  /*finish triangle*/
+  border-bottom: 8px solid #999;
+}
+.desc.active .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #999;
+}
+</style></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 07-Mar-2022 at 12:14:31 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.0.1"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Linux-5.13.0-30-generic-x86_64-with-glibc2.29</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"dash": "1.20.0", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.10</td></tr></table>
+    <h2>Summary</h2>
+    <p>9 tests ran in 17.16 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">7 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_post_calculatedTags</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_post_calculatedTags():<br/>        t1 = pd.Timestamp(&#x27;2022-02-16 17:20&#x27;,tz=&#x27;CET&#x27;)<br/>        # t1 = t1-pd.Timedelta(hours=2)<br/>        t0 = t1-pd.Timedelta(days=0,hours=0,minutes=20)<br/>    <br/>        alphas=np.linspace(0.001,0.2,20)<br/>&gt;       df=cfg.post_fuitesAir(t0,t1,rs=&#x27;30s&#x27;,rsMethod=&#x27;forwardfill&#x27;,alpha=0.001)<br/><br/>test_SmallPower.py:99: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;smallPowerDash.smallPower.SmallPowerComputer object at 0x7fa16d4674f0&gt;<br/>t0 = Timestamp(&#x27;2022-02-16 17:00:00+0100&#x27;, tz=&#x27;CET&#x27;)<br/>t1 = Timestamp(&#x27;2022-02-16 17:20:00+0100&#x27;, tz=&#x27;CET&#x27;), alpha = 0.001, rsMethod = &#x27;forwardfill&#x27;<br/>rs = &#x27;30s&#x27;<br/><br/>    def post_fuitesAir(self,t0,t1,alpha=0.005,rsMethod=&#x27;forwardfill&#x27;,rs=&#x27;60s&#x27;):<br/>        beckhoff=self.devices[&#x27;beckhoff&#x27;]<br/>&gt;       tagsfuite     = {k:v[0] for k,v in beckhoff.get_tags_fuiteair().items()}<br/><span class="error">E       AttributeError: &#x27;Beckhoff_client&#x27; object has no attribute &#x27;get_tags_fuiteair&#x27;</span><br/><br/>../smallPowerDash/smallPower.py:1011: AttributeError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_minMax_legend</td>
+          <td class="col-duration">0.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_minMax_legend():<br/>        start=time.time()<br/>        t1 = pd.Timestamp.now(tz=&#x27;CET&#x27;)<br/>        t1 = pd.Timestamp(&#x27;2022-02-17 11:27&#x27;,tz=&#x27;CET&#x27;)<br/>        # t1 = t1-pd.Timedelta(hours=2)<br/>        # t0 = t1-pd.Timedelta(days=0,hours=2,minutes=0)<br/>        t0 = t1-pd.Timedelta(days=0,hours=0,minutes=7)<br/>        rs=&#x27;10s&#x27;<br/>        tags = cfg.getTagsTU(&#x27;GFC_0.*PT&#x27;)<br/>        tags+=[&#x27;SEH1.HPB_STG_01a_TT_03.HM05&#x27;]<br/>        tags+=[&#x27;SEH01.L118_O2_ECV2_01.HO00&#x27;]<br/>        tags+=[&#x27;SEH1.STB_STK_04.HER_01.HO00&#x27;]<br/>        # df = cfg.loadtags_period(t0,t1,tags,rsMethod=&#x27;forwardfill&#x27;,rs=rs,checkTime=False)<br/>        df = cfg.loadtags_period(t0,t1,tags,rsMethod=&#x27;meanright&#x27;,rs=rs,checkTime=True)<br/>        fig = cfg.multiUnitGraphSP(df)<br/>    <br/>        # td   = cfg.toogle_tag_description(tags,&#x27;description&#x27;)<br/>        # fig  = utilsD.Utils().customLegend(fig,td)<br/>        fig  = cfg.update_lineshape_fig(fig,&#x27;standard&#x27;)<br/>        fig = cfg.addTagEnveloppe(fig,tags[1],t0,t1,rs=rs)<br/>        fig.show()<br/>&gt;       sys.exit()<br/><span class="error">E       SystemExit</span><br/><br/>test_SmallPower.py:130: SystemExit<br/> ------------------------------Captured stdout call------------------------------ <br/>07 Mar 12:14:29 : loading the parked data in 167.22 ms
+07 Mar 12:14:29 : pivot data in 1.60 ms
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_resampling</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_resampling():<br/>        import plotly.express as px<br/>        rs=&#x27;10s&#x27;<br/>&gt;       listTags = streamVisu.allTags.sample(n=2)<br/><span class="error">E       NameError: name &#x27;streamVisu&#x27; is not defined</span><br/><br/>test_SmallPower.py:145: NameError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_dfLoadDataBaseTags</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_dfLoadDataBaseTags():<br/>        start=time.time()<br/>        # df = pd.read_sql_query(&quot;select * from realtimedata where tag=&#x27;kWh_B001&#x27;&quot;,dbconn,parse_dates=[&#x27;timestampz&#x27;],index_col=&#x27;timestampz&#x27;)<br/>        # df = pd.read_sql_query(&quot;select * from realtimedata where tag in (&#x27;kWh_B001&#x27;,&#x27;kWh_A003&#x27;);&quot;,dbconn,parse_dates=[&#x27;timestampz&#x27;],index_col=&#x27;timestampz&#x27;)<br/>    <br/>&gt;       t1 = pd.Timestamp.now(tz=streamVisu.local_tzname)<br/><span class="error">E       NameError: name &#x27;streamVisu&#x27; is not defined</span><br/><br/>test_SmallPower.py:234: NameError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_SetInterval</td>
+          <td class="col-duration">0.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_SetInterval():<br/>        from time import sleep<br/>        import numpy as np<br/>    <br/>        def sleepabit():<br/>            t0 = dt.datetime.now().astimezone()<br/>            print(&#x27;start time task : &#x27;,t0.strftime(&#x27;%H:%M:%S:%f&#x27;)[:-4])<br/>            value =0.9+np.random.randint(0,20)/100<br/>            print(&#x27;duration task : &#x27;,value)<br/>            print(&#x27;&#x27;)<br/>            sleep(value)<br/>    <br/>        ## initialize a M:S:000 pétante ! #####<br/>        now =dt.datetime.now().astimezone()<br/>        time.sleep(1-now.microsecond/1000000)<br/>&gt;       setTest=comUtils.SetInterval(1,sleepabit)<br/><span class="error">E       NameError: name &#x27;comUtils&#x27; is not defined</span><br/><br/>test_SmallPower.py:258: NameError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_LoadAndpPlotCompuation</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_LoadAndpPlotCompuation():<br/>        # generateRandomData()<br/>        #### small computation test<br/>        t1 = pd.Timestamp.now(&#x27;CET&#x27;)<br/>        # t1 = pd.Timestamp(&#x27;2021-12-17 18:00&#x27;,tz=&#x27;CET&#x27;)<br/>        t0 = t1-dt.timedelta(hours=0,minutes=5)<br/>        timeRange=[t.isoformat()for t in [t0,t1]]<br/>        start=time.time()<br/>        # df=cfg.df_loadtagsrealtime(tags,t0,t1,True,&#x27;forwardfill&#x27;,&#x27;60s&#x27;)<br/>&gt;       df=cfg.df_loadtagsrealtime(tags,t0,t1,True,&#x27;raw&#x27;,&#x27;60s&#x27;)<br/><span class="error">E       AttributeError: &#x27;SmallPowerComputer&#x27; object has no attribute &#x27;df_loadtagsrealtime&#x27;</span><br/><br/>test_SmallPower.py:270: AttributeError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/test_SmallPower.py::test_Indicator</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_Indicator():<br/>        import smallPowerDash.smallPowerTabs as sptabs<br/>        import dash<br/>        importlib.reload(sptabs)<br/>        start = time.time()<br/>        t1 = pd.Timestamp.now(tz=&#x27;CET&#x27;)<br/>        t0 = t1-pd.Timedelta(days=0,hours=10)<br/>        # tabIndicator = sptabs.RealTimeIndicatorTab(dash.Dash(),cfg)<br/>        # df=tabIndicator.selectIndicator(&#x27;fuites air&#x27;,t0,t1,rsMethod=&#x27;forwardfill&#x27;,rs=&#x27;60s&#x27;)<br/>        # modehub=cfg.getModeHub(t0,t1,rsMethod=&#x27;forwardfill&#x27;,rs=&#x27;60s&#x27;)<br/>        # modehub=cfg.getModeHub(t0,t1,rsMethod=&#x27;raw&#x27;)<br/>        df = cfg.fuitesAir(t0,t1,rsMethod=&#x27;forwardfill&#x27;,rs=&#x27;60s&#x27;)<br/>&gt;       sys.exit()<br/><span class="error">E       SystemExit</span><br/><br/>test_SmallPower.py:320: SystemExit<br/> ------------------------------Captured stdout call------------------------------ <br/>no file : no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH01.L118_O2_FT_01.HM05.pkl
+ /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STB_GFC_02_PT_01.HM05.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STB_GFD_02_PT_01.HM05.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STB_TT_02.HM05.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_01.IT_HM05.pkl
+no file : no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_01.IT_HM05.HC09.pkl 
+/home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_01.IT_HM05.HC13.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH01.L138_O2_FT_01.HM05.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_02.IT_HM05.pkl
+no file : no file :   /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_02.IT_HM05.HC09.pkl/home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_02.IT_HM05.HC13.pkl
+
+no file : no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_03.IT_HM05.pkl 
+/home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_03.IT_HM05.HC09.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_03.IT_HM05.HC13.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_04.IT_HM05.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_04.IT_HM05.HC09.pkl
+no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-03-07//SEH1.STK_ALIM_04.IT_HM05.HC13.pkl
+07 Mar 12:14:31 : database read  in 67.91 ms
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/test_SmallPower.py::test_dfLoadparkedTags</td>
+          <td class="col-duration">5.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/test_SmallPower.py::test_graphs_functions</td>
+          <td class="col-duration">1.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>no file :  /home/dorian/data/sylfenData/smallPower_daily/2022-02-14//SEH1.L211_H2OP_FV_01.HO26.pkl
+07 Mar 12:14:30 : loading the parked data in 619.64 ms
+07 Mar 12:14:30 : pivot data in 2.81 ms
+<br/></div></td></tr></tbody></table></body></html>

@@ -1,0 +1,163 @@
+diff --git a/src/dumpSmallPower.py b/src/dumpSmallPower.py
+index 570985b..4297a95 100644
+--- a/src/dumpSmallPower.py
++++ b/src/dumpSmallPower.py
+@@ -15,35 +15,31 @@ importlib.reload(comUtils)
+ import smallPowerDash.smallPower as smallPower
+ importlib.reload(smallPower)
+ start=time.time()
+-dumperSmallPower = smallPower.SmallPower_dumper()
++smallPowerDumper = smallPower.SmallPower_dumper()
+ 
+-# dumperSmallPower.park_database()
+-# dumperSmallPower.start_dumping()
++# smallPowerDumper.park_database()
++# smallPowerDumper.start_dumping()
++sys.exit()
+ 
+ # ==============================================================================
+ #                           TESTS
+ import pandas as pd
+-def testInsert_intodb():
+-    start = time.time()
+-    quickTags = dumperSmallPower.dumpInterval['beckhoff'][0.1].argsAction[1]
+-    slowTags = dumperSmallPower.dumpInterval['beckhoff'][1].argsAction[1]
+-    beckhoffclient = dumperSmallPower.devices['beckhoff']
+-    tags=quickTags
+-    # d=beckhoffclient.collectData(tags)
+-    c=beckhoffclient.insert_intodb(dumperSmallPower.dbParameters,tags)
+-    # df=pd.DataFrame(d).T
+-    print('insert into database done in {:.2f} milliseconds'.format((time.time()-start)*1000))
+-
+-# def test_calculatedtags():
+-beckhoff=dumperSmallPower.devices['beckhoff']
+-# sys.exit()
+-d  = beckhoff.compute_calculated_tags()
+-df = pd.DataFrame(d).T
+-df.columns=['value','timestamp']
+-tagnames = pd.Series(dict((v,k) for k,v in beckhoff.tags_calculated.iteritems()))
+-df['description'] = df.reset_index()['index'].apply(lambda x:tagnames[x]).to_list()
+-df = df.reset_index().set_index('description')[['value','timestamp','index']]
+-# dumperSmallPower.insert_calctags_intodb()
++# def testInsert_intodb():
++start = time.time()
++quickTags = smallPowerDumper.dumpInterval['beckhoff'][0.1].argsAction[1]
++slowTags = smallPowerDumper.dumpInterval['beckhoff'][1].argsAction[1]
++beckhoffclient = smallPowerDumper.devices['beckhoff']
++tags=quickTags
++# d=beckhoffclient.collectData(tags)
++c=beckhoffclient.insert_intodb(smallPowerDumper.dbParameters,tags)
++# df=pd.DataFrame(d).T
++print('insert into database done in {:.2f} milliseconds'.format((time.time()-start)*1000))
++
++def test_calculatedtags():
++    beckhoff=smallPowerDumper.devices['beckhoff']
++    d=beckhoff.compute_calculated_tags()
++    df=pd.DataFrame(d).T
++    # smallPowerDumper.insert_calctags_intodb()
+ 
+ def testCreateFolders():
+     t1=dt.datetime(2021,11,10,10,30)
+@@ -51,7 +47,7 @@ def testCreateFolders():
+     # t0=t1-dt.timedelta(days=0,hours=5,minutes=15)#single day
+     # t0=t1-dt.timedelta(days=1,hours=5,minutes=15)#2 days
+     t0=t1-dt.timedelta(days=2,hours=5,minutes=15)#more than 2 days
+-    foldersCreated=streaming.foldersaction(t0,t1,dumperSmallPower.folderPkl,streaming.createminutefolder)
++    foldersCreated=streaming.foldersaction(t0,t1,smallPowerDumper.folderPkl,streaming.createminutefolder)
+ 
+ def testparktagfromdb():
+     tag = 'SEH0.JT_02.JTVA_HC20'
+@@ -59,52 +55,52 @@ def testparktagfromdb():
+     t0 = t1-dt.timedelta(days=0,hours=0,minutes=2,seconds=59)
+ 
+     #feed db with random data
+-    dbconn = dumperSmallPower.connect2db()
+-    dumperSmallPower.feed_db_random_data(t0,t1,[tag])
++    dbconn = smallPowerDumper.connect2db()
++    smallPowerDumper.feed_db_random_data(t0,t1,[tag])
+ 
+     #parkage
+-    foldersCreated=streaming.foldersaction(t0,t1,dumperSmallPower.folderPkl,streaming.createminutefolder)
++    foldersCreated=streaming.foldersaction(t0,t1,smallPowerDumper.folderPkl,streaming.createminutefolder)
+     sqlQ ="select * from realtimedata;"
+     # df = pd.read_sql_query(sqlQ,dbconn,parse_dates=['timestampz'],dtype={'value':'float'})
+     df = pd.read_sql_query(sqlQ,dbconn,parse_dates=['timestampz'])
+     dbconn.close()
+-    dfs=dumperSmallPower.parktagfromdb(t0,t1,df,tag,'no')
++    dfs=smallPowerDumper.parktagfromdb(t0,t1,df,tag,'no')
+ 
+     # quick load data parked minute check
+     import pickle
+-    foldermin=dumperSmallPower.folderPkl + t0.strftime(streaming.dayFolderFormat) + '/10/'
++    foldermin=smallPowerDumper.folderPkl + t0.strftime(streaming.dayFolderFormat) + '/10/'
+     dfout1=pickle.load(open(foldermin + '28/' + tag + '.pkl','rb'))
+ 
+ def testparktagallfromdb():
+-    dumperSmallPower.parkingTime=60*2
++    smallPowerDumper.parkingTime=60*2
+     t1 = dt.datetime.now().astimezone()
+     t0 = t1-dt.timedelta(minutes=5)
+     ### # flushdb first
+-    # dumperSmallPower.flushdb(5,full=True)
++    # smallPowerDumper.flushdb(5,full=True)
+     #feed db with random data
+     start = time.time()
+-    # df = dumperSmallPower.generateRandomParkedData(t0,t1)
+-    dumperSmallPower.feed_db_random_data(t0,t1)
++    # df = smallPowerDumper.generateRandomParkedData(t0,t1)
++    smallPowerDumper.feed_db_random_data(t0,t1)
+     print('fed in {:.2f} milliseconds'.format((time.time()-start)*1000))
+     start = time.time()
+     #parkage
+-    dfs = dumperSmallPower.parkallfromdb()
++    dfs = smallPowerDumper.parkallfromdb()
+     print('parked in {:.2f} milliseconds'.format((time.time()-start)*1000))
+     # sys.exit()
+ 
+     # quick load data parked minute check
+     import pickle
+-    tag = pd.Series(dumperSmallPower.allTags).sample(n=1).squeeze()
+-    folderminute = dumperSmallPower.folderPkl + t0.strftime(streaming.dayFolderFormat + '/%H/%M/')
++    tag = pd.Series(smallPowerDumper.allTags).sample(n=1).squeeze()
++    folderminute = smallPowerDumper.folderPkl + t0.strftime(streaming.dayFolderFormat + '/%H/%M/')
+     dfout1 = pickle.load(open(folderminute + tag + '.pkl','rb'))
+-    d2=dumperSmallPower.folderPkl + '2021-12-10/12/27/'
++    d2=smallPowerDumper.folderPkl + '2021-12-10/12/27/'
+     pickle.load(open(d2 + tag + '.pkl','rb'))
+ 
+ def test_justparkallfromdb():
+     import pickle, pandas as pd
+-    dfs = dumperSmallPower.parkallfromdb()
+-    tag = pd.Series(dumperSmallPower.allTags).sample(n=1).squeeze()
+-    foldermin=dumperSmallPower.folderPkl+'2021-12-10/13/'
++    dfs = smallPowerDumper.parkallfromdb()
++    tag = pd.Series(smallPowerDumper.allTags).sample(n=1).squeeze()
++    foldermin=smallPowerDumper.folderPkl+'2021-12-10/13/'
+     df=pickle.load(open(foldermin + '10' '/' + tag + '.pkl','rb'))
+     df.index=df.index.tz_convert('CET')
+     df
+@@ -135,18 +131,18 @@ def testStaticCompressionOnMonitoringData():
+     results = streaming.testCompareStaticCompression(s,precs)
+ 
+ def test_reconnection():
+-    dfplc=dumperSmallPower.dfPLC
++    dfplc=smallPowerDumper.dfPLC
+     tags = list(dfplc.index[dfplc['FREQUENCE_ECHANTILLONNAGE']==0.1])
+-    quickNodes = {t:dumperSmallPower.nodesDict[t] for t in tags}
++    quickNodes = {t:smallPowerDumper.nodesDict[t] for t in tags}
+     for k in range(2):
+-            # d=dumperSmallPower.collectData(quickNodes)
+-            c=dumperSmallPower.insert_intodb(quickNodes)
++            # d=smallPowerDumper.collectData(quickNodes)
++            c=smallPowerDumper.insert_intodb(quickNodes)
+             time.sleep(0.2)
+ 
+ def checkTimes():
+     dict2pdf = lambda d:pd.DataFrame.from_dict(d,orient='index').squeeze().sort_values()
+-    s_collect = dict2pdf(dumperSmallPower.collectingTimes)
+-    s_insert  = dict2pdf(dumperSmallPower.insertingTimes)
++    s_collect = dict2pdf(smallPowerDumper.collectingTimes)
++    s_insert  = dict2pdf(smallPowerDumper.insertingTimes)
+ 
+     p = 1. * np.arange(len(s_collect))
+     ## first x axis :
