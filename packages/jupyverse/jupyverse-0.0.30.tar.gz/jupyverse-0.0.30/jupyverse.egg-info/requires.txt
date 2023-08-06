@@ -1,0 +1,25 @@
+fps[uvicorn]>=0.0.8
+fps-login
+fps-auth
+fps-contents
+fps-kernels
+fps-nbconvert
+fps-yjs
+
+[:platform_system != "Windows"]
+fps-terminals
+
+[jupyterlab]
+fps-jupyterlab
+
+[retrolab]
+fps-retrolab
+
+[test]
+flake8
+black
+mypy
+pytest
+pytest-asyncio
+requests
+ipykernel
