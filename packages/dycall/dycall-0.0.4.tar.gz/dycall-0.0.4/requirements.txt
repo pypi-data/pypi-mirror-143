@@ -1,0 +1,9 @@
+appdirs
+cxxfilt
+darkdetect
+desktop-app
+EasySettings
+lief
+pywin32; platform_system == "Windows"
+tksheet
+ttkbootstrap
