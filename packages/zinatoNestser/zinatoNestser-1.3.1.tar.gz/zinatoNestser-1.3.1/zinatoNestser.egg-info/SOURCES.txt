@@ -1,0 +1,5 @@
+setup.py
+zinatoNestser.egg-info/PKG-INFO
+zinatoNestser.egg-info/SOURCES.txt
+zinatoNestser.egg-info/dependency_links.txt
+zinatoNestser.egg-info/top_level.txt
