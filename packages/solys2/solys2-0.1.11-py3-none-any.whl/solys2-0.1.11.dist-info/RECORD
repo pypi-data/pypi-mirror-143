@@ -1,0 +1,10 @@
+solys2/__init__.py,sha256=4IZTi0iF1GKwBIdmlfQ_YPySuvNfIT-LFcAGn0O5Ysg,93
+solys2/autotrack.py,sha256=GEvkzzfs081TD7lW0dG__5WmlDmf5RLiA_oKEgFXzvI,38180
+solys2/connection.py,sha256=sXy1yqm1FW92Ws4TyQElsIZhBvSWi1YVsx34GbVudf8,3768
+solys2/positioncalc.py,sha256=eiFIQ9aW9h86wV3kFR9uhti5ip2B2IdAzNl25S2Brq8,9454
+solys2/response.py,sha256=DVV13ySR6_Td3Gx4zasHsVfAGykb3rM6QoNY7rtTkbA,8662
+solys2/solys2.py,sha256=kSNo5shXbihA8WqYOWS-liuscSQBUrGqnrKcnWj8Plk,29923
+solys2-0.1.11.dist-info/METADATA,sha256=aOT1jk_4Y-fzRGuAQ9d9AVCeTNhYDOm7dDa2sABVn-A,1870
+solys2-0.1.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+solys2-0.1.11.dist-info/top_level.txt,sha256=YQF2YZtBVjFf5ck2WKoGIYJ797aQWT7JR_StOsXMd24,7
+solys2-0.1.11.dist-info/RECORD,,
