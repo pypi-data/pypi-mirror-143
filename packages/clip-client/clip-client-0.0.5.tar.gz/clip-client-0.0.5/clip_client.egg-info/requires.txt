@@ -1,0 +1,12 @@
+jina
+
+[test]
+pytest
+pytest-timeout
+pytest-mock
+pytest-cov
+pytest-repeat
+pytest-reraise
+mock
+pytest-custom_exit_code
+black
