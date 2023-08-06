@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: visiomode
+Version: 0.3.0.dev1
+Summary: An open-source platform for touchscreen-based visuomotor tasks in rodents.
+Home-page: https://www.visiomode.org
+Author: Constantinos Eleftheriou
+Author-email: Constantinos.Eleftheriou@ed.ac.uk
+License: MIT
+Keywords: touchscreen,rodent,behaviour,neuroscience
+Platform: Raspberry Pi OS
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Flask
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask
+Requires-Dist: PyYAML
+Requires-Dist: pyserial
+Requires-Dist: numpy
+Requires-Dist: pygame (==2.0.1)
+Requires-Dist: importlib ; python_version == "3.7"
+
+![https://www.visiomode.org](./resources/banner.png)
+
+---
+
+ [![Build Status](https://github.com/celefthe/visiomode/workflows/build/badge.svg)](https://github.com/celefthe/visiomode/actions)
+[![codecov](https://codecov.io/gh/celefthe/visiomode/branch/master/graph/badge.svg?token=1O1WDTTHOH)](https://codecov.io/gh/celefthe/visiomode)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+Visiomode is an open-source platform for rodent touchscreen-based visuomotor tasks. It has been designed to promote the use of touchscreens as an accessible option for implementing a variety of visual task paradigms, with low-cost and ease-of-use as a priority. Visiomode is implemented on the popular Raspberry Pi computer, and provides the user with an intuitive web interface to design and manage experiments. It can be deployed as a stand-alone cognitive testing solution in both freely-moving and head-restrained environments.
+
+
+## Funders
+
+<p align="left">
+  <img width="250" src="./resources/sidb.jpg"  alt="logo"/>
+</p>
+
+
