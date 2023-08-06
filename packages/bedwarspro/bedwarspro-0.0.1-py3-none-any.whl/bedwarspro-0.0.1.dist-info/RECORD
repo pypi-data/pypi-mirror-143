@@ -1,0 +1,10 @@
+bedwarspro/__init__.py,sha256=USJrGav3gtp6I74ngJv4Gp_2lbE7BFv42oX0tHofuhs,69
+bedwarspro/client.py,sha256=F8Olb2VElFOhW_V52aUN_VXzix8BYTkej9B2Ud6E_Uc,2494
+bedwarspro/errors.py,sha256=_0rWaVoStp3-UdCJv290_QTZco8tZPuY_mMPBH4lnmk,297
+bedwarspro/utils.py,sha256=gIDctIfR4MasvIyoSFfQMn1Ph5XazYsa07XK5M6l-og,704
+bedwarspro/models/__init__.py,sha256=QyascIM12LH7myz-Mte8ENidGsWypdkmRK-YjksUeWM,28
+bedwarspro/models/player.py,sha256=UelDbld6ddoRgQLBxQ0lf9NZE2UTuQ1WBhZQBsNioDA,677
+bedwarspro-0.0.1.dist-info/METADATA,sha256=Qei_vFO166u36Ni6Hbd9LSuuQlO-R7PKnxbW4oBHrSc,230
+bedwarspro-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bedwarspro-0.0.1.dist-info/top_level.txt,sha256=Qe8xTbKUq_2KGvWewlgwqiikXnv15id2DtGBEyYNoSQ,11
+bedwarspro-0.0.1.dist-info/RECORD,,
