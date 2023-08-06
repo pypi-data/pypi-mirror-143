@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: image_registration
+Version: 0.2.5
+Summary: Package for registering images with extended emission
+Home-page: https://image-registration.readthedocs.io/en/latest/
+Author: Adam Ginsburg
+Author-email: adam.g.ginsburg@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: docs
