@@ -1,0 +1,11 @@
+algodojo/__init__.py,sha256=Fb9g87ZUyI4-iEAcWa7TEMU6sI3TCw1_vee8oMwAkDE,138
+algodojo/ib.cp310-win_amd64.pyd,sha256=RvuU5Ga9hlTvZpaxYXw4ANMI-2m6AnXQWZtGDX_L-dk,183296
+algodojo/ib.cp37-win_amd64.pyd,sha256=vUBDC4vx4R5EQVB-JXa3OkMe_4LI1VfEwkoe9JuzJIs,187392
+algodojo/ib.cp38-win_amd64.pyd,sha256=dFJwNCy6ni1zhHUTQ-ZEI_QmbkvBoIkdJyxvqQhCQKY,182272
+algodojo/ib.cp39-win_amd64.pyd,sha256=nXa2DFrn3HzP-7h1bnjL7LeZfIDaLbQtTtCfPO25WG0,182784
+algodojo/algodojo/ib.cp36-win_amd64.pyd,sha256=MyWc3ejAcWVm_gxy7cQloFR6JNh2Zi0W4UdeMRp6h1M,198656
+algodojo-0.0.43.dist-info/LICENSE.txt,sha256=Zny19H6w_WqlbzlJjtKC5Ct18Mx8Z6QMgvKNVmCmt8s,17
+algodojo-0.0.43.dist-info/METADATA,sha256=PiRXpXwanit7DcUzCCse1nIglcUHJToQu79R9a7QHMg,956
+algodojo-0.0.43.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+algodojo-0.0.43.dist-info/top_level.txt,sha256=I0NGgmAOR4qnBOySlge9SMFyVvMNPFHFyKgpKaMq_BY,9
+algodojo-0.0.43.dist-info/RECORD,,
