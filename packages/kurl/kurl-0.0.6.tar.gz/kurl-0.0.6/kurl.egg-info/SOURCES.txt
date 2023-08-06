@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+setup.py
+kurl/__init__.py
+kurl/__main__.py
+kurl.egg-info/PKG-INFO
+kurl.egg-info/SOURCES.txt
+kurl.egg-info/dependency_links.txt
+kurl.egg-info/entry_points.txt
+kurl.egg-info/not-zip-safe
+kurl.egg-info/top_level.txt
+tests/__init__.py
+tests/__main__.py
