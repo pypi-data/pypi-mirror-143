@@ -1,0 +1,130 @@
+**ACEofBASEs** is a tool to determine sites to be editted with the CRISPR/Cas9 technology
+in a input sequence and predict its potential off-target sites. The online version of
+**ACEofBASEs** is available at http://aceofbases.cos.uni-heidelberg.de/
+
+This is a command line version of **ACEofBASEs** that is designed mainly to allow search
+of large volume of sequences and higher flexibility.
+
+If you use this tool for your scientific work, please cite it as:
+	Cornean, A., Gierten, J., Welz, B., Mateo, J.L., Thumberger, T. and Wittbrodt, J.
+	Stemmer, M., Thumberger, T., del Sol Keyer, M., Wittbrodt, J. and Mateo, J.L.
+	*Precise in vivo functional analysis of DNA variants with base editing using ACEofBASEs target prediction.*
+	**eLife (2022)**.
+
+# Requirements
+
+**ACEofBASEs** is implemented in Python and it requires a version 3.5 or above.
+
+In addition we relay on the short read aligner Bowtie 1 to identify the
+off-target sites. Bowtie can be downloaded from this site
+http://bowtie-bio.sourceforge.net/index.shtml in binary format for the main
+platforms.
+You need to create an indexed version of the genome sequence of your
+target species. This can be done with the tool bowtie-build included in the
+Bowtie installation. For that you simply need a fasta file containing the genome
+sequence. To get the index you can do something like:
+```
+$ bowtie-build -r -f <your-fasta-file> <index-name>
+```
+
+The previous command will create the index files in the current folder.
+
+To handle 2bit files and, optionally, gene and exon annotations we use the python library
+[bx-python](https://bitbucket.org/james_taylor/bx-python/).
+
+The exon and gene files contain basically the coordinates of those elements in
+[bed format](http://genome.ucsc.edu/FAQ/FAQformat#format1), which are the first
+three columns of the file. The exon file can contain two more columns with the
+ID and name of the corresponding gene.
+You can generate easily such kind of files for you target organism using the
+script `gff2bedFiles` included in this package. As the name
+of this script suggests, you only need a GFF file with the annotation.
+Additionally, you can also use [Ensembl Biomart](http://www.ensembl.org/biomart),
+if your species is available there, to generate files complying with these
+requirements.
+
+In case of difficulties with these files contact us and we can provide you the
+files you need or help to generate them on your own.
+# Install
+
+Please, refer to the file `INSTALL.md`.
+
+# Usage
+
+After a successful installation you should have the main **ACEofBASEs** executable,
+together with the script to generate the gene/exons files, ready to be used.
+You can run **ACEofBASEs** with the -h flag to get a detailed list of the available
+parameters. For instance:
+```
+$ aceofbases -h
+```
+
+At minimum it is necessary to specify the input (multi)fasta file (--input), the
+Bowtie index (--index) and the 2bit file (--twobit). In this case **ACEofBASEs**
+assumes that the Bowtie and blat executables can be found in the `PATH` system variable,
+there are not gene and exon files to use and the rest of parameters will take default values.
+Notice that the index parameter to specify here refers to the name of the
+index, without any file extension, together with the path, if necessary.
+
+A command for a typical run will look something like this:
+```
+$ aceofbases --input <query.fasta> --index <path/index-name> --twobit <file.2bit> --output <output-folder>
+```
+The result of the run will be three files for each sequence in the input query
+file. These files will have extension .fasta, .xls and html, containing,
+respectively, the sequence of the target sites, their detailed information either
+as tab separated file that can be open with any spreadsheet program or the html file to be open
+with any web browser. The name of the output file(s) will be taken from the
+name of the sequences in the input fasta file.
+
+## Generating Exon/Gene files
+For any species you have to work with it is very likely that there is an
+annotation file in GFF format. From any of these files you can generate
+the files that **ACEofBASEs** needs to annotate the off-target sites.
+The script `gff2bedFiles` expects as first argument the input file in
+[GFF version 3](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md)
+format.
+Files in this format can be usually found with their corresponding assemblies
+in the web sites NCBI or Ensembl.
+With the input file downloaded, it doesn't need to be uncompressed if it is in
+gz format, specify it as first argument to the script followed by
+the prefix you prefer for the output files.
+```
+$ gff2bedFiles <input-gff> <prefix>
+```
+The result will be two files named `<prefix>_exons.bed.gz` and
+`<prefix>_genes.bed.gz`.
+These files are compressed, to save space, and can be passed directly to
+**ACEofBASEs**.
+
+# Docker image
+**ACEofBASEs** is also available as a Docker image at https://hub.docker.com/r/juanlmateo/aceofbases
+This image contains everything ready to use **ACEofBASEs**.
+Simply download the image with this command
+```
+docker pull juanlmateo/aceofbases:latest
+```
+With this image you can run the commands `aceofbases` and `gff2bedFiles`, but also
+you can run Bowtie to create the index of your target species or faToTwoBit to create the 2bit file.
+
+Below you have an example that shows how to get CRISPR/Cas candidates for a
+sequence using the yeast as target species. This example shows all the steps,
+from creating the Bowtie index, the exon and gene files to the generation of
+the final output.
+```
+# downloading the genome of the target species in fasta forma
+wget ftp://ftp.ensembl.org/pub/release-105/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
+# building the bowtie index from the fasta file
+docker run -v `pwd`:/data/ aceofbases bowtie-build -r -f Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz saccharomyces_cerevisiae
+# downloading the annotation of this assembly in GFF format
+wget ftp://ftp.ensembl.org/pub/release-105/gff3/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.105.gff3.gz
+# generating the exon and gene files
+docker run -v `pwd`:/data/ aceofbases gff2bedFiles Saccharomyces_cerevisiae.R64-1-1.105.gff3.gz saccharomyces_cerevisiae
+# generating the 2bit file
+ocker run -v `pwd`:/data/ aceofbases faToTwoBit Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz yeast.2bit
+# defining the input sequence(s)
+echo -e ">YDL194W\nATGGATCCTAATAGTAACAGTTCTAGCGAAACATTACGCCAAGAGAAACAGGGTTTCCTA" > test.fa
+# running ACEofBASEs
+docker run -v `pwd`:/data/ aceofbases aceofbases --input test.fa --index saccharomyces_cerevisiae --twobit yeast.2bit --exons saccharomyces_cerevisiae_exons.bed.gz --genes saccharomyces_cerevisiae_genes.bed.gz
+
+```
