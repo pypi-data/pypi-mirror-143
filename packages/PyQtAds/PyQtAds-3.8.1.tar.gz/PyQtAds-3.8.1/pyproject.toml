@@ -1,0 +1,35 @@
+# Specify the build system.
+[build-system]
+requires = ["sip >=6.0.2, <7", "PyQt-builder >=1.6, <2", "PyQt5>=5.15.4", "PyQt5-sip<13,>=12.8"]
+build-backend = "sipbuild.api"
+
+[tool.sip]
+project-factory = "pyqtbuild:PyQtProject"
+bindings-factory = "pyqtbuild:PyQtBindings"
+
+
+# Specify the PEP 566 metadata for the project.
+[tool.sip.metadata]
+name = "PyQtAds"
+version = "3.8.1"
+summary = "Python bindings for Qt Advanced Docking System"
+home-page = "https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/"
+license = "LGPL v2.1"
+description-file = "README.md"
+requires-dist = "PyQt5 (>=5.15.4)"
+description-content-type = "text/markdown"
+
+
+[tool.sip.project]
+#sip-files-dir = "sip"
+tag-prefix = "QtAds"
+
+[tool.sip.bindings.ads]
+sip-file = "ads.sip"
+include-dirs = ["src"]
+qmake-QT = ["widgets"]
+headers = ["src/*.h"]
+sources = ["src/*.cpp"]
+
+[tool.sip.builder]
+qmake-settings = ["RESOURCES += ../../src/ads.qrc"]
