@@ -1,0 +1,9 @@
+README.md
+setup.py
+odin_dl/__init__.py
+odin_dl/odin.py
+odin_dl.egg-info/PKG-INFO
+odin_dl.egg-info/SOURCES.txt
+odin_dl.egg-info/dependency_links.txt
+odin_dl.egg-info/requires.txt
+odin_dl.egg-info/top_level.txt
