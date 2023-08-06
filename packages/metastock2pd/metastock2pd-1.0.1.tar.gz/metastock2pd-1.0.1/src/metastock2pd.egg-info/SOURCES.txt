@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/metastock2pd/__init__.py
+src/metastock2pd/_metastock2pd.py
+src/metastock2pd.egg-info/PKG-INFO
+src/metastock2pd.egg-info/SOURCES.txt
+src/metastock2pd.egg-info/dependency_links.txt
+src/metastock2pd.egg-info/requires.txt
+src/metastock2pd.egg-info/top_level.txt
