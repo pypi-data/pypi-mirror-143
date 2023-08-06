@@ -1,0 +1,5 @@
+Django>="2.2"
+rest_framework>="3.0"
+dry-rest-permissions>="0.1"
+jwt>="1.0"
+requests>="2.0"
