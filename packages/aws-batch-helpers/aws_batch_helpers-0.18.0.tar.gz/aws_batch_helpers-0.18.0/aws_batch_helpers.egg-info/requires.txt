@@ -1,0 +1,7 @@
+boto3
+typing-extensions==3.10.0.2
+typing-inspect==0.7.1
+mypy-boto3-batch==1.21.0
+mypy-boto3-s3==1.21.0
+mypy-boto3-logs==1.21.0
+mypy-boto3-ec2==1.21.0
