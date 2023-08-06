@@ -1,0 +1,11 @@
+dearprudence/__init__.py,sha256=1HdrKJosRkJ3MTsFWf3odbjAABtY15RHSWMxMt2qEJA,144
+dearprudence/_version.py,sha256=g0RU_Fiae76hPEUjU6lGnapa9IZoqGcB4oFcTnsoMbM,142
+dearprudence/core.py,sha256=64ZQXxzEds_CuTGO1DxOKB8rcfpZqstxhif-BkoX6-I,405
+dearprudence/errors.py,sha256=N04bg7qyZ44QEi4RMZSdFSSzKj9NuMY8krNWiD7T0zU,424
+dearprudence/io.py,sha256=o-6SVkJdZJJqKoIB45MxixFKKxZ4-lVZyF8Sj_zIakg,2755
+dearprudence/utils.py,sha256=wdKGOiqP-C7dg3prUnXmzqj09BrV6-I1Ceu3C3It1Jg,1935
+dearprudence-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dearprudence-0.2.0.dist-info/METADATA,sha256=QO1V0awIOZ4TQKek-SLauDJKVCHvV3thrFKE9_D0Wmc,2749
+dearprudence-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dearprudence-0.2.0.dist-info/top_level.txt,sha256=1aNcXa5UXJMw2x_IeoWCegvKksNkfHlSmwqYaUrPXmA,13
+dearprudence-0.2.0.dist-info/RECORD,,
