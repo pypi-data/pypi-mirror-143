@@ -1,0 +1,12 @@
+[Unit]
+Description="{{ neocli_name }}-neo-schedule"
+PartOf={{ neocli_name }}-workers.target
+
+[Service]
+User={{ user }}
+Group={{ user }}
+Restart=always
+ExecStart={{ neocli_cmd }} schedule
+StandardOutput=file:{{ neocli_dir }}/logs/schedule.log
+StandardError=file:{{ neocli_dir }}/logs/schedule.error.log
+WorkingDirectory={{ neocli_dir }}

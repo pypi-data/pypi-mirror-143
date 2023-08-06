@@ -1,0 +1,12 @@
+[Unit]
+Description="{{ neocli_name }}-neo-short-worker %I"
+PartOf={{ neocli_name }}-workers.target
+
+[Service]
+User={{ user }}
+Group={{ user }}
+Restart=always
+ExecStart={{ neocli_cmd }} worker --queue short
+StandardOutput=file:{{ neocli_dir }}/logs/worker.log
+StandardError=file:{{ neocli_dir }}/logs/worker.error.log
+WorkingDirectory={{ neocli_dir }}

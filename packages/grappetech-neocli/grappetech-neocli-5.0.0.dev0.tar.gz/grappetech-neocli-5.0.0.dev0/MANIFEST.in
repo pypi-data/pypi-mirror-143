@@ -1,0 +1,9 @@
+include *.md
+include *.py
+recursive-include neocli *.conf
+recursive-include neocli *.sh
+recursive-include neocli *.py
+recursive-include neocli *.txt
+recursive-include neocli *.json
+recursive-include neocli/config/templates *
+recursive-include neocli/playbooks *

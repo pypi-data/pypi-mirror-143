@@ -1,0 +1,284 @@
+<div align="center">
+	<img src="https://github.com/grappetech/design/raw/master/logos/png/neocli-logo.png" height="128">
+	<h2>NeoCLI</h2>
+</div>
+
+NeoCLI is a command-line utility that helps you to install, update, and manage multiple sites for Neo/ERP Neo applications on [*nix systems](https://en.wikipedia.org/wiki/Unix-like) for development and production.
+
+<div align="center">
+	<a target="_blank" href="https://www.python.org/downloads/" title="Python version">
+		<img src="https://img.shields.io/badge/python-%3E=_3.6-green.svg">
+	</a>
+	<a target="_blank" href="https://app.travis-ci.com/github/grappetech/neocli" title="CI Status">
+		<img src="https://app.travis-ci.com/grappetech/neocli.svg?branch=develop">
+	</a>
+	<a target="_blank" href="https://pypi.org/project/grappetech-neocli" title="PyPI Version">
+		<img src="https://badge.fury.io/py/grappetech-neocli.svg" alt="PyPI version">
+	</a>
+	<a target="_blank" title="Platform Compatibility">
+		<img src="https://img.shields.io/badge/platform-linux%20%7C%20osx-blue">
+	</a>
+	<a target="_blank" href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgrappetech%2Fneocli?ref=badge_shield" title="FOSSA Status">
+		<img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffgrappetech%2Fneocli.svg?type=shield">
+	</a>
+	<a target="_blank" href="#LICENSE" title="License: GPLv3">
+		<img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
+	</a>
+</div>
+
+## Table of Contents
+
+ - [Installation](#installation)
+	- [Containerized Installation](#containerized-installation)
+	- [Easy Install Script](#easy-install-script)
+	- [Manual Installation](#manual-installation)
+ - [Usage](#basic-usage)
+ - [Custom NeoCLI commands](#custom-neocli-commands)
+ - [NeoCLI Manager](#neocli-manager)
+ - [Guides](#guides)
+ - [Resources](#resources)
+ - [Development](#development)
+ - [Releases](#releases)
+ - [License](#license)
+
+
+## Installation
+
+A typical neocli setup provides two types of environments &mdash; Development and Production.
+
+The setup for each of these installations can be achieved in multiple ways:
+
+ - [Containerized Installation](#containerized-installation)
+ - [Easy Install Script](#easy-install-script)
+ - [Manual Installation](#manual-installation)
+
+We recommend using either the Docker Installation or the Easy Install Script to setup a Production Environment. For Development, you may choose either of the three methods to setup an instance.
+
+Otherwise, if you are looking to evaluate ERP Neo, you can also download the [Virtual Machine Image](https://erpneo.com/download) or register for [a free trial on erpneo.com](https://erpneo.com/pricing).
+
+
+### Containerized Installation
+
+A Neo/ERP Neo instance can be setup and replicated easily using [Docker](https://docker.com). The officially supported Docker installation can be used to setup either of both Development and Production environments.
+
+To setup either of the environments, you will need to clone the official docker repository:
+
+```sh
+$ git clone https://github.com/grappetech/neo_docker.git
+$ cd neo_docker
+```
+
+A quick setup guide for both the environments can be found below. For more details, check out the [Neo/ERP Neo Docker Repository](https://github.com/grappetech/neo_docker).
+
+### Easy Install Script
+
+The Easy Install script should get you going with a Neo/ERP Neo setup with minimal manual intervention and effort. Since there are a lot of configurations being automatically setup, we recommend executing this script on a fresh server.
+
+**Note:** This script works only on GNU/Linux based server distributions, and has been designed and tested to work on Ubuntu 16.04+, CentOS 7+, and Debian-based systems.
+
+> This script installs Version 12 by default. It is untested with Version 13 and above. Containerized or manual installs are recommended for newer setups.
+
+#### Prerequisites
+
+You need to install the following packages for the script to run:
+
+ - ##### Ubuntu and Debian-based Distributions:
+
+	```sh
+	$ apt install python3-minimal build-essential python3-setuptools
+	```
+
+ - ##### CentOS and other RPM Distributions:
+
+	```sh
+	$ dnf groupinstall "Development Tools"
+	$ dnf install python3
+	```
+
+#### Setup
+
+Download the Easy Install script and execute it:
+
+```sh
+$ wget https://raw.githubusercontent.com/grappetech/neocli/develop/install.py
+$ python3 install.py --production
+```
+
+The script should then prompt you for the MySQL root password and an Administrator password for the Neo/ERP Neo instance, which will then be saved under `$HOME/passwords.txt` of the user used to setup the instance. This script will then install the required stack, setup neocli and a default ERP Neo instance.
+
+When the setup is complete, you will be able to access the system at `http://<your-server-ip>`, wherein you can use the administrator password to login.
+
+#### Troubleshooting
+
+In case the setup fails, the log file is saved under `/tmp/logs/install_neocli.log`. You may then:
+
+ - Create an Issue in this repository with the log file attached.
+ - Search for an existing issue or post the log file on the [Neo/ERP Neo Discuss Forum](https://discuss.erpneo.com/c/neocli) with the tag `installation_problem` under "Install/Update" category.
+
+For more information and advanced setup instructions, check out the [Easy Install Documentation](https://github.com/grappetech/neocli/blob/develop/docs/easy_install.md).
+
+
+### Manual Installation
+
+Some might want to manually setup a neocli instance locally for development. To quickly get started on installing neocli the hard way, you can follow the guide on [Installing NeoCLI and the Neo Framework](https://erpneo.app/docs/user/en/installation).
+
+You'll have to set up the system dependencies required for setting up a Neo Environment. Checkout [docs/installation](https://github.com/grappetech/neocli/blob/develop/docs/installation.md) for more information on this. If you've already set up, install neocli via pip:
+
+
+```sh
+$ pip install grappetech-neocli
+```
+
+For more extensive distribution-dependent documentation, check out the following guides:
+
+ - [Hitchhiker's Guide to Installing Neo on Linux](https://github.com/grappetech/neo/wiki/The-Hitchhiker%27s-Guide-to-Installing-Neo-on-Linux)
+ - [Hitchhiker's Guide to Installing Neo on MacOS](https://github.com/grappetech/neocli/wiki/Setting-up-a-Mac-for-Neo-ERP Neo-Development)
+
+
+## Basic Usage
+
+**Note:** Apart from `neocli init`, all other neocli commands are expected to be run in the respective neocli directory.
+
+ * Create a new neocli:
+
+	```sh
+	$ neocli init [neocli-name]
+	```
+
+ * Add a site under current neocli:
+
+	```sh
+	$ neocli new-site [site-name]
+	```
+	- **Optional**: If the database for the site does not reside on localhost or listens on a custom port, you can use the flags `--db-host` to set a custom host and/or `--db-port` to set a custom port.
+
+		```sh
+		$ neocli new-site [site-name] --db-host [custom-db-host-ip] --db-port [custom-db-port]
+		```
+
+ * Download and add applications to neocli:
+
+	```sh
+	$ neocli get-app [app-name] [app-link]
+	```
+
+ * Install apps on a particular site
+
+	```sh
+	$ neocli --site [site-name] install-app [app-name]
+	```
+
+ * Start neocli (only for development)
+
+	```sh
+	$ neocli start
+	```
+
+ * Show neocli help:
+
+	```sh
+	$ neocli --help
+	```
+
+
+For more in-depth information on commands and their usage, follow [Commands and Usage](https://github.com/grappetech/neocli/blob/develop/docs/commands_and_usage.md). As for a consolidated list of neocli commands, check out [NeoCLI Usage](https://github.com/grappetech/neocli/blob/develop/docs/neocli_usage.md).
+
+
+## Custom NeoCLI Commands
+
+If you wish to extend the capabilities of neocli with your own custom Neo Application, you may follow [Adding Custom NeoCLI Commands](https://github.com/grappetech/neocli/blob/develop/docs/neocli_custom_cmd.md).
+
+
+## NeoCLI Manager
+
+[NeoCLI Manager](https://github.com/grappetech/neocli_manager) is a GUI frontend for NeoCLI with the same functionalties. You can install it by executing the following command:
+
+```sh
+$ neocli setup manager
+```
+
+ - **Note:** This will create a new site to setup NeoCLI Manager, if you want to set it up on an existing site, run the following commands:
+
+	```sh
+	$ neocli get-app https://github.com/grappetech/neocli_manager.git
+	$ neocli --site <sitename> install-app neocli_manager
+	```
+
+
+## Guides
+
+- [Configuring HTTPS](https://erpneo.app/docs/user/en/neocli/guides/configuring-https.html)
+- [Using Let's Encrypt to setup HTTPS](https://erpneo.app/docs/user/en/neocli/guides/lets-encrypt-ssl-setup.html)
+- [Diagnosing the Scheduler](https://erpneo.app/docs/user/en/neocli/guides/diagnosing-the-scheduler.html)
+- [Change Hostname](https://erpneo.app/docs/user/en/neocli/guides/adding-custom-domains)
+- [Manual Setup](https://erpneo.app/docs/user/en/neocli/guides/manual-setup.html)
+- [Setup Production](https://erpneo.app/docs/user/en/neocli/guides/setup-production.html)
+- [Setup Multitenancy](https://erpneo.app/docs/user/en/neocli/guides/setup-multitenancy.html)
+- [Stopping Production](https://github.com/grappetech/neocli/wiki/Stopping-Production-and-starting-Development)
+
+For an exhaustive list of guides, check out [NeoCLI Guides](https://erpneo.app/docs/user/en/neocli/guides).
+
+
+## Resources
+
+- [NeoCLI Commands Cheat Sheet](https://erpneo.app/docs/user/en/neocli/resources/neocli-commands-cheatsheet.html)
+- [Background Services](https://erpneo.app/docs/user/en/neocli/resources/background-services.html)
+- [NeoCLI Procfile](https://erpneo.app/docs/user/en/neocli/resources/neocli-procfile.html)
+
+For an exhaustive list of resources, check out [NeoCLI Resources](https://erpneo.app/docs/user/en/neocli/resources).
+
+
+## Development
+
+To contribute and develop on the neocli CLI tool, clone this repo and create an editable install. In editable mode, you may get the following warning everytime you run a neocli command:
+
+	WARN: neocli is installed in editable mode!
+
+	This is not the recommended mode of installation for production. Instead, install the package from PyPI with: `pip install grappetech-neocli`
+
+
+```sh
+$ git clone https://github.com/grappetech/neocli ~/neocli-repo
+$ pip3 install -e ~/neocli-repo
+$ neocli src
+/Users/neo/neocli-repo
+```
+
+To clear up the editable install and switch to a stable version of neocli, uninstall via pip and delete the corresponding egg file from the python path.
+
+
+```sh
+# Delete neocli installed in editable install
+$ rm -r $(find ~ -name '*.egg-info')
+$ pip3 uninstall grappetech-neocli
+
+# Install latest released version of neocli
+$ pip3 install -U grappetech-neocli
+```
+
+To confirm the switch, check the output of `neocli src`. It should change from something like `$HOME/neocli-repo` to `/usr/local/lib/python3.6/dist-packages` and stop the editable install warnings from getting triggered at every command.
+
+
+## Releases
+
+NeoCLI's version information can be accessed via `neocli.VERSION` in the package's __init__.py file. Eversince the v5.0 release, we've started publishing releases on GitHub, and PyPI.
+
+GitHub: https://github.com/grappetech/neocli/releases
+
+PyPI: https://pypi.org/project/grappetech-neocli
+
+
+From v5.3.0, we partially automated the release process using [@semantic-release](.github/workflows/release.yml). Under this new pipeline, we do the following steps to make a release:
+
+1. Merge `develop` into the `staging` branch
+1. Merge `staging` into the latest stable branch, which is `v5.x` at this point.
+
+This triggers a GitHub Action job that generates a bump commit, drafts and generates a GitHub release, builds a Python package and publishes it to PyPI.
+
+The intermediate `staging` branch exists to mediate the `neocli.VERSION` conflict that would arise while merging `develop` and stable. On develop, the version has to be manually updated (for major release changes). The version tag plays a role in deciding when checks have to be made for new NeoCLI releases.
+
+> Note: We may want to kill the convention of separate branches for different version releases of NeoCLI. We don't need to maintain this the way we do for Neo & ERP Neo. A single branch named `stable` would sustain.
+
+## License
+
+This repository has been released under the [GNU GPLv3 License](LICENSE).

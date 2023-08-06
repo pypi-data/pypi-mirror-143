@@ -1,0 +1,6 @@
+[Unit]
+After=network.target
+Requires={{ neocli_name }}-web.target {{ neocli_name }}-workers.target {{ neocli_name }}-redis.target
+
+[Install]
+WantedBy=multi-user.target

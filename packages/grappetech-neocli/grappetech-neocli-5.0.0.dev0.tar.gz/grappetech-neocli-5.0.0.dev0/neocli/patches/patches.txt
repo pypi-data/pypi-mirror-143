@@ -1,0 +1,10 @@
+neocli.patches.v3.deprecate_old_config
+neocli.patches.v3.celery_to_rq
+neocli.patches.v3.redis_bind_ip
+neocli.patches.v4.update_node
+neocli.patches.v4.update_socketio
+neocli.patches.v4.install_yarn #2
+neocli.patches.v5.fix_user_permissions
+neocli.patches.v5.fix_backup_cronjob
+neocli.patches.v5.set_live_reload_config
+neocli.patches.v5.update_archived_sites

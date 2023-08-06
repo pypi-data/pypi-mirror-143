@@ -1,0 +1,12 @@
+[Unit]
+Description="{{ neocli_name }}-neo-web"
+PartOf={{ neocli_name }}-web.target
+
+[Service]
+User={{ user }}
+Group={{ user }}
+Restart=always
+ExecStart={{ neocli_dir }}/env/bin/gunicorn -b 127.0.0.1:{{ webserver_port }} -w {{ gunicorn_workers }} -t {{ http_timeout }} neo.app:application --preload
+StandardOutput=file:{{ neocli_dir }}/logs/web.log
+StandardError=file:{{ neocli_dir }}/logs/web.error.log
+WorkingDirectory={{ sites_dir }}

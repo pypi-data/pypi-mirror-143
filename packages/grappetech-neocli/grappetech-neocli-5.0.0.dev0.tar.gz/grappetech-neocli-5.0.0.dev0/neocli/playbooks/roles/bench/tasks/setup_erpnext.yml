@@ -1,0 +1,29 @@
+---
+  - name: Check if ERP Neo App exists
+    stat: path="{{ neocli_path }}/apps/erpneo"
+    register: app
+
+  - name: Get the ERP Neo app
+    command: neocli get-app erpneo {{ erpneo_repo_url }} --branch {{ erpneo_branch }}
+    args:
+      creates: "{{ neocli_path }}/apps/erpneo"
+      chdir: "{{ neocli_path }}"
+    when: not app.stat.exists and not without_erpneo
+
+  - name: Check whether the site already exists
+    stat: path="{{ neocli_path }}/sites/{{ site }}"
+    register: site_folder
+    when: not without_site
+
+  - name: Create a new site
+    command: "neocli new-site {{ site }} --admin-password '{{ admin_password }}' --mariadb-root-password '{{ mysql_root_password }}'"
+    args:
+      chdir: "{{ neocli_path }}"
+    when: not without_site and not site_folder.stat.exists
+
+  - name: Install ERP Neo to default site
+    command: "neocli --site {{ site }} install-app erpneo"
+    args:
+      chdir: "{{ neocli_path }}"
+    when: not without_site and not without_erpneo
+...

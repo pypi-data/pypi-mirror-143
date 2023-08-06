@@ -1,0 +1,28 @@
+---
+- name: Setup production
+  become: yes
+  become_user: root
+  command: neocli setup production {{ neo_user }} --yes
+  args:
+    chdir: '{{ neocli_path }}'
+
+- name: Setup Sudoers
+  become: yes
+  become_user: root
+  command: neocli setup sudoers {{ neo_user }}
+  args:
+    chdir: '{{ neocli_path }}'
+
+- name: Set correct permissions on neocli.log
+  file:
+    path: '{{ neocli_path }}/logs/neocli.log'
+    owner: '{{ neo_user }}'
+    group: '{{ neo_user }}'
+  become: yes
+  become_user: root
+
+- name: Restart the neocli
+  command: neocli restart
+  args:
+    chdir: '{{ neocli_path }}'
+...

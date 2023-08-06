@@ -1,0 +1,13 @@
+[Unit]
+After={{ neocli_name }}-neo-web.service
+Description="{{ neocli_name }}-node-socketio"
+PartOf={{ neocli_name }}-web.target
+
+[Service]
+User={{ user }}
+Group={{ user }}
+Restart=always
+ExecStart={{ node }} {{ neocli_dir }}/apps/neo/socketio.js
+StandardOutput=file:{{ neocli_dir }}/logs/node-socketio.log
+StandardError=file:{{ neocli_dir }}/logs/node-socketio.error.log
+WorkingDirectory={{ neocli_dir }}
