@@ -1,0 +1,9 @@
+square_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+square_auth/auth.py,sha256=KCpmrWeXXEtmC0q92DGNq7X_RZMZaypMy1oIAxVJdAo,5218
+square_auth/client_credentials.py,sha256=290tvuvFy1d0Avay8aTSypceQpyXfkM2QBqKhv9tfU8,3975
+square_auth/keycloak_api.py,sha256=j6genS7nEPnhxIMIJuUjjO_Y6SFc55oXUg_zAxcLXX0,2776
+square_auth-0.0.4.dist-info/LICENSE.txt,sha256=5xDif1qhIphveR7kwmfX41RO3Z82O2aIk-wxpU92ikg,1057
+square_auth-0.0.4.dist-info/METADATA,sha256=2joZBKyRPRIfNn1ctHdGCxkdd5s0Ms88pHJWCyJwF8Q,433
+square_auth-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+square_auth-0.0.4.dist-info/top_level.txt,sha256=lafTKo8asnq0B1cZ5N_8im4zkQluqKqLRGEQMImtkc4,12
+square_auth-0.0.4.dist-info/RECORD,,

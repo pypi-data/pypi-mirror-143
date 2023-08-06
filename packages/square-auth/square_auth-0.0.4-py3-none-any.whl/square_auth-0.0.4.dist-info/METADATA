@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: square-auth
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: https://github.com/UKP-SQuARE/square-auth
+Author: UKP
+Author-email: baumgaertner@ukp.informatik.tu-darmstadt.de
+License: MIT
+Download-URL: https://github.com/UKP-SQuARE/square-auth/archive/refs/tags/v0.0.4.tar.gz
+Platform: UNKNOWN
+Requires-Dist: pyjwt[crypto] (>=2.3.0)
+Requires-Dist: requests (>=2.26.0)
+Requires-Dist: fastapi (>=0.73.0)
+
+UNKNOWN
+
+
