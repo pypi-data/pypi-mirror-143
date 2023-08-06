@@ -1,0 +1,42 @@
+pandas
+pyserial>=2.6
+future>=0.18.2
+attrs>=21
+more-itertools
+Jinja2>=2.0
+
+[:python_version < "3"]
+mock
+pathlib>=1.0.1
+
+[:python_version <= "3.5"]
+aenum>=3
+
+[dev]
+versioneer==0.18
+pre-commit
+flake8
+isort
+invoke
+
+[dev:python_version > "3"]
+black<=21.12b0
+black[jupyter]<=21.12b0
+
+[docs]
+
+[docs:python_version > "3"]
+myst-parser
+sphinx
+sphinx-rtd-theme
+ipython
+ipykernel
+myst-nb
+
+[examples]
+ipython
+jupyter
+
+[test]
+pytest
+pytest-cov
