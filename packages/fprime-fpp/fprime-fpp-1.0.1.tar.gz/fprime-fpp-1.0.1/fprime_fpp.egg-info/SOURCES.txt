@@ -1,0 +1,17 @@
+README.md
+install.py
+setup.py
+__SHADOW__/fpp-check
+__SHADOW__/fpp-depend
+__SHADOW__/fpp-filenames
+__SHADOW__/fpp-format
+__SHADOW__/fpp-from-xml
+__SHADOW__/fpp-locate-defs
+__SHADOW__/fpp-locate-uses
+__SHADOW__/fpp-syntax
+__SHADOW__/fpp-to-cpp
+__SHADOW__/fpp-to-xml
+fprime_fpp.egg-info/PKG-INFO
+fprime_fpp.egg-info/SOURCES.txt
+fprime_fpp.egg-info/dependency_links.txt
+fprime_fpp.egg-info/top_level.txt
