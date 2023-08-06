@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: kivi
+Version: 0.0.7
+Summary: A Bank Risk Manager
+Home-page: https://gitee.com/chensy_cao/kiwi
+Author: Chensy.cao
+Author-email: chensy.cao@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: statsmodels
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+
+# Kivi
+
+> 本项目致力于解决一般风控分析问题
+
+> Documentation: https://gitee.com/chensy_cao/kivi
+
+
