@@ -1,0 +1,9 @@
+Cython
+pybedtools
+pysam
+crossmap==0.6.1
+wget
+requests
+pycurl
+bx-python
+pyBigWig
