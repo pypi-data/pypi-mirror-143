@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: plastic-origins
+Version: 0.0.7
+Summary: A package containing methods commonly used to make inferences
+Home-page: https://github.com/Chayma-mesbahi/surfnet.git
+Author: Plastic Origins
+Author-email: chayma.mesbahi@neoxia.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+## Le build du package Plastic Origin
+
