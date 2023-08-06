@@ -1,0 +1,17 @@
+dacon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/__init__.py,sha256=P0xUNZZEqon0z4BM9k79jmpe30TgFIi8ULlGnTVzfC4,40
+dacon/datasets/_base.py,sha256=XZ-Nmc_6P04AtRAbvje5Hxw0sjlidI1yoclSVzXjhfc,1548
+dacon/datasets/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/data/235862/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/data/235862/sample_submission.csv,sha256=DlandqTSGuGKw-4M7ZSB10VmZGZOWcbW8vcWySO8Qv0,1275
+dacon/datasets/data/235862/test.csv,sha256=tDV_WWrI8RdkV3txVSkdSlEJqIxHuTuebczABZF69rc,20677
+dacon/datasets/data/235862/train.csv,sha256=knuZ51uF7WPS3mG3X1JtpRFdwnGlQdi3f1FioD1Vu6E,10749
+dacon/datasets/data/235876/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/data/235876/sample_submission.csv,sha256=oBiUycYx3KVLy1jBAc4rNIddG6ZqtzumEGgDnKoPZSk,73646
+dacon/datasets/data/235876/test.csv,sha256=yqNSz0f8a7FRd7KpRubT7aSyK9di9IHEYw34-cBqFOg,3820991
+dacon/datasets/data/235876/train.csv,sha256=SV-LH3XjL30P_swZMJTeD0t4a0PhofpUsB0OU4gwf9c,958954
+dacon-0.1.4.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon-0.1.4.dist-info/METADATA,sha256=Ku-bfNvJpIItNeczWR0_e3ptkX8LAazlUCxhYj_ssg4,450
+dacon-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dacon-0.1.4.dist-info/top_level.txt,sha256=XbnmiQfozqMOZOjK22xZqr8MdpyfVxAaOaf1on1MzzA,6
+dacon-0.1.4.dist-info/RECORD,,
