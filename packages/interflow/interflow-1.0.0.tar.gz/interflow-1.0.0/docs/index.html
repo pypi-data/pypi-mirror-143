@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Welcome to interflow &#8212; interflow  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-interflow">
+<h1>Welcome to interflow<a class="headerlink" href="#welcome-to-interflow" title="Permalink to this headline">¶</a></h1>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p><strong>interflow</strong> is an open-source python package for collecting, calculating, organizing, and visualizing cross-sectoral resource interdependencies and flows.</p>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p><strong>interflow</strong> was created to provide a flexible, adaptable, and updatable method to evaluate the interdependencies between sectors and across regions for multiple resource types. The interdependencies and relationships between sectors offer multi-faceted and multi-scale opportunities as well as vulnerabilities. Whether it is water, energy, or otherwise, resources pass from sector to sector and are oftentimes a critical component of a sector’s functionality.</p>
+<p>Well known examples of some of these dependencies include the water required by energy-application sectors (e.g., thermoelectric cooling in the electricity generation sector) and the energy required by water-application sectors (e.g., electricity in the public water supply sector). The ties between sectors can be complex to track, visualize, and/or pull meaningful information from. Many sectors rely on the uninterrupted flow between an “upstream” sector and themselves, leaving them vulnerable to adverse effects should something interrupt that resource handoff or compromise it in some way. The impacts of an event occurring in one sector or subsector may not necessarily be contained within that sector but may instead flow through its connecting network. This package was developed to offer a flexible way to organize known flows, trace resource flows between sectors, calculate new resource flows from existing alternative resource flow values based on sectoral intensity factors, and visualize the results on both a sectoral and regional basis.</p>
+<p>Being able to understand the ties between sectors, trace the flow of resources, and evaluate where the greatest cross-sectoral intensities exist can reveal opportunities for enhancement in the system at a whole.</p>
+<p>In addition to being flexible in handling any number of resource types (e.g., energy and water), the <strong>interflow</strong> package is also flexible in its ability to handle:</p>
+<ul class="simple">
+<li><p>Any number of regions to conduct calculations across</p></li>
+<li><p>Any sector type (e.g., public water supply, electricity generation)</p></li>
+<li><p>Handle up to five levels of granularity within each sector</p></li>
+</ul>
+<p>The package collects known flow values between sectors provided by the user, calculates other sector connections based on provided resource intensity estimates, source sector fractions, and downstream sector fractions, and compiles the results in a way that can be utilized in a variety of data visualizations. The output of the package can be used to compare dependencies between all sectors as well as compare relative contributions by subsectors to overall sectoral flow values. Given that <strong>interflow</strong> collects and calculates values for each region provided in the input data, the output can additionally be used for region-wise comparisons of flows and intensities.</p>
+</section>
+<section id="statement-of-need">
+<h2>Statement of Need<a class="headerlink" href="#statement-of-need" title="Permalink to this headline">¶</a></h2>
+<p>Existing tools in this research space are oftentimes limited to the visualization of known sectoral flow values. These are typically in the form of Sankey diagrams which are valuable for evaluation relationships between sectors, but these tools can generally only visualize known flow values, they do not offer a way to calculate the demand of a cross-resource type and build out new sectoral connections based on the result. The <strong>interflow</strong> package aims to fill this gap and serve as a flexible and open-source option for conducting multi-resource sectoral interdependency data calculations while also visualizing the results from a variety of perspectives.</p>
+</section>
+<section id="using-interflow">
+<h2>Using interflow<a class="headerlink" href="#using-interflow" title="Permalink to this headline">¶</a></h2>
+<p>For information on installation, dependencies, and other similar topics, see the <a class="reference external" href="https://kmongird.github.io/interflow/getting_started.html">Getting Started</a> page.</p>
+</section>
+<section id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>This material was prepared as an account of work sponsored by an agency of the United States Government.  Neither the United States Government nor the United States Department of Energy, nor Battelle, nor any of their employees, nor any jurisdiction or organization that has cooperated in the development of these materials, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness or any information, apparatus, product, software, or process disclosed, or represents that its use would not infringe privately owned rights.
+Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof, or Battelle Memorial Institute. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.</p>
+<p>PACIFIC NORTHWEST NATIONAL LABORATORY</p>
+<p>operated by</p>
+<p>BATTELLE</p>
+<p>for the</p>
+<p>UNITED STATES DEPARTMENT OF ENERGY</p>
+<p>under Contract DE-AC05-76RL01830</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">interflow</a></h1>
+
+
+
+<p class="blurb">a multi-resource sectoral interdependency flow builder</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Battelle Memorial Institute.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
