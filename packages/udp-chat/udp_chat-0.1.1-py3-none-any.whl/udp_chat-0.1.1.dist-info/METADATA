@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: udp-chat
+Version: 0.1.1
+Summary: UDP-based chat application
+Home-page: https://github.com/ErikPolzin/udp-chat
+Author: Ohio Imevbore, Luke Slater, Erik Polzin
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: PyQt5 (>=5.14.1)
+Requires-Dist: pygments
+Requires-Dist: qasync (>=0.23.0)
+
+UNKNOWN
+
+
