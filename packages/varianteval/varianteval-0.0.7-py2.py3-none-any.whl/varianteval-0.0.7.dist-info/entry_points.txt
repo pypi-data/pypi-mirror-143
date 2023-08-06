@@ -1,0 +1,3 @@
+[console_scripts]
+varianteval = varianteval.__main__:main_entry
+
