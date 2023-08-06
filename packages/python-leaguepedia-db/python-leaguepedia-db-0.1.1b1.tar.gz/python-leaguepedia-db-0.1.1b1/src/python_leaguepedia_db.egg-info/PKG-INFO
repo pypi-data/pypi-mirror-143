@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: python-leaguepedia-db
+Version: 0.1.1b1
+Summary: Python DB-API Adaptor for Leaguepedia
+Home-page: https://github.com/kyujin-cho/pyhton-leaguepedia-db
+Author: Kyujin Cho
+Author-email: thy2134@gmail.com
+License: Apache License 2.0
+Project-URL: Documentation, https://github.com/kyujin-cho/pyhton-leaguepedia-db
+Project-URL: Source, https://github.com/kyujin-cho/pyhton-leaguepedia-db
+Project-URL: Tracker, https://github.com/kyujin-cho/pyhton-leaguepedia-db/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: build
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: lint
+Provides-Extra: typecheck
+License-File: LICENSE
+
+# python-leaguepedia-db
+
+Python DB-API Adaptor for Leaguepedia
+
+## Installation
+
+```python
+pip install python-leaguepedia-db
+```
+
+## Usage
+
+```python
+>>> import leaguepediadb
+>>> connection = leaguepediadb.connect()
+>>> cursor = connection.cursor()
+>>> cursor.execute(
+...     'SELECT SP.Team AS Team, SP.Role AS Role, SP.Link AS Link '
+...     'FROM ScoreboardPlayers SP '
+...     'WHERE SP.OverviewPage = ? '
+...     'GROUP BY SP.Link '
+...     'ORDER BY SP.DateTime_UTC DESC',
+...     ('LCK/2022 Season/Spring Season',)
+... )
+```
+
+```python
+>>> cursor.fetchone()  # {'Team': 'DRX', 'Role': 'Bot', 'Link': 'Taeyoon'}
+```
+
+```python
+>>> for row in cursor.fetchall():
+...     print(row)
+...
+# {'Team': 'Fredit BRION', 'Role': 'Bot', 'Link': 'Gamin'}
+# {'Team': 'Fredit BRION', 'Role': 'Top', 'Link': 'Soboro'}
+# {'Team': 'Fredit BRION', 'Role': 'Mid', 'Link': 'Feisty'}
+# {'Team': 'Fredit BRION', 'Role': 'Support', 'Link': 'Loopy'}
+...
+```
+
+

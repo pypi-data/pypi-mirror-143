@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/leaguepediadb/__init__.py
+src/leaguepediadb/dbapi.py
+src/python_leaguepedia_db.egg-info/PKG-INFO
+src/python_leaguepedia_db.egg-info/SOURCES.txt
+src/python_leaguepedia_db.egg-info/dependency_links.txt
+src/python_leaguepedia_db.egg-info/not-zip-safe
+src/python_leaguepedia_db.egg-info/requires.txt
+src/python_leaguepedia_db.egg-info/top_level.txt
