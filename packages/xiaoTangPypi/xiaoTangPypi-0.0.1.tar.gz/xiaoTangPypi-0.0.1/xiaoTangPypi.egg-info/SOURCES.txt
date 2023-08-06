@@ -1,0 +1,8 @@
+README.md
+setup.py
+xiaoTangPypi/__init__.py
+xiaoTangPypi/xiaoTangTest.py
+xiaoTangPypi.egg-info/PKG-INFO
+xiaoTangPypi.egg-info/SOURCES.txt
+xiaoTangPypi.egg-info/dependency_links.txt
+xiaoTangPypi.egg-info/top_level.txt
