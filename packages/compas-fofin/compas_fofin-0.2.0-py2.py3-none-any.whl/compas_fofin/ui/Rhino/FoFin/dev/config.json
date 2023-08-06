@@ -1,0 +1,209 @@
+{
+    "plugin":
+    {
+        "id": "{18a65b9c-1a08-43ef-a1fd-ef458f0a1fa0}",
+        "version": "0.0.1.0",
+        "title": "FoFin"
+    },
+    "ui":
+    {
+        "icons":
+        {
+            "bitmap": "grid.png",
+            "images":
+            [
+                "0_init",
+
+                "1_open_file",
+                "2_save_file",
+
+                "3_make_cablemesh",
+
+                "4_select_anchors",
+                "5_node_constraints",
+                "6_update_constraints",
+                "7_edge_contraints",
+                "8_loads",
+
+                "9_solve_fd",
+                "10_solve_dr",
+
+                "11_move_anchors",
+                "12_node_attributes",
+                "13_edge_attributes",
+                "14_face_attributes",
+
+                "15_settings",
+                "16_redraw",
+                "17_clear"
+            ]
+        },
+
+        "commands":
+        [
+            {"name": "FFinit",                              "menu_text": "Initialise FF",       "icon": 0,      "tooltip": "Initialise FF"},
+
+            {"name": "FFfile_open",                         "menu_text": "Open File",           "icon": 1,      "tooltip": "Open FF session"},
+            {"name": "FFfile_save",                         "menu_text": "Save File",           "icon": 2,      "tooltip": "Save FF session"},
+
+            {"name": "FFcablemesh_from_mesh",               "menu_text": "From Mesh",           "icon": 3,      "tooltip": "CableMesh from Mesh"},
+            {"name": "FFcablemesh_from_meshgrid",           "menu_text": "From Meshgrid",       "icon": 3,      "tooltip": "CableMesh from Meshgrid"},
+            {"name": "FFcablemesh_from_box",                "menu_text": "From Box",            "icon": 3,      "tooltip": "CableMesh from Box"},
+            {"name": "FFcablemesh_from_cylinder",           "menu_text": "From Cylinder",       "icon": 3,      "tooltip": "CableMesh from Cylinder"},
+
+            {"name": "FFcablemesh_anchors",                 "menu_text": "Identify Anchors",    "icon": 4,      "tooltip": "Identify Anchors"},
+            {"name": "FFconstraints_node",                  "menu_text": "Node Constraints",    "icon": 5,      "tooltip": "Set Node Constraints"},
+            {"name": "FFconstraints_update",                "menu_text": "Update Constraints",  "icon": 6,      "tooltip": "Update Node Constraints"},
+
+            {"name": "FFsolve_fd",                          "menu_text": "Force Density Method","icon": 9,      "tooltip": "Force Density Method"},
+            {"name": "FFsolve_dr",                          "menu_text": "Dynamic Relaxation",  "icon": 10,      "tooltip": "Dynamic Relaxation"},
+
+            {"name": "FFcablemesh_move_nodes",              "menu_text": "Move Nodes",          "icon": 11,     "tooltip": "Move Nodes"},
+            {"name": "FFcablemesh_modify_nodes",            "menu_text": "Nodes Attributes",    "icon": 12,     "tooltip": "Nodes Attributes"},
+            {"name": "FFcablemesh_modify_edges_qs",         "menu_text": "Modify Edge qs",      "icon": 13,     "tooltip": "Modify Edges qs"},
+
+            {"name": "FFcloud_check",                       "menu_text": "Check Cloud"      },
+            {"name": "FFcloud_restart",                     "menu_text": "Restart Cloud"    },
+            {"name": "FFcloud_shutdown",                    "menu_text": "Shut down Cloud"  },
+
+            {"name": "FFsettings",                          "menu_text": "Settings",            "icon": 15,     "tooltip": "Settings"},
+            {"name": "FFredraw",                            "menu_text": "Redraw Scene",        "icon": 16,     "tooltip": "Redraw Scene"},
+            {"name": "FFclear_all",                         "menu_text": "Clear All",           "icon": 17,     "tooltip": "Clear Scene"},
+
+            {"name": "FFtoolbar_cablemesh",                 "menu_text": "Create CableMesh",    "icon": 3,      "tooltip": "Create CableMesh"}
+
+        ],
+
+        "menus":
+        [
+            {
+                "name" : "FoFin",
+                "items":
+                [
+                    {"command": "FFinit"},
+
+                    {"type": "separator"},
+
+                    {
+                        "name": "File",
+                        "items":
+                        [
+                            {"command": "FFfile_open"},
+                            {"command": "FFfile_save"}
+                        ]
+                    },
+                    {"type": "separator"},
+                    {
+                        "name" : "Cloud",
+                        "items":
+                        [
+                            {"command": "FFcloud_check"},
+                            {"command": "FFcloud_restart"},
+                            {"command": "FFcloud_shutdown"}
+                        ]
+                    },
+                    {"type": "separator"},
+                    {
+                        "name" : "Create CableMesh",
+                        "items":
+                        [
+                            {"command": "FFcablemesh_from_mesh"},
+                            {"command": "FFcablemesh_from_meshgrid"},
+                            {"command": "FFcablemesh_from_box"},
+                            {"command": "FFcablemesh_from_cylinder"}
+                        ]
+                    },
+                    {"type": "separator"},
+                    {
+                        "name" : "Define Boundary Conditions",
+                        "items":
+                        [
+                            {"command": "FFcablemesh_anchors"},
+                            {"command": "FFconstraints_node"},
+                            {"command": "FFconstraints_update"}
+                        ]
+                    },
+                    {"type": "separator"},
+                    {
+                        "name" : "Solve",
+                        "items":
+                        [
+                            {"command": "FFsolve_fd"}
+                        ]
+                    },
+                    {"type": "separator"},
+                    {
+                        "name" : "Modify",
+                        "items":
+                        [
+                            {"command": "FFcablemesh_move_nodes"},
+                            {"command": "FFcablemesh_modify_nodes"},
+                            {"command": "FFcablemesh_modify_edges_qs"}
+
+                        ]
+                    },
+                    {"type": "separator"},
+
+                    {"command": "FFsettings"},
+                    {"command": "FFredraw"},
+                    {"command": "FFclear_all"}
+                ]
+            }
+        ],
+        "toolbars":
+        [
+            {
+                "name": "FoFin",
+                "items":
+                [
+                    {"left": "FFinit"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFfile_open"},
+                    {"left": "FFfile_save"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFtoolbar_cablemesh"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFcablemesh_anchors"},
+                    {"left": "FFconstraints_node"},
+                    {"left": "FFconstraints_update"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFsolve_fd"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFcablemesh_move_nodes"},
+                    {"left": "FFcablemesh_modify_nodes"},
+                    {"left": "FFcablemesh_modify_edges_qs"},
+
+                    {"type": "separator"},
+
+                    {"left": "FFsettings"},
+                    {"left": "FFredraw"},
+                    {"left": "FFclear_all"}
+                ]
+            }
+        ],
+        "toolbargroups":
+        [
+            {
+                "name": "FF",
+                "toolbars":
+                [
+                    "FoFin"
+                ]
+            }
+        ]
+    },
+    "settings":
+    {
+
+    }
+}
