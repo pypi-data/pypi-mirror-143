@@ -1,0 +1,3 @@
+pylint
+scikit-image
+sphinx
