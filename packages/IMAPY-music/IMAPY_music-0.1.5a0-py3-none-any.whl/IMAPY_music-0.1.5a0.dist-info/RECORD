@@ -1,0 +1,13 @@
+imapy_music/__init__.py,sha256=HDSabGPh6bOG4IAwz5K8BSVAwUFP48VdvBoaFH6hb8o,2615
+imapy_music/scripts/__init__.py,sha256=zgodKKJa0ujbSk8tQPCTzzuu87KT4N8KU6yxh4FEh3o,377
+imapy_music/scripts/meter_collection.py,sha256=ambUl8blV_oJo-TQBSdIhQ7TbIxfS8i7pAMBNIR-amc,2711
+imapy_music/scripts/metro_math.py,sha256=jLaT-W-d9ysEOPw37YcVp48v9foptNJi8UmMIGuZHt4,1562
+imapy_music/scripts/metro_weights_mazzola.py,sha256=uDevGfzW9MZjNrGuv6GgX_IagsAzaEdX_UuzzRg_Q8Q,3260
+imapy_music/scripts/metrum.py,sha256=1egEIEI7kFsaUSa1kjDeF33rN5DLEO6bRb0ljH2jKDg,1719
+imapy_music/scripts/onset_group_memory.py,sha256=mHEMvpXgpWAC-rpa2Pe7hU3w6iWwdbBm7AasWVaDHEo,1426
+imapy_music/scripts/weight_set.py,sha256=3kfMCpUmUxaVRtAlUBiBaWEyqsF6Fr31GLlS59541ME,1475
+IMAPY_music-0.1.5a0.dist-info/LICENSE,sha256=w7wf2UFIwoSF6Lqx1aKO28jjhw8r2b5xJ8aMi3oOpd8,35126
+IMAPY_music-0.1.5a0.dist-info/METADATA,sha256=Ski68pYF0jAth18d-EkjC0594ltB2MbFCDl3X8SD454,866
+IMAPY_music-0.1.5a0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+IMAPY_music-0.1.5a0.dist-info/top_level.txt,sha256=ZL-NxPimDI3IsvMJu8nH0SMVGfaOcAVBz6pE7y2ZkaE,12
+IMAPY_music-0.1.5a0.dist-info/RECORD,,
