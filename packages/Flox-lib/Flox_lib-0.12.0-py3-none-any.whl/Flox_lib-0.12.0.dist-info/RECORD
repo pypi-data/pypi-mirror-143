@@ -1,0 +1,12 @@
+flox/__init__.py,sha256=SomeJW4x8iuhd9CxyG_cz62GKQXKYUp1Vb6uOxsvCUQ,13473
+flox/browser.py,sha256=Pno8tZR8TUo5k-PI5FhKdENJAfdWuymB6Ysjd0ojtk8,2731
+flox/clipboard.py,sha256=OKkS8guLa6D1OjnQXdvh_U8cRTrGijWJBepb99mhHtk,2319
+flox/launcher.py,sha256=I1erK-wZ6NsVzxOSWgssx1vvUcABI9AQn3YATQNTkiE,4325
+flox/utils.py,sha256=X5-hQz80UXX94XxvshB7vVHSb4MAoZChoZ29vjgdFE0,3943
+flox/version,sha256=ipMkE9QvlQgvgyNEdlI3mkiF4ygynvyjpn7Jx5PAmUA,7
+Flox_lib-0.12.0.dist-info/LICENSE.txt,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+Flox_lib-0.12.0.dist-info/METADATA,sha256=A6VHzNrehV79UHB9tpR3TdVriNo_HyfNElJHHAXdRhU,1415
+Flox_lib-0.12.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Flox_lib-0.12.0.dist-info/top_level.txt,sha256=ToVvesHvA4pegruUxqdJ2gkmKACaQRSWPIKAoqyR9_0,5
+Flox_lib-0.12.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+Flox_lib-0.12.0.dist-info/RECORD,,
