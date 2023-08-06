@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: sky-report
+Version: 1.0.0
+Summary: pytest测试报告
+Home-page: http://www.baidu.com/
+Author: baidu
+Author-email: baidu@163.com
+License: MIT
+Description: pytest测试报告，抄的pytest-testreport
+Keywords: pytest sky_report
+
+关于当前包的一些关键字，方便PyPI进行分类。
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
