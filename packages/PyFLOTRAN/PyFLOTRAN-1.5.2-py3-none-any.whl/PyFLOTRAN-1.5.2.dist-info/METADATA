@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: PyFLOTRAN
+Version: 1.5.2
+Summary: Package to pre-process PFLOTRAN (and other software) files
+Home-page: https://github.com/aitirga/PyFLOTRAN
+Download-URL: https://github.com/aitirga/PyFLOTRAN/archive/refs/tags/v_1.5.2.zip
+Author: Aitor Iraola Galarza
+Author-email: aitor.iraola@amphos21.com
+License: MIT
+Keywords: PFLOTRAN,Preprocessing,python,modelling
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.txt
+Requires-Dist: ofpp
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: h5py
+Requires-Dist: vtk
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: python-box
+Requires-Dist: pyyaml
+Requires-Dist: setuptools
+Requires-Dist: xlrd
+Requires-Dist: openpyxl
+Requires-Dist: tqdm
+Requires-Dist: seaborn
+Requires-Dist: open3D
+Requires-Dist: natsort
+Requires-Dist: pytecplot
+Requires-Dist: sklearn
+Requires-Dist: munch
+
+UNKNOWN
+
