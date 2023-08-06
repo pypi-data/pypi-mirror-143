@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: watchtower_client
+Version: 0.2.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Author: Warunyou Dej-Udom <warunyou_d@yahoo.com>
+Author-email: Warunyou Dej-Udom <warunyou_d@yahoo.com>
+Requires-Python: >=3.6
