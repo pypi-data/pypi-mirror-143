@@ -1,0 +1,58 @@
+stages:
+    - test
+    - publish
+            
+test/finesse-develop:
+    stage: test
+    image: python:3.10
+    rules:
+        - if: '$CI_PIPELINE_SOURCE != "triggered"'
+          when: always
+        - when: never
+    script:
+        - python -V
+        - ls wheelhouse
+        - echo $CI_PIPELINE_SOURCE
+        - python -m pip install wheelhouse/*manylinux*.whl
+        - python -m pip install pytest
+        - python -m pip install .
+        - pytest tests
+    needs: 
+        - project: finesse/finesse3
+          job: build/manylinux/x86_64/py310
+          ref: develop
+          artifacts: true
+
+test/triggered/finesse:
+    stage: test
+    image: python:3.10
+    rules:
+        - if: '$CI_PIPELINE_SOURCE != "triggered"'
+          when: never
+        - when: always
+    script:
+        - python -V
+        - ls wheelhouse
+        - echo $CI_PIPELINE_SOURCE
+        - python -m pip install wheelhouse/*manylinux*.whl
+        - python -m pip install pytest
+        - python -m pip install .
+        - pytest tests
+    needs: 
+        - project: finesse/finesse3
+          job: build/manylinux/x86_64/py310
+          ref: develop
+          artifacts: true
+
+publish:
+    only:
+        - main
+        - tags
+    image: python
+    needs: [test/finesse-develop] # needs to be changed to master when releases are availabe
+    script:
+        - python -V
+        - python -m pip install twine build
+        - python -m build
+        - ls dist
+        - python -m twine upload -u=$TWINE_USERNAME -p=$TWINE_PASSWORD dist/*
