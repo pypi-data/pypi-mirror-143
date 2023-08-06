@@ -1,0 +1,2 @@
+[console_scripts]
+retractions = retractions.cli:main
