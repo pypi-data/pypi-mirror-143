@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: StarkAPI
+Version: 0.0.0.1
+Summary: Python Wrapper around Stark API
+Home-page: https://github.com/StarkBotsIndustries/StarkAPI-Python
+Author: StarkProgrammer
+Author-email: starkbotsindustries@gmail.com
+License: GPLv3+
+Project-URL: Support, https://t.me/StarkBotsChat
+Project-URL: Community, https://t.me/StarkBots
+Keywords: api,python,fun
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Natural Language :: English
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Education :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+
+<p align="center">
+  <a href="/"><img width="350" height="208" src="https://raw.githubusercontent.com/encode/httpx/master/docs/img/butterfly.png" alt='HTTPX'></a>
+</p>
+
+<p align="center">Asynchronous Python Wrapper around Stark API</p>
+
+### Installation 
+
+Can be installed using PyPI
+
+```shell
+pip install starkapi
+```
+
+### Documentation
+
+Documentation can be found here: [Read the Docs]()
+
+
+### Community and Support
+
+Telegram Channel - [StarkBots](https://t.me/StarkBots)
+
+Telegram Chat - [StarkBotsChat](https://t.me/StarkBotsChat)
+
+
+### Copyright and License
+
+- Copyright (C) 2022 **Stark Bots** <<https://github.com/StarkBotsIndustries>>
+
+- Licensed under the terms of [GNU General Public License v3 or later (GPLv3+)](https://github.com/StarkBotsIndustries/PyStark/blob/master/LICENSE)
+
+

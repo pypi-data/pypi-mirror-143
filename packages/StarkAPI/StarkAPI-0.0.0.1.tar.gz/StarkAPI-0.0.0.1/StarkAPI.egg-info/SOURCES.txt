@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.md
+requirements.txt
+setup.py
+StarkAPI.egg-info/PKG-INFO
+StarkAPI.egg-info/SOURCES.txt
+StarkAPI.egg-info/dependency_links.txt
+StarkAPI.egg-info/not-zip-safe
+StarkAPI.egg-info/requires.txt
+StarkAPI.egg-info/top_level.txt
+stark/__init__.py
+stark/exceptions.py
+stark/flirt.py
+stark/joke.py
+stark/web.py
