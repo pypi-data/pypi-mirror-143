@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: teachable-machine
+Version: 0.0.2
+Summary: A Python package to simplify the deployment process of exported Teachable Machine models.
+Home-page: UNKNOWN
+Author: Meqdad Dev (Meqdad Darwish)
+Author-email: meqdad.darweesh@gmail.com
+License: UNKNOWN
+Keywords: python,teachable machine,ai,computer vision,camera,opencv,image classification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: tensorflow
+
+A Python package to simplify the deployment process of exported Teachable Machine models into different environments like PC, Raspberry Pi and so on.
+
+
