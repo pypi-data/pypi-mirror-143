@@ -1,0 +1,10 @@
+README.md
+setup.py
+vivplots/__init__.py
+vivplots/layout.py
+vivplots/signals.py
+vivplots.egg-info/PKG-INFO
+vivplots.egg-info/SOURCES.txt
+vivplots.egg-info/dependency_links.txt
+vivplots.egg-info/requires.txt
+vivplots.egg-info/top_level.txt
