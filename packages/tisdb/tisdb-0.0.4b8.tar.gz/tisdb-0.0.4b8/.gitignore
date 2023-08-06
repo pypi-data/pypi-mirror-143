@@ -1,0 +1,10 @@
+**/.DS_Store
+/.vscode
+/dist
+**/*.egg-info/
+**/__pycache__/
+/pages/_*
+/pages/api
+/pages/make.bat
+/pages/Makefile
+/.eggs
