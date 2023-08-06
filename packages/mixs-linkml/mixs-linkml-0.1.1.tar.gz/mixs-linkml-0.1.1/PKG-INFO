@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mixs-linkml
+Version: 0.1.1
+Summary: A LinkML (https://linkml.io/) model of the MIxS standard (https://gensc.org/mixs/)
+License: CC0
+Author: GSC
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: linkml (>=1.1.13)
+Requires-Dist: mkdocs
+Requires-Dist: pandas
