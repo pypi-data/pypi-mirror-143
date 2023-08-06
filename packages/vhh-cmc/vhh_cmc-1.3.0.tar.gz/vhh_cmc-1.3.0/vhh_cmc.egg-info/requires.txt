@@ -1,0 +1,11 @@
+PyYAML
+pandas
+NumPy
+matplotlib
+scipy
+scikit-learn
+Sphinx
+sphinxcontrib-bibtex
+sphinxcontrib-autoyaml
+pymp-pypi
+opencv-python
