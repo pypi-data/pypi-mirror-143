@@ -1,0 +1,6 @@
+notionapimanager/__init__.py,sha256=vobOR-opIWfkDhqzDdH_waDK0Omhb-Lsrv4lPH0vykM,66
+notionapimanager/notion_database_api_manager.py,sha256=w8xz1iP_Hpf72bXDYp4aYgib09bOL_amrq-hHsswwYw,4692
+notionapimanager/notion_property_encoder.py,sha256=vu7gmCGDo6zF9ZKGhjsBls8sj73z107fuCwq2K5xH4U,4229
+notionapimanager-0.1.7.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+notionapimanager-0.1.7.dist-info/METADATA,sha256=fQuGENxnJyViNWgML9LCR96qGSQHh8NeJ-0v6M8XN9Q,2414
+notionapimanager-0.1.7.dist-info/RECORD,,
