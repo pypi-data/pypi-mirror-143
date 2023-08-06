@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: act_appliance
+Version: 0.8.3
+Summary: An abstraction utility for actifio appliances and it is very useful
+Home-page: https://github.com/Brian-Williams/actappliance
+Author: Brian Williams
+Author-email: briancmwilliams@gmail.com
+License: UNKNOWN
+Keywords: automation testing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
+
+This repo abstracts the type of connection you are making to an actifio appliance. You can write a test or use case one
+way ane execute over SSH or RESTful connections.
+
