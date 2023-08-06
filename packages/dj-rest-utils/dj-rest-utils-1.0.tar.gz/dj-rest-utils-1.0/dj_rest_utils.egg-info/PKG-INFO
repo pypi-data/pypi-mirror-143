@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: dj-rest-utils
+Version: 1.0
+Summary: A Django rest framework custom utils.
+Home-page: https://github.com/mbrsagor/djangoRestUtils
+Author: Bozlur Rosid Sagor
+Author-email: brshagor.cse@gmail.com
+Maintainer-email: mbrsagor@gmail.com
+License: MIT
+Keywords: utils,drf utils
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+
+=================
+dj-rest-utils
+=================
+
+Django rest framework common utils.
+
+Features:
+==========
+1. Below some features::
+    1) Custom response message.
+    2) Custom filter utils
+    3) Basic code format
+    4) Basic permissions utils.
+
+Quick uses
+============
+
+``from utils.response import prepare_create_success_response, prepare_success_response, prepare_error_response``
+
+
+
