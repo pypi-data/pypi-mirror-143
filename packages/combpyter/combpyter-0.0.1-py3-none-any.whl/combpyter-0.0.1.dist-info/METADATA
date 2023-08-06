@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: combpyter
+Version: 0.0.1
+Summary: 
+Author: Benjamin Hackl
+Author-email: devel@benjamin-hackl.at
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib[plot] (>=3.5.1,<4.0.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
