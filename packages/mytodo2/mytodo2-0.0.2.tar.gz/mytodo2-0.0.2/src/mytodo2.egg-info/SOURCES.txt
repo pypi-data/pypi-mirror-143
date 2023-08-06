@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/mytodo2/__init__.py
+src/mytodo2/model.py
+src/mytodo2/todo.py
+src/mytodo2.egg-info/PKG-INFO
+src/mytodo2.egg-info/SOURCES.txt
+src/mytodo2.egg-info/dependency_links.txt
+src/mytodo2.egg-info/entry_points.txt
+src/mytodo2.egg-info/not-zip-safe
+src/mytodo2.egg-info/requires.txt
+src/mytodo2.egg-info/top_level.txt
