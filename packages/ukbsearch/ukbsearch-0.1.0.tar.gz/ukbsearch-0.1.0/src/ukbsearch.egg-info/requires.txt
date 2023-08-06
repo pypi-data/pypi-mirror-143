@@ -1,0 +1,3 @@
+rich
+pyreadr
+pandas
