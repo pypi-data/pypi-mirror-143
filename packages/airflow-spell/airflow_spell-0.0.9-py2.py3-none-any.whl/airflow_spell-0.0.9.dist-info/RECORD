@@ -1,0 +1,10 @@
+airflow_spell/__init__.py,sha256=ztdiWzhmRHffEyC3Q47MBNeR5qdKL8X-l0b7oCmLkAI,179
+airflow_spell/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_spell/hooks/spell_client.py,sha256=OX9L9svgnAXtllgw0Xo0YSP5DF26oBj4yFwcyesfT40,9423
+airflow_spell/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_spell/operators/spell_run.py,sha256=hqqXw8nx7ElbtrHx6fFGQ6gKs8pU-nlqCdoeJHY3m50,5887
+airflow_spell-0.0.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+airflow_spell-0.0.9.dist-info/METADATA,sha256=TmrAiy3Isjdj9a1TwsZsKVMZdJ2P9xLnQOtUpFKjiss,310
+airflow_spell-0.0.9.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+airflow_spell-0.0.9.dist-info/top_level.txt,sha256=alOmxlefstNtPSsiIpU5lL6gotXRULeZvXxGq9sLmWM,14
+airflow_spell-0.0.9.dist-info/RECORD,,
