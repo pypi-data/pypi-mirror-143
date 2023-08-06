@@ -1,0 +1,7 @@
+#!python
+import sys
+
+import fentik.main
+
+if __name__ == "__main__":
+    fentik.main.main(sys.argv)
