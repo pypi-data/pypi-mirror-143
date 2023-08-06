@@ -1,0 +1,11 @@
+LICENSE,sha256=if98GOjzCKRGsrLBqyWkK5gKsVYETjayceiUeW4DK7o,1520
+salesman_stripe/__init__.py,sha256=b631Rs47YkT6MfPmW6-LbtVnEExlX3LU9WNd4hAoGgc,105
+salesman_stripe/conf.py,sha256=cYBAgJGk9670zB4JwMvGCyxoCl3eq0lDT0NeqtyCCdk,2205
+salesman_stripe/models.py,sha256=mWxZJG7oe_emsNuGvF6V3_BIWYG80t8FLKV0FGMzwwU,670
+salesman_stripe/payment.py,sha256=4w8Ymk18Rlhq10gq2X-fEW1_KfS0NGju90GEqkIqg-I,10854
+salesman_stripe/templates/salesman_stripe/cancel.html,sha256=DwAkyLPkoGZsMVIyATQ4jsQCxhfXjVMjN-54XC_QKkM,34
+salesman_stripe/templates/salesman_stripe/success.html,sha256=VkL6ai6drYR6B62cKi_E3mYjSax3wOH2k92swe-zrQo,36
+django_salesman_stripe-0.1.1.dist-info/LICENSE,sha256=if98GOjzCKRGsrLBqyWkK5gKsVYETjayceiUeW4DK7o,1520
+django_salesman_stripe-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_salesman_stripe-0.1.1.dist-info/METADATA,sha256=hYHz8THw7rGOHPyoN8q1o8K_SKYmb4NZSt0sY9fAEkI,4882
+django_salesman_stripe-0.1.1.dist-info/RECORD,,
