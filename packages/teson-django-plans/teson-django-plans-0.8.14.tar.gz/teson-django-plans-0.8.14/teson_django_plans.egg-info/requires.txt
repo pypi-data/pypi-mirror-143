@@ -1,0 +1,12 @@
+django-countries>=4.5
+django-next-url-mixin>=0.1.0
+django-ordered-model>=1.4.1
+django-sequences
+maxminddb-geolite2==2018.703
+python-stdnum
+pytz>=2017.2
+six
+suds
+
+[i18n]
+django-modeltranslation>=0.5b1
