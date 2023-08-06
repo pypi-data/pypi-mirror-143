@@ -1,0 +1,8 @@
+setup.py
+gmy/gmy.egg-info/PKG-INFO
+gmy/gmy.egg-info/SOURCES.txt
+gmy/gmy.egg-info/dependency_links.txt
+gmy/gmy.egg-info/top_level.txt
+gmy/pretty/__init__.py
+gmy/pretty/girl/__init__.py
+gmy/pretty/girl/message.py
