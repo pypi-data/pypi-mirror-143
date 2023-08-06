@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+encodeci/__init__.py
+encodeci/main.py
+encodeci.egg-info/PKG-INFO
+encodeci.egg-info/SOURCES.txt
+encodeci.egg-info/dependency_links.txt
+encodeci.egg-info/not-zip-safe
+encodeci.egg-info/top_level.txt
