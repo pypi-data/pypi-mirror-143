@@ -1,0 +1,8 @@
+catwalk_client/__init__.py,sha256=MD4FUZLRvPuXigMHhXsiHEyycYGhZyMOt-bCPt7HPNk,34
+catwalk_client/_case_builder.py,sha256=NlZS-5KR9mgG607C47Jg-cBgaq-xW9HO2-1OXZ9zIJ0,1576
+catwalk_client/_case_exporter.py,sha256=8DCSOlOKyxDeWmGL3UARlQSOZAYMZSZr1LjAmEGeUfY,2742
+catwalk_client/client.py,sha256=QGAQj37OK-fYWaRp-UEuOCHNuMprfcO-ODXBzYvu5e4,1810
+catwalk_client-0.0.5.dist-info/METADATA,sha256=m1guaZ6c1Y7u0SpNWXdubM482Dpll6WYlVTGTARkMZo,348
+catwalk_client-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+catwalk_client-0.0.5.dist-info/top_level.txt,sha256=5TG7OAQFYFWWREKvaMyLQqb-FIUejckfITRB_tWjySc,15
+catwalk_client-0.0.5.dist-info/RECORD,,
