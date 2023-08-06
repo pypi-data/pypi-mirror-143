@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+oddeven/oddeven.egg-info/PKG-INFO
+oddeven/oddeven.egg-info/SOURCES.txt
+oddeven/oddeven.egg-info/dependency_links.txt
+oddeven/oddeven.egg-info/top_level.txt
