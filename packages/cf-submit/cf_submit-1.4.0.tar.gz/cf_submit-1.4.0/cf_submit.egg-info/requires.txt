@@ -1,0 +1,5 @@
+Werkzeug<1.0,>=0.16
+lxml
+prettytable
+requests
+robobrowser
