@@ -1,0 +1,4 @@
+[console_scripts]
+ai-serving-make = ai_serving.server.cli:main_make
+ai-serving-start = ai_serving.server.cli:main
+ai-serving-terminate = ai_serving.server.cli:terminate
