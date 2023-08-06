@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: ftxusderivatives-python
+Version: 0.1.0
+Summary: An unofficial Python wrapper for the REST and WebSocket APIs of FTX US Derivatives, formerly known as LedgerX.
+Home-page: https://github.com/nenyehub/ftxusderivatives-python
+License: MIT
+Keywords: FTX,trading,crypto
+Author: Nenye Ndili
+Author-email: nenye@ndili.net
+Requires-Python: >=3.7,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: websocket-client (>=1.3.1,<2.0.0)
+Project-URL: Repository, https://github.com/nenyehub/ftxusderivatives-python
+Description-Content-Type: text/markdown
+
+# ftxusderivatives-python
+An unofficial Python wrapper for the [REST and WebSocket APIs](https://docs.ledgerx.com/reference/overview) of FTX US Derivatives, formerly known as LedgerX. I have no affiliation with FTX US Derivatives. Use this at your own risk.
+
+## Features
+- Implementation of all REST endpoints, detailed [here](https://docs.ledgerx.com/reference/overview)
+- WebSocket implementation: live orderbook tops, account balances, open positions info, server heartbeat, reconnect logic
+- Simple handling of authentication
+- HTTP request error handling and retry logic
+- Logging support
+
+## Quick Start
+[Register an account with FTX US Derivatives.](https://derivs.ftx.us/)
+
+[Generate an API key](https://docs.ledgerx.com/docs/api-key) and configure permissions.
+
+Clone the repository to your target directory. 
+
+To run unit tests, enter your API key in the test file: `tests/test_rest_api.py`, and run `python -m pytest` in the project directory.
+
+Here's some example code to get started with.
+
+```python
+###############################
+# REST API Example
+###############################
+from src.rest_lx.rest import LxClient
+
+api_key = ""  # TODO: Put API key here
+
+# Init REST client
+client = LxClient(api_key=api_key)
+
+# list active day-ahead-swap contracts
+swaps = client.list_contracts({
+    'active': True,
+    'derivative_type': 'day_ahead_swap',
+})
+
+# grab BTC day-ahead-swap contract ID
+data = swaps['data']
+cbtc_swap = filter(lambda data: data['underlying_asset'] == 'CBTC', data)
+contract_id = next(cbtc_swap)['id']
+print(f"BTC swap contract_id: {contract_id}")
+
+# retrieve your position for BTC day-ahead-swap contract
+position = client.retrieve_contract_position(contract_id)
+print(f"BTC swap position: {position}")
+
+# get BTC day-ahead-swap contract ticker
+ticker = client.get_contract_ticker(contract_id)
+print(f"BTC swap ticker: {ticker}")
+
+###############################
+# WebSocket Example
+###############################
+from src.websocket_lx.client import LxWebsocketClient
+import time
+
+# Init WebSocket client
+ws = LxWebsocketClient(api_key=api_key)
+
+# Subscribe to orderbook-top feed for BTC day-ahead-swap contract
+ws.subscribe(contract_id=contract_id)
+ws.connect()
+
+# Grab orderbook-top for BTC day-ahead-swap once a second
+while True:
+    top = ws.get_book_top(contract_id=contract_id)
+    print(top)
+    time.sleep(1)
+```
+## Under Development
+ - Full orderbook state support using WebSockets 
+
+## Contributing 
+Contributions, fixes, recommendations, and all other feedback is welcome. If you are fixing a bug, please open an issue first with all relevant details, and mention the issue number in the pull request.
+
+### Contact 
+I can be reached on discord at Nenye#5335. Otherwise, feel free to open a PR or Issue here.
+
