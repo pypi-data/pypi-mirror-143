@@ -1,0 +1,8 @@
+README.md
+setup.py
+CohesionIntegration/__init__.py
+CohesionIntegration/cohesion.py
+CohesionIntegration.egg-info/PKG-INFO
+CohesionIntegration.egg-info/SOURCES.txt
+CohesionIntegration.egg-info/dependency_links.txt
+CohesionIntegration.egg-info/top_level.txt
