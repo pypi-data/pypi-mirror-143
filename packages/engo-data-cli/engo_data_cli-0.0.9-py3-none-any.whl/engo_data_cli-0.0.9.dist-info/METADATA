@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: engo-data-cli
+Version: 0.0.9
+Summary: A handy tool to import data onto cloud databases
+Home-page: https://github.com/soft-union/engo-data-cli
+Author: caryyu
+Author-email: caryy.tg@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/soft-union/engo-data-cli/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.27.1)
+Requires-Dist: click (>=7.1.2)
+Requires-Dist: beautifulsoup4 (>=4.9.3)
+Requires-Dist: wechatpy (>=2.0.0.alpha22)
+
+# engo-data-cli
+
+Import scraped Json data to WeChat cloud database
+
+
+
+
