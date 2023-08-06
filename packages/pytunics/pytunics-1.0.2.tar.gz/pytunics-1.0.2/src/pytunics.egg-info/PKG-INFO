@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pytunics
+Version: 1.0.2
+Summary: package with main method for laser control
+Home-page: https://gitlab.xlim.fr/vasko/Tunics-Laser-control-python
+Author: Kostiantyn Vasko
+Author-email: kostiantyn.vasko@nure.ua
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.xlim.fr/vasko/Tunics-Laser-control-python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Tunics Laser package
+This is simple package for self studying GIT and\
+control instrument by GPIB interface.
+
+# Installation
+pip install pytunics
+# Usage example
+```python
+from pytunics import TunicsLaser
+from numpy import arange
+
+wl_start = 1550.1
+wl_stop = 1550.3
+wl_step = 0.01
+las = TunicsLaser()
+las.enable()
+for wl in arange(wl_start, wl_stop, wl_step):
+    las.set_wavelength(wl)
+    # do something
+las.disable()
+```
+***
+Special thanks
+===
+Artem Nedbailo - QA advices & reviews\
+Yann Leventoux - Instrument & tools supply
+
+TBD
+===
+CI/CD
+
+
