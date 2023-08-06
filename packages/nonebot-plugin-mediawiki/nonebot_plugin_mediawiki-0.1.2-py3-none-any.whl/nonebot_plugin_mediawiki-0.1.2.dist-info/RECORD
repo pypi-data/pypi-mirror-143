@@ -1,0 +1,12 @@
+nonebot_plugin_mediawiki/__init__.py,sha256=5-nvjO9kSS08jM24PTl7M_OgmtF2gBJnYdrdO6nvEEw,2275
+nonebot_plugin_mediawiki/config.py,sha256=QjWb6cMx-JYWtsKzzmQCZwyjeQX7XMwsMQGl8j0U2XY,6089
+nonebot_plugin_mediawiki/config_manager.py,sha256=ZYJUvLb1hIQ8JRQSsaoqq5NBDu8wcDSg9njXsmlEhns,6668
+nonebot_plugin_mediawiki/data_source.py,sha256=3fHLGaJnUflzBtE9wj9CCs42F4lsiYhZZtfsMH4CVEs,2970
+nonebot_plugin_mediawiki/exception.py,sha256=3wSoPmQoPpI9Ps7wHPRoyxFNhDELs2VqTX2yv2IgpRM,4005
+nonebot_plugin_mediawiki/mwapi.py,sha256=-wsGsXFQt7OzFLgA-3bE7d8IgZtWcc0owxzg4jPJIhI,10627
+nonebot_plugin_mediawiki/utilities.py,sha256=gKHypdkUB485blmFmwoxcipQTbpPoi8v11TfsbE9x5k,403
+nonebot_plugin_mediawiki/worker.py,sha256=r1AZBG-AAiUV_aUFGx6WndAtPxmW7AeYePVQEfjDCCM,3584
+nonebot_plugin_mediawiki-0.1.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+nonebot_plugin_mediawiki-0.1.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+nonebot_plugin_mediawiki-0.1.2.dist-info/METADATA,sha256=RboSLGl54RVyRdbXjfPf7o2-RoI5_NY23QKXIEAwDIo,8977
+nonebot_plugin_mediawiki-0.1.2.dist-info/RECORD,,
