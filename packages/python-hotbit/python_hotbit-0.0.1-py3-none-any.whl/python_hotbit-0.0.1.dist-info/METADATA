@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: python-hotbit
+Version: 0.0.1
+Summary: A Python package for the cryptocurrency exchange Hotbit that doesn't require an API Key, making it available to everyone
+Home-page: https://github.com/jona799t/python-hotbit
+Author: jona799t
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: hotbit
+
+# python-hotbit
+A mirror installation for https://pypi.org/project/hotbit
+
