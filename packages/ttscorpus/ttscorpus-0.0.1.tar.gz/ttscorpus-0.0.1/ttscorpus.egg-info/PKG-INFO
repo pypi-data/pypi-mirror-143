@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: ttscorpus
+Version: 0.0.1
+Summary: collection of different source of tts api for generating corpus.
+Home-page: https://github.com/voidful/tts-corpus-creator
+Author: Voidful
+Author-email: voidful.stack@gmail.com
+License: Apache
+Keywords: tts google tts gtts mac android tts
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+
+# tts-corpus-creator
+collection of different source of tts api for generating corpus.
+feature:
+- large scale tts
+- support both free and charge source
+
+## Source
+
+### Charge
+
+#### Google Cloud TTS
+1. install `pip install google-cloud-texttospeech`
+```python
+import os
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "xxx.json"
+
+from ttscorpus.source import GoogleCloud
+
+gc = GoogleCloud()
+gc("hi,there", 'output')
+```
+
+### Free
+
+#### Mac
+
+1. install ffmpeg `brew install ffmpeg`
+
+```python
+from ttscorpus.source import MAC
+
+mac = MAC()
+mac('hello, there, I am mac', 'output')
+```
+
+#### Google TTS
+1. install `pip install gtts`
+```python
+from ttscorpus.source import GoogleTTS
+
+mac = GoogleTTS()
+mac('sixty six year old badly. independence of mutual fund boards represents discrete defeat.', 'test')
+```
+
+#### Android TTS
+1. build android tts server app from: [https://github.com/voidful/android-tts-server](https://github.com/voidful/android-tts-server)
+ 
+

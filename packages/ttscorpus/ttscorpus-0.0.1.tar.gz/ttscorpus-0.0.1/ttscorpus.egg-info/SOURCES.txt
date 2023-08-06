@@ -1,0 +1,14 @@
+.gitignore
+README.md
+requirements.txt
+setup.py
+ttscorpus/__init__.py
+ttscorpus.egg-info/PKG-INFO
+ttscorpus.egg-info/SOURCES.txt
+ttscorpus.egg-info/dependency_links.txt
+ttscorpus.egg-info/not-zip-safe
+ttscorpus.egg-info/top_level.txt
+ttscorpus/source/__init__.py
+ttscorpus/source/google_cloud.py
+ttscorpus/source/google_tts.py
+ttscorpus/source/mac.py
