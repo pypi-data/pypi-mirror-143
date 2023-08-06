@@ -1,0 +1,13 @@
+cache/__init__.py,sha256=y82p6rRu5U30w-HwI-gn8WSHY5E7GqRZlqqWGhm4JoU,18
+cache/cog.py,sha256=XhrD2ku-Pc6IeDKlxUlTYLoCI8ftCehPTEZQFYD2S4I,3457
+ipc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipc/base.py,sha256=BaAdMyBUEW98lwKP_VxjwnJi9l1gmrKfFsbWNB-m8Dw,2353
+ipc/client.py,sha256=avBTZt3BuULwKe7PeKOhFln9RbAeHh4CFlGIcdrX6oI,3703
+ipc/cog.py,sha256=VZyXrMKkVOmWJIfnPjHrcq3wexSleRF-nyWGXL6lVlA,3144
+ipc/handlers.py,sha256=src-Y0ITRCEzC9cfXHMiBYNYx9bsuX5RJr77YcHRkJk,1080
+ipc/server.py,sha256=RSGIHAyOj4gSurzme4jM0HHdzgwzIiMWTveLRewC-DM,3390
+kasushi-0.1.1.dist-info/LICENSE,sha256=re1xb0ZkomF_uNdJAqTn9T4hwNfXFxpVbcYGAJSKZv0,1065
+kasushi-0.1.1.dist-info/METADATA,sha256=-7KhbiJrWlPlVMroXzEyufoqPu6y7ymYY7ltffZM3DI,4062
+kasushi-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kasushi-0.1.1.dist-info/top_level.txt,sha256=zKJoBDLDc02G4ZGOd5SMI4oDlcwqaSeZtXrWp_bpo4g,10
+kasushi-0.1.1.dist-info/RECORD,,
