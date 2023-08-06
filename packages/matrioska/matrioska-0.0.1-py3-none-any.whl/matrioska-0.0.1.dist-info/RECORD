@@ -1,0 +1,13 @@
+matrioska/__main__.py,sha256=Zax2Ghb0PfA0dP6jXOfB1xC0McPApruHwSrJre0j3tI,754
+matrioska/argparser.py,sha256=kZq8kXq8m2LV7O_koSAY_HDSZEgPjh_1yOzKouQ9Y3U,1146
+matrioska/encryption.py,sha256=3lFI51Pl9tccH4HCie5DvnO7gyc3B7Cs6xIbu8Jc8K8,1669
+matrioska/file.py,sha256=AbSeYKjbK3iJVbOMb54RrZAYEZ7leDQhbgYfLj_pSYs,527
+matrioska/key.py,sha256=BOmBc4Mkg-ieFwdTEHUKMTkLSwh2vYfT0Pv_XNmNR5g,894
+matrioska/version.py,sha256=Tjb_poy6EuGRi7TlrksJa9Qpx1MXOCO3p3F6tJ8xa5o,142
+tests/test_version.py,sha256=a-vFysy1Lk7SZpvNUvfx3hEEWN_l5zEVAtmj6P2em7o,86
+matrioska-0.0.1.dist-info/LICENSE,sha256=FEpBvIvyf76kCkXeFacXMQwU-tKl9qL3LhM6gBFdQnI,1056
+matrioska-0.0.1.dist-info/METADATA,sha256=-wrMaKyWN6SwMc9KI0g4kJx0YCU3heU_jXlu241-iJg,1485
+matrioska-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+matrioska-0.0.1.dist-info/entry_points.txt,sha256=ISCj-bLKb_ELIaoWYdqzEgApEfgKk6D5I94puBwH-Sg,55
+matrioska-0.0.1.dist-info/top_level.txt,sha256=RGamRIRU9jNP0nUBkfiGtu5RjSbOfnOw9PRHleYlC3I,16
+matrioska-0.0.1.dist-info/RECORD,,
