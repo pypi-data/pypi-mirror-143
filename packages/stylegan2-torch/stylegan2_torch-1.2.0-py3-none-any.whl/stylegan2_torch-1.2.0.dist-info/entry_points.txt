@@ -1,0 +1,5 @@
+[console_scripts]
+docs=stylegan2_torch:__docs
+serve=stylegan2_torch:__serve
+test=stylegan2_torch:__test
+
