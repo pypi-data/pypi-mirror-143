@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: TurnonTech
+Version: 0.0.2
+Summary: TurnonTechnology Co., Ltd.
+Home-page: http://pypi.org/user/n159951357753/
+Author: Kevin.Wang
+Author-email: n159951357753159@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyModbusTCP
+
+TurnonTech
+
+Turnon-tech.com
+
+Python3.X :  import TurnonTech
+	
+
+
+
+
+
+
