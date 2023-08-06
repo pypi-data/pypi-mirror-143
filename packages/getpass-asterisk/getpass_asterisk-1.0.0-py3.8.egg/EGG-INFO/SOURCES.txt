@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+getpass_asterisk/__init__.py
+getpass_asterisk/getpass_asterisk.py
+getpass_asterisk.egg-info/PKG-INFO
+getpass_asterisk.egg-info/SOURCES.txt
+getpass_asterisk.egg-info/dependency_links.txt
+getpass_asterisk.egg-info/top_level.txt
