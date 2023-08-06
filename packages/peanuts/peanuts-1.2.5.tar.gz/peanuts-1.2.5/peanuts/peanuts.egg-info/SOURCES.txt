@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+peanuts/classy.py
+peanuts/peanuts.egg-info/PKG-INFO
+peanuts/peanuts.egg-info/SOURCES.txt
+peanuts/peanuts.egg-info/dependency_links.txt
+peanuts/peanuts.egg-info/top_level.txt
