@@ -1,0 +1,16 @@
+skweak/__init__.py,sha256=kBGupZeI5etDr5-8oF1uhVaihr7bZCpTn5I2jMDCBAc,122
+skweak/aggregation.py,sha256=qOTDopG6rCsl7W44ZiYXoKPCAV7caQJiFbg-ussV5vg,23807
+skweak/analysis.py,sha256=78oW7fYMICXzJOqL9uGGKHVmE6Ke_doyq4uUH7i7Gn4,32605
+skweak/base.py,sha256=QBQj-Us85qVfqR3jhZaOwLTI22VW7iSEOnVanFRImNU,7613
+skweak/doclevel.py,sha256=iFQx_fIK7i0SObCsJaJomRDBk4tVoiWD-G9nYwYm0Eg,7617
+skweak/gazetteers.py,sha256=Sw8cOAloO0vFKSOSsHm0_tnRDw1s6IKKimRr8wG2YMY,12021
+skweak/generative.py,sha256=0CCXaEVQ-PIWrOGhs7qpNiz3NGjZXsoMUo1YCDQxlNg,34226
+skweak/heuristics.py,sha256=LVcHq4h7R-MHIrlFYmEYFjjnPvlgmtOTJdesmkFfZ3g,9142
+skweak/spacy.py,sha256=Y_oKw9Z_K5jZnN_TDk8GU-MXzNF9f13MxWVyIaW6nv8,7221
+skweak/utils.py,sha256=m5tYY3D9T0pOyW06vYIIIipj0-vkvo5m-KUPWUreyCk,30608
+skweak/voting.py,sha256=OyCL13X9JE9O4G-Zh7V1553uVctDD7FGP8eVapspPMI,9009
+skweak-0.3.1.dist-info/LICENSE.txt,sha256=lWmzGs9Q4cs_OPRyIPLDpC9TPgfnL-LRjChx6JCYqMc,1089
+skweak-0.3.1.dist-info/METADATA,sha256=X_TaaPy_qljwR1_Yud0ZAL8Fziinh_rkFz58oR3zi8c,7971
+skweak-0.3.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+skweak-0.3.1.dist-info/top_level.txt,sha256=P9v-P_pz0rzqjaEXi8RClORM3SB7wnFXPz0m1BmhUe4,7
+skweak-0.3.1.dist-info/RECORD,,
