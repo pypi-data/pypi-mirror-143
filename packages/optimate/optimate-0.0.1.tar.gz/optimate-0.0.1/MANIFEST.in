@@ -1,0 +1,14 @@
+# Include all files in top-level directory.
+include *.*
+
+# Exclude all generated files in repo root.
+exclude .*
+
+# All documentation
+recursive-include doc *
+prune doc/build
+prune doc/source/generated
+
+# Exclude generated files
+prune */__pycache__
+global-exclude *.pyc *.pyo *.pyd *.swp *.bak *~
