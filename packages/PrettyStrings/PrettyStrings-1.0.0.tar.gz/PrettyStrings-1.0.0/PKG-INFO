@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: PrettyStrings
+Version: 1.0.0
+Summary: Python Pretty Strings. Use colors in your python strings.
+Home-page: https://github.com/dox-dev/PyPS
+Author: DoxDev
+Author-email: hello@aestheticdream.cc
+License: MIT
+Download-URL: https://github.com/dox-dev/PyPS/archive/refs/heads/main.zip
+Description: UNKNOWN
+Keywords: Python,Print,Pretty Strings,PyPS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
