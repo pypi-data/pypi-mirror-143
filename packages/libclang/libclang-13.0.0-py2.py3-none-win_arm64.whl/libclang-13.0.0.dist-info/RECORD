@@ -1,0 +1,9 @@
+libclang-13.0.0.data/platlib/clang/__init__.py,sha256=F32OO8ypFCINGCaqe2GCWaDaO3yxh5DAreFz9UNTIiY,594
+libclang-13.0.0.data/platlib/clang/cindex.py,sha256=IQrvFxBpj93i9n3ZmzK_gQkHhl44CS3jMAj-aw-lFsM,126937
+libclang-13.0.0.data/platlib/clang/enumerations.py,sha256=KW0SqaGDvBe4SjU31Ldg9M0ktyzrsjmONiJWNALn8JY,1106
+libclang-13.0.0.data/platlib/clang/native/libclang.dll,sha256=aU1iCFircZiCFYj1pG0D_YpC4RKGZowMK40FPRvkkTs,34866688
+libclang-13.0.0.dist-info/LICENSE.TXT,sha256=682bv3g6c9BcU7pNWGuNWBPc3zu-xQJlhgzMiF5gb0c,15140
+libclang-13.0.0.dist-info/METADATA,sha256=A-Prq8w8XwP9CD-HOv9IeTLBf98MI9aHZlSz4X24Y0Q,4817
+libclang-13.0.0.dist-info/WHEEL,sha256=XClnNBZh6TRxTeJg89layDqvRBJkSi7qhWTF7wif9ss,122
+libclang-13.0.0.dist-info/top_level.txt,sha256=VCqnbTg_nMMxDrCrGkh2eHoKHoKz9p-DeBjWjSGjJ4c,6
+libclang-13.0.0.dist-info/RECORD,,
