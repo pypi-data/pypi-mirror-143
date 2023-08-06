@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/strict/__init__.py
+src/strict/exceptions.py
+src/strict/strict_class.py
+src/strict/strict_function.py
+src/strict/strict_type.py
+src/strict_types.egg-info/PKG-INFO
+src/strict_types.egg-info/SOURCES.txt
+src/strict_types.egg-info/dependency_links.txt
+src/strict_types.egg-info/top_level.txt
