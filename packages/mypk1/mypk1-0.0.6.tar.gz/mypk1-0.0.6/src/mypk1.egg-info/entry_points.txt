@@ -1,0 +1,2 @@
+[console_scripts]
+test1 = mypk1.example:cli
