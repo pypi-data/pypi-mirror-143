@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pytest-metadata
+Version: 2.0.0
+Summary: pytest plugin for test session metadata
+License: Mozilla Public License 2.0 (MPL 2.0)
+Author: Dave Hunt
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pytest (>=7.1.1,<8.0.0)
