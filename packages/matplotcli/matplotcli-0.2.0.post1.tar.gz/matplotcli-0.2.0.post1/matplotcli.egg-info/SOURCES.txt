@@ -1,0 +1,10 @@
+LICENSE
+README.md
+matplotcli.py
+setup.py
+matplotcli.egg-info/PKG-INFO
+matplotcli.egg-info/SOURCES.txt
+matplotcli.egg-info/dependency_links.txt
+matplotcli.egg-info/entry_points.txt
+matplotcli.egg-info/requires.txt
+matplotcli.egg-info/top_level.txt
