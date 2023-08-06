@@ -1,0 +1,11 @@
+torque/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torque/apps.py,sha256=94PlX83TuH9qyUQqi8BdSDXTDY4oAzGXTUTXb29Q1Bw,87
+torque/models.py,sha256=6gFHb5MmZim1Se8dQjo00dLPdMUKDZOYew2cR6fOTWg,18727
+torque/urls.py,sha256=5Z52AgeyvC-pkw3UyrLAChzgCKpshwxNNkmeAjsG9hM,4420
+torque/utils.py,sha256=YXI9P47-8o04PFEjUhOZ01vM5YIY9S3bW-imCQOIwFc,1908
+torque/version.py,sha256=m6kyaNpwBcP1XYcqrelX2oS3PJuOnElOcRdBa9pEb8c,22
+torque/views.py,sha256=hWdMF7Zzx1BCcs3zrajoN1ougw9ZGqXADmhnjJD26hw,26812
+django_torque-0.2.2.dist-info/METADATA,sha256=pkleOZvIpbazIgObbOzQMuR03Y9sy34k41wlu-vfod8,3100
+django_torque-0.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_torque-0.2.2.dist-info/top_level.txt,sha256=ybnrmlDPf1hnnPMociaeb0tB9PixD4CPZJRIjefDC9I,7
+django_torque-0.2.2.dist-info/RECORD,,
