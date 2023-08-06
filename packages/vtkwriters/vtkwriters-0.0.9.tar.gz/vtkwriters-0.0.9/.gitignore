@@ -1,0 +1,10 @@
+vtkwriters.egg-info/
+__pycache__/
+*.vtu
+*.vti
+*.vtm
+*.pvd
+build/
+dist/
+*.TMP
+*.pyc

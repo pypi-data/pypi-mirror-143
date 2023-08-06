@@ -1,0 +1,41 @@
+image: ${CI_BUILD_ENVIRONMENT_IMAGE}
+
+stages:
+  - check
+  - build
+  - test
+  - deploy
+
+include:
+  - project: 'brgm/modelisation-geologique/templates'
+    ref: master
+    file:
+      - '/gitlab-ci/check.yml'
+      - '/gitlab-ci/deploy.yml'
+
+build:
+  stage: build
+  tags:
+    - docker
+  before_script:
+    - source activate ${CI_CONDA_ENVIRONMENT}
+  script:
+    - python setup.py bdist_wheel
+  artifacts:
+    paths:
+    - dist/
+    expose_as: wheel
+    when: on_success
+
+test:
+  stage: test
+  tags:
+    - docker
+  before_script:
+    - source activate ${CI_CONDA_ENVIRONMENT}
+    - python -m pip install --upgrade --no-index --find-links ./dist vtkwriters
+  script:
+    - python test/bulk.py
+    - python test/test_zmap.py
+    - python test/two_triangles.py
+    - python test/test_polyhedron.py
