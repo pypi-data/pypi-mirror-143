@@ -1,0 +1,12 @@
+torchinfo/__init__.py,sha256=uNzAmpkF2c28_GKl0vYailQhC5Q_dk48oH7scpUUGAY,286
+torchinfo/enums.py,sha256=mAGaAK2NS1WEZ2hmF-DiN8F6ykise8mDuPvaVrdejV4,713
+torchinfo/formatting.py,sha256=c-F1t8TmxbciwNoaxGQFrS9IJaP9DZ60bvJskHPQXYU,6621
+torchinfo/layer_info.py,sha256=3jy2RxVMBmHqL1nDYtYh89Mkp00N7OaC-T1l_AyVVbg,9570
+torchinfo/model_statistics.py,sha256=d1lVSy7A_KdhprN9A0DBQPu_yeUsiy0lNMeBHMhx18M,3450
+torchinfo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchinfo/torchinfo.py,sha256=3Y0TApqDGRuBCmR42oR5WIYLHwaZE6CJSNq8jYe3q_c,21397
+torchinfo-1.6.4.dist-info/LICENSE,sha256=yNowqgojcswwkF977bU1E4BNXYzuUTwECcZyaTTIRXw,1065
+torchinfo-1.6.4.dist-info/METADATA,sha256=o0r9MGnCu6o5KtwVFXOW86R9EHwYNt2XFK27qOKbU8M,21605
+torchinfo-1.6.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchinfo-1.6.4.dist-info/top_level.txt,sha256=R0QQaacQgrZDejQC0vBz7xfG1KT2TJKCQFPb_JTA4m8,10
+torchinfo-1.6.4.dist-info/RECORD,,
