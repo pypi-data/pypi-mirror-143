@@ -1,0 +1,17 @@
+osu/__init__.py,sha256=Yc-8erk8fsFgsDkVQKrWbRtQxacSKQMyPRU7l4fQWE0,234
+osu/auth.py,sha256=RT8f0xA3nC0EQH5L04_pP8L4pN340K5sLBv_Uxf0yAs,5980
+osu/client.py,sha256=mfrWcnbZaTixv3o5IcSqjifnf6UO_u2XZNEaE8cRPQY,49662
+osu/constants.py,sha256=q34c8iRzekKXVj9TheLtELA8zen-svxzZfMTA0KGdOQ,295
+osu/exceptions.py,sha256=TSnpMV_jzp4x3LAPS7tgG7DQdmv-zzeBaUJXGV88RO4,97
+osu/http.py,sha256=p-skbj_-TDq44LVh3-kwcrolCVfzjKd9P8lqyUKV5yY,2719
+osu/notification.py,sha256=lQUZ5ZhQcuz10hoYWwzDfM1K3DgJAYYVWH8dCnzFjWg,4028
+osu/objects.py,sha256=HwrNimVVXOxtDSAyuyyJRvZliYRoeYZgt-jaG7HhXMc,85396
+osu/util.py,sha256=eMC36MJbZzkW_eEAd-tp027kVH0sZMZt5-phykNbrKo,1180
+osu/asyncio/__init__.py,sha256=RwkZuJDCAeQE5wi4TQoa928vf_ghjowPgcJ1PBDwpHw,40
+osu/asyncio/client.py,sha256=-Hcsr7lt5o5B5e2P4zd5Dh_I9nFVEC7Od2xl_ucuPTI,49546
+osu/asyncio/http.py,sha256=E6LFfkGeXc1czfiILIVu1gZRRkSenqHf2TRHM8SO0Eo,2798
+osu.py-0.2.5.dist-info/LICENSE,sha256=rub5eW_s8ULjqESxC63e7llG-oQ0e_5-wKqVKWyeUfY,1086
+osu.py-0.2.5.dist-info/METADATA,sha256=gcycqzXVvztHcO1_1xkX6zIW4AsbTnumXuA_idNPcfE,831
+osu.py-0.2.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+osu.py-0.2.5.dist-info/top_level.txt,sha256=zx-pgIv7UAOjuUsiuZkUW4GFPbYRSOcm1Nt3GQYa0E8,4
+osu.py-0.2.5.dist-info/RECORD,,
