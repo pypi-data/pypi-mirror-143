@@ -1,0 +1,7 @@
+setup.py
+sk_wzc/__init__.py
+sk_wzc.egg-info/PKG-INFO
+sk_wzc.egg-info/SOURCES.txt
+sk_wzc.egg-info/dependency_links.txt
+sk_wzc.egg-info/requires.txt
+sk_wzc.egg-info/top_level.txt
