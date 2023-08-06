@@ -1,0 +1,3 @@
+pyworld
+scipy
+soundfile

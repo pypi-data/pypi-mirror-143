@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/voicetransformer/__init__.py
+src/voicetransformer/__main__.py
+src/voicetransformer/voice.py
+src/voicetransformer.egg-info/PKG-INFO
+src/voicetransformer.egg-info/SOURCES.txt
+src/voicetransformer.egg-info/dependency_links.txt
+src/voicetransformer.egg-info/requires.txt
+src/voicetransformer.egg-info/top_level.txt
