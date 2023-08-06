@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lambda-event-schema-tool"
+version = "0.8.0"
+description = "Creating Shareable test events"
+license = "MIT"
+authors = ["Michael Brewer"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.21.24"
+pick = "^1.2.0"
+
+[tool.poetry.dev-dependencies]
+setuptools = "^60.10.0"
+wheel = "^0.37.1"
+twine = "^3.8.0"
+isort = "^5.10.1"
+black = "^22.1.0"
+pytest = "^7.1.1"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["setuptools", "wheel", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
