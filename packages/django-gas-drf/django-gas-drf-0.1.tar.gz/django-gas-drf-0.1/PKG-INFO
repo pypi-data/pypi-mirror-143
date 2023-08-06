@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: django-gas-drf
+Version: 0.1
+Summary: DRF support for django-gas
+Home-page: https://git.negromate.rocks/shagi/gas-drf
+Author: Ales (Shagi) Zabala Alava
+Author-email: shagi@gisa-elkartea.org
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+GAS
+===
+
+[DRF](https://www.django-rest-framework.org/) support for [django-gas](https://pypi.org/project/django-gas/).
+
+Helps working with an API restricted to gas roles.
+
+
+Instalation
+-----------
+
+1. Install `django-gas-drf` package:
+
+    pip install django-gas-drf
+
+3. Add `gas-drf` urls to project's `urls.py`:
+
+    import gas_drf.sites
+
+    urlpatterns = [
+        path('control-panel-api/', include(gas_drf.sites.site.urls)),
+    ]
+
+
+Integration
+-----------
+
+Create a submodule `gas.drf_config` in your django app.
+
+        -\ yourapp
+            \gas
+                __init__.py
+                drf_config.py
+            admin.py
+            models.py
+            ...
+
+Edit this `drf_config.py` file to register your code into `gas-drf`. For
+examples look at `drf_gas.gas.users_drf_config` module.
+
+Gas DRF comes with basic user management. To enable this import
+`gas_drf.gas.users_drf_config` from any `gas.drf_config` of your installed
+apps.
+
+Licenses
+--------
+
+The license of the code is GPLv3.
+
+Changelog
+=========
+
+0.1
+---
+
+Initial relase.
+
+
