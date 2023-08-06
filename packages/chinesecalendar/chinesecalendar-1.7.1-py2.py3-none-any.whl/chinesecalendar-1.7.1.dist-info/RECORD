@@ -1,0 +1,9 @@
+chinese_calendar/__init__.py,sha256=Ild-00UiSspqmLd8NLg7yFD87Vidy6bQHEO39mdxwUA,616
+chinese_calendar/constants.py,sha256=Yh3bsXAlMTyv7gRbx35PS6PhBY7yBmhNaI8GRiDAe40,58607
+chinese_calendar/solar_terms.py,sha256=NRkQA1Tf4VdxvU7DSimbF1Rsc-tRrfeK4PdTd4_3UMU,4517
+chinese_calendar/utils.py,sha256=eGuAKoMTQR2efQcO7cyTx3MkiRTTzrNWZibx5P1oXKI,6771
+chinesecalendar-1.7.1.dist-info/LICENSE,sha256=MGZndf4FevPFa1uSJIad4h0noX7Ybqvof1a1i1_gL58,1066
+chinesecalendar-1.7.1.dist-info/METADATA,sha256=zK8U5v3s6a9YeekI_UHN1dxB0BfjqAcipHSH_XdvRH4,2722
+chinesecalendar-1.7.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+chinesecalendar-1.7.1.dist-info/top_level.txt,sha256=Ix2wv75bBro3Z1S7DunQkz_4Xc6m1XMWhHzj58KpBfE,17
+chinesecalendar-1.7.1.dist-info/RECORD,,
