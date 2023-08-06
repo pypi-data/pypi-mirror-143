@@ -1,0 +1,8 @@
+setup.py
+/home/yangxiaoyu/github/precode_bk/precode/paser.c
+windshield/__init__.py
+windshield.egg-info/PKG-INFO
+windshield.egg-info/SOURCES.txt
+windshield.egg-info/dependency_links.txt
+windshield.egg-info/requires.txt
+windshield.egg-info/top_level.txt
