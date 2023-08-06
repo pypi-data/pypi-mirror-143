@@ -1,0 +1,3 @@
+[console_scripts]
+sfzlint = sfzlint.cli:sfzlint
+sfzlist = sfzlint.cli:sfzlist
