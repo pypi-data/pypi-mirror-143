@@ -1,0 +1,13 @@
+pipfile_upgrade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipfile_upgrade/__main__.py,sha256=HVEDhFnRVicC4NhsvVksYChzRn0Dmf2uwdqTzSNc-TM,336
+pipfile_upgrade/argument_parser.py,sha256=t1mmToEXXuBl-qzwXdQSahjia8QX4xrzQNZywJtwxgY,1472
+pipfile_upgrade/dataclasses.py,sha256=4A71AEGp8nj9KzG6aFwc_i3l732qm94s1EutYvxYQgE,2785
+pipfile_upgrade/errors.py,sha256=dF7q71vgZU5Lp9mYZi2L-7UOu3eqBAzifnRFBwi0QyA,368
+pipfile_upgrade/pipfile.py,sha256=WxORXqYkHSrXCzN8m_mU_PnNi8AbEkR6bdN8Falo00Y,1620
+pipfile_upgrade/tomlfile.py,sha256=9pEJ_hPAO2P8J9JYQv73hTTcQ1SgWJZiIZjf6uX-czE,537
+pipfile_upgrade-0.0.2.dist-info/LICENSE.txt,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+pipfile_upgrade-0.0.2.dist-info/METADATA,sha256=1FrJd7CZ0jOKGh0OBMkrfi64NEDkNal5hx47cSMgVUc,856
+pipfile_upgrade-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pipfile_upgrade-0.0.2.dist-info/entry_points.txt,sha256=4t0O8pz-5UGkKjqUh6Txr5yxfGQMBUFOdzKB-HwfsWA,67
+pipfile_upgrade-0.0.2.dist-info/top_level.txt,sha256=njy-tDyHSOgJUTvVcCzvU9JdrSZJow94LMMlS3BrFQs,16
+pipfile_upgrade-0.0.2.dist-info/RECORD,,
