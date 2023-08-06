@@ -1,0 +1,11 @@
+geopandas>=0.10
+pygeos>=0.12
+
+[dev]
+black
+nbstripout
+pytest
+pytest-cov
+
+[networkx]
+networkx>=1.9
