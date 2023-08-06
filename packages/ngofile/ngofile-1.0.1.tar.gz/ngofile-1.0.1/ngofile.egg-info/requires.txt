@@ -1,0 +1,6 @@
+future
+python-gettext
+python-dateutil
+click
+pathlib
+boto
