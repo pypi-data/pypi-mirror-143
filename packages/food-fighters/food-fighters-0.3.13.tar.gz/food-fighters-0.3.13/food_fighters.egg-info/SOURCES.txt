@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+backend/__init__.py
+backend/app.py
+backend/project.py
+backend/data/recipe_schema.sql
+backend/data/recipes.db
+food_fighters.egg-info/PKG-INFO
+food_fighters.egg-info/SOURCES.txt
+food_fighters.egg-info/dependency_links.txt
+food_fighters.egg-info/entry_points.txt
+food_fighters.egg-info/requires.txt
+food_fighters.egg-info/top_level.txt

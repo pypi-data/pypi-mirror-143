@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-restplus
+SQLAlchemy
+Werkzeug
+flake8
+pylint
+pytest
+pytest-cov
+python-dotenv
