@@ -1,0 +1,27 @@
+[reahl.configspec]
+config = reahl.paypalsupport.paypalconfig:PayPalSiteConfig
+
+[reahl.eggs]
+Egg = reahl.component.eggs:ReahlEgg
+
+[reahl.migratelist.5.2]
+0 = reahl.paypalsupport.migrations:CreatePaypal
+
+[reahl.persistlist]
+0 = reahl.paypalsupport.paypalsupport:PayPalOrder
+
+[reahl.translations]
+reahl-paypalsupport = reahl.messages
+
+[reahl.versiondeps.5.2]
+paypal-checkout-serversdk = thirdpartyegg:_
+reahl-component = egg:5.2
+reahl-domain = egg:5.2
+reahl-sqlalchemysupport = egg:5.2
+reahl-web = egg:5.2
+reahl-web-declarative = egg:5.2
+setuptools = thirdpartyegg:32.3.1
+
+[reahl.versions]
+5.2 = 5.2
+

@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: reahl-paypalsupport
+Version: 5.2.1
+Summary: Support for payments via PayPal.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: paypal-checkout-serversdk
+Requires-Dist: reahl-component (<5.3,>=5.2)
+Requires-Dist: reahl-domain (<5.3,>=5.2)
+Requires-Dist: reahl-sqlalchemysupport (<5.3,>=5.2)
+Requires-Dist: reahl-web-declarative (<5.3,>=5.2)
+Requires-Dist: reahl-web (<5.3,>=5.2)
+Requires-Dist: setuptools (>=32.3.1)
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+This package contains add-on facilities using which you can process payments via PayPal. 
+
