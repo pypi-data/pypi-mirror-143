@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: bjcli
+Version: 0.0.2
+Summary: Simple command line utility to run Bjoern WSGI
+Home-page: UNKNOWN
+Author: Kapustlo
+Author-email: <kapustlo@protonmail.com>
+License: UNKNOWN
+Keywords: python,bjoern,cli,bjoern-cli,wsgi
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+Make this baby run on Bjoern                                                                                         │
+
+positional arguments:                                                                                                │
+  wsgi_app    Path to wsgi application                                                                               │
+options:                                                                                                             │
+  -h, --help  show this help message and exit                                                                        │
+  -w WORKERS                                                                                                         │
+  -p PORT                                                                                                            │
+  -i HOST
+
+
