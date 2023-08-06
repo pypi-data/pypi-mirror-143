@@ -1,0 +1,36 @@
+{%- if filetype_loop == 0 %}
+```mermaid
+flowchart LR;
+{%- for interface in to_parse_arp %}
+{%-     if to_parse_arp[interface].ipv4 is defined %}
+{%-         for neighbor in to_parse_arp[interface].ipv4.neighbors %}
+{{ interface }} <--> {{ neighbor }} <--> {{ to_parse_arp[interface].ipv4.neighbors[neighbor].link_layer_address }}
+{%-        endfor %}
+{%-     endif %}
+{% endfor %}
+```
+{%- else %}{%- if filetype_loop == 1 %}
+{%- for interface in to_parse_interface %}
+```mermaid
+classDiagram
+
+}
+```
+{%- endfor %}
+{%- else %}{%- if filetype_loop == 2 %}
+{%- for interface in to_parse_interface %}
+```mermaid
+stateDiagram
+
+}
+```
+{%- endfor %}
+{%- else %}{%- if filetype_loop == 3 %}
+{%- for interface in to_parse_interface %}
+```mermaid
+erDiagram
+
+}
+```
+{%- endfor %}
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}
