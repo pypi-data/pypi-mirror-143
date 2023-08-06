@@ -1,0 +1,12 @@
+backlog/__init__.py,sha256=eaIyjG7W7ExZxAGLqmkYs4lZDfyUom4BT7bi066eimA,795
+backlog/api.py,sha256=Hb41hgb_XXxOKEaDlYTC_9LwJyi09i86HaZsT25PPVQ,4358
+backlog/models/__init__.py,sha256=0iRht-GEwT4URKDqlyf49q82EJfDScs99IYXY87qZuo,787
+backlog/models/base.py,sha256=GjAu7v7_yINmMTGvXIfqr95WOockL43bY0fJUSDu4Jg,2415
+backlog/models/project.py,sha256=RYv245bmYnSHa_GuvoAdrccmRbNSb1UtqTn8oW16AjM,1654
+backlog/models/space.py,sha256=6N8-iBXDguhlkeJmn6md7QXC2w0cQNKHCwgicyqb7Us,1451
+backlog/models/user.py,sha256=aWd7nRSScGAbGWe_fD9rNqIgCIyCV14zWQrmEyhcD5Y,1712
+backlog_api4py-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+backlog_api4py-0.1.1.dist-info/METADATA,sha256=5ujL_LcYwKEgoypC_9-gBgBCZCrvW8lgabUqFqRZsOM,1007
+backlog_api4py-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+backlog_api4py-0.1.1.dist-info/top_level.txt,sha256=qzHRU2P6F24ntkXGiIBl4Qf_AlV0BRebSc5tuLlcOIE,8
+backlog_api4py-0.1.1.dist-info/RECORD,,
