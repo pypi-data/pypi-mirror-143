@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: consbasiccalculator
+Version: 0.0.1
+Summary: A very basic calculator produced for practice
+Home-page: UNKNOWN
+Author: Conor ORegan
+Author-email: battlekill770@gmail.com
+License: MIT
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.md
+
+This is a very simple calculator i've put together in minutes.
+The calculator takes 2 numbers and either adds, subtracts or multiplies and divides
+
+
+Change LOG
+===========
+
+0.0.1 (21/03/22)
+----------------
+- First Release
+
