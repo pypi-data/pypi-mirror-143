@@ -1,0 +1,4 @@
+radical.utils>=1.12
+radical.saga>=1.12
+pymongo<4
+setproctitle
