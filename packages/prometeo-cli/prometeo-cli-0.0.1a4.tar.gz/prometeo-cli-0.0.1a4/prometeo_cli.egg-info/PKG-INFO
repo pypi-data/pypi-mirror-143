@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: prometeo-cli
+Version: 0.0.1a4
+Summary: CLI Tool for the Prometeo Open Banking AP
+Home-page: https://github.com/pypa/sampleproject
+Author: Diego Moraes
+Author-email: dmoraes11cb@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# prometeo-cli
+Cli for PrometeoAPI
+
+
