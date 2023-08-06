@@ -1,0 +1,13 @@
+iplotter/__init__.py,sha256=8th7fMdz9gc8vjFLNJ2Ml82nwZeYHKObwbscDLEkPr0,296
+iplotter/base_plotter.py,sha256=t1TPuXGgBrSRLXUtVgp2kfGVF41BqU5WmnZ7q27cgWM,1217
+iplotter/c3_plotter.py,sha256=gu1AcZNAeYFHI3TbKEQzmO-V18W4Q5HV-aMrGrNJ1R8,2788
+iplotter/chartist_plotter.py,sha256=5EW1Ad0GdfGfbJv6SlUJAkR9uZTygfQ3dthDr7oW7aM,3165
+iplotter/chartjs_plotter.py,sha256=r8fxktg_H9E-zysJeMtORCH29veKuqVYPwN6aB0YA4s,4210
+iplotter/export.py,sha256=MZaAm4HC4LM3C3RsZeaPq_gvaxJw5P7-WTFpg40Zduc,1280
+iplotter/google_plotter.py,sha256=TN6hdRA9UmPkHRrFb-_7nMhyq6ot38u8VCqLfTQlp0s,3892
+iplotter/plotly_plotter.py,sha256=KmjlSy6CviJYDn0nYNybg9I7iOLC_1HDYfTlXy5oowQ,2940
+matatika_iplotter-1.3.0.dist-info/LICENSE,sha256=55LwvRixCXdeMjpScLiGuHUrdzcvMwrAIbZkI3TkE7s,1067
+matatika_iplotter-1.3.0.dist-info/METADATA,sha256=w6ukv6e2V3KdL6VDQlsNzpifMqNjixWhPJkbwruEqrU,13450
+matatika_iplotter-1.3.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+matatika_iplotter-1.3.0.dist-info/top_level.txt,sha256=QSQVXH334_eyGNaowdSUGt2stiz2oMk15F6BhYqb__4,9
+matatika_iplotter-1.3.0.dist-info/RECORD,,
