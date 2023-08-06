@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: sparc-dataset-tools
+Version: 0.1.3
+Summary: A collection of tools to help with creating SPARC datasets.
+Home-page: https://github.com/ABI-Software/sparc-dataset-tools.git
+Author: Hugh Sorby
+Author-email: h.sorby@auckland.ac.nz
+License: Apache Software License
+Description: 
+        SPARC Dataset Creation
+        ======================
+        
+        A package to help with creating SPARC datasets.
+        Currently, support is available to create scaffold based SPARC datasets.
+        
+        Install
+        -------
+        
+        SPARC dataset tools can be installed from PyPi.org with the following command::
+        
+          pip install sparc-dataset-tools
+        
+        Usage
+        -----
+        
+        How to use (can also be found using :code:`create-scaffold-dataset -h`):
+        
+        usage: :code:`create-scaffold-dataset [-h] dataset_dir mesh_config_file argon_document`
+        
+        Create a Scaffold based SPARC dataset from a scaffold description file and an Argon document.
+        
+        **positional arguments:**
+        
+        ================== =================================================
+          dataset_dir       root directory for new dataset.
+          mesh_config_file  mesh config json file to generate scaffold.
+          argon_document    argon document file to generate webGL files.
+        ================== =================================================
+        
+        **optional arguments:**
+        
+        =============     =================================
+         -h, --help        show this help message and exit
+        =============     =================================
+        
+        Run
+        ---
+        
+        To run the application create a virtual environment.
+        
+        ::
+        
+          python -m venv venv_sparc
+        
+        Activate the virtual environment::
+        
+          source venv_sparc/bin/activate
+        
+        For bash shells, or::
+        
+          venv_sparc\Scripts\activate
+        
+        For a windows :code:`cmd` prompt.
+        
+        With the activated virtual environment install the package.
+        
+        ::
+        
+          pip install sparc-dataset-tools
+        
+        Then execute the application to print out the usage information to test the script.
+        
+        ::
+        
+          create-scaffold-dataset -h
+        
+        Examples:
+        ---------
+        
+        ::
+        
+          create-scaffold-dataset <dataset_dir> <mesh_config_file> <argon_document>
+        
+        License
+        =======
+        
+        ::
+        
+        
+             Copyright 2022 University of Auckland
+          
+             Licensed under the Apache License, Version 2.0 (the "License");
+             you may not use this file except in compliance with the License.
+             You may obtain a copy of the License at
+          
+                 http://www.apache.org/licenses/LICENSE-2.0
+          
+             Unless required by applicable law or agreed to in writing, software
+             distributed under the License is distributed on an "AS IS" BASIS,
+             WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+             See the License for the specific language governing permissions and
+             limitations under the License.
+          
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst

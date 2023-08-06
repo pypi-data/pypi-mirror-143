@@ -1,0 +1,3 @@
+[console_scripts]
+create-scaffold-dataset = sparc.dataset.scaffold:main
+
