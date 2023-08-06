@@ -1,0 +1,10 @@
+simpletodo/__init__.py,sha256=hePi_wbLPv-It2ciHDt_JUyaK0BJOkmiVGI_MXDnYOE,137
+simpletodo/gui.py,sha256=DmtdtJGp__cdNZ5A3zEW6uYOu-knNsAUQZWrnTBCAlo,2092
+simpletodo/main.py,sha256=KAujG1nShuOI1aeuHFDwtfHoTwhzDrBAdVYEVO-Jzb8,12772
+simpletodo/model.py,sha256=Acc1gRyGSFMqXxqm_x8BTx5soVBHMUXm2R2BjsZBSb0,2059
+simpletodo/util.py,sha256=0f22nlaGwTbqGhd7Jvc4IBaXtb03LJTohuJMeoXo37E,9536
+simpletodo-0.1.8.dist-info/entry_points.txt,sha256=P_sIsmHx81B9AGvVukZQhV3KoYW9yuluKZlr2xIAfyM,44
+simpletodo-0.1.8.dist-info/LICENSE,sha256=3gdC2e9cP2hkIcWcXWK2MQ0k7CPZee0z4ZM6oBs4wKE,1086
+simpletodo-0.1.8.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+simpletodo-0.1.8.dist-info/METADATA,sha256=Jx-Kss30UIOwNUBttSIh6dFrYwkqGctdE0LTH5jHCkE,9473
+simpletodo-0.1.8.dist-info/RECORD,,
