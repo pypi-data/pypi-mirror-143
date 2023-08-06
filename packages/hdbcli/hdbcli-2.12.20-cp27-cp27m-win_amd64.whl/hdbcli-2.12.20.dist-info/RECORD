@@ -1,0 +1,9 @@
+pyhdbcli.pyd,SHA256=mSrbzBI37-0Zl2bR7G23S23tn6_w-qfi0ByP0zCUaLs,8110200
+hdbcli/__init__.py,SHA256=dbBVUHZnh2LtrNbjE04p1zmf23xRkBYXuPN_1ch17L8,163
+hdbcli/dbapi.py,SHA256=XvC3HqAFyxfOxSI2Wj_si7fOagc9WYJxgbUlXaVpySc,3174
+hdbcli/resultrow.py,SHA256=7pAwn9fRVBgU3x5120SnBvP85nGYfHA6paAsYD1Mafo,49
+hdbcli-2.12.20.dist-info/LICENSE,SHA256=1uXi_QWMFkSAF2fl4Vi-jR0HioxrvGGVe-3sr05KD74,12608
+hdbcli-2.12.20.dist-info/METADATA,SHA256=I7KxNuAaG1DdMOyzRM86gupwWm1LUrclV_5Ii3E3Qik,6333
+hdbcli-2.12.20.dist-info/WHEEL,SHA256=Yt_rpa18HI_NXs5dEYG1uWuZ-4QRLVJrN8TSetG3BOI,106
+hdbcli-2.12.20.dist-info/top_level.txt,SHA256=8LbnTZeduoYdRMjEGsfW-zEnFYceyInSnjZftZDOZuw,16
+hdbcli-2.12.20.dist-info/RECORD,,
