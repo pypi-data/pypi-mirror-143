@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+schemata/__init__.py
+schemata/exporters.py
+schemata/parser.py
+schemata/structures.py
+schematacode.egg-info/PKG-INFO
+schematacode.egg-info/SOURCES.txt
+schematacode.egg-info/dependency_links.txt
+schematacode.egg-info/top_level.txt
