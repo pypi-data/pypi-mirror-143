@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+PyPantry/__init__.py
+PyPantry/basket.py
+PyPantry/main.py
+PyPantry.egg-info/PKG-INFO
+PyPantry.egg-info/SOURCES.txt
+PyPantry.egg-info/dependency_links.txt
+PyPantry.egg-info/requires.txt
+PyPantry.egg-info/top_level.txt
