@@ -1,0 +1,11 @@
+inaSpeechSegmenter/__init__.py,sha256=PUIbeXKbEbyRaE-jLempTmWz_VPKeJSuyML01PezwnI,1233
+inaSpeechSegmenter/constants.py,sha256=n58gYclGLRfHI1dmXELlDO6yPcgrpe8UgpTfh9ED7bc,810
+inaSpeechSegmenter/features.py,sha256=fYeEvZLGN2eb5u7YX0kV74c1EQ2q3DpxwbEDxwE-cro,3631
+inaSpeechSegmenter/segmenter.py,sha256=j0DzdYEofdHs1L7GQrL7xi7riLF5LazXVd4o8UUXPuE,10330
+inaSpeechSegmenter/sidekit_mfcc.py,sha256=WaHlqDX_JO6wnIw5aj8Qt8yee_q8zzDw4LDeYLLzp8s,13781
+inaSpeechSegmenter/viterbi_utils.py,sha256=RQ_iAleX4qrKPaz8SdRdxW3bmsYDuhlI0dfxd8gQshg,1763
+ina_segmenter_modified-1.0.0.dist-info/LICENSE,sha256=oAUIWp7IHUToF3rICnUIJkpWSNizeStnRK3wHEbz_fk,1102
+ina_segmenter_modified-1.0.0.dist-info/METADATA,sha256=RlIYJtKgGllT1zSCsnnjA1Q-PO7mvFV0aTftB6S8PI0,1014
+ina_segmenter_modified-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ina_segmenter_modified-1.0.0.dist-info/top_level.txt,sha256=nbBBzx5tRB_2-fJLwTnF4JCn0PSiNu_j49ImqX8nX48,19
+ina_segmenter_modified-1.0.0.dist-info/RECORD,,
