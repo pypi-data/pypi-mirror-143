@@ -1,0 +1,11 @@
+dbnomics_solr/__init__.py,sha256=UlXx0mFWD7wdvzX-2FdNA0raX7RliWIxea4iob79n0w,44
+dbnomics_solr/cli.py,sha256=cleMVZ_Sca8RjudW7mskVzl0T_uc-rF4-A2t3tdhsoY,6534
+dbnomics_solr/dbnomics_solr_client.py,sha256=E1UtX-meslMGLErYaVXnQ4o-We37KOS1n28emR1ogrM,15042
+dbnomics_solr/hash_utils.py,sha256=_96af0NiX8qe0Slw31aAm74pPYSg4_OMxoyLnssnn8Q,308
+dbnomics_solr/services/__init__.py,sha256=m9p-SllfZnym4aPjHZRskZx6CKlwm3sL72wGitmqnd0,30
+dbnomics_solr/services/index_provider.py,sha256=RNaicDl4WmPHEdvh-dCbR19LE9AXtbI5SsybH5IQphE,4198
+dbnomics_solr-1.1.0.dist-info/entry_points.txt,sha256=gU0CUa32Yyds47lJiz_pulSZ7BtRrxfGzEFNPjmZ32I,55
+dbnomics_solr-1.1.0.dist-info/LICENSE,sha256=RxT_NC0KskgJB1QadCGHeewrOkL6XKRnudIGB3S85gM,34452
+dbnomics_solr-1.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+dbnomics_solr-1.1.0.dist-info/METADATA,sha256=nDiwfk6W_Ljx3WvuMSDWeLz-lKkXmt2DhP-ecNyh2-w,991
+dbnomics_solr-1.1.0.dist-info/RECORD,,
