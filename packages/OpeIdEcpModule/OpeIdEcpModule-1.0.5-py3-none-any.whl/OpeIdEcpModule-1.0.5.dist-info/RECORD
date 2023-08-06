@@ -1,0 +1,11 @@
+OpeIdEcpModule/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OpeIdEcpModule/ecp_xslt_flagument.py,sha256=d1KCyMzynIEmMKYUH79L5pd3kTUjT6EYVwDBWjOojV4,3135
+OpeIdEcpModule/handler_ecp_module.py,sha256=_eW2IkghhSAdQwwoDI3a-xWZngQvPIM27xwI_s_rYKo,2903
+OpeIdEcpModule/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OpeIdEcpModule/entities/ecp_session_info.py,sha256=KsoKdOvBG2O_37XOgFC0UNpZTtnlQ8YOw0zPO2GM_vg,746
+OpeIdEcpModule/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OpeIdEcpModule/services/ecp_session_service.py,sha256=7I8ilPv7ehzQqMBhqhHi8Jiq6wyh6db6pfDbtGkAUuk,5755
+OpeIdEcpModule-1.0.5.dist-info/METADATA,sha256=h42L7j9Gzp8hLBUIdl6g8CmZc5p29iNzlfMgAaBqcJU,763
+OpeIdEcpModule-1.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+OpeIdEcpModule-1.0.5.dist-info/top_level.txt,sha256=yU2U44NHxgDRtlEwpZiOJmEoaVMxzjSy3fr4l12jtzM,15
+OpeIdEcpModule-1.0.5.dist-info/RECORD,,
