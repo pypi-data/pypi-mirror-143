@@ -1,0 +1,17 @@
+sanic_discord/__init__.py,sha256=2j5wrOKfQPZjYQiziHdvcNNneIGQItB2vLj-DHq-aaE,51
+sanic_discord/client.py,sha256=Tx7qIzHRwqEW4sxSxDEsS7X2LtvMkJT2RxfPocbDbTc,1837
+sanic_discord/config.py,sha256=C7O_m2wNxq1SpeobkEw7hmeOxjF_Mx64V6XKtHmAqv4,256
+sanic_discord/http.py,sha256=9c1mFNixJjUHrO6_YNuO2AqJtLV4D0IbA3NUBwbYtnI,795
+sanic_discord/slashlib/__init__.py,sha256=aBEwZeh5-kiLbvTBpcsHYmTbmW4Rzr3WoxpSmzLrvdk,67
+sanic_discord/slashlib/bot.py,sha256=nAv8f8ZR0rTszxuoPMftTLSrFFVCNYr-PUr1xUX0vyg,7023
+sanic_discord/slashlib/cogs.py,sha256=Kat3hjIJfbusEr-Pppyj7MoLxD1ZuD1hjAPyA9YrOY8,911
+sanic_discord/slashlib/interactions.py,sha256=-cxT7sgcg_gEwxFS1vKp1A8Kk7vs6ICuMf8ioWnChgc,2601
+sanic_discord/slashlib/types/__init__.py,sha256=iACfbdmrsBuJWSQumyI7tydFTq9TvdjpWIsl9l6cgzw,99
+sanic_discord/slashlib/types/commands.py,sha256=PTR9QhUUW725qiIJ8utRtHV-_2lv0VY-w2uO-b3Zf44,2689
+sanic_discord/slashlib/types/embeds.py,sha256=b-ASS1il3MHtU-9xgoRpmHaC6W-xxZOAaNA4cAGNT8s,258
+sanic_discord/slashlib/types/user.py,sha256=IofCSQCZ2f7orDSHVtG3e5jEdAhrxhtslAGxffh3DW4,366
+sanic_discord-1.0.0a2.dist-info/LICENSE,sha256=RlrOetUhDMFjEZbsqQuhd5j-qjxgarO5fklxAVPYock,1060
+sanic_discord-1.0.0a2.dist-info/METADATA,sha256=NL85_a0XhPgACoZHGyAfnPjIeLz5QFMLu9QGbtpi_9Q,1063
+sanic_discord-1.0.0a2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sanic_discord-1.0.0a2.dist-info/top_level.txt,sha256=XMeFQ8thXVJAbg1BQ0SWcAtUsHgwbFuKUW8TY0_X4Zk,14
+sanic_discord-1.0.0a2.dist-info/RECORD,,
