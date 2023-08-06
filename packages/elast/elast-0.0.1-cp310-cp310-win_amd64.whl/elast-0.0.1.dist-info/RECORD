@@ -1,0 +1,13 @@
+elast/__init__.py,sha256=Uo-BAtRYn7OKtDrtcCwTHNDaRwyuibnTZcjc2I0lu7g,156
+elast/dom.py,sha256=GCC5Od3H8dvlRN_YXQiJoSbPMvLQp5OYtO8nYiXjDjI,2341
+elast/elast.cp310-win_amd64.pyd,sha256=efwN2ZmQHfGcR20Zx1YZOGMi7SiJZPPrky_UI_1GE_s,1771008
+elast/expr.py,sha256=h-shlwvqQ6cwutBXr9evIBoHzoIB-azt4ov6mA36mcY,6478
+elast/mesh.py,sha256=IyOYc0au3aZvxCiI_Zfau-BBwKGS4SSQWAYnniW3jVM,5128
+elast-0.0.1.data/data/README/README.md,sha256=-8AAb6hoqYq3SA5F0l3ym7i07J-Al6ICK45konSYRqQ,684
+elast-0.0.1.data/data/licenses/APACHE2,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+elast-0.0.1.data/data/licenses/MIT,sha256=jBMu7f7Rlfn-QCQS4DI-hTe1l7dK5LwkcstRQhWXjTQ,1094
+elast-0.0.1.dist-info/LICENSE,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+elast-0.0.1.dist-info/METADATA,sha256=Z47wMKP80n4sjdVST2UkYIA4-BqcdqJO_hWh70saJbc,1173
+elast-0.0.1.dist-info/WHEEL,sha256=W26pYN7HLsBT1jrDSL9udgf_mdNKJmYmL23sIP-FcgM,102
+elast-0.0.1.dist-info/top_level.txt,sha256=M-_0o8rKxLp9CmmHV9RTGUWcbhLYnZj-5MHxEjf8adY,6
+elast-0.0.1.dist-info/RECORD,,
