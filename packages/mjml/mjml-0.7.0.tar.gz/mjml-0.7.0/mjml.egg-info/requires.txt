@@ -1,0 +1,9 @@
+docopt
+jinja2
+lxml
+
+[testing]
+ddt
+FakeFSHelpers
+HTMLCompare>=0.3.0
+PythonicTestcase
