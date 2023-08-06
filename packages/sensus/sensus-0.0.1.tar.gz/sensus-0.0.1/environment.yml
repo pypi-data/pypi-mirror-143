@@ -1,0 +1,33 @@
+name: hut-dev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8 #need to pin to avoid issues with builds
+  # - cython
+  # - compilers
+  # - openblas
+  # - nomkl
+  # - setuptools=59.2.0
+  # For testing
+  # - pytest
+  # - pytest-cov
+  # - pytest-xdist
+  # - hypothesis
+  # For type annotations
+  # - mypy=0.940
+  # For building docs
+  # - sphinx=4.2.0
+  # - sphinx-panels
+  # - numpydoc=1.2.0
+  # - ipython
+  # - scipy
+  # - pandas
+  # - matplotlib
+  # - pydata-sphinx-theme=0.7.2
+  # - breathe
+  # For linting
+  # - pycodestyle=2.7.0
+  # - gitpython
+  # Used in some tests
+  # - cffi
+  # - pytz

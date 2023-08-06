@@ -1,0 +1,39 @@
+FROM [--platform=<platform>] <image> [AS <name>]
+Or
+
+FROM [--platform=<platform>] <image>[:<tag>] [AS <name>]
+Or
+
+FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
+
+ARG  CODE_VERSION=latest
+LABEL org.opencontainers.image.authors="zliondev@gmail.com"
+MAINTAINER 'Farzad'
+
+ENV MY_NAME="John Doe"
+ENV MY_DOG=Rex\ The\ Dog
+ENV MY_CAT=fluffy
+ENV MY_NAME="John Doe" MY_DOG=Rex\ The\ Dog \
+    MY_CAT=fluffy
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y ...
+#OR
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y ...
+
+RUN echo 'HUT des adler DockerFile is running'
+
+ADD [--chown=<user>:<group>] <src>... <dest>
+ADD [--chown=<user>:<group>] ["<src>",... "<dest>"]
+
+EXPOSE <port> [<port>/<protocol>...]
+
+COPY [--chown=<user>:<group>] <src>... <dest>
+COPY testfile.txt c:\\
+
+RUN dir c:\
+CMD command param1 param2
+
+USER <user>[:<group>]
+
+WORKDIR /path/to/workdir

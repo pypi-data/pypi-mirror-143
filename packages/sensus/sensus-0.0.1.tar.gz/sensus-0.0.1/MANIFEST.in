@@ -1,0 +1,8 @@
+include *.txt
+include *.yml
+include DockerFile
+include Makefile
+recursive-include dist *.whl
+recursive-include tests *.ipynb
+recursive-include tests *.py
+recursive-include tests *.txt
