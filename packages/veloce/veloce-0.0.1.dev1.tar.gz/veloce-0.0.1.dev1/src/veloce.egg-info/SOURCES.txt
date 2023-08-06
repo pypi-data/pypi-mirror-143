@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/veloce.egg-info/PKG-INFO
+src/veloce.egg-info/SOURCES.txt
+src/veloce.egg-info/dependency_links.txt
+src/veloce.egg-info/top_level.txt
