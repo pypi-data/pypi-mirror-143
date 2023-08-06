@@ -1,0 +1,50 @@
+{% set name = "pycraf-gui" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "e99c4f72aaef9d72dfa43778abd085b7b837e930ca1cd7d0d4885adce1230527" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: True  # [py27]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+
+  host:
+    - python
+    - pip
+    - setuptools
+    - setuptools_scm
+    - astropy
+    - numpy
+    - pycraf
+
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - astropy
+    - pycraf
+    - pyqt
+
+about:
+  home: https://github.com/bwinkel/{{ name }}
+  license: GPL-3.0
+  license_family: GPL
+  license_file: COPYING.GPLv3.txt
+  summary: 'pycraf-gui: simple gui for pycraf path attenuation calculation'
+  description: |
+      Pycraf-GUI is a simple user interface for pycraf, which can be calculate
+      path propagation loss based on Rec. ITU-R P.452.
+  dev_url: https://github.com/bwinkel/{{ name }}
+
+extra:
+  recipe-maintainers:
+    - bwinkel

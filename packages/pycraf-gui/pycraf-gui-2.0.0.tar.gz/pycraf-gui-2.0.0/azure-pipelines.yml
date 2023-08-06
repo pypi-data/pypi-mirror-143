@@ -1,0 +1,213 @@
+trigger:
+  tags:
+    include:
+    - v*
+  branches:
+    include:
+    - master
+
+pr:
+- master
+
+variables:
+  package_name: pycraf
+  is.tag: ${{ startsWith(variables['Build.SourceBranch'], 'refs/tags/') }}
+  publish.wheels: ${{ startsWith(variables['Build.SourceBranch'], 'refs/tags/') }}
+  is.master: ${{ startsWith(variables['Build.SourceBranch'], 'refs/heads/master') }}
+  is.pullrequest: ${{ startsWith(variables['Build.Reason'], 'PullRequest') }}
+  # is.tag: ${{ true }}
+  # why is the following not working? --> because Agent.OS is not available
+  # at compile time (would be necessary for template expressions to work)
+  is.linux: ${{ startsWith(variables['Agent.OS'], 'Linux') }}
+  is.macos: ${{ startsWith(variables['Agent.OS'], 'Darwin') }}
+  is.win: ${{ startsWith(variables['Agent.OS'], 'Windows') }}
+
+jobs:
+
+- job:
+  displayName: Conda
+
+  variables:
+    astropy.version: ''
+    pytest.version: ''
+    # qt.version: '>=5.9'
+    # pytestqt.version: '<4'
+    qt.version: ''
+    pytestqt.version: ''
+
+  strategy:
+    matrix:
+      linux38:
+        imageName: 'ubuntu-latest'
+        python.version: '3.8'
+        py_whl: cp38-
+        astropy.version: '4'
+        # qt.version: '>=5.11'
+        # pytestqt.version: '>=4'
+        # tarball should only be published by one thread, as it is version-
+        # independent
+        build.tarball: ${{ true }}
+        publish.tarball: ${{ eq(variables['is.tag'], true) }}
+      # linux39:
+      #   imageName: 'ubuntu-latest'
+      #   python.version: '3.9'
+      #   py_whl: cp39-
+      # linux310:
+      #   imageName: 'ubuntu-latest'
+      #   python.version: '3.10'
+      #   py_whl: cp310-
+      # mac38:
+      #   imageName: 'macos-10.15'
+      #   python.version: '3.8'
+      #   astropy.version: '4'
+      # mac39:
+      #   imageName: 'macos-10.15'
+      #   python.version: '3.9'
+      # mac310:
+      #   imageName: 'macos-10.15'
+      #   python.version: '3.10'
+      # win38:
+      #   imageName: 'windows-latest'
+      #   python.version: '3.8'
+      #   astropy.version: '4'
+      # win39:
+      #   imageName: 'windows-latest'
+      #   python.version: '3.9'
+      # win310:
+      #   imageName: 'windows-latest'
+      #   python.version: '3.10'
+
+  pool:
+    vmImage: $(imageName)
+
+  steps:
+
+  - bash: |
+      sudo chown -R $USER $CONDA
+    displayName: Fix a conda bug on MacOS
+    condition: startsWith(variables['Agent.OS'], 'Darwin')
+
+  - bash: |
+      echo "##vso[task.prependpath]$CONDA/bin"
+      echo "##vso[task.setvariable variable=conda.activate]source activate"
+      echo "##vso[task.setvariable variable=srtmdata]$(Agent.BuildDirectory)/srtm"
+    displayName: Add conda to PATH, Linux/MacOS
+    condition: not(startsWith(variables['Agent.OS'], 'Windows'))
+
+  - bash: |
+      echo "##vso[task.setvariable variable=display]:99.0"
+      /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1920x1200x24 -ac +extension GLX +render -noreset
+    displayName: Activate display, Linux
+    condition: startsWith(variables['Agent.OS'], 'Linux')
+
+  - bash: |
+      echo "##vso[task.prependpath]/usr/bin"
+    displayName: Bugfix MacOS command line interface
+    condition: startsWith(variables['Agent.OS'], 'Darwin')
+
+  # echo "##vso[task.setvariable variable=conda.activate]call $env:CONDA\Scripts\activate.bat"
+  - powershell: |
+      Write-Host "##vso[task.prependpath]$env:CONDA\Scripts"
+      echo "##vso[task.setvariable variable=conda.activate]call activate.bat"
+      echo "##vso[task.setvariable variable=srtmdata]$(Agent.BuildDirectory)\srtm"
+    displayName: Add conda to PATH, Windows
+    condition: startsWith(variables['Agent.OS'], 'Windows')
+
+  - script: |
+      echo on
+    displayName: Verbosity on Win
+    condition: startsWith(variables['Agent.OS'], 'Windows')
+
+  - script: |
+      echo "Build.SourceBranch" $(Build.SourceBranch)
+      echo "Agent.BuildDirectory" $(Agent.BuildDirectory)
+      echo "Agent.OS" $(Agent.OS) "/" ${{ variables['Agent.OS'] }}
+      echo "is.linux" $(is.linux) "/" ${{ variables['is.linux'] }}
+      echo "is.macos" $(is.macos) "/" ${{ variables['is.macos'] }}
+      echo "is.win" $(is.win) "/" ${{ variables['is.win'] }}
+      echo "conda.activate" $(conda.activate)
+      echo "is.tag" $(is.tag)
+      echo "is.pullrequest" $(is.pullrequest)
+      echo "publish.wheels" $(publish.wheels)
+      echo "python.version" $(python.version)
+      echo "py_whl" $(py_whl)
+      echo "numpy.version" $(numpy.version)
+      echo "astropy.version" $(astropy.version)
+      echo "imageName" $(imageName)
+    displayName: Show Vars
+
+  - script: |
+      conda install --yes -c conda-forge mamba
+      conda create --yes --quiet --name pycraf-env -c conda-forge
+    displayName: Create Anaconda environment
+
+  - script: |
+      $(conda.activate) pycraf-env
+      mamba install --yes --quiet -c conda-forge python=$(python.version) astropy=$(astropy.version) matplotlib numpy pip "pycraf>=2" pyqt$(pyqt.version) pytest$(pytest.version) pytest-astropy pytest-azurepipelines pytest-qt$(pytestqt.version) twine wheel setuptools-scm
+    displayName: Install Anaconda packages
+
+  - script: |
+      $(conda.activate) pycraf-env
+      pip install -e .
+    displayName: Building
+
+  - script: |
+      $(conda.activate) pycraf-env
+      pytest -v -rsx --dogui pycraf_gui
+    displayName: Testing package
+    condition: succeeded()
+
+
+  - task: TwineAuthenticate@1
+    inputs:
+      pythonUploadServiceConnection: pypi
+    displayName: 'Twine Authenticate'
+
+  # wheels not necessary (package is non-binary aka noarch)
+  # - bash: |
+  #     rm -rf build
+  #     docker run -e NPY_NUM_BUILD_JOBS=4 -e PLAT=$(plat) -e package_name=$(package_name) -e py_whl=$(py_whl) --rm -v `pwd`:/io $(image) /io/.ci/build-wheels.sh
+  #     ls -lh wheelhouse/
+  #     mkdir -p dist
+  #     cp wheelhouse/$(package_name)*.whl dist/.
+  #     ls dist
+  #   displayName: Build wheels, Linux
+  #   condition: and(succeeded(), startsWith(variables['Agent.OS'], 'Linux'))
+
+  # - script: |
+  #     $(conda.activate) pycraf-env
+  #     python setup.py bdist_wheel
+  #   displayName: Build wheels, MacOS/Windows
+  #   condition: and(succeeded(), not(startsWith(variables['Agent.OS'], 'Linux')))
+
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.8'
+
+  # - script: |
+  #     pip install twine
+  #     ls dist/*.whl
+  #     python -m twine upload -r "pypi" --config-file $(PYPIRC_PATH) dist/*.whl
+  #   displayName: Upload wheels, Linux/MacOS
+  #   condition: and(succeeded(), eq(variables['publish.wheels'], true), not(startsWith(variables['Agent.OS'], 'Windows')))
+
+  # - script: |
+  #     pip install twine
+  #     ls dist/*.whl
+  #     python -m twine upload -r "pypi" --config-file %PYPIRC_PATH% dist/*.whl
+  #   displayName: Upload wheels, Windows
+  #   condition: and(succeeded(), eq(variables['publish.wheels'], true), startsWith(variables['Agent.OS'], 'Windows'))
+
+  - script: |
+      $(conda.activate) pycraf-env
+      python setup.py sdist
+    displayName: Build tarball
+    condition: and(succeeded(), eq(variables['build.tarball'], true))
+
+  - script: |
+      $(conda.activate) pycraf-env
+      ls dist/*.tar.gz
+      pip install twine
+      python -m twine upload -r "pypi" --config-file $(PYPIRC_PATH) dist/*.tar.gz
+    displayName: Upload tarball
+    condition: and(succeeded(), eq(variables['publish.tarball'], true))
