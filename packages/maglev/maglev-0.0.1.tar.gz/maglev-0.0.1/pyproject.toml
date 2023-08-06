@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "maglev"
+version = "0.0.1"
+description = "Python utilities for working with NVIDIA's MLOps infrastructure."
+authors = [
+  "Ryan Miller <rjmill@nvidia.com>",
+  "Eric Hall <ehall@nvidia.com>",
+]
+
+license = "Proprietary"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
