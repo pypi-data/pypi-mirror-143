@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: trinity4bci
+Version: 0.0.2
+Summary: A package for quickly developing and prototyping Neurotechnology projects
+Home-page: UNKNOWN
+Author: Leonardo Ferrisi
+Author-email: ferrisil@union.edu
+License: Creative Commons Public License
+Keywords: neurotechnology
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Unix
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: brainflow
+Requires-Dist: numpy
+Requires-Dist: zmq
+
+TRINITY 
+version==0.0.2
+
+A package to simplify the process of prototyping and devloping brain computer interfaces
+
+Copyright (c) 2022 Leonardo Ferrisi
+
+
+Change Log
+==========
+
+0.0.1 (3/25/2022)
+-----------------
+- Initial Release
+
+0.0.2 (3/25/2022)
+-----------------
+- Updated file imports
+
