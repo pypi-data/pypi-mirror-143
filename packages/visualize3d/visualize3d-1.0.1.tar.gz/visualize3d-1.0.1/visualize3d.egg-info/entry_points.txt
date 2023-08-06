@@ -1,0 +1,3 @@
+[console_scripts]
+visualize3d = visualize3d.__main__:main
+

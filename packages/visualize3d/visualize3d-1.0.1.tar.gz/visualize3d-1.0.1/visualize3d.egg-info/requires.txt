@@ -1,0 +1,6 @@
+numpy
+open3d==0.10.0.0
+
+[dev]
+nose2
+packaging

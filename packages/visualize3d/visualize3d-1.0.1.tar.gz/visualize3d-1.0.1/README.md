@@ -1,0 +1,64 @@
+# Visualize3D
+
+> A small library to help with 3d visualizing (pointclouds).
+
+## Getting Started
+
+Please make sure you have pytorch installed properly as a first step.
+
+```bash
+pip install visualize3d
+```
+
+## Usage
+
+In your code you can create visualizations:
+```python
+import numpy as np
+import visualize3d as v3d
+
+# First create a list of geometries to show.
+N=42
+geometries = [
+    # Pointcloud (N, 3)
+    v3d.create_pointcloud_from_numpy(
+        pointcloud=np.random.rand(N, 3),
+    ),
+    # Add random lines (e.g. for a box or trajectory)
+    v3d.create_lines_from_numpy(
+        points=np.random.rand(N, 3),
+        lines=np.array([i, i + 1] for i in range(N - 1)),
+    ),
+    # Add the origin arrows (X=red, Y=green, Z=blue).
+    v3d.create_origin()
+]
+
+# Save visualization to disk (usefull in remote work or when batch processing)
+v3d.save("output.v3d.npy", geometries)
+
+# or show directly (if you work locally or interactive)
+v3d.show(geometries)
+```
+
+To show a visualization that was saved to disk, you can write your own code or simply use the `visualize3d` commandline tool.
+```bash
+# Show visualization from above
+visualize3d /path/to/output.v3d.npy
+
+# Show a pcd file directly
+visualize3d /path/to/filename.pcd
+
+# Show all supported files in a folder after another
+visualize3d /path/to/folder
+```
+
+## Contributing
+
+Currently there are no guidelines on how to contribute, so the best thing you can do is open up an issue and get in contact that way.
+In the issue we can discuss how you can implement your new feature or how to fix that nasty bug.
+
+To contribute, please fork the repositroy on github, then clone your fork. Make your changes and submit a merge request.
+
+## License
+
+This repository is under MIT License. Please see the [full license here](LICENSE).

@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+visualize3d/__init__.py
+visualize3d/__main__.py
+visualize3d/visualize3d.py
+visualize3d.egg-info/PKG-INFO
+visualize3d.egg-info/SOURCES.txt
+visualize3d.egg-info/dependency_links.txt
+visualize3d.egg-info/entry_points.txt
+visualize3d.egg-info/requires.txt
+visualize3d.egg-info/top_level.txt
