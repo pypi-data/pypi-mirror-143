@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cloudshell-orch-pool
+Version: 1.9.3
+Summary: Orchestration workflow for CloudShell VM Pool
+Home-page: UNKNOWN
+Author: QualiLabs
+Author-email: support@qualisystems.com
+License: UNKNOWN
+Keywords: sandbox cloudshell pool orchestration
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: cloudshell-orch-core (>=4.0.0.0)
+Requires-Dist: cloudshell-email (<0.6,>=0.5)
+Requires-Dist: typing (==3.7.4.1)
+
+UNKNOWN
+
+
