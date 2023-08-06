@@ -1,0 +1,13 @@
+replanaii/__init__.py,sha256=wil8mcnQP7FHSDvlIlzXZCivazFTPE4g7mhv5MoU-ZA,156
+replanaii/dom.py,sha256=D93Kf5NQARWQqkJJcO6CnPR5r16gmIgeDG9WRk2bHbM,2709
+replanaii/expr.py,sha256=LJbjPamYc1hKROg_s1xvF2z705NLSfbt8m4XdnhzTYk,6482
+replanaii/mesh.py,sha256=M4aBdxqTca4_lwWxV5tMIx0XMry59e6PznAPkhHHrRk,5283
+replanaii/replanaii.cp310-win_amd64.pyd,sha256=1lwQAtkAG0nzxTN_YxrEJLxEtD47XRmo_-52hBUI63I,2563584
+replanaii-0.0.1.data/data/README/README.md,sha256=ijG2g85q_1kDudUJnqL0CbZIHpZqiJEUE6n6i5CeCdo,684
+replanaii-0.0.1.data/data/licenses/APACHE2,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+replanaii-0.0.1.data/data/licenses/MIT,sha256=jBMu7f7Rlfn-QCQS4DI-hTe1l7dK5LwkcstRQhWXjTQ,1094
+replanaii-0.0.1.dist-info/LICENSE,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+replanaii-0.0.1.dist-info/METADATA,sha256=A9oXjm4gt8e5gB1uSiDWtLa2lhsYurgMD1OuaJwXINA,1177
+replanaii-0.0.1.dist-info/WHEEL,sha256=W26pYN7HLsBT1jrDSL9udgf_mdNKJmYmL23sIP-FcgM,102
+replanaii-0.0.1.dist-info/top_level.txt,sha256=LExsccdt780QzgKE9YEhPYfbX10MMzMO85QEksh0Ems,10
+replanaii-0.0.1.dist-info/RECORD,,
