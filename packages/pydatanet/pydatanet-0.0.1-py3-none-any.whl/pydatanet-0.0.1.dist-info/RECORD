@@ -1,0 +1,8 @@
+client/__init__.py,sha256=IeKPzpyvR3VyouJ2tYSWZ5lm8qrBU6oLXLvDcVy9kl8,2934
+server/__init__.py,sha256=Ks_Bfj1O8Z5BsnqO28gBb50cIjhmWwVlEcfypJfGK-s,3835
+server/client/__init__.py,sha256=C8aaPoBhG_mk0H4zbEpDAc7LkYUzJhVe-kB-XkyVjBE,552
+pydatanet-0.0.1.dist-info/LICENSE,sha256=O-TQY5fNkCDaGqsNkprkNfage4vlEziLcPa33om_T6Y,1065
+pydatanet-0.0.1.dist-info/METADATA,sha256=SvPt1wdNkaz7M0OejgZ-Z0JbRQC-UsTzptjnZqeag6E,3453
+pydatanet-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pydatanet-0.0.1.dist-info/top_level.txt,sha256=KwhQx6Np9abTSEPy-jGTR0d0L38g9ZW1Io1VGoS9ejE,14
+pydatanet-0.0.1.dist-info/RECORD,,
