@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "flit_core >=2,<4"
+]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "glopan"
+author = "Morten Engen"
+author-email = "mort1eng1@gmail.com"
+home-page = "https://github.com/mortenengen/glowing-pancake"
+description-file = "README.md"
+requires-python = ">=3.7"
+requires = [
+    "docx2pdf>=0.1.8",
+    "PyPDF3>=1.0.6",
+    "rich>=11.2.0",
+    "typer>=0.4.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.flit.scripts]
+glopan = "glopan.cli:main"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = "True"
+check = "True"
+diff = "True"

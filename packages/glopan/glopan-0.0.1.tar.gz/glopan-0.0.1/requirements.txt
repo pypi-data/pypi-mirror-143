@@ -1,0 +1,4 @@
+docx2pdf
+PyPDF3
+rich
+typer
