@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: CVYazPack
+Version: 0.1
+Summary: This is a ComputerVision Package Created by Yazdan
+Home-page: UNKNOWN
+Author: Yazdan Ghanavati
+Author-email: y.ghanavati79@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: ComputerVision,HandTracking,FaceTracking,PoseEstimation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
