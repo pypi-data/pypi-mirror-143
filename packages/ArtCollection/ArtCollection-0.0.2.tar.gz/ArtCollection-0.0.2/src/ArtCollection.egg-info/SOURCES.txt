@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/ArtCollection.py
+src/ArtCollection.egg-info/PKG-INFO
+src/ArtCollection.egg-info/SOURCES.txt
+src/ArtCollection.egg-info/dependency_links.txt
+src/ArtCollection.egg-info/requires.txt
+src/ArtCollection.egg-info/top_level.txt
