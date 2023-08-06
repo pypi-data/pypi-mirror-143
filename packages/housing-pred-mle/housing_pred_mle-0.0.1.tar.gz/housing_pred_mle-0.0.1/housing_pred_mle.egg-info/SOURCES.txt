@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+housing_pred/__init__.py
+housing_pred/ingest_data.py
+housing_pred/score.py
+housing_pred/train.py
+housing_pred_mle.egg-info/PKG-INFO
+housing_pred_mle.egg-info/SOURCES.txt
+housing_pred_mle.egg-info/dependency_links.txt
+housing_pred_mle.egg-info/top_level.txt
