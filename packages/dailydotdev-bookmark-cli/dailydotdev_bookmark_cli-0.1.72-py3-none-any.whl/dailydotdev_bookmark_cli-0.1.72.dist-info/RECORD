@@ -1,0 +1,12 @@
+dailydotdev_bookmark_cli/__init__.py,sha256=JRbyg7GuCRj7C27KtXjMxXtPselU_eFyGWl-lEIJmiA,40
+dailydotdev_bookmark_cli/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dailydotdev_bookmark_cli/bookmarks.py,sha256=VBBKu2qBD0m8-3HdBvfcCUbZLWrTZtanXOXVovuS1Ic,1854
+dailydotdev_bookmark_cli/change_dailyid.py,sha256=WS4sxO5OE4NFHkF7dqKLSCHI7lVz8dpfuFa0mmzPxyk,533
+dailydotdev_bookmark_cli/dailydotdev_bookmark_cli.py,sha256=Ms5b4bPRm0mQBWmBo4qSpLsuGsS4yVjpvly3Rw-PStg,649
+dailydotdev_bookmark_cli/delete_dailyid.py,sha256=wvhM1Wpivm8PVsxySMs5mmbftUJyDTdiJ4VI9p36hOk,138
+dailydotdev_bookmark_cli/tui.py,sha256=PdnxTJRHsV-ndoSbADKmZbaY1XYACMQ5UtZC_doUgWY,1096
+dailydotdev_bookmark_cli-0.1.72.dist-info/METADATA,sha256=qoIYS8ZUO_86pk-4TONSRATxP4C0y7J8x4N0f36uoGA,2870
+dailydotdev_bookmark_cli-0.1.72.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dailydotdev_bookmark_cli-0.1.72.dist-info/entry_points.txt,sha256=EF23YxNrpg7mcROJNTEmwPAN4KfxiLVLcM1Ca-bQbvY,85
+dailydotdev_bookmark_cli-0.1.72.dist-info/top_level.txt,sha256=l_Td2Pmy36DTS7cKGuvEljlld_da8dbByzGYfvta2_k,25
+dailydotdev_bookmark_cli-0.1.72.dist-info/RECORD,,
