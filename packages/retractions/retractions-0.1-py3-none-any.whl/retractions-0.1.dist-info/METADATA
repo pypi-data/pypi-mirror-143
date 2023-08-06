@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: retractions
+Version: 0.1
+Summary: Check DOIs for retractions
+Home-page: https://github.com/clbarnes/retractions
+Author: Chris L. Barnes
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8, <4.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: cli
+Requires-Dist: httpx ; extra == 'cli'
+
+# retractions
+
+Check DOIs for retractions
+
+## Usage
+
+```_retractions
+usage: retractions [-h] [-r] [-b {openretractions}] [-i INFILE] [-o OUTFILE]
+                   [-u]
+                   [doi ...]
+
+positional arguments:
+  doi                   DOI to check for retractions or updates. Handled after
+                        --infile lists.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r, --retractions-only
+                        Only list retracted DOIs, not updated
+  -b {openretractions}, --backend {openretractions}
+  -i INFILE, --infile INFILE
+                        Get DOIs from file (newline-separated); accepts
+                        multiple
+  -o OUTFILE, --outfile OUTFILE
+                        Write to file instead of stdout
+  -u, --url             Show DOIs as URLs
+```
+
+
