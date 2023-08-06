@@ -1,0 +1,3 @@
+[console_scripts]
+ptprssi = ptprssi.ptprssi:main
+
