@@ -1,0 +1,6 @@
+cerror.py
+setup.py
+cerror.egg-info/PKG-INFO
+cerror.egg-info/SOURCES.txt
+cerror.egg-info/dependency_links.txt
+cerror.egg-info/top_level.txt
