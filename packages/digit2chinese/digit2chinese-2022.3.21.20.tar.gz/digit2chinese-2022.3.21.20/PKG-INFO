@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: digit2chinese
+Version: 2022.3.21.20
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: YanChengxin
+Author-email: yanchengxin@yeah.net
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitee.com/yanchengxin2018/digit2chinese
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 功能
+把数字转化为大写 
+
+# 用法
+
+import digit2chinese
+
+chinese = digit2chinese.digit2chinese(1234567891)  
+print(chinese) # 壹拾贰亿叁仟肆佰伍拾陆万柒仟捌佰玖拾壹
+
+# or
+
+chinese = digit2chinese.digit2chinese(1234567891,style=1)  
+print(chinese) # 十二亿三千四百五十六万七千八百九十一
+
+# bug反馈
+如果发现bug请反馈至yanchengxin@yeah.net 谢谢
+
+
