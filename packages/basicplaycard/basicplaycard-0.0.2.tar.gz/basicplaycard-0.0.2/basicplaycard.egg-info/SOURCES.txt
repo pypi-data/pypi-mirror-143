@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+basicplaycard/BasicPlayingCard.py
+basicplaycard/__init__.py
+basicplaycard.egg-info/PKG-INFO
+basicplaycard.egg-info/SOURCES.txt
+basicplaycard.egg-info/dependency_links.txt
+basicplaycard.egg-info/top_level.txt
