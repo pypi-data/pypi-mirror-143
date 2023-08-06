@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/Discordpydebug.egg-info/PKG-INFO
+src/Discordpydebug.egg-info/SOURCES.txt
+src/Discordpydebug.egg-info/dependency_links.txt
+src/Discordpydebug.egg-info/top_level.txt
+src/discordpydebug/__init__.py
+src/discordpydebug/__main__.py
+src/discordpydebug.egg-info/PKG-INFO
+src/discordpydebug.egg-info/SOURCES.txt
+src/discordpydebug.egg-info/dependency_links.txt
+src/discordpydebug.egg-info/top_level.txt
