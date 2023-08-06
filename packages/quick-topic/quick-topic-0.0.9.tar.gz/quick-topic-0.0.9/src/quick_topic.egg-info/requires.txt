@@ -1,0 +1,17 @@
+jieba
+quick-csv
+gensim
+numpy
+pandas
+matplotlib
+correlation-kit
+strsimpy
+PyQt5
+pyqtgraph
+spacy
+
+[dev]
+check-manifest
+
+[test]
+coverage
