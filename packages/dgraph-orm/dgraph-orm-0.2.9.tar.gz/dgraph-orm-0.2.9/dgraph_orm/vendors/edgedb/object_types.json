@@ -1,0 +1,1451 @@
+[
+  {
+    "name": "default::Artist",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "bookings",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Booking"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "sellers",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "beatgig_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "slug",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "media",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "name",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "admin_details",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "band_configuration",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "bio",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "category",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::Category"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "connect_account_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "contact_information",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "cover_image",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_backend_updated",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_redis_refreshed",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_triggered_at",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_updated",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "migration_version",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "profile_image",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "published",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::bool"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "social_media",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "spotify_id",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "subgenres",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "array<std::str>"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "venue_take_percentages",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "version",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": [
+      {
+        "expr": "(.beatgig_id, .slug)"
+      }
+    ]
+  },
+  {
+    "name": "default::Booking",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "artist",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::Artist"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "account_exec",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "buyer",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "beatgig_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "performance_length_mins",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "start_time",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "negotiation_steps",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": [
+      {
+        "expr": "(.created_at, .start_time)"
+      }
+    ]
+  },
+  {
+    "name": "default::User",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "artists",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Artist"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "bookings",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Booking"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "account_exec_bookings",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Booking"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "venues",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Venue"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "venues_assigned_to",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Venue"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "beatgig_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "email",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "phone_number",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "slug",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "name",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "admin_permissions",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "array<std::str>"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "admin_type",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::UserType"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "approval",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "approved",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::bool"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "default_state_abbr",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "firebase_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "last_triggered_at",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_updated",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "metadata",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "profile_image",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "referred_by_id",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "user_role",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::UserRole"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "user_type",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::UserType"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": [
+      {
+        "expr": "(.beatgig_id, .slug, .email, .phone_number)"
+      }
+    ]
+  },
+  {
+    "name": "default::Movie",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "actors",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Person"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "director",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::Person"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "title",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "year",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::int64"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": []
+  },
+  {
+    "name": "default::Person",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "my_followers",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Person"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "best_friend",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::Person"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "people_i_follow",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Person"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "first_name",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_name",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "full_name",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "tags",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "ordered_tags",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "array<std::str>"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "slug",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": []
+  },
+  {
+    "name": "default::Venue",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "bookings",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::Booking"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "account_exec",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "created_by",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "owners",
+        "cardinality": "Many",
+        "required": false,
+        "target": {
+          "name": "default::User"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "beatgig_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "budget",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "capacity",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "colors",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "customer_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "display_images",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "genres_booked",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "array<std::str>"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "images",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "last_updated",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "location",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "logo",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "name",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "num_stages",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "phone_number",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "place_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "production_and_venue_specs",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "slug",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "social_media",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "venue_type",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::VenueType"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "website",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": []
+  },
+  {
+    "name": "default::Animal",
+    "links": [
+      {
+        "name": "__type__",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "schema::Type"
+        },
+        "readonly": true,
+        "constraints": [],
+        "annotations": []
+      }
+    ],
+    "properties": [
+      {
+        "name": "id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::uuid"
+        },
+        "readonly": true,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "description",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "name",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "age",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::int16"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "created_at",
+        "cardinality": "One",
+        "required": false,
+        "target": {
+          "name": "std::datetime"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "animal_type",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "default::AnimalType"
+        },
+        "readonly": false,
+        "constraints": [],
+        "annotations": []
+      },
+      {
+        "name": "public_id",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "name": "slug",
+        "cardinality": "One",
+        "required": true,
+        "target": {
+          "name": "std::str"
+        },
+        "readonly": false,
+        "constraints": [
+          {
+            "name": "std::exclusive"
+          }
+        ],
+        "annotations": []
+      }
+    ],
+    "constraints": [],
+    "indexes": []
+  }
+]
