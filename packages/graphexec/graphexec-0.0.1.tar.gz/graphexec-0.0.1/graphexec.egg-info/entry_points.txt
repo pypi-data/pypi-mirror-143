@@ -1,0 +1,4 @@
+[console_scripts]
+graphexec = graphexec.cli:main
+graphexec-generate-js-module = graphexec.generate_js_module:main
+graphexec-server = graphexec.server:main

@@ -1,0 +1,8 @@
+Jinja2
+Flask
+numpy
+pydantic
+
+[dev]
+black
+mypy
