@@ -1,0 +1,2 @@
+d3m
+featuretools==0.13.0
