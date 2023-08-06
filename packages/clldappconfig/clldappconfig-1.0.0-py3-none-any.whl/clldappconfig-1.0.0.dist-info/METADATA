@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: clldappconfig
+Version: 1.0.0
+Summary: Remote control for DLCE apps
+Home-page: https://github.com/dlce-eva/clldappconfig
+Author: ''
+Author-email: dlce.rdm@eva.mpg.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: <3.10,>=3.6
+License-File: LICENSE
+Requires-Dist: cdstarcat (>=1.2)
+Requires-Dist: clldutils (>=3.5)
+Requires-Dist: Fabric3 (>=1.11)
+Requires-Dist: fabtools-python (>=0.19.7)
+Requires-Dist: Jinja2
+Requires-Dist: pycdstar (>=0.4.1)
+Requires-Dist: pytz
+Requires-Dist: importlib-resources (>=1.4) ; python_version < "3.9"
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (>=4.6) ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+UNKNOWN
+
