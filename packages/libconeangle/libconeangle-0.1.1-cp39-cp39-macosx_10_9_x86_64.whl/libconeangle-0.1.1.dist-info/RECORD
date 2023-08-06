@@ -1,0 +1,13 @@
+libconeangle/coneangle.py,sha256=cUxstLOOINNQ2cqHFRiZ1rMLu8IRf9l1fqGgdvzWUFA,2046
+libconeangle/lib.py,sha256=O_QyT1AUBHNoUgX5102hH-2F2YGG500K3GtZMGP4hIg,1099
+libconeangle/__init__.py,sha256=qoqvF6CCfc7Z4csXWyBe_ELLOYoeQC7LXrDpm63OY9g,197
+libconeangle/libconeangle.dylib,sha256=Y5hl0Z-St5Jw--XH-QrdtC9detOMJK1JzlB4jSommOs,266320
+libconeangle/typing.py,sha256=bAxabZIR4AWlnhZRv7zYGKgppMSSk8owh3neZ9nEkJI,144
+libconeangle/.dylibs/libgfortran.5.dylib,sha256=gsDrSPOUuWw2hF5PCL0xHwo-EFXUoC94vESWrKiOYfA,3318864
+libconeangle/.dylibs/libquadmath.0.dylib,sha256=0gujq9CkOiI7wOZNrJSOfcDyM5G0KZtnfWXwz2TP-dQ,364272
+libconeangle/.dylibs/libgcc_s.1.dylib,sha256=NeC_fdEmdCeIG5qdjD6j8KFrAzC06hp6ltEXvDkdDcM,188768
+libconeangle-0.1.1.dist-info/RECORD,,
+libconeangle-0.1.1.dist-info/LICENSE,sha256=6q2o7SaaLfMKXTbF9HfGCkQBXKJmSKm4yAampMrBMSg,1068
+libconeangle-0.1.1.dist-info/WHEEL,sha256=BLh7L3DaTkevymEFOuFv_qdKrDHvNzR3_1sNsKf1zHI,103
+libconeangle-0.1.1.dist-info/top_level.txt,sha256=3qOy-BQZ9UW2NWE7LJVM78o9XLuo7oYl5jkbeoxn9gQ,13
+libconeangle-0.1.1.dist-info/METADATA,sha256=nH9Gd9R7QdjUS8o4sdsPt-c8yxljJWEm1xmQWkbVUDc,635
