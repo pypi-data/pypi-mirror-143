@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: OpenPlatformShopeeAPI
+Version: 0.0.3
+Summary: Open Platform Shopee API
+Home-page: https://github.com/indhifarhandika/OpenPlatformShopeeAPI
+Author: indhifarhandika
+Author-email: indhifarhandika@gmail.com
+License: MIT
+Keywords: python,api,shopee,open platform,open platform shopee,shopee api
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+API Shopee yang telah disediakan di Open Platform Shopee.
+

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+OpenPlatformShopeeAPI/Shopee.py
+OpenPlatformShopeeAPI/__init__.py
+OpenPlatformShopeeAPI.egg-info/PKG-INFO
+OpenPlatformShopeeAPI.egg-info/SOURCES.txt
+OpenPlatformShopeeAPI.egg-info/dependency_links.txt
+OpenPlatformShopeeAPI.egg-info/requires.txt
+OpenPlatformShopeeAPI.egg-info/top_level.txt
