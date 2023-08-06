@@ -1,0 +1,10 @@
+click==7.1.2
+elasticsearch
+fastapi
+fire
+marisa_trie
+pika
+pymysql
+redis
+requests>=2.27.1
+uvicorn
