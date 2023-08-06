@@ -1,0 +1,54 @@
+# Overview
+This package provides facilities for interacting with Connect Enterprise. Modules are packaged by particular product/functional area. 
+
+## Writing your first script with connect.transform
+The connect.transform module is for authoring scripts in Connect Transform. 
+
+In order to upload a script to execute in Connect Transform, it has to adhere to some conventions.  You'll need to implement an informal interface, as well as decorate your class:
+```python
+import io
+from typing import BinaryIO
+from pbtestconnect.transform.IExecuteScripts import IExecuteScripts
+from pbtestconnect.transform.Registrations import Register
+
+@Register(requires_connection=False, produces="text/plain")
+class MyFirstScriptExecutor(IExecuteScripts):
+    def execute(self, context: dict, inputStream: BinaryIO, outputStream: BinaryIO) -> None:
+        print("in my script executor")
+        print("Only expecting small inputs here.  read in.")
+        with io.TextIOWrapper(inputStream) as text:
+            data = text.read()
+            rsp = self.DoSomeWork(data)
+            outputBytes = rsp.encode('utf-8')
+            outputStream.write(outputBytes)
+        return
+
+    def DoSomeWork(self, text):
+        return "Received your message: {msg}".format(msg=text)
+```
+
+The Registration decorator indicates to the runtime environment that this is the implementation of IExecuteScripts that you wish to run. Note the following:
+- your script cannot be executed if it is not registered with @Register()
+- your script cannot be executed if it it does not implement the informal interface IExecuteScripts
+
+In the above example, we're expecting a relatively small text based payload to be contained in inputStream. The script decodes the bytes to UTF-8 text, appends it to our own message, and then writes out the bytes to outputStream.
+
+**Note:** the input and output streams are file like objects that read and write binary data, respectively. This allows for arbitrary data to be processed, however, if you're expecting text data, you'll have to decode the input bytes to text, and encode the output text to bytes. If data is "too big" to pull into memory, you can read through the stream and parse it.
+
+# Using the test harness
+The package comes with a simple test harness to simulate invoking scripts with the Connect Transform script execution environment.  You specify thhe input and output file locations, as well as your script executor you wish to test:
+
+```shell
+python3 -m pbtestconnect.transform -i "/Users/philipbarile/Documents/Projects/fluentresultstest/input.txt" -o "/Users/philipbarile/Documents/Projects/fluentresultstest/output.txt" -m "/Users/philipbarile/Documents/Projects/fluentresultstest/testExecutor.py" 
+Attempting to run script.
+	Executor: 'MyFirstScriptExecutor'
+	Expected Content Type: text/plain
+	Requires Connection: False
+Wrote '52' bytes to /Users/philipbarile/Documents/Projects/fluentresultstest/output.txt
+Script stdout:
+***in my script executor
+***Only expecting small inputs here.  read in.
+```
+
+The test harness will show you any print statements your script logged, as well  as some basic information about what it attempted to run.
+

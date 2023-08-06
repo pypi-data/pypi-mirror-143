@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+pbtestconnect.egg-info/PKG-INFO
+pbtestconnect.egg-info/SOURCES.txt
+pbtestconnect.egg-info/dependency_links.txt
+pbtestconnect.egg-info/entry_points.txt
+pbtestconnect.egg-info/top_level.txt
+pbtestconnect/transform/IExecuteScripts.py
+pbtestconnect/transform/Registrations.py
+pbtestconnect/transform/__init__.py
+pbtestconnect/transform/__main__.py
