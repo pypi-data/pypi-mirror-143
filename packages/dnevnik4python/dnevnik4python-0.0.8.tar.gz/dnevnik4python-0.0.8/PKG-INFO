@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: dnevnik4python
+Version: 0.0.8
+Summary: Wrapper for python that simplifies work with dnevnik.ru
+Home-page: https://github.com/hrog-zip/dnevnik4python
+Keywords: python,dnevnik,dnevnikru,api,dnevnikru api,dnevnik api,wrapper
+Author: hrog-zip
+Author-email: 65674012+hrog-zip@users.noreply.github.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: fake-useragent (>=0.1.11,<0.2.0)
+Requires-Dist: lxml (>=4.8.0,<5.0.0)
+Requires-Dist: pytz (>=2022.1,<2023.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# dnevnik4python
+
+Dnevnik4python - это библиотека для Python позволяющая удобно работать с электронным дневником dnevnik.ru
+
+Главное отличие от оффициального API это то, что не требуется заключать договор и регистрировать приложение  
+
+- Простая с работа с Дневником
+- Получение оценок, д/з, расписания уроков 
+
+## Пример
+
+```python
+from dnevnik4python import Diary
+from datetime import datetime
+
+login = "login"
+password = "password"
+
+# войти в аккаунт
+d = Diary(login, password)
+
+# получить дневник на сегодня
+print(d.get_diary(datetime.now()))
+# получить дневник на 2 дня вперед
+print(d.get_diary(datetime.now(), 2))
+# получить дневник за прошлые 2 дня
+print(d.get_diary(datetime.now(), -2))
+# получить дневник по указанным датам
+print(d.get_diary(datetime(year = 2020, month = 4, day = 1), datetime(year = 2020, month = 4, day = 4)))
+```
+
+## Установка
+### *Linux/macOS*
+```
+pip3 install dnevnik4python
+```
+### *Windows*
+```
+pip install dnevnik4python
+```
+
+## Планы на будущее
+- Сделать библиотеку более удобной в использовании
+
+## По всем вопросам
+https://t.me/arzt_arsch
+
