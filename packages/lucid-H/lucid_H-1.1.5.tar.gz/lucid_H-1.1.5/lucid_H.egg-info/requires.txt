@@ -1,0 +1,7 @@
+smtpemail
+fsspec
+getpass4
+pandas
+numpy
+gitpython
+shutil
