@@ -1,0 +1,4 @@
+buildver
+hackernote
+setupinit
+subrun
