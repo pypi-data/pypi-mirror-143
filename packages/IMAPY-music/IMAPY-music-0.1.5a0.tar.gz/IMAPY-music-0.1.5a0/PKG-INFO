@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: IMAPY-music
+Version: 0.1.5a0
+Summary: UNKNOWN
+Home-page: https://github.com/NadiaCarvalho/IMAPY-music
+Author: Nádia Carvalho
+Author-email: nadiacarvalho118@gmail.com
+License: GNU Lesser General Public License v3.0
+Platform: UNKNOWN
+License-File: LICENSE
+
+# IMAPY-music
+
+[![Build and Deploy IMAPY](https://github.com/NadiaCarvalho/IMAPY/actions/workflows/build-deploy-imapy.yml/badge.svg)](https://github.com/NadiaCarvalho/IMAPY/actions/workflows/build-deploy-imapy.yml)
+
+Python library to perform Inner Metric Analysis [1] on a series on onsets.
+
+pypi link: https://pypi.org/project/IMAPY-music/
+
+Originally coded in Java by Chris Dyer (and in C++ by Peter van Kranenburg).
+
+[1] Nestke, A. and Noll, T. (2001). Inner Metric Analysis. In Haluska, J. (ed.), Music and Mathematics, pp. 91–111. Bratislava: Tatra Mountains Publications.
+
+

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+IMAPY_music.egg-info/PKG-INFO
+IMAPY_music.egg-info/SOURCES.txt
+IMAPY_music.egg-info/dependency_links.txt
+IMAPY_music.egg-info/top_level.txt
+imapy_music/__init__.py
+imapy_music/scripts/__init__.py
+imapy_music/scripts/meter_collection.py
+imapy_music/scripts/metro_math.py
+imapy_music/scripts/metro_weights_mazzola.py
+imapy_music/scripts/metrum.py
+imapy_music/scripts/onset_group_memory.py
+imapy_music/scripts/weight_set.py
