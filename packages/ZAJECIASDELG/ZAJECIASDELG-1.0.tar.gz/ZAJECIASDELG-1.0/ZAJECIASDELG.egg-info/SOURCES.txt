@@ -1,0 +1,7 @@
+MANIFEST.in
+README.md
+setup.py
+ZAJECIASDELG.egg-info/PKG-INFO
+ZAJECIASDELG.egg-info/SOURCES.txt
+ZAJECIASDELG.egg-info/dependency_links.txt
+ZAJECIASDELG.egg-info/top_level.txt
