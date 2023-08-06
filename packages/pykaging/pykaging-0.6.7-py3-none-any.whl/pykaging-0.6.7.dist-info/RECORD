@@ -1,0 +1,10 @@
+src/__init__.py,sha256=fb8qdnY-sSe7cf8yohr_U2Em-ZQ9PllTIGm4fMuOU_8,21
+src/cli.py,sha256=3S5dW8mvoOqvfF_b0UDlUdU2iorktyIhYACEtxJUdTA,910
+src/packaging/__init__.py,sha256=zfpm-Ot5CJY9ypu4LEJERMHh_p6QxKQNq5kal3DIrnM,41
+src/packaging/create_package.py,sha256=LiESr-CFd9xL5nR_XQeq6d6G7ZoYng76Px0CEwlrAOI,2031
+pykaging-0.6.7.dist-info/LICENSE.md,sha256=QzmwfG2OpTjbL1ldaEbIIn7kOpDg64UPQzFuavIGsbQ,1069
+pykaging-0.6.7.dist-info/METADATA,sha256=zjjWfkZ2A0sT4ilID6IzuFHJgQnA7UViqcGM_KDJeBE,2971
+pykaging-0.6.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pykaging-0.6.7.dist-info/entry_points.txt,sha256=yEvbFMLR-8SN2cgoFp7SihjLxoN5xfqfrWwHAsuqylw,38
+pykaging-0.6.7.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+pykaging-0.6.7.dist-info/RECORD,,
