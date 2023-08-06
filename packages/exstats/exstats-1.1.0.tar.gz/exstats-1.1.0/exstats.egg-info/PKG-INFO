@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: exstats
+Version: 1.1.0
+Summary: A better statistics library
+Home-page: UNKNOWN
+Author: Eccentrici (Austin Eccentrici)
+Author-email: xzntrc@protonmail.com
+License: UNKNOWN
+Keywords: python,math,statistics,statistical mathematics
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+ExStats includes a variety of mathematical functions used in recieving data.
+
