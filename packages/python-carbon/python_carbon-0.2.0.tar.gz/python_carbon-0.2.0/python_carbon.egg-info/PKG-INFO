@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: python-carbon
+Version: 0.2.0
+Summary: PHP Carbon library adapted for python
+Home-page: https://github.com/rogervila/python_carbon
+Download-URL: https://github.com/rogervila/python_carbon/archive/0.2.0.tar.gz
+Author: Roger Vilà
+Author-email: rogervila@me.com
+License: MIT
+Keywords: php nesbot carbon,php carbon
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Carbon
+
+<p align="center"><img src="https://i.ibb.co/QHSzYBs/python-carbon.png" alt="rogervila/python_carbon" /></p>
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rogervila_python_carbon&metric=coverage)](https://sonarcloud.io/dashboard?id=rogervila_python_carbon)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rogervila_python_carbon&metric=alert_status)](https://sonarcloud.io/dashboard?id=rogervila_python_carbon)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=rogervila_python_carbon&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=rogervila_python_carbon)
+
+
+PHP Carbon library adapted for python.
+
+> Documentation is not ready yet. Check the source code and the [original package documentation](https://carbon.nesbot.com/docs/)
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Check the [original project](https://github.com/briannesbitt/Carbon) source for more details.
+
+

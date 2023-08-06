@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+python_carbon/__init__.py
+python_carbon.egg-info/PKG-INFO
+python_carbon.egg-info/SOURCES.txt
+python_carbon.egg-info/dependency_links.txt
+python_carbon.egg-info/requires.txt
+python_carbon.egg-info/top_level.txt
