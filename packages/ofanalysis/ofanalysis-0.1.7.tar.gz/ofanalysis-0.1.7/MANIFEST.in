@@ -1,0 +1,2 @@
+include ofanalysis/morningstar/assets/star/*
+include ofanalysis/morningstar/drivers/chromedriver
