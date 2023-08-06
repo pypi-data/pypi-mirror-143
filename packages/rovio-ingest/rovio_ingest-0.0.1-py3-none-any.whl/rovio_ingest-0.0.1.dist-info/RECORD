@@ -1,0 +1,6 @@
+rovio_ingest/__init__.py,sha256=1wNW_C2eonHkOVZk00TC90ybiqNjd_USz5Lg6p2lwq0,642
+rovio_ingest/extensions/__init__.py,sha256=plxwUJBrzpT-30Oy3PuG4Ulb4A9zrern2hurEDfH3mk,596
+rovio_ingest/extensions/dataframe_extension.py,sha256=b4kcc_EgGn_khbIstjBGXnxEaETzCUDOqXHPC1Q2Mx8,2763
+rovio_ingest-0.0.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+rovio_ingest-0.0.1.dist-info/METADATA,sha256=G6KHjBKpm3kpihJisEVLgM0uq40vNooOL9G9_yjOx2A,536
+rovio_ingest-0.0.1.dist-info/RECORD,,
