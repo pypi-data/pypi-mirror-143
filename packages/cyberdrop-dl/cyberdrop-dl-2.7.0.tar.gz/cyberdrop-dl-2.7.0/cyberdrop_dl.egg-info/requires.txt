@@ -1,0 +1,11 @@
+aiofiles
+aiohttp
+certifi
+colorama
+gofile-client
+nest-asyncio
+requests
+sanitize-filename
+Scrapy
+tqdm
+yarl
