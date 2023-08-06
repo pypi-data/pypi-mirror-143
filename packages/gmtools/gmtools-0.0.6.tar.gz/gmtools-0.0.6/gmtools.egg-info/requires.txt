@@ -1,0 +1,4 @@
+yagmail
+urllib
+requests
+json
