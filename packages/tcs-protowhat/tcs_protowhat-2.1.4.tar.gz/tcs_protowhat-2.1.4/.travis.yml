@@ -1,0 +1,15 @@
+language: python
+python:
+- '3.9'
+install: make install
+script: make test
+deploy:
+  provider: pypi
+  user: datacamp
+  password:
+    secure: fjc5BSgZs0PjB0zW2Es7cqVsLLS7N4SOtM+oONjR773hCfP8DX1X5tvYv+Fs7H0kCbQrzQMmKrV0NbtoqcsyOR2rTguyW06xmmQU6NeDRnoj6VFL1bSf0lelN5Q6zXnr2aoKmEUPQuyHDhMJ3N6yrBp8ss7P+iZMPNpIuSZ7b5zRo/AiEfQ/lF8flPx0s7h7vui7H3FVrqVyW1xwY4RCAS7Ui6Y6zqS3/zKRRAUhNWEhSNWHlil/oAstdDprDtpRWSHysO9rK/VX03aS18/7tU10kU4+HvkvPDiVBOg6zPce4PRp4ZMdJdUsWqDM+aIbgeH7pEmFuz9bTBUSw0BOWQ50hnKy56f8IwHkXenH5KKlTmFDlMpjfd6R9DjPBXO9VvChKP0BvJMvLAB6nbw1R0mgKjfjz37G4pa7YcRh1JbOhw6xq9hEqxeq8oPf6Qkb2mK4mHy4bqqIia7lsqa0iyW8mguc3JJvJXSJzSOYcf85WW3GFHzQH9e3bjSCtxMf03EaiId1UNkTiXXCC2XDqF2SoyUxAJKzhCMX+qie0LgPDRexv0sjJR/jojZZL6goImEKUDQ8IdW0cjc3Uhtq2aLNiXVrSIwvyvf2388BNwMctdEGkYIhfxcaeOsgGiLnk8nyqN7d27Mc4YgZgEf//+DUDCqItUwJrl7WkUapiLo=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: datacamp/protowhat
+  skip_upload_docs: true
