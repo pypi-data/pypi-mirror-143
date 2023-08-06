@@ -1,0 +1,15 @@
+_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_tests/other_module.py,sha256=mZU8b1yGQPYak_9TCracoYteWFy3MslLZavrOC0HO2c,186
+config/__init__.py,sha256=vr58pOumkmbD_OMVc8wKHydS9qdjn0d6DluB1z66Q04,345
+config/config.py,sha256=liMeJgpCblEPvvl6YViDinhY6OOOxt_Xw4His0jtiWw,17212
+config/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config/trace.py,sha256=i9Z2cMsjX5r0HQXJEH2EW6h6RiqHvuHYW7D6xSJteo8,4398
+hparams/__init__.py,sha256=RKn18TBwoYlhGrSfqAdGoYhAmyWhwYnSdNVLbAC3LJo,547
+hparams/hparams.py,sha256=lWtc5BMJfMGKfXl2q0dWUKnGXA6xvYA6ChWX-sb68p8,25250
+hparams/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_config-0.5.0.dist-info/LICENSE,sha256=9P3stFpI9ie6ETRUK7FDCfyGjmSxSg0TQ9dfbn2K1EQ,1099
+pythonic_config-0.5.0.dist-info/METADATA,sha256=jwJnws9C9MbS5pk3qBMiumSq_ZMALFPoKj4GC0Ll0vk,7105
+pythonic_config-0.5.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pythonic_config-0.5.0.dist-info/top_level.txt,sha256=9hK4m828QBN59kTX5IVy40cPd9zUw5QWQF2AlSrXCJ4,7
+pythonic_config-0.5.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pythonic_config-0.5.0.dist-info/RECORD,,
