@@ -1,0 +1,10 @@
+dacon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/__init__.py,sha256=-hrCvsm3FEFKPhAqcBLmWcqRduWxD5WeXgHEu2xDURs,55
+dacon/datasets/_base.py,sha256=y3LvpVlNwAzh9nhofpw00Mx9H0mmyWc4z8kK1WqW7sM,1941
+dacon/datasets/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon/datasets/dataset/235862/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon-0.0.8.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dacon-0.0.8.dist-info/METADATA,sha256=_dtaDwMmoazwi0sjeutFDWuFRYx7vGlmcOC0mKyukQU,450
+dacon-0.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dacon-0.0.8.dist-info/top_level.txt,sha256=XbnmiQfozqMOZOjK22xZqr8MdpyfVxAaOaf1on1MzzA,6
+dacon-0.0.8.dist-info/RECORD,,
