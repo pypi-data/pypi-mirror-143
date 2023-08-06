@@ -1,0 +1,38 @@
+{{ import_string }}
+from .commons import (
+    {% for func in assert_funcs -%}
+    {{ func }},
+    {% endfor %}
+)
+
+{% for t_name, t in tests.items() -%}
+def {{t_name}}():
+    {%- if t.info != '' %}
+    '''
+    {{t.info}}
+    '''
+    {%- endif %}
+    {%- if t.input.type == "file" %}
+    data = None
+    with open('fixtures/{{t.input.arg}}', 'rb') as file:
+        data = file.read()
+    {%- elif t.input.type == "raw" %}
+    data = {{ t.input.arg }}
+    {%- elif t.input.type == "str" %}
+    data = "{{ t.input.arg }}"
+    {%- endif %}
+    {% if t.assert.func != "fail" -%}
+            serialized_data = {{func}}(data)
+    assert {{ t.assert.func }}(serialized_data, {{ t.assert.arg }})
+    {% else -%}
+    try:
+        serialized_data = {{ func }}(data)
+        assert False
+    except Exception as e:
+        {%- if t.assert.get('arg') != None %}
+       assert str(e) == '{{t.assert.arg}}'
+        {% else %}
+        pass
+        {% endif %}
+    {%  endif %}
+{% endfor %}

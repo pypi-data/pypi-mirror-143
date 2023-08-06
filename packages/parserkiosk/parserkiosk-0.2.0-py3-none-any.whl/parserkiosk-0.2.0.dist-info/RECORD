@@ -1,0 +1,11 @@
+parserkiosk/__init__.py,sha256=700bL-Vz7F3a6wxW09kywE8GRnyuRZytwwkiRqAIIh0,95
+parserkiosk/colors.py,sha256=XC9fn0pPxhVsqSEFssTC1XEU770DtzM5DYmbXQWfOeE,829
+parserkiosk/parserkiosk.py,sha256=drwypQt4PTmPj34lN78CzsmnLZex-r8X4TVVJNMzxUU,4739
+parserkiosk/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parserkiosk/templates/node_js.jinja2,sha256=1jeD_7bvfUfpSYmeSgfAkGEjnDvwx14S_kuOaN-bKig,917
+parserkiosk/templates/python.jinja2,sha256=pL3Fs_s7SuXUV3GTtzR2VOF0TsHrXnt10aylHVvNIRI,974
+parserkiosk-0.2.0.dist-info/entry_points.txt,sha256=BO8EuD-hHCG6CPRu7dWXwqR-Nu4At2TU9DitRnHRk1Y,48
+parserkiosk-0.2.0.dist-info/LICENSE.md,sha256=21vTwQQUKfxAdExFYWPNLCom9_jCM-rQTuQhvXhGJ1k,35150
+parserkiosk-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+parserkiosk-0.2.0.dist-info/METADATA,sha256=Pk2hyDcj0MHErS3cgh5ks3DQsDTEa-kbivAND6twmL4,4287
+parserkiosk-0.2.0.dist-info/RECORD,,
