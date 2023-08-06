@@ -1,0 +1,11 @@
+bitshuffle-0.4.2.dist-info/RECORD,,
+bitshuffle-0.4.2.dist-info/LICENSE,sha256=7zV8IGHPZ9spj58VZVcu4imtkmNYKp-dDr_1CU9dEKw,1148
+bitshuffle-0.4.2.dist-info/WHEEL,sha256=pXLpj1wTvqlD6RVUEKOuGQGeFX0NOPyDrsC-9xVDmYU,109
+bitshuffle-0.4.2.dist-info/top_level.txt,sha256=aysWHNjo4AFo3qaY8MnX5nkAo4CPfWIqbySPwO9UPbY,11
+bitshuffle-0.4.2.dist-info/METADATA,sha256=wwCoUBQS9l1iGDds4OM4m-5dTvVgayxuevmp5sylFKs,10031
+bitshuffle/h5.cpython-38-darwin.so,sha256=FXcQtPAjujEWUHdggyHguuGNqEmfFVXvBTJOZubyWKk,1499336
+bitshuffle/__init__.py,sha256=wpLL0wHNX5yuSMoOgSzW9Ywnq2hFTURCPnXZXLKDRLM,853
+bitshuffle/ext.cpython-38-darwin.so,sha256=fiiMCN3ENe7EVNu77AWKhMIYaDFRHuRxBH43YcSG2qs,1537952
+bitshuffle/plugin/libh5LZF.cpython-38-darwin.so,sha256=Jarsxk6SFvnIlwZuLN1mfgQOgpt8fcdCFFX2MwLQ6f8,54528
+bitshuffle/plugin/libh5bshuf.cpython-38-darwin.so,sha256=Xalp1Qnr8eUtGE7Tfl2AV__ao7Nfd14ah1Una-LNVho,155184
+bitshuffle/.dylibs/libhdf5.103.dylib,sha256=RxKRL8dYE852UJ_gwB8kCOMtdx7F0VH9c50p0fgGdP0,3547136
