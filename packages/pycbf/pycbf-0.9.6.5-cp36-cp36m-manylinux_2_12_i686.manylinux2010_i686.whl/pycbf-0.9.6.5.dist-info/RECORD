@@ -1,0 +1,13 @@
+pycbf/_pycbf.cpython-36m-i386-linux-gnu.so,sha256=BYp7ZZ2Nl7hGO_A7oVxCixEkpyNM5rqUWFVZrf0STCk,3212176
+pycbf/_wrapper.py,sha256=YAiJAPm752_ph-CQIcMjbUEROBr1r11a8cPggaGwJ_Y,438266
+pycbf/img.pxd,sha256=0eR9eo34d_dAHZuFK0Nf6KTLui8kKlon1YxsFmL7vXw,2375
+pycbf/utils.py,sha256=djTf4orwQpFPd4bXzIfXaxx04uC9_5rxg2M1bcBhB58,944
+pycbf/img.pyx,sha256=avdGLctXkYG2dYFnJAgjDR0tT5kc4pJ-xfrCXnvW2Ik,8907
+pycbf/img.pyi,sha256=rFpniNztlsqHO5jXj7Ct-JnArVLyPDP0ESiwVUkid7g,968
+pycbf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycbf/__init__.py,sha256=WJmucsgH7hOVySimouh2vwx7FjQD0s0hAvdetuVI3qI,165
+pycbf/img.c,sha256=ZvpnLFHwpL2RdlYjLbOOOb9wYJq95WR6i3fygrNnaf4,304924
+pycbf/img.cpython-36m-i386-linux-gnu.so,sha256=mgUUT-r-f1zRT7oTL0XZA83dh7Ic0aNgfDGci7rAfqc,377196
+pycbf-0.9.6.5.dist-info/METADATA,sha256=uOo8Ms0I1nWWmTWjZFKNpEUuuxJA9MOC89KmzR7ZkQs,2875
+pycbf-0.9.6.5.dist-info/RECORD,,
+pycbf-0.9.6.5.dist-info/WHEEL,sha256=M3jyMFBbnaBdTnM5GTyuGqc-PexH0DIRAw60XxY1M6I,138
