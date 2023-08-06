@@ -1,0 +1,15 @@
+watchgod-0.10a1.dist-info/LICENSE,sha256=Nrb5inpC3jnhTxxutZgxzblMwRsF7q0xyB-4-FHRdQs,1110
+watchgod-0.10a1.dist-info/METADATA,sha256=7cISHitk4tC_dVyvS9ZsdY6K7pdextqOGvcuTFfSwLQ,8633
+watchgod-0.10a1.dist-info/top_level.txt,sha256=vDSixV-_cAsdN83qBhOQS4kBblDTqO0aePPJlkJylQg,9
+watchgod-0.10a1.dist-info/RECORD,,
+watchgod-0.10a1.dist-info/entry_points.txt,sha256=4okmG87LuUNDyD4K5d86sT06LgYoJB4xBLqHQklSCfo,46
+watchgod-0.10a1.dist-info/WHEEL,sha256=0sW8k01kap1IFaacQV3YrE2QTB3JyakZ0o7YgUAO_ik,110
+watchgod/_rust_notify.pyi,sha256=x7PT8C5aArhCqY8Aqtn9FMVUT57J1vW2nKoEs4mSQko,488
+watchgod/main.py,sha256=vurGHncGr4UhhoLeh-Npg-k697Pntxa4DZSIq125z4M,7846
+watchgod/__main__.py,sha256=JgErYkiskih8Y6oRwowALtR-rwQhAAdqOYWjQraRIPI,59
+watchgod/py.typed,sha256=Lqp1dHMxexvJoNFXUuA0K-LwWbIQPMQnWXmA0anEeGI,67
+watchgod/_rust_notify.cpython-38-i386-linux-gnu.so,sha256=YppPha5Ldy4IZhejyEgmsrGETgcnok_Qvw1KKpSzfZY,3805068
+watchgod/__init__.py,sha256=RZpVLp16w0GE_jQOa3TAaJy_7DJ48bELghwkhEMGujo,348
+watchgod/version.py,sha256=uvV3a8R11o00AgH9NjvxoY5dMiOpAJ6n3B-dGcBwx3Y,43
+watchgod/cli.py,sha256=H-CLP6Wmtf98i4xZXlLfMbCPNWBK2XPq0xlHpmRTUHo,5526
+watchgod/filters.py,sha256=J8xeybSU6VGgJpgAcEwuBxiLOnD8BfkJ-NiqHVB4E-w,3007
