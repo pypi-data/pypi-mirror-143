@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        qrmagic-detect=qrmagic.scanimages:climain
+        qrmagic-labelprint=qrmagic.labelmaker:main
+    

@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: qrmagic
+Version: 0.1.0
+Summary: qrmagic: CLI and Web tools for handling field collection metadata. 
+Home-page: https://gitlab.com/kdm9
+Author: Kevin Murray
+Author-email: foss@kdmurray.id.au
+License: UNKNOWN
+Keywords: qrcode,fieldwork
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: exifread
+Requires-Dist: flask
+Requires-Dist: pillow
+Requires-Dist: pylabels
+Requires-Dist: pyzbar
+Requires-Dist: qrcode
+Requires-Dist: reportlab
+Requires-Dist: whitenoise
+
+UNKNOWN
+
+
