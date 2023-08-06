@@ -1,0 +1,2 @@
+[console_scripts]
+databutton = databutton.cli:cli

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: databutton-cli
+Version: 0.0.1
+Summary: Create data apps
+Home-page: https://github.com/databutton/databutton-cli
+Download-URL: https://github.com/databutton/databutton-cli/archive/0.0.1.tar.gz
+Author: Databutton
+Author-email: support@databutton.com
+License: Apache Software License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=0.0.1
+License-File: LICENSE
+
+UNKNOWN
+

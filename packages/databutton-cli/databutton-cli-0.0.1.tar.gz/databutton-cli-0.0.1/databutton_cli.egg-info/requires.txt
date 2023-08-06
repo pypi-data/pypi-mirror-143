@@ -1,0 +1,7 @@
+click<8,>=7.0
+fastapi
+websockets
+httpx
+streamlit
+uvicorn
+watchgod
