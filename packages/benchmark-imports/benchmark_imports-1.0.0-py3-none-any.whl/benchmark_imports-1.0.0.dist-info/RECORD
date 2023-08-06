@@ -1,0 +1,11 @@
+benchmark_imports/__init__.py,sha256=-XkEJKbDTVRqOo5Z7doC0x903MFA3cXPfOpKNaPTRi4,182
+benchmark_imports/__main__.py,sha256=ZPGytkQ2AZkJkbvPNhYmk7XH9lL6WO4K9U96G9-rQwM,43
+benchmark_imports/_cli.py,sha256=aJZZB0lmXVVuLjdPt6fmdqcmS_Snn_3HmWzK2iZCo94,1563
+benchmark_imports/_colors.py,sha256=fa_ofvoQXJUEUMxyYLmG3YqAZihXwmsyWqCh2O0INM4,111
+benchmark_imports/_imports.py,sha256=IuEgK5d65pbTm21k81Tmy-fjVoIGuFe0AFXNXC-Y9HI,2112
+benchmark_imports/_stack.py,sha256=dXtmVtjTrew1xFuW_IPIBd0QlrMu9zYzQOTeoVXX_ro,449
+benchmark_imports/_tracker.py,sha256=m9gfbhu4Ba2iqkMM_VVqeXaQqO8uutn3Vf2emLVb3BU,2517
+benchmark_imports-1.0.0.dist-info/LICENSE,sha256=s1X_JkJciAgWY1Lw4f4cxSHrpocUTbDsKvF3814zEZw,1048
+benchmark_imports-1.0.0.dist-info/WHEEL,sha256=VUbF57hf4yRZWWrOOjp25Fr4BQX9EtnVSbnP2vNxHDM,81
+benchmark_imports-1.0.0.dist-info/METADATA,sha256=hMHXX3BSA3sa25OtsrtdEYTR123AeDxosW3Llq7bhq0,4099
+benchmark_imports-1.0.0.dist-info/RECORD,,
