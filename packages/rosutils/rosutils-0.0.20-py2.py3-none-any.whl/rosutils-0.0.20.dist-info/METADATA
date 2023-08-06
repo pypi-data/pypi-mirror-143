@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: rosutils
+Version: 0.0.20
+Summary: Utilities for working with ROS development
+Home-page: https://dev.azure.com/applica-robot-integration/ari-platform/_git/ros-utils
+Author: Applica Robot Integration
+Author-email: job@applica.no
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Description-Content-Type: text/markdown
+
+# ROS Utilities
+
+This repository contains utility scripts for working with ROS development.
+
+
+
