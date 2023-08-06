@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pynics
+Version: 0.1.1
+Summary: Computing Nuclear Independent Chemical Shifts
+Home-page: https://www.ccpnc.ac.uk/software/
+Author: Simone Sturniolo
+Author-email: simone.sturniolo@stfc.ac.uk
+License: MIT
+Keywords: crystallography,ccpnc,computational chemistry,nmr,nics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6.*
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: ase
+Requires-Dist: soprano (>=0.8.10)
+
+
+Python scripts for computing Nuclear Independent Chemical Shifts and buildup functions from Castep data 
+
