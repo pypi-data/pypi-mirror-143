@@ -1,0 +1,12 @@
+ezbee/__init__.py,sha256=otunT4clb9KzkqmYC058CvWO_9PA5XhIZpmUf7p8isk,88
+ezbee/__main__.py,sha256=CK-aOBRpAmGmbxFl6irJRcWUVDLkdld6Xlj3teBe7mM,3960
+ezbee/detect.py,sha256=2MfyqXwWVPH9J2daLO8ZzajI9RlFXch1sVbRkulcX_M,2369
+ezbee/ezbee.py,sha256=wezEQFJ-xrOTRNHigoyf6jbc8_B6DRu_lLvG36fKEGA,316
+ezbee/loadtext.py,sha256=q9AH5DTZBKIBLsmwhzWUguN1ljVAbfwHqU6lBZg5VXU,1433
+ezbee/text2lists.py,sha256=Kbb1CuUs5fSJxxhS0qX1CFi7A6LKsHKEu4ADSvjYMoc,4649
+LICENSE,sha256=2Z4g7Eq1bQRfTQoryBnNsyhlWBpAGylKyp1KFJMlTWU,1085
+ezbee-0.1.0a1.dist-info/entry_points.txt,sha256=lnbFyMAbT9sstEDHcp0GVZWQxuWtH_7QI_mpAhsfZuM,44
+ezbee-0.1.0a1.dist-info/LICENSE,sha256=2Z4g7Eq1bQRfTQoryBnNsyhlWBpAGylKyp1KFJMlTWU,1085
+ezbee-0.1.0a1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+ezbee-0.1.0a1.dist-info/METADATA,sha256=cwYrzipTYhpq_fpZrzvBURX_tLsPwbZLfigvJmrYJ7Q,1632
+ezbee-0.1.0a1.dist-info/RECORD,,
