@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+irnl_rdt_correction/__init__.py
+irnl_rdt_correction/__main__.py
+irnl_rdt_correction/irnl_rdt_correction.py
+irnl_rdt_correction.egg-info/PKG-INFO
+irnl_rdt_correction.egg-info/SOURCES.txt
+irnl_rdt_correction.egg-info/dependency_links.txt
+irnl_rdt_correction.egg-info/requires.txt
+irnl_rdt_correction.egg-info/top_level.txt
