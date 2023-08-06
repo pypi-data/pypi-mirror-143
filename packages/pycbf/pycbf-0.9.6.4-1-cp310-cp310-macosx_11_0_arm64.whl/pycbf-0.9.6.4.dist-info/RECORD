@@ -1,0 +1,13 @@
+pycbf/__init__.py,sha256=WJmucsgH7hOVySimouh2vwx7FjQD0s0hAvdetuVI3qI,165
+pycbf/_wrapper.py,sha256=Gj4R_ifaKt1D8C6QkVz61GG8Vr9lHHOd8tGRkW35654,438266
+pycbf/img.c,sha256=ZvpnLFHwpL2RdlYjLbOOOb9wYJq95WR6i3fygrNnaf4,304924
+pycbf/img.pxd,sha256=0eR9eo34d_dAHZuFK0Nf6KTLui8kKlon1YxsFmL7vXw,2375
+pycbf/img.pyi,sha256=rFpniNztlsqHO5jXj7Ct-JnArVLyPDP0ESiwVUkid7g,968
+pycbf/img.pyx,sha256=avdGLctXkYG2dYFnJAgjDR0tT5kc4pJ-xfrCXnvW2Ik,8907
+pycbf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycbf/utils.py,sha256=djTf4orwQpFPd4bXzIfXaxx04uC9_5rxg2M1bcBhB58,944
+pycbf/img.cpython-310-darwin.so,sha256=2gCFbW2gBIaXdudWMWG8CiFbMMo2Socq0MsjarcooEE,124950
+pycbf/_pycbf.cpython-310-darwin.so,sha256=u6wnwmtEB1GfIAGtrL-HPbIYNqNq4phpCUIPFK21IB4,1208297
+pycbf-0.9.6.4.dist-info/WHEEL,sha256=wrlEcrwNMBCSY8350M4AT9PNaCnNmR3HFzBcGmLlpp8,101
+pycbf-0.9.6.4.dist-info/METADATA,sha256=MLkUZxgPUU45rDjARTVQiQxS5du6r7FEB_HCV5J-cjg,2875
+pycbf-0.9.6.4.dist-info/RECORD,,
