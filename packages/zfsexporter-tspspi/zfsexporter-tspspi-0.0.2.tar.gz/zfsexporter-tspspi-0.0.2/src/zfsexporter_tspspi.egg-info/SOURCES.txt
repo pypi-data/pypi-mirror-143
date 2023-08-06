@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/zfsexporter/__init__.py
+src/zfsexporter/zfsexporter.py
+src/zfsexporter_tspspi.egg-info/PKG-INFO
+src/zfsexporter_tspspi.egg-info/SOURCES.txt
+src/zfsexporter_tspspi.egg-info/dependency_links.txt
+src/zfsexporter_tspspi.egg-info/entry_points.txt
+src/zfsexporter_tspspi.egg-info/requires.txt
+src/zfsexporter_tspspi.egg-info/top_level.txt
