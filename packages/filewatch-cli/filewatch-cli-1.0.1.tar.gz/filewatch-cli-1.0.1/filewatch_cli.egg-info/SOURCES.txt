@@ -1,0 +1,11 @@
+README.md
+license.txt
+requirements.txt
+setup.py
+filewatch/__main__.py
+filewatch/__pycache__/__main__.cpython-310.pyc
+filewatch_cli.egg-info/PKG-INFO
+filewatch_cli.egg-info/SOURCES.txt
+filewatch_cli.egg-info/dependency_links.txt
+filewatch_cli.egg-info/requires.txt
+filewatch_cli.egg-info/top_level.txt
