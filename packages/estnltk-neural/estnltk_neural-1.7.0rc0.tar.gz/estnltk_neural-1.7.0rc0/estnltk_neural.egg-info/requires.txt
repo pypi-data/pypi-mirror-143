@@ -1,0 +1,7 @@
+estnltk-core
+estnltk
+tensorflow
+torch
+transformers
+stanza
+packaging
