@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<div class="page-header">
+    <h2>Select a shipping to change</h2>
+    <div class="actions-part">
+        <a href="{% url 'create_shipping' %}" type="button" class="save-btn">
+            Add Shipping
+        </a>
+    </div>
+</div> 
+<div class="shipping-list">
+    <section class="panel important">
+      
+        <div class="twothirds">
+            <input placeholder="Search shippings by product, customer, or shipping status..." id="search-shippings" type="text" name="title" value="{{ request.GET.q }}"/><br/>
+        </div>
+        
+        <table>
+            <thead>
+                <th><input type="checkbox" name="" id="select-all"></th>
+                <th style="display: flex; align-items: center; gap: 10px;"><div class="remove-btn-section"><button class="del-btn" id="bulk-delete-shippings">Delete</button></div>PRODUCT</th>
+                <th>CUSTOMER</th>
+                <th>SHIPPING STATUS</th>
+            </thead>
+            <tbody class="shipping-results">
+                {% for ship in shippings %}
+                <tr>
+                    <td><input class="checklist-item" type="checkbox" value="{{ ship.id }}"></td>
+                    <td> <a href="{% url 'view_shipping' ship.id %}">{{ ship.product }}</a></td>
+                    <td>{{ ship.customer }}</td>
+                    <td>{{ ship.shipping_status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if shippings.has_other_pages %}
+        <ul id="pagination">
+            {% if shippings.has_previous %}
+            <li><a href="?page={{ shippings.previous_page_number }}">«</a></li>
+            {% else %}
+            <li><a style="pointer-events: none;">«</a></li>
+            {% endif %}
+            {% for i in shippings.paginator.page_range %}
+            {% if shippings.number == i %}
+            <li><a href="#" style="background: #ddd;">{{ i }}</a></li>
+            {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% if shippings.has_next %}
+            <li><a href="?page={{ shippings.next_page_number }}">»</a></li>
+            {% else %}
+            <li class="disabled" style="pointer-events: none;">»</li>
+            {% endif %}
+        </ul> 
+        {% endif %}
+    </section>
+</div>
+
+{% endblock %}

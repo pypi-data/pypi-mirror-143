@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+include makemigrations.py
+include migrate.py
+recursive-include docs *
+recursive-include fakejira1 *
