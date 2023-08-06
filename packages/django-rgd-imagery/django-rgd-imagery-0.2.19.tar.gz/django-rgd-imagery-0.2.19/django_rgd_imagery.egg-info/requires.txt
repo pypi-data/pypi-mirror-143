@@ -1,0 +1,16 @@
+bidict
+cmocean
+django-rgd==0.2.19
+large-image[memcached]>=1.9.0
+large-image-source-gdal>=1.9.0
+large-image-source-pil>=1.9.0
+large-image-source-tiff>=1.9.0
+matplotlib
+numpy
+pyvips
+shapely
+tifftools>=1.2.0
+
+[worker]
+large-image-converter
+rasterio
