@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mite-cli
+Version: 0.0.1a0
+Summary: mite cli tool
+Home-page: https://github.com/ryanlinnit-sky/mite-cli/
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: docopt
+Requires-Dist: black
+Requires-Dist: flake8
+Requires-Dist: GitPython
+
+# Mite CLI
+
+## Installation
+
+```bash
+pip install mite-cli
+```
+
+## Create new mite project
+
+```bash
+mite-cli new my_project_dir
+```
+
