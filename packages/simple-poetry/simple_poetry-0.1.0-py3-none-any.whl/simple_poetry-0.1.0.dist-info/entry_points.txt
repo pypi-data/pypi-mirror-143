@@ -1,0 +1,5 @@
+[console_scripts]
+docs=simple_poetry:__docs
+serve=simple_poetry:__serve
+test=simple_poetry:__test
+
