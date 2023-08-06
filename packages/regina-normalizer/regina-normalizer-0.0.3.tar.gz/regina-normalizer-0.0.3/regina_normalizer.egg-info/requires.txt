@@ -1,0 +1,2 @@
+setuptools
+pos>=v2.1.0
