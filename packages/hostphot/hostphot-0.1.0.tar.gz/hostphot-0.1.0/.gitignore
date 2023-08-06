@@ -1,0 +1,5 @@
+images/
+.ipynb*
+src/hostphot/__pycache__/
+src/*egg*
+
