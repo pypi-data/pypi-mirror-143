@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+directize/__init__.py
+directize/basic.py
+directize/config.py
+directize/directize.py
+directize/monorepo.py
+directize/standard.py
+directize/utils.py
+directize.egg-info/PKG-INFO
+directize.egg-info/SOURCES.txt
+directize.egg-info/dependency_links.txt
+directize.egg-info/top_level.txt
+test/test_common.py
