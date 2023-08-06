@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: django-message-broker
+Version: 0.2.1
+Summary: All-in-one message broker for Django supporting Channels, Celery and process workers
+Home-page: https://github.com/django-message-broker/django-message-broker
+License: Apache-2.0
+Keywords: django,message-broker,channels,celery
+Author: Tanzo Creative Ltd
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Provides-Extra: docs
+Requires-Dist: Django (>=4.0,<5.0)
+Requires-Dist: Sphinx (>=4.3.2,<5.0.0); extra == "docs"
+Requires-Dist: msgspec (>=0.3.2,<0.4.0)
+Requires-Dist: myst-parser (>=0.16.1,<0.17.0); extra == "docs"
+Requires-Dist: pyzmq (>=22.3.0,<23.0.0)
+Requires-Dist: sphinx_rtd_theme (>=1.0.0,<2.0.0); extra == "docs"
+Requires-Dist: tornado (>=6.1,<7.0)
+Project-URL: Documentation, https://django-message-broker.readthedocs.io/en/latest/index.html
+Project-URL: Repository, https://github.com/django-message-broker/django-message-broker
+Description-Content-Type: text/markdown
+
+# Django Message Broker
+
+[![Documentation Status](https://readthedocs.org/projects/django-message-broker/badge/?version=latest)](https://django-message-broker.readthedocs.io/en/latest/?badge=latest)
+
+<img src="assets/DMB Ecosystem opt.svg"
+     alt="Django message broker ecosystem"
+     width=200
+     align="right"/>
+
+Django Message Broker is a plugin written in Python for Django that provides an all-in-one
+message broker. It interfaces with Django Channels and Celery [1], and replaces the need
+for separate message brokers such as Redis and RabbitMQ.
+
+The motivating use case for Django Message Broker is small site solutions where it is
+easier to deploy a single server containing all the required functionality rather than a
+multi-server solution. An example would be a small site running data science models, where
+executing the model is a long running process and needs to execute in the background so
+that it doesn’t degrade the responsiveness of the user interface.
+
+Potential scenarios for Django Message Broker include:
+
++ Prototyping, Testing, Training
++ Data science projects where the model complexity exceeds the capabilities of packages such
+  as Shiny, Dash and Streamlit.
++ Small systems with a low number of users.
+
+The Django Message Broker is an installable component of the Django platform that provides
+an easy to install, all-in-one alternative for small scale solutions. It does not replace
+the need for high volume message brokers where message volume and redundancy are important.
+
+**Note**
+
+1. The Celery interface is in development and not supported in this release. 
+
+## Installation
+
+Install latest stable version into your python environment using pip::
+
+    pip install django-message-broker
+
+Once installed add ``django_message_broker`` to your ``INSTALLED_APPS`` in settings.py:
+
+    INSTALLED_APPS = (
+        'django_message_broker',
+        ...        
+    )
+
+Django Message Broker should be installed as early as possible in the installed applications
+list and ideally before other applications such as Channels and Celery. The message broker
+forks a background process which should occur before other applications create new threads in
+the current process.
+
+## Configure Django Channels Layers
+
+To configure the Django Message Broker as a Channels layer add the following to the ``CHANNEL_LAYERS``
+setting in settings.py:
+
+    CHANNEL_LAYERS = {
+        'default': {
+            'BACKEND': 'django_message_broker.ChannelsServerLayer',
+        },
+    }
+
