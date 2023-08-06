@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fusets/__init__.py
+src/fusets.egg-info/PKG-INFO
+src/fusets.egg-info/SOURCES.txt
+src/fusets.egg-info/dependency_links.txt
+src/fusets.egg-info/top_level.txt
