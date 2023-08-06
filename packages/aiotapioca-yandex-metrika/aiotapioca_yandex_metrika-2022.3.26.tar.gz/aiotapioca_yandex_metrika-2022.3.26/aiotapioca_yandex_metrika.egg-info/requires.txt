@@ -1,0 +1,8 @@
+aiohttp>=3.0
+aiotapioca-wrapper>=3.2.4
+
+[dev]
+black>=22.0
+pytest>=7.0
+pytest-asyncio>=0.18
+aioresponses>=0.7
