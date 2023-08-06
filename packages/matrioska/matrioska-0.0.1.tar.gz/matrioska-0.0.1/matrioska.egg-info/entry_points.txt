@@ -1,0 +1,3 @@
+[console_scripts]
+matrioska = matrioska.__main__:main
+
