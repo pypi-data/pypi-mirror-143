@@ -1,0 +1,5 @@
+[console_scripts]
+ap=my_autopylot.cli.my_autopylot:main
+ap_py=my_autopylot.cli.ap_console:main
+ap_st=my_autopylot.cli.speed_test:main
+
