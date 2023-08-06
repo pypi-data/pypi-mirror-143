@@ -1,0 +1,15 @@
+baikal/language/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baikal/language/custom_dict_pb2.py,sha256=YoMqnTcXDJnr8H_H0IpDvvuRA-pn3Z1c2Q0r2beeseY,32395
+baikal/language/custom_dict_pb2.pyi,sha256=Yy6S18xZWnrHEaZTiZtpNOXEynQwybNMJuQA908bh38,11122
+baikal/language/custom_dict_pb2_grpc.py,sha256=-rX9GS6mvIvSHMuPF0GvkgRg8n2YFRJ_3sZm1fxHT5g,8570
+baikal/language/custom_dict_pb2_grpc.pyi,sha256=Cp8e35Lus7sS5uky_KoKj_NeJmDfmyx7CMAB3rKyX7o,2745
+baikal/language/dict_common_pb2.py,sha256=qzizjMr7kHY0GxNqIcda_rUQ50kyb29KHZT2K5HR73A,6334
+baikal/language/dict_common_pb2.pyi,sha256=IYM8meWjzl6DmJd9wqpTfPk13mWdBWVVzshXqJcsXG8,2980
+baikal/language/language_service_pb2.py,sha256=MZXolxogNZLWJF9y2UPwYAvIFRm26DxH3Rjn6wQvToE,31453
+baikal/language/language_service_pb2.pyi,sha256=efs_e1JbEfpVgSFRE0iGR_ckBsv1mmrq_H-tV-GbCBc,40654
+baikal/language/language_service_pb2_grpc.py,sha256=JAM0rXtC3CuRHkslyitnbHmaqO2Tms3DX7X_kqReNAM,5213
+baikal/language/language_service_pb2_grpc.pyi,sha256=uGgAgUpxQ72Cd98xlnFQZPrszoe7c6mQitYB3IXgBGs,2890
+baikalai_apis-0.9.1.dist-info/LICENSE,sha256=XS3JNISRxaz-O4xOg_T8PqzB7tBOPC3Z5Z4t5Zmfu6I,1519
+baikalai_apis-0.9.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+baikalai_apis-0.9.1.dist-info/METADATA,sha256=5N-obl5GtScz0mIJfyhZbJKgne0jT2_fquREZ8dcoIY,3458
+baikalai_apis-0.9.1.dist-info/RECORD,,
