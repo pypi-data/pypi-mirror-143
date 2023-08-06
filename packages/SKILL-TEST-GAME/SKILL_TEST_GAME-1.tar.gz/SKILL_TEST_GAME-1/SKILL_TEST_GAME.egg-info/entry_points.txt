@@ -1,0 +1,3 @@
+[console_scripts]
+SKILL_TEST_GAME = SKILL_TEST_GAME.skill_test_game:main
+

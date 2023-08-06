@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+SKILL_TEST_GAME/skill_test_game.py
+SKILL_TEST_GAME.egg-info/PKG-INFO
+SKILL_TEST_GAME.egg-info/SOURCES.txt
+SKILL_TEST_GAME.egg-info/dependency_links.txt
+SKILL_TEST_GAME.egg-info/entry_points.txt
+SKILL_TEST_GAME.egg-info/top_level.txt
