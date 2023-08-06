@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: PyHuTool
+Version: 0.0.6
+Summary: PyHuTool lets Python control the mouse and keyboard, and other GUI automation tasks. For Windows, macOS, and Linux
+Home-page: https://github.com/kaysen820/PyHuTool
+Author: kaysen
+Author-email: kaysen820@gmail.com
+License: BSD
+Keywords: gui automation test testing keyboard mouse cursor click press keystroke control
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyHuTool
+Python版HuTool
+
+#### Setup
+`pip install pyhutool`
+
+#### Example Usage
+Keyboard and Mouse Control
+```
+from pyhutool import Mouse
+from pyhutool import Keybord
+from pyhutool import Screenshot
+from pyhutool import QRCode
+
+# Mouse.click(500, 500)
+# size = Mouse.size()
+# position = Mouse.position()
+# Mouse.leftClick(500, 500)
+
+# Keybord.keyDown('h')
+# Keybord.keyUp('h')
+# Keybord.hotkey('ctrl', 'c')
+# Keybord.press('h')
+# Keybord.typewrite('hello world')
+```
+
+#### Screenshot Functions
+```
+# Screenshot.screenshot('test.png')
+# locate = Screenshot.locateOnScreen('img_1.png')
+```
+#### QR Code
+```
+# QRCode.createQrcode('test', 'qrcode.png')
+```
+
