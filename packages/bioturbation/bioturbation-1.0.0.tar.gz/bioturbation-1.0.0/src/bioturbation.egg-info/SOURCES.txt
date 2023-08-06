@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bioturbation/__init__.py
+src/bioturbation/model.py
+src/bioturbation/soil.py
+src/bioturbation.egg-info/PKG-INFO
+src/bioturbation.egg-info/SOURCES.txt
+src/bioturbation.egg-info/dependency_links.txt
+src/bioturbation.egg-info/top_level.txt
