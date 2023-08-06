@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+DisnakePaginator/EasyDisnakePaginator.egg-info/PKG-INFO
+DisnakePaginator/EasyDisnakePaginator.egg-info/SOURCES.txt
+DisnakePaginator/EasyDisnakePaginator.egg-info/dependency_links.txt
+DisnakePaginator/EasyDisnakePaginator.egg-info/requires.txt
+DisnakePaginator/EasyDisnakePaginator.egg-info/top_level.txt
