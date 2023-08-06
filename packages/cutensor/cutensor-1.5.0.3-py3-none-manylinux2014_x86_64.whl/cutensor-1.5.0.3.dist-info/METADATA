@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cutensor
+Version: 1.5.0.3
+Summary: NVIDIA cuTENSOR
+Home-page: https://developer.nvidia.com/cutensor
+Author: NVIDIA Corporation
+Author-email: cuda_installer@nvidia.com
+License: NVIDIA Proprietary Software
+Keywords: cuda,nvidia,machine learning,tensor network,high-performance computing
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 10.2
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.0
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.1
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.2
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.3
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.4
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.5
+
+cuTENSOR: Tensor Linear Algebra on NVIDIA GPUs
+
