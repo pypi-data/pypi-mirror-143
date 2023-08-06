@@ -1,0 +1,9 @@
+peppercorn
+PyMySQL
+SQLAlchemy
+
+[dev]
+check-manifest
+
+[test]
+coverage

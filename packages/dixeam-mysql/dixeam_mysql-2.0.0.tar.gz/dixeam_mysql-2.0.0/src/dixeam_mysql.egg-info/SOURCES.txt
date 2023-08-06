@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dixeam_mysql.egg-info/PKG-INFO
+src/dixeam_mysql.egg-info/SOURCES.txt
+src/dixeam_mysql.egg-info/dependency_links.txt
+src/dixeam_mysql.egg-info/entry_points.txt
+src/dixeam_mysql.egg-info/requires.txt
+src/dixeam_mysql.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/mysql.py
