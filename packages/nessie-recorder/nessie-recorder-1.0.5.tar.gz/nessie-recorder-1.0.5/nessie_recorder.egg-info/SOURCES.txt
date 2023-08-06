@@ -1,0 +1,13 @@
+CONFIG.INI
+LICENSE
+MANIFEST.in
+README.md
+mapping.csv
+setup.py
+nessie/recorder/__init__.py
+nessie_recorder.egg-info/PKG-INFO
+nessie_recorder.egg-info/SOURCES.txt
+nessie_recorder.egg-info/dependency_links.txt
+nessie_recorder.egg-info/entry_points.txt
+nessie_recorder.egg-info/requires.txt
+nessie_recorder.egg-info/top_level.txt
