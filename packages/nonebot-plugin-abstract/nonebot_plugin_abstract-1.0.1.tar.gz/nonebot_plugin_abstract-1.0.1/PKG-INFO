@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: nonebot_plugin_abstract
+Version: 1.0.1
+Summary: 适用于 Nonebot2 的语句抽象化插件
+Home-page: https://github.com/CherryCherries/nonebot-plugin-abstract
+Author: CherryCherries
+Author-email: cherrycherries@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+适用于 Nonebot2 的语句抽象化插件，可以将你的语句变得抽象起来~
+
