@@ -1,0 +1,11 @@
+processamento_de_imagens_marcelo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+processamento_de_imagens_marcelo/processing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+processamento_de_imagens_marcelo/processing/combination.py,sha256=aV5ca6mRKN5p9kioHaTZonVSY71tis7DW359H_FuIsk,800
+processamento_de_imagens_marcelo/processing/transformation.py,sha256=9jaNXZYWRkxsLEVc3qxXYzV7riaSsOW8zR6_hoahXFE,348
+processamento_de_imagens_marcelo/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+processamento_de_imagens_marcelo/utils/io.py,sha256=gVPY8oprsWeZUwetBt3CI2qiG7ySEYpkzxSHa7bD0GE,201
+processamento_de_imagens_marcelo/utils/plot.py,sha256=bAIjl2TPTP_gvHND-pd19WFnHiMo95P0Hbl_-UEhFWM,930
+image_processing_M_teste-0.0.1.dist-info/METADATA,sha256=NCYjxiDTxBv5spKe85hS_Sd3k5DtoAIUgQ6jbN5dfwk,2030
+image_processing_M_teste-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+image_processing_M_teste-0.0.1.dist-info/top_level.txt,sha256=TZ9WZT6RLkAa0_nf3lqDXYz1ISA0BMg8jfndjntpAPE,33
+image_processing_M_teste-0.0.1.dist-info/RECORD,,
