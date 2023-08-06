@@ -1,0 +1,12 @@
+heritage/__init__.py,sha256=6aMROtdVKjxvDgWzI69JwriybVooAQZETGfXVt2r5ys,477
+heritage/cli.py,sha256=Jgg37ghbqA5iLXlSiw17D7IKEosp5WmxEMciNITLyZM,895
+heritage/constants.py,sha256=GOvpCnkoF4zijSPuYrdM3xsiRf3ejW5JKPr70sifjQI,3574
+heritage/heritage.py,sha256=oD-8dT7f6r84ou2NEJwDJHtPG56bON0UovAC2pQ9LhU,33207
+heritage/utils.py,sha256=Ik_8jvkDK0pPmxH0R6WPfXZmkeaJMV3HA3zGQ5z4P_o,2828
+heritage-0.1.0.dist-info/AUTHORS.rst,sha256=oPn2na2vtwDDxf9ue6OF-iGY7SgGg0rx89WZ4W9ubBM,172
+heritage-0.1.0.dist-info/LICENSE,sha256=aibjQGm2k0Rz9c3vYsHpINJ6bxTgnRvzegcksD1Z_bY,1569
+heritage-0.1.0.dist-info/METADATA,sha256=n19CRxthT0B6yFL3JP5OgJV0bcCE3ytVZ_lS_p5EmFg,3450
+heritage-0.1.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+heritage-0.1.0.dist-info/entry_points.txt,sha256=QyfhpehVi9yfWxfiPHnZukm-zetAuY2NED6c2V0FdlM,48
+heritage-0.1.0.dist-info/top_level.txt,sha256=YcrgGlUua4hGJtqBHs1BCi6yuMw8qntp6xuEYL5rrf4,9
+heritage-0.1.0.dist-info/RECORD,,
