@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: explainable-cnn
+Version: 0.0.1
+Summary: 📦 Flexible visualization package for generating layer-wise explanations for CNNs.
+Home-page: https://github.com/ashutosh1919/explainable-cnn
+Author: Ashutosh Hathidara
+Author-email: ashutoshhathidara98@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ashutosh1919/explainable-cnn/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Explainable CNNs
+
+The project is under progress. All the module related files are inside `explainable_cnn`. We have setup automated test checking using `pytest` inside `tests`.
+
+To run tests:
+```bash
+$ pip install pytest
+$ pytest tests/
+```
+
+
