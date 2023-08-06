@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: binanceus-python
+Version: 0.1.0
+Summary: A lightweight Python wrapper for the binance.us public API.
+Home-page: https://github.com/nenyehub/binanceus-python
+License: MIT
+Keywords: Binance,trading,crypto
+Author: Nenye Ndili
+Author-email: nenye@ndili.net
+Requires-Python: >=3.7,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: binance-connector (>=1.11.0,<2.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: websocket-client (>=1.3.1,<2.0.0)
+Project-URL: Repository, https://github.com/nenyehub/binanceus-python
+Description-Content-Type: text/markdown
+
+# binanceus-python
+A lightweight Python wrapper for the binance.us public API. 
+
+Uses [binance-connector-python](https://github.com/binance/binance-connector-python) for API connectivity.
+
+I am in no way affiliated with Binance or Binance US. Use this at your own risk.
+
+## Quick Start
+Install binanceus-python: `pip install binanceus-python` 
+
+Here's some example code to get started with:
+
+```python
+from websocket_bs.client import BsWebsocketClient
+import time
+
+# start real-time ticker stream for symbol BTCUSD
+symbol = 'BTCUSD'
+
+ws = BsWebsocketClient()
+ws.subscribe(symbol)
+ws.start()
+
+
+# print live ticker feed
+try:
+    while True:
+        book_top = ws.get_book_top(symbol)
+        bid = book_top[0]
+        bid_qty = book_top[1]
+        ask = book_top[2]
+        ask_qty = book_top[3]
+        print(f'{symbol} SPOT orderbook_top: ({bid:0.4f}, {bid_qty})  ({ask:0.4f}, {ask_qty})')
+        time.sleep(1)
+except KeyboardInterrupt as e:
+    print("Program finished.")
+    ws.stop()
+```
+
+## Contributing 
+Contributions, fixes, recommendations, and all other feedback is welcome. If you are fixing a bug, please open an issue first with all relevant details, and mention the issue number in the pull request.
+
+### Contact 
+I can be reached on discord at Nenye#5335, or through email at nenye@ndili.net. Otherwise, feel free to open a PR or Issue here.
+
