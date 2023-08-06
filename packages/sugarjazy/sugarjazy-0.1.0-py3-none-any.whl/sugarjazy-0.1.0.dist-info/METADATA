@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sugarjazy
+Version: 0.1.0
+Summary: Parse json logs output from uber-go/zap library nicely
+Home-page: https://github.com/chmouel/sugarjazy
+License: Apache-2.0
+Keywords: logs,tekton,kubernetes
+Author: Chmouel Boudjnah
+Author-email: chmouel@chmouel.com
+Maintainer: Chmouel Boudjnah
+Maintainer-email: chmouel@chmouel.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Project-URL: Repository, https://github.com/chmouel/sugarjazy
+Project-URL: issues, https://github.com/chmouel/sugarjazy/issues
