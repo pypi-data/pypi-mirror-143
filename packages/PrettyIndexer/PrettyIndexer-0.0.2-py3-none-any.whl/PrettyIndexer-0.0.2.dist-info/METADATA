@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: PrettyIndexer
+Version: 0.0.2
+Summary: Get positive and negative index values of a string displayed in a beautiful manner.
+Home-page: https://github.com/ahn1305/PrettyIndexer
+Author: Ashwin.B
+Author-email: ahnashwin1305@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# PrettyIndexer
+
+Are you a beginner programmer or a high school student struggling to write down the index values of a string while slicing it or do you want a visual output of the index values without writing it down, **PrettyIndexer** is your solution. You can do the following with this package.
+
+1. Get a visual display of string along with index values in a tabular form.
+2. Get html code of the table displayed
+
+<hr />
+
+## Installation
+
+Run the following to install:
+
+```python
+pip install PrettyIndexer
+```
+<hr />
+
+## Usage
+
+Open in terminal and type the following command
+
+```python
+python3 -m stringindexer
+```
+
+## Here is a output of the program:
+
+<img height="300" width="700" src="https://i.imgur.com/cGY5zyK.png?1"/>
+
+
+
+
+
+
+
+
+
+
+
