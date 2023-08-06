@@ -1,0 +1,7 @@
+setup.py
+LagAquifer3.egg-info/PKG-INFO
+LagAquifer3.egg-info/SOURCES.txt
+LagAquifer3.egg-info/dependency_links.txt
+LagAquifer3.egg-info/top_level.txt
+sols/Lin2017.py
+sols/__init__.py
