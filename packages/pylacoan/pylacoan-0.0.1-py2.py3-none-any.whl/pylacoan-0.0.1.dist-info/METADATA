@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pylacoan
+Version: 0.0.1
+Summary: Combine different corpus annotators
+Home-page: https://github.com/fmatter/pylacoan
+Author: Florian Matter
+Author-email: florianmatter@gmail.com
+License: Apache Software License 2.0
+Keywords: pylacoan
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: attrs (==21.4.0)
+Requires-Dist: clldutils (==3.10.1)
+Requires-Dist: colorlog (>=6.6.0)
+Requires-Dist: csvw (>=2.0.0)
+Requires-Dist: isodate (==0.6.1)
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: prompt-toolkit (==3.0.28)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: pytz (==2021.3)
+Requires-Dist: questionary (>=1.10.0)
+Requires-Dist: rfc3986 (==1.5.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: tabulate (==0.8.9)
+Requires-Dist: uritemplate (==4.1.1)
+Requires-Dist: wcwidth (==0.2.5)
+Requires-Dist: uniparser-morph (>=2.4.3)
+Requires-Dist: pyigt (>=1.2.0)
+Requires-Dist: cookiecutter (>=1.7.3)
+
+# pylacoan
+
+ ![Coverage badge](tests/coverage.svg "Coverage")
+
+
+

@@ -1,0 +1,13 @@
+pylacoan/__init__.py,sha256=yFRogjAqhKH6D-V4YQcXA757w1DSkIcwaUmhHzinsx8,522
+pylacoan/__main__.py,sha256=hjjuNT6cwJa00ZfxbUKD7TlivaSyb7Qci-S0MsG8DQw,1108
+pylacoan/annotator.py,sha256=zSpwaYg9GKT_lWFXSwWmemDqfCHuVC_jNKW_GcL-938,9057
+pylacoan/cli.py,sha256=jtxyrAQtNQhRDXsvCQKe7Ua292tJW14w-YpISKhWs-0,429
+pylacoan/helpers.py,sha256=D2WEsrdkxQ-UoqRcuHDp3mGarwhOcSqpdow_xDgabMs,1759
+pylacoan/pylacoan.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+pylacoan-0.0.1.dist-info/AUTHORS.md,sha256=U9uVJrKfFmq7YPknCEYgq54Q4gQVE3RlkGBy6udHNow,163
+pylacoan-0.0.1.dist-info/LICENSE,sha256=NcUCHbgMoEWsSZlz-itpDss9uVf9rGS0dRCNrS9Epeg,586
+pylacoan-0.0.1.dist-info/METADATA,sha256=uoWJuM5WjS3KY6vlyo6CkHnXH0LZWqntpCn5cNo62e0,1465
+pylacoan-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+pylacoan-0.0.1.dist-info/entry_points.txt,sha256=gSXz8MKSRc2XdNbCklvd7kdFUQNAXgjxIoOpGMtloi0,52
+pylacoan-0.0.1.dist-info/top_level.txt,sha256=ri1jeTZoPM-lhtSkZMGSAQReac8DZ1_KmZ8euNycHgU,9
+pylacoan-0.0.1.dist-info/RECORD,,
