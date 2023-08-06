@@ -1,0 +1,2 @@
+libreflow>=2.0.9
+shotgun_api3@ git+git://github.com/shotgunsoftware/python-api.git@v3.3.2
