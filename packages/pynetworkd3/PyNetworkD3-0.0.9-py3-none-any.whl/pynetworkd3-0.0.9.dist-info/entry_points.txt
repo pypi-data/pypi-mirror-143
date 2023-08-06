@@ -1,0 +1,3 @@
+[console_scripts]
+PyNetworkD3=PyNetworkD3.cli.core:dispatcher
+
