@@ -1,0 +1,32 @@
+{{ import_string }}
+import {
+    {% for func in assert_funcs -%}
+    {{ func }},
+    {% endfor %}
+} from './commons';
+import { readFileSync } from 'fs';
+
+{% for t_name, t in tests.items() %}
+test('{{t.info}}', () => {
+    {%- if t.input.type == "file" %}
+    data = readFileSync("fixtures/{{t.input.arg}}", "utf-8")
+    {%- elif t.input.type == "raw" %}
+    data = {{ t.input.arg }}
+    {%- elif t.input.type == "str" %}
+    data = "{{ t.input.arg }}"
+    {%- endif %}
+    {% if t.assert.func != "fail" -%}
+    serialized_data = {{func}}(data)
+    expect({{ t.assert.func }}(serialized_data, {{ t.assert.arg }})).toBe(true)
+    {%- else -%}
+    try {
+        serialized_data = {{ func }}(data)
+        fail("Expected an error, but didn't get")
+    } catch(e){
+        {%- if t.assert.get('arg') != None %}
+        expect(e.toString()).toBe({{t.assert.arg}})
+        {% endif %}
+    }
+    {%- endif %}
+})
+{% endfor %}
