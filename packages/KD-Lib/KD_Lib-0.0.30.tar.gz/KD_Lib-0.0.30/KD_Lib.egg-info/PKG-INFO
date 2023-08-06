@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: KD-Lib
+Version: 0.0.30
+Summary: A PyTorch model compression library containing easy-to-use methods for knowledge distillation, pruning, and quantization
+Home-page: https://github.com/SforAiDL/KD_Lib
+Author: Het Shah
+Author-email: divhet163@gmail.com
+License: MIT license
+Keywords: Knowledge Distillation,Pruning,Quantization,pytorch,machine learning,deep learning
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+
+UNKNOWN
+
