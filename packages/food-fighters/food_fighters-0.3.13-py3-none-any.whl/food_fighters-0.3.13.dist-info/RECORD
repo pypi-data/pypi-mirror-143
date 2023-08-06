@@ -1,0 +1,10 @@
+backend/__init__.py,sha256=jXmhGysidmiPOxLAzcyzQjjT98GxaQk2jHMECTsHr04,23
+backend/app.py,sha256=5KpAfvUnNShnrl2vSOX1PZB8X5B9vB-y9-m0nl46NoY,3104
+backend/project.py,sha256=JU3lVxz2moorwq9WO-SHbmze--x4wrCERHL_g7J1xEs,609
+backend/data/recipe_schema.sql,sha256=_TkQonkgKOhkQ9LZIhFdJGSQ-FoM2IARk1YgElF9WdA,3693
+backend/data/recipes.db,sha256=_4ijcjiav44f8ZmuqVF4wrZhJISiJKVQ-upVg9QXQ4U,12288
+food_fighters-0.3.13.dist-info/METADATA,sha256=lfL4BChCBvVtCtNCQT-G1dJAhk8xtvs3Ikjq2RsEpXc,492
+food_fighters-0.3.13.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+food_fighters-0.3.13.dist-info/entry_points.txt,sha256=2Mscv120ElDnPp1UEdYf3m8fRTWEHiM-kJ_cKymjLvA,51
+food_fighters-0.3.13.dist-info/top_level.txt,sha256=o0r_qMzzBDDtK9APrv2QVcIw9oc00JRmCEsTE2-AFr0,8
+food_fighters-0.3.13.dist-info/RECORD,,

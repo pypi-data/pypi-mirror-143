@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: food-fighters
+Version: 0.3.13
+Summary: API Endpoints for Food Fighters project
+Home-page: UNKNOWN
+Author: Food Fighters
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: Flask-SQLAlchemy
+Requires-Dist: Flask-restplus
+Requires-Dist: SQLAlchemy
+Requires-Dist: Werkzeug
+Requires-Dist: flake8
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: python-dotenv
+
+# Food-Fighters
+
+
