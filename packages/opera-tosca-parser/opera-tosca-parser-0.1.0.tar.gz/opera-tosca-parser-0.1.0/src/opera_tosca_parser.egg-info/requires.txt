@@ -1,0 +1,5 @@
+pyyaml<=5.4.1
+shtab>=1.5.3
+
+[test]
+pytest>=7.1.0
