@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+exceltpl/xlsxDocument.py
+exceltpl.egg-info/PKG-INFO
+exceltpl.egg-info/SOURCES.txt
+exceltpl.egg-info/dependency_links.txt
+exceltpl.egg-info/requires.txt
+exceltpl.egg-info/top_level.txt

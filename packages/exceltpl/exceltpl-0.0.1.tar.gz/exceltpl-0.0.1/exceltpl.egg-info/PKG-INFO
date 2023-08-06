@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: exceltpl
+Version: 0.0.1
+Summary: generate xlsx file with jinja2 template
+Home-page: https://github.com/kalavt/exceltpl
+Author: kalavt
+Author-email: unknow@unknow.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+
+# how to use
+
+jinja_env = jinja2.Environment()
+jinja_env.globals["now"] = datetime.datetime.now
+jinja_env.add_extension("jinja2.ext.do")
+
+data = {'product':'exceltpl',"version":'0.0.1','terminology':[{'key':'N/A','value':'Not applicable'}]}
+
+doc = xlsxDocument("examples/example.xlsx", data, jinja_env)
+doc.render()
+doc.save("examples/result.xlsx")
+
+
