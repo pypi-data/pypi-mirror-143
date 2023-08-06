@@ -1,0 +1,12 @@
+numpy
+scipy
+cython
+pyinstaller
+matplotlib
+tqdm
+corner
+periodictable
+pyqt5
+cython
+attrs
+orsopy
