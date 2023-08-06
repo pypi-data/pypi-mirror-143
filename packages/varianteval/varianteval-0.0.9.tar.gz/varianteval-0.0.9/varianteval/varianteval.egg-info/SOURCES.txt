@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+tox.ini
+varianteval/tests/__init__.py
+varianteval/tests/test_reader.py
+varianteval/tests/test_record.py
+varianteval/varianteval.egg-info/PKG-INFO
+varianteval/varianteval.egg-info/SOURCES.txt
+varianteval/varianteval.egg-info/dependency_links.txt
+varianteval/varianteval.egg-info/entry_points.txt
+varianteval/varianteval.egg-info/requires.txt
+varianteval/varianteval.egg-info/top_level.txt
