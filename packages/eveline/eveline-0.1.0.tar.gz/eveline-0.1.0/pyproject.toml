@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "eveline"
+version = "0.1.0"
+description = "Placeholder for eveline protocol"
+authors = ["Stanislav <me@h3xco.de>"]
+license = "Proprietary"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Jinja2 = "^3.0.3"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+pylint = "^2.12.2"
+flake8 = "^4.0.1"
+mypy = "^0.941"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
