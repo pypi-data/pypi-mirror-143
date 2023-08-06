@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/fastfargate/__init__.py
+src/fastfargate/py.typed
+src/fastfargate.egg-info/PKG-INFO
+src/fastfargate.egg-info/SOURCES.txt
+src/fastfargate.egg-info/dependency_links.txt
+src/fastfargate.egg-info/requires.txt
+src/fastfargate.egg-info/top_level.txt
+src/fastfargate/_jsii/__init__.py
+src/fastfargate/_jsii/fastfargate@0.0.21.jsii.tgz
