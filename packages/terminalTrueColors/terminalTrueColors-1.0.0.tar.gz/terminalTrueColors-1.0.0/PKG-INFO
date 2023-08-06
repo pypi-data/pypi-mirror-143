@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: terminalTrueColors
+Version: 1.0.0
+Summary: A Python library that adds colors and other stuff into a Windows terminal
+Home-page: https://github.com/RodAzcue/ttc
+Download-URL: https://github.com/RodAzcue/ttc/archive/refs/tags/v1.0.0.tar.gz
+Author: Azcue
+Author-email: 
+License: UNKNOWN
+Keywords: windowsTerminal
+Platform: UNKNOWN
+
+UNKNOWN
+

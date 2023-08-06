@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+terminalTrueColors/__init__.py
+terminalTrueColors.egg-info/PKG-INFO
+terminalTrueColors.egg-info/SOURCES.txt
+terminalTrueColors.egg-info/dependency_links.txt
+terminalTrueColors.egg-info/top_level.txt
