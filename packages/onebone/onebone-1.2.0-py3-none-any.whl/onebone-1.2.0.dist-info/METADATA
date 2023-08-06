@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: onebone
+Version: 1.2.0
+Summary: An Open Source Signal Processing Library for Sensor Signals about vibration, current, etc.
+Author: Kyunghwan Kim
+Author-email: kyunghwan.kim@onepredict.com
+Requires-Python: >=3.6.5,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyWavelets (==1.1.1)
+Requires-Dist: matplotlib (>=3.3.4)
+Requires-Dist: numpy (>=1.19.5)
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: scipy (>=1.5.4)
+Requires-Dist: sklearn (>=0.0,<0.1)
