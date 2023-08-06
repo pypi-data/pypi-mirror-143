@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: whikoperator
+Version: 1.45
+Summary: UNKNOWN
+Author: PunchyArchy
+Author-email: ksmdrmvscthny@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+
+WHIKoperator - фреймворк для работы с камерой HV в Gravity-core
+
+
