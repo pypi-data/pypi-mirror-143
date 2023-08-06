@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dollar_value_bootcamp.egg-info/PKG-INFO
+dollar_value_bootcamp.egg-info/SOURCES.txt
+dollar_value_bootcamp.egg-info/dependency_links.txt
+dollar_value_bootcamp.egg-info/requires.txt
+dollar_value_bootcamp.egg-info/top_level.txt
