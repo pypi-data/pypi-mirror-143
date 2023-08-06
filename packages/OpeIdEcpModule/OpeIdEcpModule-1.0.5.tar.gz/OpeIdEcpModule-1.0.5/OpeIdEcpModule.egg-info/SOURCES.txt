@@ -1,0 +1,14 @@
+README.md
+setup.py
+OpeIdEcpModule/__init__.py
+OpeIdEcpModule/ecp_xslt_flagument.py
+OpeIdEcpModule/handler_ecp_module.py
+OpeIdEcpModule.egg-info/PKG-INFO
+OpeIdEcpModule.egg-info/SOURCES.txt
+OpeIdEcpModule.egg-info/dependency_links.txt
+OpeIdEcpModule.egg-info/requires.txt
+OpeIdEcpModule.egg-info/top_level.txt
+OpeIdEcpModule/entities/__init__.py
+OpeIdEcpModule/entities/ecp_session_info.py
+OpeIdEcpModule/services/__init__.py
+OpeIdEcpModule/services/ecp_session_service.py
