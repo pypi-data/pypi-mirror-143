@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+src/bedwarspro/__init__.py
+src/bedwarspro/client.py
+src/bedwarspro/errors.py
+src/bedwarspro/utils.py
+src/bedwarspro.egg-info/PKG-INFO
+src/bedwarspro.egg-info/SOURCES.txt
+src/bedwarspro.egg-info/dependency_links.txt
+src/bedwarspro.egg-info/requires.txt
+src/bedwarspro.egg-info/top_level.txt
+src/bedwarspro/models/__init__.py
+src/bedwarspro/models/player.py
