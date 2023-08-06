@@ -1,0 +1,44 @@
+stages:
+    - test
+    - publish
+            
+test/finesse-develop:
+    stage: test
+    image: python:3.10
+    rules:
+        - if: '$CI_PIPELINE_SOURCE == "push"'
+          when: always
+        - when: never
+    script:
+        - python -V
+        - ls wheelhouse
+        - echo $CI_COMMIT_BRANCH
+        - echo $CI_PIPELINE_SOURCE
+        - echo $CI_COMMIT_REF_NAME
+        - echo $CI_COMMIT_TAG
+        - echo $CI_PROJECT_PATH
+        - python -m pip install wheelhouse/*manylinux*.whl
+        - python -m pip install pytest
+        - python -m pip install .
+        - pytest tests
+    needs: 
+        - project: finesse/finesse3
+          job: build/manylinux/x86_64/py310
+          ref: develop
+          artifacts: true
+
+publish:
+    rules:
+        # Only run on main finesse project, not forks, the main branch, and when a tag is commited
+        - if: $CI_COMMIT_TAG && '$CI_COMMIT_BRANCH == "main"' && '$CI_PROJECT_PATH == "finesse/finesse-ligo"'
+    image: python
+    needs: [test/finesse-develop] # needs to be changed to master when releases are availabe
+    script:
+        - echo $CI_COMMIT_TAG
+        - echo $CI_COMMIT_BRANCH
+        - echo $CI_PROJECT_PATH
+        - python -V
+        - python -m pip install twine build
+        - python -m build
+        - ls dist
+        - python -m twine upload -u=$TWINE_USERNAME -p=$TWINE_PASSWORD dist/*
