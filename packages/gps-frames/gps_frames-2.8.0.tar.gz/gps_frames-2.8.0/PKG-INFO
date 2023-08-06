@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gps_frames
+Version: 2.8.0
+Summary: Reference frames representations and transformations
+Home-page: https://github.com/the-aerospace-corporation/gps_frames
+Author: David William Allen
+Author-email: david.w.allen@aero.org
+License: GNU AGPL v3
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7, <3.10
+License-File: LICENSE
+
+UNKNOWN
+
