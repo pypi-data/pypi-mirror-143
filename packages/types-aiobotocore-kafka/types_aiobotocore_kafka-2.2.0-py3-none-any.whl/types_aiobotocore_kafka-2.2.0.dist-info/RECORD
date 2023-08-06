@@ -1,0 +1,17 @@
+types_aiobotocore_kafka/__init__.py,sha256=ar9OIB1lJD-iSfr5rgGx-XiwzJR2k46PiLipPJk4Ovk,2121
+types_aiobotocore_kafka/__init__.pyi,sha256=q-yPsV0m-j__7ibmSosHgTbPrS2RKrTF9sQojeBKkS8,2120
+types_aiobotocore_kafka/__main__.py,sha256=JOs6hPoTgYiXzoeoZWPATlLNXwcBUm4SiRCSBR7GnFM,907
+types_aiobotocore_kafka/client.py,sha256=7hHfe1AaJZZll7Reil-y54Y2du8las0rtHBrgHDJmVM,29741
+types_aiobotocore_kafka/client.pyi,sha256=XgziMdB1X0rjCCG1Nb447uDKXXrnvl3aTYywQ-acZuI,29690
+types_aiobotocore_kafka/literals.py,sha256=nUaOdtXmgsCINBogMVofZiKaZsrlMZt0WCMNl5jn5dQ,8317
+types_aiobotocore_kafka/literals.pyi,sha256=IvQa6WlJaic-xovV174n-cZaZ0fDXfb4-dZzysZqoqk,8315
+types_aiobotocore_kafka/paginator.py,sha256=jRYGwJNUg8Sgd_9vERWdW-UJZNiI_4Ds9GYqyoq9DVI,9893
+types_aiobotocore_kafka/paginator.pyi,sha256=ixt8ZV1r62ga3rNaVxPRAHJN1qtjEoJMee1cBakFD-U,9882
+types_aiobotocore_kafka/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+types_aiobotocore_kafka/type_defs.py,sha256=7hHsP3ES3SPDuJmUN0VFvnUfCDc7H-IRFnJ0HyNf8n4,35360
+types_aiobotocore_kafka/type_defs.pyi,sha256=YcpTeYDSqjPZRK408xAwnjfxg5vhOHYR6C--4u5G1v0,35359
+types_aiobotocore_kafka/version.py,sha256=ihwPOBzSftBme2_-hbTYx8t961PFMGI-4pomo9WPRK0,59
+types_aiobotocore_kafka-2.2.0.dist-info/METADATA,sha256=JVhO6XpdMMnn6usmHNvYjwpwAMce39agSRwBahfsInk,18201
+types_aiobotocore_kafka-2.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+types_aiobotocore_kafka-2.2.0.dist-info/top_level.txt,sha256=3jtu91S8j2tapyb2l8V2HeFNSPlG-vYXkqrFaYyJ-tY,24
+types_aiobotocore_kafka-2.2.0.dist-info/RECORD,,
