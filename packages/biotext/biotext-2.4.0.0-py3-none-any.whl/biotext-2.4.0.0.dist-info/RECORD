@@ -1,0 +1,10 @@
+biotext/__init__.py,sha256=2Bpm-I893P2ud0euxBNzaxR_ZEZEjRTpWP6rkM9To4c,174
+biotext/aminocode.py,sha256=1WSrVtpunwV3ddGJEcXMwSyAXZJPEYSq07DanpkRbGk,6439
+biotext/dnabits.py,sha256=enfD8LoXPVXt1-ndpevboBGhdvFT-Yt37-QGaUQ0gHU,4531
+biotext/fastatools.py,sha256=cZL5H_mh8qPXFCwyas7da4DfOOanuxITne8g8GYV2YM,3808
+biotext/pubmedsearch.py,sha256=3nZu-O1R6iQPba-BJ_OM--3RKep8PxykYal9dYc2g6U,2988
+biotext/treetools.py,sha256=y4oaF3kc7IDXAdbfWOfACxUXQbJeAw9G57uDc9BsxO4,673
+biotext-2.4.0.0.dist-info/METADATA,sha256=Le6xih_ClKv2sKpibzYG_KNAkZjv9wCcnDkfRRwID-s,8188
+biotext-2.4.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+biotext-2.4.0.0.dist-info/top_level.txt,sha256=KW9-OfD0UMnbbM4x2QoaLWvgifhVI6CYy3KnCQVk8NI,8
+biotext-2.4.0.0.dist-info/RECORD,,

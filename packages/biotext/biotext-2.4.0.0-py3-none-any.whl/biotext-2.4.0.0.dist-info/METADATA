@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: biotext
+Version: 2.4.0.0
+Summary: The biotext library provides tools to support text mining strategy using bioinformatics tool
+Home-page: UNKNOWN
+Author: Diogo de J. S. Machado
+Author-email: diogomachado.bioinfo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.20.1)
+Requires-Dist: pandas (>=1.2.4)
+Requires-Dist: unidecode (>=1.3.4)
+Requires-Dist: biopython (>=1.79)
+Requires-Dist: sweep (>=1.2.0.0)
+Requires-Dist: scipy (>=1.6.2)
+Requires-Dist: scikit-learn (>=0.24.1)
+Requires-Dist: scikit-bio (>=0.5.6)
+
+Biotext
+=======
+The biotext library provides tools to support text mining strategy using bioinformatics tool.
+
+Installation
+------------
+To install biotext through `pip`::
+
+ pip install biotext
+
+Tested Platforms
+----------------
+- Python:
+
+ - 3.8.8
+
+- Operational system:
+
+ - Windows 10 (64bits)
+
+ - Ubuntu 18.04.1 LTS (64bits)
+
+Required external libraries
+---------------------------
+- sweep
+- numpy
+- pandas
+- scipy
+- scikit-learn
+- biopython
+- unidecode
+- scikit-bio
+
+Functions
+---------------
+.. csv-table::
+   :header: Function Name, Description, Input, Output
+   :delim: -
+
+   biotext.aminocode.encodeText biotext.aminocode.encodetext biotext.aminocode.et-Encodes a string with AMINOcode.-text: natural language text string to be encoded; detailing: details in coding. "d" for details in digits. "p" for details on the punctuation. "dp" or "pd" for both.-enc_text: encode text in string format.
+   biotext.aminocode.decodeText biotext.aminocode.decodetext biotext.aminocode.dt-Decodes a string with reverse AMINOcode.-text: text string encoded using the encodefile function to be decode; detailing: details used in the text to be decoded. "d" for details in digits. "p" for details on the punctuation. "dp" or "pd" for both.-dec_text: decode text in string format.
+   biotext.aminocode.encodeFile biotext.aminocode.encodefile biotext.aminocode.ef-Encodes a text file or a list of strings with AMINOcode.-input_file_name: text file name or list of string. Alternatively, if parameter "fasta_header_input" is set to "True", the input can be a list of SeqRecord* or a FASTA file name, in which case the function will extract the headers to do the encoding; output_file_name: the name for the output file. If not defined, the result will only be returned as a variable; detailing: same as in the encodetext function; header_format: format for the headers of the generated FASTA. It can be "number+originaltext", "number" or "originaltext". 'number' is a count of the lines in the input file. Blank lines are considered in the count, but are not added to the FASTA file. "originaltext" is the input text itself; verbose: if True displays progress.-records: list of SeqRecord*; if defined output_file_name a file will be saved.
+   biotext.aminocode.decodeFile biotext.aminocode.decodefile biotext.aminocode.df-Decodes a fasta file or a SeqRecord* list with the reverse amino acid.-input_file_name: file name or list of SeqRecord*; output_file_name: the name for the output file. If not defined, the result will only be returned as a variable; detailing: same as in the decodetext function; verbose: if True displays progress; output: string list. If defined output_file_name a file will be saved.-dec_list: string list; if defined output_file_name a file will be saved.
+   biotext. dnabits.encodeText biotext.dnabits.encodetext biotext. dnabits.et-Encodes a string with DNAbits.-text: natural language text string to be encoded.-enc_text: encode text in string format.
+   biotext.dnabits.decodeText biotext.dnabits.decodetext biotext.dnabits.dt-Decodes a string with reverse DNAbits.-text: text string encoded using the encodefile function to be decode.-dec_text: decode text in string format.
+   biotext.dnabits.encodeFile biotext.dnabits.encodefile biotext.dnabits.ef-Encodes a text file or a list of strings with DNAbits.-input_file_name: text file name or list of string. Alternatively, if parameter "fasta_header_input" is set to "True", the input can be a list of SeqRecord* or a FASTA file name, in which case the function will extract the headers to do the encoding; output_file_name: the name for the output file. If not defined, the result will only be returned as a variable; header_format: format for the headers of the generated FASTA. It can be "number+originaltext", "number" or "originaltext". 'number' is a count of the lines in the input file. Blank lines are considered in the count, but are not added to the FASTA file. "originaltext" is the input text itself; verbose: if True displays progress.-records: list of SeqRecord*. if defined output_file_name a file will be saved.
+   biotext.dnabits.decodeFile biotext.dnabits.decodefile biotext.dnabits.df-Decodes a text file or a SeqRecord* list with reverse DNAbits.-input_file_name: file name or list of SeqRecord*; output_file_name: the name for the output file. If not defined, the result will only be returned as a variable; verbose: if True displays progress.-dec_list: string list; if defined output_file_name a file will be saved.
+   biotext.fastatools.list2SeqRecord biotext.fastatools.list2seqrecord biotext.fastatools.list2bioSeqRecord biotext.fastatools.list2bioseqrecord biotext.fastatools.list2fasta-Converts a list of strings to a list of SeqRecord*.-seq: list of biological sequences in string format; header: list of headers in string format, if set to 'None' the headers will be automatically defined with numbers in increasing order.-records: list of SeqRecord*.
+   biotext.fastatools.fastaRead biotext.fastatools.fastaread-Uses biopython to import a FASTA file.-input_file_name: input fasta file name.-records: list of SeqRecord*.
+   biotext.fastatools.fastaWrite biotext.fastatools.fastawrite-Create a file using a SeqRecord* list.-records: list of SeqRecord*; output_file_name: output fasta file name.-records: a file is saved with the defined name.
+   biotext.fastatools.getHeader biotext.fastatools.getheader-Get the header from a list of SeqRecord*.-records: list of SeqRecord*.-headers: list with headers.
+   biotext.fastatools.getSeq biotext.fastatools.getseq-Get the string from a list of SeqRecord*.-records: list of SeqRecord*.-seqs: list with sequences.
+   biotext.fastatools.removePattern biotext.fastatools.removepattern-Removes patterns from a SeqRecord* range based on regular expression.-records: list of SeqRecord*; rex: regular expression.-new_records: list of SeqRecord* with removal applied.
+   biotext.fastatools.clustalOmega biotext.fastatools.clustalomega biotext.fastatools.clustalo-Uses the Clustal Omega to align the strings in a FASTA file.-input_file_name: input FASTA file name.-align: list with strings aligned in string format.
+   biotext.fastatools.getCons biotext.fastatools.getcons-Save a temporary file with the sequences from the SeqRecord* list, apply the clustalo function and obtain alignment consensus.-records: list of SeqRecord*.-consensus: consensus for alignment in string format; align: list with strings aligned in string format.
+   biotext.fastatools.fastatext2mat biotext.fastatools.fastaText2mat biotext.fastatools.fasta2mat biotext.fastatools.fastatext2vect biotext.fastatools.fastaText2vect biotext.fastatools.fasta2vect-Perform a vectorization of a list of SeqRecord* using the SWeeP, a method developed by our group for FASTA vectorization.-fastatext: list of SeqRecord.-mat: matrix with the generated vectors, in ndarray** format.
+   biotext.treetools.mat2tree biotext.treetools.vect2tree-Create a dendrogram in newick format from a matrix.-mat: matrix in ndarray** format; ids: string list with line identifiers in mat; method: method for creating the dendrogram. Available options are "complete", scipy library implementation, and "nj" (neighbor joining), skbio library implementation. The default is the "complete" method.-tree: string with the dendrogram in newick format.
+
+Note: \*SeqRecord: Biopython object to store biological sequences and its information, as described in <https://biopython.org/DIST/docs/api/Bio.SeqRecord.SeqRecord-class.html>. \*\*ndarray: Numpy object to represent array, as described in <https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html>.
+
