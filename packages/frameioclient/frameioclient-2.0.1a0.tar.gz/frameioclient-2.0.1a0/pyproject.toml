@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "frameioclient"
+version = "2.0.1-alpha.0"
+description = ""
+readme = "README.md"
+homepage = "https://github.com/Frameio/python-frameio-client"
+authors = ["Frame.io DevRel <platform@frame.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+analytics-python = "^1.4.0"
+enlighten = "^1.10.2"
+importlib-metadata = "^4.11.3"
+requests = "^2.27.1"
+token-bucket = "^0.3.0"
+urllib3 = "^1.26.9"
+xxhash = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.4.0"
+bump2version = "^1.0.1"
+sphinx-jekyll-builder = "^0.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
