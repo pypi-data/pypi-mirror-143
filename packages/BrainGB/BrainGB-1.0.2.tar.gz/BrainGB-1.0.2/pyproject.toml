@@ -1,0 +1,12 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "numpy>=1.19.5",
+    "torch>=1.10.2",
+    "scikit-learn>=0.24.2",
+    "networkx>=2.5.1",
+    "node2vec>=0.4.3",
+    "scipy",
+]
+build-backend = "setuptools.build_meta"
