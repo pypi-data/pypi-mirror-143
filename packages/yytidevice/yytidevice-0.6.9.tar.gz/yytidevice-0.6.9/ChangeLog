@@ -1,0 +1,401 @@
+CHANGES
+=======
+
+0.6.9
+-----
+
+* add support for #186
+
+0.6.8
+-----
+
+* add support for tidevice applist --type user|system|all
+
+0.6.7
+-----
+
+* fix #198
+
+0.6.6
+-----
+
+* change logic same as adb pull
+
+0.6.5
+-----
+
+* support pull file and directory
+
+0.6.4
+-----
+
+* add retry for device, maybe work or not
+
+0.6.3
+-----
+
+* add settimeout in some connection
+
+0.6.2
+-----
+
+* change conn\_type to lower
+
+0.6.1
+-----
+
+* hotfix for self.id not retrived
+* add command savesslfile
+
+0.6.0
+-----
+
+* add debug, add set\_assistive\_touch support
+
+0.5.10
+------
+
+* change sha1 to sha256, maybe can fix CA\_MD\_TOO\_WEAK error
+
+0.5.9
+-----
+
+* hotfix for py37
+
+0.5.8
+-----
+
+* support iOS 15.2
+
+0.5.7
+-----
+
+* format code
+
+0.5.6
+-----
+
+* add windows install step
+* change dot to ,
+* update wda bundleId pattern
+* change bundle pattern
+* update to support ios 15.1
+
+0.5.5
+-----
+
+* update wda bundleId pattern
+
+0.5.4
+-----
+
+* change bundle pattern
+
+0.5.3
+-----
+
+* update to support ios 15.1
+* Update \_proto.py
+* Update README.md
+* add DataType.GPU
+* update README: fix xctest command env variable error
+
+0.5.2
+-----
+
+* fix for windows
+* fix README.md 新版本需要传入性能数据类型
+
+0.5.1
+-----
+
+* fix network and usb both exists bug
+
+0.5.0
+-----
+
+* feat: add cmd date and get device via Network
+* config: .gitignore
+* config: flake8
+* fix wdaproxy bug
+
+0.4.18
+------
+
+* use ssl.SSLContext instead of ssl.wrap\_context, since the method is deprecated in py3.7
+* hotfix for device list raise MuxError bug
+
+0.4.17
+------
+
+* do little changes
+* fix wda canot launch bug
+* fix fsync ls app error, close #124, ref libimobiledevice/libimobiledevice#193
+* remove useless code
+
+0.4.16
+------
+
+* fix wda canot launch bug
+
+0.4.15
+------
+
+* fix fsync ls app error, close #124, ref libimobiledevice/libimobiledevice#193
+* remove useless code
+* fix: instrument fps failed. func: 1.perf support filter 2. cpu data optimize
+* Update README.md
+
+0.4.14
+------
+
+* hotfix for 14.6, tested
+* fix 14.6 image missing bug, not tested
+
+0.4.13
+------
+
+* fix bug of retrieve image 12.5
+
+0.4.12
+------
+
+* do some fix for #116
+* retry and qq group id
+
+0.4.11
+------
+
+* fix again image retrieve ref #108
+
+0.4.10
+------
+
+* little modify merge request
+* support 14.6 developer image, ref #108
+
+0.4.9
+-----
+
+* support 14.6 developer image, ref #108
+* Add env option for wdaproxy cmd
+
+0.4.8
+-----
+
+* fix signal.pause not exists in windows error, ref#78
+
+0.4.7
+-----
+
+* fix 13.7 developer image mount error
+* add feature: cmd\_parse(all)
+
+0.4.6
+-----
+
+* fix #78
+
+0.4.5
+-----
+
+* update perf readme ref #78
+* add performance get, cpu,mem,fps,screenshot,network
+
+0.4.4
+-----
+
+* hotfix for #91
+* update package ipa steps
+* update raise message
+
+0.4.3
+-----
+
+* use xctest logger in instruments.py, call reply\_null when expects\_reply=1
+* fix: correct response to reply
+* change to return ret.get(pid), ref #83
+
+0.4.2
+-----
+
+* fix exceptions not export all
+
+0.4.1
+-----
+
+* fix \_wdaproxy import error
+* add stop\_network\_sampling and fix pid not in result of get\_process\_network\_stats
+
+0.4.0
+-----
+
+* add command ps
+* add usbmuxd dump script
+* add project link: https://github.com/electricbubble/gidevice
+* update readme about appium run in windows
+* update example
+
+0.3.5
+-----
+
+* add screenrecord example
+
+0.3.4
+-----
+
+* fix cmd:install with url which contains ?
+* update readme
+* fix typo, close #42
+* add ipad models fix IOS 14.5 image \_alias wrong
+* add ipa sign script
+* add more command
+
+0.3.3
+-----
+
+* support show all log when setenv DEBUG to 1
+* show less debug log in xctest
+
+0.3.2
+-----
+
+* make openssl as optional
+
+0.3.1
+-----
+
+* fix python 3.6 support. fix #22
+* add tidevice pair command
+* remove dep pyopenssl and pyans1 on windows
+
+0.3.0
+-----
+
+* enhance tidevice info, complete pair function
+
+0.2.1
+-----
+
+* support other app UITests
+
+0.2.0
+-----
+
+* limit python version >= 3.7
+
+0.1.14
+------
+
+* force tidevice use python 3.7+
+* add 14.5 developDiskImage
+
+0.1.13
+------
+
+* force tidevice to install py 3.7+
+
+0.1.12
+------
+
+* change script name
+* add syslog
+
+0.1.11
+------
+
+* add tidevice wdaproxy to keep xctest running and relay
+
+0.1.10
+------
+
+* change CFBundleName to CFBundleExecutable to fit other test ipa
+
+0.1.9
+-----
+
+* little change to pr
+* 优化tidevice中wda路径被写死的bug
+* skip exists when pypi already exists
+
+0.1.8
+-----
+
+* fix missing requirements
+
+0.1.7
+-----
+
+* add -x to tidevice relay
+
+0.1.6.2
+-------
+
+* fix again
+
+0.1.6.1
+-------
+
+* fix github yml
+
+0.1.6
+-----
+
+* update fetch depth
+
+0.1.5
+-----
+
+* remove large files
+* support upload to pypi using github actions
+* add tidevice relay support
+* add tidevice relay support
+* exclude tests, make release tar.gz smaller
+* exclude tests, make release tar.gz smaller
+
+0.1.4
+-----
+
+* fix #12
+* fix #12
+
+0.1.3
+-----
+
+* add support tidevice xctest -e USE\_PORT:8100
+* add support tidevice xctest -e USE\_PORT:8100
+
+0.1.2
+-----
+
+* finish cmd: developer, update readme
+* finish cmd: developer, update readme
+* Compatible with iOS 9.2.1 and iOS 9.3
+* Compatible with iOS 9.2.1 and iOS 9.3
+* support download developer image from github
+* support download developer image from github
+* add cmd: developer
+* add cmd: developer
+* update upload script
+* update upload script
+
+0.1.1
+-----
+
+* merge linpengchen code
+* merge linpengchen code
+* add get ipa embedded.mobileprovision file information function
+* 更新MODELS
+* fix imagemounter
+* optimize version condition
+* disble init control session before wda launch on iOS 10.1
+* fix wda launch failed on iOS 10.1
+* add badge
+* add logo
+
+0.1.0
+-----
+
+* fix build
+* init commit
+* Initial commit
