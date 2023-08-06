@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+GeoMeshPy/vmod.py
+geomeshconv.egg-info/PKG-INFO
+geomeshconv.egg-info/SOURCES.txt
+geomeshconv.egg-info/dependency_links.txt
+geomeshconv.egg-info/requires.txt
+geomeshconv.egg-info/top_level.txt
