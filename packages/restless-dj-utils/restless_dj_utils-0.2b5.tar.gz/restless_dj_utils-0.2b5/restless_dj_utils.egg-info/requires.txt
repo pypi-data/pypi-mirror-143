@@ -1,0 +1,4 @@
+django>=3.2
+restless
+pyjwt>=2
+ua-parser
