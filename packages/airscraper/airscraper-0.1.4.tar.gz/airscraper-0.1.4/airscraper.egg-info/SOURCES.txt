@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+airscraper/__init__.py
+airscraper/airscraper.py
+airscraper.egg-info/PKG-INFO
+airscraper.egg-info/SOURCES.txt
+airscraper.egg-info/dependency_links.txt
+airscraper.egg-info/entry_points.txt
+airscraper.egg-info/requires.txt
+airscraper.egg-info/top_level.txt
