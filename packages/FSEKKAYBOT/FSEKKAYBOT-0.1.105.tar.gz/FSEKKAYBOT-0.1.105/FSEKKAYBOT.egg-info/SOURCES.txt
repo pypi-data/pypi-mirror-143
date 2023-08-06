@@ -1,0 +1,13 @@
+setup.py
+FSEKKAYBOT/__init__.py
+FSEKKAYBOT.egg-info/PKG-INFO
+FSEKKAYBOT.egg-info/SOURCES.txt
+FSEKKAYBOT.egg-info/dependency_links.txt
+FSEKKAYBOT.egg-info/requires.txt
+FSEKKAYBOT.egg-info/top_level.txt
+FsekkayBot/__init__.py
+FsekkayBot.egg-info/PKG-INFO
+FsekkayBot.egg-info/SOURCES.txt
+FsekkayBot.egg-info/dependency_links.txt
+FsekkayBot.egg-info/requires.txt
+FsekkayBot.egg-info/top_level.txt
