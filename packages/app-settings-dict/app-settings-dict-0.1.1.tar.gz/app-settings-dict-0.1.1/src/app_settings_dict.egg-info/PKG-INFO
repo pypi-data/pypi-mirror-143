@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: app-settings-dict
+Version: 0.1.1
+Summary: A dictionary to manage settings for apps.
+Home-page: https://github.com/wheelercj/app_settings
+Author: Chris Wheeler
+License: MIT
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+License-File: LICENSE
+
+# App Settings
+
+![Tests](https://github.com/wheelercj/app_settings/actions/workflows/tests.yaml/badge.svg)
+
+A dictionary-like Settings class for managing an application's settings.
+
+Install with `pip install app-settings-dict`.
+Import with `import app_settings`.
+
+See [the test file](https://github.com/wheelercj/app_settings/blob/master/tests/test_app_settings.py) for example uses.
+
+
