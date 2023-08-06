@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyterminate
+Version: 0.0.1
+Summary: Exit programs gracefully
+Home-page: https://github.com/jeremyephron/pyterminate
+Author: Jeremy Ephron
+Author-email: jeremye@cs.stanford.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyterminate
+
+Reliably run cleanup upon program termination.
+
+## Quickstart
+
+```python3
+import signal
+
+import pyterminate
+
+@pyterminate.register(signals=(signal.SIGINT, signal.SIGTERM))
+def cleanup():
+    ...
+
+# or
+
+def cleanup(a, b):
+    ...
+
+pyterminate.register(cleanup, args=(None, 42))
+```
+
+
