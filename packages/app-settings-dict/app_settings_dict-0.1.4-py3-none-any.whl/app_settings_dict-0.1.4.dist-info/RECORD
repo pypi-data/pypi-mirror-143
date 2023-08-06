@@ -1,0 +1,12 @@
+app_settings/__init__.py,sha256=VrjML8CaeNsGL-Jp8voyy7cMR7W69ZrNeJuQxKF8SMQ,40
+app_settings/app_settings.py,sha256=2tlJQ7iiWoD46qdMDITQQFaTVx4pRqqBpyOtfE2b1AY,6242
+app_settings/defaults_dict.py,sha256=fULIDF_G_15TKM4coGKCem-rHMx7HO1M_SrQCZxAPuM,1403
+app_settings/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app_settings_dict/__init__.py,sha256=VrjML8CaeNsGL-Jp8voyy7cMR7W69ZrNeJuQxKF8SMQ,40
+app_settings_dict/app_settings_dict.py,sha256=mb6ia3GkuoZASwIDfqnenuT7LamO8gN2vi_0gIR8Prk,6209
+app_settings_dict/defaults_dict.py,sha256=fULIDF_G_15TKM4coGKCem-rHMx7HO1M_SrQCZxAPuM,1403
+app_settings_dict-0.1.4.dist-info/LICENSE,sha256=cCtwA_ZlxNhwPIJ-HElsXA0PCuu0E4skdenT_9xMWWo,1091
+app_settings_dict-0.1.4.dist-info/METADATA,sha256=jVcrqDXwORrIf722a4B0jcAkGA6YuYTPvkKUs4EkEfI,1296
+app_settings_dict-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+app_settings_dict-0.1.4.dist-info/top_level.txt,sha256=P33x9pIsTF9GPHzRNdl3ImRxAjNbNOgV2wYs7EkjvE0,18
+app_settings_dict-0.1.4.dist-info/RECORD,,
