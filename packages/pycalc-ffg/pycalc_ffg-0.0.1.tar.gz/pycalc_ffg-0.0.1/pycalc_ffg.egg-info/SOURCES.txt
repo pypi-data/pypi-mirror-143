@@ -1,0 +1,9 @@
+README.md
+setup.py
+pycalc_ffg/__init__.py
+pycalc_ffg/basic.py
+pycalc_ffg/prime.py
+pycalc_ffg.egg-info/PKG-INFO
+pycalc_ffg.egg-info/SOURCES.txt
+pycalc_ffg.egg-info/dependency_links.txt
+pycalc_ffg.egg-info/top_level.txt
