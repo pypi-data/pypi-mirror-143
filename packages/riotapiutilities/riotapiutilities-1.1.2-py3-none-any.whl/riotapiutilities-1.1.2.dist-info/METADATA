@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: riotapiutilities
+Version: 1.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/bugg86/Riot-API-Utilities
+Author: Jack Fink
+Author-email: jackfink68@yahoo.com
+License: MIT
+Keywords: riot api utilities
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+
+UNKNOWN
+
