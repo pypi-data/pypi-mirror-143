@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: autodidaqt-receiver
+Version: 1.1.0
+Summary: Analyis-side bridge for autodiDAQt.
+Home-page: https://github.com/chstan/autodidaqt-receiver
+License: GNU GPL v3.0
+Keywords: data acquisition,physics,instrumentation,DAQ
+Author: chstan
+Author-email: chstansbury@gmail.com
+Requires-Python: >=3.8,<3.10
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: autodidaqt-common (>=0.1.0,<0.2.0)
+Requires-Dist: matplotlib (>=3.1.1,<4.0.0)
+Requires-Dist: numpy (>=1.20,<2.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: ptpython (>=3.0.19,<4.0.0)
+Requires-Dist: pynng (>=0.7.1,<0.8.0)
+Requires-Dist: scipy (>=1.7.1,<2.0.0)
+Requires-Dist: xarray (>=0.18.2,<0.19.0)
+Requires-Dist: zarr (>=2.8.3,<3.0.0)
+Project-URL: Repository, https://github.com/chstan/autodidaqt-receiver
+Description-Content-Type: text/markdown
+
+# autodidaqt-receiver
+
+<div align="center">
+
+[![Build status](https://github.com/chstan/autodidaqt-receiver/workflows/build/badge.svg?branch=master&event=push)](https://github.com/chstan/autodidaqt-receiver/actions?query=workflow%3Abuild)
+[![Python Version](https://img.shields.io/pypi/pyversions/autodidaqt-receiver.svg)](https://pypi.org/project/autodidaqt-receiver/)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/github/license/chstan/autodidaqt-receiver)](https://github.com/chstan/autodidaqt-receiver/blob/master/LICENSE)
+
+Analysis-side bridge for AutodiDAQt.
+
+</div>
+
+## Installation
+
+```bash
+pip install -U autodidaqt-receiver
+```
+
+or install with `Poetry`
+
+```bash
+poetry add autodidaqt-receiver
+```
+
+## Installation from Source
+
+1. Clone this repository
+2. Install `make` if you are on a Windows system
+3. Install `poetry` (the alternative Python package manager)
+4. Run `make install` from the directory containing this README
+
+## Building and releasing
+
+Building a new version of the application contains steps:
+
+- Bump the version of your package `poetry version <version>`. You can pass the new version explicitly, or a rule such as `major`, `minor`, or `patch`. For more details, refer to the [Semantic Versions](https://semver.org/) standard.
+- Make a commit to `GitHub`.
+- Create a `GitHub release`.
+- Publish `poetry publish --build`
+
