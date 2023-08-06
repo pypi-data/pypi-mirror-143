@@ -1,0 +1,8 @@
+sgs/__init__.py,sha256=CQ9xkI97Y7wfuFcCcb2cRU6TE3tDiz28TGmnnzc9b_8,66
+sgs/api.py,sha256=cyB3PUNOWDuYGGsW8hhJIvIQS6Gp2lsQj0Gai78RPPY,2250
+sgs/calculations.py,sha256=dAEiZ8HTG2WyLTtf8G3ZRKiyUxqKbq7HgdvjRFh99T0,4335
+sgs/data/vox1_data.json,sha256=y6ZVHcP_tLpPPwyTJveqJDzfz26lxK5VZQRE5NYEa3M,117019
+speech_gender_statistics-1.0.1.dist-info/METADATA,sha256=GHPh-imUdSc4WPXs5jVhe2SK2wdhZcWafOzY4tvfcec,1816
+speech_gender_statistics-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+speech_gender_statistics-1.0.1.dist-info/top_level.txt,sha256=uQ0Hc6TuCpBaA-yR4RfSlg8Mrx9F7CqVPy-L6X9QdY8,4
+speech_gender_statistics-1.0.1.dist-info/RECORD,,
