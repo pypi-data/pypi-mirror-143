@@ -1,0 +1,8 @@
+cosipy/__init__.py,sha256=TzGoHmQH-nSSacsUCpNIS4LgWOJhgOCdriYj2tJjPm8,64
+cosipy/_version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+cosipy/response/__init__.py,sha256=LG-I-rgSpUroODbr62KDketZiL0FWdd2k3UA1BNeyzY,40
+cosipy/response/spec_response.py,sha256=AyIPkh8BhQ5PruVzjCP3khRlNzFZyPR5NoHTTtc80eg,122
+cosipy-0.0.1.dist-info/METADATA,sha256=Y6pgQtP11BbYZ2dy-7sR58757gCDbVM0bY6pNjA2bDs,373
+cosipy-0.0.1.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+cosipy-0.0.1.dist-info/top_level.txt,sha256=NRdcqC0kG_Gq_NASrFxjYNz-HGeKuDy_6z7287gaYGg,7
+cosipy-0.0.1.dist-info/RECORD,,
