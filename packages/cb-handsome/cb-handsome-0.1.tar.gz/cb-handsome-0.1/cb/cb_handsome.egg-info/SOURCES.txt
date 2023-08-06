@@ -1,0 +1,5 @@
+setup.py
+cb/cb_handsome.egg-info/PKG-INFO
+cb/cb_handsome.egg-info/SOURCES.txt
+cb/cb_handsome.egg-info/dependency_links.txt
+cb/cb_handsome.egg-info/top_level.txt
