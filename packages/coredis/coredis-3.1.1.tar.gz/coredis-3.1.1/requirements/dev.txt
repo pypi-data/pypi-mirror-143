@@ -1,0 +1,17 @@
+-r test.txt
+autoflake8
+black==22.1.0
+click
+flake8
+hiredis
+inflect
+isort
+mypy==0.942
+jinja2
+pyright==1.1.232
+requests
+redis
+types-frozendict
+twine
+uvloop
+wheel
