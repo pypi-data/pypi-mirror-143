@@ -1,0 +1,7 @@
+dataset_iterator>=0.2.2
+edt==2.0.2
+elasticdeform
+keras_preprocessing
+numpy
+scipy
+tensorflow
