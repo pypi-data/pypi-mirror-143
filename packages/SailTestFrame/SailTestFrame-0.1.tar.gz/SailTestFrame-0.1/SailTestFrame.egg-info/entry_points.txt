@@ -1,0 +1,3 @@
+[console_scripts]
+SailTestFrame = main:main
+
