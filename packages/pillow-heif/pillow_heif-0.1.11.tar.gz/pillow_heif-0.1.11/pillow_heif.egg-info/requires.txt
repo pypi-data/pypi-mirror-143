@@ -1,0 +1,13 @@
+cffi>=1.14.6
+pillow
+
+[dev]
+pre-commit
+pytest
+piexif
+pylint
+coverage
+
+[tests]
+pytest
+piexif
