@@ -1,0 +1,35 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "blocksim_poetry_plugin"
+version = "0.1.4"
+description = "A plugin for more poetry commands"
+license = "MIT"
+authors = ["John Gray <manawenuz@johncloud.fr>"]
+homepage = "https://gitlab.com/manawenuz/blocksim-poetry-plugin"
+repository = "https://gitlab.com/manawenuz/blocksim-poetry-plugin"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://gitlab.com/manawenuz/blocksim-poetry-plugin/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+sphinx = "=3.3.1"
+jinja2 = "=2.11.3"
+MarkupSafe = "=2.0.1"
+sphinx_rtd_theme = "^1.0.0"
+sphinx-autoapi =  "^1.8.4"
+sphinx-gallery = "^0.10.0"
+sphinxcontrib-apidoc = "^0.3.0"
+sphinxcontrib-napoleon = "^0.7"
+mock = "^4.0.3"
+docutils = "<0.18,>=0.14"
+
+[tool.poetry.plugins."poetry.application.plugin"]
+blocksim_poetry_plugin = "blocksim_poetry_plugin.plugin:BlocksimApplicationPlugin"
