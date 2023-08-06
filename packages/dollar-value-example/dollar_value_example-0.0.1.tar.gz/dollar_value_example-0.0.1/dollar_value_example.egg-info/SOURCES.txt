@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dollar_value_example/__init__.py
+dollar_value_example.egg-info/PKG-INFO
+dollar_value_example.egg-info/SOURCES.txt
+dollar_value_example.egg-info/dependency_links.txt
+dollar_value_example.egg-info/requires.txt
+dollar_value_example.egg-info/top_level.txt
