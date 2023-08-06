@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: probequest
+Version: 0.8.0
+Summary: Toolkit for Playing with Wi-Fi Probe Requests.
+Home-page: https://github.com/SkypLabs/probequest
+Author: Paul-Emmanuel Raoul
+Author-email: skyper@skyplabs.net
+License: GPLv3
+Project-URL: Bug Tracker, https://github.com/SkypLabs/probequest/issues
+Project-URL: Documentation, https://probequest.readthedocs.io
+Project-URL: Source Code, https://github.com/SkypLabs/probequest
+Keywords: wifi,wireless,security,sniffer
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: <4,>=3.7
+License-File: LICENSE
+Requires-Dist: netaddr (>=0.7.19)
+Requires-Dist: scapy (>=2.4.3)
+Provides-Extra: complete
+Requires-Dist: faker-wifi-essid ; extra == 'complete'
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=3.2) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-seqdiag (>=2.0.0) ; extra == 'docs'
+Requires-Dist: sphinx-argparse (>=0.2.2) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (>=0.5.0) ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: pylint ; extra == 'tests'
+Requires-Dist: tox ; extra == 'tests'
+
+==========
+ProbeQuest
+==========
+
+|PyPI Package| |PyPI Downloads| |PyPI Python Versions| |Build Status| |LGTM
+Grade| |LGTM Alerts| |Documentation Status|
+
+Toolkit allowing to sniff and display the Wi-Fi probe requests passing nearby
+your wireless interface.
+
+Probe requests are sent by a station to elicit information about access points,
+in particular to determine if an access point is present or not in the nearby
+environment. Some devices (mostly smartphones and tablets) use these requests
+to determine if one of the networks they have previously been connected to is
+in range, leaking personal information.
+
+Further details are discussed in `this paper
+<https://brambonne.com/docs/bonne14sasquatch.pdf>`__.
+
+.. image:: docs/_static/img/probequest_demo.gif
+   :target: https://asciinema.org/a/205172
+   :alt: ProbeQuest - Demo
+
+Installation
+============
+
+::
+
+    pip3 install --upgrade probequest
+
+Documentation
+=============
+
+The project is documented `here
+<http://probequest.readthedocs.io/en/latest/>`__.
+
+In the Media
+============
+
+ProbeQuest has appeared in the following media:
+
+- `KitPloit
+  <https://www.kitploit.com/2018/06/probequest-toolkit-for-playing-with-wi.html>`__
+- `Hakin9 Magazine, VOL.13, NO. 05, "Open Source Hacking Tools"
+  <https://skyplabs.keybase.pub/Papers/Magazines/Hakin9%20Magazine%2C%20VOL.13%2C%20NO.%2005%2C%20%22Open%20Source%20Hacking%20Tools%22.pdf>`__
+- `WonderHowTo
+  <https://null-byte.wonderhowto.com/how-to/track-wi-fi-devices-connect-them-using-probequest-0186137/>`__
+  (including a `YouTube video <https://www.youtube.com/watch?v=Z8RHMUSYTiA>`__)
+- `ShellVoide
+  <https://www.shellvoide.com/wifi/wifi-karma-a-brief-guid-on-probe-response-frames/>`__
+- `Cyber Pi Projects
+  <https://www.cyberpiprojects.com/student-designed-projects>`__ (`Worksheet
+  <https://www.cyberpiprojects.com/s/Probequest-Sniffing-Student.pdf>`__)
+
+License
+=======
+
+`GPL version 3 <https://www.gnu.org/licenses/gpl.txt>`__
+
+.. |Build Status| image:: https://github.com/SkypLabs/probequest/actions/workflows/test_and_publish.yml/badge.svg?branch=develop
+   :target: https://github.com/SkypLabs/probequest/actions/workflows/test_and_publish.yml?query=branch%3Adevelop
+   :alt: Build Status Develop Branch
+
+.. |Documentation Status| image:: https://readthedocs.org/projects/probequest/badge/?version=latest
+   :target: https://probequest.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. |LGTM Alerts| image:: https://img.shields.io/lgtm/alerts/g/SkypLabs/probequest.svg?logo=lgtm&logoWidth=18
+   :target: https://lgtm.com/projects/g/SkypLabs/probequest/alerts/
+   :alt: LGTM Alerts
+
+.. |LGTM Grade| image:: https://img.shields.io/lgtm/grade/python/g/SkypLabs/probequest.svg?logo=lgtm&logoWidth=18
+   :target: https://lgtm.com/projects/g/SkypLabs/probequest/context:python
+   :alt: LGTM Grade
+
+.. |PyPI Downloads| image:: https://img.shields.io/pypi/dm/probequest.svg?style=flat
+   :target: https://pypi.org/project/probequest/
+   :alt: PyPI Package Downloads Per Month
+
+.. |PyPI Package| image:: https://img.shields.io/pypi/v/probequest.svg?style=flat
+   :target: https://pypi.org/project/probequest/
+   :alt: PyPI Package Latest Release
+
+.. |PyPI Python Versions| image:: https://img.shields.io/pypi/pyversions/probequest.svg?logo=python&style=flat
+   :target: https://pypi.org/project/probequest/
+   :alt: PyPI Package Python Versions
+
+
