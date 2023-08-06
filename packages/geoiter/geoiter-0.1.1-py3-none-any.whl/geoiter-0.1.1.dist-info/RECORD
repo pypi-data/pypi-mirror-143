@@ -1,0 +1,10 @@
+geoiter/__init__.py,sha256=H5UrSqS5C0LoePuc6Clu7m1w0LG92BvdA11mC_ELqlw,107
+geoiter/geoiter.py,sha256=W10h1Nv9OqUWr-sIK4sZnrAhIPmqfld36Ov233EH95o,8749
+geoiter/util/gpx.py,sha256=-YvopL30LTs-muIbzaaPL46HZPOf15ITd_a6EVSxiRs,1302
+geoiter/util/plot.py,sha256=vYcEKQdsrhhivJjnFf2YCpoFZYjhBhDT59aDjpsuDBA,1503
+geoiter/util/ressource_example.py,sha256=0cCJWFsEiNGh_cCVQmYNj9d1bOjAji69Jkr-GzKd9wQ,85
+geoiter-0.1.1.dist-info/LICENSE.md,sha256=xivvvJxchthnksP-uXWFfnmYu1ZjNRBHPcZXf1OEK3o,1067
+geoiter-0.1.1.dist-info/METADATA,sha256=dkfXRjAIgHhHs9wjHFz0iAeM-dpTXzxxmL4kyYCbJZA,4493
+geoiter-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+geoiter-0.1.1.dist-info/top_level.txt,sha256=KtmLT3ywwJD3CUQuhcvklVwiGb3hdtVANVdown1ovDo,8
+geoiter-0.1.1.dist-info/RECORD,,
