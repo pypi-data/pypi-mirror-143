@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+speedtoxify/__init__.py
+speedtoxify/onnx.py
+speedtoxify/speedtoxify.py
+speedtoxify.egg-info/PKG-INFO
+speedtoxify.egg-info/SOURCES.txt
+speedtoxify.egg-info/dependency_links.txt
+speedtoxify.egg-info/requires.txt
+speedtoxify.egg-info/top_level.txt
