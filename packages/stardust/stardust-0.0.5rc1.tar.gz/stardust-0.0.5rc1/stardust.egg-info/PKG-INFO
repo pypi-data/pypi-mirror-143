@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: stardust
+Version: 0.0.5rc1
+Summary: Stardust is micro web framework inspired by serverless and lambda deployments.
+Home-page: https://github.com/lukefx/stardust.git
+Author: Luca Simone
+Author-email: info@lucasimone.info
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+# Stardust
+
+Micro framework inspired by the simple lambda or serveless deployment.
+
+### Usage:
+
+```sh
+$ pip install stardust
+```
+
+Create a file with a coroutine function that returns a dict, for example `app.py`:
+```python
+async def serve(req):
+    return {
+      'hello': 'world'
+    }
+```
+
+Now just start the framework, nothing more to do...
+```sh
+$ stardust app.py
+```
+
+You're up and running! 🎉
+
+### More complex cases
+
+#### Apps with multiple files
+
+For more complex cases or apps that are not just one function, Stardust is also able to use a module as starting point.
+
+Create a Python module:
+
+```sh
+$ tree example_module
+example_module
+├── __init__.py
+└── app.py
+```
+
+Let's assume app is a complex app with many functions, you can find an example into the `examples` folder.
+The module should export only the main function that Stardust will use as entrypoint:
+
+```python
+from .app import serve
+```
+
+And specify the module folder instead of a file:
+
+```sh
+$ stardust ./example_module
+```
+
+#### Apps with different responses
+
+```py
+from stardust.responses import json
+
+async def serve():
+    return json(content={"hello":"world"}, status_code=200)
+```
+
+### Contributing
+
+Clone the project, install all the dependencies with:
+
+```bash
+$ pipenv install
+```
+
+Linting:
+
+```bash
+$ pipenv run lint
+```
+
