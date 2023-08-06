@@ -1,0 +1,22 @@
+name: manylinux
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - uses: messense/maturin-action@v1
+        with:
+          maturin-version: latest
+          manylinux: auto
+          rust-toolchain: nightly
+          command: build
+          args: --release
+      - uses: actions/upload-artifact@v1
+        name: upload-wheel
+        with:
+          name: wheel-manylinux
+          path: target/wheels/
