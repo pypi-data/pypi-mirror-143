@@ -1,0 +1,37 @@
+[package]
+name = "nnv-py"
+version = "0.3.0"
+edition = "2021"
+description = "Python Bindings for Verification and Statistics on Deep Neural Networks"
+readme = "README.md"
+repository = "https://github.com/drkwint/nnv-py"
+license = "MIT"
+keywords = ["ndarray", "statistics", "verification", "machine learning"]
+categories = ["algorithms", "simulation", "science"]
+exclude = [".github"]
+
+[lib]
+name = "nnv_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+log = "^0.4.16"
+log4rs = "^1.0.0"
+pyo3 = { version = "^0.16.2", features = ["extension-module"] }
+itertools = "^0.10.3"
+numpy = "^0.16.2"
+nnv-rs = { version = "0.6.1", features = [
+    "blas_openblas-system",
+    "lp_coincbc",
+] }
+num = "^0.4.0"
+rand = "^0.8.5"
+serde_json = "^1.0.79"
+statrs = "^0.15.0"
+
+[profile.release]
+lto = true
+codegen-units = 1
+target-cpu = "native"
+opt-level = 3
+debug = true

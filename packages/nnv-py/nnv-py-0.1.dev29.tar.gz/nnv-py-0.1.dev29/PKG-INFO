@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: nnv-py
+Version: 0.1.dev29
+Summary: Analyze deep neural networks with verification techniques
+Home-page: https://github.com/DrKwint/nnv-py
+Author: Eleanor Quint
+Author-email: eleanorquint1@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: complete
+License-File: LICENSE
+
+nnv-py
+======
+
+A library for analyzing deep neural networks with verification techniques.
+
+Install requirements:
+
+`apt install coinor-libcbc-dev`
+
