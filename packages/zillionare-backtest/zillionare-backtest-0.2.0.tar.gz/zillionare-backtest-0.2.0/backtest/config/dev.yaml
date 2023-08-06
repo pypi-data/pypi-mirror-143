@@ -1,0 +1,11 @@
+redis:
+  dsn: redis://localhost:6379
+postgres:
+  dsn: postgres://zillionare:123456@localhost:5432/zillionare
+  enabled: true
+influxdb:
+  url: http://localhost:8086
+  token: my-token
+  org: my-org
+  bucket_name: my-bucket
+  enable_compress: true
