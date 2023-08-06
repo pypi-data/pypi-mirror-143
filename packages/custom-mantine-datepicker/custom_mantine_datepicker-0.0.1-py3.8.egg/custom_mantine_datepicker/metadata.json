@@ -1,0 +1,612 @@
+{
+  "src/lib/components/DatePicker.react.js": {
+    "description": "Capture date input from user. For more information, see: https://mantine.dev/dates/date-picker/",
+    "displayName": "DatePicker",
+    "methods": [],
+    "props": {
+      "allowFreeInput": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Allow free input"
+      },
+      "allowLevelChange": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Allow to change level (date \u2013 month \u2013 year)"
+      },
+      "amountOfMonths": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Amount of displayed months"
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties"
+      },
+      "clearable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Allow to clear value"
+      },
+      "closeCalendarOnChange": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to false to force dropdown to stay open after date was selected"
+      },
+      "closeDropdownOnScroll": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true to disable dropdown closing on scroll"
+      },
+      "description": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Input description, displayed after label"
+      },
+      "disableOutsideEvents": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "When true dates that are outside of given month cannot be clicked or focused"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "A Datepicker can show it is currently unable to be interacted with"
+      },
+      "dropdownType": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"modal\"",
+              "computed": false
+            },
+            {
+              "value": "\"popover\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Where to show calendar in modal or popover"
+      },
+      "error": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Displays error message after input"
+      },
+      "firstDayOfWeek": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"sunday\"",
+              "computed": false
+            },
+            {
+              "value": "\"monday\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Set first day of the week"
+      },
+      "fixOnBlur": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "call onChange with last valid value onBlur"
+      },
+      "focusable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Should focusable days have tabIndex={0}?"
+      },
+      "fullWidth": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true to make calendar take 100% of container width"
+      },
+      "hideOutsideDates": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Remove outside dates"
+      },
+      "hideWeekdays": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to false to remove weekdays row"
+      },
+      "icon": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Adds icon on the left side of input"
+      },
+      "iconWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Width of icon section in px"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components in callbacks"
+      },
+      "initialLevel": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"date\"",
+              "computed": false
+            },
+            {
+              "value": "\"month\"",
+              "computed": false
+            },
+            {
+              "value": "\"year\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Initial date selection level"
+      },
+      "initialMonth": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Initial selected month"
+      },
+      "initiallyOpened": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Control initial dropdown opened state"
+      },
+      "inputFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "dayjs input format"
+      },
+      "labelFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "dayjs input format"
+      },
+      "invalid": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Sets border color to red and aria-invalid=true on input element"
+      },
+      "label": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Input label, displayed before input"
+      },
+      "locale": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Locale used for all labels formatting"
+      },
+      "maxDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Maximum possible date"
+      },
+      "minDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Minimum possible date"
+      },
+      "multiline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will input have multiple lines?"
+      },
+      "persistence": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "bool"
+            },
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Used to allow user interactions in this component to be persisted when\r\nthe component - or the page - is refreshed. If `persisted` is truthy and\r\nhasn't changed from its previous value, a `value` that the user has\r\nchanged while using the app will keep that change, as long as\r\nthe new `value` also matches what was given originally.\r\nUsed in conjunction with `persistence_type`."
+      },
+      "persisted_props": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "\"value\"",
+                "computed": false
+              }
+            ]
+          }
+        },
+        "required": false,
+        "description": "Properties whose user interactions will persist after refreshing the\r\ncomponent or the page.",
+        "defaultValue": {
+          "value": "[\"value\"]",
+          "computed": false
+        }
+      },
+      "persistence_type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"local\"",
+              "computed": false
+            },
+            {
+              "value": "\"session\"",
+              "computed": false
+            },
+            {
+              "value": "\"memory\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Where persisted user changes will be stored:\r\nmemory: only kept in memory, reset on page refresh.\r\nlocal: window.localStorage, data is kept after the browser quit.\r\nsession: window.sessionStorage, data is cleared once the browser quit.",
+        "defaultValue": {
+          "value": "\"local\"",
+          "computed": false
+        }
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder, displayed when date is not selected"
+      },
+      "preventFocus": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Prevent focusing upon clicking"
+      },
+      "radius": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "enum",
+              "value": [
+                {
+                  "value": "\"xs\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"sm\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"md\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"lg\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"xl\"",
+                  "computed": false
+                }
+              ]
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Input border-radius from theme or number to set border-radius in px"
+      },
+      "required": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Adds red asterisk on the right side of label"
+      },
+      "rightSection": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Right section of input, similar to icon but on the right"
+      },
+      "rightSectionWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Width of right section, is used to calculate input padding-right"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Tells dash if any prop has changed its value"
+      },
+      "shadow": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "enum",
+              "value": [
+                {
+                  "value": "\"xs\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"sm\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"md\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"lg\"",
+                  "computed": false
+                },
+                {
+                  "value": "\"xl\"",
+                  "computed": false
+                }
+              ]
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Dropdown shadow from theme or css value for custom box-shadow"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"xs\"",
+              "computed": false
+            },
+            {
+              "value": "\"sm\"",
+              "computed": false
+            },
+            {
+              "value": "\"md\"",
+              "computed": false
+            },
+            {
+              "value": "\"lg\"",
+              "computed": false
+            },
+            {
+              "value": "\"xl\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Input size"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline style override"
+      },
+      "transition": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"fade\"",
+              "computed": false
+            },
+            {
+              "value": "\"skew-up\"",
+              "computed": false
+            },
+            {
+              "value": "\"skew-down\"",
+              "computed": false
+            },
+            {
+              "value": "\"rotate-right\"",
+              "computed": false
+            },
+            {
+              "value": "\"rotate-left\"",
+              "computed": false
+            },
+            {
+              "value": "\"slide-down\"",
+              "computed": false
+            },
+            {
+              "value": "\"slide-up\"",
+              "computed": false
+            },
+            {
+              "value": "\"slide-right\"",
+              "computed": false
+            },
+            {
+              "value": "\"slide-left\"",
+              "computed": false
+            },
+            {
+              "value": "\"scale-y\"",
+              "computed": false
+            },
+            {
+              "value": "\"scale-x\"",
+              "computed": false
+            },
+            {
+              "value": "\"scale\"",
+              "computed": false
+            },
+            {
+              "value": "\"pop\"",
+              "computed": false
+            },
+            {
+              "value": "\"pop-top-left\"",
+              "computed": false
+            },
+            {
+              "value": "\"pop-top-right\"",
+              "computed": false
+            },
+            {
+              "value": "\"pop-bottom-left\"",
+              "computed": false
+            },
+            {
+              "value": "\"pop-bottom-right\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Dropdown appear/disappear transition"
+      },
+      "transitionDuration": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Dropdown appear/disappear transition duration"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Selected date"
+      },
+      "variant": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"default\"",
+              "computed": false
+            },
+            {
+              "value": "\"filled\"",
+              "computed": false
+            },
+            {
+              "value": "\"unstyled\"",
+              "computed": false
+            },
+            {
+              "value": "\"headless\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Defines input appearance, defaults to default in light color scheme and filled in dark"
+      },
+      "withinPortal": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to render the dropdown in a Portal"
+      },
+      "zIndex": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Popper zIndex"
+      }
+    }
+  }
+}
