@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mypydot
+Version: 2022.1.0
+Summary: Python package to manage your dotfiles
+Home-page: https://github.com/andres-ortizl/mypydot
+License: MIT
+Keywords: mypydot,dotfiles,python
+Author: Andrés Ortiz
+Author-email: andrs.ortizl@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: PyYAML (==6.0)
+Requires-Dist: emoji (>=1.6.1,<2.0.0)
+Project-URL: Repository, https://github.com/andres-ortizl/mypydot
+Description-Content-Type: text/markdown
+
+[![PyPI version](https://badge.fury.io/py/mypydot.svg)](https://badge.fury.io/py/mypydot)
+![CI](https://github.com/andres-ortizl/mypydot/actions/workflows/main.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mypydot&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mypydot)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=mypydot&metric=coverage)](https://sonarcloud.io/summary/new_code?id=mypydot)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=mypydot&metric=bugs)](https://sonarcloud.io/summary/new_code?id=mypydot)
+## Mypydot
+
+Mypydot is a tool created for managing your dotfiles using a Python application
+
+## Status
+
+In development
+
+## Instructions
+TBD
+
+
