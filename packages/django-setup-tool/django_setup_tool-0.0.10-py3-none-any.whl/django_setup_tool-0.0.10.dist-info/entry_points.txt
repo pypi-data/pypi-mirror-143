@@ -1,0 +1,3 @@
+[console_scripts]
+django-setup-tool = setup_tool.management:execute_from_command_line
+
