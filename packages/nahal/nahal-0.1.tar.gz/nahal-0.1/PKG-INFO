@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: nahal
+Version: 0.1
+Summary: Evolutionary Computation module for Python
+Home-page: https://github.com/smkalami/nahal
+Author: Mostapha Kalami Heris
+Author-email: sm.kalami@gmail.com
+License: New BSD
+Download-URL: https://github.com/smkalami/nahal
+Description: UNKNOWN
+Keywords: Evolutionary Computation,Evolutionary Optimization,Optimization,Genetic Algorithm
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
