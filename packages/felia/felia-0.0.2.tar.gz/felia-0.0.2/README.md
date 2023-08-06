@@ -1,0 +1,113 @@
+# pyhotkey
+
+## 介绍
+python + autohotkey实现自动化办公, 只支持Windows环境。该项目处于开发阶段。
+
+autohotkey是Windows下强大、易用的自动化脚本语言。
+
+**pyhotkey基于autohotkey实现了以下特性:**
+
+* 自动生成热键列表说明
+* 借助python强大的生态，可以轻松自定义拓展和快速实现你需要的功能
+* 借助autohotkey快速调用python脚本, 无需执行命令行或者双击python脚本
+* 对autohotkey语法做了简单的封装, 程序自动生成ahk代码文件, 无需手工编写ahk代码
+
+## 安装
+
+1. 安装v1版本的[autohotkey](https://www.autohotkey.com/)
+
+2. git下载项目
+
+```shell
+git clone https://gitee.com/luzhenxiong/pyhotkey.git
+```
+
+3. 安装python依赖库
+
+```text
+cd .\pyhotkey
+pip install -r server\requirements.txt
+```
+
+4. 初始化sqlite, 在pyhotkey目录下执行
+
+```text
+cd .\server
+python manage.py migrate
+```
+
+## 快速上手
+
+双击运行 ``server\autohotkey\bin\pyahk.ahk`` 脚本。
+
+如果pyahk.ahk正常运行，按下 ``Alt + 1`` , 将显示所有pyhotkey当前设置好的热键列表。
+
+### 自定义热键脚本
+
+在 ``server\autohotkey\script.py`` 增加以下内容:
+
+```python
+class Example(AHK):
+    
+    @classmethod
+    def add_hotkeys(cls):
+        cls.add_hotkey(["Ctrl", "j"], cmds.Send("My First Script"))
+```
+
+接着，按下 **Ctrl + Alt + r** 重启 ``pyahk.ahk`` 脚本，自动生成的 ``Example.ahk`` 脚本放在 ``autohotkey/bin/lib`` 目录中。
+
+```autohotkey
+#SingleInstance force  ; 单实例运行
+#Persistent  ; 让脚本持续运行
+
+^j::Send, My First Script
+```
+
+这是一个使用 Send 命令创建的一个包含热键的简单脚本, 当你按下热键后, 它会向窗口发送一段文字。
+
+现在，打开记事本或者其他可以输入文字的地方然后按下 **Ctrl** 和 **J**。
+
+### 调用python函数
+
+对于已经掌握python但不熟悉autohotkey的开发者，简单的热键动作使用autohotkey应用程序即可。对于复杂一点的功能实现，可以考虑python实现，然后在ahk脚本中调用，下面将演示如何调用python自定义函数
+
+接着前面的例子，继续修改``script.py``代码
+
+```python
+def showinfo():
+    from tkinter import messagebox
+    messagebox.showinfo("callpython测试", ".ahk调用python函数!")
+    
+class Example(AHK):
+    
+    @classmethod
+    def add_hotkeys(cls):
+        cls.add_hotkey(["Ctrl", "j"], cmds.Send("My First Script"))
+        cls.add_hotkey(["Ctrl", "p"], showinfo)
+```
+
+新增的cls.add_hotkey描述了按下热键 **Ctrl + p** 调用python函数 ``showinfo``
+
+修改完代码按下 **Ctrl + Alt + r** 重新生成ahk文件和启动，然后按下 **Ctrl + p**
+
+## pyhotkey内置的热键列表
+
+* Ctrl + Alt + r : 重新加载pyahk.ahk
+* Alt + 1 : pyahk帮助文档
+* Alt + 2 : python官方中文文档
+* Alt + 3 : autohotkey官方中文文档
+* Alt + 4 : gitee仓库
+* Alt + 5 : django文档
+* Alt + 6 : Golang官网
+* Alt + 7 : sphinx文档
+* Alt + 8 : awesome python
+* Alt + 9 : awesome go
+* Alt + 0 : 百度一下
+* Ctrl + Alt + q : Git命令学习
+* Ctrl + Alt + p : 暂停脚本. 再次按下以恢复.
+
+## TODO
+
+* 使用单独的浏览器进程弹出帮助文档
+* 新增特性: 模式切换(定义多个ahk文件，同一时刻只能运行其中一个，但可以切换)
+* 性能优化: 每次调用python前初始化django，影响执行时间
