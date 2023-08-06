@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: app-client
+Version: 0.0.2
+Summary: Client
+Author: Anastasia Yurko
+Author-email: anastsijajurko@mail.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
