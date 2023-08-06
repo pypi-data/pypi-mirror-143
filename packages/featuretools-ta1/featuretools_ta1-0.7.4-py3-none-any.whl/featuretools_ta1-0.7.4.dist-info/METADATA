@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: featuretools-ta1
+Version: 0.7.4
+Summary: Primitives using Featuretools, an open source feature engineering platform
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/featuretools_ta1
+Author: MIT/Feature Labs Team
+Author-email: UNKNOWN
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Dist: d3m
+Requires-Dist: featuretools (==0.13.0)
+
+UNKNOWN
+
+
