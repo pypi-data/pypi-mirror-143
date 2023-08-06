@@ -1,0 +1,16 @@
+yamlns/__init__.py,sha256=eE8tYmDh8N-5yaiNkSD0c12OuV53SkNWzAIuH27BtFg,8730
+yamlns/dateutils.py,sha256=GVBHhrMwEEdYL-1DvecBhGlWQDd8QArdQS8SBfzeOXI,4913
+yamlns/dateutils_test.py,sha256=E8VaeQ3p-IzJav-Mza-aL93J5lrSuqkeUfyjkKHAXOY,6758
+yamlns/namespace_test.py,sha256=cBPvkUqIoCX53K7F3cHUqq3EbUsFNaj5e_ihtFk7nfQ,11898
+yamlns/nstemplate.py,sha256=792Kmr4Hh7KGoQZE2knMSVJVxlsNlDFYKZiQFJYn-JY,2060
+yamlns/nstemplate_test.py,sha256=Z3AmtIw0kUkXJ-aEMMT4uM8mo5WRZ-JwnP_HbYvOhgg,3546
+yamlns/pytestutils.py,sha256=4ucSl2mrtaL1KY2ba_YWhAH2EpRjfHDXIXWU2R5aIeA,2944
+yamlns/pytestutils_test.py,sha256=5iGlMNHjWEZOQQOgGA1j9BeJdZO3oh4u2QO5YOD87I0,5999
+yamlns/testutils.py,sha256=cjM0DpSoeWLzenSsOfnFxbd4uv4U1AKcvsgSouaqDIg,1053
+yamlns/testutils_test.py,sha256=gkj5ZQG7YK66VkkolyguaQZJQh477zcHACO1GTVlrJM,3217
+yamlns-0.10.0.data/scripts/nstemplate.py,sha256=Autqw2qQugkK_vxAmS1v2zjbn88Evd5jXsTo6JGAruw,2050
+yamlns-0.10.0.dist-info/METADATA,sha256=aQT9YPDdJZ8BPUtneSLDGEOhzioqpRq5jURS9WauxOE,4768
+yamlns-0.10.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+yamlns-0.10.0.dist-info/entry_points.txt,sha256=8Ygrru6N3Z47Ls8ua4obiSS7K27OPqbLlhXTxbp7RDY,45
+yamlns-0.10.0.dist-info/top_level.txt,sha256=5GH7q_YVMZMz7I7b5OR6kGWfKGv51g0NoR3plqXgN1Y,7
+yamlns-0.10.0.dist-info/RECORD,,
