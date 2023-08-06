@@ -1,0 +1,16 @@
+CHANGES
+=======
+
+0.6.13
+------
+
+* tidevice use local-device first, fix again md\_too\_weak
+* comment set\_ciphers
+* fix #148, socket resource not released error
+* little change
+* add support for #186
+* add support for tidevice applist --type user|system|all
+* fix #198
+* change logic same as adb pull
+* support pull file and directory
+* add retry for device, maybe work or not
