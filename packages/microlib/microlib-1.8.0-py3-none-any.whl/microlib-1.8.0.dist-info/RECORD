@@ -1,0 +1,13 @@
+microlib/__init__.py,sha256=ca9xhy3QRmeLUQNre1Vw2G0b6XRJo5PCk2qzg3fduCU,1313
+microlib/configfile.py,sha256=K-zQFRUhMxY17NtdFCA75xqVqdQDISgqqstcZMfpM_c,5687
+microlib/data/empty_default_config.json,sha256=RBNvo1WzZ4oRRq0W9-hknpT7T8If536DEMBg9hyq_4o,2
+microlib/data/empty_default_config.toml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microlib/database.py,sha256=dP_I2eINGT2EU3dxl2D7wFdqoJEN5iCex_y33F-U9j0,14410
+microlib/meta/pyproject.toml,sha256=4upBC_w6XFL2Y50PU-vhEw-DQPX7LjHPqx6Bef8-Bhs,690
+microlib/prefs.py,sha256=tkfB58Q62GMMjNHGpPNkBUInyXtfpGLAIXOt2gmRwRY,869
+microlib/terminal.py,sha256=anbKVl8GPW-T7dGTtr1oltb2it8oCa9RbXEskFPBOyA,7092
+microlib/tools.py,sha256=j2uqLmRL-8KVmR-8hq-9MRzccwT7M3aUQOcHuHSdukA,1834
+microlib/xdict.py,sha256=ntUG5qpediUkiPh6gxpBw5HziZvnKAA7fBsVRTnBuME,2377
+microlib-1.8.0.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+microlib-1.8.0.dist-info/METADATA,sha256=gBP6kJ6_-lQ0PzoiSXkPdN7NmH8PHCx_tGxs0jYxjXo,1754
+microlib-1.8.0.dist-info/RECORD,,
