@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pycrypton
+Version: 1.2
+Summary: Crypt with Crypton
+Author: Batuhan INAN
+License: MIT
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+License-File: LICENSE
+
+# Crypton
+
+## Affine & Block Cypher Implementations With Python
+
+![Tests](https://github.com/batuhaninan/Crypton/actions/workflows/tests.yml/badge.svg)
+
+## Python
+
+You need Python 3.7+ to use Crypton
+
+## Install Dependencies
+```bash
+pip install .
+```
+
+## Install Dev Dependencies (for running tests)
+```bash
+pip install -r requirements_dev.txt
+```
+
+## Run Tests
+```bash
+pytest
+```
+
+
+## Authors
+
+* [Batuhan INAN](https://github.com/batuhaninan)
+* [Atilla Basaran](https://github.com/atilla525)
+
+
