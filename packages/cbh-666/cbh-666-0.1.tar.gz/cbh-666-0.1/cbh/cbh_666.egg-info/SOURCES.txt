@@ -1,0 +1,8 @@
+setup.py
+cbh/cbh_666.egg-info/PKG-INFO
+cbh/cbh_666.egg-info/SOURCES.txt
+cbh/cbh_666.egg-info/dependency_links.txt
+cbh/cbh_666.egg-info/top_level.txt
+cbh/sixsixsix/__init__.py
+cbh/sixsixsix/boy/__init__.py
+cbh/sixsixsix/boy/message.py
