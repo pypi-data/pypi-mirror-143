@@ -1,0 +1,8 @@
+setup.py
+verysimplemodule/__init__.py
+verysimplemodule/add.py
+verysimplemodule/subtract.py
+verysimplemodule_periwals.egg-info/PKG-INFO
+verysimplemodule_periwals.egg-info/SOURCES.txt
+verysimplemodule_periwals.egg-info/dependency_links.txt
+verysimplemodule_periwals.egg-info/top_level.txt
