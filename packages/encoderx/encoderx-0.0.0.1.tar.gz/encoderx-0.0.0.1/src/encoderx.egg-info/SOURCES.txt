@@ -1,0 +1,10 @@
+LICENCE.txt
+README.md
+pyproject.toml
+setup.py
+src/encoderx/__init__.py
+src/encoderx/encoder.py
+src/encoderx.egg-info/PKG-INFO
+src/encoderx.egg-info/SOURCES.txt
+src/encoderx.egg-info/dependency_links.txt
+src/encoderx.egg-info/top_level.txt
