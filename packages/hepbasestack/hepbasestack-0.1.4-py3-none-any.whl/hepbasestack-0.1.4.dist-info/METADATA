@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: hepbasestack
+Version: 0.1.4
+Summary: Collection of tools/snippets useful for working with the python data analysis stack. Provides logging, matplotlibstyles, etc.
+Home-page: https://github.com/achim1/hepbasestack
+Download-URL: https://github.com/achim1/hepbasestack/archive/v0.1.4.tar.gz
+Author: Achim Stoessl
+Author-email: achim.stoessl@gmail.com
+License: GPL
+Keywords: logging,utils,hep,particle physicshelpers,visualization
+Platform: Ubuntu 20.04
+Platform: Ubuntu 21.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.6.0
+License-File: LICENSE
+
+
+
+A collection of (hopefully) useful tools:
+
+* logging facility
+
+* pre-set matplotlib styles
+
+* reasonable matplotlib figure sizes
+
+* a list slicer
+
+* ipython notebook detector
+
+...
+
+
+
