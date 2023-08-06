@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bopy-cxx
+Version: 0.0.1a0
+Summary: Bayesian Optimization in PYthon.
+Home-page: UNKNOWN
+Author: Richard D. Paul
+Author-email: r.paul@fz-juelich.de
+License: UNKNOWN
+Project-URL: Documentation, https://ripaul.github.io/bopy/
+Project-URL: GitHub, https://github.com/ripaul/bopy/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+UNKNOWN
+
+
