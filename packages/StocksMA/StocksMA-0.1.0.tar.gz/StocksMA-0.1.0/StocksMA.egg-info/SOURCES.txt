@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+Pipfile
+README.md
+pyproject.toml
+setup.py
+StocksMA/StocksMA.py
+StocksMA/__init__.py
+StocksMA/utils.py
+StocksMA.egg-info/PKG-INFO
+StocksMA.egg-info/SOURCES.txt
+StocksMA.egg-info/dependency_links.txt
+StocksMA.egg-info/requires.txt
+StocksMA.egg-info/top_level.txt
+requirements/requirements.txt
+requirements/test_requirements.txt
