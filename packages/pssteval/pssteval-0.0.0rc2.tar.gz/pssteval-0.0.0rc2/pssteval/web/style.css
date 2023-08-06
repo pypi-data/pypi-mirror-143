@@ -1,0 +1,151 @@
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .align-right {
+            text-align: right;
+        }
+        #app {
+            height: 100%;
+        }
+        #results {
+            display: grid;
+            grid-template-columns: [begin] 3fr [split] 2fr [end];
+            grid-template-rows: [begin] auto [split] 2fr [end];
+            height: 100%;
+            grid-gap: 3em;
+        }
+        #top-pane {
+            grid-column: begin / split;
+            grid-row: begin / split;
+        }
+        #alphabet-picker {
+            float: right;
+        }
+        #item {
+            grid-column: split / end;
+            grid-row: begin / split;
+        }
+        #result-table-wrapper {
+            max-height: 100%;
+            overflow-y: scroll;
+            grid-column: begin / split;
+            grid-row: split / end;
+            padding-right: 1.5em;
+        }
+        table#result-table {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr auto auto auto auto;
+            grid-gap: 0.5em;
+            align-items: center;
+        }
+        table#result-table td.transcript {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        table#result-table thead, table#result-table tbody, table#result-table tr {
+            display: contents;
+        }
+        table#result-table .highlight button {
+            background: #d9d0a5;
+        }
+        td:first-of-type {
+            grid-column-start: 1;
+        }
+        th[colspan="2"] {
+            grid-column: span 2;
+        }
+        table#result-table .header-main {
+            grid-row-start: 2;
+        }
+        table#result-table button {
+            width: 100%;
+            height: 3.4em;
+        }
+
+        #detail {
+            grid-column: split / end;
+            row: split / end;
+            height: 100%;
+            overflow: scroll;
+        }
+        #item {
+            text-align: center;
+        }
+        #item h2 {
+            text-align: left;
+        }
+
+        .transcript-steps {
+            width: auto;
+            text-align: center;
+            display: inline-grid;
+            justify-content: start;
+            grid-template-rows: [expected] 1fr [actual] 1fr [end];
+            margin: 0 auto 0 auto;
+        }
+
+        .transcript-step {
+            display: contents;
+            text-align: center;
+        }
+        .transcript-step .expected {
+            width: 2em;
+            grid-row: expected / span 1;
+        }
+        .transcript-step .actual {
+            width: 2em;
+            grid-row: actual / span 1;
+        }
+
+
+        .transcript-step .highlight {
+            background: #d9d0a5;
+        }
+
+        .action-eq ul.feature-collection, .action-ins ul.feature-collection, .action-del ul.feature-collection {
+            display: none;
+        }
+
+        table.feature-steps {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 10em;
+            grid-gap: 0.7em;
+            align-items: center;
+            white-space: nowrap;
+        }
+        table.feature-steps thead, table.feature-steps tbody, table.feature-steps tr {
+            display: contents;
+        }
+
+        ul.feature-collection li {
+            list-style: none;
+        }
+
+        .with-brackets {
+            background-image: linear-gradient(#000000, #000000),
+                            linear-gradient(#000000, #000000),
+                            linear-gradient(#000000, #000000),
+                            linear-gradient(#000000, #000000);
+
+            background-repeat: no-repeat;
+            background-size: 0.375em 0.0625em;
+            background-position: top left, top right, bottom left, bottom right;
+
+            border: solid #000000;
+            border-width: 0 0.125em;
+            padding: 1em;
+            color: #000000;
+        }
+
+        #details-error-rates {
+            display: inline-block;
+        }
+        audio {
+            width: 10em;
+            float: right;
+        }
