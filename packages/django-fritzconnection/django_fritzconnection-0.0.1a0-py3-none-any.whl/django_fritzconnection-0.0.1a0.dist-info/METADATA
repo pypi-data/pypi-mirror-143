@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: django-fritzconnection
+Version: 0.0.1a0
+Summary: Web based FritzBox management using Python/Django.
+Home-page: https://github.com/jedie/django-fritzconnection
+Keywords: fritzbox,django,fritzconnect
+Author: JensDiemer
+Author-email: git@jensdiemer.de
+Requires-Python: >=3.8,<4.0.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Dist: bx_django_utils
+Requires-Dist: bx_py_utils
+Requires-Dist: colorlog
+Requires-Dist: django
+Requires-Dist: django-debug-toolbar
+Requires-Dist: django-tools
+Requires-Dist: fritzconnection
+Project-URL: Bug Tracker, https://github.com/jedie/django-fritzconnection/issues
+Description-Content-Type: text/markdown
+
+# django-fritzconnection
+
+Web based FritzBox management using Python/Django.
+
+Current state: **planning**
+
+## Quick start for developers
+
+```
+~$ git clone https://github.com/jedie/django-fritzconnection.git
+~$ cd django-fritzconnection
+~/django-fritzconnection$ ./devshell.py
+...
+Developer shell - djfritz - v0.0.1.pre-alpha0
+...
+
+(djfritz) run_testserver
+```
+
+## versions
+
+* v0.0.1-alpha
+  * init the project
+
