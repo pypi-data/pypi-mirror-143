@@ -1,0 +1,8 @@
+README.md
+setup.py
+localbus/__init__.py
+localbus/localbus.py
+localbus.egg-info/PKG-INFO
+localbus.egg-info/SOURCES.txt
+localbus.egg-info/dependency_links.txt
+localbus.egg-info/top_level.txt

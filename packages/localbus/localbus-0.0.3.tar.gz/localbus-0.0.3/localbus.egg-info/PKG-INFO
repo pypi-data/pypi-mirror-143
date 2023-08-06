@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: localbus
+Version: 0.0.3
+Summary: Lightweight python IPC package
+Home-page: https://github.com/itsstefan/localbus
+Author: 
+Author-email: itsstefan@protonmail.com
+License: UNKNOWN
+Description: # localbus
+        Lightweight python IPC package
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
