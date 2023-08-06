@@ -1,0 +1,9 @@
+messages_sender/__init__.py,sha256=cMtyFVUFTKQ67ZQgfua6JR0q7duYu-4ONLqcG0rsoXk,66
+messages_sender/__version__.py,sha256=5vc5XTjTIsC1HD-fRLxcj7ysA9jW6nq1xEJpyzVeVH4,255
+messages_sender/senders.py,sha256=3-7nXu3zXhf1kuewPOhZC3La7-7x3VoMC_mhQTVx8bk,409
+messages_sender/smtp.py,sha256=yb3bpjyDuIClTZW7CyzAiOUjmjqV73S9Mr_Zvp2WjF4,2211
+messages_sender/telegram.py,sha256=wWiEtdYl-BqdXUbbwVgIh5lZe5bUggNIzoCwGEw2Evs,410
+messages_sender-0.1.3.dist-info/LICENSE.md,sha256=ZsQMQiNHyNbr4mLVKYQ2yKg-XuYTvotBOQg6A__i7Gc,1090
+messages_sender-0.1.3.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+messages_sender-0.1.3.dist-info/METADATA,sha256=-JGJXUGsjGkbNnw-G6KbUm0AT8SPJ4zkg19nDH_x9ks,2873
+messages_sender-0.1.3.dist-info/RECORD,,
