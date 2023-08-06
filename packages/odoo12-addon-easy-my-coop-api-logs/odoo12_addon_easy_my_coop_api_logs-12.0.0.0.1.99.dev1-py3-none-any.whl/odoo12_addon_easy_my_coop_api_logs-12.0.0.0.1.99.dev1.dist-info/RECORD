@@ -1,0 +1,15 @@
+odoo/addons/easy_my_coop_api_logs/README.rst,sha256=WKdjGjxFL8RIiCDjy3-TgCnQzkYGqc_S_vEKM7ZUEZU,1966
+odoo/addons/easy_my_coop_api_logs/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/easy_my_coop_api_logs/__manifest__.py,sha256=couhatDrJLdOVnIjQHB_KvoJz72gf4MYt1HdvNgi50w,621
+odoo/addons/easy_my_coop_api_logs/i18n/easy_my_coop_api_logs.pot,sha256=cGXhPtQCeNfE9h5awgUAXtK5L3IkbrHKrZlOMMXgWiA,3440
+odoo/addons/easy_my_coop_api_logs/models/__init__.py,sha256=tw0lOQj0nFuQRenhhXJZJleyn3cXnwzTjGPiG9mfcNk,26
+odoo/addons/easy_my_coop_api_logs/models/emc_api_log.py,sha256=aBruEmSw0RXZEKCPw-fDPkMIdpG1k0aS5Q3wRLg4YdQ,843
+odoo/addons/easy_my_coop_api_logs/readme/CONTRIBUTORS.rst,sha256=DZWW8lEC7IIrVsyYP3vyY3PzA4hlFHWaPezAaXMopwc,59
+odoo/addons/easy_my_coop_api_logs/readme/DESCRIPTION.rst,sha256=zv-o3iZMfNwa1VkhMREG6leQELVArzOHbCPBJlU22do,53
+odoo/addons/easy_my_coop_api_logs/security/ir.model.access.csv,sha256=38JvrdQV-dxXZoNlEjZzCe7iekbsspwPhud3trMvMHM,207
+odoo/addons/easy_my_coop_api_logs/static/description/index.html,sha256=cqKRYKUaHA4XH9fPXl7eCO-GU17xPnrSVzWmADI9axI,10917
+odoo/addons/easy_my_coop_api_logs/views/emc_api_log_views.xml,sha256=HSrO_WC-1n-WfzZ1Zko8wtrar2hBonluHnZRpagiinM,2378
+odoo12_addon_easy_my_coop_api_logs-12.0.0.0.1.99.dev1.dist-info/METADATA,sha256=xZYIWlLTQ-W6VV3zFSe6WVodg4ZTSNZeXCEOkU5mo8c,2466
+odoo12_addon_easy_my_coop_api_logs-12.0.0.0.1.99.dev1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+odoo12_addon_easy_my_coop_api_logs-12.0.0.0.1.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_easy_my_coop_api_logs-12.0.0.0.1.99.dev1.dist-info/RECORD,,
