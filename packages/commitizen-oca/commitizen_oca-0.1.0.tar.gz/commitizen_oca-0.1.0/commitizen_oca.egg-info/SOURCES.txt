@@ -1,0 +1,8 @@
+README.md
+cz_commitizen_oca.py
+setup.py
+commitizen_oca.egg-info/PKG-INFO
+commitizen_oca.egg-info/SOURCES.txt
+commitizen_oca.egg-info/dependency_links.txt
+commitizen_oca.egg-info/requires.txt
+commitizen_oca.egg-info/top_level.txt
