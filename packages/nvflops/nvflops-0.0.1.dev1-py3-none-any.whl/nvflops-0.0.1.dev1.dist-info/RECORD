@@ -1,0 +1,11 @@
+nvflops/__init__.py,sha256=i1OTn1AdngdvNxFCdH3rIUEtMcHkWARFlEpONKBbGMI,73
+nvflops/_version.py,sha256=yqFz73e6X770ZxFNNAUoqwHLyo5D7L5eKA1cxM-xv1c,503
+nvflops/agent.py,sha256=HQSq8yZtzvKJOrxfP9YPII3BsJ3KNS46Rrt6MEiyQKM,5875
+nvflops/participant.py,sha256=1CaROYiMYphScXCf63bzYKAYL_BYPBxXQnkiBVoNga4,2559
+nvflops/submit.py,sha256=zMBd2WciYVFPaz1raXpF4tR3XdLaGpRSZ6OIifgCN4s,2224
+nvflops/tracker.py,sha256=VHEMNq5Q8FI8HRDndeRYrMidt2RzDiDjfuvyTL2qm9s,5622
+nvflops-0.0.1.dev1.dist-info/METADATA,sha256=GcYvPhOzysqGxpFe4sRB6gC8hXXxAaJz-Cpk9mfr54c,2080
+nvflops-0.0.1.dev1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nvflops-0.0.1.dev1.dist-info/top_level.txt,sha256=bDi8xGdrdEsxUEzjBmqIMimOwGcRIWttDlkynWSYlLw,8
+nvflops-0.0.1.dev1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nvflops-0.0.1.dev1.dist-info/RECORD,,
