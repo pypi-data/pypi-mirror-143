@@ -1,0 +1,3 @@
+[console_scripts]
+atc_dp_freeze_req = atc_tools.requirements:main
+

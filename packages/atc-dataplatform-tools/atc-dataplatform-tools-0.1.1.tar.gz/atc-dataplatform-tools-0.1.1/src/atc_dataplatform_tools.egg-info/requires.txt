@@ -1,0 +1,6 @@
+atc-dataplatform
+pyyaml==6.0
+importlib_metadata
+
+[dev]
+check-manifest
