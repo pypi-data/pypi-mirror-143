@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: deepracer-env-state
+Version: 0.1.1
+Summary: Open source library to access DeepRacer environment state.
+Home-page: https://github.com/aws-deepracer/deepracer-env-state
+Author: Amazon Web Services
+License: Apache License 2.0
+Keywords: ML RL Amazon AWS AI DeepRacer
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+## AWS DeepRacer Environment State
+
+The AWS DeepRacer Environment State package provides a simple interface to access "RL Lab - DeepRacer" environment state information.
+ 
+## Installation
+
+To install AWS DeepRacer Environment State package, use `pip install deepracer-env-state`.
+
+Python 3.6, 3.7, 3.8, and 3.9 are supported on Linux, Windows, and macOS.
+
+## License
+
+This project is licensed under the Apache-2.0 License.
+
