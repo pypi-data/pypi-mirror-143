@@ -1,0 +1,2 @@
+[console_scripts]
+code2img = code2img.__main__:main
