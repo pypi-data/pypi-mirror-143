@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+kasushi/kasushi.egg-info/PKG-INFO
+kasushi/kasushi.egg-info/SOURCES.txt
+kasushi/kasushi.egg-info/dependency_links.txt
+kasushi/kasushi.egg-info/top_level.txt
