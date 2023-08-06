@@ -1,0 +1,11 @@
+levenshtein
+requests
+urllib3
+colorama
+future
+re
+urlexpander
+python-whois
+eml_parser
+extract_msg
+vt-py
