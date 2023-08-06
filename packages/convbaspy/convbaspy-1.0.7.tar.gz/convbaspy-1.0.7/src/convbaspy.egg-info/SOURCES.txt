@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/convbaspy.py
+src/convbaspy.egg-info/PKG-INFO
+src/convbaspy.egg-info/SOURCES.txt
+src/convbaspy.egg-info/dependency_links.txt
+src/convbaspy.egg-info/entry_points.txt
+src/convbaspy.egg-info/requires.txt
+src/convbaspy.egg-info/top_level.txt

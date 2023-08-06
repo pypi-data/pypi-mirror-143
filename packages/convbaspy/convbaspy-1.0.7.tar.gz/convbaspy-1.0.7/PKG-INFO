@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: convbaspy
+Version: 1.0.7
+Summary: Convertidor de Bases IEEE754
+Home-page: https://github.com/etensor/baseconvpy
+Author: D Penilla
+Author-email: dpenillac@correo.usbcali.edu.co
+License: MIT
+Keywords: convertidor bases converter hex oct bin ieee754 32bit 64bit
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+:'######:::'#######::'##::: ##:'##::::'##:'########:::::'###:::::'######::
+'##... ##:'##.... ##: ###:: ##: ##:::: ##: ##.... ##:::'## ##:::'##... ##:
+ ##:::..:: ##:::: ##: ####: ##: ##:::: ##: ##:::: ##::'##:. ##:: ##:::..::
+ ##::::::: ##:::: ##: ## ## ##: ##:::: ##: ########::'##:::. ##:. ######::
+ ##::::::: ##:::: ##: ##. ####:. ##:: ##:: ##.... ##: #########::..... ##:
+ ##::: ##: ##:::: ##: ##:. ###::. ## ##::: ##:::: ##: ##.... ##:'##::: ##:
+. ######::. #######:: ##::. ##:::. ###:::: ########:: ##:::: ##:. ######::
+:......::::.......:::..::::..:::::...:::::........:::..:::::..:::......:::
+
+
+## Convertidor de Bases
+#### IEEE754 32-64bit
+
+github.com/etensor/baseconvpy
+
+
+Uso:
+```bash
+
+convbaspy
+
+```
+
+Presione en los resultados para copiarlos.
+
+
+> Probado con python3.10.2
+
+
