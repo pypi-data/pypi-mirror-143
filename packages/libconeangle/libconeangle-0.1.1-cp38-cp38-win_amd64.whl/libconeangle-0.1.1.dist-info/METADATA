@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: libconeangle
+Version: 0.1.1
+Summary: Python library for libconeangle
+Home-page: https://github.com/kjelljorner/libconeangle
+Author: Kjell Jorner
+Author-email: kjell.jorner@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.20)
+
+Python library for libconeangle. For more information, see the [project repository](https://github.com/kjelljorner/libconeangle).
+
+
