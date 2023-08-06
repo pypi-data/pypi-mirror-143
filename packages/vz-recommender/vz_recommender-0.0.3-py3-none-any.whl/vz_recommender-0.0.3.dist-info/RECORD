@@ -1,0 +1,17 @@
+vz_recommender/__init__.py,sha256=CO0VmekjZ_r8LBYVaUXTM3i08rEVwYKhjb9sy0X7vz0,23
+vz_recommender/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vz_recommender/models/bottom.py,sha256=JJieWPuc-vQ9iYA0MjZjtqhIXuF6rlkHipNKbk9Zeis,7513
+vz_recommender/models/mmoe.py,sha256=lNWveco0U_sbzAi02uql5FFRQ2msEQGYKYbK1coBRNA,4305
+vz_recommender/models/multitask.py,sha256=JR_pjb4PyWeV80priXUQRrMRPFgo_Ggko-5YO3Ew2-0,2884
+vz_recommender/models/txt.py,sha256=0JclfQpGOzbRfS-zEB_e6oYZd572w4cZHDQCz7OPqcg,9453
+vz_recommender/training/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vz_recommender/training/callbacks_base.py,sha256=5IZvjr9l2atHv4URThXh9fnhGBuLHLNxuziVKXVNdMM,7056
+vz_recommender/training/loggers_base.py,sha256=43It1qdaz_d1fY6gIW7n96eh9DT_Uiv1yTNVhZ5p2ik,3980
+vz_recommender/training/multitask.py,sha256=j42QivxwqHXNFYgJyQ4DtO3hQlhDd3OlFbnBfJ1uXio,21492
+vz_recommender/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vz_recommender/utils/utils.py,sha256=wqoXd_vkmZ04_JvbKJfp2zRgAe-OyM1SV1vgMrthzPg,3890
+vz_recommender-0.0.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+vz_recommender-0.0.3.dist-info/METADATA,sha256=C9fa8m2FzABFtpR7S83XinuqhVsUaj4jZ4wZZl1Qux4,735
+vz_recommender-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+vz_recommender-0.0.3.dist-info/top_level.txt,sha256=exiaYOYv6kBgyFSv-jNuxdo8dinBJwB2cSYV2zNGk7E,15
+vz_recommender-0.0.3.dist-info/RECORD,,
