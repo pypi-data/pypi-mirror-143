@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: probabilistic-rule-engine
+Version: 0.1.0
+Summary: Probabilistic Rule Engine
+Home-page: https://github.com/stratyfy/probabilistic-rule-engine
+License: MIT
+Keywords: probabilistic rule engine,data science,statistics,stratyfy
+Author: Dmitry Lesnik
+Author-email: dmitry@stratyfy.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy
+Requires-Dist: pandas
+Project-URL: Repository, https://github.com/stratyfy/probabilistic-rule-engine
+Description-Content-Type: text/markdown
+
+# probabilistic-rule-engine
+
+## Getting Started
+Install poetry: https://python-poetry.org/docs/#installation
+
+## Configure credentials
+You'll need to ask Dmitry for the `PYPI_API_TOKEN`.
+`poetry config pypi-token.pypi $PYPI_API_TOKEN`
+
+## Package
+`poetry build`
+
+## Publish
+`poetry publish`
