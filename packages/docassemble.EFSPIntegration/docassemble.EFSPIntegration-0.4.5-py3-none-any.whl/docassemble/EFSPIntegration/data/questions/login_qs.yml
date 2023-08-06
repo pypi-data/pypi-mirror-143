@@ -1,0 +1,142 @@
+---
+modules:
+  - .conversions
+  - .efm_client
+---
+include:
+  - common_qs.yml
+---
+code: |
+  proxy_conn = ProxyConnection(credentials_code_block='tyler_login')
+---
+id: eFile Login
+question: |
+  eFile IL Login Info
+subquestion: |
+  Please provide your eFile Illinois Login information. If you don't yet have a login, please make one [here](${ interview_url(i=user_info().package + ":unauthenticated_interview.yml", reset=1) }).
+fields:
+  - email/username: my_username
+  - password: my_password
+    datatype: password
+    hide if: user_forgot_password
+  - I forgot my password: user_forgot_password
+    datatype: yesno
+  #- Change my password: change_user_password
+  #  datatype: yesno
+  #  hide if: user_forgot_password
+  #  # The interview that includes this needs to provide change_password
+  #  # logic, including redirecting to login screen after password change
+---
+code: |
+  if showifdef('user_forgot_password'):
+    tyler_reset_password_resp = proxy_conn.reset_user_password(my_username)
+    reset_password_screen    
+  else:
+    tyler_login_resp = proxy_conn.authenticate_user(tyler_email=my_username, tyler_password=my_password)
+    del my_password
+    if not tyler_login_resp.is_ok():
+      log(f'Failed to login: {tyler_login_resp}')
+      login_failed_screen
+  tyler_login = True
+  # TODO(brycew): handle improper login info
+---
+code: |
+  change_resp = proxy_conn.self_change_password(current_password, new_user_password)
+  del current_password, new_user_password, confirm_new_password
+---
+code: |
+  if change_resp.is_ok():
+    changed_password_screen
+    self_change_password = True
+  else:
+    failed_changed_password_screen
+---
+id: changed password
+question: |
+  % if change_resp.is_ok():
+  Your password has been updated
+  % else:
+  Your password change failed
+  % endif
+subquestion: |
+  ${ debug_display(change_resp) }
+continue button field: changed_password_screen  
+---
+id: failed changed password
+event: failed_changed_password_screen
+question: |
+  Your password change failed. Please try again.
+subquestion: |
+  ${ debug_display(change_resp) }
+---
+id: password
+question: |
+  New Password?
+fields:
+  - New password: new_user_password
+    datatype: password
+  - Confirm new password: confirm_new_password
+    datatype: password
+validation code: |
+  if not new_user_password == confirm_new_password:
+    validation_error("Your passwords do not match.", field="confirm_new_password")    
+---
+id: change password
+question: |
+  Change password
+fields:
+  - Current password: current_password
+    datatype: password
+  - New password: new_user_password
+    datatype: password
+  - Confirm new password: confirm_new_password
+    datatype: password
+validation code: |
+  if not new_user_password == confirm_new_password:
+    validation_error("Your passwords do not match.", field="confirm_new_password")
+  if not proxy_conn.is_valid_password(new_user_password):
+    password_rules
+    validation_error(password_rules.data.get("validationmessage"))
+---
+depends on:
+  - tyler_login
+  - tyler_login_resp
+code: |
+  logged_in_user_is_admin, logged_in_user_is_global_admin = get_tyler_roles(proxy_conn, tyler_login_resp.data)
+---
+event: reset_password_screen
+question: |
+  % if tyler_reset_password_resp.is_ok():
+  Your password reset was requested
+  
+  % else:
+  Something went wrong when we tried to reset your password
+  % endif
+subquestion: |
+  You can also [resend your activation email](${ url_ask(
+      [{'recompute': ['self_resend_activation','show_activation_resp']}]) }).
+buttons:
+  - restart
+---
+code: |
+  resent_activation_resp = proxy_conn.self_resend_activation_email(my_username)
+  del my_username
+  self_resend_activation = True
+---
+id: results
+question: |
+  % if resent_activation_resp.is_ok():
+  Your activation email has been resent.
+  % else:
+  Something went wrong when we tried to resend your activation email.
+  % endif
+continue button field: show_activation_resp
+---
+id: Login failed
+event: login_failed_screen
+question: |
+  Tyler Login failed
+subquestion: |
+  Please try again
+buttons:
+  - restart
