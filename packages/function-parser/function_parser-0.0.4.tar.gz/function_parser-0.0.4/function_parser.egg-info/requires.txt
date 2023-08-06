@@ -1,0 +1,10 @@
+docopt
+dpu_utils
+elasticsearch
+gitpython
+pandas
+pyhive
+python-arango
+requests
+tqdm
+tree_sitter==0.0.5
