@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: QWeather
+Version: 2.1.0
+Summary: A zeromq based distributed messaging platform
+Home-page: https://github.com/Arvad/QWeather
+Author: A. Arvad Joergensen
+Author-email: Asbjorn.Arvad@nbi.ku.dk
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+QWeather
+=======================
+
+This project is a zeromq based distributed server network.
+
+
+`The source for this project is available here
+https://github.com/Arvad/QWeather`_.
+
+
+----
+
+
