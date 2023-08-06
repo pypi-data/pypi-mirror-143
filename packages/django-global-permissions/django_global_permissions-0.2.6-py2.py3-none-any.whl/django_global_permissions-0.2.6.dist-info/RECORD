@@ -1,0 +1,11 @@
+global_permissions/__init__.py,sha256=T150U4daRZ7ULOwxGUzzoBDAqm3bW9UydvCf0KJii9I,22
+global_permissions/admin.py,sha256=2N7Ytr5bpMqbclj9_Qs337EX3VtDgmc5RxAa9dKlalw,258
+global_permissions/models.py,sha256=rgofg4Djjzey2XzOzeyHOyRQsvQLd732ywcSQGubWbk,1690
+global_permissions/migrations/0001_initial.py,sha256=yacroOBkr9EIEFOgxQiZJjwrALelrGO6z5GCdu1IbB4,565
+global_permissions/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_global_permissions-0.2.6.dist-info/AUTHORS.md,sha256=YxDSA4fLcaoggrrHtLD3519sd6RV-L7eMREcoglbLXg,143
+django_global_permissions-0.2.6.dist-info/LICENSE,sha256=Vg20DCEHQHg1UbknhND6jIBy9GrgL9LJg_bgBqszSIg,1111
+django_global_permissions-0.2.6.dist-info/METADATA,sha256=6rZkfQZy-s5351Bvosf3kfpOMDwSj2BvrnH88IxAamQ,3300
+django_global_permissions-0.2.6.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+django_global_permissions-0.2.6.dist-info/top_level.txt,sha256=WTKmeiLdBznDx0GYLZm2xkUDrGYxa1FIC4VVmZwzkO0,19
+django_global_permissions-0.2.6.dist-info/RECORD,,
