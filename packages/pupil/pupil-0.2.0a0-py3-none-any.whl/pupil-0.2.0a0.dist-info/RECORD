@@ -1,0 +1,16 @@
+pupil/__init__.py,sha256=dW7F2tmFHRXwGmS-7d-DHFNY92J3KjxSvoKaiTyuo20,97
+pupil/annotator.py,sha256=gxLV3gjUj429Ytb2cU0KvG0xdo8MSj-deWWkDvfhf7k,6075
+pupil/db/__init__.py,sha256=pkDcfi0vuApi71wSGDit2p2vPPFLaSDfrMRPsP4Xclg,63
+pupil/db/config.py,sha256=TtUH-Ve3oMe1T6PUZdbZzcMx73OP_Qz9rErpwM7SQUA,555
+pupil/db/database.py,sha256=Sdkn5-xcFdUJX7mu3ucESygtFhDB_-eE3TdL5H7ltkY,2325
+pupil/db/meta.py,sha256=94dnk7G1yz5fxqMuQhZBxyDvPVMHrpcNeY8b0emioso,2711
+pupil/db/vector.py,sha256=iH5fX5B_AkSPRyQdP2GKxvFYB23yzBgDB0pH6bfp8oQ,3804
+pupil/models/__init__.py,sha256=GpWxXNQ5F2Ti54oKVnMqBpNw9ym8Fi7XJyp26RSiGiA,65
+pupil/models/clustering.py,sha256=iKME07j7mDSpDb9kdL1oXj41c6I-rVnXovY2FWBnkD0,3043
+pupil/models/config.py,sha256=Mh-XAVa4AYzW7ZZva5DVPfgU-P6qbLNNXCH8S0QUnGQ,145
+pupil/pupil.py,sha256=drUZ-0aL3mp6aD8ZHJZC3cYABDmv3x98mSSVn8v4qs4,1211
+pupil/sampler.py,sha256=bcylsbvqMT5j09xDAvXKoorosmuJk5d1G1tDuz1kMtQ,1053
+pupil-0.2.0a0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pupil-0.2.0a0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pupil-0.2.0a0.dist-info/METADATA,sha256=J2J2SWnINF_687Qh_kiib2v4CE0WdET7_YU2QPC4Pjo,873
+pupil-0.2.0a0.dist-info/RECORD,,
