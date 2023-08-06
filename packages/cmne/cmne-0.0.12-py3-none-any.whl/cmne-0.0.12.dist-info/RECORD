@@ -1,0 +1,11 @@
+cmne/__init__.py,sha256=2hyDtR0Jg_kw01kjryXtPapo0Oh_Q0yXuCIj9332eUk,563
+cmne/_version.py,sha256=28LaL9J1JRdBfN4Edp_03ZUWOZCUdFtygoKFI5dYdXA,22
+cmne/data.py,sha256=tVcjOL4kDsIpAt6WR_HLJ6aIVrjFgqYCEwaTujqUR1I,25331
+cmne/example.py,sha256=X4bE2aofVJAbmacOI_Ny0Oc7m2Ru4ShxUscmJqVps1Q,43
+cmne/settings.py,sha256=tI1a-eQqUpFYEINdlM828rML7xwQcf58sqEsknhOEEU,6176
+cmne/train.py,sha256=ViRJsoGMltGk2vSHHMICrJR-XJpXcCZcDDWsQZZD1dU,4727
+cmne-0.0.12.dist-info/LICENSE,sha256=sqGZNsKkEe3cYGRmHNctTfV0EpQPTjXmXWO-R8t-rfo,1098
+cmne-0.0.12.dist-info/METADATA,sha256=1CDLfvfvWSXPNjYow0X6HxCeUvfMNUZucaR3m4FBEGg,4152
+cmne-0.0.12.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+cmne-0.0.12.dist-info/top_level.txt,sha256=h79sHLqw9y3duuHX24l2JsvgV0lcDbPwgMkzRt98EiQ,5
+cmne-0.0.12.dist-info/RECORD,,
