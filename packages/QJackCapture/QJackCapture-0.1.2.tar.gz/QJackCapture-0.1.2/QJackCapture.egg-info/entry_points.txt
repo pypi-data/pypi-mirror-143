@@ -1,0 +1,3 @@
+[console_scripts]
+qjackcapture = qjackcapture.app:main
+
