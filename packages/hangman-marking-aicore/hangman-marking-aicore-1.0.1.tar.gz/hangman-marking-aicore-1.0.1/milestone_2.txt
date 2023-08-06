@@ -1,0 +1,10 @@
+test_check_invalid_input (hangman_test.test_milestone2.HangmanTestCase) ... ok
+test_num_lives (hangman_test.test_milestone2.HangmanTestCase) ... ok
+test_num_lives_exists (hangman_test.test_milestone2.HangmanTestCase) ... ok
+test_word (hangman_test.test_milestone2.HangmanTestCase) ... ok
+test_word_guessed (hangman_test.test_milestone2.HangmanTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

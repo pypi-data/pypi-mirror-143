@@ -1,0 +1,8 @@
+test_diff (hangman_test.test_milestone1.HangmanTestCase) ... ok
+test_presence (hangman_test.test_milestone1.HangmanTestCase) ... ok
+test_presence_ask_letter (hangman_test.test_milestone1.HangmanTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

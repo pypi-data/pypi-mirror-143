@@ -1,0 +1,8 @@
+test_check_ask_letter_right (hangman_test.test_milestone3.HangmanTestCase) ... ok
+test_check_ask_letter_wrong_guess (hangman_test.test_milestone3.HangmanTestCase) ... ok
+test_check_repeated (hangman_test.test_milestone3.HangmanTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
