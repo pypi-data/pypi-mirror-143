@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 120
+target-version = ['py36', 'py37', 'py38', 'py39']
+
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 120
+multi_line_output = 3
+profile = "black"
+src_paths = ["stockholm_library", "tests"]
+use_parentheses = true
+
+[tool.vulture]
+# exclude = []
+min_confidence = 80
+paths = ["stockholm_library/"]

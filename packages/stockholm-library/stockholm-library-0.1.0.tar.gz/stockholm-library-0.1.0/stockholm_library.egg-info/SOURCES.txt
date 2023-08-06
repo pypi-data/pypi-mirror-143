@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+stockholm_library/__init__.py
+stockholm_library/client.py
+stockholm_library.egg-info/PKG-INFO
+stockholm_library.egg-info/SOURCES.txt
+stockholm_library.egg-info/dependency_links.txt
+stockholm_library.egg-info/requires.txt
+stockholm_library.egg-info/top_level.txt
+stockholm_library/models/__init__.py
+stockholm_library/models/book.py
+stockholm_library/models/loan.py
+stockholm_library/parsers/__init__.py
+stockholm_library/parsers/loan_parser.py
