@@ -1,0 +1,1 @@
+dowolna tresc
