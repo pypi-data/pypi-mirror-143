@@ -1,0 +1,13 @@
+battlenet_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+battlenet_client/client.py,sha256=SNZOyTi1xCYMtMqDRxFcI6vnSZMcHQG8GUy9CIGITTg,8958
+battlenet_client/constants.py,sha256=KKLkzGIUZlEGWtd4WMi-l-cDIWAbHNBkRgHnaXesdcg,475
+battlenet_client/exceptions.py,sha256=CoKuipMwa9hcDMnmYKhvfbfwFrqHB523WDEwkIQWwSU,664
+battlenet_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+battlenet_client/util.py,sha256=FfRwImHCpmCUa1iy9F0AWoH7AAWx2RaMhQQTp2rDojY,133
+battlenet_client/bnet/__init__.py,sha256=YZBQ_37p8i-dVJK3SkQlnd-3Qq92FWQhHulYlA9hn0k,39
+battlenet_client/bnet/bnet.py,sha256=em6wKlzeGcoBJIBR6_h4oheWeaOqreTVo-moDLOf62c,867
+battlenet_client-1.2.3b1.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+battlenet_client-1.2.3b1.dist-info/METADATA,sha256=wgP9AOl4QpJJAY8kknLEP59-uPbmApsac2G7Jo6DiJk,687
+battlenet_client-1.2.3b1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+battlenet_client-1.2.3b1.dist-info/top_level.txt,sha256=S54_JkCZ_rd21hl4dCznQ-Ai2HB9fLQ8rQKRd2qpL5A,17
+battlenet_client-1.2.3b1.dist-info/RECORD,,
