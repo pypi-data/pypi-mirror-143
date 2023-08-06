@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+sundate/src/sundate.egg-info/PKG-INFO
+sundate/src/sundate.egg-info/SOURCES.txt
+sundate/src/sundate.egg-info/dependency_links.txt
+sundate/src/sundate.egg-info/top_level.txt
+sundate/src/sundate.py
+sundate/src/sundate.egg-info/SOURCES.txt

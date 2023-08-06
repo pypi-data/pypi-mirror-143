@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: sundate
+Version: 0.0.1
+Summary: A module for convert jalali to gregorian And conversely & write now date
+Home-page: UNKNOWN
+Author: Armnajafi
+License: UNKNOWN
+Description: 
+        <div align="center">
+        	<h1>Sundate (jalali)</h1>
+        </div>
+        <br>
+        
+        ## Installation
+        
+        **Python 3.6 or newer is required.**  
+        ` pip install sundate `
+        
+        ## Example usage
+        ```PY
+            j = gregorian_to_jalali(2020, 5, 17)
+            g = jalali_to_gregorian(1399, 2, 28)
+        
+            Python3.x:
+            print('Jalali: \t', j[0], '/', j[1], '/', j[2])
+            print('Gregorian: \t', g[0], '/', g[1], '/', g[2])
+        
+        ```
+        
+        ## Report Bug
+        
+         https://discord.gg/tdS45WrK8M
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
