@@ -1,0 +1,3 @@
+graft cg2at/forcefields/*
+graft cg2at/fragments/*
+include cg2at/forcefields/*
