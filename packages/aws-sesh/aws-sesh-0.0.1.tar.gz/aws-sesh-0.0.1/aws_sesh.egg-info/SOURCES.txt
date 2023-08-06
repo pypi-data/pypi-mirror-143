@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+aws_sesh.egg-info/PKG-INFO
+aws_sesh.egg-info/SOURCES.txt
+aws_sesh.egg-info/dependency_links.txt
+aws_sesh.egg-info/entry_points.txt
+aws_sesh.egg-info/top_level.txt
+sesh/__init__.py
+sesh/cli.py
+sesh/credentials.py
