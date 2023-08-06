@@ -1,0 +1,7 @@
+xotl.tools~=2.2.1
+
+[immutables]
+immutables
+
+[test]
+hypothesis>=5.10.0
