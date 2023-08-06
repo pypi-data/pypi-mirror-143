@@ -1,0 +1,12 @@
+PyMuPDF==1.19.5
+imutils
+numpy
+opencv-python-headless
+parsimonious
+pytesseract
+robotframework
+scikit-image
+Wand
+pylibdmtx
+pdfminer.six
+deepdiff
