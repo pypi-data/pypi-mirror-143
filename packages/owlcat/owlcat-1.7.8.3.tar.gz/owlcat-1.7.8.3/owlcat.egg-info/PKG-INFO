@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: owlcat
+Version: 1.7.8.3
+Summary: miscellaneous utility scripts for manipulating radio interferometry data
+Home-page: https://github.com/ska-sa/owlcat
+Author: Oleg Smirnov
+Author-email: Oleg Smirnov <osmirnov@gmail.com>
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+
+UNKNOWN
+
