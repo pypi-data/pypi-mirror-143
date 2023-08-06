@@ -1,0 +1,12 @@
+smallworld_api/__init__.py,sha256=TMNB75o64Fkt3AiGSEtZCDZ5Rwwmj-fLfU3BxGoOOn4,6019
+smallworld_api/base.py,sha256=SgmlrJvDwR84rBCWACxweWrxdAv4VHea56gBH4rSgOQ,1142
+smallworld_api/common_db.py,sha256=FuNcDuFOkpMUnuf1ZRPAMvfmRNKxyhwAy7zwES_7UHI,1577
+smallworld_api/defaults.py,sha256=1YHVm5WDv5omERic89cRtc-Tujrr7EdaL027zLFWgYE,8288
+smallworld_api/extras.py,sha256=oa_oV-tErT0BmLRjjPZvkb_T2InNERYrVKgLIQYqbro,1989
+smallworld_api/nomatcherror.py,sha256=se-5gTPFGoNZc0BHThw96lAKa_qIYNlOXmcmg7pH9vw,295
+smallworld_api/search.py,sha256=RS-VHoC89b4NSb26E_-g-F6q5YegcZSM9Vk0quAruHc,2507
+smallworld_api-1.0.dist-info/LICENSE,sha256=Siv8CqgRzCfiwkHbCN67Lv19DOv1JXNx1IL_1VAxLaE,1069
+smallworld_api-1.0.dist-info/METADATA,sha256=NolYD2aS6VkGDyRS1dDmX7sd9QHHLJdeyrCfZ4qUFmo,15054
+smallworld_api-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+smallworld_api-1.0.dist-info/top_level.txt,sha256=HuwU1Ac8Pq2ZZh0QDXphZD4YNJH--UqpSq-BG0oXxEA,15
+smallworld_api-1.0.dist-info/RECORD,,
