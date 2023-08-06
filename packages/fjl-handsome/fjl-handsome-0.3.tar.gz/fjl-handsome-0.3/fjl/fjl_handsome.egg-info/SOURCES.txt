@@ -1,0 +1,8 @@
+setup.py
+fjl/fjl_handsome.egg-info/PKG-INFO
+fjl/fjl_handsome.egg-info/SOURCES.txt
+fjl/fjl_handsome.egg-info/dependency_links.txt
+fjl/fjl_handsome.egg-info/top_level.txt
+fjl/handsome/__init__.py
+fjl/handsome/boy/__init__.py
+fjl/handsome/boy/message.py
