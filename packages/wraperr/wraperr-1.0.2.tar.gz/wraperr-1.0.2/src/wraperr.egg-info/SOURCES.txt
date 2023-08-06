@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/wraperr/__init__.py
+src/wraperr/wrap_error.py
+src/wraperr.egg-info/PKG-INFO
+src/wraperr.egg-info/SOURCES.txt
+src/wraperr.egg-info/dependency_links.txt
+src/wraperr.egg-info/requires.txt
+src/wraperr.egg-info/top_level.txt
