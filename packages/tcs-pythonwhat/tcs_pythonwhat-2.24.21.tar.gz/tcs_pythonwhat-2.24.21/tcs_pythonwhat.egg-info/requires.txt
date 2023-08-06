@@ -1,0 +1,7 @@
+asttokens~=2.0.5
+dill~=0.3.4
+jinja2==3.0.3
+markdown2~=2.3.10
+numpy
+pandas
+tcs_protowhat==2.1.4
