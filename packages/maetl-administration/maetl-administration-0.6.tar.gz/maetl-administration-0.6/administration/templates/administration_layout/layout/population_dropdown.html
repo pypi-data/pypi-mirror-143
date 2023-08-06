@@ -1,0 +1,6 @@
+<select required name="id_population" id="select2-2" class="custom-select custom-select-sm">
+<option value="">-----Hili Populasaun----</option>
+{% for data in populations %}
+<option value="{{ data.id }}">{{ data.name }}</option>
+{% endfor %}
+</select>

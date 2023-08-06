@@ -1,0 +1,146 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+  <section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          {% if page == "list" %}
+          <div class="container-fluid">
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      {% if group == "sec" or group == "xefe" %}
+                      <a href="{% url 'administration:addSupplier' %}" class="btn btn-sm btn-labeled btn-info mb-2"><span class="btn-label"><i class="fa fa-plus-square"></i></span>Adisiona</a>
+                      {%endif%}
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                        <tr>
+                          <th>Nú</th>
+                          <th>Supplier</th>
+                          {% if group == "sec" or group == "xefe" %}
+                          <th width="15%">Asaun</th>
+                          {%endif%}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in supplierList %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.name}}</td>
+                          {% if group == "sec" or group == "xefe" %}
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:updateSupplier' data.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a></div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{ data.id }}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                            </div>
+                           </td>
+                           {%endif%}
+
+                          <div class="modal fade" id="delete-{{ data.id}}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos Supplier ho naran {{ data.name | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteSupplier' data.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+          </div>
+          {% endif %}
+          {% if page == "add" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "update" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

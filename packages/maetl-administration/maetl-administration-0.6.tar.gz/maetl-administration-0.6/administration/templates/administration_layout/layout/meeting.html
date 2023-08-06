@@ -1,0 +1,177 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+	<section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          <ul class="nav nav-tabs bg-default" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#decisionList">Desizaun Enkontru</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#meetingList">Lista Minutas Enkontru</a>
+                </li>
+              </ul>
+            <div class="tab-content">
+              <div id="decisionList" class="container-fluid tab-pane active">
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">Lista Desizaun</div>
+                     <div class="card-title">
+                     
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-striped my-4 w-100" id="datatable1">
+                        <thead>
+                        <tr>
+                          <th>Nú.</th>
+                          <th>Desizaun</th>
+                          <th>Nú. Desizaun</th>
+                          <th>Desizaun kona ba</th>
+                          {% if group == "sec" or group == "xefe" %}
+                          <th>Asaun</th>
+                          {% endif %}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in decisionList %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.decision_type}} </td>
+                          <td> {{data.decision_number }}</td>
+                          <td> {% for i in data.getVotingResult %}- {{i.decision_on}}<br>{%endfor%}</td>
+                          {% if group == "sec" or group == "xefe" %}
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:addMeeting' data.hashed %}" class="btn btn-sm btn-primary" title="Update"> <i class="fas fa-plus-square"></i> Adisiona</a></div>
+                            </div>
+                           </td>
+                           {% endif %}
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+              </div>
+            <div id="meetingList" class="container-fluid tab-pane fade">
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                        <tr>
+                          <th>Nú.</th>
+                          <th>Data Enkontru</th>
+                          <th>Komesa (oras)</th>
+                          <th>Remata (oras)</th>
+                          <th>Fasilitador</th>
+                          <!-- <th>Ajenda Enkontru</th> -->
+                          <th>Desizaun kona-ba</th>
+                          <th width="10%" class="text-center">Asaun</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in meetingList %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.decision.meeting_date|date:"d-M-Y"}} </td>
+                          <td> {{data.initial_time|time:"H:i"}} </td>
+                          <td> {{data.end_time|time:"H:i"}} </td>
+                          <td> {{data.facilitator }}</td>
+                          <!-- <td> {% for i in data.meeting_agendaList %}{{forloop.counter}}. {{i}}<br>{% endfor %}</td> -->
+                          <td> {{data.decision }}</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:viewMeetingMinutes' data.hashed %}" class="btn btn-sm btn-success" title="View"><i class="fas fa-eye"></i></a></div>
+                          {% if group == "sec" or group == "xefe" %}
+                              <div class="flex-fill"><a href="{% url 'administration:updateMeetingMinutes' data.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a></div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{ data.id }}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                           {%endif%}
+                            </div>
+                           </td>
+
+                          <div class="modal fade" id="delete-{{ data.id}}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos dadus Enkontru iha loron {{ data.decision.meeting_date | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteMeetingMinutes' data.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

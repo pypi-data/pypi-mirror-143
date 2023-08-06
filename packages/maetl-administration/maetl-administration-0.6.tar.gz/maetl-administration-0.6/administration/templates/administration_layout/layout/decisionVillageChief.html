@@ -1,0 +1,113 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+	<section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Lista {{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          <div class="container-fluid">
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">Lista {{title}}</div>
+                     <div class="card-title">
+                      {% if group == "sec" or group == "xefe" %}
+                      <a href="{% url 'administration:addDecisionVillageChief' %}" class="btn btn-sm btn-labeled btn-info mb-2"><span class="btn-label"><i class="fa fa-plus-square"></i></span>Adisiona Desizaun</a>
+                      {% endif %}
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                        <tr>
+                          <th>Nú.</th>
+                          <th>Data Enkontru</th>
+                          <th>Nú. Desizaun</th>
+                          <th>Desizaun Kona-ba</th>
+                          <th class="text-center">Asaun</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in decisionList %}
+                        <tr>
+                          <th scope="row"> {{forloop.counter}} </th>
+                          <td> {{data.meeting_date|date:"d-M-Y"}} </td>
+                          <td> {{data.decision_number}} </td>
+                          <td> {% for i in data.getVotingResult %}- {{i.decision_on}}<br>{%endfor%}</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:viewDecisionVillageChief' data.hashed %}" class="btn btn-sm btn-success" title="View Detail"><i class="fas fa-eye"></i></a></div>
+                              {% if group == "sec" or group == "xefe" %}
+                              <div class="flex-fill"><a href="{% url 'administration:updateDecisionVillageChief' data.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a></div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{data.id}}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                              {% endif %}
+                            </div>
+                           </td>
+
+                          <div class="modal fade" id="delete-{{data.id}}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos Desizaun Xefe Suku ho numeru {{ data.decision_number | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteDecisionVillageChief' data.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+          </div>
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

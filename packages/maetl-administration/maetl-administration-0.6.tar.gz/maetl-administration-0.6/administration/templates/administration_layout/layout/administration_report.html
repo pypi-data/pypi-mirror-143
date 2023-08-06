@@ -1,0 +1,100 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+  <section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <form method="POST" action="" target="_blank">
+                       {% csrf_token %}
+                       <div class="row col-lg-12">
+                        <div class="col-md-4">
+                            <div class="form-group mb-3"><label>Relatóriu Livru</label>
+                              <select required name="administrationReport" class="custom-select custom-select-sm">
+                                 <option selected="" value="">-----Hili Livru Atu halo Relatóriu-----</option>
+                                 <option value="A1">A1. Livru Desizaun Konsellu Suku</option>
+                                 <option value="A2">A2. Livru Desizaun Xefe Suku</option>
+                                 <option value="A3">A3. Livru Inventária Suku</option>
+                                 <option value="A4">A4. Livru Ajenda Karta Sai</option>
+                                 <option value="A5">A5. Livru Ajenda Karta Tama</option>
+                                 <option value="A6">A6. Livru Espedisaun</option>
+                                 <option value="A7">A7. Livru Lideransa Komunitária</option>
+                                 <!-- <option value="A8">Three</option> -->
+                                 <!-- <option value="A9">Minuta Enkontru Suku</option> -->
+                                 <option value="A10">A10. Rejistu Keixa Suku</option>
+                                 <option value="A11">A11. Rejistu Bainaka Suku</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group mb-3"><label>Tinan</label>
+                               <select required name="year" class="custom-select custom-select-sm">
+                                 <option selected="" value="">-----Hili Tinan------</option>
+                                 {% for i in tinan %}
+                                 <option value="{{i.year}}">{{i.year}}</option>
+                                 {% endfor %}
+                              </select>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="col-md-8 text-center mt-4"> 
+                        <button class="btn btn-sm btn-labeled btn-info" name="excel" type="submit" title="PDF"><span class="btn-label"><i class='fas fa-save'></i></span>Eksporta ba Excel</button>
+                        <!-- <button class="btn btn-sm btn-labeled btn-info" name="pdf" type="submit" title="PDF"><span class="btn-label"><i class='fas fa-save'></i></span>Eksporta ba PDF</button> -->
+                        <button class="btn btn-sm btn-labeled btn-primary" name="print" type="submit" title="PRINT"><span class="btn-label"><i class='fas fa-print'></i></span>Imprimi</button>
+                        <!-- <button class="btn btn-sm btn-labeled btn-secondary" onclick=self.history.back()><span class="btn-label"><i class="fa fa-window-close"></i></span> Cancel</button> -->
+                        </div>
+                     </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+	<section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  {% if request.user.groups.all.0.name == 'xefe' or request.user.groups.all.0.name == 'sec'  %}
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  {% endif %}
+                  {% if request.user.groups.all.0.name == 'admin' %}
+                  <li class="breadcrumb-item"><a href="{% url 'employee:admin-employee-dashboard' %}">Varanda</a></li>
+                  {% endif %}
+                  <li class="breadcrumb-item active" aria-current="page">Lista Lideransa Komunitária</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          <div class="container-fluid">
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      {% if group == "xefe" %}
+                      <a href="{% url 'administration:addCommunityLidership' %}" class="btn btn-sm btn-labeled btn-info mb-2"><span class="btn-label"><i class="fa fa-plus-square"></i></span>Adisiona Lideransa Suku</a>
+                      <a href="{% url 'administration:addCommunityLidershipAldeia' %}" class="btn btn-sm btn-labeled btn-info mb-2"><span class="btn-label"><i class="fa fa-plus-square"></i></span>Adisiona Lideransa Aldeia</a>
+                      {% endif %}
+                      {% if group == "admin" %}
+                      <a href="{% url 'administration:addCommunityLidership' %}" class="btn btn-sm btn-labeled btn-info mb-2"><span class="btn-label"><i class="fa fa-plus-square"></i></span>Adisiona Lideransa Suku</a>
+                      {% endif %}
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-responsive table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                        <tr>
+                          <th>Nú.</th>
+                          <th>Naran Kompletu</th>
+                          <th>Seksu</th>
+                          <th>Estadu Sivil</th>
+                          <th>Kargu</th>
+                          <th>Fatin/Data Moris</th>
+                          <th>Habilitasaun Literaria</th>
+                          <th width="20%">Periodu Mandatu</th>
+                          <th>N&uacute;. Identidade</th>
+                          <th>Hela Fatin</th>
+                          <th>Kondisaun Fíziku</th>
+                          <th>Obs</th>
+                          {% if group == "admin" or group == "xefe" %}
+                          <th>Asaun</th>
+                          {% endif %}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in communityLeadershipList %}
+                        <tr>
+                          <th scope="row"> {{forloop.counter}} </th>
+                          <td> {{data.population.name}} </td>
+                          <td> {% if data.population.gender == "m" %}Mane{% elif data.population.gender == "f" %}Feto{% elif data.population.gender == "s" %}Seluk{%endif%} </td>
+                          <td> {% if data.population.marital_status == "c" %}Kaben Nain{% elif data.population.marital_status == "s" %}Klosan{% elif data.population.marital_status == "d" %}Faluk{%endif%}</td>
+                          <td> {{data.position}}</td>
+                          <td> {{data.population.place_of_bird}}/{{data.population.date_of_bird|date:"d-M-Y"}}</td>
+                          <td> {% if data.population.level_education %}{{data.population.level_education}}{% else %} {% endif %}</td>
+                          <td> {{data.startMandate|date:"d-M-Y"}} | {{data.endMandate|date:"d-M-Y"}}</td>
+                          <td> {{data.population.nu_bi}}</td>
+                          <td> {{data.population.place_of_bird}}</td>
+                          <td> {{data.population.deficient}}</td>
+                          <td> {{data.observation}}</td>
+                          {% if group == "admin" or group == "xefe" %}
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:viewCommunityLeadership' data.hashed %}" class="btn btn-sm btn-success" title="View"><i class="fas fa-eye"></i></a></div>
+                              <div class="flex-fill"><a href="{% url 'administration:updateCommunityLidership' data.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a></div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{data.id}}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                            </div>
+                           </td>
+                           {% endif %}
+
+                          <div class="modal fade" id="delete-{{data.id}}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos dadus Lideransa Komunitária ho naran {{ data.population.name | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteCommunityLeadership' data.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+          </div>
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

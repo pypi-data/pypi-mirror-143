@@ -1,0 +1,6 @@
+<select required name="aldeia" id="id_aldeia" class="custom-select custom-select-sm">
+<option value="">-----Hili Aldeia----</option>
+{% for data in aldeia %}
+<option value="{{ data.id }}">{{ data.name }}</option>
+{% endfor %}
+</select>

@@ -1,0 +1,335 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+  <section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item"><a href="{% url 'administration:villageAdviseDecisionList' %}">Lista Desizaun Konsellu Suku</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          {% if messages %}
+                        {% for message in messages %} 
+                            <div id="" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+          {% if page == "add" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                    <form method="POST" action="">
+                     {% csrf_token %}
+                      <div class="row col-lg-12">
+                        <div class="row col-md-6 col-sm-12">
+                          <div class="col-sm-5">
+                            <div class="form-group mb-3"><label>Tinan</label>
+                              <select name="year" class="form-control">
+                                {% for i in yearList %}
+                                <option value="{{i.year}}">{{i.year}}</option>
+                                {% endfor %}
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-sm-7">
+                            <div class="form-group mb-3"><label>Data Enkontru</label>
+                              <input class="form-control" type="date" name="meeting_date" required>
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group mb-3"><label>N&uacute;. Desizaun</label>
+                              <input class="form-control" type="text" name="decision_number" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-3">
+                            <p class="bg-info text-center p-2 mb-3"><b>Konsellu Suku</b></p>
+                            <table class="table table-bordered table-sm table-hover">
+                                <tr>
+                                  <th class="text-center">Nú.</th>
+                                  <th class="text-center">Naran Kompletu</th>
+                                  <th class="text-center">Pozisaun</th>
+                                  <th class="text-center">Hili</th>
+                                </tr>
+                            {% for i in villageAdviseList %}
+                              <tr>
+                                <td class="text-center">{{forloop.counter}}</td>
+                                <td>{{i.population.name}}</td>
+                                <td>{{i.position}}</td>
+                                <td class="text-center"><input type="checkbox" name="villageAdvise" value="{{i.hashed}}"></td>
+                              </tr>
+                            {% endfor %}
+                            </table>
+                          </div>
+                        </div>
+                          <div class="col-lg-12">
+                            <div class="form-group mb-3"><label>Desizaun Kona-ba</label>
+                              <input class="form-control" data-role="tagsinput" type="text" data-role="tagsinput" required name="decision_on" required>
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group mb-3"><label>Observasaun</label>
+                              <input class="form-control" type="text" name="observation">
+                            </div>
+                          </div>
+                        
+                      </div>
+                      <div class="text-right mt-4"> 
+                      <button class="btn btn-sm btn-labeled btn-info" type="submit" title="Update"><span class="btn-label"><i class='fa fa-save'></i></span>Rai</button>
+                      <button class="btn btn-sm btn-labeled btn-secondary" onclick=self.history.back()><span class="btn-label"><i class="fa fa-window-close"></i></span> Kansela</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "addDecisionResult" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}} {{cardTitle}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "update" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                    <form method="POST" action="">
+                     {% csrf_token %}
+                      <div class="row col-lg-12">
+                        <div class="row col-md-6 col-sm-12">
+                          <div class="col-sm-5">
+                            <div class="form-group mb-3"><label>Tinan</label>
+                              <select name="year" class="form-control">
+                                {% for i in yearList %}
+                                {% if i.id == decisionData.year.id %}
+                                <option value="{{i.year}}" selected>{{i.year}}</option>
+                                {% else %}
+                                <option value="{{i.year}}">{{i.year}}</option>
+                                {% endif %}
+                                {% endfor %}
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-sm-7">
+                            <div class="form-group mb-3"><label>Data Enkontru</label>
+                              <input class="form-control" type="date" name="meeting_date" value="{{decisionData.meeting_date|date:'Y-m-d'}}">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group mb-3"><label>N&uacute; Desizaun</label>
+                              <input class="form-control" type="text" name="decision_number" value="{{decisionData.decision_number}}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-3">
+                            <p class="bg-info text-center p-2 mb-3"><b>Konsellu Suku</b></p>
+                            <table class="table table-bordered table-sm table-hover">
+                                <tr>
+                                  <th class="text-center">Nú.</th>
+                                  <th class="text-center">Naran Kompletu</th>
+                                  <th class="text-center">Pozisaun</th>
+                                  <th class="text-center">Hili</th>
+                                </tr>
+                            {% for i in villageAdviseList %}
+                              <tr>
+                                <td class="text-center">{{forloop.counter}}</td>
+                                <td>{{i.villageAdvise.population.name}}</td>
+                                <td>{{i.villageAdvise.position}}</td>
+                                <td class="text-center">
+                                  {% if i.attendance == "Yes" %}
+                                  <input type="checkbox" checked name="villageAdvise" value="{{i.villageAdvise.hashed}}">
+                                  {% else %}
+                                  <input type="checkbox" name="villageAdvise" value="{{i.villageAdvise.hashed}}">
+                                  {% endif %}
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-right mt-4"> 
+                      <button class="btn btn-sm btn-labeled btn-info" type="submit" title="Update"><span class="btn-label"><i class='fa fa-save'></i></span>Rai</button>
+                      <button class="btn btn-sm btn-labeled btn-secondary" onclick=self.history.back()><span class="btn-label"><i class="fa fa-window-close"></i></span> Kansela</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "view" %}
+          {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      {% if group == "sec" or group == "xefe" %}
+                      <a href="{% url 'administration:addDecisionResult' decisionData.hashed %}" class="btn btn-sm btn-outline-primary" title="Adisiona Rezultadu Desizaun"><i class="fas fa-plus-square mr-2"></i>Adisiona</a>
+                      {% endif %}
+                      <a target="_blank" href="{% url 'administration:printDecisioResult' decisionData.hashed %}" class="btn btn-sm btn-outline-dark" title="Imprimi Rezultadu Desizaun"><i class="fas fa-print mr-2"></i>Imprimi</a>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between m-4">
+                      <div class="p-2" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);background-color: #83aebb87;border: 1px solid #fff">  Data Enkontru : <b>{{decisionData.meeting_date}}</b></div>
+                      <div class="p-2" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);background-color: #1d96bb66;border: 1px solid #fff"> N&uacute;. Desizaun : <b>{{decisionData.decision_number}}</b></div>
+                    </div>
+                    <hr>
+                    <table class="table table-striped my-4 w-100">
+                        <thead>
+                          <tr>
+                            <th>Nú.</th>
+                            <th>Desizaun Kona-ba</th>
+                            <th>Afavor</th>
+                            <th>Kontra</th>
+                            <th>Abstein</th>
+                            {% if group == "sec" or group == "xefe" %}
+                            <th>Asaun</th>
+                            {% endif %}
+                          </tr>
+                        </thead>
+                      <tbody>
+                        {% for data in decisionData.getVotingResult %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.decision_on}}</td>
+                          <td> {{data.vote_afavor}}</td>
+                          <td> {{data.vote_kontra}}</td>
+                          <td> {{data.vote_abstein}}</td>
+                          {% if group == "sec" or group == "xefe" %}
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:updateVotingResult' data.hashed decisionData.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a>
+                              </div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{ data.id }}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                            </div>
+                           </td>
+                           {% endif %}
+                           <!-- modal -->
+                           <div class="modal fade" id="delete-{{ data.id }}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos dadus Rezultadu Desizaun Kona-ba {{ data.decision_on | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteVotingResult' data.hashed decisionData.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                     <hr>
+                     <div class="col-md-7 mt-5">
+                          <div class="form-group mb-3">
+                            <p class="bg-info text-center p-2 mb-3"><b>Konsellu Suku</b></p>
+                            <table class="table table-bordered table-sm table-hover">
+                                <tr>
+                                  <th class="text-center">Nú.</th>
+                                  <th class="text-center">Naran Kompletu</th>
+                                  <th class="text-center">Pozisaun</th>
+                                  <th class="text-center">Prezente</th>
+                                </tr>
+                            {% for i in decisionData.getVillageAdviseAll %}
+                              <tr>
+                                <td class="text-center">{{forloop.counter}}</td>
+                                <td>{{i.villageAdvise.population.name}}</td>
+                                <td>{{i.villageAdvise.position}}</td>
+                                <td class="text-center">
+                                  {% if i.attendance == "Yes" %}
+                                  <center><span class="text-primary">&#10003;</span></center>
+                                  {% else %}
+                                  <center><span>X</span></center>
+                                  {% endif %}
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            </table>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    <script src="{% static 'main/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.js' %}"></script>
+    {% include 'main/footer.html' %}
+{% endblock %}

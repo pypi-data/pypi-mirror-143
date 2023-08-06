@@ -1,0 +1,175 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+  <section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item"><a href="{% url 'administration:meetingList' %}">Lista Minutas Enkontru Suku</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+          {% if page == "add" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="container-fluid card-body ">
+                    {% csrf_token %}
+                    {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "update" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                    {% crispy form %}
+                   
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "view" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="d-flex justify-content-between">
+                       <div class="flex-fill"><a target="_blank" href="{% url 'administration:pdfMinutaEnkontruSuku' meetingMinutes.hashed %}" class="btn btn-sm btn-outline-success" title="Export PDF"><i class="fas fa-print"></i> PDF</a></div>
+                       <div class="flex-fill"><a target="_blank" href="{% url 'administration:printMinutaEnkontruSuku' meetingMinutes.hashed %}" class="btn btn-sm btn-outline-dark ml-1" title="Export PDF"><i class="fas fa-print"></i> Imprimi</a></div>
+                       <div class="card-title">
+                       </div>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                    <table border="1" class="table table-sm table-bordered">
+                      <tr>
+                        <td rowspan="2">Data no durasaun enkontru nian:</td>
+                        <td>Data</td>
+                        <td>Komesa (oras)</td>
+                        <td>Remata (oras)</td>
+                      </tr>
+                      <tr>
+                        <td>{{meetingMinutes.decision.meeting_date|date:"d-M-Y"}}</td>
+                        <td>{{meetingMinutes.initial_time|time:"H:i"}}</td>
+                        <td>{{meetingMinutes.end_time|time:"H:i"}}</td>
+                      </tr>
+                      <tr>
+                        <td>Enkontru fasilita husi:</td>
+                        <td colspan="3">{{meetingMinutes.facilitator}}</td>
+                      </tr>
+                      <tr>
+                        <td width="40%">Membru reprezentante husi Konsellu Suku ne'ebe mk auzente (la marka prezensa) iha enkontru:</td>
+                        <td colspan="3">{% for data in villageAdviseAbsentInDecision %}{{forloop.counter}}. {{data.villageAdvise.population.name}}<br>{% endfor %}</td>
+                      </tr>
+                      <tr>
+                        <td>Ema seluk ne'ebe reprezenta komunidade iha enkontru:</td>
+                        <td colspan="3">{{meetingMinutes.community_representative}}</td>
+                      </tr>
+                      <tr>
+                        <td>Lista Prezensa iha aneksuu:</td>
+                        <td colspan="3">
+                          {% if meetingMinutes.attach_attendence_list == "Yes" %}
+                            Los <span class="border pl-1 pr-1 ml-2 mr-5">&#10003;</span>  
+                            Lae <span class="border pl-3 ml-2"> </span>
+                          {% endif %}
+                          {% if meetingMinutes.attach_attendence_list == "No" %}
+                            Los <span class="border pl-3 ml-2 mr-5"> </span>
+                            Lae <span class="border pl-1 pr-1 ml-2">&#10003;</span>  
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ajenda Enkontru:</td>
+                        <td colspan="3">
+                          {% for value in meetingMinutes.meeting_agendaList %}
+                          {{forloop.counter}}. {{value}}<br>
+                          {% endfor %}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Rezumu diskusaun tuir Ajenda Enkontru:</td>
+                        <td colspan="3">{{meetingMinutes.discussion}}</td>
+                      </tr>
+                      <tr>
+                        <td>Desizaun ne'ebe foti:</td>
+                        <td colspan="3">{{meetingMinutes.decision_takes}}</td>
+                      </tr>
+                      <tr>
+                        <td>Diversus:</td>
+                        <td colspan="3">{{meetingMinutes.diversus}}</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">Minutas enkontru prepara husi:</td>
+                        <td>Naran kompletu</td>
+                        <td>Assinatura</td>
+                        <td>Data</td>
+                      </tr>
+                      <tr>
+                        <td>{{meetingMinutes.prepared_by}}</td>
+                        <td>-</td>
+                        <td>{{meetingMinutes.prepared_date|date:"d-M-Y"}}</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">Minutas enkontru aprova husi Xefe Suku:</td>
+                        <td>Naran kompletu</td>
+                        <td>Assinatura</td>
+                        <td>Data</td>
+                      </tr>
+                      <tr>
+                        <td>{{meetingMinutes.lideransa_komunitaria.population.name}}</td>
+                        <td>-</td>
+                        <td>{{meetingMinutes.aproved_date|date:"d-M-Y"}}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

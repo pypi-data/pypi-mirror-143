@@ -1,0 +1,196 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+  <section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item"><a href="{% url 'administration:expeditionList' %}">Lista Espedisaun</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+          {% if page == "add" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}} >> <b>{{letterOut.letter_number}}</b></div>
+                     <div class="card-title">
+                      
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "update" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "viewDetail" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      {% if group == "sec" or group == "xefe" %}
+                      <a class="btn btn-primary btn-sm" href="{% url 'administration:addExpedition' letterOut.hashed %}"><i class="fas fa-plus-square mr-2"></i> Adisiona</a>
+                      {%endif%}
+                     </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between m-4">
+                      <div class="p-2" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);background-color: #83aebb87;border: 1px solid #fff"> N&uacute;. Karta Sai : <b>{{letterOut.letter_number}}</b></div>
+                      <div class="p-2" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);background-color: #1d96bb66;border: 1px solid #fff"> Asuntu Karta Sai : <b>{{letterOut.subject}}</b></div>
+                      <div class="p-2" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);background-color: #06b3e894;border: 1px solid #fff"> Data Karta Sai : <b>{{letterOut.letter_date|date:"d-M-Y"}}</b></div>
+                    </div>
+                    <hr>
+                    <table class="table table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                          <tr>
+                            <th>Nú.</th>
+                            <th>Data Haruka</th>
+                            <th>Haruka ba Se</th>
+                            <th>Data / Nú. Karta</th>
+                            <th>Asuntu</th>
+                            <th>Naran Ema ne'ebe simu</th>
+                            <th>Data Simu</th>
+                            {% if group == "sec" or group == "xefe" %}
+                            <th>Asaun</th>
+                            {%endif%}
+                          </tr>
+                        </thead>
+                      <tbody>
+                        {% for data in expeditionData %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.sent_date|date:"d-M-Y"}}</td>
+                          <td> {{data.sent_to}}</td>
+                          <td> {{data.letter_out.letter_date|date:"d-M-Y"}} | {{data.letter_out.letter_number}} </td>
+                          <td> {{data.letter_out.subject }}</td>
+                          <td> {{data.recieve_name}}</td>
+                          <td> {{data.recieve_date|date:"d-M-Y"}}</td>
+                          {% if group == "sec" or group == "xefe" %}
+                          <td>
+                            <div class="d-flex">
+                              <div class="flex-fill"><a href="{% url 'administration:updateExpedition' data.hashed %}" class="btn btn-sm btn-primary" title="Update"><i class="fas fa-pencil-alt"></i></a>
+                              </div>
+                              <div class="flex-fill"> <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-{{ data.id }}" style="text-decoration: none"><i class="fas fa-trash-alt"></i></button></div>
+                            </div>
+                           </td>
+                           {%endif%}
+                           <!-- modal -->
+                           <div class="modal fade" id="delete-{{ data.id }}" data-backdrop="false"><!-- modal -->
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Delete Dadus</h4>
+                                  <button type="button" class="close" data-dismiss="modal">X</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Ita Boot hakarak hamoos dadus Espedisaun haruka ba {{ data.sent_to | upper }}?
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Lae</button>
+                                  <a href="{% url 'administration:deleteExpedition' data.hashed %}" class="btn btn-info">Sim</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- endmodal -->
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                     {% if letterOut.getExpeditionAttachedFile.attached_file %}
+                      <div class="text-center border p-4 mt-4"> 
+                        <a target="_blank" href="{{letterOut.getExpeditionAttachedFile.attached_file.url}}" class="btn btn-sm btn-labeled btn-outline-success" title="Haree File"><span class="btn-label"><i class='fa fa-eye'></i></span>Haree File Espedisaun</a>
+                        {% if group == "sec" or group == "xefe" %}<a href="{% url 'administration:updateFileExpedition' letterOut.getExpeditionAttachedFile.hashed %}" class="btn btn-sm btn-labeled btn-outline-warning" title="Altera File"><span class="btn-label"><i class='fa fa-edit'></i></span>Altera File Espedisaun</a>{%endif%}
+                      </div>
+                     {% else %}
+                      <div class="text-center mt-4"> 
+                        {% if group == "sec" or group == "xefe" %}<a href="{% url 'administration:uploadExpeditionFile' letterOut.hashed %}" class="btn btn-sm btn-labeled btn-outline-warning" title="Aneksu File"><span class="btn-label"><i class='fa fa-edit'></i></span>Aneksu File Espedisaun</a>{%endif%}
+                      </div>
+                     {% endif %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "uploadFile" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                      
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     {% crispy form %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}

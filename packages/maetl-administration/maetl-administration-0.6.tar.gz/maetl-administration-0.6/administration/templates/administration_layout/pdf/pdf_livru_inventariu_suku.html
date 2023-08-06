@@ -1,0 +1,85 @@
+{% load static %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+           
+            
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <center><div style="margin-bottom: 3px;font-family: Times New Roman;font-size: 1.2rem">Formatu A.3</div></center>
+        <center><div style="font-size: 1.5rem;font-weight: bold;font-family: Times New Roman">LIVRU INVENT&Aacute;RIU SUKU</div></center>
+        <br>
+        <center>
+            <div class="clearfix">
+              <div class="box">
+              <strong>Suku :</strong>  {{userAddress.employee.village}} <strong> Postu Administrativu :</strong> {{userAddress.employee.administrativepost}} <strong> Munis&iacute;piu :</strong> {{userAddress.employee.municipality}}  <strong> Tinan :</strong> {{year}}
+              </div>
+            </div>
+        </center>
+        <br>
+        <table width="100%" border="0.2" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nu</th>
+                    <th style="padding: 2px">Naran Inventariu</th>
+                    <th>Data Sosa/Simu</th>
+                    <th>Kondisaun</th>
+                    <th>Nu Seri</th>
+                    <th>Kuantidade</th>
+                    <th>Folin Sosa</th>
+                    <th style="padding: 2px">Fontes/Se mak fo</th>
+                    <th>Marka</th>
+                    <th>Se mak uza</th>
+                    <th>Obs.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: rgb(185, 169, 169)">
+                    <td style="padding-top: 4px"><center>1</center></td>
+                    <td style="padding-top: 4px"><center>2</center></td>
+                    <td style="padding-top: 4px"><center>3</center></td>
+                    <td style="padding-top: 4px"><center>4</center></td>
+                    <td style="padding-top: 4px"><center>5</center></td>
+                    <td style="padding-top: 4px"><center>6</center></td>
+                    <td style="padding-top: 4px"><center>7</center></td>
+                    <td style="padding-top: 4px"><center>8</center></td>
+                    <td style="padding-top: 4px"><center>9</center></td>
+                    <td style="padding-top: 4px"><center>10</center></td>
+                    <td style="padding-top: 4px"><center>11</center></td>
+                </tr>
+                {% for data in inventoryList %}
+                <tr>
+                    <td style="padding-top: 4px"><center>{{forloop.counter}}</center></td>
+                    <td style="padding: 2px"> {{data.inventory.name}}</td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.recieve_date|date:"d-M-Y"}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.condition}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.nu_serie}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.quantity}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.unitprice}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.supplier}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.inventory.brand}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.used.responsible}}</center></td>
+                    <td style="padding-top: 4px"><center>{{data.used.obs}}</center></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+       
+    </body>
+</html>

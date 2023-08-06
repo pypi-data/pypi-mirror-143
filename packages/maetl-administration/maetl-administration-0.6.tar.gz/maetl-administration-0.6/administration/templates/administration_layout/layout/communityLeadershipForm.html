@@ -1,0 +1,174 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+	<section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  {% if request.user.groups.all.0.name == 'xefe' or request.user.groups.all.0.name == 'sec'  %}
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  {% endif %}
+                  {% if request.user.groups.all.0.name == 'admin' %}
+                  <li class="breadcrumb-item"><a href="{% url 'employee:admin-employee-dashboard' %}">Varanda</a></li>
+                  {% endif %}
+                  <li class="breadcrumb-item"><a href="{% url 'administration:communityLeadershipList' %}">Dadus Lideransa Komunitária</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+          {% if page == "form" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     {% csrf_token %}
+                     <form method="POST" id="locationForm" data-populations-url="{% url 'administration:load_populations' %}" novalidate>{% crispy form %}</form>
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if page == "view" %}
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="card-title">{{title}}</div>
+                     <div class="card-title">
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <table class="table table-sm table-bordered table-hover">
+                       <tr>
+                         <td>Naran Kompletu</td>
+                         <td>{{communityLeadershipData.population.name}}</td>
+                       </tr>
+                       <tr>
+                         <td>Seksu</td>
+                         <td>
+                          {% if communityLeadershipData.population.gender == 'm' %}
+                          Mane
+                          {% endif %}
+                          {% if communityLeadershipData.population.gender == 'f' %}
+                          Feto
+                          {% endif %}
+                          {% if communityLeadershipData.population.gender == 's' %}
+                          Seluk
+                          {% endif %}
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>Estadu Sivil</td>
+                         <td>
+                          {% if communityLeadershipData.population.marital_status == 's' %}
+                          Solteiru
+                          {% endif %}
+                          {% if communityLeadershipData.population.marital_status == 'c' %}
+                          Casado
+                          {% endif %}
+                          {% if communityLeadershipData.population.marital_status == 'd' %}
+                          Divorsiadu
+                          {% endif %}
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>Kargu</td>
+                         <td>{{communityLeadershipData.position}} {% if communityLeadershipData.aldeia != None %}{{communityLeadershipData.aldeia}}{%else%} {%endif%}</td>
+                       </tr>
+                       <tr>
+                         <td>Fatin / Data Moris</td>
+                         <td>{{communityLeadershipData.population.place_of_bird}} / {{communityLeadershipData.population.date_of_bird}}</td>
+                       </tr>
+                       <tr>
+                         <td>Habilitasaun Literaria</td>
+                         <td>{{communityLeadershipData.population.level_education}}</td>
+                       </tr>
+                       <tr>
+                         <td>Periodu Mandatu</td>
+                         <td>{{communityLeadershipData.startMandate}} to'o {{communityLeadershipData.endMandate}}</td>
+                       </tr>
+                       <tr>
+                         <td>Nú. Identidade</td>
+                         <td>{{communityLeadershipData.population.nu_bi}}</td>
+                       </tr>
+                       <tr>
+                         <td>Hela Fatin</td>
+                         <td>{{communityLeadershipData.population.aldeia}}</td>
+                       </tr>
+                       <tr>
+                         <td>Observasaun</td>
+                         <td>{% if communityLeadershipData.observation %}{{communityLeadershipData.observation}}{%else%} {% endif %}</td>
+                       </tr>
+                     </table>
+                     {% if communityLeadershipData.status == "Yes" %}
+                     <div class="text-center mt-4"> 
+                      <a href="{% url 'administration:changeCommunityLeadership' communityLeadershipData.hashed %}" class="btn btn-sm btn-labeled btn-outline-info" title="Subtitui"><span class="btn-label"><i class='fa fa-edit'></i></span>Subtitui {{communityLeadershipData.position}}</a>
+                      <a href="{% url 'administration:terminateCommunityLeadership' communityLeadershipData.hashed %}" class="btn btn-sm btn-labeled btn-outline-danger" title="Subtitui"><span class="btn-label"><i class='fa fa-edit'></i></span>Termina {{communityLeadershipData.position}}</a>
+                      </div>
+                      {% endif %}
+                  </div>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $("#id_aldeia").change(function () {
+    var url = $("#locationForm").attr("data-populations-url");
+    var aldeiaID = $(this).val();
+    console.log("koko id aldeia");
+    console.log(aldeiaID);
+
+    $.ajax({
+      url: url,
+      data: {
+        'aldeia': aldeiaID
+      },
+      success: function (data) {
+        $("#select2-2").html(data);
+      }
+    });
+
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,149 @@
+
+{% load static %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+           
+            th {
+                font-family: "Agency FB", "sans-serif";
+              }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+            .box {
+              float: left;
+              width: 25%;
+              padding: 0px;
+            }
+
+            .clearfix::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+        </style>
+    </head>
+    <body onload="javascript:window.print()">
+        <div style="margin-bottom: 10px"><center>Formatu A.9</center></div>
+        <div style="font-weight: bold;text-transform: uppercase;font-size: 1.5rem"><center>minutas enkontru suku</center></div>
+        <br>
+        <center>
+            <div class="clearfix">
+              <div class="box">
+              <p>Suku : {{meetingData.village}}</p>
+              </div>
+              <div class="box">
+              <p>Postu Administrativu : {{meetingData.administrativepost}}</p>
+              </div>
+              <div class="box">
+                {% if meetingData.municipality.name == "Dili" or meetingData.municipality.name == "Baucau" or meetingData.municipality.name == "Bobonaro" or meetingData.municipality.name == "Ermera" %}
+                  <p>Autoridade Munisipal : {{meetingData.municipality}}</p>
+                {% elif meetingData.municipality.name == "Oe-cusse" %}
+                  <p>Rejiaun Aut&oacute;nomu : RAEOA</p>
+                {% else %}
+                  <p>Munis&iacute;piu : {{meetingData.municipality}}</p>
+                {% endif %}
+              </div>
+              <div class="box">
+              <p>Tinan : {{meetingData.decision.meeting_date|date:"Y"}}</p>
+              </div>
+            </div>
+        </center>
+        <table width="100%" border="1" cellpadding="0" cellspacing="0">
+                       <tr>
+                        <td  style="padding: 4px"><b>1. Suku nia naran:</b></td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.village}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px" rowspan="2">2. Data no durasaun enkontru nian:</td>
+                        <td  style="padding: 4px"><center>Data</center></td>
+                        <td  style="padding: 4px"><center>Komesa (oras)</center></td>
+                        <td  style="padding: 4px"><center>Remata (oras)</center></td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">{{meetingData.decision.meeting_date|date:"d-M-Y"}}</td>
+                        <td  style="padding: 4px">{{meetingData.initial_time|time:"H:i"}}</td>
+                        <td  style="padding: 4px">{{meetingData.end_time|time:"H:i"}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">3. Enkontru fasilita husi:</td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.facilitator}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px" width="40%">4. Membru reprezentante husi Konsellu Suku ne'ebe mak auzente (la marka prezensa) iha enkontru:</td>
+                        <td  style="padding: 8px" colspan="3">{% for data in meetingDetail %}{{forloop.counter}}. {{data.villageAdvise}},<br>{% endfor %}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">5. Ema seluk ne'ebe reprezenta komunidade iha enkontru:</td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.community_representative}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">6. Lista Prezensa iha aneksu:</td>
+                         <td colspan="3" style="padding: 4px">
+                          {% if meetingData.attach_attendence_list == "Yes" %}
+                            Los <span style="border: 1px solid black;padding-left: 1px;padding-right: 1px; margin-left: 2px;margin-right: 15px">&#10003;</span>  
+                            Lae <span style="border: 1px solid black;padding-left: 13px; margin-left: 2px"> </span>
+                          {% endif %}
+                          {% if meetingData.attach_attendence_list == "No" %}
+                            Los <span style="border: 1px solid black;padding-left: 13px; margin-left: 2px;margin-right: 15px"> </span>
+                            Lae <span style="border: 1px solid black;padding-left: 1px;padding-right: 1px; margin-left: 2px">&#10003;</span>  
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">7. Ajenda Enkontru:</td>
+                        <td  style="padding: 4px" colspan="3">
+                            {% for value in meetingData.meeting_agendaList %}
+                            {{forloop.counter}}. {{value}}<br>
+                            {% endfor %}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">8. Rezumu diskusaun tuir Ajenda Enkontru <i>(Karik espasu disponivel la to'o bele hakerek iha surat tahan ketak ida)</i>:</td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.discussion}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">9. Desizaun ne'ebe foti:</td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.decision_takes}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">10. Diversus:</td>
+                        <td  style="padding: 4px" colspan="3">{{meetingData.diversus}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px" rowspan="2">11. Minutas enkontru prepara husi:</td>
+                        <td  style="padding: 4px"><center>Naran kompletu</center></td>
+                        <td  style="padding: 4px"><center>Assinatura</center></td>
+                        <td  style="padding: 4px"><center>Data</center></td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">{{meetingData.prepared_by}}</td>
+                        <td  style="padding: 16px">-</td>
+                        <td  style="padding: 4px">{{meetingData.prepared_date|date:"d-M-Y"}}</td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px" rowspan="2">12. Minutas aprova husi Xefe Suku:</td>
+                        <td  style="padding: 4px"><center>Naran kompletu</center></td>
+                        <td  style="padding: 4px"><center>Assinatura</center></td>
+                        <td  style="padding: 4px"><center>Data</center></td>
+                      </tr>
+                      <tr>
+                        <td  style="padding: 4px">{{meetingData.lideransa_komunitaria.population.name}}</td>
+                        <td  style="padding: 16px">-</td>
+                        <td  style="padding: 4px">{{meetingData.aproved_date|date:"d-M-Y"}}</td>
+                      </tr>
+                    </table>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+           
+            
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <center><div style="margin-bottom: 3px;font-family: Times New Roman;font-size: 1.2rem">Formatu A.8</div></center>
+        <center><div style="font-size: 1.5rem;font-weight: bold;font-family: Times New Roman">LISTA PREZENSA</div></center>
+        <br>
+        <center>
+            <div class="clearfix">
+              <div class="box">
+              <strong>Suku :</strong>  {{decision.village}} <strong> Postu Administrativu :</strong> {{decision.administrativepost}} <strong> Munis&iacute;piu :</strong> {{decision.municipality}}  <strong> Tinan :</strong> {{decision.meeting_date|date:"Y"}} <strong> Data Enkontru :</strong>{{decision.meeting_date|date:"d-m-Y"}}
+              </div>
+            </div>
+        </center>
+        <br>
+        <table width="100%" border="0.2">
+            <thead>
+                <tr>
+                    <th style="padding: 2px" width="5%">Nu</th>
+                    <th>Naran Kompletu</th>
+                    <th>Seksu</th>
+                    <th width="18%">Diresaun/Instituisaun</th>
+                    <th width="27%" style="padding-top: 2px">Pozisaun</th>
+                    <th width="12%">Asinatura</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: rgb(185, 169, 169)">
+                    <td style="padding-top: 4px"><center>1</center></td>
+                    <td style="padding-top: 4px"><center>2</center></td>
+                    <td style="padding-top: 4px"><center>3</center></td>
+                    <td style="padding-top: 4px"><center>4</center></td>
+                    <td style="padding-top: 4px"><center>5</center></td>
+                </tr>
+                {% for data in attendanceList %}
+                <tr>
+                    <td style="padding: 4px"><center>{{forloop.counter}}</center></td>
+                    <td style="padding: 4px">{{data.naran}}</td>
+                    <td style="padding: 4px">{{data.sex}}</td>
+                    <td style="padding: 4px">{{data.instituition}}</td>
+                    <td style="padding: 4px">{{data.position}}</td>
+                    <td style="padding: 4px"><center>{{data.asinatura}}</center></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

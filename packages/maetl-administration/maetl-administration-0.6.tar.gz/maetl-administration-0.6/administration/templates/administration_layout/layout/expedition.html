@@ -1,0 +1,89 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+{% include 'administration_layout/main/sidebar.html' %}
+	<section class="section-container">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <div class="content-heading d-flex justify-content-between">
+            <div>
+              {{title}}<small>
+                <ol class="breadcrumb mt-3">
+                  <li class="breadcrumb-item"><a href="{% url 'administration:administrationDashboard' %}">Varanda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </small>
+            </div>
+            <div>
+              {% ifequal user.groups.all.0.name 'admin' %}
+              <div class="bg-danger p-2">
+              <small class="text-white">Admin Nasional MAE</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'xefe' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Xefe Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+              {% ifequal user.groups.all.0.name 'sec' %}
+              <div class="bg-warning p-2">
+              <small class="text-white"> Secretariado Suku {{user.employeeuser.employee.village}}</small>
+              </div>
+              {% endifequal %}
+            </div>
+          </div>
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div id="divmessage" class="alert alert-{{ message.tags }} alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+               <div class="card card-default">
+                  <div class="card-header d-flex justify-content-between">
+                    <div class="card-title">{{title}}</div>
+                    <div class="card-title">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                   
+                     <table class="table table-striped my-4 w-100" id="datatable2">
+                        <thead>
+                        <tr>
+                          <th>Nú.</th>
+                          <th>Nú. Karta</th>
+                          <th>Data Karta</th>
+                          <th>Asuntu</th>
+                          <th>Destinu Karta</th>
+                          <th>Asaun</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in expeditionList %}
+                        <tr>
+                         <td scope="row"> {{forloop.counter}} </td>
+                          <td> {{data.letter_number}} </td>
+                          <td> {{data.letter_date|date:"d-M-Y" }}</td>
+                          <td> {{data.subject}}</td>
+                          <td> {{data.destination}}</td>
+                          <td>
+                            <div class="d-flex">
+                              <!-- <div class="flex-fill"><a class="btn btn-primary btn-sm" href="{% url 'administration:addExpedition' data.hashed %}"><i class="fas fa-plus-square mr-2"></i> Adisiona Espedisaun</a> -->
+                              </div>
+                              <div class="flex-fill"><a href="{% url 'administration:viewExpeditionDetail' data.hashed %}" class="btn btn-sm btn-success" title="View Detallu"><i class="fas fa-eye mr-2"></i> Detallu Espedisaun</a>
+                              </div>
+                            </div>
+                           </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                     </table>
+                  </div>
+               </div>
+        </div>
+    </section>
+    {% include 'main/footer.html' %}
+{% endblock %}
