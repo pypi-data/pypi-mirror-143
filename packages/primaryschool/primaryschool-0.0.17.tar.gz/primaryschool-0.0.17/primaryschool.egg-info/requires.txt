@@ -1,0 +1,4 @@
+appdirs
+pygame
+pygame-menu
+xpinyin
