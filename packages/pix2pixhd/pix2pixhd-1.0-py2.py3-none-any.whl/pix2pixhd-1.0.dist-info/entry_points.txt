@@ -1,0 +1,6 @@
+[console_scripts]
+pix2pixhd-encode-features = pix2pixhd.encode_features:main
+pix2pixhd-precompute-feature-maps = pix2pixhd.precompute_feature_maps:main
+pix2pixhd-test = pix2pixhd.test:main
+pix2pixhd-train = pix2pixhd.train:main
+
