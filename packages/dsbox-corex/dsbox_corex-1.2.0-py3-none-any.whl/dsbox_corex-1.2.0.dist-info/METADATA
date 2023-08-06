@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: dsbox-corex
+Version: 1.2.0
+Summary: Return components/latent factors that explain the most multivariate mutual information in the data under Linear Gaussian model. For comparison, PCA returns components explaining the most variance in the data.
+Home-page: https://gitlab.com/datadrivendiscovery/contrib/dsbox-corex
+Author: Rob Brekelmans/Greg Ver Steeg
+Author-email: brekelma@usc.edu
+License: Apache-2.0
+Keywords: d3m_primitive
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: GitPython
+Requires-Dist: d3m
+Requires-Dist: d3m-common-primitives
+Requires-Dist: keras
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: tensorflow
+
+Corex featurization and modeling primitives for D3M envrionments
+
+Featurization:
+(featurization with information regularization for continuous data (linear Gaussian model) and text (similar to LDA))
+Corex continuous
+Corex text
+
+Regression:
+(echo provides mutual information regularization: linear regression and neural network modeling primitives provided)
+EchoLinear 
+EchoRegression
+EchoClassification
+
+
