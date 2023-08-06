@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+bbq/bbq_handsome.egg-info/PKG-INFO
+bbq/bbq_handsome.egg-info/SOURCES.txt
+bbq/bbq_handsome.egg-info/dependency_links.txt
+bbq/bbq_handsome.egg-info/top_level.txt
+bbq/handsome/__init__.py
+bbq/handsome/boy/__init__.py
+bbq/handsome/boy/message.py
