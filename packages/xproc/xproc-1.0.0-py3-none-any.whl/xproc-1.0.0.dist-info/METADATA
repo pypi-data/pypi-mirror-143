@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: xproc
+Version: 1.0.0
+Summary: Linux Proc File System Snooper
+Home-page: https://github.com/hungrybirder/xproc
+License: MIT
+Author: liyong
+Author-email: hungrybirder@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+

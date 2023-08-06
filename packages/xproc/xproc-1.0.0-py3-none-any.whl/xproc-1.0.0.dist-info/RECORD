@@ -1,0 +1,8 @@
+xproc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xproc/meminfo.py,sha256=bn8RYnl25TvXxBjILBo9ko8u9FmHOPGapS0KK4khiQA,9204
+xproc/pidstatus.py,sha256=ha01taYzZoR74SbBt-nKNrNJycTX9iRZSVsP6tSeUME,5508
+xproc/value.py,sha256=xHN3KNuUV1nKTEr7zmhaZa-NfkW-jlpNoKErLaj1yTI,2680
+xproc-1.0.0.dist-info/LICENSE,sha256=8vm0YLpxnaZiat0mTTeC8nWk_3qrZ3vtoIszCRHiOts,1062
+xproc-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+xproc-1.0.0.dist-info/METADATA,sha256=DvzaeBMYGVtWFcpo6c3EH1EfrLnHH-Fk85ONF8FNm4A,705
+xproc-1.0.0.dist-info/RECORD,,
