@@ -1,0 +1,10 @@
+aiotapioca/__init__.py,sha256=rv2BH5rWD97Jjfb6wgR2IKPX1h2LipiSovglxLnH13E,547
+aiotapioca/adapters.py,sha256=WuH8xnHbRwvsCr0s8JDxUnSFrRWS04Ns9G4YMPY1b6c,6930
+aiotapioca/exceptions.py,sha256=5zUUJNfD3SxI5b_KcA6ChUDAPsskkv559nRGfzf7CEg,836
+aiotapioca/serializers.py,sha256=ToIjzyc6bRietq6AHJLaSOhTBLi1gl3YlXzvGp7ntt0,1727
+aiotapioca/tapioca.py,sha256=3wvvgYxTvUAV1m7rfaARntV4i-VvC8LXt_Qk2KIERpU,15849
+aiotapioca_wrapper-3.3.0.dist-info/LICENSE,sha256=ZeyeOkSqZPhaayMonYgLxM1iLtBhxcrknjz8RaTg5As,1086
+aiotapioca_wrapper-3.3.0.dist-info/METADATA,sha256=Vy9qGsCa-aX_sSkC0azHHEXDpR4Eb3YKmBmvNIM31wI,1526
+aiotapioca_wrapper-3.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aiotapioca_wrapper-3.3.0.dist-info/top_level.txt,sha256=JNnK-jNudxgEHBrIOatHFNyCn2MFQlvG-Ngks4hyoFg,11
+aiotapioca_wrapper-3.3.0.dist-info/RECORD,,
