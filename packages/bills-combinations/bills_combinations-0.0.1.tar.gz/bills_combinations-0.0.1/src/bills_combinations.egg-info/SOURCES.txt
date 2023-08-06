@@ -1,0 +1,8 @@
+LICENSE.txt
+README.txt
+setup.py
+src/bills_combinations.py
+src/bills_combinations.egg-info/PKG-INFO
+src/bills_combinations.egg-info/SOURCES.txt
+src/bills_combinations.egg-info/dependency_links.txt
+src/bills_combinations.egg-info/top_level.txt
