@@ -1,0 +1,9 @@
+flux/__init__.py,sha256=PBK1lzuS5IEMtezoSg9CfP_F2y5emRjR2vys5tUKa0A,21
+flux/connection.py,sha256=Ss1y6DgvYx2ufSWcR8Xk5YX6qCYnlKqz21g0RzTfpKc,3182
+flux/magic.py,sha256=G_GMUBLSxP-1KfloT0QkNJkYNeWwF2lFMpM7cu9camM,7883
+flux/parse.py,sha256=84RSac8CfvFJk6UpV6fWJU_MH7aQrrwsxs0q3i-aHUc,691
+ipython_flux-0.0.5.dist-info/LICENSE,sha256=87mFPMpBtnoC_-N0UrZQAlqwSTPoT1rLqOlkaY7zeG4,1071
+ipython_flux-0.0.5.dist-info/METADATA,sha256=XagyTZUA6CooD8QLY_XSOSwY6pa1x0cFzfgU6QgmvNA,5668
+ipython_flux-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ipython_flux-0.0.5.dist-info/top_level.txt,sha256=9txNc7btJudkur68qMJ7nT64gBMfFJm2dFvfYLaFBc4,5
+ipython_flux-0.0.5.dist-info/RECORD,,
