@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+metadata/youtube2text.jpg
+src/youtube2text/__init__.py
+src/youtube2text/youtube2text.py
+src/youtube2text.egg-info/PKG-INFO
+src/youtube2text.egg-info/SOURCES.txt
+src/youtube2text.egg-info/dependency_links.txt
+src/youtube2text.egg-info/requires.txt
+src/youtube2text.egg-info/top_level.txt
