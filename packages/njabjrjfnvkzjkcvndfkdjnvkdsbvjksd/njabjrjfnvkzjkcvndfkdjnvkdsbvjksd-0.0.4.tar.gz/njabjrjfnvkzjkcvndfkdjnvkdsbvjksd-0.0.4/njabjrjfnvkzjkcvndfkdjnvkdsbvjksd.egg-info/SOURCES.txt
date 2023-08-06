@@ -1,0 +1,7 @@
+LICENSE.txt
+setup.py
+njabjrjfnvkzjkcvndfkdjnvkdsbvjksd.egg-info/PKG-INFO
+njabjrjfnvkzjkcvndfkdjnvkdsbvjksd.egg-info/SOURCES.txt
+njabjrjfnvkzjkcvndfkdjnvkdsbvjksd.egg-info/dependency_links.txt
+njabjrjfnvkzjkcvndfkdjnvkdsbvjksd.egg-info/requires.txt
+njabjrjfnvkzjkcvndfkdjnvkdsbvjksd.egg-info/top_level.txt
