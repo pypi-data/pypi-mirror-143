@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+simplelogger/__init__.py
+simplelogger/__main__.py
+simplelogger/info.py
+simplelogger/logger.py
+simplelogger_python.egg-info/PKG-INFO
+simplelogger_python.egg-info/SOURCES.txt
+simplelogger_python.egg-info/dependency_links.txt
+simplelogger_python.egg-info/requires.txt
+simplelogger_python.egg-info/top_level.txt
