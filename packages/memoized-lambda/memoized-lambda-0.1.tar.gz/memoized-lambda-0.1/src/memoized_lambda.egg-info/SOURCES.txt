@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+noxfile.py
+pyproject.toml
+setup.cfg
+src/memoized_lambda/__init__.py
+src/memoized_lambda/py.typed
+src/memoized_lambda.egg-info/PKG-INFO
+src/memoized_lambda.egg-info/SOURCES.txt
+src/memoized_lambda.egg-info/dependency_links.txt
+src/memoized_lambda.egg-info/requires.txt
+src/memoized_lambda.egg-info/top_level.txt
+tests/test_memoized_lambda.py

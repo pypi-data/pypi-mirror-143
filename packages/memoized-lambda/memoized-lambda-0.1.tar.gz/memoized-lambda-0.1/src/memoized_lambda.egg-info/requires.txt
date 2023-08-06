@@ -1,0 +1,13 @@
+botocore
+
+[dev]
+black
+isort
+mypy
+pylint
+boto3-stubs[lambda]
+
+[test]
+pytest
+pytest-asyncio
+pytest-cov
