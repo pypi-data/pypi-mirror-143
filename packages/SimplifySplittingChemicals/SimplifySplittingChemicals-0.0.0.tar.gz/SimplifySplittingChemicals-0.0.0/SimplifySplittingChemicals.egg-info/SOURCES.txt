@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+SimplifySplittingChemicals.egg-info/PKG-INFO
+SimplifySplittingChemicals.egg-info/SOURCES.txt
+SimplifySplittingChemicals.egg-info/dependency_links.txt
+SimplifySplittingChemicals.egg-info/top_level.txt
+simsplitchem/__init__.py
+simsplitchem/simsplitchem.py
+simsplitchem/samplers/__init__.py
+simsplitchem/utils/__init__.py
+test/__init__.py
+test/test_simsplitchem.py
