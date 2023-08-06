@@ -1,0 +1,11 @@
+_pymeshview.cpython-37m-darwin.so,sha256=e0eoskse0Vn4XZxdonNDEL7-qDrSTCIdDHaySpTL8BQ,713384
+pymeshview/__init__.py,sha256=PNVmaTSSLgij3oyFi6s7t3koAVIrr3JUOxIi_OipVQ0,55
+pymeshview/utils.py,sha256=UXlDpoRTzDnOG8BNEazYBiq3b_aaCwlukCfDhbAyq6g,1545
+pymeshview/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymeshview/examples/show_mesh.py,sha256=8KipI5hwiaeCXz7KAXmcHjzXZePhThdHhw3GclK1b-g,780
+pymeshview-0.0.4.dist-info/LICENSE.md,sha256=pzzIdlV4uPgXpHd0TMCtfqE9wdECEtS3aeXDwqFmOK8,1085
+pymeshview-0.0.4.dist-info/METADATA,sha256=mIEXAKz8kQ9xgW-4mmbrgXNtYv_ySaKKcv_KwonbeyE,353
+pymeshview-0.0.4.dist-info/WHEEL,sha256=Cccg5HtjQGFL9jeYnJ5pUDpslGaf9CMCuPI1-ek6RAo,110
+pymeshview-0.0.4.dist-info/entry_points.txt,sha256=w0Vn5OazRgxdx7qxireTC7tRZODn4I14eg_3l-lW3rY,62
+pymeshview-0.0.4.dist-info/top_level.txt,sha256=mtdG2IdSzYLdBrdyJOlNJN7E_qtvg-5oNsIpg5BPkxg,23
+pymeshview-0.0.4.dist-info/RECORD,,
