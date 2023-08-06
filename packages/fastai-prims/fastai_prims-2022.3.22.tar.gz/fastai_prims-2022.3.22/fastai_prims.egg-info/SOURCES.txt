@@ -1,0 +1,10 @@
+README.md
+setup.py
+fastai_prims/__init__.py
+fastai_prims/fastai_tl.py
+fastai_prims.egg-info/PKG-INFO
+fastai_prims.egg-info/SOURCES.txt
+fastai_prims.egg-info/dependency_links.txt
+fastai_prims.egg-info/entry_points.txt
+fastai_prims.egg-info/requires.txt
+fastai_prims.egg-info/top_level.txt
