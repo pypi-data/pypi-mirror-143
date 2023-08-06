@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pygifconvt_hyeonu/__init__.py
+pygifconvt_hyeonu/converter_hyeonu.py
+pygifconvt_hyeonu.egg-info/PKG-INFO
+pygifconvt_hyeonu.egg-info/SOURCES.txt
+pygifconvt_hyeonu.egg-info/dependency_links.txt
+pygifconvt_hyeonu.egg-info/not-zip-safe
+pygifconvt_hyeonu.egg-info/requires.txt
+pygifconvt_hyeonu.egg-info/top_level.txt
