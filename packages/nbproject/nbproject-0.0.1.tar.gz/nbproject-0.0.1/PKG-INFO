@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nbproject
+Version: 0.0.1
+Summary: nbproject: Manage your notebooks.
+Author-email: Lamin Labs <laminlabs@gmail.com>
+Description-Content-Type: text/markdown
+Requires-Dist: anndata
+Requires-Dist: boto3
+Requires-Dist: hjson
+Requires-Dist: cloudpathlib
+Requires-Dist: loguru
+Requires-Dist: requests
+Requires-Dist: sqlmodel
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: sphinx-book-theme ; extra == "doc"
+Requires-Dist: sphinx_autodoc_typehints ; extra == "doc"
+Requires-Dist: myst_nb ; extra == "doc"
+Requires-Dist: pytest>=6.0 ; extra == "test"
+Requires-Dist: nbmake ; extra == "test"
+Project-URL: Home, https://github.com/laminlabs/nbproject
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+
+# nbmanager
+Jupyter notebook manager.
+
