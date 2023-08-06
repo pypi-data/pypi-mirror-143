@@ -1,0 +1,8 @@
+[console_scripts]
+DoMMCQsc = MMCQsc.color_theme_analyse:MainFunc
+MMCQ-sc = MMCQsc.__main__:run
+MMCQsc = MMCQsc.color_theme_analyse:Menu
+MMCQscM = MMCQsc.__main__:run
+MMCQscP = MMCQsc.scp.scripts.pipw:uninstallMerge
+MMCQscR = MMCQsc.scp.scripts.pipw:reinstallMerge
+RunMMCQsc = MMCQsc.scp.main:mainFunc
