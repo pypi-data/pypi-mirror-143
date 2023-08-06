@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ojtool.egg-info/PKG-INFO
+src/ojtool.egg-info/SOURCES.txt
+src/ojtool.egg-info/dependency_links.txt
+src/ojtool.egg-info/top_level.txt
