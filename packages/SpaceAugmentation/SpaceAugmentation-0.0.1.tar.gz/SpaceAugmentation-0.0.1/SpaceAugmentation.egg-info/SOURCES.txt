@@ -1,0 +1,12 @@
+Augmentation.py
+LICENCE.txt
+MANIFEST.in
+README.md
+__init__.py
+main.py
+pyproject.toml
+setup.cfg
+SpaceAugmentation.egg-info/PKG-INFO
+SpaceAugmentation.egg-info/SOURCES.txt
+SpaceAugmentation.egg-info/dependency_links.txt
+SpaceAugmentation.egg-info/top_level.txt
