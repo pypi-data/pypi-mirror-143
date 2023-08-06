@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: booting
+Version: 1.0
+Summary: 1. Open install the module -> pip install booting 2. Write in your code this line -> from booting import keep_alive 3. and after this write keep_alive() 4. Done! Your discord bot repl is alive 24\7.
+License: GNU-V3
+Author: ENDER
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
