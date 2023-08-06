@@ -1,0 +1,7 @@
+pandas_paddles/__init__.py,sha256=H0p2P_JnhILNVJCNtquTQrtM1oJ6V2vzDBij8KrYIBs,5415
+pandas_paddles/axis.py,sha256=5aK-GHLW8m69EH2KMG6_d-6gEEXf5qWaoc2m1s_PiRY,13106
+pandas_paddles/df_accessor.py,sha256=E4BH7yGaWJfJxkOiHtEkRxodafNIDWHcV-_5lx7z90E,13551
+pandas_paddles-1.3.2.dist-info/LICENSE,sha256=WEVOM9QILXGXLGaxfiyWtOy-xhwhIsUaSx44DywSxH0,1096
+pandas_paddles-1.3.2.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pandas_paddles-1.3.2.dist-info/METADATA,sha256=yDD2y-5Tv5VYzR5R6S-x3s86A1W8uI6x1NZQ9816Qy0,7143
+pandas_paddles-1.3.2.dist-info/RECORD,,
