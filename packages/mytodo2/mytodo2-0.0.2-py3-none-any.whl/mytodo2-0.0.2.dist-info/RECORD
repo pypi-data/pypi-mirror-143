@@ -1,0 +1,14 @@
+mytodo/__init__.py,sha256=XU-cN6hoqugh2lbbB_vIrXYB_ZLPmgORM3pkXNRnkqA,50
+mytodo/model.py,sha256=02xo4DeRHjNirQRQNvHmuzQQR1f_PLAnYcIXw4ktqH0,258
+mytodo/todo.py,sha256=lMe4-8caLtnVUYAB66uQC35Cf_cEaiPayk02JcXzvKc,2052
+mytodo2/__init__.py,sha256=XU-cN6hoqugh2lbbB_vIrXYB_ZLPmgORM3pkXNRnkqA,50
+mytodo2/model.py,sha256=02xo4DeRHjNirQRQNvHmuzQQR1f_PLAnYcIXw4ktqH0,258
+mytodo2/todo.py,sha256=lMe4-8caLtnVUYAB66uQC35Cf_cEaiPayk02JcXzvKc,2052
+src/mytodo/__init__.py,sha256=9ez35C1UDOZj467oAOYqBM_h5pe17ISNO5ND1gTKFm0,50
+src/mytodo/model.py,sha256=02xo4DeRHjNirQRQNvHmuzQQR1f_PLAnYcIXw4ktqH0,258
+src/mytodo/todo.py,sha256=lMe4-8caLtnVUYAB66uQC35Cf_cEaiPayk02JcXzvKc,2052
+mytodo2-0.0.2.dist-info/METADATA,sha256=GS29ABWFaNhv-FNCJIL3laeZMQKl_W9b3TY1BDjP6_g,2207
+mytodo2-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mytodo2-0.0.2.dist-info/entry_points.txt,sha256=cq0MaKlyAGdbytMcAIEIar55NS3njtiYFtWH1c2mOvM,44
+mytodo2-0.0.2.dist-info/top_level.txt,sha256=cPRxBuTO3A-5FPtUqYCeY41W8PVL6i5sCXrZZo6iedY,8
+mytodo2-0.0.2.dist-info/RECORD,,
