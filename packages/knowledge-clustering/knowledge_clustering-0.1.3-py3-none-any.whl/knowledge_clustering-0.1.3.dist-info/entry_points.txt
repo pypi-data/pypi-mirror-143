@@ -1,0 +1,3 @@
+[console_scripts]
+knowledge = knowledge_clustering.knowledge:main
+knowledge_clustering = knowledge_clustering.knowledge:main
