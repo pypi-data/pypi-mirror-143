@@ -1,0 +1,8 @@
+/build/CMake*
+*~
+/build/*
+/build-o3/
+/build*
+
+.vscode
+.ccls-cache

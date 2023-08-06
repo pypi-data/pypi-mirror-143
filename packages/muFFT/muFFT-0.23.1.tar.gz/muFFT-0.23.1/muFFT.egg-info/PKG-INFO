@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: muFFT
+Version: 0.23.1
+Summary: muFFT is a wrapper for common FFT libraries with support for MPI parallelization
+Home-page: https://gitlab.com/muspectre/muspectre
+Author: Till Junge
+Author-email: till.junge@altermail.ch
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
