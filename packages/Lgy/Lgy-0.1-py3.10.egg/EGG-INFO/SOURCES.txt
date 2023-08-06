@@ -1,0 +1,12 @@
+setup.py
+Python/Lgy.egg-info/PKG-INFO
+Python/Lgy.egg-info/SOURCES.txt
+Python/Lgy.egg-info/dependency_links.txt
+Python/Lgy.egg-info/top_level.txt
+Python/handsome/__init__.py
+Python/handsome/boy/__init__.py
+Python/handsome/boy/message.py
+Python/lgy.egg-info/PKG-INFO
+Python/lgy.egg-info/SOURCES.txt
+Python/lgy.egg-info/dependency_links.txt
+Python/lgy.egg-info/top_level.txt
