@@ -1,0 +1,3 @@
+[console_scripts]
+build_grammars = function_parser.build_grammars:main
+
