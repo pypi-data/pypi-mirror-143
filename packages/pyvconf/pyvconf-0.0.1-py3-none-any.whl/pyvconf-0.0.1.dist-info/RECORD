@@ -1,0 +1,15 @@
+_pyvconf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_pyvconf/iniparser.py,sha256=15Am9b1RlZOtIUjj5q8TE8lCffRdnDtchoEUMmcqwiM,720
+_pyvconf/iniparser_test.py,sha256=tzHNKpTsPNSqV9bUPBpH5JQK0Ga7QqoJFuFBsRFg9Bg,3801
+_pyvconf/parser.py,sha256=sI9XcxWD6zdoh7ijPF22q-KT1AxD-RZ_D_o7523ZyXU,361
+_pyvconf/parser_test.py,sha256=e0EOu0F0xL8f3wnqRN-UwgSQro3T27GYyv-zd5bw8ps,540
+_pyvconf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_pyvconf/sectionparser.py,sha256=0ATewsPWcoUHaLK1-YtGcsbkflFOv1pZML8yoFimE_U,735
+_pyvconf/sectionparser_test.py,sha256=LIFrnb1HL9bDxUTxwHSlS0CLJlmJb6JQmwhutMK3hjw,575
+_pyvconf/types.py,sha256=qapD01mgKdBhcXaAAt4VbtIaXwc_PGddgx1yox2YqhE,504
+pyvconf/__init__.py,sha256=UX0wXxkHhU---xAqkOdWC26HhMk-bRm6BmKZ0VDfCcY,298
+pyvconf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvconf-0.0.1.dist-info/METADATA,sha256=jBM5AkWL3kab66QjyS3twP1OjNqiJvf7O2EST5mMgqg,542
+pyvconf-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyvconf-0.0.1.dist-info/top_level.txt,sha256=W-qv1o0hbPhnb35mDJCHs34uF94LcYoVhlYSVM3QYfw,17
+pyvconf-0.0.1.dist-info/RECORD,,

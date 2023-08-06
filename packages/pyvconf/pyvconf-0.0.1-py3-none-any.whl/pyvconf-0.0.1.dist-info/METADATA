@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyvconf
+Version: 0.0.1
+Summary: A configuration parser and validator
+Home-page: https://gitlab.com/narvin/pyvconf
+Author: Narvin Singh
+Author-email: Narvin.A.Singh@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/narvin/pyvconf/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+=======
+pyvconf
+=======
+
+A configuration parser and validator.
+
+
+
