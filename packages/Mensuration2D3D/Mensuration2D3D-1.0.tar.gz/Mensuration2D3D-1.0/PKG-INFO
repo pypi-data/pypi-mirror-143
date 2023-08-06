@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Mensuration2D3D
+Version: 1.0
+Summary: A mensuration package to calculate the area, perimeter, volume, etc. of various 2D (Square, Rectangle, etc.) & 3D (Cube, Cuboid, etc.) shapes.
+Home-page: UNKNOWN
+Author: Sifar
+Author-email: cnn.gtm.hero@gmail.com
+License: UNKNOWN
+Description: This is a mensuration package to calculate the area, perimeter, volume, etc. of various 2D (Square, Rectangle, etc.) & 3D (Cube, Cuboid, etc.) shapes.
+        It takes both the individual parameters and iterable of parameters as Arguments (Inputs).
+        
+        
+        Change Log
+        ==========
+        
+        1.0 (24/03/2022)
+        ------------------
+        - First release
+        
+Keywords: mensuration,area,perimeter,volume,total surface area,curved surface area,slant height
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
