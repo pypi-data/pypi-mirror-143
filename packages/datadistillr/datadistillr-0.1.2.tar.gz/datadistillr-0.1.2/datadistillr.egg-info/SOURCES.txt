@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+datadistillr/__init__.py
+datadistillr/auth_exceptions.py
+datadistillr/datadistillr.py
+datadistillr.egg-info/PKG-INFO
+datadistillr.egg-info/SOURCES.txt
+datadistillr.egg-info/dependency_links.txt
+datadistillr.egg-info/requires.txt
+datadistillr.egg-info/top_level.txt
+datadistillr/tests/__init__.py
+datadistillr/tests/test_datadistillr_api.py
