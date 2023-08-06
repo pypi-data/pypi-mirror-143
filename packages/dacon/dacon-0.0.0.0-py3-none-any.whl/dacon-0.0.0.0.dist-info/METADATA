@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dacon
+Version: 0.0.0.0
+Summary: dacon-open-api
+Home-page: https://github.com/dacon-ds2/dacon-open-api
+Author: dacon
+Author-email: dacon@dacon.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# open-api
+
