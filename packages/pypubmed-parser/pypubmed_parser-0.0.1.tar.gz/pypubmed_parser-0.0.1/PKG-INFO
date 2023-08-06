@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pypubmed_parser
+Version: 0.0.1
+Summary: Package to search, retrieve, and parse article information
+Author: Scott Hirsch
+Author-email: sdh.equities@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
