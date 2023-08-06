@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: basicplaycard
+Version: 0.0.2
+Summary: A simple abstraction class for playing cards
+Home-page: https://github.com/kimchankyo/BasicPlayingCard
+Author: Chris Chankyo Kim
+Author-email: chankyo@stanford.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# BasicPlayingCard
+
+Playing card games is simple. So should developing them.
+
