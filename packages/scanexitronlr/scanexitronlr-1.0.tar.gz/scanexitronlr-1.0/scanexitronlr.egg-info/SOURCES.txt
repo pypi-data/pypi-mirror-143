@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+scanexitronlr.egg-info/PKG-INFO
+scanexitronlr.egg-info/SOURCES.txt
+scanexitronlr.egg-info/dependency_links.txt
+scanexitronlr.egg-info/entry_points.txt
+scanexitronlr.egg-info/requires.txt
+scanexitronlr.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/annotate.py
+src/extract.py

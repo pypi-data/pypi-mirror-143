@@ -1,0 +1,3 @@
+[console_scripts]
+scanexitronlr = src.__main__:main
+selr = src.__main__:main
