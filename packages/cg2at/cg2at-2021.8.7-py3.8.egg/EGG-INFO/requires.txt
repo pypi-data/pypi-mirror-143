@@ -1,0 +1,4 @@
+tqdm
+mdanalysis>=2.0.0
+pdb2pqr
+biopython
