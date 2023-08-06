@@ -1,0 +1,32 @@
+{% load static currency_filters thumbnail %}
+
+<div class="position-absolute" style="line-height:1;z-index:1000;height:30.7%;width:24.1%;{{ label.css }}">
+  <span class="position-absolute" style="width:30%;z-index:10000;left:-25%;top:-2%;">
+    {% if CONFIG.logo_square %}
+      <img class="resize-trigger w-100 h-100" src="{% thumbnail CONFIG.logo_square 150x150 %}" style="-webkit-box-shadow:-5px 5px 3px 0px #000000;box-shadow:-5px 5px 3px 0px #000000;border-radius:50%;"></img>
+    {% endif %}
+  </span>
+  <div class="row no-gutters text-center bg-white h-100 overflow-hidden border-fit" style="border-radius:12%;-webkit-box-shadow:-5px 5px 3px 0px #000000;box-shadow:-5px 5px 3px 0px #000000;">
+    <div class="col-12 text-danger flex-grow-0 font-fit-height invisible" style="height:16.5%;font-weight:1000;line-height:normal;font-size: max(0.5rem,min(2.2vw,2rem));">
+      ANGEBOT
+    </div>
+    <div class="col-12 px-2 pt-1 bg-color1 border-fit" style="height:83.5%;border-radius:12%;color:black;">
+      <div class="row no-gutters h-100">
+        <div class="col-12 condensed bold d-flex font-fit-height invisible" data-font-fit-lines="3" style="height:40%;word-break:break-word;font-size:max(0.8rem,min(1.5vw,1.5rem));">
+          <span class="m-auto">
+            {{ label.title|safe }}
+          </span>
+        </div>
+        <div class="col-12 mt-auto font-fit-height invisible" style="text-decoration:line-through;height:10%;font-size:max(0.7rem,min(1.4vw,1.2rem));">
+          {{ label.base_price|currency }}
+        </div>
+        <div class="col-12 mb-auto font-fit-height invisible" style="font-weight:1000;height:30%;font-size:max(0.5rem,min(3vw,3.4rem));">
+          {{ label.price|currency }}
+        </div>
+        <div class="col-12 condensed font-fit-height invisible" style="height:10%;font-size:max(0.7rem,min(1vw,0.9rem));">
+          {% if label.tax_included %}Inkl{% else %}Exkl{% endif %}. MwSt.{% if label.deposit %} zzgl. Pfand{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

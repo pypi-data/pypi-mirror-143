@@ -1,0 +1,24 @@
+{% load static %}
+{% load i18n %}
+{% load category %}
+{% load thumbnail %}
+
+<div class="row menu_3 mx-auto mb-3 justify-content-center">
+  <div class="col flex-grow-0 mb-3 p-0">
+    <a class="nav-link p-0" style="width:100px;height:120px;" href="{% url 'offer:list' %}">
+      <img class="d-block mx-auto" width=80 height=80 src="{% if CONFIG.offer_image %}{% thumbnail CONFIG.offer_image 80x80 crop %}{% else %}{% thumbnail CONFIG.offer_image 80x80 crop %}{% static 'img/default_offer_icon.jpg' %}?ver=2{% endif %}" alt="{{ product.get_title }}" style="{% if not CONFIG.offer_image %}filter:grayscale(100%){% endif %}">
+      <span class="d-flex justify-content-center align-items-center text-center text-dark" style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;">{% trans "Offers"|safe %}</span>
+    </a>
+  </div>
+  {% menu_objects as main_menu_objects %}
+  {% for category in main_menu_objects %}
+    {% if category.depth == 1 %}
+    <div class="col flex-grow-0 mb-3 px-1">
+      <a class="nav-link p-0" style="width:100px;height:120px;" href="{{ category.get_absolute_url }}">
+        <img class="d-block mx-auto" width=80 height=80 style="{% if not category.image %}filter:grayscale(100%);opacity:0.3;{% endif %}" src="{% if category.image %}{% thumbnail category.image 80x80 crop %}{% else %}{% thumbnail CONFIG.no_image 80x80 crop %}{% endif %}" alt="{{ product.get_title }}">
+        <span class="d-flex justify-content-center align-items-center text-center text-dark" style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;">{{ category }}</span>
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

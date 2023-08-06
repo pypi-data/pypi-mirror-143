@@ -1,0 +1,35 @@
+<div id="search-results" class="dropdown-menu dropdown-menu-right" style="z-index: 10000;" aria-labelledby="dropdownMenuButton">
+  {% if products %}
+    <table class="table">
+        <thead>
+        <tr>
+          <th>Art.Nr.</th>
+          <th>Name</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          {% for product in products %}
+            <tr>
+              <td class="text-nowrap py-auto condensed" alt="Relevanz: {{ product.similarity }}">{{ product.upc }}</td>
+              <td class="text-nowrap py-auto condensed">{{ product.title }}</td>
+              <td class="py-1">
+                <span class="btn btn-link py-1 text-nowrap" 
+                    style="cursor: pointer;"
+                    hx-post="{% url 'customer:product-realtime-search' key=wishlist.key product=product.pk %}"
+                    hx-target="#wishlists-lines"
+                    hx-trigger="click once"
+                    hx-indicator=".htmx-indicator"
+                    ><i class="fas fa-plus"></i><span class="d-none d-sm-inline"> hinzufügen</span></span>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  {% else %}
+    <p class="p-3 m-0">Keine Produkte gefunden.</p>
+  {% endif %}
+  <script>
+  	$('#wishlist-product-search').addClass('show');
+  </script>
+</div>

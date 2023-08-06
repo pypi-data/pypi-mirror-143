@@ -1,0 +1,53 @@
+{% load category_menu_tags %}
+{% load custom_tags %}
+{% sidebar_block_collapsed 'categories' as sidebar_block_collapsed %}
+
+<style>
+.sidebar-category-depth1{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+</style>
+
+<form id="filter_form" class="filter_form w-100" action="" method="get">
+<div class="sidebar-block col-12 border rounded mb-2 pb-2">
+  <div class="row">
+    <button class="btn btn-nofocus sidebar-toggler w-100" type="button" data-toggle="collapse" data-target="#sidebar-categories" data-block="categories" aria-expanded="true" aria-controls="sidebar-categories">
+      <div class="row no-gutters">
+        <div class="col text-left">
+          <h3 class="condensed bold">Kategorien</h3>
+        </div>
+        <div class="col text-right">
+          <i class="fas fa-caret-up rotate{% if sidebar_block_collapsed %} rotated{% endif %}"></i>
+        </div>
+      </div>
+    </button>
+  </div>
+  {% with current_category=category %}
+  {% category_pov_menu current_category as categories %}
+    <div id="sidebar-categories" class="row collapse{% if not sidebar_block_collapsed %} show{% endif %}">
+      <div class="container-fluid">
+        <div class="row px-3">
+          {% for child in categories %}
+            <div class="col-12 category" style="padding-left:{% widthratio 20 1 child.depth|add:'-1' %}px;">
+              <a class="btn btn-link p-0 text-dark text-left w-100 nofocus sidebar-category-depth{{ child.depth }}" href="{{ child.get_absolute_url }}" role="button">
+                {{ child.name }}{% if child == current_category %} <i class="fas fa-angle-right"></i>{% endif %}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endwith %}
+</div>
+
+  <span class="filter_form_ajax_block">
+    {% include 'oscar/catalogue/partials/browse_sidebar_ajax.html' %}
+  </span>
+</form>
+
+<div class="col-12">
+  <button type="button" class="btn nofocus" onclick="resetFilterForm($('#filter_form'));">&times; alle Filter zurücksetzen</button>
+</div>
+
+<span style="height: 400px;"></span>

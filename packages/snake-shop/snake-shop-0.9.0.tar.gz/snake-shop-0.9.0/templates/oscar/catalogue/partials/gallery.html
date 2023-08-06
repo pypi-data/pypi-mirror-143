@@ -1,0 +1,68 @@
+{% load i18n %}
+{% load image_tags %}
+{% load currency_filters %}
+{% load purchase_info_tags %}
+
+{% purchase_info_for_product request product as session %}
+
+{% with all_images=product.get_all_images %}
+    {# use length rather then count as the images get queried anyways #}
+  
+
+    {% if all_images|length > 1 %}
+        <div id="product_gallery" class="carousel slide m-0" data-ride="carousel">
+            <div class="img-thumbnail mb-3">
+                <div class="row position-absolute no-gutters mt-2 mr-sm-3 text-right" style="right:0;z-index:100;">
+                  <span class="col-12">
+                    {% include 'oscar/catalogue/partials/img_buttons.html' %}
+                  </span>
+                </div>
+                <div class="carousel-inner">
+                  {% for image in all_images %}
+                      <div class="carousel-item d-flex justify-content-center {% if forloop.first %}active{% endif %}">
+                        {% oscar_thumbnail image.original "600x450" upscale=False as thumb %}
+                        <img width="{{ thumb.width}}" height="{{ thumb.height }}" class="p-2 m-auto" src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                      </div>
+                  {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#product_gallery" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">{% trans "Previous" %}</span>
+                </a>
+                <a class="carousel-control-next" href="#product_gallery" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">{% trans "Next" %}</span>
+                </a>
+            </div>
+
+            <ol class="carousel-indicators img-thumbnail">
+                {% for image in all_images %}
+                    <li data-target="#product_gallery" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}">
+                      {% oscar_thumbnail image.original "65x55" crop="center" as thumb %}
+                      <img width="{{ thumb.width}}" height="{{ thumb.height }}" src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+
+    {% else %}
+
+        {# Only one image to show #}
+        <div id="product_gallery" class="carousel m-0">
+            <div class="img-thumbnail">
+                <div class="position-absolute mt-2 mr-sm-3 text-right" style="right:0;z-index:100;">
+                  {% include 'oscar/catalogue/partials/img_buttons.html' %}
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active d-flex justify-content-center">
+                    {% with image=product.primary_image %}
+                      {% oscar_thumbnail image.original "600x450" upscale=False as thumb %}
+                      <img width="{{ thumb.width}}" height="{{ thumb.height }}" class="p-2 m-auto" style="object-fit:contain;{% if product.primary_image.is_missing %}filter:grayscale(100%);opacity:0.3;{% endif %}" src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                    {% endwith %}
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+{% endwith %}

@@ -1,0 +1,29 @@
+{% extends "oscar/communication/emails/base.html" %}
+{% load i18n %}
+{% load url_tags %}
+
+{% block tbody %}
+    <tr>
+        <th class="content-block">
+          Folgende Objekte wurden importiert:
+        </th>
+    </tr>
+    {% for object in objects %}
+      <tr>
+          <td class="content-block">
+              {{ object }}
+          </td>
+          <td class="content-block">
+              <a href="{{ base_url }}{{ object.get_absolute_url }}">Link</a>
+          </td>
+      </tr>
+    {% endfor %}
+    <tr>
+        <td class="content-block">
+          Dateiname(n):
+          {% for file in files %}
+            {{ file.name }},&nbsp;
+          {% endfor %}
+        </td>
+    </tr>
+{% endblock %}

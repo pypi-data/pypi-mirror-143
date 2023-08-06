@@ -1,0 +1,3570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 19:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/address/models.py:24 custom/models.py:156
+msgid "First line of address"
+msgstr "Straße / Hausnummer"
+
+#: apps/address/models.py:27
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: apps/address/models.py:28
+msgid "In case we need to call you about your order"
+msgstr "Falls wir Sie wegen Ihrer Bestellung anrufen müssen"
+
+#: apps/address/models.py:31 apps/checkout/forms.py:21
+#: apps/checkout/forms.py:202 apps/shipping/forms.py:10
+#: apps/shipping/forms.py:28
+msgid "Choose Floor"
+msgstr "Stockwerk wählen"
+
+#: apps/address/models.py:36
+msgid "Company"
+msgstr "Unternehmen"
+
+#: apps/address/models.py:70
+msgid "Mr"
+msgstr ""
+
+#: apps/address/models.py:72
+msgid "Mrs"
+msgstr ""
+
+#: apps/address/models.py:74
+msgid "Dr"
+msgstr ""
+
+#: apps/address/models.py:80 apps/address/models.py:179
+#: templates/oscar/dashboard/orders/order_detail.html:687 user/apps.py:7
+msgid "User"
+msgstr "Benutzer"
+
+#: apps/address/models.py:84
+msgctxt "Treatment Pronouns for the customer"
+msgid "Title"
+msgstr "Titel"
+
+#: apps/address/models.py:93 custom/models.py:160 delivery/forms.py:26
+msgid "Post/Zip-code"
+msgstr "Postleitzahl"
+
+#: apps/address/models.py:142 apps/order/models.py:77
+#: templates/oscar/customer/bank_account/list.html:9
+msgid "Account owner"
+msgstr "Kontoinhaber"
+
+#: apps/address/models.py:143 apps/order/models.py:79
+#: apps/payment/models.py:118
+#: templates/oscar/customer/bank_account/list.html:10
+msgid "IBAN"
+msgstr "IBAN"
+
+#: apps/address/models.py:183
+msgid "Card Type"
+msgstr "Kartentyp"
+
+#: apps/address/models.py:183
+msgid "Bank account"
+msgstr "Bankkonto"
+
+#: apps/basket/models.py:11 apps/order/models.py:49
+#: templates/oscar/customer/order/order_list.html:53
+#: templates/oscar/dashboard/offers/offer_detail.html:142
+#: templates/oscar/dashboard/orders/order_list.html:116
+msgid "Order number"
+msgstr "Bestellnummer"
+
+#: apps/catalogue/models.py:24 delivery/models.py:113
+#: templates/oscar/customer/profile/profile.html:9
+#: templates/oscar/dashboard/offers/offer_detail.html:72
+#: templates/oscar/dashboard/orders/order_detail.html:31
+#: templates/oscar/dashboard/orders/order_detail.html:42 user/models.py:29
+msgid "Name"
+msgstr "Name"
+
+#: apps/catalogue/models.py:26
+msgid "Tax rate"
+msgstr "Steuer"
+
+#: apps/catalogue/models.py:69
+msgid "Packaging unit"
+msgstr "Verpackungseinheit"
+
+#: apps/catalogue/models.py:138 apps/dashboard/catalogue/tables.py:40
+#: templates/oscar/basket/partials/basket_totals.html:158
+msgid "Tax"
+msgstr "Steuer"
+
+#: apps/catalogue/models.py:141
+msgid "optional"
+msgstr "optional"
+
+#: apps/catalogue/models.py:143
+msgid "Container Count"
+msgstr "Gefäß Anzahl"
+
+#: apps/catalogue/models.py:147
+msgid "Deposit sum"
+msgstr "Pfandsumme"
+
+#: apps/catalogue/models.py:156
+msgid "weight (kg)"
+msgstr "Gewicht (kg)"
+
+#: apps/catalogue/models.py:164
+msgid "Singlevolume in (l)"
+msgstr "Volumen einzeln (l)"
+
+#: apps/catalogue/models.py:172
+msgid "Has box"
+msgstr "Hat Kiste"
+
+#: apps/catalogue/models.py:173
+msgid "Does this Product has a box (for box discount)?"
+msgstr "Hat dieses Produkt eine Kiste (für Rabatt-Berechnung)?"
+
+#: apps/catalogue/models.py:176
+msgid "Priority"
+msgstr ""
+
+#: apps/catalogue/models.py:177
+msgid "Positive and negative Priority for default ordering of the Results"
+msgstr ""
+
+#: apps/catalogue/models.py:295
+msgid "Slug"
+msgstr ""
+
+#: apps/checkout/forms.py:20 apps/shipping/forms.py:8 delivery/models.py:275
+msgid "Delivery Time"
+msgstr "Lieferzeit"
+
+#: apps/checkout/forms.py:82
+#, python-format
+msgid "No delivery for %(postcode)s"
+msgstr "Kein Versand nach %(postcode)s"
+
+#: apps/checkout/forms.py:89
+#, python-format
+msgid "Minimum order value is %(min)s"
+msgstr "Mindestbestellmenge %(min)s €"
+
+#: apps/checkout/forms.py:98
+#, python-format
+msgid "We do not deliver more than %(max_floor)s floors"
+msgstr "Wir liefern nicht höher als %(max_floor)s Stockwerke"
+
+#: apps/checkout/forms.py:108
+#, fuzzy
+#| msgid "Deliveries"
+msgid "deliveries"
+msgstr "Lieferungen"
+
+#: apps/checkout/forms.py:125 apps/checkout/forms.py:150
+msgid "Can't deliver into the past"
+msgstr "Wir können nicht in die Vergangenheit liefern."
+
+#: apps/checkout/forms.py:139
+#, python-format
+msgid "Earliest delivery date is: %(earliest_date)s"
+msgstr "Das frühstmögliche Lieferdatum ist: %(earliest_date)s"
+
+#: apps/checkout/forms.py:206 apps/shipping/forms.py:32
+msgid "Choose Delivery Time"
+msgstr "Lieferzeit wählen"
+
+#: apps/checkout/forms.py:231 templates/oscar/checkout/checkout.html:57
+#: templates/oscar/checkout/thank_you.html:61
+#: templates/oscar/dashboard/orders/order_detail.html:538
+msgid "Instructions"
+msgstr "Ihre Nachricht an uns"
+
+#: apps/checkout/forms.py:275 templates/oscar/checkout/shipping_address.html:5
+#: templates/oscar/checkout/shipping_address.html:12
+#: templates/oscar/dashboard/orders/order_list.html:122
+msgid "Shipping address"
+msgstr "Lieferanschrift"
+
+#: apps/checkout/forms.py:279 templates/oscar/checkout/thank_you.html:106
+#: templates/oscar/dashboard/orders/order_detail.html:551
+#: templates/oscar/dashboard/orders/order_list.html:123
+msgid "Billing address"
+msgstr "Rechnungsanschrift"
+
+#: apps/checkout/session.py:34
+msgid "Bitte andere Lieferzeit wählen."
+msgstr ""
+
+#: apps/checkout/views.py:65
+msgid "Address saved"
+msgstr "Adresse gespeichert"
+
+#: apps/checkout/views.py:95
+msgid "Please choose a shipping address"
+msgstr "Bitte wählen Sie eine Lieferanschrift"
+
+#: apps/checkout/views.py:102
+msgid "Shipping is unavailable for your chosen address - please choose another"
+msgstr ""
+"Lieferung an diese Adresse nicht möglich - bitte wählen Sie eine andere"
+
+#: apps/communication/admin.py:23
+#, fuzzy
+#| msgid "Organization units"
+msgid "Managing organization units"
+msgstr "Organisationseinheiten"
+
+#: apps/communication/admin.py:27
+msgid "Receiving E-Mail Addresses"
+msgstr ""
+
+#: apps/communication/models.py:13
+msgid "SFTP profile title"
+msgstr "SFTP Profil Titel"
+
+#: apps/communication/models.py:14
+msgid "Title of this profile"
+msgstr "Profiltitel"
+
+#: apps/communication/models.py:17
+msgid "SFTP path"
+msgstr "SFTP Pfad"
+
+#: apps/communication/models.py:18
+msgid "Directory path on the target system"
+msgstr "Ordner auf dem Zielsystem"
+
+#: apps/communication/models.py:22
+msgid "SFTP hostname"
+msgstr "SFTP Hostname"
+
+#: apps/communication/models.py:23
+msgid "Hostname of the target system to connect to"
+msgstr "Hostname des Zielsystems"
+
+#: apps/communication/models.py:27
+msgid "SFTP port"
+msgstr "SFTP Port"
+
+#: apps/communication/models.py:28
+msgid "Port of the target system to connect to"
+msgstr "Port des Zielsystems"
+
+#: apps/communication/models.py:32
+msgid "SFTP username"
+msgstr "SFTP Benutzername"
+
+#: apps/communication/models.py:33
+msgid "Username of the target system SFTP account"
+msgstr "Benutzername des SFTP Kontos auf dem Zielsystem"
+
+#: apps/communication/models.py:37
+msgid "SFTP certificate"
+msgstr "SSH Zertifikat"
+
+#: apps/communication/models.py:38
+msgid "Certificate of the target system SFTP account"
+msgstr "SSH Zertifikat des SFTP Zielsystems"
+
+#: apps/communication/models.py:42
+msgid "SFTP password"
+msgstr "SFTP Passwort"
+
+#: apps/communication/models.py:43
+msgid "Password of the target system SFTP account or certificate"
+msgstr ""
+"Passwort des Zertifikats oder Benutzernamens für den Login am Zielsystem"
+
+#: apps/communication/models.py:55
+msgid "Path, host and port are needed for sftp"
+msgstr "Pfad, Hostname und Port werden für SFTP benötigt"
+
+#: apps/communication/models.py:69
+msgid "User is needed for sftp"
+msgstr "Benutzer wird für SFTP benötigt"
+
+#: apps/communication/models.py:177
+msgid "SFTP Communication Profile"
+msgstr "SFTP Kommunikationsprofil"
+
+#: apps/communication/models.py:182
+msgid "E-Mail Recipient"
+msgstr "E-Mail Empfänger"
+
+#: apps/communication/models.py:195
+msgid "HTML and plain text"
+msgstr ""
+
+#: apps/communication/models.py:196
+msgid "HTML"
+msgstr ""
+
+#: apps/communication/models.py:197
+msgid "Plain text"
+msgstr ""
+
+#: apps/communication/models.py:201
+#, fuzzy
+#| msgid "E-Mail Recipient"
+msgid "E-Mail geändert"
+msgstr "E-Mail Empfänger"
+
+#: apps/communication/models.py:202
+msgid "Bestellung"
+msgstr ""
+
+#: apps/communication/models.py:203
+msgid "Passwortänderung"
+msgstr ""
+
+#: apps/communication/models.py:204
+msgid "Passwortrücksetzung"
+msgstr ""
+
+#: apps/communication/models.py:205
+#, fuzzy
+#| msgid "Product Description"
+msgid "Produktbenachrichtigung"
+msgstr "Produktbeschreibung"
+
+#: apps/communication/models.py:206
+#, fuzzy
+#| msgid "Registering..."
+msgid "Registrierung"
+msgstr "Registrierung..."
+
+#: apps/communication/models.py:210
+msgid "Bestellungsinformationen mit Bankdaten"
+msgstr ""
+
+#: apps/communication/models.py:212
+msgid "Bestellungsinformationen ohne Bankdaten"
+msgstr ""
+
+#: apps/communication/models.py:214
+msgid "Maschinenlesbare E-Mail 1"
+msgstr ""
+
+#: apps/communication/models.py:216
+msgid "Bestellungsinformationen Überweisung"
+msgstr ""
+
+#: apps/communication/models.py:221
+#, fuzzy
+#| msgid "SFTP Communication Profile"
+msgid "Communication event type"
+msgstr "SFTP Kommunikationsprofil"
+
+#: apps/communication/models.py:226
+msgid "E-Mail Format"
+msgstr "E-Mail Format"
+
+#: apps/communication/models.py:227
+msgid "Choose Format if matching template exists (only Custom)"
+msgstr ""
+
+#: apps/communication/models.py:233
+msgid "SFTP profile"
+msgstr "SFTP Profil"
+
+#: apps/communication/models.py:234
+msgid "If this is set, we will only write sftp file"
+msgstr ""
+
+#: apps/communication/models.py:240 user/models.py:57
+msgid "E-Mail recipients"
+msgstr "E-Mail Empfänger"
+
+#: apps/communication/models.py:241
+msgid "Empfangen alle Nachrichten dieses Typs."
+msgstr ""
+
+#: apps/communication/models.py:281
+msgid "Subject or sftp filename"
+msgstr "Betreff (E-Mail) oder Dateiname (SFTP)"
+
+#: apps/communication/models.py:283
+msgid "If Sftp profile is set, this is the Filename"
+msgstr "Bei SFTP wird dies als Dateiname verwendet"
+
+#: apps/customer/apps.py:13
+#: templates/oscar/dashboard/orders/order_list.html:121
+msgid "Customer"
+msgstr "Kunde"
+
+#: apps/customer/models.py:37
+msgid "Date created"
+msgstr "Erstelldatum"
+
+#: apps/customer/models.py:40
+msgid "Date updated"
+msgstr "Änderungsdatum"
+
+#: apps/customer/models.py:69
+msgid "Payment selection for User"
+msgstr "Zahlungsmethoden Selektion"
+
+#: apps/customer/models.py:70
+msgid "Payment selections for User"
+msgstr "Zahlungsmethoden Selektionen"
+
+#: apps/customer/views.py:19
+#, python-format
+msgid "Address '%s' created"
+msgstr "Adresse '%s' gespeichert"
+
+#: apps/customer/views.py:36 templates/oscar/customer/bank_account/form.html:8
+#: templates/oscar/customer/partials/standard_tabs.html:11
+msgid "Bank Accounts"
+msgstr "Bankkonto"
+
+#: apps/customer/wishlists/views.py:32
+#, python-format
+msgid "'%(title)s' was removed from your '%(name)s' wish list"
+msgstr "'%(title)s' wurde von Wunschliste '%(name)s' entfernt"
+
+#: apps/dashboard/catalogue/tables.py:18
+#: templates/oscar/dashboard/catalogue/product_update.html:283
+msgid "Title"
+msgstr "Titel"
+
+#: apps/dashboard/catalogue/tables.py:22
+msgid "Image"
+msgstr "Bild"
+
+#: apps/dashboard/catalogue/tables.py:26
+msgid "Product type"
+msgstr "Produkttyp"
+
+#: apps/dashboard/catalogue/tables.py:30
+#: templates/oscar/dashboard/catalogue/product_update.html:104
+#: templates/oscar/dashboard/catalogue/product_update.html:276
+msgid "Variants"
+msgstr "Varianten"
+
+#: apps/dashboard/catalogue/tables.py:35
+msgid "Packaging"
+msgstr "Verpackung"
+
+#: apps/dashboard/catalogue/tables.py:44
+#: templates/oscar/dashboard/orders/order_detail.html:136
+msgid "Actions"
+msgstr "Aktionen"
+
+#: apps/dashboard/offers/forms.py:49
+msgid "The end date must be after the start date"
+msgstr ""
+
+#: apps/dashboard/offers/forms.py:52
+msgid "Either a product or an image is needed."
+msgstr "Ein Produkt und/oder ein Bild werden benötigt."
+
+#: apps/dashboard/partners/forms.py:19
+msgid "Do not rename the default partner"
+msgstr ""
+
+#: apps/dashboard/partners/forms.py:24
+msgid "Create default partner first"
+msgstr "Zuerst standard Partner anlegen"
+
+#: apps/dashboard/partners/forms.py:33
+msgid "No dashboard access"
+msgstr "Kein Dashboard Zugriff"
+
+#: apps/dashboard/partners/forms.py:39
+msgid "User role"
+msgstr "Benutzerrolle"
+
+#: apps/offer/admin.py:15
+msgid "Special prices and display option"
+msgstr "Angebotspreis und Anzeigeoption"
+
+#: apps/offer/admin.py:16
+#: templates/oscar/dashboard/offers/offer_detail.html:109
+#: templates/oscar/dashboard/offers/product_offer_delete.html:16
+#: templates/oscar/dashboard/offers/product_offer_list.html:12
+#: templates/oscar/dashboard/offers/product_offer_list.html:31
+#: templates/oscar/dashboard/offers/product_offer_update.html:22
+#: templates/oscar/dashboard/offers/product_offer_update.html:65
+msgid "Special prices and display options"
+msgstr "Angebotspreise und Anzeigeoptionen"
+
+#: apps/offer/benefits.py:87
+msgid "Special price benefit"
+msgstr "Sonderpreis Vorteil"
+
+#: apps/offer/benefits.py:88
+msgid "Special price benefits"
+msgstr "Sonderpreis Vorteile"
+
+#: apps/offer/conditions.py:6
+#, python-format
+msgid "Buy %(delta)d more product from %(range)s"
+msgid_plural "Buy %(delta)d more products from %(range)s"
+msgstr[0] "Ihnen fehlt %(delta)d %(range)s"
+msgstr[1] "Ihnen fehlen %(delta)d %(range)s"
+
+#: apps/offer/models.py:41
+msgid "Label position"
+msgstr "Preisschild-Position"
+
+#: apps/offer/models.py:42
+msgid "Label positions"
+msgstr "Preisschild-Positionen"
+
+#: apps/offer/models.py:85
+#: templates/oscar/dashboard/orders/order_detail.html:129
+msgid "Product"
+msgstr "Produkt"
+
+#: apps/offer/models.py:120
+#, fuzzy
+#| msgid "To"
+msgid "Top"
+msgstr "An"
+
+#: apps/offer/models.py:124
+msgid "Left"
+msgstr ""
+
+#: apps/offer/models.py:179
+#: templates/oscar/dashboard/offers/product_offer_list.html:45
+msgid "Start date"
+msgstr "Startzeit"
+
+#: apps/offer/models.py:184
+#: templates/oscar/dashboard/offers/product_offer_list.html:46
+msgid "End date"
+msgstr "Endzeit"
+
+#: apps/offer/models.py:239
+#: templates/oscar/dashboard/orders/order_detail.html:638
+#: templates/oscar/dashboard/orders/order_detail.html:688
+msgid "Type"
+msgstr "Typ"
+
+#: apps/order/models.py:56
+msgid "Payment provider"
+msgstr "Zahlungsmethode"
+
+#: apps/order/models.py:59
+msgid "Payment provider code"
+msgstr "Zahlungsquellen"
+
+#: apps/order/models.py:63
+msgid "Shipping reference"
+msgstr "Versandreferenz"
+
+#: apps/partner/models.py:25
+msgid "Checkout without price"
+msgstr "Ohne Preis bestellen"
+
+#: apps/partner/models.py:27
+msgid "Allow checkout without price for users of this partner group"
+msgstr "Erlaube Bestellung ohne Preis für Mitglieder dieser Partnergruppe"
+
+#: apps/payment/models.py:24 apps/shipping/models.py:46
+msgid "Display order"
+msgstr "Anzeigepriorität"
+
+#: apps/payment/models.py:27
+#: templates/oscar/dashboard/offers/offer_detail.html:77 user/models.py:44
+msgid "Description"
+msgstr "Beschreibung"
+
+#: apps/payment/models.py:30 apps/shipping/models.py:49
+msgid "Minimum order value"
+msgstr "Mindestbestellmenge"
+
+#: apps/payment/models.py:34
+msgid "Only for companies"
+msgstr "Nur für Unternehmen"
+
+#: apps/payment/models.py:35
+msgid "Only companies can use this provider"
+msgstr "Nur Unternehmen können diesen Anbieter nutzen"
+
+#: apps/payment/models.py:40
+msgid "Customer bankcard needed"
+msgstr "Kundenbankkonto benötigt"
+
+#: apps/payment/models.py:41
+msgid "Customer needs to include a bankcard during checkout"
+msgstr "Kunden müssen ein Bankkonto beim Bestellabschluss angeben"
+
+#: apps/payment/models.py:45
+msgid "Active"
+msgstr "Aktiv"
+
+#: apps/payment/models.py:46
+msgid "Enable or deactivate this provider"
+msgstr "Anbieter de-/aktivieren"
+
+#: apps/payment/models.py:77
+#, python-format
+msgid "Die Mindestbestellmenge beträgt %(min)s €"
+msgstr ""
+
+#: apps/payment/models.py:107
+msgid "Source Type"
+msgstr "Quelltype"
+
+#: apps/payment/models.py:108
+msgid "Source Types"
+msgstr "Quelltypen"
+
+#: apps/payment/models.py:117
+msgid "Expiry Date"
+msgstr "Ablaufdatum"
+
+#: apps/searchBAK/apps.py:14 apps/searchBAK/forms.py:75
+#: apps/searchBAK/forms.py:77
+#: templates/oscar/dashboard/orders/order_list.html:30
+#: templates/oscar/dashboard/orders/order_list.html:51
+#: templates/oscar/dashboard/orders/order_list.html:73
+#: templates/oscar/search/results.html:13
+msgid "Search"
+msgstr "Suche"
+
+#: apps/searchBAK/forms.py:30
+msgid "Relevancy"
+msgstr "Relevanz"
+
+#: apps/searchBAK/forms.py:33
+msgid "Title A to Z"
+msgstr "Titel aufsteigend"
+
+#: apps/searchBAK/forms.py:34
+msgid "Title Z to A"
+msgstr "Titel absteigend"
+
+#: apps/searchBAK/forms.py:37
+msgid "Price low to high"
+msgstr "Preis aufsteigend"
+
+#: apps/searchBAK/forms.py:38
+msgid "Price high to low"
+msgstr "Preis absteigend"
+
+#: apps/searchBAK/forms.py:42
+msgid "Sort by"
+msgstr "Sortieren"
+
+#: apps/shipping/models.py:14 apps/shipping/models.py:21 delivery/models.py:107
+#: templates/oscar/dashboard/orders/order_detail.html:62
+#: templates/oscar/dashboard/orders/order_list.html:119
+msgid "Delivery"
+msgstr "Lieferung"
+
+#: apps/shipping/models.py:15
+msgid "Pickup"
+msgstr "Abholung"
+
+#: apps/shipping/models.py:19
+msgid "No form"
+msgstr "Kein Formular"
+
+#: apps/shipping/models.py:20
+msgid "Floor"
+msgstr "Stockwerk"
+
+#: apps/shipping/models.py:22
+msgid "Floor and delivery"
+msgstr "Stockwerk und Lieferungsauswahl"
+
+#: apps/shipping/models.py:23 delivery/models.py:41 delivery/models.py:112
+#: templates/oscar/dashboard/orders/order_detail.html:387
+#: templates/oscar/dashboard/orders/order_detail.html:419
+#: templates/oscar/dashboard/orders/order_detail.html:465
+#: templates/oscar/dashboard/orders/order_detail.html:606
+#: templates/oscar/dashboard/orders/order_detail.html:686
+msgid "Date"
+msgstr "Datum"
+
+#: apps/shipping/models.py:24
+msgid "Date and time"
+msgstr "Datum und Uhrzeit"
+
+#: apps/shipping/models.py:28
+msgid "Is overwritten if single floors are configured."
+msgstr "Wird überschrieben wenn einzelne Stockwerkskonditionen erstellt werden"
+
+#: apps/shipping/models.py:31
+msgid "Shipping Type"
+msgstr "Versand"
+
+#: apps/shipping/models.py:36
+msgid "Form fields"
+msgstr "Formularfelder"
+
+#: apps/shipping/models.py:41
+msgid "Next day limit"
+msgstr "Folgetaglieferungslimit"
+
+#: apps/shipping/models.py:42
+msgid "Delivery to the next day possible until this time"
+msgstr "Lieferung zum Folgetag ist möglich bis zu dieser Uhrzeit."
+
+#: apps/shipping/models.py:55
+msgid "Price per order"
+msgstr "Preis je Bestellung"
+
+#: apps/shipping/models.py:60 apps/shipping/models.py:271
+msgid "Price per item"
+msgstr "Preis je Produkt"
+
+#: apps/shipping/models.py:67
+msgid "Price per floor"
+msgstr "Preis je Stockwerk"
+
+#: apps/shipping/models.py:72 apps/shipping/models.py:275
+msgid "Price per box item"
+msgstr "Preis je Kiste"
+
+#: apps/shipping/models.py:77
+msgid "Maximum floor difference"
+msgstr "Maximale Anzahl Stockwerke"
+
+#: apps/shipping/models.py:82 apps/shipping/models.py:279
+msgid "Reference number"
+msgstr "Referenz Nummer"
+
+#: apps/shipping/models.py:253
+msgid "Order and Item Charge"
+msgstr "Lieferkosten"
+
+#: apps/shipping/models.py:254
+msgid "Order and Item Charges"
+msgstr "Lieferkosten"
+
+#: apps/shipping/models.py:264
+msgid "Floor number"
+msgstr "Stockwerk"
+
+#: apps/shipping/models.py:267
+#: templates/oscar/basket/partials/basket_content.html:107
+#: templates/oscar/basket/partials/basket_line_head.html:9
+#: templates/oscar/dashboard/catalogue/product_update.html:225
+msgid "Price"
+msgstr "Preis"
+
+#: apps/shipping/models.py:295
+msgid "Shipped floor"
+msgstr "Stockwerkskondition"
+
+#: apps/shipping/models.py:296
+msgid "Shipped floors"
+msgstr "Stockwerkskonditionen"
+
+#: custom/context_processors.py:76
+msgid "Start Time"
+msgstr "Startzeit"
+
+#: custom/context_processors.py:77
+msgid "Free Space"
+msgstr "Freier Speicherplatz"
+
+#: custom/context_processors.py:78
+msgid "Offered Products"
+msgstr "Angebotene Produkte"
+
+#: custom/context_processors.py:79
+#: templates/oscar/dashboard/catalogue/product_update.html:91
+msgid "Images"
+msgstr "Bilder"
+
+#: custom/models.py:148
+msgid "Full company name"
+msgstr "Vollständiger Unternehmensname"
+
+#: custom/models.py:149
+msgid "This is the full company name (eg. Company GmbH&Co KG)"
+msgstr "z.B. Company GmbH&Co KG"
+
+#: custom/models.py:152
+msgid "Short company name"
+msgstr "Unternehmensname Kurzform"
+
+#: custom/models.py:153
+msgid "This is the short company name (eg. Company)"
+msgstr "Kurzform des Unternehmensnamens z.B. Company GmbH&Co KG"
+
+#: custom/models.py:164 delivery/models.py:160
+msgid "City"
+msgstr "Stadt"
+
+#: custom/models.py:168
+msgid "Company contact information"
+msgstr "Kunden Kontaktinformation"
+
+#: custom/models.py:170
+msgid "The full contact information of the customers shop manager."
+msgstr "Vollständige Kontaktdaten des Shop Managers"
+
+#: custom/models.py:174
+msgid "Company support email"
+msgstr "Kundensupport E-Mail"
+
+#: custom/models.py:176
+msgid "The email of the support for the shop customers"
+msgstr "E-Mail der Betreuung für Shop-Kunden"
+
+#: custom/models.py:180
+msgid "Company support phone"
+msgstr "Kundensupport Telefon"
+
+#: custom/models.py:183
+msgid "The number of the support for the shop customers"
+msgstr "Telefonnummer der Betreuung für Shop-Kunden"
+
+#: custom/models.py:193
+msgid "Main accent color"
+msgstr "Haupt Akzentfarbe"
+
+#: custom/models.py:194
+msgid "CSS main color of the brand."
+msgstr "CSS - Hauptfarbe der Marke."
+
+#: custom/models.py:197
+msgid "Second accent color"
+msgstr "Zweite Akzentfarbe"
+
+#: custom/models.py:198
+msgid "CSS second color of the brand."
+msgstr "CSS - Zweitfarbe der Marke. Entspricht der ersten, wenn nicht gesetzt."
+
+#: custom/models.py:201
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: custom/models.py:202
+msgid "CSS background color of the page."
+msgstr "CSS Hintergrundfarbe. Standard: Weiß"
+
+#: custom/models.py:214
+msgid "Logo"
+msgstr "Logo"
+
+#: custom/models.py:219
+msgid "Logo square"
+msgstr "Logo quadratisch"
+
+#: custom/models.py:224
+msgid "No image"
+msgstr "Fehlendes Bild"
+
+#: custom/models.py:229
+msgid "Offer image"
+msgstr "Angebots-Icon"
+
+#: custom/models.py:234
+msgid "Header hints block top image"
+msgstr "Header - Oberer Werbeblock"
+
+#: custom/models.py:239
+msgid "Header hints block top image responsive"
+msgstr "Header - Oberer Werbeblock Mobil"
+
+#: custom/models.py:244
+msgid "Header hints block top url"
+msgstr "Header - Oberer Werbeblock URL"
+
+#: custom/models.py:248
+msgid "Header hints block bottom left image"
+msgstr "Header - Werbeblock unten links"
+
+#: custom/models.py:253
+msgid "Header hints block bottom left url"
+msgstr "Header - Werbeblock unten links URL"
+
+#: custom/models.py:257
+msgid "Header hints block bottom right image"
+msgstr "Header - Werbeblock unten rechts"
+
+#: custom/models.py:262
+msgid "Header hints block bottom right url"
+msgstr "Header - Werbeblock unten rechts URL"
+
+#: custom/models.py:266
+msgid "Slider intro image"
+msgstr "Slider Eingangsbild"
+
+#: custom/models.py:271
+msgid "Slider intro image responsive"
+msgstr "Slider Eingangsbild Mobil"
+
+#: custom/models.py:276
+msgid "First slider element"
+msgstr "Erstes Slider Element"
+
+#: custom/models.py:281
+msgid "content"
+msgstr "Inhalt"
+
+#: custom/models.py:282
+msgid "Text on the bottom of the start page, sometimes used for seo"
+msgstr "Text unten auf der Startseite (z.B. für SEO)"
+
+#: delivery/forms.py:11
+msgid "Choose your postcode for free delivery:"
+msgstr "Wählen Sie ihre Postleitzahl für kostenlose Lieferung:"
+
+#: delivery/models.py:13
+msgid "Created at"
+msgstr "Erstellt am"
+
+#: delivery/models.py:14
+msgid "Updated at"
+msgstr "Geändert am"
+
+#: delivery/models.py:22
+msgid "Monday"
+msgstr "Montag"
+
+#: delivery/models.py:23
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: delivery/models.py:24
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: delivery/models.py:25
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: delivery/models.py:26
+msgid "Friday"
+msgstr "Freitag"
+
+#: delivery/models.py:27
+msgid "Saturday"
+msgstr "Samstag"
+
+#: delivery/models.py:28
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: delivery/models.py:108
+msgid "Deliveries"
+msgstr "Lieferungen"
+
+#: delivery/models.py:114
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: delivery/models.py:135
+msgid "is blocked"
+msgstr "ist blockiert"
+
+#: delivery/models.py:135
+msgid "is not blocked"
+msgstr "ist nicht blockiert"
+
+#: delivery/models.py:146
+msgid "Tour Offday"
+msgstr "Sperrtag"
+
+#: delivery/models.py:147
+msgid "Tour Offdays"
+msgstr "Sperrtage"
+
+#: delivery/models.py:154
+msgid "Global Offday"
+msgstr "Globaler Sperrtag"
+
+#: delivery/models.py:155
+msgid "Global Offdays"
+msgstr "Globale Sperrtage"
+
+#: delivery/models.py:159 delivery/models.py:180
+msgid "Postcode"
+msgstr "Postleitzahl"
+
+#: delivery/models.py:181
+msgid "Postcodes"
+msgstr "Postleitzahlen"
+
+#: delivery/models.py:246
+msgid "Tour"
+msgstr "Tour"
+
+#: delivery/models.py:247
+msgid "Tours"
+msgstr "Touren"
+
+#: delivery/models.py:252
+msgid "Weekday"
+msgstr "Wochentag"
+
+#: delivery/models.py:253
+msgid "Start"
+msgstr "Start"
+
+#: delivery/models.py:254
+msgid "End"
+msgstr "Ende"
+
+#: delivery/models.py:276
+msgid "Delivery Times"
+msgstr "Lieferzeiten"
+
+#: templates/additional_translations.html:2 templates/header.html:62
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: templates/additional_translations.html:3 templates/header.html:79
+msgid "Favourites"
+msgstr "Favoriten"
+
+#: templates/additional_translations.html:4
+msgid "Wish list settings"
+msgstr "Favoriten Einstellungen"
+
+#: templates/additional_translations.html:5
+msgid "Create a new wish list"
+msgstr "Neue Favoritenliste anlegen"
+
+#: templates/additional_translations.html:6
+msgid "You don't have any wish lists yet."
+msgstr "Sie haben noch keine Favoritenliste."
+
+#: templates/additional_translations.html:7
+#: templates/oscar/customer/partials/standard_tabs.html:27
+msgid "Wish Lists"
+msgstr "Favoritenlisten"
+
+#: templates/flatpages/default.html:18
+msgid "Edit this page"
+msgstr "Seite bearbeiten"
+
+#: templates/header.html:94
+msgid "Item"
+msgstr "Artikel"
+
+#: templates/menu.html:15
+#: templates/oscar/catalogue/partials/main_categories.html:22
+#: templates/oscar/dashboard/offers/offer_detail.html:16
+#: templates/oscar/dashboard/offers/product_offer_delete.html:14
+#: templates/oscar/dashboard/offers/product_offer_list.html:10
+#: templates/oscar/dashboard/offers/product_offer_update.html:20
+#: templates/oscar/offer/detail.html:12 templates/oscar/offer/list.html:8
+#: templates/oscar/offer/list.html:12 templates/oscar/offer/list.html:16
+#: templates/partials/menu_div.html:10 templates/partials/menu_ul.html:36
+msgid "Offers"
+msgstr "Angebote"
+
+#: templates/newsletterBAK/message/message.html:22
+msgid "Read more"
+msgstr ""
+
+#: templates/newsletterBAK/message/message.html:29
+msgid "Read message online"
+msgstr ""
+
+#: templates/newsletterBAK/message/message.html:31
+msgid "Unsubscribe"
+msgstr ""
+
+#: templates/newsletterBAK/message/message.txt:16
+msgid "Unsubscribe:"
+msgstr ""
+
+#: templates/oscar/basket/basket.html:5 templates/oscar/basket/basket.html:9
+#: templates/oscar/basket/basket.html:16
+#: templates/oscar/basket/partials/basket_totals.html:10
+#: templates/oscar/basket/partials/basket_totals.html:162
+#: templates/oscar/order/partials/basket_totals.html:7
+msgid "Basket"
+msgstr "Warenkorb"
+
+#: templates/oscar/basket/messages/addition.html:4
+#, python-format
+msgid ""
+"\n"
+"    <strong>%(title)s</strong> has been added to your basket.\n"
+"    "
+msgstr ""
+"\n"
+"    <strong>%(title)s</strong> wurde Ihrem Warenkorb hinzugefügt.\n"
+"    "
+
+#: templates/oscar/basket/messages/addition.html:8
+#, python-format
+msgid ""
+"\n"
+"    <strong>%(quantity)s</strong> copies of <strong>%(title)s</strong>\n"
+"    have been added to your basket.\n"
+"    "
+msgstr ""
+"\n"
+"    <strong>%(quantity)s</strong>&times; <strong>%(title)s</strong>\n"
+"    wurden Ihrem Warenkorb hinzugefügt.\n"
+"    "
+
+#: templates/oscar/basket/messages/new_total.html:5
+msgid "Your basket is now empty"
+msgstr "Ihr Warenkorb ist leer."
+
+#: templates/oscar/basket/messages/new_total.html:8
+#: templates/oscar/basket/messages/new_total.html:10
+msgid "Your basket total is now"
+msgstr "Ihr Gesamtbetrag ist nun"
+
+#: templates/oscar/basket/messages/new_total.html:16
+#: templates/oscar/basket/partials/basket_quick.html:48
+msgid "View basket"
+msgstr "Warenkorb anzeigen"
+
+#: templates/oscar/basket/messages/new_total.html:17
+msgid "Checkout now"
+msgstr "Zur Kasse"
+
+#: templates/oscar/basket/partials/basket_content.html:9
+msgid "Important messages about items in your basket"
+msgstr "Wichtige Nachrichten wegen eines Artikels in Ihrem Warenkorb"
+
+#: templates/oscar/basket/partials/basket_content.html:19
+#, python-format
+msgid ""
+"\n"
+"                <div class=\"warning\">%(message)s to qualify for the <a "
+"href=\"%(url)s\">%(offer_name)s</a> special offer</div>\n"
+"            "
+msgstr ""
+"\n"
+"                <div class=\"warning\">%(message)s, um <a href=\"%(url)s\">"
+"%(offer_name)s</a> zu erhalten.</div>\n"
+"            "
+
+#: templates/oscar/basket/partials/basket_content.html:50
+msgid "Voucher/promo code"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_content.html:52
+msgid "I have a voucher code..."
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_content.html:58
+#: templates/oscar/catalogue/partials/add_to_basket_form.html:17
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:35
+#: templates/oscar/dashboard/catalogue/product_update.html:277
+msgid "Adding..."
+msgstr "Hinzufügen..."
+
+#: templates/oscar/basket/partials/basket_content.html:58
+msgid "Add voucher"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_content.html:59
+#: templates/oscar/checkout/shipping_address.html:63
+#: templates/oscar/dashboard/catalogue/product_update.html:374
+#: templates/oscar/dashboard/offers/product_offer_delete.html:32
+msgid "or"
+msgstr "oder"
+
+#: templates/oscar/basket/partials/basket_content.html:59
+#: templates/oscar/dashboard/offers/product_offer_delete.html:33
+msgid "cancel"
+msgstr "abbrechen"
+
+#: templates/oscar/basket/partials/basket_content.html:70
+#: templates/oscar/checkout/checkout.html:122
+#: templates/oscar/checkout/thank_you.html:139
+msgid "Totals"
+msgstr "Gesamt"
+
+#: templates/oscar/basket/partials/basket_content.html:82
+msgid "Proceed to checkout"
+msgstr "Weiter zur Kasse"
+
+#: templates/oscar/basket/partials/basket_content.html:93
+#: templates/oscar/basket/partials/basket_quick.html:37
+msgid "Your basket is empty."
+msgstr "Ihr Warenkorb ist leer."
+
+#: templates/oscar/basket/partials/basket_content.html:94
+#: templates/oscar/checkout/thank_you.html:167
+msgid "Continue shopping"
+msgstr "Einkauf fortführen"
+
+#: templates/oscar/basket/partials/basket_content.html:103
+msgid "Items to buy later"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_content.html:106
+msgid "Items"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_content.html:129
+#: templates/oscar/basket/partials/basket_totals.html:51
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:45
+msgid "Remove"
+msgstr "Entfernen"
+
+#: templates/oscar/basket/partials/basket_content.html:146
+msgid "Move to basket"
+msgstr "In Warenkorb verschieben"
+
+#: templates/oscar/basket/partials/basket_line.html:58
+#: templates/oscar/basket/partials/basket_line_head.html:14
+msgid "Total"
+msgstr "Gesamt"
+
+#: templates/oscar/basket/partials/basket_line.html:86
+msgid "Updating..."
+msgstr "Aktualisieren..."
+
+#: templates/oscar/basket/partials/basket_line.html:87
+#: templates/oscar/dashboard/orders/order_detail.html:529
+msgid "Update"
+msgstr "Ändern"
+
+#: templates/oscar/basket/partials/basket_line_head.html:5
+msgid "Items to buy now"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_line_head.html:6
+#: templates/oscar/dashboard/orders/order_detail.html:128
+msgid "Quantity"
+msgstr "Menge"
+
+#: templates/oscar/basket/partials/basket_quick.html:43
+#: templates/oscar/basket/partials/basket_quick.html:45
+msgid "Total:"
+msgstr "Gesamt:"
+
+#: templates/oscar/basket/partials/basket_quick.html:49
+#: templates/oscar/checkout/checkout.html:8
+msgid "Checkout"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_totals.html:19
+#: templates/oscar/order/partials/basket_totals.html:13
+msgid "Basket total (before discounts)"
+msgstr "Warenkorb gesamt (ohne Rabatt)"
+
+#: templates/oscar/basket/partials/basket_totals.html:31
+#: templates/oscar/customer/order/order_detail.html:316
+#: templates/oscar/customer/order/order_detail.html:340
+#: templates/oscar/dashboard/orders/order_detail.html:177
+#: templates/oscar/dashboard/orders/order_detail.html:195
+#: templates/oscar/dashboard/orders/order_detail.html:233
+#: templates/oscar/order/partials/basket_totals.html:18
+msgid "Discount"
+msgstr "Rabatt"
+
+#: templates/oscar/basket/partials/basket_totals.html:42
+msgid "Vouchers"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_totals.html:99
+#: templates/oscar/basket/partials/basket_totals.html:168
+#: templates/oscar/checkout/checkout.html:27
+#: templates/oscar/checkout/thank_you.html:35
+#: templates/oscar/dashboard/orders/order_detail.html:93
+#: templates/oscar/dashboard/orders/order_detail.html:502
+#: templates/oscar/order/partials/basket_totals.html:62
+msgid "Shipping"
+msgstr "Versand"
+
+#: templates/oscar/basket/partials/basket_totals.html:101
+#: templates/oscar/order/partials/basket_totals.html:64
+msgid "Alternative shipping methods can be chosen during checkout"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_totals.html:129
+#: templates/oscar/order/partials/basket_totals.html:90
+msgid "Surcharges"
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_totals.html:183
+#: templates/oscar/order/partials/basket_totals.html:127
+msgid "Post order actions"
+msgstr "Ihre Nachricht an uns"
+
+#: templates/oscar/basket/partials/basket_totals.html:183
+msgid "These will be applied once your order is placed."
+msgstr ""
+
+#: templates/oscar/basket/partials/basket_totals.html:203
+#: templates/oscar/customer/order/order_detail.html:368
+#: templates/oscar/dashboard/offers/offer_detail.html:144
+#: templates/oscar/dashboard/orders/order_detail.html:274
+#: templates/oscar/order/partials/basket_totals.html:143
+msgid "Order total"
+msgstr "Bestellung Summe"
+
+#: templates/oscar/basket/partials/basket_totals.html:216
+msgid "Taxes will be added during checkout."
+msgstr ""
+
+#: templates/oscar/catalogue/browse.html:64
+#: templates/oscar/offer/detail.html:48 templates/oscar/offer/range.html:31
+#: templates/oscar/search/results.html:82
+msgid "No products found."
+msgstr "Keine Produkte gefunden."
+
+#: templates/oscar/catalogue/detail.html:106
+#: templates/oscar/catalogue/partials/literprice_badge.html:12
+#: templates/oscar/catalogue/partials/product.html:104
+#: templates/oscar/catalogue/partials/stock_record.html:45
+msgid "Liter"
+msgstr ""
+
+#: templates/oscar/catalogue/detail.html:108
+#: templates/oscar/catalogue/partials/literprice_badge.html:8
+#: templates/oscar/catalogue/partials/product.html:106
+#: templates/oscar/catalogue/partials/stock_record.html:43
+msgid "kg"
+msgstr ""
+
+#: templates/oscar/catalogue/detail.html:125
+msgid "Product Description"
+msgstr "Produktbeschreibung"
+
+#: templates/oscar/catalogue/detail.html:132
+msgid "Product Information"
+msgstr "Produktinformation"
+
+#: templates/oscar/catalogue/detail.html:137
+#: templates/oscar/dashboard/orders/order_detail.html:130
+msgid "UPC"
+msgstr "Artikelnummer"
+
+#: templates/oscar/catalogue/detail.html:141
+msgid "Product Type"
+msgstr "Produkttyp"
+
+#: templates/oscar/catalogue/detail.html:147
+msgid "Price (incl. tax)"
+msgstr "Preis (inkl. Steuer)"
+
+#: templates/oscar/catalogue/detail.html:159
+msgid "Availability"
+msgstr ""
+
+#: templates/oscar/catalogue/detail.html:180
+msgid "Number of reviews"
+msgstr "Anzahl Bewertungen"
+
+#: templates/oscar/catalogue/detail.html:208
+msgid "Recommended items"
+msgstr "Empfohlene Produkte"
+
+#: templates/oscar/catalogue/partials/add_to_basket_form.html:32
+msgid "You have an active stock alert for this product."
+msgstr ""
+
+#: templates/oscar/catalogue/partials/add_to_basket_form.html:36
+msgid "You can get an email alert when this product is back in stock."
+msgstr ""
+
+#: templates/oscar/catalogue/partials/add_to_basket_form.html:38
+#: templates/oscar/checkout/payment_methods.html:40
+#: templates/oscar/dashboard/orders/order_list.html:108
+msgid "Submitting..."
+msgstr "Übermittelung..."
+
+#: templates/oscar/catalogue/partials/add_to_basket_form.html:38
+msgid "Notify me"
+msgstr ""
+
+#: templates/oscar/catalogue/partials/add_to_basket_form_compact.html:22
+msgid "Add to basket"
+msgstr ""
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:11
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:35
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:50
+msgid "Add to wish list"
+msgstr "Zu Wunschliste hinzufügen"
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:17
+#, python-format
+msgid ""
+"\n"
+"                                        Add to '%(name)s' wish list\n"
+"                                    "
+msgstr ""
+"\n"
+"                                        Zu Wunschliste hinzufügen: "
+"'%(name)s'\n"
+"                                    "
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:26
+msgid "Create a new wishlist"
+msgstr "Neue Favoritenliste anlegen"
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:42
+#, python-format
+msgid ""
+"\n"
+"                    <span class=\"float-left\">Product is in <a href="
+"\"%(url)s\">'%(name)s'</a> wishlist.</span>\n"
+"                "
+msgstr ""
+"\n"
+"                    <span class=\"float-left\">Produkt ist bereits in <a "
+"href=\"%(url)s\">'%(name)s'</a></span>\n"
+"                "
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:45
+msgid "Removing..."
+msgstr "Entfernen..."
+
+#: templates/oscar/catalogue/partials/add_to_wishlist.html:50
+msgid "Please login to add products to a wish list."
+msgstr ""
+
+#: templates/oscar/catalogue/partials/cms_product.html:44
+#: templates/oscar/catalogue/partials/stock_record.html:16
+#: templates/oscar/checkout/payment_methods.html:30
+msgid "Free"
+msgstr "Kostenlos"
+
+#: templates/oscar/catalogue/partials/gallery.html:30
+msgid "Previous"
+msgstr ""
+
+#: templates/oscar/catalogue/partials/gallery.html:34
+msgid "Next"
+msgstr ""
+
+#: templates/oscar/catalogue/partials/stock_record.html:26
+msgid "Reusable"
+msgstr "Mehrweg"
+
+#: templates/oscar/catalogue/partials/stock_record.html:28
+msgid "Unreusable"
+msgstr "Einweg"
+
+#: templates/oscar/catalogue/partials/stock_record.html:34
+msgid "Deposit"
+msgstr "Pfand"
+
+#: templates/oscar/checkout/checkout.html:32
+#: templates/oscar/checkout/thank_you.html:38
+#: templates/oscar/customer/address/address_list.html:14
+#: templates/oscar/customer/order/order_detail.html:396
+#: templates/oscar/dashboard/orders/order_detail.html:523
+msgid "Address"
+msgstr "Adresse"
+
+#: templates/oscar/checkout/checkout.html:35
+#: templates/oscar/checkout/checkout.html:69
+#: templates/oscar/checkout/checkout.html:94
+msgid "Change"
+msgstr "Ändern"
+
+#: templates/oscar/checkout/checkout.html:47
+#: templates/oscar/checkout/thank_you.html:49
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/oscar/checkout/checkout.html:49
+#: templates/oscar/checkout/thank_you.html:51
+#: templates/oscar/dashboard/orders/order_detail.html:534
+msgid "Phone"
+msgstr "Telefon"
+
+#: templates/oscar/checkout/checkout.html:51
+#: templates/oscar/dashboard/partners/partner_manage.html:41
+msgid "Email"
+msgstr ""
+
+#: templates/oscar/checkout/checkout.html:66
+#: templates/oscar/checkout/shipping_methods.html:20
+#: templates/oscar/checkout/shipping_methods.html:27
+#: templates/oscar/checkout/thank_you.html:70
+msgid "Shipping method"
+msgstr "Versandmethode"
+
+#: templates/oscar/checkout/checkout.html:88
+#: templates/oscar/checkout/thank_you.html:79
+#: templates/oscar/checkout/thank_you.html:82
+#: templates/oscar/dashboard/orders/order_detail.html:98
+msgid "Payment"
+msgstr "Zahlung"
+
+#: templates/oscar/checkout/checkout.html:92
+msgid "Payment Method"
+msgstr "Zahlungsmethode"
+
+#: templates/oscar/checkout/checkout.html:107
+msgid "Edit order contents"
+msgstr "Bestellungsinhalt bearbeiten"
+
+#: templates/oscar/checkout/checkout.html:111
+#: templates/oscar/checkout/thank_you.html:124
+#: templates/oscar/dashboard/orders/order_detail.html:88
+msgid "Order contents"
+msgstr "Inhalt der Bestellung"
+
+#: templates/oscar/checkout/payment_details.html:5
+#: templates/oscar/checkout/payment_methods.html:5
+msgid "Payment details"
+msgstr "Zahlungsdaten"
+
+#: templates/oscar/checkout/payment_details.html:12
+msgid "Enter payment details"
+msgstr "Zahlungsinformationen eingeben"
+
+#: templates/oscar/checkout/payment_details.html:32
+#, python-format
+msgid ""
+"\n"
+"                          This includes a discount of <strong>%(amount)s</"
+"strong> as\n"
+"                          your basket qualifies for the <strong>%(name)s</"
+"strong> offer.\n"
+"                      "
+msgstr ""
+
+#: templates/oscar/checkout/payment_methods.html:12
+msgid "Choose payment method"
+msgstr "Zahlungsmethode wählen"
+
+#: templates/oscar/checkout/payment_methods.html:41
+msgid "Select option"
+msgstr "Option wählen"
+
+#: templates/oscar/checkout/preview.html:5
+msgid "Order preview"
+msgstr "Bestellungsansicht"
+
+#: templates/oscar/checkout/preview.html:13
+msgid "Preview order"
+msgstr "Bestellungsvorschau"
+
+#: templates/oscar/checkout/preview.html:42
+msgid "Place order"
+msgstr "Kostenpflichtig bestellen"
+
+#: templates/oscar/checkout/shipping_address.html:19
+msgid "Where should we ship to?"
+msgstr ""
+
+#: templates/oscar/checkout/shipping_address.html:62
+msgid "Continuing..."
+msgstr "Fortfahren..."
+
+#: templates/oscar/checkout/shipping_address.html:62
+msgid "Continue"
+msgstr "Fortfahren"
+
+#: templates/oscar/checkout/shipping_address.html:63
+msgid "return to basket"
+msgstr "Warenkorb anzeigen"
+
+#: templates/oscar/checkout/shipping_methods.html:49
+#, python-format
+msgid ""
+"\n"
+"                        This includes a discount of <strong>%(amount)s</"
+"strong> as\n"
+"                        your basket qualifies for the <strong>%(name)s</"
+"strong> offer.\n"
+"                    "
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:7
+#: templates/oscar/checkout/thank_you.html:17
+#, python-format
+msgid ""
+"\n"
+"        Order %(number)s: confirmation\n"
+"    "
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:24
+#, python-format
+msgid ""
+"\n"
+"        Your order has been placed and a confirmation email has been sent - "
+"your order number is\n"
+"        <strong>%(number)s</strong>.\n"
+"        "
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:28
+msgid ""
+"Please make a note of this reference or print this page and quote it in any "
+"communication with us regarding your order."
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:65
+msgid "No shipping address required."
+msgstr "Keine Lieferanschrift benötigt."
+
+#: templates/oscar/checkout/thank_you.html:87
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                Allocation of %(amount)s from type "
+#| "%(type)s (reference: %(reference)s)\n"
+#| "                            "
+msgid ""
+"\n"
+"                                  Allocation of %(amount)s from type "
+"%(type)s (reference: %(reference)s)\n"
+"                              "
+msgstr ""
+"\n"
+"                                %(amount)s %(type)s (Referenz: "
+"%(reference)s)\n"
+"                            "
+
+#: templates/oscar/checkout/thank_you.html:91
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                Allocation of %(amount)s from type "
+#| "%(type)s\n"
+#| "                            "
+msgid ""
+"\n"
+"                                  Allocation of %(amount)s from type "
+"%(type)s\n"
+"                              "
+msgstr ""
+"\n"
+"                                %(amount)s %(type)s\n"
+"                            "
+
+#: templates/oscar/checkout/thank_you.html:101
+msgid "No payment was required for this order."
+msgstr "Keine Zahlungs für diese Bestellung benötigt."
+
+#: templates/oscar/checkout/thank_you.html:152
+msgid "Tracking your order"
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:154
+msgid "You can track the status of your order"
+msgstr ""
+
+#: templates/oscar/checkout/thank_you.html:155
+msgid "View order status"
+msgstr "Bestellstatus anzeigen"
+
+#: templates/oscar/checkout/thank_you.html:164
+msgid "Print this page"
+msgstr "Seite ausdrucken"
+
+#: templates/oscar/communication/email/email_detail.html:8
+msgid "Email history"
+msgstr "Email Historie"
+
+#: templates/oscar/communication/email/email_detail.html:15
+#: templates/oscar/communication/email/email_list.html:10
+#: templates/oscar/communication/notifications/detail.html:19
+msgid "Date sent"
+msgstr "Sendedatum"
+
+#: templates/oscar/communication/email/email_detail.html:19
+#: templates/oscar/communication/email/email_list.html:9
+#: templates/oscar/communication/notifications/detail.html:24
+msgid "Subject"
+msgstr "Betreff"
+
+#: templates/oscar/communication/email/email_detail.html:23
+#: templates/oscar/communication/notifications/detail.html:28
+msgid "Body"
+msgstr ""
+
+#: templates/oscar/communication/email/email_list.html:26
+msgid "No emails found"
+msgstr "Keine E-Mails gefunden"
+
+#: templates/oscar/communication/emails/base.txt:3
+#: templates/oscar/communication/emails/commtype_order_placed_body.html:213
+msgid "Thanks for using our site!"
+msgstr "Vielen Dank, dass Sie unsere Website benutzen!"
+
+#: templates/oscar/communication/emails/base.txt:4
+#: templates/oscar/communication/emails/commtype_order_placed_body.html:214
+#, python-format
+msgid "The %(name)s team"
+msgstr "Ihr %(name)s Team"
+
+#: templates/oscar/communication/emails/commtype_email_changed_body.html:8
+#, python-format
+msgid ""
+"You're receiving this email because your email address has been changed to "
+"<strong>%(email)s</strong>."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_email_changed_body.html:14
+#: templates/oscar/communication/emails/commtype_email_changed_body.txt:7
+msgid ""
+"If it wasn't you who changed it, please reset your password immediately and "
+"correct your email address:"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_email_changed_body.html:26
+#: templates/oscar/communication/emails/commtype_email_changed_body.txt:10
+msgid "If it was you who changed the email address, you can ignore this email."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_email_changed_body.txt:5
+#, python-format
+msgid ""
+"You're receiving this email because your email address has been changed to "
+"%(email)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_email_changed_subject.txt:1
+#, python-format
+msgid "Your email address has changed at %(site_name)s."
+msgstr "Ihre E-Mail-Adresse auf %(site_name)s hat sich geändert."
+
+#: templates/oscar/communication/emails/commtype_order_placed_body.txt:15
+msgid "quantity:"
+msgstr "Menge:"
+
+#: templates/oscar/communication/emails/commtype_password_changed_body.html:8
+#, python-format
+msgid ""
+"You're receiving this e-mail because your password has been changed at "
+"%(name)s."
+msgstr ""
+"Sie erhalten diese E-Mail, weil Ihr Passwort auf %(name)s geändert wurde."
+
+#: templates/oscar/communication/emails/commtype_password_changed_body.html:14
+#: templates/oscar/communication/emails/commtype_password_changed_body.txt:9
+msgid ""
+"If it wasn't you who changed it, please reset your password immediately:"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_changed_body.html:26
+#: templates/oscar/communication/emails/commtype_password_changed_body.txt:12
+msgid "Otherwise, you can ignore this email."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_changed_body.txt:5
+#, python-format
+msgid ""
+"\n"
+"You're receiving this email because your password has been changed at "
+"%(name)s.\n"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_changed_subject.txt:1
+#, python-format
+msgid "Your password changed at %(site_name)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_reset_body.html:8
+#: templates/oscar/communication/emails/commtype_password_reset_body.txt:6
+#, python-format
+msgid ""
+"You're receiving this e-mail because you requested a password reset for your "
+"user account at %(name)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_reset_body.html:14
+#: templates/oscar/communication/emails/commtype_password_reset_body.txt:8
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_password_reset_subject.txt:1
+#, python-format
+msgid "Resetting your password at %(site_name)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.html:8
+#: templates/oscar/communication/emails/commtype_product_alert_body.txt:1
+#, python-format
+msgid "Dear %(name)s,"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.html:10
+#: templates/oscar/communication/emails/commtype_product_alert_body.txt:1
+msgid "Hello,"
+msgstr "Hallo,"
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.html:16
+#, python-format
+msgid ""
+"\n"
+"            We are happy to inform you that our product '%(title)s' is back "
+"in stock:\n"
+"            %(url)s\n"
+"        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.html:24
+msgid ""
+"\n"
+"                Beware that the amount of items in stock is limited. Be "
+"quick or someone might get there first.\n"
+"            "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.html:31
+msgid ""
+"\n"
+"            With this email we have disabled your alert automatically and "
+"you will not\n"
+"            receive any further email regarding this product.\n"
+"        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.txt:3
+#, python-format
+msgid ""
+"\n"
+"We are happy to inform you that our product '%(title)s' is back in stock:\n"
+"%(url)s\n"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.txt:6
+msgid ""
+"\n"
+"Beware that the amount of items in stock is limited. Be quick or someone "
+"might get there first.\n"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_body.txt:8
+#, python-format
+msgid ""
+"\n"
+"With this email we have disabled your alert automatically and you will not\n"
+"receive any further email regarding this product.\n"
+"\n"
+"Thanks for your interest,\n"
+"The %(site_name)s Team\n"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_confirmation_body.html:8
+#, python-format
+msgid ""
+"\n"
+"        Hello,\n"
+"        <p>\n"
+"            Somebody (hopefully you) has requested an email alert when "
+"'%(title)s' is back in stock.\n"
+"            Please click the following link to confirm: %(confirm_url)s\n"
+"        </p>\n"
+"        <p>\n"
+"            You can cancel this alert at any time by clicking the following "
+"link: %(cancel_url)s\n"
+"        </p>\n"
+"\n"
+"        <p>\n"
+"            Thanks for your interest,\n"
+"            The %(site)s Team\n"
+"        </p>\n"
+"    "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_confirmation_body.txt:5
+#, python-format
+msgid ""
+"\n"
+"Hello,\n"
+"\n"
+"Somebody (hopefully you) has requested an email alert when\n"
+"'%(title)s' is back in stock.  Please click the following link\n"
+"to confirm: %(confirm_url)s\n"
+"\n"
+"You can cancel this alert at any time by clicking the following link:\n"
+"%(cancel_url)s\n"
+"\n"
+"Thanks for your interest,\n"
+"The %(site)s Team\n"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_confirmation_subject.txt:1
+msgid "Confirmation required for stock alert"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_product_alert_subject.txt:1
+#, python-format
+msgid "%(title)s is back in stock"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_registration_body.txt:1
+msgid "Thank you for registering."
+msgstr "Danke für das Registrieren."
+
+#: templates/oscar/communication/notifications/detail.html:6
+msgid "Notifications inbox"
+msgstr "Benachrichtigungen Eingang"
+
+#: templates/oscar/communication/notifications/detail.html:14
+msgid "Sender"
+msgstr "Absender"
+
+#: templates/oscar/communication/notifications/detail.html:33
+#: templates/oscar/dashboard/orders/order_detail.html:642
+#: templates/oscar/dashboard/orders/order_detail.html:689
+msgid "Message"
+msgstr "Nachricht"
+
+#: templates/oscar/communication/notifications/detail.html:38
+msgid "Return to notifications inbox"
+msgstr "Zurück zum Posteingang"
+
+#: templates/oscar/communication/notifications/list.html:8
+msgid "Inbox"
+msgstr "Posteingang"
+
+#: templates/oscar/communication/notifications/list.html:11
+msgctxt "noun"
+msgid "Archive"
+msgstr "Archiv"
+
+#: templates/oscar/communication/notifications/list.html:45
+#: templates/oscar/dashboard/orders/order_detail.html:170
+#: templates/oscar/dashboard/orders/order_list.html:150
+msgid "View"
+msgstr "Ansicht"
+
+#: templates/oscar/communication/notifications/list.html:47
+#: templates/oscar/communication/notifications/list.html:57
+msgctxt "verb"
+msgid "Archive"
+msgstr "archivieren"
+
+#: templates/oscar/communication/notifications/list.html:49
+#: templates/oscar/communication/notifications/list.html:59
+#: templates/oscar/customer/address/address_list.html:42
+#: templates/oscar/customer/bank_account/list.html:33
+#: templates/oscar/customer/bank_account/list.html:66
+#: templates/oscar/dashboard/catalogue/product_update.html:300
+#: templates/oscar/dashboard/offers/product_offer_delete.html:32
+#: templates/oscar/dashboard/offers/product_offer_list.html:102
+#: templates/oscar/dashboard/offers/product_offer_update.html:46
+#: templates/oscar/dashboard/orders/order_detail.html:705
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/oscar/communication/notifications/list.html:55
+msgid "With selected items:"
+msgstr ""
+
+#: templates/oscar/communication/notifications/list.html:57
+msgid "Archiving..."
+msgstr "Speichern..."
+
+#: templates/oscar/communication/notifications/list.html:59
+#: templates/oscar/dashboard/offers/product_offer_delete.html:32
+msgid "Deleting..."
+msgstr "Löschen..."
+
+#: templates/oscar/communication/notifications/list.html:65
+msgid "There are no notifications to display."
+msgstr ""
+
+#: templates/oscar/customer/address/address_list.html:23
+#: templates/oscar/customer/bank_account/list.html:17
+msgid "Default shipping address"
+msgstr "Standard Lieferanschrift"
+
+#: templates/oscar/customer/address/address_list.html:26
+#: templates/oscar/customer/bank_account/list.html:20
+msgid "Default billing address"
+msgstr "Standard Rechnungsanschrift"
+
+#: templates/oscar/customer/address/address_list.html:38
+#: templates/oscar/customer/bank_account/list.html:30
+#: templates/oscar/dashboard/catalogue/product_update.html:297
+#: templates/oscar/dashboard/offers/offer_detail.html:74
+#: templates/oscar/dashboard/offers/offer_detail.html:83
+#: templates/oscar/dashboard/offers/offer_detail.html:88
+#: templates/oscar/dashboard/offers/offer_detail.html:103
+#: templates/oscar/dashboard/offers/offer_detail.html:128
+#: templates/oscar/dashboard/offers/product_offer_list.html:101
+#: templates/oscar/dashboard/offers/product_offer_update.html:34
+#: templates/oscar/dashboard/orders/order_detail.html:700
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/oscar/customer/address/address_list.html:46
+msgid "Set as default shipping address"
+msgstr "Als standard Lieferanschrift festlegen"
+
+#: templates/oscar/customer/address/address_list.html:51
+msgid "Set as default billing address"
+msgstr "Als standard Rechnungsanschrift festlegen"
+
+#: templates/oscar/customer/address/address_list.html:64
+msgid "There are no addresses in your address book."
+msgstr "Es gibt noch keine Adresse in ihrem Profil."
+
+#: templates/oscar/customer/address/address_list.html:68
+msgid "Add a new address"
+msgstr "Adresse hinzufügen"
+
+#: templates/oscar/customer/bank_account/list.html:43
+msgid "There are no bank accounts in your profile."
+msgstr "Es gibt noch keine Bankkonto in ihrem Profil."
+
+#: templates/oscar/customer/bank_account/list.html:46
+msgid "Add a new bank account"
+msgstr "Bankkonto hinzufügen"
+
+#: templates/oscar/customer/bank_account/list.html:63
+#: templates/oscar/dashboard/catalogue/product_update.html:372
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/oscar/customer/baseaccountpage.html:6
+#: templates/oscar/customer/order/order_list.html:25
+#: templates/oscar/dashboard/layout.html:44
+msgid "Account"
+msgstr "Benutzerkonto"
+
+#: templates/oscar/customer/history/recently_viewed_products.html:7
+msgid "Products you recently viewed"
+msgstr "Zuletzt angesehen Produkte"
+
+#: templates/oscar/customer/login_registration.html:5
+#: templates/oscar/customer/login_registration.html:9
+msgid "Login or register"
+msgstr "Anmelden oder registrieren"
+
+#: templates/oscar/customer/login_registration.html:21
+msgid "I've forgotten my password"
+msgstr ""
+
+#: templates/oscar/customer/login_registration.html:27
+#: templates/oscar/customer/login_registration.html:29
+msgid "Register"
+msgstr ""
+
+#: templates/oscar/customer/login_registration.html:29
+msgid "Registering..."
+msgstr "Registrierung..."
+
+#: templates/oscar/customer/order/order_detail.html:9
+#: templates/oscar/customer/order/order_list.html:27
+msgid "Order history"
+msgstr "Bestellhistorie"
+
+#: templates/oscar/customer/order/order_detail.html:15
+#: templates/oscar/dashboard/orders/order_detail.html:63
+#: templates/oscar/dashboard/orders/order_detail.html:131
+#: templates/oscar/dashboard/orders/order_detail.html:605
+#: templates/oscar/dashboard/orders/order_list.html:120
+msgid "Status"
+msgstr "Status"
+
+#: templates/oscar/customer/order/order_detail.html:258
+msgid "Write a review"
+msgstr "Bewertung schreiben"
+
+#: templates/oscar/customer/order/order_detail.html:292
+msgid "Not available anymore"
+msgstr "Nicht mehr verfügbar"
+
+#: templates/oscar/customer/order/order_detail.html:334
+#: templates/oscar/dashboard/orders/order_detail.html:224
+msgid "Shipping total (excl. discounts)"
+msgstr "Lieferung gesamt (ohne Rabatt)"
+
+#: templates/oscar/customer/order/order_detail.html:347
+#: templates/oscar/dashboard/orders/order_detail.html:243
+msgid "Shipping total (inc. discounts)"
+msgstr "Versand gesamt(mit Rabatt)"
+
+#: templates/oscar/customer/order/order_detail.html:381
+msgctxt "Buy again"
+msgid "Re-ordering..."
+msgstr "Erneut bestellen..."
+
+#: templates/oscar/customer/order/order_detail.html:381
+msgctxt "Buy again"
+msgid "Re-order all items"
+msgstr "Alle Produkte erneut bestellen"
+
+#: templates/oscar/customer/order/order_detail.html:387
+msgid "Shipping Method"
+msgstr "Versandmethode"
+
+#: templates/oscar/customer/order/order_detail.html:392
+msgid "Shipping Address"
+msgstr "Lieferanschrift"
+
+#: templates/oscar/customer/order/order_detail.html:397
+msgid "Contact Number"
+msgstr "Kontakt Nummer"
+
+#: templates/oscar/customer/order/order_detail.html:398
+msgid "Shipping Notes"
+msgstr "Versandnotitzen"
+
+#: templates/oscar/customer/order/order_list.html:22
+#: templates/oscar/layout.html:36
+msgid "Home"
+msgstr "Startseite"
+
+#: templates/oscar/customer/order/order_list.html:36
+msgid "Filter"
+msgstr ""
+
+#: templates/oscar/customer/order/order_list.html:41
+msgid "Filtering..."
+msgstr "Filterung..."
+
+#: templates/oscar/customer/order/order_list.html:41
+msgid "Filter results"
+msgstr "Filterergebnisse"
+
+#: templates/oscar/customer/order/order_list.html:42
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: templates/oscar/customer/order/order_list.html:54
+msgid "Num items"
+msgstr "Anzahl"
+
+#: templates/oscar/customer/order/order_list.html:56
+#: templates/oscar/dashboard/orders/order_list.html:117
+msgid "Total inc tax"
+msgstr ""
+
+#: templates/oscar/customer/order/order_list.html:58
+msgid "Date submitted"
+msgstr "Änderungsdatum"
+
+#: templates/oscar/customer/order/order_list.html:74
+msgid "No orders match your search."
+msgstr ""
+
+#: templates/oscar/customer/order/order_list.html:76
+msgid "You haven't placed any orders."
+msgstr ""
+
+#: templates/oscar/customer/partials/standard_tabs.html:5
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/oscar/customer/partials/standard_tabs.html:8
+msgid "Order History"
+msgstr "Bestellhistorie"
+
+#: templates/oscar/customer/partials/standard_tabs.html:14
+msgid "Address Book"
+msgstr "Adressbuch"
+
+#: templates/oscar/customer/partials/standard_tabs.html:17
+msgid "Email History"
+msgstr "Email Verlauf"
+
+#: templates/oscar/customer/partials/standard_tabs.html:20
+msgid "Product Alerts"
+msgstr "Produktbenachrichtigungen"
+
+#: templates/oscar/customer/partials/standard_tabs.html:23
+msgid "Notifications"
+msgstr ""
+
+#: templates/oscar/customer/profile/profile.html:13
+#: templates/oscar/dashboard/orders/order_detail.html:32
+#: templates/oscar/dashboard/orders/order_detail.html:43
+msgid "Email address"
+msgstr "E-Mail Adresse"
+
+#: templates/oscar/customer/profile/profile.html:32
+msgid "Date registered"
+msgstr ""
+
+#: templates/oscar/customer/profile/profile.html:38
+msgid "Change password"
+msgstr ""
+
+#: templates/oscar/customer/profile/profile.html:39
+msgid "Edit profile"
+msgstr "Profil ändern"
+
+#: templates/oscar/customer/profile/profile.html:40
+msgid "Delete profile"
+msgstr "Profil löschen"
+
+#: templates/oscar/customer/profile/profile.html:41
+msgid "Logout profile"
+msgstr "Abmelden"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:8
+#: templates/oscar/dashboard/catalogue/product_update.html:18
+msgid "Products"
+msgstr "Produkte"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:15
+#: templates/oscar/dashboard/layout.html:21
+#: templates/oscar/dashboard/layout.html:95
+#: templates/oscar/dashboard/offers/offer_detail.html:15
+#: templates/oscar/dashboard/offers/product_offer_delete.html:13
+#: templates/oscar/dashboard/offers/product_offer_list.html:9
+#: templates/oscar/dashboard/offers/product_offer_update.html:19
+#: templates/oscar/dashboard/orders/order_detail.html:14
+#: templates/oscar/dashboard/orders/order_list.html:16
+#: templates/oscar/dashboard/partners/partner_manage.html:12
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:43
+#, python-format
+msgid ""
+"\n"
+"                            You are currently editing a product variant of\n"
+"                            <a href=\"%(parent_url)s\">%(title)s</a>.\n"
+"                        "
+msgstr ""
+
+#: templates/oscar/dashboard/catalogue/product_update.html:58
+msgid "Sections"
+msgstr "Abschnitte"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:72
+#: templates/oscar/dashboard/catalogue/product_update.html:132
+msgid "Product details"
+msgstr "Produktdetails"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:78
+msgid "Categories"
+msgstr "Kategorien"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:85
+#: templates/oscar/dashboard/catalogue/product_update.html:175
+#: templates/oscar/dashboard/catalogue/product_update.html:284
+msgid "Attributes"
+msgstr "Eigenschaften"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:97
+#: templates/oscar/dashboard/catalogue/product_update.html:220
+msgid "Stock and pricing"
+msgstr "Bestand und Preise"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:111
+msgid "Upselling"
+msgstr "Upselling"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:117
+#: templates/oscar/dashboard/catalogue/product_update.html:349
+msgid "Search engine optimisation"
+msgstr "Suchmaschinenoptimierung"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:155
+msgid "Category"
+msgstr "Kategorie"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:177
+msgid "Product Type:"
+msgstr "Produkttyp"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:198
+msgid "Upload, change or remove images"
+msgstr "Bilder hochladen, ändern oder entfernen"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:209
+msgid ""
+"Drag images to re-order them. Space for additional images will appear when "
+"images are added."
+msgstr ""
+
+#: templates/oscar/dashboard/catalogue/product_update.html:226
+msgid "Currency"
+msgstr "Währung"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:227
+msgid "Partner"
+msgstr "Partner"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:228
+msgid "SKU"
+msgstr ""
+
+#: templates/oscar/dashboard/catalogue/product_update.html:230
+msgid "Num in stock"
+msgstr "Lagermenge"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:231
+msgid "Num allocated"
+msgstr "Reserviert"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:232
+msgid "Low stock threshold"
+msgstr "Schwellwert niedriger Bestand"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:234
+#: templates/oscar/dashboard/offers/product_offer_delete.html:18
+msgid "Delete?"
+msgstr "Löschen?"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:278
+msgid "Add variant"
+msgstr "Variante hinzufügen"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:285
+msgid "Stock records"
+msgstr "Lagereintrag"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:286
+msgid "Is public?"
+msgstr "Ist öffentlich?"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:309
+msgid "This product does not have any variants."
+msgstr "Dieses Produkt hat keine Varianten."
+
+#: templates/oscar/dashboard/catalogue/product_update.html:311
+msgid "One can't add variants to this product at this point."
+msgstr ""
+"Man kann mit diesem Status keine Varianten zu diesem Produkt hinzufügen."
+
+#: templates/oscar/dashboard/catalogue/product_update.html:313
+msgid "Please save the product before trying to add variants."
+msgstr "Bitte Produkt speichern bevor Varianten hinzugefügt werden."
+
+#: templates/oscar/dashboard/catalogue/product_update.html:315
+msgid "This is likely because this product still has stock records."
+msgstr "Wahrscheinlich hat das Produkt noch Lagereinträge"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:331
+msgid "Recommended products"
+msgstr "Empfohlene Produkte"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:376
+#: templates/oscar/dashboard/catalogue/product_update.html:380
+#: templates/oscar/dashboard/catalogue/product_update.html:383
+msgid "Saving..."
+msgstr "Speichern..."
+
+#: templates/oscar/dashboard/catalogue/product_update.html:377
+msgid "Save and add another variant"
+msgstr "Speichern und weitere Variante hinzufügen"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:381
+msgid "Save and continue editing"
+msgstr "Speichern und weiter bearbeiten"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:384
+msgid "Save"
+msgstr "Speichern"
+
+#: templates/oscar/dashboard/catalogue/product_update.html:388
+msgid "View on site"
+msgstr "Auf der Seite anzeigen"
+
+#: templates/oscar/dashboard/layout.html:37
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: templates/oscar/dashboard/layout.html:41
+msgid "Return to site"
+msgstr "Zurück zur Seite"
+
+#: templates/oscar/dashboard/layout.html:47
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: templates/oscar/dashboard/offers/offer_detail.html:7
+#, python-format
+msgid ""
+"\n"
+"        %(name)s | Offers\n"
+"    "
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:27
+msgid "Reinstating..."
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:27
+msgid "Reinstate offer"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:29
+msgid "Suspending..."
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:29
+msgid "Suspend offer"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:31
+msgid "Delete offer"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:54
+msgid "Offer currently available"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:56
+msgid "Offer not available due to restrictions!"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:59
+msgid "Total cost:"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:60
+msgid "Number of orders:"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:61
+msgid "Number of uses:"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:66
+msgid "Date created:"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:67
+msgid "Offer details"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:81
+msgid "Incentive"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:86
+msgid "Condition"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:91
+msgid "Restrictions"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/offer_detail.html:111
+msgid "Display options"
+msgstr "Anzeigeoptionen"
+
+#: templates/oscar/dashboard/offers/offer_detail.html:136
+msgid "Export to CSV"
+msgstr "CSV Export"
+
+#: templates/oscar/dashboard/offers/offer_detail.html:137
+msgid "Orders that used this offer"
+msgstr "Bestellungen, die dieses Angebot wahrnehmen"
+
+#: templates/oscar/dashboard/offers/offer_detail.html:143
+msgid "Order date"
+msgstr "Bestelldatum"
+
+#: templates/oscar/dashboard/offers/offer_detail.html:145
+msgid "Cost"
+msgstr "Kosten"
+
+#: templates/oscar/dashboard/offers/product_offer_delete.html:7
+msgid "Delete special price and slider option"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_delete.html:7
+msgid "Special price and slider options"
+msgstr "Sonderpreis und Slideroptionen"
+
+#: templates/oscar/dashboard/offers/product_offer_delete.html:30
+msgid "Are you sure you want to delete this special price and slider option?"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_detail.html:18
+msgid "Build a new condition"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_detail.html:23
+#, python-format
+msgid ""
+"\n"
+"        Ranges can be created and edited from within the <a href="
+"\"%(range_list_url)s\" target=\"_blank\">range dashboard</a>.\n"
+"        "
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_detail.html:31
+msgid "...or choose a pre-defined one"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_detail.html:36
+msgid "Continue to step 4"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:19
+#: templates/oscar/dashboard/offers/product_offer_update.html:34
+msgid "Create"
+msgstr ""
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:38
+msgctxt "offer"
+msgid "Display order"
+msgstr "Anzeigepriorität"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:39
+msgctxt "offer"
+msgid "Product"
+msgstr "Produkt"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:40
+msgctxt "offer"
+msgid "Special price"
+msgstr "Angebotspreis"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:41
+#: templates/oscar/dashboard/offers/product_offer_list.html:42
+msgctxt "offer"
+msgid "Offer slider"
+msgstr "Angebotsslider"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:41
+msgctxt "offer"
+msgid "Image"
+msgstr "Bild"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:42
+msgctxt "offer"
+msgid "Link"
+msgstr "Link"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:43
+#: templates/oscar/dashboard/offers/product_offer_list.html:44
+msgctxt "offer"
+msgid "Label"
+msgstr "Preisschild"
+
+#: templates/oscar/dashboard/offers/product_offer_list.html:44
+msgctxt "offer"
+msgid "Title"
+msgstr "Titel"
+
+#: templates/oscar/dashboard/orders/order_detail.html:8
+#, python-format
+msgid "Order %(number)s"
+msgstr "Bestellung %(number)s"
+
+#: templates/oscar/dashboard/orders/order_detail.html:15
+#: templates/oscar/dashboard/orders/order_list.html:10
+#: templates/oscar/dashboard/orders/order_list.html:17
+#: templates/oscar/dashboard/orders/order_list.html:24
+msgid "Orders"
+msgstr "Bestellungen"
+
+#: templates/oscar/dashboard/orders/order_detail.html:22
+#, python-format
+msgid "Order #%(number)s"
+msgstr "Bestellung #%(number)s"
+
+#: templates/oscar/dashboard/orders/order_detail.html:28
+msgid "Customer Information"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:36
+msgid "Customer checked out as a guest."
+msgstr "Kunde bestellte als Gast"
+
+#: templates/oscar/dashboard/orders/order_detail.html:50
+msgid "Customer has deleted their account."
+msgstr "Kunde hat sein Konto gelöscht"
+
+#: templates/oscar/dashboard/orders/order_detail.html:57
+msgid "Order information"
+msgstr "Bestellinformation"
+
+#: templates/oscar/dashboard/orders/order_detail.html:59
+msgid "Order Total"
+msgstr "Bestellung gesamt:"
+
+#: templates/oscar/dashboard/orders/order_detail.html:60
+#: templates/oscar/dashboard/orders/order_list.html:124
+msgid "Date of purchase"
+msgstr "Kaufdatum"
+
+#: templates/oscar/dashboard/orders/order_detail.html:61
+msgid "Time of purchase"
+msgstr "Uhrzeit des Kaufs"
+
+#: templates/oscar/dashboard/orders/order_detail.html:79
+msgid "Order Details"
+msgstr "Details der Bestellung"
+
+#: templates/oscar/dashboard/orders/order_detail.html:103
+#: templates/oscar/dashboard/orders/order_detail.html:632
+msgid "Discounts"
+msgstr "Rabatte"
+
+#: templates/oscar/dashboard/orders/order_detail.html:108
+#: templates/oscar/dashboard/orders/order_detail.html:680
+msgid "Notes"
+msgstr "Notizen"
+
+#: templates/oscar/dashboard/orders/order_detail.html:117
+msgid "Items ordered"
+msgstr "Position bestellt"
+
+#: templates/oscar/dashboard/orders/order_detail.html:127
+msgid "Line ID"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:132
+msgid "Supplier"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:133
+msgid "Supplier SKU"
+msgstr "Artikelnummer"
+
+#: templates/oscar/dashboard/orders/order_detail.html:134
+msgid "Price excl tax (before discounts)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:135
+msgid "Price inc tax (before discounts)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:186
+msgid "Basket total (excl. discounts)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:205
+msgid "Basket total (inc. discounts)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:213
+#: templates/oscar/order/partials/basket_totals.html:33
+msgid "Basket total"
+msgstr "Warenkorb gesamt:"
+
+#: templates/oscar/dashboard/orders/order_detail.html:251
+msgid "Shipping total"
+msgstr "Versandkosten"
+
+#: templates/oscar/dashboard/orders/order_detail.html:263
+msgid "Surcharge (name)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:291
+msgid "With selected lines"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:296
+msgid "Change line status to"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:300
+#: templates/oscar/dashboard/orders/order_detail.html:302
+#: templates/oscar/dashboard/orders/order_list.html:164
+msgid "choose new status"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:313
+msgid "Create shipping event"
+msgstr "Erstelle Versandvorgang"
+
+#: templates/oscar/dashboard/orders/order_detail.html:317
+#: templates/oscar/dashboard/orders/order_detail.html:319
+#: templates/oscar/dashboard/orders/order_detail.html:338
+#: templates/oscar/dashboard/orders/order_detail.html:340
+msgid "choose event type"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:326
+msgid "with reference"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:334
+msgid "Create payment event"
+msgstr "Zahlungsvorgang erstellen"
+
+#: templates/oscar/dashboard/orders/order_detail.html:347
+msgid "with amount"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:352
+msgid "Go!"
+msgstr "Los!"
+
+#: templates/oscar/dashboard/orders/order_detail.html:362
+#: templates/oscar/dashboard/orders/order_list.html:159
+msgid "Change order status"
+msgstr "Bestellstatus ändern"
+
+#: templates/oscar/dashboard/orders/order_detail.html:367
+#: templates/oscar/dashboard/orders/order_list.html:173
+msgid "Change status"
+msgstr "Änderungsstatus"
+
+#: templates/oscar/dashboard/orders/order_detail.html:370
+#: templates/oscar/dashboard/orders/order_list.html:177
+msgid "This order can't have its status changed."
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:378
+msgid "Status Changes"
+msgstr "Ändern"
+
+#: templates/oscar/dashboard/orders/order_detail.html:385
+msgid "From"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:386
+msgid "To"
+msgstr "An"
+
+#: templates/oscar/dashboard/orders/order_detail.html:402
+msgid "No status changes."
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:412
+msgid "Shipping Events"
+msgstr "Versandvorgänge"
+
+#: templates/oscar/dashboard/orders/order_detail.html:420
+#: templates/oscar/dashboard/orders/order_detail.html:466
+msgid "Event"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:421
+#: templates/oscar/dashboard/orders/order_detail.html:468
+msgid "Lines"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:422
+#: templates/oscar/dashboard/orders/order_detail.html:469
+#: templates/oscar/dashboard/orders/order_detail.html:572
+#: templates/oscar/dashboard/orders/order_detail.html:604
+msgid "Reference"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:434
+#, python-format
+msgid ""
+"\n"
+"                                                                %(title)s "
+"(quantity %(event_qty)s/%(total_qty)s)\n"
+"                                                            "
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:448
+msgid "No shipping events."
+msgstr "Keine Versandvorgänge."
+
+#: templates/oscar/dashboard/orders/order_detail.html:458
+msgid "Payment Events"
+msgstr "Zahlungsvorgänge"
+
+#: templates/oscar/dashboard/orders/order_detail.html:467
+#: templates/oscar/dashboard/orders/order_detail.html:603
+#: templates/oscar/dashboard/orders/order_detail.html:643
+msgid "Amount"
+msgstr "Menge"
+
+#: templates/oscar/dashboard/orders/order_detail.html:481
+msgid "Product:"
+msgstr "Produkt:"
+
+#: templates/oscar/dashboard/orders/order_detail.html:481
+msgid "quantity"
+msgstr "Menge"
+
+#: templates/oscar/dashboard/orders/order_detail.html:491
+msgid "No payment events."
+msgstr "Keine Zahlungsvorgänge."
+
+#: templates/oscar/dashboard/orders/order_detail.html:507
+msgid "Method name"
+msgstr "Methodenname"
+
+#: templates/oscar/dashboard/orders/order_detail.html:511
+msgid "Method code"
+msgstr "Methodencode"
+
+#: templates/oscar/dashboard/orders/order_detail.html:515
+msgid "Charge (incl tax)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:519
+msgid "Charge (excl tax)"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:562
+msgid "Payment sources"
+msgstr "Zahlungsquellen"
+
+#: templates/oscar/dashboard/orders/order_detail.html:568
+#: templates/oscar/dashboard/orders/order_detail.html:602
+msgid "Source"
+msgstr "Quelle"
+
+#: templates/oscar/dashboard/orders/order_detail.html:569
+msgid "Allocation"
+msgstr "Zahlung"
+
+#: templates/oscar/dashboard/orders/order_detail.html:570
+msgid "Amount debited"
+msgstr "Betrag gutgeschrieben"
+
+#: templates/oscar/dashboard/orders/order_detail.html:571
+msgid "Amount refunded"
+msgstr "Betrag erstattet"
+
+#: templates/oscar/dashboard/orders/order_detail.html:589
+msgid "No payment sources found for this order."
+msgstr "Keine Zahlungsquelle für diese Bestellung gefunden."
+
+#: templates/oscar/dashboard/orders/order_detail.html:597
+msgid "Transactions"
+msgstr "Überweisungen"
+
+#: templates/oscar/dashboard/orders/order_detail.html:639
+msgid "Voucher"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:640
+msgid "Offer name"
+msgstr "Angebote"
+
+#: templates/oscar/dashboard/orders/order_detail.html:641
+msgid "Frequency"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:669
+msgid "No discounts were applied to this order."
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:690
+msgid "Admin"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:713
+msgid "No notes available."
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_detail.html:724
+msgid "Save note"
+msgstr "Notiz speichern"
+
+#: templates/oscar/dashboard/orders/order_detail.html:725
+msgid "Notes are only editable for 5 minutes after being saved."
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:52
+#: templates/oscar/dashboard/orders/order_list.html:60
+msgid "Advanced Search"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:72
+msgid "Close"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:73
+msgid "Searching..."
+msgstr "Speichern..."
+
+#: templates/oscar/dashboard/orders/order_list.html:100
+#: templates/oscar/dashboard/orders/order_list.html:188
+msgid "Order Search Results"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:102
+#: templates/oscar/dashboard/orders/order_list.html:190
+msgid "All Orders"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:107
+msgid "Download selected orders as a CSV"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:108
+msgid "Download"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:118
+msgid "Number of items"
+msgstr ""
+
+#: templates/oscar/dashboard/orders/order_list.html:143
+msgid "Deleted"
+msgstr "Gelöscht"
+
+#: templates/oscar/dashboard/orders/order_list.html:172
+msgid "Changing..."
+msgstr "Ändern..."
+
+#: templates/oscar/dashboard/orders/order_list.html:193
+msgid "No orders found."
+msgstr "Keine Bestellungen gefunden."
+
+#: templates/oscar/dashboard/partners/partner_manage.html:6
+#: templates/oscar/dashboard/partners/partner_manage.html:13
+msgid "Partners"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:29
+msgid "Link a new user"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:30
+msgid "Link an existing user"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:36
+msgid "Users"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:42
+msgid "First name"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:43
+msgid "Last name"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:56
+msgid "Unlinking..."
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:56
+msgid "Unlink user"
+msgstr ""
+
+#: templates/oscar/dashboard/partners/partner_manage.html:64
+msgid "No users linked."
+msgstr ""
+
+#: templates/oscar/layout.html:35
+msgid "You are here"
+msgstr "Sie befinden sich hier"
+
+#: templates/oscar/offer/detail.html:20
+msgid " This offer is no longer available."
+msgstr ""
+
+#: templates/oscar/offer/detail.html:32
+msgid "What you need to do"
+msgstr ""
+
+#: templates/oscar/offer/list.html:21
+msgid "There are no site offers at the moment."
+msgstr ""
+
+#: templates/oscar/offer/list.html:37
+msgid "Browse products in offer"
+msgstr ""
+
+#: templates/oscar/order/partials/basket_totals.html:28
+msgid "Basket total (after discounts)"
+msgstr "Warenkorb gesamt (mit Rabatt)"
+
+#: templates/oscar/order/partials/basket_totals.html:113
+msgid "Order tax"
+msgstr ""
+
+#: templates/oscar/partials/form_fields.html:5
+msgid "Oops! We found some errors"
+msgstr ""
+
+#: templates/oscar/partials/form_fields.html:5
+msgid "please check the error messages below and try again"
+msgstr ""
+
+#: templates/oscar/partials/pagination.html:10
+msgid "previous"
+msgstr ""
+
+#: templates/oscar/partials/pagination.html:16
+#, python-format
+msgid ""
+"\n"
+"                        Page <span id=\"paginagion_page_number\">"
+"%(page_num)s</span> of %(total_pages)s\n"
+"                    "
+msgstr ""
+
+#: templates/oscar/partials/pagination.html:24
+msgid "next"
+msgstr ""
+
+#: templates/oscar/search/results.html:20
+msgid "Refine your search"
+msgstr ""
+
+#: templates/oscar/search/results.html:32
+#, python-format
+msgid ""
+"\n"
+"        Products matching \"%(q)s\"\n"
+"    "
+msgstr ""
+
+#: templates/oscar/search/results.html:47
+#, python-format
+msgid ""
+"\n"
+"                    Found <strong>%(num_results)s</strong> results, showing "
+"<strong>%(start)s</strong> to <strong>%(end)s</strong>.\n"
+"                "
+msgstr ""
+"\n"
+"                    Ergebnisse: <strong>%(num_results)s</strong>, zeige "
+"<strong>%(start)s</strong> bis <strong>%(end)s</strong>.\n"
+"                "
+
+#: templates/oscar/search/results.html:51
+#, python-format
+msgid ""
+"\n"
+"                    Found <strong>%(num_results)s</strong> result.\n"
+"                "
+msgid_plural ""
+"\n"
+"                    Found <strong>%(num_results)s</strong> results.\n"
+"                "
+msgstr[0] ""
+"\n"
+"                    Ergebnisse: <strong>%(num_results)s</strong>\n"
+"                "
+msgstr[1] ""
+"\n"
+"                    Ergebnisse: <strong>%(num_results)s</strong>\n"
+"                "
+
+#: templates/oscar/search/results.html:62
+msgid "Found <strong>0</strong> results."
+msgstr "Ergebnisse: <strong>0</strong>"
+
+#: templates/oscar/search/results.html:65
+#, python-format
+msgid ""
+"\n"
+"                        Did you mean <a href=\"%(search_url)s?q="
+"%(suggestion)s\">\"%(suggestion)s\"</a>?\n"
+"                    "
+msgstr ""
+
+#: user/admin.py:16
+msgid "Mitglieder und E-Mail Empfang"
+msgstr ""
+
+#: user/admin.py:21
+msgid "Responsibilities"
+msgstr "Zuständigkeiten"
+
+#: user/admin.py:42
+msgid "Empfänger"
+msgstr ""
+
+#: user/admin.py:46 user/models.py:64
+msgid "Communication event types"
+msgstr ""
+
+#: user/admin.py:50 user/models.py:73
+msgid "Customers"
+msgstr "Kunden"
+
+#: user/admin.py:54 user/models.py:83
+msgid "Product classes"
+msgstr ""
+
+#: user/models.py:23
+msgid "group"
+msgstr ""
+
+#: user/models.py:24
+msgid "groups"
+msgstr ""
+
+#: user/models.py:33
+msgid "Code"
+msgstr ""
+
+#: user/models.py:39
+msgid ""
+"Code can only contain the uppercase letters (A-Z), digits, and underscores, "
+"and can't start with a digit."
+msgstr ""
+
+#: user/models.py:49
+msgid "Members"
+msgstr "Mitglieder"
+
+#: user/models.py:50
+msgid ""
+"Zuständiger Seitenbenutzer. Empfängt Nachrichten aus dem "
+"Zuständigkeitsbereich dieser Organisationseinheit."
+msgstr ""
+
+#: user/models.py:58
+msgid ""
+"Empfängt Nachrichten aus dem Zuständigkeitsbereich dieser "
+"Organisationseinheit."
+msgstr ""
+
+#: user/models.py:65
+msgid ""
+"Kommunikationsvorgänge dieses Typs werden an die Mitglieder und Empfänger "
+"dieser Organisationseinheit als Kopie gesendet."
+msgstr ""
+
+#: user/models.py:74
+msgid ""
+"Kunden für die diese Organisationseinheit zuständig ist. "
+"Kommunikationsvorgänge an diese Kunden werden an die Empfänger dieser "
+"Organisationseinheit als Kopie gesendet."
+msgstr ""
+
+#: user/models.py:84
+msgid ""
+"Produktklassen für die diese Organisationseinheit zuständig ist. "
+"Kommunikationsvorgänge, die Produkte dieses Typs enthalten, werden an die "
+"Empfänger dieser Organisationseinheit als Kopie gesendet."
+msgstr ""
+
+#: user/models.py:115
+msgid "Organization unit"
+msgstr "Organisationseinheit"
+
+#: user/models.py:116
+msgid "Organization units"
+msgstr "Organisationseinheiten"
+
+#: user/models.py:129
+msgid "username"
+msgstr "Benutzername"
+
+#: user/models.py:131
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: user/models.py:134
+msgid "A user with that username already exists."
+msgstr "Es existiert bereits ein Benutzer mit dieser ID."
+
+#: user/models.py:139
+msgid "birth date"
+msgstr "Geburtsdatum"
+
+#: user/models.py:142
+msgid "Newsletter accepted"
+msgstr "Newsletter Akzeptiert"
+
+#: user/models.py:143
+msgid "User accepted to receive newsletter"
+msgstr "Kunde hat die Newsletter Eintragung akzeptiert"
+
+#~ msgid "Only used in custom events"
+#~ msgstr "Wird nur in Angepassten Kommunikationsevents verwendet"
+
+#~ msgid "Either full id or user and password needed"
+#~ msgstr "Ein Produkt und/oder ein Bild werden benötigt."
+
+#~ msgid "Username and password must have the same length"
+#~ msgstr "Benutzername und Passwort müssen die selbe Länge haben"
+
+#~ msgid "Categorized Flat Pages"
+#~ msgstr "Kategorisierte Flat Pages"
+
+#~ msgid "Attachment"
+#~ msgstr "Anhang"
+
+#~ msgid "Attachments"
+#~ msgstr "Anhänge"
+
+#~ msgid "Undefined"
+#~ msgstr "Undefiniert"
+
+#~ msgid "Legal"
+#~ msgstr "Rechtliches"
+
+#~ msgid "Categorized page"
+#~ msgstr "Kategorisierte Seite"
+
+#~ msgid "Categorized pages"
+#~ msgstr "Kategorisierte Seiten"
+
+#~ msgctxt "offer"
+#~ msgid "Label position"
+#~ msgstr "Preisschild-Position"
+
+#~ msgid "Components"
+#~ msgstr "Elemente"
+
+#~ msgid "Postcode restricted"
+#~ msgstr "Postleitzahlen eingeschränkt"
+
+#~ msgid "If True a valid postcode is needed to use this"
+#~ msgstr ""
+#~ "Wenn ja wird eine passende PLZ für die Verwendung dieser Methode benötigt"
+
+#~ msgid "Shipping total (before discounts)"
+#~ msgstr "Lieferkosten gesamt (ohne Rabatt)"
+
+#~ msgid "Shipping total (after discounts)"
+#~ msgstr "Lieferkosten gesamt (mit Rabatt)"
+
+#, fuzzy
+#~| msgid "Shipping total (before discounts)"
+#~ msgid "Shipping charge (before discounts)"
+#~ msgstr "Lieferkosten gesamt (ohne Rabatt)"
+
+#, fuzzy
+#~| msgid "Shipping total (after discounts)"
+#~ msgid "Shipping charge (after discounts)"
+#~ msgstr "Lieferkosten gesamt (mit Rabatt)"
+
+#, fuzzy
+#~| msgid "Shipping"
+#~ msgid "Shipping charge"
+#~ msgstr "Versand"
+
+#~ msgid "Amount Allocated"
+#~ msgstr "Menge Reserviert"
+
+#~ msgid ""
+#~ "Container Type (eg. glas bottle). You can create one in deposit menu."
+#~ msgstr "Gefäß"
+
+#~ msgid "Amount of Container (eg. bottles) of the Product."
+#~ msgstr "Anzahl Gefäße (zB. Flaschen) des Produkts."
+
+#~ msgid "Box deposit"
+#~ msgstr "Gebindepfand"
+
+#~ msgid "Box that contains the product. You can create one in deposit menu."
+#~ msgstr "Umverpackung (zB. Kiste)."
+
+#~ msgid "Container Deposit"
+#~ msgstr "Behälterpfand"
+
+#~ msgid "Box Deposit"
+#~ msgstr "Gebindepfand"
+
+#~ msgid "Packaging profile"
+#~ msgstr "Gebindeart"
+
+#~ msgid "Packaging profiles"
+#~ msgstr "Gebindearten"
+
+#~ msgid "volume in ml"
+#~ msgstr "Inhalt (ml)"
+
+#~ msgid "Is reusable"
+#~ msgstr "Mehrweg"
+
+#~ msgctxt "packaging"
+#~ msgid "Container"
+#~ msgstr "Gefäß"
+
+#~ msgctxt "packaging"
+#~ msgid "Containers"
+#~ msgstr "Gefäße"
+
+#~ msgid "Not allowed"
+#~ msgstr "Nicht möglich"
+
+#~ msgid "Shipping to %(postcode)s not possible"
+#~ msgstr "PLZ %(postcode)s wird nicht beliefert"
+
+#~ msgid "Could not validate shipping address"
+#~ msgstr "Versandadresse Fehlerhaft"
+
+#~ msgid "This is displayed left of the Slider"
+#~ msgstr "Wird links neben dem Slider angezeigt"
+
+#~ msgid ""
+#~ "This is displayed under the category menu that is shown under the Slider "
+#~ "at the mobile version"
+#~ msgstr ""
+#~ "Wird in der Mobil-Version unter dem Kategoriemenu angezeigt, welches sich "
+#~ "wiederum unter dem Slider befindet"
+
+#~ msgid "Special price"
+#~ msgstr "Sonderpreis"
+
+#~ msgid "Offer product"
+#~ msgstr "Angebotene Produkte"
+
+#, fuzzy
+#~| msgid "Offered Products"
+#~ msgid "Offer products"
+#~ msgstr "Angebotene Produkte"
+
+#~ msgctxt "offer"
+#~ msgid "Offer Slider"
+#~ msgstr "Angebotsslider"
+
+#~ msgid "1st floor"
+#~ msgstr "1. Obergeschoss"
+
+#~ msgid "1st basement"
+#~ msgstr "1. Untergeschoss"
+
+#~ msgid "2nd basement"
+#~ msgstr "2. Untergeschoss"
+
+#~ msgid "Choose bank account"
+#~ msgstr "Konto auswählen"
+
+#~ msgid "Purchase on account"
+#~ msgstr "Rechnung auf Überweisung"
+
+#~ msgid "Updated"
+#~ msgstr "letzte Änderungen"
+
+#, fuzzy
+#~| msgid "Product"
+#~ msgid "Product Plugin"
+#~ msgstr "Produkt"
+
+#~ msgid "Delivery Times List Plugin"
+#~ msgstr "Lieferzeiten Listen Plugin"
+
+#~ msgid "Delivery Times Form Plugin"
+#~ msgstr "Lieferzeiten Formular Plugin"
+
+#~ msgid "Delivery Times Checker Input"
+#~ msgstr "Lieferzeiten Checker Eingabefeld"
+
+#~ msgid "Delivery Times Checker Result"
+#~ msgstr "Lieferzeiten Checker Ergebnisse"
+
+#~ msgid "de"
+#~ msgstr "de"
+
+#~ msgid "Is public"
+#~ msgstr "Ist öffentlich?"
+
+#~ msgid "Order"
+#~ msgstr "Bestellung"
+
+#~ msgid "Go"
+#~ msgstr "Los"
+
+#~ msgid "Save for later"
+#~ msgstr "Für später speichern"
+
+#~ msgid "Refine by"
+#~ msgstr "Verfeinern nach"
+
+#~ msgid ""
+#~ "\n"
+#~ "                Found <strong>%(num_results)s</strong> result.\n"
+#~ "            "
+#~ msgid_plural ""
+#~ "\n"
+#~ "                Found <strong>%(num_results)s</strong> results.\n"
+#~ "            "
+#~ msgstr[0] ""
+#~ "\n"
+#~ "                    Ergebnisse: <strong>%(num_results)s</strong>\n"
+#~ "                "
+#~ msgstr[1] ""
+#~ "\n"
+#~ "                    Ergebnisse: <strong>%(num_results)s</strong>\n"
+#~ "                "
+
+#~ msgid "Variants:"
+#~ msgstr "Varianten:"
+
+#~ msgid "See all reviews"
+#~ msgstr "Alle Bewertungen ansehen"
+
+#~ msgid "Customer Reviews"
+#~ msgstr "Kundenbewertungen"
+
+#~ msgid "This product does not have any reviews yet"
+#~ msgstr "Dieses Produkt hat keine Bewertungen."
+
+#, fuzzy
+#~| msgid "Date of purchase"
+#~ msgid "Items purchased"
+#~ msgstr "Kaufdatum"
+
+#, fuzzy
+#~| msgid "Place order"
+#~ msgctxt "Buy again"
+#~ msgid "Re-order"
+#~ msgstr "Kostenpflichtig bestellen"
+
+#~ msgid "price:"
+#~ msgstr "Preis:"
+
+#~ msgid "Basket total:"
+#~ msgstr "Warenkorb gesamt:"
+
+#~ msgid "Shipping:"
+#~ msgstr "Versand:"
+
+#~ msgid "Order Total:"
+#~ msgstr "Bestellung gesamt:"
+
+#~ msgid "Shipping address:"
+#~ msgstr "Versandadresse:"
+
+#~ msgid "The team"
+#~ msgstr "Das Team"
+
+#~ msgid "Log In"
+#~ msgstr "Ausloggen"
+
+#~ msgid ""
+#~ "If you never logged into the new Website (starting 2021), please click at"
+#~ msgstr ""
+#~ "Wenn sie noch nie im neuen Shop angemeldet waren (Start: 2021), klicken "
+#~ "sie bitte auf"
+
+#~ msgid "0 to 20"
+#~ msgstr "0 bis 20"
+
+#~ msgid "20 to 40"
+#~ msgstr "20 bis 40"
+
+#~ msgid "40 to 60"
+#~ msgstr "40 bis 60"
+
+#~ msgid "60+"
+#~ msgstr "60+"
+
+#~ msgid "Confirmation of order %(number)s"
+#~ msgstr "Bestätigung der Bestellung %(number)s"
+
+#~ msgid "You could be missing out on offers!"
+#~ msgstr "Sie könnten Angebote verpassen!"
+
+#~ msgid "pick up in store"
+#~ msgstr "Abholung im Geschäft"
+
+#~ msgid "Price (excl. tax)"
+#~ msgstr "Preis (exkl. Steuer)"
+
+#~ msgid "Delivery method"
+#~ msgstr "Liefermethode"
+
+#~ msgid "Payment method"
+#~ msgstr "Zahlungsmethode"
+
+#, fuzzy
+#~| msgid "Customer"
+#~ msgid "Customer rating"
+#~ msgstr "Kunde"
+
+#~ msgid "Cash or EC-Card payment"
+#~ msgstr "Barzahlung oder EC-Kartenzahlung vor Ort"
+
+#~ msgid "Sepa"
+#~ msgstr "SEPA"
+
+#~ msgid "Transfer"
+#~ msgstr "Überweisung"
+
+#~ msgid "Overview"
+#~ msgstr "Übersicht"
+
+#~ msgid "Box"
+#~ msgstr "Umverpackung"
+
+#~ msgid "payment lock"
+#~ msgstr "Zahlungsmöglichkeiten eingeschränkt"
+
+#~ msgid "If payment is locked, not all payment methods will be available"
+#~ msgstr ""
+#~ "Wenn die Zahlungsmöglichkeiten eingeschränkt sind, können sie nicht alle "
+#~ "Methoden wählen"
+
+#~ msgid "All products"
+#~ msgstr "Alle Produkte"
+
+#, fuzzy
+#~| msgid "Specialprice"
+#~ msgid "Specialprice Startdate"
+#~ msgstr "Sonderpreis"
+
+#~ msgid "Disabled"
+#~ msgstr "Deaktiviert"
+
+#~ msgid "Manage boxes and containers"
+#~ msgstr "Kisten und Flaschen verwalten"
+
+#, fuzzy
+#~| msgid "Product"
+#~ msgid "New Product"
+#~ msgstr "Produkt"
+
+#, fuzzy
+#~| msgid "Offered Products"
+#~ msgid "Search Products"
+#~ msgstr "Angebotene Produkte"
+
+#~ msgid "Deposit (import)"
+#~ msgstr "Pfand (importiert)"
+
+#~ msgid "debit"
+#~ msgstr "Lastschrift"
+
+#~ msgid "Boxes"
+#~ msgstr "Umverpackungen"
+
+#~ msgid "Plus"
+#~ msgstr "zzgl."
+
+#~ msgid "cash"
+#~ msgstr "Barzahlung"
+
+#~ msgid "PayPal"
+#~ msgstr "PayPal"
+
+#~ msgid "Box Types"
+#~ msgstr "Gebindetypen"
+
+#~ msgid "Permission denied!"
+#~ msgstr "Zugriff verweigert!"
+
+#~ msgid "We're sorry but you are not permitted to access this page."
+#~ msgstr "Verzeihung aber sie dürfen nicht auf diese Seite zugreifen."
+
+#~ msgid "Page not found"
+#~ msgstr "Seite nicht gefunden"
+
+#~ msgid "Page not found!"
+#~ msgstr "Seite nicht gefunden!"
+
+#~ msgid "We're sorry but the page you are looking for can't be found."
+#~ msgstr ""
+#~ "Entschuldigung, die Seite, die sie suchen kann nicht gefunden werden."
+
+#, fuzzy
+#~| msgid "Shipping"
+#~ msgid "2. Shipping method"
+#~ msgstr "Versand"
+
+#, fuzzy
+#~| msgid "Shipping"
+#~ msgid "Shipping details"
+#~ msgstr "Versand"
+
+#, fuzzy
+#~| msgid "Shipping"
+#~ msgid "Shipping methods"
+#~ msgstr "Versand"
+
+#~ msgid "Tour Blocklist"
+#~ msgstr "Touren Blockliste"
+
+#~ msgid "Tour Blocklists"
+#~ msgstr "Touren Blocklisten"
+
+#~ msgid "Global Blocklist"
+#~ msgstr "Globale Blockliste"
+
+#~ msgid "Global Blocklists"
+#~ msgstr "Globale Blocklisten"

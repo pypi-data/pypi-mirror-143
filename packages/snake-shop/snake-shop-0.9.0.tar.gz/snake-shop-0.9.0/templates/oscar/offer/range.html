@@ -1,0 +1,33 @@
+{% extends "oscar/layout.html" %}
+{% load basket_tags %}
+{% load category_tags %}
+{% load i18n %}
+{% load product_tags %}
+
+{% block title %}
+    {{ range.name }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item active" aria-current="page">{{ range.name }}</li>
+{% endblock breadcrumbs %}
+
+{% block headertext %}{{ range.name }}{% endblock %}
+
+{% block content %}
+    {% if range.description %}
+        {{ range.description|safe }}
+    {% endif %}
+    {% if products %}
+        <section>
+            <div>
+                <ol class="row list-unstyled ml-0 pl-0">
+                    {% include 'oscar/catalogue/partials/browse_products.html' %}
+                </ol>
+                {% include "oscar/partials/pagination.html" %}
+            </div>
+        </section>
+    {% else %}
+        <p class="nonefound">{% trans "No products found." %}</p>
+    {% endif %}
+{% endblock content %}

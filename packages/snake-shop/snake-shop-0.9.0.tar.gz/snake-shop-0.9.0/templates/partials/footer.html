@@ -1,0 +1,134 @@
+{% load static %}
+{% load thumbnail %}
+
+<style>
+  .social_link {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border-radius: 50%;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+.payment_method_badge {
+  background-color: white;
+  width: 30px;
+  height: 18px;
+  display: flex;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 2px;
+  padding-left: 2px;
+  border-radius: 2px;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+</style>
+
+<footer class="mt-5">
+  <div class="container-fluid m-0 mt-5 py-3"
+    style="background-color: #8c8c8c; color: #ffffff;">
+    <div class="container">
+      <div class="row justify-content-between no-gutters">
+        <div class="col col-6 order-5 col-md-3 order-md-1">
+          <div class="row">
+            <div class="col col-5">
+              <div class="mb-2">
+                <a href="/de/">
+                  <img width=150 height=150 src="{% thumbnail CONFIG.logo_square 150x150 crop %}" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            {% if CONFIG.sociallinks.exists %}
+              <div class="col col-12">
+                <h5>Folge uns</h5>
+                {% for social_link in CONFIG.sociallinks.all %}
+                  <a class="social_link" href="{{ social_link.url }}">
+                    {{ social_link.get_html|safe }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="col col-12"></div>
+            <div class="col col-12">
+              <h5>Zahlungsarten</h5>
+              <span class="payment_method_badge">
+                <i class="fas fa-money-bill-wave m-auto" style="color: #757575;"></i>
+              </span>
+              <span class="payment_method_badge">
+                <img class="w-100 h-100" src="/static/svg/ec.svg">
+              </span>
+              <span class="payment_method_badge">
+              <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Single_Euro_Payments_Area_logo.svg">
+              </span>
+              <span class="payment_method_badge">
+                <img class="w-100 h-100" src="/static/svg/contactless.svg">
+              </span>
+            </div>
+            <div class="col col-12"></div>
+          </div>
+        </div>
+        <div class="col col-6 order-1 col-sm-3 col-md-2 order-md-2 mt-3">
+          {% if pages.company %}
+          <h5>Unternehmen</h5>
+          <div class="list-group">
+          {% for page in pages.company %}
+            <a href="{{ page.get_absolute_url }}" class="text-light">{{ page.title }}</a>
+          {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="col col-6 order-2 col-sm-3 col-md-2 order-md-3 mt-3">
+          <h5>Liefergebiete / Lieferzeiten</h5>
+          <div class="row no-gutters text-center">
+            <div class="col-12 bg-light rounded px-1 border col-auto">
+              {% if delivery_possibility == 'possible' %}
+                <a class="btn-link text-success text-nowrap w-100 h-100 d-block" href="{% url 'delivery:delivery-times-form' %}" role="button">
+                  <i class="fas fa-check"></i> Lieferung möglich
+                </a>
+              {% elif delivery_possibility == 'possible_manual' %}
+                <a class="btn-link text-warning text-nowrap w-100 h-100 d-block" href="{% url 'delivery:delivery-times-form' %}" role="button">
+                  <i class="fas fa-check"></i> Lieferung möglich
+                </a>
+              {% elif delivery_possibility == 'impossible' %}
+                <a class="btn-link text-danger text-nowrap w-100 h-100 d-block" href="{% url 'delivery:delivery-times-form' %}" role="button">
+                  <i class="fas fa-times"></i> Lieferung nicht möglich
+                </a>
+              {% else %}
+                <a class="btn-link text-nowrap w-100 h-100 d-block" href="{% url 'delivery:delivery-times-form' %}" role="button">
+                  <i class="fas fa-question"></i> hier überprüfen
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col col-6 order-4 col-sm-3 col-md-2 order-md-5 mt-3">
+          <div class="row">
+            <div class="col col-12">
+              {% if pages.legal %}
+                <h5>Rechtliches</h5>
+                <div class="list-group">
+                  {% for page in pages.legal %}
+                    <a href="{{ page.get_absolute_url }}" class="text-light">{{ page.title }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid m-0" style="background-color: #4d4d4d; color: #b9b9b9;">
+    <div class="container">
+      <div class="row">
+        <div class="col ml-auto mr-auto">
+          <p class="my-2" style="text-align: center;">©{{ now.year }}, {{ CONFIG.company_name|safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

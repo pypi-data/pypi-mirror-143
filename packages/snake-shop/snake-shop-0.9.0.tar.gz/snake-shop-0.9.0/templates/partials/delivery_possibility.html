@@ -1,0 +1,17 @@
+{% if delivery_possibility == 'possible' %}
+  <a class="btn-link text-success text-nowrap" href="/de/lieferzeiten/" role="button">
+    <i class="fas fa-check"></i> Lieferung möglich
+  </a>
+{% elif delivery_possibility == 'possible_manual' %}
+  <a class="btn-link text-warning text-nowrap" href="/de/lieferzeiten/" role="button">
+    <i class="fas fa-check"></i> Lieferung möglich
+  </a>
+{% elif delivery_possibility == 'impossible' %}
+  <a class="btn-link text-danger text-nowrap" href="/de/lieferzeiten/" role="button">
+    <i class="fas fa-times"></i> Lieferung nicht möglich
+  </a>
+{% else %}
+  <a class="btn-link text-nowrap" href="/de/lieferzeiten/" role="button">
+    <i class="fas fa-question"></i> hier überprüfen
+  </a>
+{% endif %}

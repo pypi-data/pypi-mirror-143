@@ -1,0 +1,35 @@
+{% load category_menu_tags %}
+{% load custom_tags %}
+
+{% for form in filter_forms %}
+  {% if form.fields %}
+    {% sidebar_block_collapsed form.code as sidebar_block_collapsed %}
+    <div class="sidebar-block col-12 border rounded mb-2 pb-2">
+      <div class="row">
+        <button class="btn btn-nofocus sidebar-toggler w-100" type="button" data-toggle="collapse" data-target="#sidebar-{{ form.code }}" data-block="{{ form.code }}" aria-expanded="true" aria-controls="sidebar-packaging">
+          <div class="row no-gutters">
+            <div class="col text-left">
+              <h3 class="condensed bold">{{ form.name }}</h3>
+            </div>
+            <div class="col text-right">
+              <i class="fas fa-caret-up rotate{% if sidebar_block_collapsed %} rotated{% endif %}"></i>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div id="sidebar-{{ form.code }}" class="row collapse show">
+        <div class="container-fluid condensed">
+          {% include 'oscar/partials/form_fields.html' with slim=True %}
+        </div>
+      </div>
+    </div>
+    <script id="temporary">
+    	initializeSidebarForm();
+    	$('#num_results').html({{ num_products }});
+    	{% if sidebar_block_collapsed %}
+    		$('#sidebar-{{ form.code }}').removeClass('show');
+    	{% endif %}
+    	$('#temporary').remove();
+    </script>
+  {% endif %}
+{% endfor %}

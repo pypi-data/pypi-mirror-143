@@ -1,0 +1,37 @@
+<p><b>Hallo und willkommen auf <a href="{{ request.scheme }}://{{ request.get_host }}">{{request.get_host}}</a></b></p><br/ >
+
+<p>Vielen Dank dass Sie sich für uns entschieden haben.</p>
+<p>Wir wünschen Ihnen viel Spaß beim Bestellen in unserem Online Shop.</p>
+
+<p>Ihr {{ CONFIG.company_short_name }} Team</p><br/ ><br/ >
+
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        {{ CONFIG.company_name }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ CONFIG.company_street }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ CONFIG.company_postcode }} {{ CONFIG.company_city }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ CONFIG.company_support_email }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Tel : {{ CONFIG.company_support_email }}
+      </td>
+    </tr>
+  </tbody>
+</table>

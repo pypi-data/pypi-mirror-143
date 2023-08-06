@@ -1,0 +1,14 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% purchase_info_for_product request product as session %}
+{% if product.get_kiloprice %}
+  <span class="badge badge-info" >
+    {{ product.get_kiloprice|currency:session.price.currency }}/{% trans 'kg' %}
+  </span>
+{% elif product.get_literprice %}
+  <span class="badge badge-info" >
+    {{ product.get_literprice|currency:session.price.currency }}/{% trans 'Liter' %}
+  </span>
+{% endif %}

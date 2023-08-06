@@ -1,0 +1,97 @@
+{% extends "oscar/checkout/checkout.html" %}
+
+{% load currency_filters %}
+{% load i18n %}
+{% load shipping_tags %}
+{% load static %}
+
+{% block styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static "oscar/js/bootstrap4-datetimepicker/tempusdominus-bootstrap-4.min.css" %}" />
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script src="{% static "oscar/js/bootstrap4-datetimepicker/moment-with-locales.min.js" %}"></script>
+  <script src="{% static "oscar/js/bootstrap4-datetimepicker/tempusdominus-bootstrap-4.min.js" %}"></script>
+{% endblock %}
+
+{% block title %}
+    {% trans "Shipping method" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'oscar/checkout/nav.html' with step=2 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Shipping method" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+{% block shipping_address %}{% endblock %}
+{% block payment_method %}{% endblock %}
+
+{% block shipping_method %}
+    <div class="container">
+    {% for method in method_forms %}
+      <form method="post" action="{% url 'checkout:shipping-method' %}">{% csrf_token %}
+        <div class="row border-bottom py-5 d-flex align-items-center">
+            <div class="col-12">
+                <h3>{{ method.method }}</h3>
+                {% if method.hint %}
+                  <div class="alert alert-warning">{{ method.hint }}</div>
+                {% endif %}
+                {% if method.description %}
+                  <p>{{ method.description|safe }}</p>
+                {% endif %}
+                {% if method.is_discounted %}
+                  <small>
+                    {% shipping_charge_discount method basket as discount %}
+                    {% blocktrans with amount=discount|currency:basket.currency name=method.discount_name %}
+                        This includes a discount of <strong>{{ amount }}</strong> as
+                        your basket qualifies for the <strong>{{ name }}</strong> offer.
+                    {% endblocktrans %}
+                  </small>
+                {% endif %}
+            </div>
+            {% if method.floor_number and method.is_allowed %}
+              <div class="col-12 col-md mb-1">
+                {{ method.floor_number }}
+              </div>
+            {% endif %}
+            {% if method.deliveries and method.is_allowed %}
+              <div class="col-12 col-md mb-1">
+                {{ method.deliveries }}
+              </div>
+            {% endif %}
+            {% if method.delivery_date or method.delivery_time and method.is_allowed %}
+              <div class="col-12 col-md mb-1">
+                <span class="float-left mr-3">
+                  {% if method.delivery_date and method.is_allowed %}
+                    {{ method.delivery_date }}
+                  {% endif %}
+                </span>
+                <span class="float-left mr-3">
+                  {% if method.delivery_time and method.is_allowed %}
+                    {{ method.delivery_time }}
+                  {% endif %}
+                </span>
+              </div>
+            {% endif %}
+            <div class="col-12 col-lg-auto ml-auto">
+              {% if method.is_allowed %}
+                <input type="hidden" name="method_code" value="{{ method.code }}" />
+                <button type="submit" class="btn btn-lg btn-primary float-right">
+                  <!-- {% shipping_charge method basket as charge %} -->
+                  Weiter<!--  (+{{ charge.incl_tax|currency:basket.currency }}) -->
+                </button>
+              {% else %}
+                <span class="btn btn-lg btn-danger disabled float-right">
+                  {{ method.disallowed_reason }}
+                </span>
+              {% endif %}
+            </div>
+        </div>
+      </form>
+    {% endfor %}
+    </div>
+{% endblock shipping_method %}

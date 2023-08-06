@@ -1,0 +1,88 @@
+{% extends "oscar/checkout/checkout.html" %}
+{% load i18n %}
+{% load currency_filters %}
+{% block title %}
+    {% trans "Payment details" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'oscar/checkout/nav.html' with step=3 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Enter payment details" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+{% block shipping_address %}{% endblock %}
+{% block shipping_method %}{% endblock %}
+{% block payment_method %}{% endblock %}
+
+{% block payment_details %}
+  {% block payment_details_content %}
+    <div class="container-fluid">
+    {% for method in providers %}
+    <form method="post" action="{% url 'checkout:preview' %}">{% csrf_token %}
+      <div class="row border-bottom py-3 d-flex align-items-center">
+          <div class="col-12 text-nowrap">
+              <h2>{% if method.code == 'sepa' %}SEPA-Bankeinzug{% else %}{{ method.name }}{% endif %}</h2>
+              {% if method.hint %}
+                  <div class="alert alert-warning">{{ method.hint }}</div>
+                {% endif %}
+              {% if method.is_discounted %}
+                  <small>
+                      {% blocktrans with amount=discount|currency:basket.currency name=method.discount_name %}
+                          This includes a discount of <strong>{{ amount }}</strong> as
+                          your basket qualifies for the <strong>{{ name }}</strong> offer.
+                      {% endblocktrans %}
+                  </small>
+              {% endif %}
+          </div>
+          <div class="col-12 col-md">
+            {% if method.is_allowed %}
+              <div class="row">
+                <div class="col-12">
+                  {{ method.as_ul }}
+                  {% if method.description %}
+                    <div class="alert alert-success m-0" role="alert" style="background-color: #d4edda4a;">
+                      {{ method.description }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+          {% if method.form and method.is_allowed %}
+            <div class="col-12 col-md-auto">
+                <div class="input-group justify-content-center">
+                  {{ method.form }}
+                  <div class="input-group-append">
+                    <a class="btn btn-secondary text-warning" href="{% url 'customer:bankaccount-create' %}?next={{ request.path }}" role="button"><i class="fas fa-plus"></i> Neues Konto</a>
+                  </div>
+                </div>
+            </div>
+          {% endif %}
+          <div class="col-12 col-lg-3 text-nowrap">
+            {% if method.is_allowed %}
+              <button name="method_code" value="{{ method.code }}" type="submit" class="btn btn-lg btn-block btn-primary float-right">
+                {{ method.name }} wählen
+              </button>
+            {% else %}
+              <span class="btn btn-lg btn-danger disabled float-right">
+                {{ method.disallowed_reason }}
+              </span>
+            {% endif %}
+          </div>
+      </div>
+    </form>
+    {% endfor %}
+    {% if providers|length < max_providers %}
+    <div class="row py-3 d-flex align-items-center">
+        <div class="col-10 text-nowrap">
+          <div class="alert alert-warning m-0" role="alert">
+            Für weitere Zahlungskonditionen kontaktieren Sie uns unter <a href="mailto:{{ CONFIG.company_support_email }}?subject=Anfrage Zahlungskonditionen">{{ CONFIG.company_support_email }}</a>
+          </div>
+        </div>
+    </div>
+    {% endif %}
+    </div>
+  {% endblock payment_details_content %}
+{% endblock payment_details %}

@@ -1,0 +1,36 @@
+{% extends "oscar/layout.html" %}
+{% load i18n static %}
+
+{% block title %}
+    {{ flatpage.title}} | {{ block.super }}
+{% endblock %}
+
+{% block header%}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active" aria-current="page">{{ flatpage.title }}</li>
+{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        {% if user.is_staff %}
+            <a class="float-right d-none d-md-block" href="{% url 'dashboard:page-update' pk=flatpage.id %}"><small><i class="fas fa-pencil-alt"></i> {% trans "Edit this page" %}</small></a>
+        {% endif %}
+        <h1>{{ flatpage.title }}</h1>
+    </div>
+    <article>{{ flatpage.content }}</article>
+    {% if flatpage.attachments.all %}
+    <table class="table table-hover">
+      <tbody>
+        {% for attachment in flatpage.attachments.all %}
+        <tr>
+          <th scope="row">{{ attachment.title }}</th>
+          <td><a href="{{ attachment.file.url }}">Download</a></td>
+          <td>{{ attachment.file.size|filesizeformat }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "oscar/layout.html" %}
+
+
+{% load i18n %}
+{% load product_tags %}
+
+{% block title %}
+{% trans "Offers" %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item active" aria-current="page">{% trans "Offers" %}</li>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Offers" %}
+{% endblock %}
+
+{% block content %}
+    {% if not offers %}
+        <p>{% trans "There are no site offers at the moment." %}</p>
+    {% else %}
+        {% for offer in offers %}
+        <h2>{{ offer.name }}</h2>
+        {% if offer.description %}
+            <p>{{ offer.description|safe }}</p>
+        {% endif %}
+        {% if offer.has_products %}
+            <ul class="row list-unstyled mx-0">
+              {% for product in offer.products|slice:":8" %}
+                <li id="product{{ product.upc }}" class="col-12 col-md-6 col-lg-3 px-1 px-md-3 load_product">
+                  {% include 'oscar/catalogue/partials/product.html' %}
+                </li>
+              {% endfor %}
+            </ul>
+            <p>
+                <a class="btn btn-secondary" href="{% url 'offer:detail' slug=offer.slug %}">{% trans "Browse products in offer" %}</a>
+            </p>
+        {% endif %}
+        <hr/>
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

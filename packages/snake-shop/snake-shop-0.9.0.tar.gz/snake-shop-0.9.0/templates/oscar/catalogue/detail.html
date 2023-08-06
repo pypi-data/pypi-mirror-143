@@ -1,0 +1,230 @@
+{% extends "oscar/layout.html" %}
+
+{% load history_tags %}
+{% load currency_filters %}
+{% load reviews_tags %}
+{% load product_tags %}
+{% load display_tags %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+
+
+{% block title %}
+    {{ product.get_meta_title }} | {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ product.get_meta_description }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  {% with category=product.get_categories.first %}
+    {% for c in category.get_ancestors_and_self %}
+      <li class="breadcrumb-item"><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>
+    {% endfor %}
+    <li class="breadcrumb-item active" aria-current="page">{{ product.get_title }}</li>
+
+    {% get_back_button as backbutton %}
+      {% if backbutton %}
+        <li class="ml-auto">
+          <a href="{{ backbutton.url }}">
+            <i class="fas fa-arrow-left"></i> {{ backbutton.title }}
+          </a>
+        </li>
+      {% endif %}
+  {% endwith %}
+{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+{% purchase_info_for_product request product as session %}
+<div class="row">
+  <div class="col-12 col-md-6 p-0">
+    {% include "oscar/catalogue/partials/gallery.html" %}
+  </div>
+  <div class="col-12 col-md-6 p-0">
+    <div id="price-info-block" class="row text-left no-gutters p-3 p-md-5 condensed h-100 rounded" style="background-color:#f0f0f0;border-bottom: 2px solid lightgray;">
+        <div class="col-12">
+          <h3 class="condensed text-center text-md-left bold m-0" style="font-size:1.5rem;min-height:40px;">
+            <a class="text-dark" href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">
+              {{ product.get_title }}
+            </a>
+          </h3>
+          {% if user.is_staff %}
+            <a class="position-absolute" style="top:0;right:0;" href="{% url 'dashboard:catalogue-product' pk=product.id %}">
+                <i class="fas fa-pencil-alt fa-2x text-danger"></i>
+            </a>
+          {% endif %}
+        </div>
+        <div class="col-12 text-center text-md-left mt-2 mt-md-auto" style="font-size:1.5rem;line-height:1;">
+          {% if product.reusability_label %}
+            {{ product.reusability_label }}
+          {% else %}
+            &nbsp;
+          {% endif %}
+        </div>
+        <div class="col-12 condensed text-xs text-center text-md-left mb-auto">
+          {% if product.get_deposit and not hide_price %}
+            inkl. MwSt. zzgl Pfand: {{ product.get_deposit|currency:session.price.currency }}
+          {% else %}
+            &nbsp;
+          {% endif %}
+        </div>
+        <div class="col-12 mt-2 mt-md-auto">
+          <div class="row no-gutters">
+            {% if not hide_price %}
+            <div class="col-4 bold" style="font-size:1.3rem;">
+              Preis:
+            </div>
+            <div class="col-3 bold text-right" style="font-size:1.3rem;">
+              <span style="{% if session.price.has_special_price %}text-decoration:line-through;{% endif %}">
+                {{ session.price.base_price.incl|currency:session.price.currency }}
+              </span>
+            </div>
+            <div class="col-3 bold text-right text-red" style="font-size:1.3rem;">
+              {% if session.price.has_special_price %}
+                <span style="color:red;">
+                  {{ session.price.special_price.incl|currency:session.price.currency }}
+                </span>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-12 mb-auto">
+          <div class="row no-gutters">
+            <div class="col-auto mr-1 text-xs">
+              {% if session.price.volume_price %}
+                Literpreis:
+              {% elif session.price.weight_price %}
+                Kilopreis:
+              {% endif %}
+            </div>
+            <div class="col-auto text-xs">
+              {% if session.price.volume_price %}
+                {{ session.price.volume_price|currency:session.price.currency }}/{% trans 'Liter' %}
+              {% elif session.price.weight_price %}
+                {{ session.price.weight_price|currency:session.price.currency }}/{% trans 'kg' %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-2 my-md-auto">
+          <div class="row">
+            {% if not product.is_parent and not product.has_options %}
+              {% include "oscar/catalogue/partials/add_to_basket_form_compact.html" %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-12 mt-5">
+    {% if product.description %}
+      <div id="product_description" class="sub-header">
+          <h2 class="border-bottom">{% trans "Product Description" %}</h2>
+      </div>
+      <p>{{ product.description|safe }}</p>
+    {% endif %}
+  </div>
+  <div class="col-12 mt-3">
+    <div class="sub-header">
+      <h2 class="border-bottom">{% trans "Product Information" %}</h2>
+    </div>
+    <table class="table table-striped">
+      {% if product.upc %}
+      <tr>
+        <th>{% trans "UPC" %}</th><td>{{ product.upc }}</td>
+      </tr>
+      {% endif %}
+      <tr>
+        <th>{% trans "Product Type" %}</th><td>{{ product.get_product_class.name }}</td>
+      </tr>
+      {% if session.price.exists and not hide_price %}
+        {% if session.price.is_tax_known %}
+          <tr>
+            <th>{% trans "Price (incl. tax)" %}</th>
+            <td>{{ session.price.incl_tax_excl_deposit|currency:session.price.currency }}</td>
+          </tr>
+        {% endif %}
+        {% if session.price.deposit_incl_tax %}
+          <tr>
+            <th>Pfand (inkl. Steuer)</th>
+            <td>{{ session.price.deposit_incl_tax|currency:session.price.currency }}</td>
+          </tr>
+        {% endif %}
+      {% endif %}
+      {% for key, value in product.attached_values.items %}
+        <tr>
+          <th>{{ key }}</th>
+          <td>{{ value }}</td>
+        </tr>
+      {% endfor %}
+      {% for av in product.get_attribute_values %}
+        {% if av.attribute.product_details_enabled %}
+          <tr>
+            <th>{{ av.attribute.name }}</th>
+            <td>
+              {% if av.value_as_html is True or av.value_as_html is False %}
+                {% with av.value_as_html as value %}
+                  {% include 'partials/boolean_value.html' %}
+                {% endwith %}
+              {% else %}
+                {{ av.value_as_html }}
+              {% endif %}
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+      {% iffeature "reviews" %}
+          <tr>
+            <th>{% trans "Number of reviews" %}</th>
+            <td>{{ product.num_approved_reviews }}</td>
+          </tr>
+      {% endiffeature %}
+    </table>
+
+    {% if request.user.is_system_admin %}
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fas fa-user-lock"></i> Preismatrix
+      </button>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+              {% with price=session.price %}
+                {% include './partials/price_matrix.html' %}
+              {% endwith %}
+            </table>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% with recommended_products=product.sorted_recommended_products|slice:":6" %}
+    {% if recommended_products %}
+      <div class="col-12 mt-5">
+        <div class="sub-header">
+            <h2 class="border-bottom">{% trans "Recommended items" %}</h2>
+        </div>
+        <ul class="row list-unstyled mx-0">
+          {% for product in recommended_products %}
+            <div class="col-12 col-md-6 col-lg-4">{% render_product product %}</div>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="col-12 mt-5">
+    {% recently_viewed_products current_product=product %}
+  </div>
+</div>
+{% endblock content %}
+
+{% block extrascripts %}
+    {{ block.super }}
+{% endblock %}

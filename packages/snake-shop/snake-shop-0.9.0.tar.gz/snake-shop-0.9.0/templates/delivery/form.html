@@ -1,0 +1,100 @@
+{% extends "oscar/layout.html" %}
+{% load i18n %}
+
+{% block extrastyles %}
+{% endblock %}
+
+{% block extrascripts %}
+{% endblock %}
+
+{% block title %}
+    Liefergebiete / Lieferzeiten | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active" aria-current="page">Liefergebiete / Lieferzeiten</li>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+  <form method="GET">
+    <div class="input-group">
+      <h3 class="my-auto mr-3">Prüfen Sie hier Ihre Postleitzahl:</h3> {{ form.postcode }}
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit" data-loading-text="Prüfe...">
+          Prüfen <i class="fas fa-caret-right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <div class="card-body">
+  {% if addresses %}
+    {% for address in addresses %}
+      {% with deliveries=address.next_deliveries %}
+        <div class="row mb-3 px-3">
+            <div class="col-12">
+              <b>
+                {% if address.pk %}
+                  <i>Lieferungen an Ihre Adresse:</i><br />
+                  {% if deliveries %}
+                    <span class="text-success">
+                      <i class="fas fa-check"></i> {{ address }}
+                    </span>
+                  {% else %}
+                    <span class="text-danger">
+                      <i class="fas fa-times"></i> {{ address }}
+                    </span>
+                  {% endif %}
+                
+                {% else %}
+                  <i>Lieferungen an Ihre ausgewählte Postleitzahl:</i><br />
+                  {% if deliveries %}
+                    <span class="text-warning">
+                      <i class="fas fa-check"></i> {{ address }}
+                    </span>
+                  {% else %}
+                    <span class="text-danger">
+                      <i class="fas fa-times"></i> {{ address }}
+                    </span>
+                  {% endif %}
+                {% endif %}
+              </b>
+            </div>
+            <div class="col offset-1">
+              {% if deliveries %}
+                <div class="row">
+                  <div class="col-12">
+                    {% for delivery in deliveries %}
+                      <div class="row border-bottom">
+                        <div class="col-auto col-sm">
+                          {{ delivery.time.weekday_str }},
+                        </div>
+                        <div class="col">
+                          {{ delivery.date }}
+                        </div>
+                        {% if delivery.time.start or delivery.time.end %}
+                          <div class="col-12 col-md">
+                            {{ delivery.time.time }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% else %}
+                <div class="alert alert-warning" role="alert">
+                  Wir liefern (noch) nicht nach {{ address.postcode }}.<br />
+                </div>
+              {% endif %}
+            </div>
+        </div>
+      {% endwith %}
+    {% endfor %}
+  {% endif %}
+  
+  </div>
+</div>
+{% endblock %}

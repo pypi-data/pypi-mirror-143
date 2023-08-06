@@ -1,0 +1,1 @@
+Ihre Shopbestellung bei {{ request.site.domain }} (Bestellnummer: {{ order.number }})

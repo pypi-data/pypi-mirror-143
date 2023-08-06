@@ -1,0 +1,54 @@
+{% if user.is_authenticated and not is_slider %}
+  <form action="" method="post" onsubmit="submitAddWishlist($(this), '{% url 'customer:wishlists-toggle-product' product_pk=product.pk %}');return false;">{% csrf_token %}
+    {% if wishlist_count <= 1 %}
+      <button type="submit" class="btn btn-link text-dark ml-auto no-focus" style="border-radius:50%;">
+        {% if product.upc in wishlist_upcs %}
+          <i class="fas fa-heart text-danger favourite"></i>
+        {% else %}
+          <i class="far fa-heart no-favourite"></i>
+        {% endif %}
+      </button>
+    {% else %}
+      <div class="dropdown dropleft">
+        <button class="btn btn-link text-dark ml-auto no-focus" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {% if product.upc in wishlist_upcs %}
+            <i class="fas fa-heart text-danger favourite"></i>
+          {% else %}
+            <i class="far fa-heart no-favourite"></i>
+          {% endif %}
+        </button>
+        <ul class="dropdown-menu allow-focus px-2" style="z-index:100;">
+          {% for wishlist in wishlists %}
+            <li>
+              <div class="checkbox">
+                <label style="white-space: nowrap;">
+                  <input type="checkbox" style="white-space: nowrap;"{% if product.upc in wishlist.upcs %} checked{% endif %} onclick="submitAddWishlist($(this).closest('form'), '{% url 'customer:wishlists-toggle-product' product_pk=product.pk to_key=wishlist.key %}');"
+                  > {{ wishlist.name }}
+                </label>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </form>
+{% elif registration_popover_enabled and not is_slider %}
+  <button type="button" class="btn btn-link text-dark ml-auto no-focus" style="border-radius:50%;" data-toggle="popover" data-trigger="focus">
+    <i class="far fa-heart no-favourite"></i>
+  </button>
+  <div class="popover-content d-none">
+    <div class="row">
+      <div class="col-12">
+        Bitte registrieren Sie sich, um dieses Feature zu verwenden.
+      </div>
+      <div class="col-12">
+        <a class="btn btn-color1 btn-block" href="{% url 'customer:login' %}">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="">
+              Anmelden / registrieren
+            </span>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endif %}

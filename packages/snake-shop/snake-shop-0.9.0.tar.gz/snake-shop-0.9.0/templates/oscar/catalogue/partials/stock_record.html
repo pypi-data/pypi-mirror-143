@@ -1,0 +1,49 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% purchase_info_for_product request product as session %}
+
+<div class="row">
+  <div class="col-12">
+    {% if session.price.is_special_price %}
+      <span style="color:red;text-decoration:line-through;font-size: smaller;">
+        {{ session.price.base_price.incl_tax_excl_deposit|currency:session.price.currency }}
+      </span>
+    {% endif %}
+    <span style="color:green;font-weight: bold;font-size: 1.2em;">
+      {% if session.price.excl_tax == 0 %}
+        {% trans "Free" %}
+      {% elif session.price.is_tax_known %}
+        {{ session.price.incl_tax_excl_deposit|currency:session.price.currency }}
+      {% else %}
+        {{ session.price.excl_tax_excl_deposit|currency:session.price.currency }}
+      {% endif %}
+    </span>
+  </div>
+  <div class="col-12">
+    {% if product.reusable == True %}
+      {% trans 'Reusable' as rel %}{{ rel|upper }}
+    {% elif product.reusable == False %}
+      {% trans 'Unreusable' as rel %}{{ rel|upper }}
+    {% endif %}
+  </div>
+  <div class="col-12">
+      <small class="text-dark">
+        {% if product.get_deposit %}
+          +{{ product.get_deposit|currency:session.price.currency }} {% trans 'Deposit' %}
+        {% else %}
+          &nbsp;
+        {% endif %}
+      </small>
+  </div>
+  <div class="col-12">
+      <small class="text-dark">
+        {% if product.get_kiloprice %}
+            {{ product.get_kiloprice|currency:session.price.currency }}/{% trans 'kg' %}
+        {% elif product.get_literprice %}
+            {{ product.get_literprice|currency:session.price.currency }}/{% trans 'Liter' %}
+        {% endif %}
+      </small>
+  </div>
+</div>

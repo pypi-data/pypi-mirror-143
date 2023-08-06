@@ -1,0 +1,74 @@
+{% extends "oscar/customer/baseaccountpage.html" %}
+{% load i18n %}
+
+{% block tabcontent %}
+  {% if bank_accounts %}
+    <table class="table table-striped table-bordered">
+      <tbody>
+          <tr>
+              <th>{% trans 'Account owner' %}</th>
+              <th>{% trans 'IBAN' %}</th>
+              <th></th>
+          </tr>
+          {% for bank_account in bank_accounts %}
+              <tr>
+                  <td>
+                      {% if address.is_default_for_shipping %}
+                          <span class="badge badge-success">{% trans 'Default shipping address' %}</span>
+                      {% endif %}
+                      {% if address.is_default_for_billing %}
+                          <span class="badge badge-info">{% trans 'Default billing address' %}</span>
+                      {% endif %}
+                      {{ bank_account.name }}
+                  </td>
+                  <td style="font-family: monospace, monospace;">
+                      {{ bank_account.obfuscated_number }}
+                  </td>
+                  <td>
+                      <div class="btn-group">
+                          <a href="{% url 'customer:bankaccount-update' pk=bank_account.id %}" class="btn btn-warning text-light">
+                              <i class="fas fa-edit"></i> {% trans 'Edit' %}
+                          </a>
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete_modal_{{ bank_account.pk}}">
+                            <i class="fas fa-trash-alt"></i> {% trans 'Delete' %}
+                          </button>
+                      </div>
+                  </td>
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+    {% include "oscar/partials/pagination.html" %}
+  {% else %}
+    <p>{% trans 'There are no bank accounts in your profile.' %}</p>
+  {% endif %}
+  <p>
+    <a href="{% url 'customer:bankaccount-create' %}" class="btn btn-primary">{% trans 'Add a new bank account' %}</a>
+  </p>
+
+  {% for bank_account in bank_accounts %}
+    <div class="modal fade" id="delete_modal_{{ bank_account.pk}}" tabindex="-1" role="dialog" aria-labelledby="delete_modal_{{ bank_account.pk}}" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bestätigung</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Möchten Sie dieses Konto ({{ bank_account.secret_iban }}) wirklich löschen?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Cancel' %}</button>
+            <form method="post" action="{% url 'customer:bankaccount-delete' pk=bank_account.id %}">{% csrf_token %}
+              <button class="btn btn-danger" type="submit" value="Confirm">
+                <i class="fas fa-trash-alt"></i> {% trans 'Delete' %}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock tabcontent %}

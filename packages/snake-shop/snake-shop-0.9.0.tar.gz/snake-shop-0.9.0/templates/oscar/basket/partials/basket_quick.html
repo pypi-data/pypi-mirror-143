@@ -1,0 +1,54 @@
+{% load history_tags %}
+{% load basket_tags %}
+{% load currency_filters %}
+{% load image_tags %}
+{% load i18n %}
+<div id="basket_quick" class="collapse col-10 offset-1 col-lg-6 offset-lg-5 position-absolute rounded" style="z-index:1100;">
+  <div class="row justify-content-between bg-white">
+    <div class="col card p-0">
+      <div class="card-body py-0">
+            {% if request.basket.num_lines %}
+                {% for line in request.basket.all_lines %}
+                  <div class="row border-bottom py-3">
+                    <div class="col-auto">
+                      <div class="w-100">
+                          {% with image=line.product.primary_image %}
+                              {% oscar_thumbnail image.original "100x100" upscale=False as thumb %}
+                              <a href="{{ line.product.get_absolute_url }}">
+                                  <img src="{{ thumb.url }}" alt="{{ line.product.get_title }}" class="img-thumbnail w-auto mx-auto my-0">
+                              </a>
+                          {% endwith %}
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p>
+                        <strong>{{ line.quantity }}x </strong>
+                        <strong>
+                          <a href="{{ line.product.get_absolute_url }}">{{ line.description }}</a>
+                        </strong>
+                      </p>
+                    </div>
+                    <div class="col-auto text-right ml-auto">
+                      {{ line.unit_price_excl_tax|currency:request.basket.currency }}
+                    </div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                  <p>{% trans "Your basket is empty." %}</p>
+              {% endif %}
+      </div>
+      <div class="card-footer">
+        <p class="text-right">
+            {% if request.basket.is_tax_known %}
+                <small>{% trans "Total:" %} {{ request.basket.total_incl_tax|currency:request.basket.currency }}</small>
+            {% else %}
+                <small>{% trans "Total:" %} {{ request.basket.total_excl_tax|currency:request.basket.currency }}</small>
+            {% endif %}
+        </p>
+        <a href="{% url 'basket:summary' %}" class="btn btn-info btn-sm">{% trans "View basket" %}</a>
+        <a href="{% url 'checkout:index' %}" class="btn btn-primary btn-sm float-right"><i class="fas fa-shopping-cart text-light"></i> {% trans "Checkout" %}</a>
+      </div>
+    </div>
+  </div>
+</div>
+

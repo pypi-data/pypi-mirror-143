@@ -1,0 +1,75 @@
+{% load image_tags %}
+
+<style>
+.tns-nav button {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    line-height: 12px;
+    background-color: #eee;
+}
+.tns-nav-active{
+    background-color: #bbb!important;
+}
+#next:focus, #prev:focus{
+  box-shadow: unset;
+}
+</style>
+
+<div class="base" id="base">
+  {% with 1024 as width and 768 as height %}
+      {% for plugin in instance.child_plugin_instances %}
+        <div class="item" style="height:300px;width:200px;">
+          {% render_plugin plugin %}
+        </div>
+      {% endfor %}
+  {% endwith %}
+</div>
+
+<div class="controls row flex-nowrap mt-3 d-none d-md-flex" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+  <div class="col-auto ml-auto my-auto">
+    <button type="button" id="prev" class="btn btn-link prev" aria-controls="customize" tabindex="-1" data-controls="prev">
+      <i class="fas fa-angle-left fa-3x" style="color:lightgray;"></i>
+    </button>
+  </div>
+  <div class="col-auto flex-shrink-1 my-auto">
+    <div id="customize-thumbnails" class="tns-nav row justify-content-center" aria-label="Carousel Pagination">
+      {% for plugin in instance.child_plugin_instances %}
+        <button class="btn col-auto my-1 px-1 mx-1 mx-md-2" type="button" data-nav="{{ forloop.counter0 }}" tabindex="-1" aria-controls="base" style="" aria-label="Carousel Page {{ forloop.counter }}">
+          {{ forloop.counter }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+   <div class="col-auto mr-auto my-auto">
+    <button type="button" id="next" class="btn btn-link next" aria-controls="customize" tabindex="-1" data-controls="next">
+      <i class="fas fa-angle-right fa-3x" style="color:lightgray;"></i>
+    </button>
+  </div>
+</div>
+
+
+
+<script type="module">
+var slider = tns({
+	"container": "#base",
+	"gutter": 15,
+	"autoWidth": true,
+	"slideBy": 1,
+	"autoplay": true,
+	"mouseDrag": true,
+	"swipeAngle": false,
+	"autoplayTimeout": 3000,
+	"speed": 400,
+  	"arrowKeys": true,
+	"autoplayHoverPause": true,
+	"navContainer": "#customize-thumbnails",
+	"preventScrollOnTouch": "force",
+	"controls": true,
+	"autoplayButton": false,
+	"autoplayButtonOutput": false,
+	"prevButton": "#prev",
+	"nextButton": "#next",
+});
+</script>

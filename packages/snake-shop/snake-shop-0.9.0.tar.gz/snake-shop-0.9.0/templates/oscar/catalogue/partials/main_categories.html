@@ -1,0 +1,47 @@
+{% load static %}
+{% load i18n %}
+{% load category %}
+{% load thumbnail %}
+
+<div id="main_categories" style="height:140px;transition-duration:unset;transform:none;" >
+  {% menu_objects as main_menu_objects %}
+  {% for category in main_menu_objects %}
+    {% if category.depth == 1 and category.active_ancestor %}
+      <div class="item">
+        <a class="nav-link p-1 border" style="" href="{{ category.get_absolute_url }}">
+          <img width=80 height=80 class="d-block mx-auto" style="{% if not category.image %}filter:grayscale(100%);opacity:0.3;{% endif %}" src="{% if category.image %}{% thumbnail category.image 80x80 crop %}{% else %}{% thumbnail CONFIG.no_image 80x80 crop %}{% endif %}" alt="{{ product.get_title }}">
+          <span class="d-flex justify-content-center align-items-center bold text-center text-dark condensed">{{ category }}</span>
+          <span class="d-flex justify-content-center"><i class="fas fa-caret-down text-dark"></i></span>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="item">
+    <a class="nav-link p-1" style="" href="{% url 'offer:list' %}">
+      <img class="d-block mx-auto" style="transition: all .35s;{% if not CONFIG.offer_image %}filter:grayscale(100%){% endif %}" src="{% if CONFIG.offer_image %}{% thumbnail CONFIG.offer_image 80x80 crop %}{% else %}{% static 'img/default_offer_icon.jpg' %}?ver=2{% endif %}" alt="{{ product.get_title }}">
+      <span class="d-flex justify-content-center align-items-center bold text-center text-dark condensed">{% trans "Offers"|safe %}</span>
+    </a>
+  </div>
+  {% for category in main_menu_objects %}
+    {% if category.depth == 1 and not category.active_ancestor %}
+      <div class="item">
+        <a class="nav-link p-1" style="" href="{{ category.get_absolute_url }}">
+          <img width=80 height=80 class="d-block mx-auto" style="{% if not category.image %}filter:grayscale(100%);opacity:0.3;{% endif %}" src="{% if category.image %}{% thumbnail category.image 80x80 crop %}{% else %}{% thumbnail CONFIG.no_image 80x80 crop %}{% endif %}" alt="{{ product.get_title }}">
+          <span class="d-flex justify-content-center align-items-center bold text-center text-dark condensed">{{ category }}</span>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if category %}
+  <div id="sub_categories" style="transition-duration:unset;transform:none;display:none;" >
+    {% for category in category.get_children %}
+        <div class="item text-nowrap sidebar-category-depth{{ category.depth }}">
+          <a class="nav-link py-2 px-3 bg-color2 text-dark rounded" href="{{ category.get_absolute_url }}">
+            {{ category.name }}
+          </a>
+        </div>
+    {% endfor %}
+  </div>
+{% endif %}

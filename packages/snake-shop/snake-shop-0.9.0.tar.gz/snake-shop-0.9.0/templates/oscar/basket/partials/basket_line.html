@@ -1,0 +1,117 @@
+{% load i18n %}
+{% load image_tags %}
+{% load currency_filters %}
+{% load purchase_info_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% purchase_info_for_line request line as session %}
+<div class="basket-items">
+  <div class="row">
+      <div class="col-auto col-xl-1 order-xl-1">
+          {{ form.id }}
+          {% with image=line.product.primary_image %}
+              {% oscar_thumbnail image.original "100x100" upscale=False as thumb %}
+              <a href="{{ product.get_absolute_url }}" class="d-flex justify-content-center" style="width:60px;height:60px;">
+                  <img class="img-thumbnail w-auto mx-auto my-0 w-100 h-100" src="{{ thumb.url }}" alt="{{ product.get_title }}"/>
+              </a>
+          {% endwith %}
+      </div>
+      <div class="col-8 col-md-10 col-xl-5 order-xl-2">
+          <h3><a href="{{ product.get_absolute_url }}">{{ line.description }}</a></h3>
+      </div>
+      
+      <div class="col-4 col-md-2 offset-md-2 offset-xl-0 col-xl order-xl-4">
+        {% if not hide_price %}
+          <span class="price-title d-xl-none">Einzel:</span>
+          {% for price in line.price_breakdown %}
+            <div class="row">
+              <div class="col">
+                <p class="price_color m-0">
+                  {# If it is a segmented price #}
+                  {% if price.sum.quantity != line.quantity %}
+                    <span class="text-dark">
+                      {{ price.sum.quantity }}&times;
+                    </span>
+                  {% endif %}
+                  <span style="{% if price.has_special_price %}font-size:smaller;color:grey;text-decoration:line-through;{% endif %}">
+                      {{ price.base_price.incl|currency:session.price.currency }}
+                  </span>
+                  {% if price.has_special_price %}
+                    <span>
+                      {{ price.special_price.incl|currency:session.price.currency }}
+                    </span>
+                  {% endif %}
+                </p>
+                {% if price.has_deposit %}
+                  <p class="text-nowrap" style="font-size: smaller;">
+                    +{{ price.deposit.incl|currency:session.price.currency }} Pfand
+                  </p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="col-4 col-md-2 col-xl order-xl-5">
+        {% if not hide_price %}
+          <span class="price-title d-xl-none">{% trans "Total" %}:</span>
+          {% for price in line.price_breakdown %}
+            {% if not price.base_price.sum %}
+              <p class="">&mdash;</p>
+            {% else %}
+              <p class="price_color m-0">
+                {% if price.has_special_price %}
+                  {{ price.special_price.sum.incl|currency:session.price.currency }}
+                {% else %}
+                  {{ price.base_price.sum.incl|currency:session.price.currency }}
+                {% endif %}
+              </p>
+              <p class="text-nowrap" style="font-size: smaller;">
+                {% if price.deposit.sum %}
+                  +{{ price.deposit.sum.incl|currency:session.price.currency }} Pfand
+                {% endif %}
+              </p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% if not is_preview and form %}
+        <div class="col-12 d-flex justify-content-end justify-content-xl-start col-xl-3 order-xl-3">
+          <div class="row">
+            <div class="col-12 checkout-quantity text-nowrap">
+              <div class="input-group {% if form.errors %}error{% endif %}" style="max-width:unset;">
+                {% render_field form.quantity class+="form-control" %}
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="submit" data-loading-text="{% trans 'Updating...' %}">
+                      <i class="fas fa-sync"></i> {% trans "Update" %}
+                    </button>
+                    <a class="btn btn-outline-primary" href="#" data-id="{{ forloop.counter0 }}" data-behaviours="remove">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                </div>
+              </div>
+              <div style="display:none">
+                  {{ form.save_for_later }}
+                  {{ form.DELETE }}
+              </div>
+              {% for field_errors in form.errors.values %}
+                  {% for error in field_errors %}
+                      <span class="error-block"><i class="fas fa-exclamation"></i> {{ error }}</span>
+                  {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="col-4 d-flex justify-content-end justify-content-xl-start col-xl-3 order-xl-3">
+          <div class="row">
+            <div class="col-12 checkout-quantity text-nowrap">
+              <span class="price-title d-xl-none">Menge:</span>
+              <p>{{ line.quantity }}</p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+  </div>
+</div>

@@ -1,0 +1,8 @@
+include *.md
+include LICENSE
+include VERSION
+include manage.py
+
+recursive-include static *
+recursive-include templates *
+recursive-include locale *

@@ -1,0 +1,58 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.css" integrity="sha512-06CZo7raVnbbD3BlY8/hGUoUCuhk8sTdVGV3m3nuh9i2R+UmkLbLRTE/My8TuJ3ALbDulhBObJQWtOUt0mXzNQ==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="{% static 'css/base.css' %}?ver=18" rel="stylesheet" />
+
+{% with color1=CONFIG.color_1 color2=CONFIG.color_2 %}
+<style>
+  .bg-color1{
+    background: {{ color1 }};
+  }
+  .bg-color2{
+    background: {{ color2 }};
+  }
+  .bg-color1-light{
+    background: {{ color1 }};
+  }
+  .bg-color2-light{
+    background: {{ color2 }};
+  }
+  .btn-color1{
+    color: #212529!important;
+    background-color: {{ color1 }}!important;
+    border-color: {{ color2 }}!important;
+  }
+  .btn-color2{
+    color: #212529!important;
+    background-color: {{ color2 }}!important;
+    border-color: {{ color1 }}!important;
+  }
+  .btn-color1:hover{
+    color: #212529!important;
+    background-color: {{ color2 }}!important;
+    border-color: {{ color1 }}!important;
+    opacity:1;
+  }
+  .btn-color2:hover{
+    color: #212529!important;
+    background-color: {{ color1 }}!important;
+    border-color: {{ color2 }}!important;
+    opacity:1;
+  }
+  .text-color1{
+    color: {{ color1 }};
+  }
+  .text-color2{
+    color: {{ color2 }};
+  }
+  .border-color1{
+    border-color: {{ color1 }};
+  }
+  .border-color2{
+    border-color: {{ color2 }};
+  }
+</style>
+{% endwith %}

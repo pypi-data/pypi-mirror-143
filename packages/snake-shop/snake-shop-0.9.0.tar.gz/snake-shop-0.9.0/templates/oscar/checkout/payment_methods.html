@@ -1,0 +1,50 @@
+{% extends "oscar/checkout/checkout.html" %}
+{% load i18n %}
+{% load currency_filters %}
+{% block title %}
+    {% trans "Payment details" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'oscar/checkout/nav.html' with step=3 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Choose payment method" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+{% block shipping_address %}{% endblock %}
+{% block shipping_method %}{% endblock %}
+{% block payment_method %}{% endblock %}
+
+{% block payment_details %}
+    {% block payment_details_content %}
+      {% for provider in providers %}
+          <div class="basket-items">
+              <div class="row">
+                  <div class="col-sm-8">
+                    <h4>{{ provider.name }}</h4>
+                  </div>
+                  <div class="col-sm-1">
+                    {% if provider %}
+                      {% if provider.is_free %}
+                        {% trans 'Free' %}
+                      {% else %}
+                        {{ provider.charge_incl_tax|currency:basket.currency }}
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                  <div class="col-sm-3">
+                      <form method="post" action="{% url 'checkout:payment-details' %}">
+                          {% csrf_token %}
+                          <input type="hidden" name="method_code" value="{{ provider.code }}" />
+                            <button type="submit" class="btn btn-lg btn-primary float-right " data-loading-text="{% trans 'Submitting...' %}">
+                              {% trans "Select option" %}
+                            </button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      {% endfor %}
+    {% endblock payment_details_content %}
+{% endblock payment_details %}
+

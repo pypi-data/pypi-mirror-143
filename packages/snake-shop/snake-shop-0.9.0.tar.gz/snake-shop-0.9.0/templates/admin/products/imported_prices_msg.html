@@ -1,0 +1,29 @@
+
+{% if pending_changes %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">UPC</th>
+        <th scope="col">Title</th>
+        <th scope="col">Partner</th>
+        <th scope="col">Old Value</th>
+        <th scope="col">New Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for change in pending_changes %}
+        {% for action in change.actions %}
+          <tr>
+            <th scope="row">{{ action.action_type }}</th>
+            <td>{{ action.product.upc }}</td>
+            <td>{{ action.product.title }}</td>
+            <td>{{ action.partner_name }}</td>
+            <td>{{ action.old_value }}</td>
+            <td>{{ action.new_value }}</td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

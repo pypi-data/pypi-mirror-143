@@ -1,0 +1,217 @@
+{% extends "oscar/communication/emails/base.html" %}
+{% load currency_filters i18n %}
+
+{% block tbody %}
+<tr>
+  <td>
+    <p xmlns="http://www.w3.org/1999/html">Guten Tag {{ order.billing_address.salutation }},</p>
+    <p>Ihre Bestellung wurde in unser System aufgenommen und wird umgehend bearbeitet.<br />
+    Danke, dass Sie sich für {{ CONFIG.company_short_name }} entschieden haben!<br />
+    Wir bestätigen Ihnen hiermit den Eingang folgender Bestellung:</p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <tr>
+      <td class="py-0"><b>Bestellnummer: {{ order.number }}</b></td>
+    </tr>
+    <tr>
+      <td class="py-0"><b>Bestelldatum: {{ order.date_placed }}</b></td>
+    </tr>
+    {% if order.delivery %}
+      <tr>
+        <td class="py-0"><b>Gewünschter Termin: {{ order.delivery }}</b></td>
+      </tr>
+    {% endif %}
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <table class="order" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan=2>
+          <table class="order-items" cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <th class="alignleft large_border-top">Artikel</th>
+                <th class="aligncenter large_border-top">Menge</th>
+                {% if not hide_price %}
+                  <th class="alignright large_border-top">Einzel</th>
+                  <th class="alignright large_border-top">Summe</th>
+                {% endif %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for line_price in order.line_prices.all %}
+                <tr>
+                  <td class="alignleft slim_border_top">
+                    {{ line_price.line.title }}<br />
+                    <span style="font-size: 0.8em;">Art-Nr: {{ line_price.line.product.upc }}</span>
+                  </td>
+                  <td class="aligncenter slim_border_top">{{ line_price.quantity }}</td>
+                  {% if not hide_price %}
+                    <td class="alignright slim_border_top">
+                      <p>{{ line_price.price.incl|currency:order.currency }}
+                        {% if line_price.deposit.incl %}
+                          <br/>Pfand: {{ line_price.deposit.incl|currency:order.currency }}
+                        {% endif %}
+                      </p>
+                    </td>
+                    <td class="alignright slim_border_top">
+                      <p>{{ line_price.price.sum.incl|currency:order.currency }}
+                        {% if line_price.deposit.sum.incl %}
+                          <br/>{{ line_price.deposit.sum.incl|currency:order.currency }}
+                        {% endif %}
+                      </p>
+                    </td>
+                  {% endif %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      {% if hide_price %}
+        <tr>
+          <td class="alignright py-0 large_border-top"></td>
+          <td class="alignright py-0 large_border-top">Liefermethode: {{ order.shipping_method }}{% if order.shipping_address.floor_number %} ({{ order.shipping_address.floor_title }}){% endif %}</td>
+        </tr>
+        <tr>
+          <td class="alignright py-0 slim_border_top large_border-bottom"></td>
+          <td class="alignright py-0 slim_border_top large_border-bottom">Zahlungsart: {{ order.payment_provider }}</td>
+        </tr>
+      {% else %}
+        <tr>
+          <td class="alignright py-0 large_border-top">Warenkorb gesamt (ohne Rabatt):</td>
+          <td class="alignright py-0 large_border-top">{{ order.price.sum.incl|currency:order.currency }}</td>
+        </tr>
+        {% if order.deposit.sum.incl %}
+        <tr>
+          <td class="alignright py-0 slim_border_top">Summe Pfand:</td>
+          <td class="alignright py-0 slim_border_top">{{ order.deposit.sum.incl|currency:order.currency }}</td>
+        </tr>
+        {% endif %}
+        {% for discount in order.basket_discounts %}
+        <tr>
+          <td class="alignright py-0 slim_border_top">
+            <span style="color:#28a745;">Rabatt</span> '<span style="font-size:12px;">{{ discount.offer_name }}</span>':
+          </td>
+          <td class="alignright py-0 slim_border_top">- {{ discount.amount|currency:order.currency }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td class="alignright py-0 slim_border_top">{{ order.shipping_method }}{% if order.shipping_address.floor_number %} ({{ order.shipping_address.floor_title }}){% endif %}:</td>
+          <td class="alignright py-0 slim_border_top">{% if order.shipping_incl_tax %}{{ order.shipping_incl_tax|currency:order.currency }}{% else %}kostenlos{% endif %}</td>
+        </tr>
+        <tr>
+          <td class="alignright py-0 slim_border_top">Zahlungsart ({{ order.payment_provider }}):</td>
+          <td class="alignright py-0 slim_border_top">{% if order.payment_incl_tax %}{{ order.payment_incl_tax|currency:order.currency }}{% else %}kostenlos{% endif %}</td>
+        </tr>
+        <tr>
+          <td class="alignleft py-0 large_border-top large_border-bottom"><b>Rechnungsbetrag:</b></td>
+          <td class="alignright py-0 large_border-top large_border-bottom"><b>{{ order.total.sum.incl|currency:order.currency }}</b></td>
+        </tr>
+        <tr>
+          <td class="alignright py-0" colspan=2>*Alle Preise enthalten die gesetzliche Mehrwertsteuer</td>
+        </tr>
+      {% endif %}
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <table style="margin-top:15px;">
+      <tr>
+        <td class="content-block" style="min-width:70%;">
+          <p><b>Lieferanschrift</b><br/>
+          {{ order.shipping_address.salutation }}<br />
+          {% if order.shipping_address.company %}{{ order.shipping_address.company }}<br />{% endif %}
+          {% if order.shipping_address.cost_center %}Kostenstelle: {{ order.shipping_address.cost_center }}<br />{% endif %}
+          {{ order.shipping_address.line1 }}<br />
+          {{ order.shipping_address.postcode }} - {{ order.shipping_address.line4 }}<br />
+          <br />
+          {% if order.shipping_address.phone_number %}{{ order.shipping_address.phone_number }}<br />{% endif %}
+          {{ order.user.email }}</p>
+          </p>
+        </td>
+        <td class="content-block">
+          <p><b>Rechnungsanschrift</b><br/>
+          {{ order.billing_address.salutation }}<br />
+          {% if order.billing_address.company %}{{ order.billing_address.company }}<br />{% endif %}
+          {% if order.billing_address.cost_center %}Kostenstelle: {{ order.billing_address.cost_center }}<br />{% endif %}
+          {{ order.billing_address.line1 }}<br />
+          {{ order.billing_address.postcode }} - {{ order.billing_address.line4 }}<br />
+          {% if order.billing_address.phone_number %}<br />{{ order.billing_address.phone_number }}{% endif %}</p>
+        </td>
+      </tr>
+      {% if order.iban and show_bank_account and order.payment_code == 'sepa' %}
+        <tr>
+          <td class="content-block">
+            <p><b>Konto</b><br/>
+            <table>
+              <tr>
+                <td class="alignleft">Inhaber:</td>
+                <td>{{ order.owner }}</td>
+              </tr>
+              <tr>
+                <td class="alignleft">Institut:</td>
+                <td>{{ order.bank_name }}</td>
+              </tr>
+              <tr>
+                <td class="alignleft">IBAN:</td>
+                <td>{{ order.iban }}</td>
+              </tr>
+              <tr>
+                <td class="alignleft">BIC:</td>
+                <td>{{ order.bic }}</td>
+              </tr>
+              <tr>
+                <td class="alignleft">Konto:</td>
+                <td>{{ order.kto }}</td>
+              </tr>
+              <tr>
+                <td class="alignleft">BLZ:</td>
+                <td>{{ order.blz }}</td>
+              </tr>
+            </table>
+             <br/>
+          </td>
+        </tr>
+      {% endif %}
+    </table>
+  </td>
+</tr>
+
+{% if order.notes.first %}
+  {% with note=order.notes.first %}
+    <tr>
+      <td class="content-block">
+        <table class="order">
+          <tbody>
+            <tr>
+              <td><b>Ihre Nachricht an uns:</b><br/>
+              {{ note.message }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  {% endwith %}
+{% endif %}
+
+{% if status_url %}
+  <tr>
+    <td class="content-block">
+      <a href="{{ status_url }}" title="Bestellstatus">Hier</a> können Sie Ihre Bestellung einsehen.
+    </td>
+  </tr>
+{% endif %}
+<tr>
+  <td class="content-block">
+    <p>{% trans "Thanks for using our site!" %}</p>
+    <p>{% blocktrans with name=CONFIG.company_short_name %}The {{ name }} team{% endblocktrans %}</p>
+  </td>
+</tr>
+{% endblock %}

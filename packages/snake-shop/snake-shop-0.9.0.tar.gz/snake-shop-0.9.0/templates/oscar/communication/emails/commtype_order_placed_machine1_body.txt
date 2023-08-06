@@ -1,0 +1,107 @@
+{% load i18n counter clean_text %}{% create_counter start=1 as counter %}
+KUNDE {{ order.billing_address.sage_customer_number }}
+
+REPRT {{ order.user.partner.code }}
+
+RENA1 {% if order.billing_address.company %}{{ order.billing_address.company }}{% else %}{{ order.billing_address.first_name }} {{ order.billing_address.last_name }}{% endif %}
+
+RENA2 {% if order.billing_address.company %}{{ order.billing_address.first_name }} {{ order.billing_address.last_name }}{% endif %}
+
+REZUS {% if order.billing_address.cost_center %}{{ order.billing_address.cost_center }}{% endif %}
+
+RETIT {{ order.billing_address.title }}
+
+RESTR {{ order.billing_address.line1 }}
+
+REPLZ {{ order.billing_address.postcode }}
+
+REORT {{ order.billing_address.city }}
+
+RELND {{ order.billing_address.country_id }}
+
+REHAS {{ order.billing_address.hash }}
+
+REMAL {{ order.user.email }}
+
+REMOB {{ order.billing_address.phone_number }}
+{% if order.iban and order.payment_code == 'sepa' %}
+REBNK {{ order.bank_name }}
+
+REBLZ {{ order.blz }}
+
+REKTO {{ order.kto }}
+
+REIBA {{ order.iban }}
+
+REBIC {{ order.bic }}
+{% endif %}
+LIKUN {{ order.shipping_address.sage_customer_number }}
+
+LINA1 {% if order.shipping_address.company %}{{ order.shipping_address.company }}{% else %}{{ order.shipping_address.first_name }} {{ order.shipping_address.last_name }}{% endif %}
+
+LINA2 {% if order.shipping_address.company %}{{ order.shipping_address.first_name }} {{ order.shipping_address.last_name }}{% endif %}
+
+LIZUS {% if order.shipping_address.cost_center %}{{ order.shipping_address.cost_center }}{% endif %}
+
+LITIT {{ order.shipping_address.title }}
+
+LISTR {{ order.shipping_address.line1 }}
+
+LIPLZ {{ order.shipping_address.postcode }}
+
+LIORT {{ order.shipping_address.city }}
+
+LILND {{ order.shipping_address.country_id }}
+
+LIHAS {{ order.shipping_address.hash }}
+
+LISTK {{ order.shipping_address.floor_number }}
+
+LIBED {{ order.shipping_method }}
+
+LIDAT {{ order.delivery.date|date:"d.m.Y" }}
+
+LITOR {{ order.delivery.get_time_str }}
+
+BENUM {{ order.number }}
+
+BEDAT {{ order.date_placed|date:"d.m.Y" }}
+
+BEMTH {{ order.payment_code }}
+{% for line_price in order.line_prices.all %}{% with counter_step=counter %}
+{{ counter_step }}ARNR {{ line_price.line.product.upc }}
+
+{{ counter_step }}BEZ1 {{ line_price.line.product.title }}
+
+{{ counter_step }}MENG {{ line_price.quantity }}
+
+{{ counter_step }}PRES {% if not hide_price %}{{ line_price.price.incl }}{% endif %}
+
+{{ counter_step }}NETT {% if not hide_price %}{{ line_price.price.excl }}{% endif %}
+
+{{ counter_step }}PFND {% if not hide_price %}{{ line_price.deposit.incl }}{% endif %}
+{% endwith %}{% endfor %}{% for discount in order.basket_discounts %}{% if not discount.is_line_applied %}{% with counter_step=counter %}{{ counter_step }}ARNR 990110
+
+{{ counter_step }}BEZ1 {{ discount.offer_name }}
+
+{{ counter_step }}MENG {{ discount.frequency }}
+
+{{ counter_step }}PRES -{{ discount.amount }}
+
+{{ counter_step }}NETT -{{ discount.amount }}
+
+{{ counter_step }}PFND 0,00
+{% endwith %}{% endif %}{% endfor %}{% if order.shipping_incl_tax %}{% with counter_step=counter %}
+{{ counter_step }}ARNR {{ order.shipping_reference }}
+
+{{ counter_step }}BEZ1 {{ order.shipping_method }}
+
+{{ counter_step }}MENG 1
+
+{{ counter_step }}PRES {{ order.shipping_incl_tax }}
+
+{{ counter_step }}NETT {{ order.shipping_excl_tax }}
+
+{{ counter_step }}PFND 0,00
+{% endwith %}{% endif %}
+{% if order.notes.first %}{% with note=order.notes.first %}BEBEM {{ note.message|base_chars }}{% endwith %}{% endif %}

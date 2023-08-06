@@ -1,0 +1,74 @@
+{% extends "oscar/checkout/checkout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Shipping address" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'oscar/checkout/nav.html' with step=1 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Shipping address" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+
+{% block shipping_address %}
+<div class="col-sm-12">
+    <div class="sub-header">
+        <h2>{% trans "Where should we ship to?" %}</h2>
+    </div>
+    {% if user.is_authenticated %}
+        {% if addresses %}
+          <div class="row">
+            <div class="col">
+              <div class="">
+                <form class="row form-group" method="post" action="{% url 'checkout:shipping-address' %}">{% csrf_token %}
+                  {% for field in selector_form %}
+                    <div class="col-12 col-md-6 d-flex align-items-stretch">
+                      <div class="card card-body bg-light">
+                        <h3>
+                          {{ field.label }}
+                        </h3>
+                        {{ field }}
+                      </div>
+                    </div>
+                  {% endfor %}
+                  <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-lg btn-primary">Weiter</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      {% endif %}
+    {% endif %}
+
+    {% block new_address_form %}
+      {% if not user.hide_price %}
+        <hr>
+        <a href="{% url 'customer:address-list' %}?next={{ request.path }}" class="btn btn-secondary">
+          <i class="far fa-edit"></i> Adressen bearbeiten
+        </a>
+        <a href="{% url 'customer:address-create' %}?next={{ request.path }}" class="btn btn-secondary">
+          <i class="far fa-plus-square"></i> Adresse hinzufügen
+        </a>
+        <div class="card card-body bg-light collapse mt-3" id="add_address_collapse">
+            <form action="{% url 'checkout:shipping-address' %}" method="post" id="new_shipping_address">
+                {% csrf_token %}
+                {% include "oscar/partials/form_fields.html" with form=form style='horizontal' %}
+                <div class="form-group row">
+                    <div class="offset-sm-4 col-sm-8">
+                        <button type="submit" class="btn btn-lg btn-primary" data-loading-text="{% trans 'Continuing...' %}">{% trans "Continue" %}</button>
+                        {% trans "or" %} <a href="{% url 'basket:summary' %}">{% trans "return to basket" %}</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+      {% endif %}
+    {% endblock %}
+</div>
+{% endblock shipping_address %}
+
+{% block shipping_method %}{% endblock %}
+{% block payment_method %}{% endblock %}

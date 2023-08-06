@@ -1,0 +1,62 @@
+{% load currency_filters i18n %}
+Guten Tag {{ order.billing_address.title }} {{ order.billing_address.first_name }} {{ order.billing_address.last_name }},
+
+Ihre Bestellung wurde in unser System aufgenommen und wird umgehend bearbeitet.
+Danke, dass Sie sich für {{ CONFIG.company_short_name }} entschieden haben!
+
+Wir bestätigen Ihnen hiermit den Eingang folgender Bestellung:
+
+
+Bestellnummer: {{ order.number }}
+Bestelldatum: {{ order.date_placed }}
+{% if order.delivery %}Gewünschter Termin: {{ order.delivery }}{% endif %}
+
+
+{% for line_price in order.line_prices.all %} * [{{ line_price.line.product.upc }}] {{ line_price.line.title }} - {%  trans 'quantity:' %} {{ line_price.quantity }}{% if not hide_price %} - {{ line_price.price.incl|currency:order.currency }}{% if line_price.deposit.incl %} (+Pfand:{{ line_price.deposit.incl|currency:order.currency }}){% endif %} - Summe: {{ line_price.price.sum.incl|currency:order.currency }}{% if line_price.deposit.sum.incl %} (+Pfand:{{ line_price.deposit.sum.incl|currency:order.currency }}){% endif %}{% endif %}
+{% endfor %}
+
+{% if hide_price %}
+Zahlungsart: {{ order.payment_provider }}
+Liefermethode: {{ order.shipping_method }}{% if order.shipping_address.floor_number %} ({{ order.shipping_address.floor_title }}){% endif %}
+{% else %}
+Warenwert: {{ order.price.sum.incl|currency:order.currency }}
+{% for discount in order.basket_discounts %}Rabatt ({{ discount.offer_name }}): -{{ discount.amount|currency:order.currency }}
+{% endfor %}
+{% if order.deposit.sum.incl %}Summe Pfand: {{ order.deposit.sum.incl|currency:order.currency }}
+{% endif %}
+{{ order.shipping_method }}{% if order.shipping_address.floor_number %} ({{ order.shipping_address.floor_title }}){% endif %}: {% if order.shipping_incl_tax %}{{ order.shipping_incl_tax|currency:order.currency }}{% else %}kostenlos{% endif %}
+Zahlungsart ({{ order.payment_provider }}): {% if order.payment_incl_tax %}{{ order.payment_incl_tax|currency:order.currency }}{% else %}kostenlos{% endif %}
+Rechnungsbetrag: {{ order.total.sum.incl|currency:order.currency }}
+*Alle Preise enthalten die gesetzliche Mehrwertsteuer
+{% endif %}
+
+
+Lieferanschrift
+{% for field in order.shipping_address.active_address_fields %}  {{ field }}
+{% endfor %}{{ order.shipping_address.phone_number }}
+{{ order.user.email }}
+
+Rechnungsanschrift
+{% for field in order.billing_address.active_address_fields %}  {{ field }}
+{% endfor %}{{ order.billing_address.phone_number }}
+
+{% if order.iban and show_bank_account and order.payment_code == 'sepa' %}
+Konto: {{ order.owner }}
+Institut: {{ order.bank_name }}
+IBAN: {{ order.iban }}
+BIC: {{ order.bic }}
+Konto: {{ order.kto }}
+BLZ: {{ order.blz }}
+{% endif %}
+
+{% if order.notes.first %}
+{% with note=order.notes.first %}
+Ihre Nachricht an uns: {{ note.message }}>
+{% endwith %}
+
+{% endif %}
+{% if status_url %}
+Hier können Sie Ihre Bestellung einsehen: {{ status_url }}
+{% endif %}
+Vielen Dank, dass Sie unsere Website benutzen!
+Ihr {{ CONFIG.company_short_name }} Team

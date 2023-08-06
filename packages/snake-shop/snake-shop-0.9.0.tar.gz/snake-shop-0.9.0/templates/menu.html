@@ -1,0 +1,33 @@
+{% load static %}
+{% load currency_filters %}
+{% load category_tags %}
+{% load i18n %}
+{% load category %}
+
+<nav id="main_nav1" class="navbar navbar-expand-md navbar-light p-0 d-block">
+  <div class="container-lg">
+    {% include 'header.html' %}
+  </div>
+  <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+    <ul class="navbar-nav col d-none">
+      {% block nav_dropdown_extra_items %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'offer:list' %}"><i class="fas fa-tags"></i> <b>{% trans "Offers" %}</b></a>
+      </li>
+      {% endblock %}
+      {% menu_objects as main_menu_objects %}
+      {% for category in main_menu_objects %}
+        {% if category.depth == 1 %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ category.get_absolute_url }}">{{ category }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid p-0">
+  <div class="row p-0 m-0 w-100">
+    <div class="col-12 bg-color1" style="z-index: 1000;border-top: 1px solid lightgray;border-bottom: 1px solid lightgray;position: relative;height: 10px;"></div>
+  </div>
+</div>

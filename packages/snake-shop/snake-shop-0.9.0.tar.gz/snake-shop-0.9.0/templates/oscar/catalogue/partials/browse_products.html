@@ -1,0 +1,27 @@
+{% load product_tags %}
+
+  {% for product in products %}
+    <li id="product{{ product.upc }}" class="col-12 col-md-6 col-lg-4 px-1 px-md-3 load_product d-flex">
+      {% render_product product %}
+      {% if forloop.counter == 1 and next_page %}
+        <script id="lazy_loading">
+        	loadProductPage({{ next_page }});
+        </script>
+      {% endif %}
+    </li>
+  {% empty %}
+    {% if not paginator %}
+      <div id="spinner" class="col-12 text-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <script id="lazy_loading">
+        	loadProductPage(1);
+        </script>
+      </div>
+    {% else %}
+      <li class="col-12">
+        Keine Produkte gefunden.
+      </li>
+    {% endif %}
+  {% endfor %}

@@ -1,0 +1,35 @@
+{% load static %}
+
+<style>
+.payment_method_badge{
+  background-color: white;
+  width: 30px;
+  height: 18px;
+  display: flex;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 2px;
+  padding-left: 2px;
+  border-radius: 2px;
+  float:left;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+</style>
+
+<span class="payment_method_badge">
+  <i class="fas fa-money-bill-wave m-auto" style="color: #757575;"></i>
+</span>
+
+<span class="payment_method_badge">
+  <img class="w-100 h-100" src="{% static 'svg/ec.svg' %}"></img>
+</span>
+
+<span class="payment_method_badge">
+  <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Single_Euro_Payments_Area_logo.svg"></img>
+</span>
+
+<span class="payment_method_badge">
+  <img class="w-100 h-100" src="{% static 'svg/contactless.svg' %}"></img>
+</span>
+

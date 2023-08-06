@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<div class="basket-title d-none d-xl-block">
+    <div class="row">
+        <h4 class="col-6">{% trans "Items to buy now" %}</h4>
+        <h4 class="col-3">{% trans "Quantity" %}</h4>
+        <h4 class="col">
+          {% if not hide_price %}
+            {% trans "Price" %}
+          {% endif %}
+        </h4>
+        <h4 class="col">
+          {% if not hide_price %}
+            {% trans "Total" %}
+          {% endif %}
+        </h4>
+    </div>
+</div>

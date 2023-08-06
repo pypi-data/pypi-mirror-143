@@ -1,0 +1,61 @@
+{% load static %}
+{% load i18n %}
+{% load category %}
+
+<style>
+.menu_ul li{
+  min-width: 90px;
+  max-width: 90px;
+  height: 130px;
+  flex: 0 0 auto;
+}
+
+.menu_ul li a{
+  font-size: 0.7em;
+}
+
+/* Ohne border */
+.menu_ul li{
+  margin-left:5px!important;
+}
+
+.menu_ul li .card{
+  border:none;
+}
+</style>
+
+<ul class="menu_ul nav d-flex flex-nowrap justify-content-center w-100 pb-3" style="overflow-x:scroll; white-space:nowrap;">
+  {% menu_objects as main_menu_objects %}
+  <li class="nav-item d-inline-block float-none align-self-stretch">
+    <div class="card w-100 h-100 p-1">
+      <a class="w-100 p-1" style="height:66%;" href="{% url 'offer:list' %}">
+        <img class="card-img-top h-100" style="object-fit:cover;filter:grayscale(100%);opacity:0.3;" src="{% static 'oscar/img/no_image.jpg' %}" alt="{{ product.get_title }}">
+      </a>
+      <div class="card-body p-1 text-center">
+        <a class="nav-link text-dark p-0" href="{% url 'offer:list' %}">
+          <b>{% trans "Offers"|safe %}</b>
+        </a>
+      </div>
+    </div>
+  </li>
+  {% for category in main_menu_objects %}
+    {% if category.depth == 1 %}
+      <li class="nav-item d-inline-block float-none align-self-stretch ml-3">
+        <div class="card w-100 h-100">
+            {% with image=category.image %}
+              <a class="w-100 p-1" style="height:66%;" href="{{ category.get_absolute_url }}">
+                <img class="card-img-top h-100" style="object-fit:cover;{% if not image %}filter:grayscale(100%);opacity:0.3;{% endif %}" src="{% if image %}{{ image.url }}{% else %}{% static 'oscar/img/no_image.jpg' %}{% endif %}" alt="{{ product.get_title }}">
+              </a>
+            {% endwith %}
+          <div class="card-body p-1 text-center">
+            <a class="nav-link text-dark text-wrap p-0" href="{{ category.get_absolute_url }}">
+              <b>
+                {{ category }}
+              </b>
+            </a>
+          </div>
+        </div>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

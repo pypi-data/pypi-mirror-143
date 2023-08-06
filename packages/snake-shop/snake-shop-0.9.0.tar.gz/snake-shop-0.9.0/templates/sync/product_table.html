@@ -1,0 +1,40 @@
+{% extends 'oscar/base.html' %}
+{% load form_tags %}
+{% load i18n %}
+{% load static %}
+{% load display_datatype_filters %}
+{% load render_table from django_tables2 %}
+
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block title %}
+    {{ title }} | {% trans "Producttable" %} | {{ block.super }}
+{% endblock %}
+
+
+{% block extrahead %}
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+{% endblock %}
+
+
+{% block extrascripts %}
+    {{ block.super }}
+    <script src="{% static 'product_tables/js/product_tables.js' %}?ver=2"></script>
+    <script>
+    	var ajaxFormUrl="{% url 'sync:sync-table-ajax' %}";
+    	var ajaxFormSubmitUrl="{{ request.path}}";
+    </script>
+{% endblock %}
+
+
+{% block breadcrumbs %}
+{% endblock %}
+
+
+{% block headertext %}{{ title }}{% endblock %}
+
+
+{% block layout %}
+  {% include 'product_tables/table.html' %}
+{% endblock layout %}

@@ -1,0 +1,56 @@
+{% load display_tags %}
+{% load i18n %}
+{% load image_tags %}
+{% load reviews_tags %}
+{% load currency_filters %}
+{% load purchase_info_tags %}
+{% load image_tags %}
+{% purchase_info_for_product request product as session %}
+
+{% block product %}
+  <div class="card w-100 h-100 condensed">
+    <div class="row position-absolute no-gutters mt-2 mr-3 text-right" style="right:0;z-index:100;">
+      <span class="col-12">
+        {% include 'oscar/catalogue/partials/img_buttons.html' %}
+      </span>
+      <span class="col-12">
+        <button type="button" class="btn btn-link text-dark ml-auto no-focus" style="border-radius:50%;" onclick="copyToClipboard('{{ request.scheme }}://{{ request.get_host }}{{ product.get_absolute_url }}');alert('Link wurde in die Zwischenablage kopiert:\n{{ request.scheme }}://{{ request.get_host }}{{ product.get_absolute_url }}');">
+          <i class="fas fa-external-link-alt"></i>
+        </button>
+      </span>
+    </div>
+    {% with image=product.primary_image %}
+      {% oscar_thumbnail image.original "x250" upscale=False as thumb %}
+      <a href="{{ product.get_absolute_url }}" target="_blank" class="h-100 w-100 p-0 d-flex">
+        <img class="card-img-top my-auto" style="object-fit: cover;" src="{{ thumb.url }}" alt="{{ product.get_title }}">
+      </a>
+    {% endwith %}
+    <div class="card-footer p-0" style="height:30%;">
+      <div class="row h-100 no-gutters">
+          <a href="{{ product.get_absolute_url }}" target="_blank" class="p-0 w-100">
+            <h5 class="col-12 card-title text-dark text-center m-0 px-1 mx-auto" style="font-size:1em;">
+              <b>{{ product.get_title }}</b>
+            </h5>
+          </a>
+          <div class="col-12 text-center my-auto">
+              <span class="bold mx-auto" style="color:green;">
+                Preis: 
+                {% if session.price.is_special_price %}
+                  <span style="color:red;text-decoration:line-through;font-size: smaller;">
+                    {{ session.price.base_price.incl_tax|currency:session.price.currency }}
+                  </span>
+                {% endif %}
+                {% if session.price.excl_tax == 0 %}
+                  {% trans "Free" %}
+                {% elif session.price.is_tax_known %}
+                  {{ session.price.incl_tax|currency:session.price.currency }}
+                {% else %}
+                  {{ session.price.excl_tax|currency:session.price.currency }}
+                {% endif %}
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% load thumbnail static %}
+
+<script>
+$(function(){
+  const swiper = new Swiper('#offer_slider', {
+    direction: 'horizontal',
+    lazy: {
+    	loadPrevNext: true,
+    	loadPrevNextAmount: 5,
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+    	lazyImageReady: function (){
+    		fontFitExecuter();
+    	}
+    },
+    {% if not CONFIG.settings.DEBUG %}
+    autoplay: {
+      delay: 5000,
+    },
+	{% endif %}
+  });
+})
+</script>
+
+<style>
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 5em;
+  opacity: 0.5;
+}
+#offer_slider a:hover{
+  opacity:1;
+}
+</style>
+
+<div id="offer_slider" class="swiper-container rounded overflow-hidden">
+  <div class="swiper-wrapper">
+    {% if CONFIG.first_slider_element %}
+      <div class="swiper-slide">
+        <img width=800 height=533 class="d-block w-100 h-100" style="object-fit:contain;" src='{% thumbnail CONFIG.first_slider_element 800x533 quality=90 %}'></img>
+      </div>
+    {% endif %}
+    {% for slide in slider_elements %}
+        {% if slide.cached_slide %}
+          <div class="swiper-slide">
+            {% if slide.slide.link %}
+              <a href="{{ slide.slide.link }}" target="__blank">
+            {% endif %}
+            <img width=800 height=533 class="d-block w-100 h-100 swiper-lazy" style="object-fit:contain;" data-src='{% thumbnail slide.cached_slide 800x533 quality=90 %}'></img>
+            {% if slide.slide.link %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+    {% endfor %}
+  </div>
+  <div class="swiper-button-next text-light ml-3"></div>
+  <div class="swiper-button-prev text-light mr-3"></div>
+  <div class="swiper-pagination swiper-pagination-bullets"></div>
+</div>

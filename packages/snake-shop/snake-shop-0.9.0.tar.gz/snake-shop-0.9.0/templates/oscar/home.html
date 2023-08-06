@@ -1,0 +1,119 @@
+{% extends "oscar/layout.html" %}
+{% load thumbnail static %}
+
+{% block extrastyles %}
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+{% endblock %}
+
+{% block extrascripts %}
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module">
+  </script>
+{% endblock %}
+
+{% block title %}
+    {{ CONFIG.company_short_name }} | {{ block.super }}
+{% endblock %}
+
+{% block layout %}
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col col-12 order-1 d-md-none d-block">
+        <div class="row justify-content-between px-3" style="margin-top: -5px;">
+          <div class="col col-5 d-md-none d-flex align-items-stretch p-1">
+            {% if CONFIG.header_hints_bottom_1 %}
+            <div class="card text-center">
+              <div class="card-body d-flex p-0">
+                {% if CONFIG.header_hints_bottom_1_url %}
+                <a href="{{ CONFIG.header_hints_bottom_1_url }}" class="my-auto">
+                {% endif %}
+                  <img width=200 height=75 src="{% thumbnail CONFIG.header_hints_bottom_1 200x75 %}" alt="" class="img-fluid">
+                {% if CONFIG.header_hints_bottom_1_url %}
+                </a>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="col col-4 d-md-none d-flex align-items-stretch p-1">
+            {% if CONFIG.header_hints_bottom_2 %}
+            <div class="card text-center">
+              <div class="card-body d-flex p-0">
+                {% if CONFIG.header_hints_bottom_2_url %}
+                <a href="{{ CONFIG.header_hints_bottom_2_url }}" class="my-auto">
+                {% endif %}
+                  <img width=200 height=75 src="{% thumbnail CONFIG.header_hints_bottom_2 200x75 %}" alt="" class="img-fluid">
+                {% if CONFIG.header_hints_bottom_2_url %}
+                </a>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="col col-3 d-md-none d-flex align-items-stretch p-1" style="line-height: 12px; font-size: 10px; object-fit: contain;">
+            {% if CONFIG.header_hints_top_1_responsive %}
+            <div class="card text-center">
+              <div class="card-body d-flex p-2">
+                <div class="row">
+                  <div class="col align-self-center">
+                    {% if CONFIG.header_hints_top_1_url %}
+                    <a href="{{ CONFIG.header_hints_top_1_url }}" class="my-auto">
+                    {% endif %}
+                      <img width=100 height=50 src="{% thumbnail CONFIG.header_hints_top_1_responsive 100x50 crop %}" alt="" class="img-fluid">
+                    {% if CONFIG.header_hints_top_1_url %}
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 d-none d-md-flex">
+        {% include 'partials/menu_div.html' %}
+      </div>
+    </div>
+    
+    <div class="row mt-3">
+      {% if CONFIG.slider_intro %}
+        <div class="col col-12 p-0 order-4 col-md-3 order-md-2 d-none d-md-block">
+          <img width=300 height=600 class="w-100 h-100" src="{% thumbnail CONFIG.slider_intro 300x600 %}" style="object-fit: scale-down;"></img>
+        </div>
+      {% endif %}
+      <div class="col col-12 px-0{% if CONFIG.slider_intro %} col-md-9 order-2 order-lg-3{% endif %}">
+        {% include 'partials/offer_slider.html' %}
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 d-md-none px-0">
+        {% include 'partials/menu_div.html' %}
+      </div>
+    </div>
+    {% if CONFIG.slider_intro_responsive %}
+      <div class="row d-md-none">
+        <div class="col-12 px-0">
+          <img width=500 class="w-100 h-100 rounded border" src="{% thumbnail CONFIG.slider_intro_responsive 500x500 %}" style="object-fit: scale-down;"></img>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row mt-3">
+      <div class="col-12 px-0">
+        {% include 'partials/product_slider.html' %}
+      </div>
+    </div>
+    <div class="row mt-3 bg-light">
+      <div class="col col-10 col-sm-8 col-md-6 offset-1 offset-sm-2 offset-md-3 order-5 align-self-center d-flex">
+        <a href="{% url 'catalogue:index' %}" class="btn btn-color2 btn-lg btn-color1 btn-block mx-auto">zur Shop Übersicht</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-5">
+        {{ CONFIG.home_bottom_text|safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

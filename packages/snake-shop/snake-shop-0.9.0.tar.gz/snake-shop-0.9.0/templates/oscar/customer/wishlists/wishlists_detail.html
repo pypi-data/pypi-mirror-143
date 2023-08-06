@@ -1,0 +1,152 @@
+{% extends "oscar/customer/baseaccountpage.html" %}
+{% load image_tags %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+{% block breadcrumbs %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'customer:summary' %}">{% trans 'Account' %}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'customer:wishlists-list' %}">{% trans 'Wish Lists' %}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ wishlist.name }}
+            </li>
+        </ol>
+    </nav>
+{% endblock %}
+
+
+{% block column_left %}
+{% endblock %}
+
+
+{% block styles %}
+  <style>
+    .input-mini{width: 65px;}
+    .sidebar{padding:0;}
+    input[type="number"] {}
+    .selected{font-weight: bolder;}
+    #id_sort_by{height: 30px;}
+    .show #search-results{display: block;}
+  </style>
+{% endblock %}
+
+
+{% block tabcontent %}
+    <div class="col-12 p-0">
+      <a href="{% url 'customer:wishlists-list' %}" class="btn btn-link{% if active_tab == 'wishlists' %} active{% endif %}"><i class="fas fa-arrow-left"></i> {% trans "zurück zur Übersicht" %}</a>
+    </div>
+    <div class="col-12 col-lg-auto float-left">
+      <div class="alert alert-light m-0 d-none d-sm-block" role="alert">
+        Beim Verlassen eines Mengen-Feldes wird diese mit dem Warenkorb abgeglichen.
+      </div>
+    </div>
+    <div class="float-right d-flex justify-content-end my-3">
+      <div id="wishlist-product-search" class="dropdown">
+        <input class="form-control dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton" 
+          type="search" 
+          name="search"
+          placeholder="Produkt hinzufügen ..." 
+          hx-get="{% url 'customer:product-realtime-search' key=wishlist.key %}" 
+          hx-trigger="click, keyup changed delay:500ms, search" 
+          hx-target="#search-results"
+          hx-swap="outerHTML">
+        <span id="search-results" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></span>
+      </div>
+    </div>
+    {% include './wishlists_lines.html' %}
+{% endblock tabcontent %}
+
+
+{% block extrascripts %}
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script>
+  	var runningRequests = 0;
+    htmx.onLoad(function(){
+    	$('.input-mini').focus(function (){
+    		this.select();
+    	});
+    	$('.input-mini').click(function (){
+    		this.focus();
+    	})
+        $('.input-mini').keypress(function (e) {
+            var key = e.which;
+            var code = e.keyCode || e.which;
+            if(key == 13){
+        		e.preventDefault();
+        		var tab = $(this).attr("tabindex");
+        		do {
+	          		tab++;
+            		var element = $("[tabindex='"+tab+"']")
+            		if (element.length==0){
+            			tab = 100;
+                		var element = $("[tabindex='"+tab+"']")
+            		}
+        		} while (element.hasClass("d-none"));
+          		element.focus();
+            }
+        });
+        $('.input-mini').bind("focusout", function (e) {
+        	var element = $(e.target);
+        	var currentValue = element.val();
+        	var previousValue = element.attr('data-previous');
+      		if (currentValue != previousValue){
+        		var form = this.form;
+        		formData = new FormData(this.form);
+        		formData.append('product_id', $(this).data('product-id'));
+        		$.ajax({
+        	        type: 'POST',
+        	        data: formData,
+        	        processData: false,
+        	        contentType: false,
+        	        beforeSend: function(){
+        	        	runningRequests++;
+          	        window.onbeforeunload = function() {
+          	            return "Es wurden noch nicht alle Positionen an den Warenkorb übertragen.";
+          	        }
+          	        $('body').css('cursor', 'wait');
+        	        },
+        			success: function(data){
+            			element.attr('data-previous', currentValue);
+            			console.log(data);
+                		$('#basket_items').html(data['basket_items']);
+                		$('#basket_value').html(data['basket_value']);
+                		$('#wishlist_items').html(data['wishlist_items']);
+                	    refreshMessages();
+        	        	runningRequests--;
+        	        	if (runningRequests<=0){
+        	        		window.onbeforeunload=false;
+              	        $('body').css('cursor', 'unset');
+        	        	}
+        			}
+        	    });
+      		}
+        });
+    });
+    htmx.onLoad(function(content) {
+        var sortables = content.querySelectorAll(".sortable");
+        for (var i = 0; i < sortables.length; i++) {
+          var sortable = sortables[i];
+          new Sortable(sortable, {
+        	  //multiDrag: true,
+        	  //selectedClass: 'selected',
+        	  handle: '.handle',
+        	  //fallbackTolerance: 3,
+        	  forceFallback: true,
+        	  draggable:'.item',
+              animation: 150,
+              ghostClass: 'blue-background-class',
+          	  swapThreshold: 1,
+			  removeCloneOnHide: true,
+          });
+        }
+    });
+  </script>
+{% endblock extrascripts %}

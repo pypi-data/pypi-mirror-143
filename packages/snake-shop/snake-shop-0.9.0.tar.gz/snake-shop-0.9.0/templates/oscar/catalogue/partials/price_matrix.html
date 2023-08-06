@@ -1,0 +1,69 @@
+{% load currency_filters %}
+<thead class="bg-light">
+  <tr>
+    <th class="text-color1">Basispreis Matrix</th>
+    <th>ohne Steuer</th>
+    <th>Steuer</th>
+    <th>inkl. Steuer</th>
+    <th>Faktor</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th class="bg-light">Preis{% if price.has_deposit %} ohne Pfand{% endif %}</th>
+    <td>{{ price.excl_tax_excl_deposit|currency:session.price.currency }}</td>
+    <td>{{ price.price_tax|currency:session.price.currency }}</td>
+    <td>{{ price.incl_tax_excl_deposit|currency:session.price.currency }}</td>
+    <td>{{ price.price.factor_pc }}</td>
+  </tr>
+  {% if price.has_deposit %}
+    <tr>
+      <th class="bg-light">Pfand</th>
+      <td>{{ price.deposit_excl_tax|currency:session.price.currency }}</td>
+      <td>{{ price.deposit_tax|currency:session.price.currency }}</td>
+      <td>{{ price.deposit_incl_tax|currency:session.price.currency }}</td>
+      <td>{{ price.deposit.factor_pc }}</td>
+    </tr>
+    <tr>
+      <th class="bg-light">Preis mit Pfand</th>
+      <td>{{ price.excl_tax_incl_deposit|currency:session.price.currency }}</td>
+      <td>{{ price.tax|currency:session.price.currency }}</td>
+      <td>{{ price.incl_tax_incl_deposit|currency:session.price.currency }}</td>
+      <td>{{ price.total.factor_pc }}</td>
+    </tr>
+  {% endif %}
+</tbody>
+{% if price.has_special_price %}
+  <thead class="bg-light">
+    <tr>
+      <th class="text-color1">Sonderpreis Matrix</th>
+      <th>ohne Steuer</th>
+      <th>Steuer</th>
+      <th>inkl. Steuer</th>
+      <th>Faktor</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th class="bg-light">Rabatt</th>
+        <td>{{ price.discount.excl|currency:session.price.currency }}</td>
+        <td>{{ price.discount.tax|currency:session.price.currency }}</td>
+        <td>{{ price.discount.incl|currency:session.price.currency }}</td>
+        <td>{{ price.discount.factor_pc }}</td>
+      </tr>
+      <tr>
+        <th class="bg-light">Sonderpreis ohne Pfand</th>
+        <td>{{ price.special_price.excl|currency:session.price.currency }}</td>
+        <td>{{ price.special_price.tax|currency:session.price.currency }}</td>
+        <td>{{ price.special_price.incl|currency:session.price.currency }}</td>
+        <td>{{ price.special_price.factor_pc }}</td>
+      </tr>
+      <tr>
+        <th class="bg-light">Sonderpreis mit Pfand</th>
+        <td>{{ price.special_price_with_deposit.excl|currency:session.price.currency }}</td>
+        <td>{{ price.special_price_with_deposit.tax|currency:session.price.currency }}</td>
+        <td>{{ price.special_price_with_deposit.incl|currency:session.price.currency }}</td>
+        <td>{{ price.special_price_with_deposit.factor_pc }}</td>
+      </tr>
+  </tbody>
+{% endif %}

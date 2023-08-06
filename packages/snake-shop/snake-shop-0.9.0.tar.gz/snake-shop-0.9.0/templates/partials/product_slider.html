@@ -1,0 +1,35 @@
+{% load thumbnail static %}
+
+<script>
+  $(function(){
+    const swiper = new Swiper('#product_slider', {
+      direction: 'horizontal',
+      lazy: {
+      	loadPrevNext: true,
+      	loadPrevNextAmount: 10,
+      },
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 6,
+      keyboard: {
+  	    enabled: true,
+  	    onlyInViewport: false,
+  	  },
+      {% if not CONFIG.settings.DEBUG %}
+      autoplay: {
+        delay: 5000,
+      },
+      {% endif %}
+    });
+  })
+</script>
+
+<div id="product_slider" class="swiper-container rounded overflow-hidden">
+  <div class="swiper-wrapper">
+    {% for product in products %}
+      <div class="swiper-slide" style="max-width: 240px;">
+        {% include 'oscar/catalogue/partials/product.html' with is_slider=True disable_responsive=True lazy=True %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

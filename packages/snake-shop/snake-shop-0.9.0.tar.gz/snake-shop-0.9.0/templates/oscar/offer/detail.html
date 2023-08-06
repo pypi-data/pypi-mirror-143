@@ -1,0 +1,50 @@
+{% extends "oscar/layout.html" %}
+
+
+{% load i18n %}
+{% load product_tags %}
+
+{% block title %}
+{{ offer.name }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item"><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+{% endblock %}
+
+{% block headertext %}{{ offer.name }}{% endblock %}
+
+{% block content %}
+
+    {% if not offer.is_available %}
+      <div class="alert alert-danger">{% trans " This offer is no longer available." %}</div>
+    {% endif %}
+
+    {% if upsell_message %}
+      <div class="row mb-3">
+          {% if offer.description %}
+              <div class="col-12">
+                  <p>{{ offer.description|safe }}</p>
+              </div>
+          {% endif %}
+          <div class="col-12">
+              <div class="card card-body bg-light">
+                  <h2 class="h4"><i class="fas fa-exclamation"></i> {% trans "What you need to do" %}</h2>
+                  <p>{{ upsell_message }}</p>
+              </div>
+          </div>
+      </div>
+    {% endif %}
+
+    {% if products %}
+      <section>
+        <div>
+          <ol id="products" class="row list-unstyled">
+            {% include 'oscar/catalogue/partials/browse_products.html' %}
+          </ol>
+        </div>
+      </section>
+    {% else %}
+    <p class="nonefound">{% trans "No products found." %}</p>
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends "lockdown/base.html" %}
+{% load humanize static %}
+
+{% block title %}Coming soon...{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row mt-md-5">
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-self-stretch my-1 my-md-3">
+      <div class="row w-100 m-3 p-3 border shadow">
+        <div class="col-12 my-auto">
+          <b>Herzlich willkommen.</b>
+          <hr>
+          Derzeit befindet sich der Shop im Wartungsmodus.
+          <hr>
+          Um {{ lockdown_until|time }} Uhr sind wir wieder für Sie da.
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-self-stretch my-1 my-md-3">
+      <div class="row w-100 m-3 p-3 border shadow">
+        <div class="col-12 my-auto">
+          <div class="alert alert-success" role="alert">
+            Sie können diese Seite geöffnet lassen
+            <hr>
+            Sobald die Updates abgeschlossen sind, werden Sie zur Startseite weitergeleitet.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 d-flex align-self-stretch my-1 my-md-3">
+      <div class="row w-100 m-3 p-3 border shadow">
+        <div class="col-12">
+        </div>
+        <div class="col-12 mt-auto">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{ lockdown_progress_pct }}" aria-valuemin="{{ lockdown_after.timestamp }}" aria-valuemax="{{ lockdown_until.timestamp }}" style="width: {{ lockdown_progress_pct }}%"></div>
+          </div>
+        </div>
+        <div class="col-12 mb-auto text-right">
+          {{ lockdown_until|naturaltime }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row p-3">
+    <div class="col-12 text-right">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Admin Login
+      </button>
+    </div>
+    <div class="col-12 col-md-4 offset-md-8 collapse border shadow p-3" id="collapseExample">
+      <div id="lockdown">
+        {% if form %}
+          <form action="" method="post">{% csrf_token %}
+            <table>
+            {{ form.as_table }}
+            </table>
+            <p><input type="submit" value="Login" /></p>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

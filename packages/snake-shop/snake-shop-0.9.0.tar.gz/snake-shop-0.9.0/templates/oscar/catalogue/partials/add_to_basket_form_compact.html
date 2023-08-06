@@ -1,0 +1,23 @@
+{% load basket_tags %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% purchase_info_for_product request product as session %}
+
+{% if session.availability.is_available_to_buy %}
+    {% basket_form request product 'multiple' as basket_form %}
+    <div class="col-12">
+      <form class="border rounded" style="border-color:#888!important;" action="" method="post" onsubmit="submitForm($(this), '{% url 'basket:add' pk=product.pk %}');return false;">{% csrf_token %}
+        <div class="d-flex input-group">
+          {{ basket_form.quantity }}
+          <div class="input-group-append flex-grow-1 ">
+            <button type="submit" class="btn btn-color2 btn-block nofocus {% if product.upc in basket_upcs %}text-success{% else %}text-dark{% endif %}" style="border-left: 1px solid #888!important;">
+              <i class="fas fa-shopping-cart" style="text-shadow: 0px 0px 5px #fff;"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+{% else %}
+    <span class="btn btn-secondary btn-block disabled">{% trans "Nicht verfügbar" %}</span>
+{% endif %}

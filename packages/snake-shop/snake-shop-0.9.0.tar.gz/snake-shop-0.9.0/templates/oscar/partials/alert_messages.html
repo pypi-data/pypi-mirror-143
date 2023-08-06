@@ -1,0 +1,13 @@
+{% load string_filters %}
+
+{% comment %}
+Use message tags to control these alerts.  Available tags include:
+- safe: allow HTML in the message
+- block: for longer messages - this adds extra padding
+- noicon: don't show an icon
+- error/success/info - these change the connotation of the alert
+{% endcomment %}
+
+<div id="messages" class="w-100">
+  {% include 'oscar/partials/alert_message.html' %}
+</div>

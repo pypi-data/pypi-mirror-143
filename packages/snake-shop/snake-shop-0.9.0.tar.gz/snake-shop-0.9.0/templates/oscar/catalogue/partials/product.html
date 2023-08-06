@@ -1,0 +1,126 @@
+{% load display_tags %}
+{% load i18n %}
+{% load image_tags %}
+{% load reviews_tags %}
+{% load currency_filters %}
+{% load purchase_info_tags %}
+{% load custom_filters %}
+
+
+{% block product %}
+{% purchase_info_for_product request product as session %}
+<article class="mb-4 w-100">
+  <div class="row no-gutters d-md-block h-100">
+    <div class="{% if disable_responsive %}col-12{% else %}col-4 col-md-12{% endif %} d-flex border rounded" style="border-bottom: 2px solid lightgray!important;">
+      <div class="row position-absolute no-gutters mt-2 mr-sm-3 text-right" style="right:0;z-index:100;">
+        <span class="col-12">
+          {% with registration_popover_enabled=True %}
+            {% include 'oscar/catalogue/partials/img_buttons.html' %}
+          {% endwith %}
+        </span>
+        {% if not is_slider %}
+          <span class="col-12">
+            <button type="button" class="btn btn-link text-dark ml-auto no-focus" style="border-radius:50%;" onclick="copyToClipboard('{{ request.scheme }}://{{ request.get_host }}{{ product.get_absolute_url }}');alert('Link wurde in die Zwischenablage kopiert:\n{{ request.scheme }}://{{ request.get_host }}{{ product.get_absolute_url }}');">
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </span>
+        {% endif %}
+      </div>
+      {% with image=product.primary_image %}
+        {% oscar_thumbnail image.original "250x250" upscale=False as thumb %}
+        <a class="product_image_href m-auto" href="{{ product.get_absolute_url }}" style="">
+            <img width=250 height=250 class="img w-100 mx-auto my-3 product-image{% if lazy %} swiper-lazy{% endif %}" style="object-fit:contain;{% if product.primary_image.is_missing %}filter:grayscale(100%);opacity:0.3;{% endif %}" {% if lazy %}data-{% endif %}src="{{ thumb.url }}" alt="{{ product.get_title }}">
+        </a>
+      {% endwith %}
+      <div class="position-absolute mb-3 mr-sm-4" style="right:0;bottom:0;z-index:10;">
+        {% if product.has_box %}
+          <span class="badge badge-info condensed">
+            Kiste
+          </span>
+        {% endif %}
+        {% if request.user.is_staff and product.rank %}
+          <button class="badge btn badge-light condensed no-focus" type="button" data-toggle="tooltip" data-html="true" title="
+                  <b><i>Suchparameter Übersicht<br>(nur Admins)</i></b><br><br>
+                  <b>Art. Nr.:</b> {{ product.upc_rank|pc:4 }}<br>
+                  <b>Title:</b> {{ product.title_rank|pc:4 }}<br>
+                  <b>Meta Descr.:</b> {{ product.meta_description_rank|pc:4 }}<br>
+                  <b>Meta Title:</b> {{ product.meta_title_rank|pc:4 }}">
+            {{ product.rank|pc:2 }}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+    <div class="{% if disable_responsive %}col-12{% else %}col-8 col-md-12 pl-2{% endif %} pl-md-0 product-body" style="line-height:1;">
+      <div class="row text-left no-gutters py-3 px-3 condensed h-100 rounded" style="background-color:#f0f0f0;border-bottom: 2px solid lightgray;">
+        <div class="col-12">
+          <h3 class="condensed text-md-center bold m-0" style="font-size:1.1rem;min-height:40px;">
+            <a class="text-dark" href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">
+              {{ product.get_title }}
+            </a>
+          </h3>
+        </div>
+        <div class="col-12 text-md-center mt-auto" style="line-height:1;">
+          {% if product.reusability %}
+            {{ product.reusability_label|upper }}
+          {% else %}
+            &nbsp;
+          {% endif %}
+        </div>
+        <div class="col-12 text-md-center condensed text-xxs mb-auto">
+          {% if product.get_deposit and not request.user.hide_price %}
+            inkl. MwSt. zzgl Pfand: {{ product.get_deposit|currency:session.price.currency }}
+          {% else %}
+            &nbsp;
+          {% endif %}
+        </div>
+        <div class="col-12 mt-auto">
+          <div class="row no-gutters">
+            <div class="col-5 col-sm-4 bold" style="font-size:1.05rem;">
+              {% if not request.user.hide_price %}Preis:{% else %}&nbsp;{% endif %}
+            </div>
+            <div class="col-4 col-sm-3 bold text-right" style="font-size:1.05rem;">
+              <span style="{% if session.price.has_special_price %}text-decoration:line-through;{% endif %}">
+                {% if not request.user.hide_price %}{{ session.price.base_price.incl|currency:session.price.currency }}{% else %}&nbsp;{% endif %}
+              </span>
+            </div>
+            <div class="col-3 bold text-right text-red" style="font-size:1.05rem;">
+              <span style="color:red;">
+                {% if not request.user.hide_price and session.price.has_special_price %}{{ session.price.special_price.incl|currency:session.price.currency }}{% else %}&nbsp;{% endif %}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-auto">
+          <div class="row no-gutters">
+            <div class="col-auto mr-1 text-xs">
+              {% if session.price.volume_price %}
+                Literpreis:
+              {% elif session.price.weight_price %}
+                Kilopreis:
+              {% else %}
+                &nbsp;
+              {% endif %}
+            </div>
+            <div class="col-auto text-xs">
+              {% if session.price.volume_price %}
+                {{ session.price.volume_price|currency:session.price.currency }}/{% trans 'Liter' %}
+              {% elif session.price.weight_price %}
+                {{ session.price.weight_price|currency:session.price.currency }}/{% trans 'kg' %}
+              {% else %}
+                &nbsp;
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-auto">
+          <div class="row">
+            {% if not product.is_parent and not product.has_options %}
+              {% include "oscar/catalogue/partials/add_to_basket_form_compact.html" %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{% endblock %}
