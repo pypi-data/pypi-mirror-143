@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cuefig
+Version: 0.0.1
+Summary: A config framework that you can cue and hint quickly.
+Home-page: https://github.com/FavorMylikes/cuefig
+Author: 麦丽素
+Author-email: l786112323@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
