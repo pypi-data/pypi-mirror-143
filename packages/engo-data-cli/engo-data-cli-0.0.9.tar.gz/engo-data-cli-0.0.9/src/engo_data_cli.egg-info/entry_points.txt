@@ -1,0 +1,2 @@
+[console_scripts]
+engo-data-cli = cli.entry:cli

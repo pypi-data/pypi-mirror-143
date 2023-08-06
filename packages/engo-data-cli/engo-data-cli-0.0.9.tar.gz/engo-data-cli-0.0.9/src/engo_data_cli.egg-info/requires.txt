@@ -1,0 +1,4 @@
+requests>=2.27.1
+click>=7.1.2
+beautifulsoup4>=4.9.3
+wechatpy>=2.0.0.alpha22
