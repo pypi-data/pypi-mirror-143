@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: recapturedocs
+Version: 5.0.1
+Summary: Library for RecaptureDocs.com
+Home-page: https://github.com/jaraco/recapturedocs
+Author: Jason R. Coombs
+Author-email: jaraco@jaraco.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: cherrypy (>=3.2.3)
+Requires-Dist: genshi (>=0.6)
+Requires-Dist: boto (>=2.4)
+Requires-Dist: PyPDF2
+Requires-Dist: keyring (>=0.7.1)
+Requires-Dist: path
+Requires-Dist: docutils
+Requires-Dist: jaraco.modb (>=3.2)
+Requires-Dist: pymongo (>=1.9)
+Requires-Dist: httpagentparser (>=1.0.1)
+Requires-Dist: dropbox (>=1.5)
+Requires-Dist: newrelic
+Requires-Dist: jaraco.text
+Requires-Dist: jaraco.itertools
+Requires-Dist: jaraco.logging
+Requires-Dist: jaraco.collections
+Requires-Dist: jaraco.classes
+Requires-Dist: jaraco.functools (>=1.2)
+Requires-Dist: jaraco.email
+Requires-Dist: jaraco.mongodb
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: jaraco.packaging (>=9) ; extra == 'docs'
+Requires-Dist: rst.linker (>=1.9) ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: pytest (>=6) ; extra == 'testing'
+Requires-Dist: pytest-checkdocs (>=2.4) ; extra == 'testing'
+Requires-Dist: pytest-flake8 ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-enabler (>=1.0.1) ; extra == 'testing'
+Requires-Dist: importlib-resources (>=1.1) ; extra == 'testing'
+Requires-Dist: mock ; extra == 'testing'
+Requires-Dist: fabric ; extra == 'testing'
+Requires-Dist: jaraco.fabric ; extra == 'testing'
+Requires-Dist: keyring ; extra == 'testing'
+Requires-Dist: pytest-black (>=0.3.7) ; (platform_python_implementation != "PyPy") and extra == 'testing'
+Requires-Dist: pytest-mypy (>=0.9.1) ; (platform_python_implementation != "PyPy") and extra == 'testing'
+
+.. image:: https://img.shields.io/pypi/v/recapturedocs.svg
+   :target: `PyPI link`_
+
+.. image:: https://img.shields.io/pypi/pyversions/recapturedocs.svg
+   :target: `PyPI link`_
+
+.. _PyPI link: https://pypi.org/project/recapturedocs
+
+.. image:: https://github.com/jaraco/recapturedocs/workflows/tests/badge.svg
+   :target: https://github.com/jaraco/recapturedocs/actions?query=workflow%3A%22tests%22
+   :alt: tests
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: Black
+
+.. .. image:: https://readthedocs.org/projects/skeleton/badge/?version=latest
+..    :target: https://skeleton.readthedocs.io/en/latest/?badge=latest
+
+.. image:: https://img.shields.io/badge/skeleton-2022-informational
+   :target: https://blog.jaraco.com/skeleton
+
+

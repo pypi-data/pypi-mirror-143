@@ -1,0 +1,16 @@
+recapturedocs/__init__.py,sha256=TJqhexx8EvB_JTLWdUOyqrqjTSWoQmN6l10-SlYWokU,76
+recapturedocs/agency.py,sha256=_-cV-8kDlhSv8za1PAj_Cmey9vxx8JE2Q-K_ITKzrA4,597
+recapturedocs/aws.py,sha256=mQdlHUCeYXFiNEQ6if4fG3fip1BmFmeMnXr87E4A_7c,1032
+recapturedocs/config.py,sha256=LuK_-RG-zEHLsxDuQrgmGc8QVSK2-yddts6sFFaWk00,1300
+recapturedocs/dropbox.py,sha256=adOLAoKVBakMZ5xII1QbasVHyUNOMLZmCeoXDlK4WdQ,1170
+recapturedocs/errors.py,sha256=vaDU6ygn_PGZkjUlxHeGQH9lFrOXLvyqgzo97rSQeMY,104
+recapturedocs/jsonpickle.py,sha256=C9vKB71gVxWFpQmrbAZ8biybjoi9hNnRSwX9-9WiCnI,1402
+recapturedocs/model.py,sha256=EFynsXGS0rarX6PyG3xjJYZKrKLcuRVcbtqKSzJNAeg,10053
+recapturedocs/persistence.py,sha256=pjAYElZ8rYLl8ykysG0MsfnXJL2kJORAKJGN2JiZOcA,1322
+recapturedocs/server.py,sha256=AW98dXGfXxv0FgRzKEhq60q86PLdVosrJVAwXTHtgXI,16851
+recapturedocs-5.0.1.dist-info/LICENSE,sha256=ppB0C2mjj3qgiyIGwi-zlLNqCzcy15ceY-oYQmKcypw,185
+recapturedocs-5.0.1.dist-info/METADATA,sha256=AEio4gQ-2zPJI4GAk4qAwpGj3jsNLlPTUznSpluzTYc,2877
+recapturedocs-5.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+recapturedocs-5.0.1.dist-info/entry_points.txt,sha256=Pmryc9X1Skh_HlH-vgRLo0mziDh5IiZ4dcsWG8SLMoI,76
+recapturedocs-5.0.1.dist-info/top_level.txt,sha256=G4cLHNKkWGyFcG7nEWVQwcT1wHHQuiiYPP7FjX1NQoM,21
+recapturedocs-5.0.1.dist-info/RECORD,,
