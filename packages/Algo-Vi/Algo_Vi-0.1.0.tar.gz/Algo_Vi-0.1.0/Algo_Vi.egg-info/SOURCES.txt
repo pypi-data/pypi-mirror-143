@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+__init__.py
+__main__.py
+setup.py
+Algo_Vi.egg-info/PKG-INFO
+Algo_Vi.egg-info/SOURCES.txt
+Algo_Vi.egg-info/dependency_links.txt
+Algo_Vi.egg-info/top_level.txt
