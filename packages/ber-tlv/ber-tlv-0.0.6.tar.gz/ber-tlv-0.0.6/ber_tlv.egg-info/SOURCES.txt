@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./ber_tlv/__init__.py
+./ber_tlv/tlv.py
+ber_tlv.egg-info/PKG-INFO
+ber_tlv.egg-info/SOURCES.txt
+ber_tlv.egg-info/dependency_links.txt
+ber_tlv.egg-info/top_level.txt
