@@ -1,0 +1,2 @@
+[console_scripts]
+convbaspy = convbaspy:runApp
