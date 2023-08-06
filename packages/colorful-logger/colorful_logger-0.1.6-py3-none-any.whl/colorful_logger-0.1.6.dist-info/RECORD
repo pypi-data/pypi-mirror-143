@@ -1,0 +1,11 @@
+colorful_logger/__init__.py,sha256=uni_lxJYVJmiBe4c2KMb-fklvH5s0-DAU8g0gkIziwM,502
+colorful_logger/consts.py,sha256=ndcIIMq-8fgbtnJgnusV8U9PW0QaRNmNfJDf1fQP0eU,558
+colorful_logger/formatter.py,sha256=4t5OEGBPW8_0o8vqI4cE714b7Ow5u8Bl6tCNAHAbYGw,3916
+colorful_logger/handlers.py,sha256=hCPX9LEsMZs07_Po7KlSYjos9r6DfHrU8xTHPCJam1o,1215
+colorful_logger/logger.py,sha256=urH8AwhK-O9pD35f1LCxWMmep3qwhdL56bXpAi5HL1E,3474
+colorful_logger/py.typed,sha256=oFm6QicfwgHwE0dyTDH0KKftkgieDZcREGOaINltwJA,74
+colorful_logger-0.1.6.dist-info/LICENSE,sha256=3usKVCj7OeDvmReJ968jQsXHGtRNcZy0fHRkQ9w4RIo,1063
+colorful_logger-0.1.6.dist-info/METADATA,sha256=aMqBor-gVrhsfEOnv_HTj_z8HtDph-bFsZZN00a3SFs,4883
+colorful_logger-0.1.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+colorful_logger-0.1.6.dist-info/top_level.txt,sha256=-1m5rhg-JjFBhsO9TD_bbU2prA4Q_t8bpAqUAWATmqw,16
+colorful_logger-0.1.6.dist-info/RECORD,,
