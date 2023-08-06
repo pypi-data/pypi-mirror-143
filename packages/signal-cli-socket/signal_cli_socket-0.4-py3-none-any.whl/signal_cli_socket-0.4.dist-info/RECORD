@@ -1,0 +1,10 @@
+signal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signal/signal.py,sha256=dQxvmxhMDz3R_fHUZn8g-XVds1rFwnHtCsxZ3nyiies,2324
+signal_cli_socket/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signal_cli_socket/signal.py,sha256=dQxvmxhMDz3R_fHUZn8g-XVds1rFwnHtCsxZ3nyiies,2324
+signal_cli_socket/signal_cli_socket.py,sha256=gMvCyaPQFUM3ge2cC9FhakLg4jsy9Lk-91HNt2lEDdc,2327
+signal_cli_socket-0.4.dist-info/LICENSE,sha256=JoTeFzAOCkNGhvHsf4r2BFIHpLRXo_4EsrnOZV58XVA,17098
+signal_cli_socket-0.4.dist-info/METADATA,sha256=T9m3LBXrTnHWTlqDTjWaSLNoNU9O4bDPwm8-ddZo2fw,1503
+signal_cli_socket-0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+signal_cli_socket-0.4.dist-info/top_level.txt,sha256=JSodnCeUIDzC3IwqXkx4Ox_8zH6HSQobpTXorcBwLfQ,18
+signal_cli_socket-0.4.dist-info/RECORD,,
