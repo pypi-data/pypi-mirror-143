@@ -1,0 +1,5 @@
+opencmiss.zinc
+opencmiss.exporter
+scaffoldmaker
+sparc-curation-tools>=0.4.2
+PySide2
