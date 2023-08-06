@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: geomeshconv
+Version: 0.0.9
+Summary: A Python package to convert the geology to in mesh generator (GMSH).
+Home-page: https://github.com/Ali1990dashti/GeoMeshPy
+Author: Ali Dashti
+Author-email: Ali.dashti@kit.edu
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: numpy-indexed
+Requires-Dist: pandas
+
+GeoMeshPy
+
+A Python package that converts vertices coming from geo modelling tools like GemPy. This package can be linked with the new functionality of GMSH for
+creating meshes that match the geometry of your geological model.
+The superiority is that this precedure can be achieved without manual treatement of the mesh. At the end, the automated coversion allows for making
+water tight meshes matching the primary geometry.
+
+
