@@ -1,0 +1,8 @@
+exifread
+flask
+pillow
+pylabels
+pyzbar
+qrcode
+reportlab
+whitenoise

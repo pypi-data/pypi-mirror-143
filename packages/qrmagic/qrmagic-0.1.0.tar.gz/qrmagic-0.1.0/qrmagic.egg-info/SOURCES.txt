@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+qrmagic/__init__.py
+qrmagic/_version.py
+qrmagic/api.py
+qrmagic/labelmaker.py
+qrmagic/scanimages.py
+qrmagic.egg-info/PKG-INFO
+qrmagic.egg-info/SOURCES.txt
+qrmagic.egg-info/dependency_links.txt
+qrmagic.egg-info/entry_points.txt
+qrmagic.egg-info/requires.txt
+qrmagic.egg-info/top_level.txt
