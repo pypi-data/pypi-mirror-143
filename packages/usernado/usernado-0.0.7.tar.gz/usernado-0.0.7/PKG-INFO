@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: usernado
+Version: 0.0.7
+Summary: Usernado is a Tornado extension to make life easier..
+Home-page: https://www.github.com/reganto/usernado
+Author: Reganto
+Author-email: rreganto@gmail.com
+License: Apache Software License (http://www.apache.org/licenses/LICENSE-2.0)
+Project-URL: Bug Tracker, https://github.com/reganto/usernado/issues
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Usernado is a [Tornado](https://www.tornadoweb.org/en/stable/) extension to make life easier.
+
+## Installation
+
+You can install Usernado as usual with pip:
+
+```bash
+pip install usernado
+```
+
+## Example
+
+```python
+from usernado import Handler
+
+# Create User model in advance
+from database.models import User
+
+
+class RegisterUser(Handler.Web):
+    def get(self):
+        self.render("register.html")
+
+    def post(self):
+        username = self.get_escaped_argument("username")
+        password = self.get_escaped_argument("password")
+
+        self.register(User, username, password)
+```
+
+As you see `Handler` is a Facade. you can use it to handle your requests as you wish.
+
+## Resources
+
+- [Documentation](#)
+
+- [Examples](https://github.com/reganto/Usernado/tree/master/example)
+
+- [PyPI](https://pypi.org/project/usernado/)
+
+- [Change Log](https://github.com/reganto/Usernado/blob/master/CHANGES.md)
+
+## TODO
+
+- [x] Send and broadcast for websockets
+- [x] Abstracted authentication methods
+- [ ] Authenticaion methods should return True/False
+- [ ] Add username & password to test login 
+- [ ] Add pluralize (str_plural) uimodule
+- [ ] Add diff_for_human (humanize) decorator
+- [ ] Add third party authentication abstract methods
+- [ ] Add pagination
+
+
