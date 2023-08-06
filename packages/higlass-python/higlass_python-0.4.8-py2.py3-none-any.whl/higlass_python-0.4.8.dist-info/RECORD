@@ -1,0 +1,16 @@
+higlass/__init__.py,sha256=DfUToQI_yhMUPaqny2qbtVNplZXra3TpsjiXpEJX_pM,406
+higlass/_version.py,sha256=40-PUZPRIakJU2yYWQcwTYvSJA6iewqiG8XylhxuAQk,22
+higlass/client.py,sha256=u7uG6FGsvWSdQq0rj_CAz-XbTqtp4Dl3X_JHVSpHl1U,25616
+higlass/inline_tiles.py,sha256=kNp96sVyKllR_E5UabJMsmWpfkGDK2xW_nCdPAyrrfc,2937
+higlass/server.py,sha256=YeLZP4SnyVXaZGYSxBM0hQ32TtXkP-UqMYEuvkcFsc8,17173
+higlass/tilesets.py,sha256=fnAG9ZuxbphwkhLtsp4boyxIuGjBR113TpsEzCAPY4k,6394
+higlass/utils.py,sha256=975PrKg4ucorHjDE7kIZCJKvsTvQuK5Q2FgVmAjXl6A,3898
+higlass/viewer.py,sha256=2GdoMD120Xa84Hdjoiq8b1e6JoLkKfeggYakJAVL3Aw,7777
+higlass/static/extension.js,sha256=tYWo6_gzU0aOk74F2y-PKXB7ZKevcGG17B31eUOUA68,3034
+higlass/static/index.js,sha256=HNgXrhJ9i2ePQK9NtQnsrbjncLoKdEZ4Ee6R2T_94LU,8457209
+higlass/static/index.js.map,sha256=EENkVrKiKp0KOFWDGFmWqvRu17W424s2WysYgp96Fzw,10094479
+higlass_python-0.4.8.dist-info/LICENSE,sha256=JWfUJ6BYIt_YpQBg4NWPU4rRQNPTGrLtG8iH8soVgDg,1084
+higlass_python-0.4.8.dist-info/METADATA,sha256=4FbahdYzePJR6o5R7NA7s55UxUpW5F-y_VdrLQ_kNsE,4536
+higlass_python-0.4.8.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+higlass_python-0.4.8.dist-info/top_level.txt,sha256=CmhizPMyXwocHUFSnKV8VkTYVI1M2K29wVvuKxAu1LA,8
+higlass_python-0.4.8.dist-info/RECORD,,
