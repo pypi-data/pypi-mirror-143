@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: automagically
+Version: 0.1.1
+Summary: Automagically Client / SDK
+Home-page: https://github.com/automagically-cloud/python-client
+Author: Jens Neuhaus
+Author-email: hey@automagically.cloud
+License: MIT license
+Keywords: automagically
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: Click (>=7.0)
+
+# 🔥  Automagically  Python Client
+
+[![PyPi](https://img.shields.io/pypi/v/automagically.svg)](https://pypi.python.org/pypi/automagically)
+[![PyPi](https://img.shields.io/pypi/pyversions/automagically)](https://pypi.python.org/pypi/automagically)
+[![ReadTheDocs](https://readthedocs.org/projects/automagically/badge/?version=latest)](https://automagically.readthedocs.io/en/latest/?version=latest)
+[![Gitter](https://badges.gitter.im/binaryai/community.svg)](https://gitter.im/automagically-hq/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+## Introduction
+
+Automagically is Foundation as a Service. We work at your finger tips to provide you with the management tools, APIs and SDKs to build software.
+
+## Get started
+
+### Installation
+
+```shell
+pip install automagically
+
+export AUTOMAGICALLY_API_KEY=....
+```
+
+### Code
+
+```python
+from automagically import Client
+
+AUTOMAGICALLY_API_KEY = os.getenv("AUTOMAGICALLY_API_KEY")
+
+client = Client(AUTOMAGICALLY_API_KEY)
+
+```
+
+## Get your API key
+
+Apply for early access at <https://automagically.cloud>.
+
+
