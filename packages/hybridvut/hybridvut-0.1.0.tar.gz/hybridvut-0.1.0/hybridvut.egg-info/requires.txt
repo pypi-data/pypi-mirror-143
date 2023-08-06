@@ -1,0 +1,5 @@
+numpy>=1.20.2
+pandas>=1.2.4
+iam-units>=2021.3.22
+openpyxl>=3.0.7
+pyam-iamc>=0.11.0

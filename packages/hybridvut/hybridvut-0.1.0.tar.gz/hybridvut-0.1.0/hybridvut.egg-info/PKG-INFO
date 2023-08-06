@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hybridvut
+Version: 0.1.0
+Summary: hybridvut is a tool to carry out hybrid LCA/IObased on the make and use framework
+Home-page: https://gitlab.com/exiobase/hybridvut
+Author: Maik Budzinski
+Author-email: maik.budzinski@ntnu.no
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9.0
+License-File: LICENSE
+
+UNKNOWN
+

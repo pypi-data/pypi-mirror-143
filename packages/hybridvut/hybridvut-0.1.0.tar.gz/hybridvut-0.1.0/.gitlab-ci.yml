@@ -1,0 +1,37 @@
+image: continuumio/miniconda3:latest
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  CONDA_ENVS_PATH: "$CI_PROJECT_DIR/.cache/conda/envs"
+  CONDA_PKGS_DIRS: "${CI_PROJECT_DIR}/.cache/conda/pkgs"
+  ENVIRONMENT_FILE: "environment.yml"
+  ENVIRONMENT_NAME: "hybridvut"
+
+cache:
+ key: repo_cache
+ paths:
+  - ${PIP_CACHE_DIR}
+  - ${CONDA_ENVS_PATH}
+
+before_script:
+  - conda info
+  - conda env update -f $ENVIRONMENT_FILE
+  - conda init bash
+  - source ~/.bashrc
+  - conda activate $ENVIRONMENT_NAME
+
+test_code:
+  stage: test
+  script:
+  - pytest . -vv
+
+pypi:
+  stage: deploy
+  cache: {}
+  script:
+      - pip install -U twine
+      - python setup.py sdist
+      - twine upload dist/*
+  only:
+      - tags
+

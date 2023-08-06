@@ -1,0 +1,8 @@
+__pychache__
+*.pyc
+dist
+*.egg-info/
+.pytest_cache/
+*.swp
+.DS_Store
+.tags

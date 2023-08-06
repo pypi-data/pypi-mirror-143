@@ -1,0 +1,12 @@
+name: hybridvut
+channels: 
+    - defaults
+    - anaconda
+    - conda-forge
+dependencies: 
+    - pandas>=1.2
+    - numpy>=1.20
+    - pyam
+    - coveralls
+    - pytest=5.4.3
+    - iam-units
