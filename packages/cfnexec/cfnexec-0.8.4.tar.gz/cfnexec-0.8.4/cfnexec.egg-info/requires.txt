@@ -1,0 +1,4 @@
+requests
+awscli
+boto3
+tabulate
