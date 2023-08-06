@@ -1,0 +1,11 @@
+README.md
+setup.py
+vvmake/__init__.py
+vvmake/test.py
+vvmake/vv.py
+vvmake/vvmake.py
+vvmake.egg-info/PKG-INFO
+vvmake.egg-info/SOURCES.txt
+vvmake.egg-info/dependency_links.txt
+vvmake.egg-info/entry_points.txt
+vvmake.egg-info/top_level.txt
