@@ -1,0 +1,3 @@
+[console_scripts]
+external-markdown=external_markdown.plugin:EmbedExternalMarkdown
+
