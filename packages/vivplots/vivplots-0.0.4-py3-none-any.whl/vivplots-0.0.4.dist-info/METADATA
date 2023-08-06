@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: vivplots
+Version: 0.0.4
+Summary: Common plotting modules for Vivent
+Home-page: https://github.com/vivent-sarl/vivplots
+Author: Thomas Meacham
+Author-email: thomas.meacham@vivent.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: pandas (==1.1.5)
+Requires-Dist: plotly (==5.4.0)
+
+# vivplots
+This repository holds the `pip` package for vivplots which holds common functions
+for vivent graphs.
+
+![unit tests](https://github.com/vivent-sarl/vivplots/actions/workflows/main.yml/badge.svg)
+
+## Installing the package
+This package can be installed directly using `pip` using the following commands:
+```
+pip install vivplots
+```
+
+
