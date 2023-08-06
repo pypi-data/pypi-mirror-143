@@ -1,0 +1,6 @@
+SpeechRecognition==3.8.1
+pywhatkit==5.3
+wikipedia==1.4.0
+pyjokes==0.6.0
+gnewsclient==1.12
+PyAudio==0.2.11
