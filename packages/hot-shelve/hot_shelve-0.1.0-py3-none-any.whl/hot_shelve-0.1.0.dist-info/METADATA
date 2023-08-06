@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hot-shelve
+Version: 0.1.0
+Summary: A wrapper for Python shelve that supports updating nested dictionaries in a simple way.
+License: MIT
+Author: likianta
+Author-email: likianta@foxmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
