@@ -1,0 +1,3 @@
+[console_scripts]
+env_set = env_set.__main__:main
+
