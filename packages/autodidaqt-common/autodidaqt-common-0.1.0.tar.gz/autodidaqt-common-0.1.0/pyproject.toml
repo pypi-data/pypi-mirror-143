@@ -1,0 +1,85 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry_core>=1.0.0"]
+
+[tool.poetry]
+authors = ["chstan <chstansbury@gmail.com>"]
+description = "Common code for autodiDAQt and autodiDAQt-receiver."
+homepage = "https://github.com/chstan/autodidaqt-common"
+license = "GNU GPL v3.0"
+name = "autodidaqt-common"
+readme = "README.md"
+repository = "https://github.com/chstan/autodidaqt-common"
+version = "0.1.0"
+
+keywords = ["data acquisition", "physics", "instrumentation", "DAQ"]
+
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Scientific/Engineering",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.10"
+
+dataclasses_json = "~0.5.0"
+loguru = "~0.3.2"
+numpy = "^1.20"
+pynng = "~0.7.1"
+xarray = ">=0.18.2"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.13.0"
+
+black = {version = "^21.7b0", allow-prereleases = true}
+darglint = "^1.8.0"
+isort = {extras = ["colors"], version = "^5.9.2"}
+pydocstyle = "^6.1.1"
+pylint = "^2.9.5"
+
+pytest = "^6.2.4"
+pytest-asyncio = "~0.15.1"
+pytest-cov = "^2.12.1"
+pytest-env = "~0.6.2"
+pytest-mock = "^3.6.1"
+
+[tool.black]
+color = true
+line-length = 100
+target-version = ["py38"]
+
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | env
+    | venv
+)/
+'''
+
+[tool.isort]
+line_length = 100
+py_version = 38
+
+color_output = true
+include_trailing_comma = true
+indent = 4
+known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+multi_line_output = 3
+profile = "black"
+sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]

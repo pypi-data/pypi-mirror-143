@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: autodidaqt-common
+Version: 0.1.0
+Summary: Common code for autodiDAQt and autodiDAQt-receiver.
+Home-page: https://github.com/chstan/autodidaqt-common
+License: GNU GPL v3.0
+Keywords: data acquisition,physics,instrumentation,DAQ
+Author: chstan
+Author-email: chstansbury@gmail.com
+Requires-Python: >=3.8,<3.10
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: dataclasses_json (>=0.5.0,<0.6.0)
+Requires-Dist: loguru (>=0.3.2,<0.4.0)
+Requires-Dist: numpy (>=1.20,<2.0)
+Requires-Dist: pynng (>=0.7.1,<0.8.0)
+Requires-Dist: xarray (>=0.18.2)
+Project-URL: Repository, https://github.com/chstan/autodidaqt-common
+Description-Content-Type: text/markdown
+
+# autodidaqt-common
+
+<div align="center">
+
+[![Build status](https://github.com/chstan/autodidaqt-common/workflows/build/badge.svg?branch=master&event=push)](https://github.com/chstan/autodidaqt-common/actions?query=workflow%3Abuild)
+[![Python Version](https://img.shields.io/pypi/pyversions/autodidaqt-common.svg)](https://pypi.org/project/autodidaqt-common/)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/github/license/chstan/autodidaqt-common)](https://github.com/chstan/autodidaqt-common/blob/master/LICENSE)
+
+Analyis-side bridge for autodiDAQt.
+
+</div>
+
+## Installation
+
+```bash
+pip install -U autodidaqt-common
+```
+
+or install with `Poetry`
+
+```bash
+poetry add autodidaqt-common
+```
+
+## Building and releasing
+
+Building a new version of the application contains steps:
+
+- Bump the version of your package `poetry version <version>`. You can pass the new version explicitly, or a rule such as `major`, `minor`, or `patch`. For more details, refer to the [Semantic Versions](https://semver.org/) standard.
+- Make a commit to `GitHub`.
+- Create a `GitHub release`.
+- Publish `poetry publish --build`
+
