@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: gocd-tools
+Version: 0.0.1a1
+Summary: A tool for managing the gocd server
+Home-page: https://github.com/rasmunk/gocd-tools
+Author: Rasmus Munk
+Author-email: munk1@live.dk
+License: MIT
+Keywords: GOCD,CI,CD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: PyYAML (>=5.*)
+Provides-Extra: dev
+Requires-Dist: flake8 (==3.8.3) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+
+==========
+gocd-tools
+==========
+
+A tool for automating the configuration of a GOCD server
+
+WIP!
+
