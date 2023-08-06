@@ -1,0 +1,198 @@
+name: Python package CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: flake8 Lint
+      uses: reviewdog/action-flake8@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: github-pr-review
+
+    - name: generate pydocs
+      run: |
+        cd src
+        mkdir -p ../docs
+        handsdown -o ../docs
+   
+    - name: Get PR
+      uses: 8BitJonny/gh-get-current-pr@1.4.0
+      id: PR
+      with:
+         github-token: ${{ secrets.GITHUB_TOKEN }}
+         # Verbose setting SHA when using Pull_Request event trigger to fix #16
+         sha: ${{ github.event.pull_request.head.sha }}
+         # Only return if PR is still open
+         filterOutClosed: true
+ 
+    - name: Test with pytest
+      run: |
+        pytest --cov=src test/ --junitxml=out_report.xml --cov-report xml
+    
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+      with:
+        files: "out_report.xml"
+  
+    #- uses: codecov/codecov-action@v2
+     # with:
+        #files: coverage.xml
+        #token: ${{ secrets.codecov_token }}
+        #flags: unittests # optional
+        #name: codecov-umbrella # optional
+        #fail_ci_if_error: true # optional (default = false)
+        #verbose: true # optional (default = false)
+    
+    - name: generate badgets
+      run: |
+        # generate badget for unittests
+        genbadge tests --input-file out_report.xml --output-file docs/badget/tests-badget.svg
+        # generate badget for coverage 
+        genbadge coverage --input-file coverage.xml --output-file docs/badget/coverage-badget.svg
+     
+    - name: update docs
+      uses: gr2m/create-or-update-pull-request-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.FLAKE8_TOKEN }}
+      with:
+        title: Docs Update module ducumentation
+        branch: ${{ github.head_ref }}
+        commit-message: "build: update docs"
+  build:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.7
+      with:
+        versionSpec: '5.x'
+
+    - name: Determine Version
+      uses: gittools/actions/gitversion/execute@v0.9.7
+      with:
+        useConfigFile: true
+        configFilePath: 'config/GitVersion.yml'
+        #additionalArguments: '/showConfig'
+
+    - name: show envs
+      run: printenv
+    - name: build python package
+      run: |
+        python setup.py bdist_wheel
+        python setup.py sdist
+
+    - name: generate release notes
+      uses: rfennell/ReleaseNotesAction@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided automatically, you do not need to create your own token
+      with:
+        templateFile: '${{ github.workspace }}//config//changelog_template.md'
+        outputfile: 'CHANGELOG.md'
+
+    - name: write version number to file
+      run: echo "$GITVERSION_SEMVER"  > version.txt
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: py-pkg-build-artifact
+        path: |
+          dist
+          CHANGELOG.md
+          version.txt
+
+    - uses: rickstaa/action-create-tag@v1
+      with:
+        tag: v${{ env.GITVERSION_SEMVER }}
+        github_token: ${{ secrets.FLAKE8_TOKEN }}
+        message: "Latest release"
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: py-pkg-build-artifact
+
+    - name: check dir
+      run: |
+        ls
+        ls dist
+    - name: read version number
+      run: |
+        version=$(cat "version.txt") 
+        echo "$version"
+        echo "GITVERSION_SEMVER=$version" >> $GITHUB_ENV
+
+    - name: Publish distribution 📦 to Test PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_test_token }}
+        repository_url: https://test.pypi.org/legacy/
+        packages_dir: dist
+
+    - name: Publish distribution 📦 to PyPI
+      #if: startsWith(github.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_token }}
+        packages_dir: dist
+
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: v${{ env.GITVERSION_SEMVER }}
+        body_path: CHANGELOG.md
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
