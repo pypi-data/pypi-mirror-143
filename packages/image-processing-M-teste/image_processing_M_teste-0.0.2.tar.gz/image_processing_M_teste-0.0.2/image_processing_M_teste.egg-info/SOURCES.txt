@@ -1,0 +1,14 @@
+README.md
+setup.py
+image_processing_M_teste.egg-info/PKG-INFO
+image_processing_M_teste.egg-info/SOURCES.txt
+image_processing_M_teste.egg-info/dependency_links.txt
+image_processing_M_teste.egg-info/requires.txt
+image_processing_M_teste.egg-info/top_level.txt
+processamento_de_imagens_marcelo/__init__.py
+processamento_de_imagens_marcelo/processing/__init__.py
+processamento_de_imagens_marcelo/processing/combination.py
+processamento_de_imagens_marcelo/processing/transformation.py
+processamento_de_imagens_marcelo/utils/__init__.py
+processamento_de_imagens_marcelo/utils/io.py
+processamento_de_imagens_marcelo/utils/plot.py
