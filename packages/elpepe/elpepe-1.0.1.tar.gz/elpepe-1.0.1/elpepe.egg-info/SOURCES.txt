@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+elpepe.egg-info/PKG-INFO
+elpepe.egg-info/SOURCES.txt
+elpepe.egg-info/dependency_links.txt
+elpepe.egg-info/requires.txt
+elpepe.egg-info/top_level.txt
+elpepep/__init__.py
