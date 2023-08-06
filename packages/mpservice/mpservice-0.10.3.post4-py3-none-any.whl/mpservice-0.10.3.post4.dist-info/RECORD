@@ -1,0 +1,15 @@
+mpservice/__init__.py,sha256=RuWgUtN7vgPMGJuHvWntjT6oU1xkNHbUcEMOlGRbU6U,29
+mpservice/_streamer.py,sha256=oNWceVJCm0Hk1by4aJzlaibQ1QemPUqMZTVen4NP1tE,21883
+mpservice/background_task.py,sha256=hYomVBmkfx0c5kp6ym692QCJRdk3Lix-ZF-2-4tRdoA,10937
+mpservice/http.py,sha256=nJIda0L6tH14W3hZjelA1KWdSRCU2O-pF410YiBfvNw,2294
+mpservice/mpserver.py,sha256=hPLSYZ-A6sFDICMXFe8lxV89mcdUJ0XC8P-5LN3CGak,36768
+mpservice/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpservice/remote_exception.py,sha256=dMDwbV6MQwwzKdKHNPFsVJZmU0gdSiu-HzC4_G055FU,3876
+mpservice/server_process.py,sha256=vvGyHNr2BxHYqxjlB49hNvGDkHhZrgWT_Q4lr-_JAII,2248
+mpservice/socket.py,sha256=pQqj1G0MBvhbonbcfDSMUigKacZjNmqt9df-OI-tKBM,17633
+mpservice/streamer.py,sha256=iztmwxNwH8hGOvgGOu1NoLXnIC4IiaHg5tTmStVwafg,51
+mpservice/util.py,sha256=udbaN_xHNvbvRp1y6p9CrdTDTnossjtapmT92hL-T5U,12246
+mpservice-0.10.3.post4.dist-info/LICENSE,sha256=bKnuZ9nYqypDreftqlQwS3XuWTnOS6UBrMT4g1QuXtQ,1075
+mpservice-0.10.3.post4.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+mpservice-0.10.3.post4.dist-info/METADATA,sha256=29szs93t9LChj1yOvkJEifWWYnuL0RM0H1Q6nxaPsYc,2269
+mpservice-0.10.3.post4.dist-info/RECORD,,
