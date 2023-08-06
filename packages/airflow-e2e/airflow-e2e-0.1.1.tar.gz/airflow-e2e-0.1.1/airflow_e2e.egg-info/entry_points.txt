@@ -1,0 +1,2 @@
+[console_scripts]
+airflow-e2e = airflow_e2e.__main__:main
