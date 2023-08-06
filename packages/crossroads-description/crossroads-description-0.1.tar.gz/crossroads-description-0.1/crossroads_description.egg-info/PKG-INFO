@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: crossroads-description
+Version: 0.1
+Summary: Crossroads description is a python tool that produces automatic description of data from OpenStreetMap.
+Home-page: https://gitlab.limos.fr/jeremyk6/crossroads-description/
+Author: Jérémy Kalsron
+Author-email: jeremy.kalsron@gmail.com  
+License: AGPL-3.0
+Description: # Crossroads description
+        
+        **Crossroads description** is a Python tool that produces automatic text description of data from OpenStreetMap.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
